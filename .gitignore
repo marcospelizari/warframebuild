@@ -20,3 +20,5 @@ web/dist/
 .DS_Store
 
 Headshot.md
+# GitLab wiki clone (private project report, never mirrored to GitHub)
+wiki/
