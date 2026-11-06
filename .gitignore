@@ -1,0 +1,22 @@
+# Local caches: raw downloads, game images, optimizer results
+cache/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Frontend
+web/node_modules/
+web/dist/
+
+# Editors / OS
+.vscode/*
+!.vscode/launch.json
+.idea/
+.DS_Store
+
+Headshot.md

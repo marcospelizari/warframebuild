@@ -1,0 +1,63 @@
+warframeBuild
+Copyright (C) 2026 Marcos Pelizari
+
+The source code of this project is licensed under the GNU Affero General
+Public License v3.0 (see LICENSE). Some data files are licensed differently,
+as described below.
+
+-------------------------------------------------------------------------------
+Warframe
+-------------------------------------------------------------------------------
+Warframe and all related names, logos and game content are trademarks and
+copyrighted material of Digital Extremes Ltd. This is a free, non-commercial
+fan project. It is not affiliated with, endorsed by, or sponsored by Digital
+Extremes Ltd. No game images or other game assets are included in this
+repository; images are downloaded at runtime into a local, uncommitted cache.
+
+-------------------------------------------------------------------------------
+Warframe Community Developers (WFCD) data
+-------------------------------------------------------------------------------
+Game data in gamedata/ (weapons, mods, arcanes and related fields) is derived
+from data provided by the WFCD projects warframe-items
+(https://github.com/WFCD/warframe-items) and warframe-status
+(https://github.com/WFCD/warframe-status, served at https://api.warframestat.us),
+both licensed under the MIT License:
+
+  warframe-items: Copyright (c) 2017 Kaptard
+  warframe-status: Copyright (c) 2017 nspacestd
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+
+-------------------------------------------------------------------------------
+WARFRAME Wiki data
+-------------------------------------------------------------------------------
+Data derived from the WARFRAME Wiki (https://wiki.warframe.com) is licensed
+under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license
+(CC BY-NC-SA 3.0, https://creativecommons.org/licenses/by-nc-sa/3.0/), as is
+the wiki itself. This applies to these files:
+
+  gamedata/incarnon.json        (Incarnon evolution perks)
+  reference/factions.json       (faction damage-type modifiers)
+  reference/archon_shards.json  (Archon Shard bonuses)
+  reference/riven_factors.json  (Riven stat factors)
+
+These files contain names and numeric values only, extracted from wiki pages
+by the WARFRAME Wiki contributors. Each file records its source pages and
+retrieval date. Damage formulas implemented in the code follow the wiki pages
+"Damage/Calculation" and "Calculating Bonuses".
