@@ -13,12 +13,21 @@ copyrighted material of Digital Extremes Ltd. This is a free, non-commercial
 fan project. It is not affiliated with, endorsed by, or sponsored by Digital
 Extremes Ltd. No game images or other game assets are included in this
 repository; images are downloaded at runtime into a local, uncommitted cache.
+The Warframe and Digital Extremes logos are not used.
+
+Weapon, mod, arcane and sentinel data in gamedata/ is derived from the
+official Warframe Public Export published by Digital Extremes
+(https://content.warframe.com/PublicExport). It is Digital Extremes content,
+used under the Warframe Content Policy (https://www.warframe.com/en/contentpolicy)
+for this free, non-commercial project. Item images are loaded from the same
+Public Export.
 
 -------------------------------------------------------------------------------
 Warframe Community Developers (WFCD) data
 -------------------------------------------------------------------------------
-Game data in gamedata/ (weapons, mods, arcanes and related fields) is derived
-from data provided by the WFCD projects warframe-items
+Some game data in gamedata/ (weapon polarities, weapon class, attack modes
+including Incarnon attacks, damage falloff and charge times) is derived from
+data provided by the WFCD projects warframe-items
 (https://github.com/WFCD/warframe-items) and warframe-status
 (https://github.com/WFCD/warframe-status, served at https://api.warframestat.us),
 both licensed under the MIT License:
@@ -53,11 +62,15 @@ under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license
 the wiki itself. This applies to these files:
 
   gamedata/incarnon.json        (Incarnon evolution perks)
-  reference/factions.json       (faction damage-type modifiers)
+  gamedata/factions.json        (faction damage-type modifiers)
+  reference/enemies.json        (representative enemies and level scaling)
   reference/archon_shards.json  (Archon Shard bonuses)
   reference/riven_factors.json  (Riven stat factors)
 
 These files contain names and numeric values only, extracted from wiki pages
 by the WARFRAME Wiki contributors. Each file records its source pages and
 retrieval date. Damage formulas implemented in the code follow the wiki pages
-"Damage/Calculation" and "Calculating Bonuses".
+"Damage/Calculation", "Calculating Bonuses" and "Status Effect".
+
+Builds computed and served by this project use these wiki-derived values, so
+the computed build data is also shared under CC BY-NC-SA 3.0.
