@@ -14,7 +14,7 @@ The damage math follows the WARFRAME Wiki pages
 [Damage/Calculation](https://wiki.warframe.com/w/Damage/Calculation) and
 [Calculating Bonuses](https://wiki.warframe.com/w/Calculating_Bonuses).
 
-Status: planning done, implementation starting. See [PLAN.md](PLAN.md).
+Status: planning done, implementation starting. How it works: [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## Repository
 
