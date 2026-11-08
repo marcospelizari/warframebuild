@@ -43,6 +43,13 @@ MOD_NAMES = (
     "Charged Chamber",  # typed PRIMARY mod with compat name Sniper
     "Primed Chamber",  # joined to Charged Chamber (mod_families.json)
     "Rifle Aptitude",  # joined to Galvanized Aptitude (mod_families.json)
+    "Critical Delay",  # joined to Point Strike (mod_families.json)
+    "Critical Deceleration",  # joined to Blunderbuss
+    "Blunderbuss",
+    "Creeping Bullseye",  # joined to Pistol Gambit
+    "Pistol Gambit",
+    "Mending Shot",  # joined to Thunderbolt (saved Mod/Compatibility)
+    "Thunderbolt",
 )
 ARCANE_NAMES = (
     "Primary Merciless",

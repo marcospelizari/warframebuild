@@ -30,6 +30,14 @@
         "Toxin shield-bypass exceptions"
       ]
     },
+    "Compatibility": {
+      "title": "Mod/Compatibility",
+      "impact": "high",
+      "feeds": [
+        "mod families: parent types and non-obvious clashes (reference/mod_families.json, V4)",
+        "item compatibility tags such as BEAM, IncompatibilityTags (step 8 mod eligibility)"
+      ]
+    },
     "Corpus": {
       "title": "Corpus",
       "impact": "medium",

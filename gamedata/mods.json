@@ -1238,7 +1238,7 @@
     "unparsed": []
    },
    "exilus": false,
-   "family": null,
+   "family": "WeaponCritChanceMod",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -6283,7 +6283,7 @@
     ]
    },
    "exilus": false,
-   "family": null,
+   "family": "BowExplosionChanceMod",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -6409,7 +6409,7 @@
     "unparsed": []
    },
    "exilus": false,
-   "family": null,
+   "family": "WeaponCritChanceMod",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7928,7 +7928,7 @@
     ]
    },
    "exilus": true,
-   "family": null,
+   "family": "BowExplosionChanceMod",
    "fusion_limit": 10,
    "is_utility": true,
    "level_stats": [
@@ -13962,7 +13962,7 @@
     "unparsed": []
    },
    "exilus": false,
-   "family": null,
+   "family": "WeaponCritChanceMod",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [

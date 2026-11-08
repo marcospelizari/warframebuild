@@ -17,7 +17,7 @@
   "secondary": 149,
   "weapons": 344
  },
- "dataset_hash": "eb681299e84b44ee",
+ "dataset_hash": "18185a9822676f57",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -118,6 +118,12 @@
    "retrieved": "2026-11-07",
    "sha256_16": "0d0f96d5e5506e65",
    "url": "https://wiki.warframe.com/w/Damage/Calculation"
+  },
+  {
+   "path": "wiki/Compatibility.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "bed577547fdee373",
+   "url": "https://wiki.warframe.com/w/Mod/Compatibility"
   },
   {
    "path": "wiki/Corpus.wikitext",
