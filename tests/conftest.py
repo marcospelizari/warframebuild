@@ -10,7 +10,7 @@ from app.pipeline.sources import wiki_local
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_RAW = ROOT / "tests/fixtures/raw"
 # Saved wiki copies stay private (G23): tests use this hand-written module in the format
-# of Module:Weapons/data/<slot>, with the values of the saved pages for two guns.
+# of Module:Weapons/data/<slot>, with the values of the saved pages for a few guns.
 MODULE_STUBS = {
     "Module_Weapons_data_primary": """return {
 \t["Lanka"] = {
@@ -21,6 +21,15 @@ MODULE_STUBS = {
 \t\tInternalName = "/Lotus/Weapons/ClanTech/Energy/Railgun",
 \t\tName = "Lanka",
 \t\tSniperComboMin = 2,
+\t},
+\t["Convectrix"] = {
+\t\tAttacks = {
+\t\t\t{ AttackName = "Normal Attack" },
+\t\t\t{ AttackName = "Alt-Fire" },
+\t\t},
+\t\tInternalName = "/Lotus/Weapons/Corpus/LongGuns/CrpSplitLaser/CrpSplitLaser",
+\t\tMagazine = 70,
+\t\tName = "Convectrix",
 \t},
 }
 """,
@@ -34,6 +43,17 @@ MODULE_STUBS = {
 \t\t},
 \t\tInternalName = "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon",
 \t\tName = "Epitaph",
+\t},
+\tGrimoire = {
+\t\tAttacks = {
+\t\t\t{ AttackName = "Normal Attack" },
+\t\t\t{ AttackName = "Normal Radial Attack" },
+\t\t\t{ AttackName = "Active Attack", ForcedProcs = { "Electricity" } },
+\t\t\t{ AttackName = "Active Radial Attack", ForcedProcs = { "Electricity" } },
+\t\t},
+\t\tInternalName = "/Lotus/Weapons/Tenno/Grimoire/TnGrimoire",
+\t\tMagazine = 0,
+\t\tName = "Grimoire",
 \t},
 }
 """,

@@ -7,17 +7,17 @@
   "arcanes_primary": 16,
   "arcanes_secondary": 18,
   "arcanes_unsupported": 21,
-  "excluded_weapons": 1,
+  "excluded_weapons": 2,
   "mod_sets": 10,
   "mods": 328,
   "mods_full": 243,
   "mods_partial": 18,
   "mods_unsupported": 67,
   "primary": 196,
-  "secondary": 149,
-  "weapons": 345
+  "secondary": 148,
+  "weapons": 344
  },
- "dataset_hash": "43ecfbee52810dc1",
+ "dataset_hash": "e74e109d0a625d1a",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -30,6 +30,11 @@
    "name": "Sirocco",
    "reason": "not a primary or secondary gun (DE category OperatorAmps)",
    "unique_name": "/Lotus/Weapons/Operator/Pistols/DrifterPistol/DrifterPistolPlayerWeapon"
+  },
+  {
+   "name": "Grimoire",
+   "reason": "second Grimoire entry with no row in the wiki weapon module: magazine size unknown",
+   "unique_name": "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire"
   }
  ],
  "fetched": "2026-11-08",

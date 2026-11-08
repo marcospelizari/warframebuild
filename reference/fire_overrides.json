@@ -49,6 +49,12 @@
       "reload_replaces_shot": true,
       "source": "Calculation, Average Sustained DPS: 'For the Vectis and Vectis Prime specifically, one (1) should be subtracted from the denominator to account for their lack of a reload delay'",
       "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire": {
+      "name": "Grimoire (TnDoppelgangerGrimoire)",
+      "exclude": "second Grimoire entry with no row in the wiki weapon module: magazine size unknown",
+      "source": "Module_Weapons_data_secondary lists only /Lotus/Weapons/Tenno/Grimoire/TnGrimoire",
+      "verified": "2026-11-08"
     }
   }
 }

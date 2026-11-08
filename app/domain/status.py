@@ -130,6 +130,8 @@ def dot_ticks(damage_type: DamageType, duration_bonus: float) -> int:
 
 
 # ---------- Blast (saved Damage/Calculation: stack-and-detonate) ----------
+# BLAST_CAP, BLAST_CAP_BOSS, BLAST_STACK_S: decided in G60, read by the step-8 combat
+# simulation (stack count over time); only the detonation is used so far.
 
 BLAST_CAP = 10
 BLAST_CAP_BOSS = 4

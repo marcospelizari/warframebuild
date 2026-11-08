@@ -739,6 +739,10 @@
     {
       "catalog": "Catchmoon, Sporelacer, Tombfinger (Kitgun chambers), Balefire Charger",
       "reason": "not in the gun dataset (Kitguns excluded, V11)"
+    },
+    {
+      "catalog": "AoE parts marked Adding: Ambassador alt-fire radial (line 211), Braton/Burston/Zylok Incarnon radials (221, 227, 503), Mutalist Cernos charged cloud (255), Ferrox and Tenet Ferrox (283, 285), Glaxion Vandal (289), Opticor and Opticor Vandal charged radials (311, 313), Trumna main-fire radial (357), Pox cloud (467)",
+      "reason": "the bonus reaches only the directly hit target and scales off another attack's damage (hitscan, Spore Impact, uncharged shot); kept `none` until option c models that base. Step 8 lists the missing bonus in assumptions[]"
     }
   ]
 }

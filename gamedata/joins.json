@@ -951,11 +951,6 @@
  },
  {
   "de_name": "Grimoire",
-  "unique_name": "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire",
-  "wfcd_name": "Grimoire"
- },
- {
-  "de_name": "Grimoire",
   "unique_name": "/Lotus/Weapons/Tenno/Grimoire/TnGrimoire",
   "wfcd_name": "Grimoire"
  },

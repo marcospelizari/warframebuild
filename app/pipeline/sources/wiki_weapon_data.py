@@ -2,9 +2,10 @@
 
 Read only for data DE and WFCD lack, per attack: forced procs (saved Status_Effect,
 Forced Procs), burst count and delay (saved Fire_Rate), and per weapon: sniper minimum
-combo (saved Sniper_Rifle) and attacks with no delay between shots (`FireRate =
-math.huge`: Lanka, saved Fire_Rate). Keyed by `InternalName` = DE uniqueName; attack
-names equal WFCD's. Wiki-derived: CC BY-NC-SA 3.0 (NOTICE).
+combo (saved Sniper_Rifle), magazine size where DE gives none (0 = no magazine) and
+attacks with no delay between shots (`FireRate = math.huge`: Lanka, saved Fire_Rate).
+Keyed by `InternalName` = DE uniqueName; attack names equal WFCD's. Wiki-derived:
+CC BY-NC-SA 3.0 (NOTICE).
 """
 
 import math
@@ -61,6 +62,7 @@ class WeaponData:
     name: str
     attacks: dict[str, AttackData]  # by attack name
     sniper_combo_min: int | None
+    magazine: int | None = None  # `Magazine`, 0 = no magazine; None = not listed
 
     @property
     def no_shot_delay(self) -> bool:
@@ -110,7 +112,10 @@ def _weapon(where: str, entry: Any) -> tuple[str, WeaponData] | None:
     combo = entry.get("SniperComboMin")
     if combo is not None and (not isinstance(combo, int) or combo < 1):
         raise RefreshError(f"{where}: SniperComboMin must be a positive integer")
-    return unique_name, WeaponData(str(entry.get("Name", "")), attacks, combo)
+    magazine = entry.get("Magazine")
+    if magazine is not None and (not isinstance(magazine, int) or magazine < 0):
+        raise RefreshError(f"{where}: Magazine must be an integer >= 0")
+    return unique_name, WeaponData(str(entry.get("Name", "")), attacks, combo, magazine)
 
 
 def _attack(where: str, a: dict[str, Any]) -> AttackData:
