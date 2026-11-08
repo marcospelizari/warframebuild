@@ -11,7 +11,7 @@ from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 
 from app.domain import crit
-from app.domain.damage import composition, scaled
+from app.domain.damage import composition, element_bonuses, scaled
 from app.domain.effects import DamageType, Effect, Faction, Stat
 from app.domain.elements import Part
 from app.domain.stats import modded
@@ -37,6 +37,10 @@ class ModdedHit:
     multishot: float  # expected projectiles per shot
     faction_multiplier: dict[Faction, float]  # Bane-style factor per faction (1 if none)
     crit_upgrade_chance: float  # Vigilante set (crit_tier_upgrade)
+    modded_base: float  # base damage total x damage bonuses: the DoT seed before crit
+    element_bonus: dict[DamageType, float]  # mod bonus behind each final element (DoT)
+    status_damage: float  # bonus (Elementalist), additive group, separate factor on DoT
+    status_duration: float  # bonus (Hunter Track +0.9)
 
     @property
     def projectile_damage(self) -> float:
@@ -77,9 +81,10 @@ def modded_hit(
         elif e.stat == Stat.PHYSICAL:
             physical[e.damage_type] = physical.get(e.damage_type, 0.0) + v
     quantized = composition(base.damage, elements, physical, bonus_element)
+    damage_multiplier = modded(1.0, Stat.DAMAGE, bonuses)
     factions = {e.faction for e, _ in bonuses if e.stat == Stat.FACTION_DAMAGE and e.faction}
     return ModdedHit(
-        damage=scaled(quantized, modded(1.0, Stat.DAMAGE, bonuses)),
+        damage=scaled(quantized, damage_multiplier),
         critical_chance=modded(base.critical_chance, Stat.CRITICAL_CHANCE, bonuses),
         critical_multiplier=modded(base.critical_multiplier, Stat.CRITICAL_DAMAGE, bonuses),
         status_chance=modded(base.status_chance, Stat.STATUS_CHANCE, bonuses),
@@ -91,4 +96,8 @@ def modded_hit(
         crit_upgrade_chance=min(
             1.0, math.fsum(v for e, v in bonuses if e.stat == Stat.CRIT_TIER_UPGRADE)
         ),
+        modded_base=math.fsum(base.damage.values()) * damage_multiplier,
+        element_bonus=element_bonuses(elements),
+        status_damage=modded(1.0, Stat.STATUS_DAMAGE, bonuses) - 1,
+        status_duration=modded(1.0, Stat.STATUS_DURATION, bonuses) - 1,
     )

@@ -9,6 +9,7 @@ from app.domain.effects import (
     DamageType,
     Effect,
     Faction,
+    FireRateBoost,
     Operation,
     Stat,
     Trigger,
@@ -55,6 +56,14 @@ _FACTION = re.compile(
 _FIRST_SHOT = re.compile(rf"{_NUM}% Damage on first shot in Magazine", re.IGNORECASE)
 _PROC_ON_CRIT = re.compile(
     rf"{_NUM}% chance to apply (?P<type>[A-Za-z]{{3,12}}) on Critical", re.IGNORECASE
+)
+# "Impact Status Effects have 35% chance to apply a Slash Status Effect (x2 when Fire Rate
+# is below 2.5)" (Internal Bleeding, Hemorrhage)
+_PROC_ON_STATUS = re.compile(
+    rf"(?P<from>[A-Za-z]{{3,12}}) Status Effects have {_NUM}% chance to apply an? "
+    r"(?P<type>[A-Za-z]{3,12}) Status Effect"
+    r"(?: \(x(?P<factor>\d{1,2}) when Fire Rate is below (?P<below>\d{1,2}(?:\.\d{1,2})?)\))?\.?",
+    re.IGNORECASE,
 )
 _SET_CRIT_UPGRADE = re.compile(
     rf"{_NUM}% chance to enhance Critical Hits from (?:Primary|Secondary) Weapons\.?",
@@ -113,6 +122,27 @@ def line_effects(line: str, ctx: Context) -> list[Effect] | None:
                 operation=Operation.ADD,
                 damage_type=DamageType(name),
                 trigger=Trigger.ON_CRIT,
+            )
+        ]
+    if m := _PROC_ON_STATUS.fullmatch(line):
+        source, name = m["from"].lower(), m["type"].lower()
+        types = DamageType.__members__.values()
+        if source not in types or name not in types:
+            return None
+        boost = (
+            FireRateBoost(below=float(m["below"]), factor=float(m["factor"]))
+            if m["below"]
+            else None
+        )
+        return [
+            Effect(
+                stat=Stat.FORCED_PROC,
+                value=_pct(m["value"]),
+                operation=Operation.ADD,
+                damage_type=DamageType(name),
+                trigger=Trigger.ON_STATUS,
+                trigger_damage_type=DamageType(source),
+                fire_rate_boost=boost,
             )
         ]
     if m := _SET_CRIT_UPGRADE.fullmatch(line):

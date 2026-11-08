@@ -101,6 +101,16 @@ class Support(StrEnum):
     UNSUPPORTED = "unsupported"
 
 
+class FireRateBoost(BaseModel):
+    """`factor` x value while the modded fire rate is below `below` (Internal Bleeding:
+    "x2 when Fire Rate is below 2.5"; exactly 2.5 gets no boost, saved Internal_Bleeding)."""
+
+    model_config = ConfigDict(frozen=True, extra="forbid", allow_inf_nan=False)
+
+    below: Annotated[float, Field(gt=0)]
+    factor: Annotated[float, Field(gt=0)]
+
+
 class Effect(BaseModel):
     model_config = ConfigDict(frozen=True, extra="forbid", allow_inf_nan=False)
 
@@ -117,6 +127,7 @@ class Effect(BaseModel):
     chance: Annotated[float, Field(gt=0, le=1)] = 1.0  # chance the trigger grants it
     # Value per WFCD weapon_type where it differs ("x2 for Bows" -> {"Bow": 2 * value}).
     class_values: dict[str, float] = Field(default_factory=dict)
+    fire_rate_boost: FireRateBoost | None = None
 
     @model_validator(mode="after")
     def _shape(self) -> "Effect":
@@ -131,6 +142,8 @@ class Effect(BaseModel):
             raise ValueError("faction only (and always) on faction_damage")
         if (self.trigger_damage_type is not None) and self.trigger != Trigger.ON_STATUS:
             raise ValueError("trigger_damage_type only on on_status")
+        if self.fire_rate_boost is not None and self.stat != Stat.FORCED_PROC:
+            raise ValueError("fire_rate_boost only on forced_proc")
         return self
 
 

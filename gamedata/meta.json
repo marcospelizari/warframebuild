@@ -10,14 +10,14 @@
   "excluded_weapons": 1,
   "mod_sets": 10,
   "mods": 328,
-  "mods_full": 237,
+  "mods_full": 240,
   "mods_partial": 21,
-  "mods_unsupported": 70,
+  "mods_unsupported": 67,
   "primary": 196,
   "secondary": 149,
   "weapons": 345
  },
- "dataset_hash": "af898bf6cc9cd24a",
+ "dataset_hash": "fea1caa6dea7015c",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -34,7 +34,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 8,
+ "schema_version": 9,
  "sources": [
   {
    "path": "de/ExportManifest.json",
@@ -215,6 +215,12 @@
    "retrieved": "2026-11-07",
    "sha256_16": "9e769dcc5686b9e8",
    "url": "https://wiki.warframe.com/w/Damage"
+  },
+  {
+   "path": "wiki/Damage_over_Time.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "5b50c548f677e4d0",
+   "url": "https://wiki.warframe.com/w/Damage_over_Time"
   },
   {
    "path": "wiki/Enemy_Body_Parts.wikitext",
