@@ -31,11 +31,12 @@ Game data: `gamedata/` is generated and committed. To rebuild it:
 ```sh
 uv run wfb refresh            # downloads DE Public Export + WFCD into cache/raw/, rebuilds gamedata/
 uv run wfb refresh --offline  # rebuild from files already in cache/raw/
+uv run wfb check              # after a game update: changed sources, rows and wiki pages to re-check
 ```
 
 WARFRAME Wiki pages are never downloaded by the tool; they are saved by hand into
 `cache/raw/wiki/<Page>.wikitext` (`https://wiki.warframe.com/w/<Page>?action=raw`).
-Refresh names any missing page.
+Refresh names any missing page; the list is `reference/wiki_pages.json`.
 
 Checks (the same as CI):
 

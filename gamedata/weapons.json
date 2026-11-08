@@ -7627,7 +7627,7 @@
      "corrosive": 59.0
     },
     "falloff": null,
-    "fire_rate": 0.0,
+    "fire_rate": null,
     "name": "Corrosive DoT",
     "shot_speed": null,
     "shot_type": "DoT",
@@ -8454,7 +8454,7 @@
      "corrosive": 27.0
     },
     "falloff": null,
-    "fire_rate": 0.0,
+    "fire_rate": null,
     "name": "Corrosive DoT",
     "shot_speed": null,
     "shot_type": "DoT",

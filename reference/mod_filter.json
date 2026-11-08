@@ -5,20 +5,20 @@
       "id": "beginner",
       "path_contains": "/Beginner/",
       "reason": "low-rank starter copy of a normal mod",
-      "verified": "Update 44.0"
+      "verified": "2026-11-08"
     },
     {
       "id": "intermediate",
       "path_contains": "/Intermediate/",
       "reason": "mid-rank copy of a normal mod",
-      "verified": "Update 44.0"
+      "verified": "2026-11-08"
     },
     {
       "id": "expert",
       "path_contains": "/Expert/",
       "unless_name_starts": "Primed",
       "reason": "non-Primed /Expert/ copy with higher values; not in the game or on the wiki (Marcos, 2026-11-07)",
-      "verified": "Update 44.0"
+      "verified": "2026-11-08"
     }
   ],
   "allow": []

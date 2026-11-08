@@ -1,15 +1,15 @@
-"""DE Public Export: LZMA index -> hashed manifest names -> JSON exports (T1)."""
+"""DE Public Export adapter (T1): LZMA index, hashed manifests, DE encodings."""
 
-import datetime
 import lzma
 import re
-from pathlib import Path
 
 from app.data.http import PoliteClient
-from app.data.sources import SourceFile, sha256_16
+from app.data.models import Category, DamageType
+from app.data.sources import Fetched
 
 BASE_URL = "https://content.warframe.com/PublicExport"
 INDEX_URL = f"{BASE_URL}/index_en.txt.lzma"
+INDEX_PATH = "de/index_en.txt.lzma"
 EXPORTS = (
     "ExportWeapons_en.json",
     "ExportUpgrades_en.json",
@@ -19,6 +19,36 @@ EXPORTS = (
 )
 MAX_INDEX_BYTES = 64 * 1024
 MAX_EXPORT_BYTES = 64 * 1024 * 1024
+
+# `damagePerShot` is positional (20 slots). Slots 0-14 confirmed against WFCD attack
+# data (gas: Cyanex, tau: Haalvu); 15-19 are never set on a gun and are rejected.
+DAMAGE_SLOTS: tuple[DamageType, ...] = (
+    DamageType.IMPACT,
+    DamageType.PUNCTURE,
+    DamageType.SLASH,
+    DamageType.HEAT,
+    DamageType.COLD,
+    DamageType.ELECTRICITY,
+    DamageType.TOXIN,
+    DamageType.BLAST,
+    DamageType.RADIATION,
+    DamageType.GAS,
+    DamageType.MAGNETIC,
+    DamageType.VIRAL,
+    DamageType.CORROSIVE,
+    DamageType.VOID,
+    DamageType.TAU,
+)
+DAMAGE_SLOT_COUNT = 20
+
+# Our category -> DE ExportWeapons `productCategory`, DE ExportUpgrades `type`.
+CATEGORIES: dict[Category, tuple[str, str]] = {
+    Category.PRIMARY: ("LongGuns", "PRIMARY"),
+    Category.SECONDARY: ("Pistols", "SECONDARY"),
+}
+WEAPON_CATEGORY = {de: ours for ours, (de, _) in CATEGORIES.items()}
+MOD_CATEGORY = {de: ours for ours, (_, de) in CATEGORIES.items()}
+
 _UNKNOWN_SIZE = 2**64 - 1
 _INDEX_LINE = re.compile(r"(?P<name>Export\w+\.json)!00_[A-Za-z0-9+\-_]{20,30}")
 
@@ -63,22 +93,16 @@ def decode_index(raw: bytes) -> dict[str, str]:
     return entries
 
 
-def download(client: PoliteClient, raw_dir: Path) -> list[SourceFile]:
-    today = datetime.date.today().isoformat()
-    de_dir = raw_dir / "de"
-    de_dir.mkdir(parents=True, exist_ok=True)
-    index_raw = client.get(INDEX_URL, max_bytes=MAX_INDEX_BYTES)
-    entries = decode_index(index_raw)
-    files = [_save(de_dir / "index_en.txt.lzma", index_raw, INDEX_URL, today, raw_dir)]
-    for name in EXPORTS:
-        url = f"{BASE_URL}/Manifest/{entries[name]}"
-        data = client.get(url, max_bytes=MAX_EXPORT_BYTES)
-        files.append(_save(de_dir / name, data, url, today, raw_dir))
-    return files
+def resolve(client: PoliteClient) -> tuple[Fetched, list[Fetched]]:
+    """Download the index only; return it and the export URLs (no export data)."""
+    index = client.get(INDEX_URL, max_bytes=MAX_INDEX_BYTES)
+    entries = decode_index(index)
+    exports = [Fetched(f"de/{n}", f"{BASE_URL}/Manifest/{entries[n]}", None) for n in EXPORTS]
+    return Fetched(INDEX_PATH, INDEX_URL, index), exports
 
 
-def _save(path: Path, data: bytes, url: str, today: str, raw_dir: Path) -> SourceFile:
-    tmp = path.with_suffix(path.suffix + ".part")
-    tmp.write_bytes(data)
-    tmp.replace(path)
-    return SourceFile(path.relative_to(raw_dir).as_posix(), url, today, sha256_16(data))
+def fetch(client: PoliteClient) -> list[Fetched]:
+    index, exports = resolve(client)
+    return [index] + [
+        Fetched(e.path, e.url, client.get(e.url, max_bytes=MAX_EXPORT_BYTES)) for e in exports
+    ]

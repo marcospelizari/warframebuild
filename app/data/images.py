@@ -4,6 +4,7 @@ from pathlib import Path
 
 from app.data.http import DownloadError, PoliteClient
 from app.data.models import Weapon
+from app.data.sources import atomic_write
 from app.data.sources.de_export import BASE_URL
 
 MAX_IMAGE_BYTES = 4 * 1024 * 1024
@@ -17,7 +18,6 @@ def image_path(img_dir: Path, weapon: Weapon) -> Path:
 def fetch_missing(client: PoliteClient, weapons: list[Weapon], img_dir: Path) -> list[str]:
     """Download icons not cached yet. Returns failures as messages (refresh still succeeds)."""
     failures = []
-    (img_dir / "weapons").mkdir(parents=True, exist_ok=True)
     for weapon in weapons:
         path = image_path(img_dir, weapon)
         if path.exists() or not weapon.texture_location:
@@ -30,7 +30,5 @@ def fetch_missing(client: PoliteClient, weapons: list[Weapon], img_dir: Path) ->
         if not data.startswith(PNG_MAGIC):
             failures.append(f"{weapon.name}: not a PNG")
             continue
-        tmp = path.with_suffix(".part")
-        tmp.write_bytes(data)
-        tmp.replace(path)
+        atomic_write(path, data)
     return failures

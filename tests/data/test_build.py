@@ -61,3 +61,47 @@ def test_gun_without_fire_rate_fails(paths: Paths) -> None:
 
 def test_clean_text_strips_markup() -> None:
     assert clean_text("+90% <DT_POISON_COLOR>Toxin\r\nx<LINE_SEPARATOR>y") == "+90% Toxin\nx\ny"
+
+
+def test_fire_rate_error_names_the_field_that_works(paths: Paths) -> None:
+    """Review bug 5: the advice must point at what the build reads (`exclude`)."""
+    (paths.reference / "fire_overrides.json").write_text('{"weapons": {}}')
+    with pytest.raises(RefreshError, match="`exclude` entry"):
+        build(paths.raw, paths.reference)
+
+
+@pytest.mark.parametrize(
+    "field,value",
+    [("criticalChance", float("nan")), ("procChance", -0.1), ("fireRate", float("inf"))],
+)
+def test_rejects_non_finite_or_negative_numbers(paths: Paths, field: str, value: float) -> None:
+    weapons_path = paths.raw / "de/ExportWeapons_en.json"
+    data = json.loads(weapons_path.read_text())
+    braton = next(w for w in data["ExportWeapons"] if w["name"] == "Braton Prime")
+    braton[field] = value
+    weapons_path.write_text(json.dumps(data))
+    with pytest.raises(RefreshError, match="Braton Prime"):
+        build(paths.raw, paths.reference)
+
+
+def test_status_chance_above_one_is_allowed(paths: Paths) -> None:
+    weapons_path = paths.raw / "de/ExportWeapons_en.json"
+    data = json.loads(weapons_path.read_text())
+    next(w for w in data["ExportWeapons"] if w["name"] == "Braton Prime")["procChance"] = 1.5
+    weapons_path.write_text(json.dumps(data))
+    braton = next(w for w in build(paths.raw, paths.reference).weapons if w.name == "Braton Prime")
+    assert braton.status_chance == 1.5
+
+
+def test_wfcd_speed_zero_means_no_own_fire_rate() -> None:
+    from app.data.build.weapons import _attack
+
+    dot = {
+        "name": "Corrosive DoT",
+        "speed": 0,
+        "crit_chance": 0,
+        "crit_mult": 1,
+        "status_chance": 0,
+        "damage": {"corrosive": 10},
+    }
+    assert _attack(dot, "Tysis").fire_rate is None

@@ -1,91 +1,86 @@
 """gamedata/ schema (E12): one set of models for refresh validation and the app loader."""
 
-from typing import Literal
+from enum import StrEnum
+from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-# Order of DE `damagePerShot` (20 entries). 0-14 confirmed against WFCD attack data;
-# 15-19 never set on a gun, refresh rejects a gun that uses them.
-DAMAGE_TYPES = (
-    "impact",
-    "puncture",
-    "slash",
-    "heat",
-    "cold",
-    "electricity",
-    "toxin",
-    "blast",
-    "radiation",
-    "gas",
-    "magnetic",
-    "viral",
-    "corrosive",
-    "void",
-    "tau",
-)
-UNVERIFIED_DAMAGE_SLOTS = range(15, 20)
 
-DamageType = Literal[
-    "impact",
-    "puncture",
-    "slash",
-    "heat",
-    "cold",
-    "electricity",
-    "toxin",
-    "blast",
-    "radiation",
-    "gas",
-    "magnetic",
-    "viral",
-    "corrosive",
-    "void",
-    "tau",
-]
+class DamageType(StrEnum):
+    """Damage types the data layer accepts. Source encodings live in their adapters."""
+
+    IMPACT = "impact"
+    PUNCTURE = "puncture"
+    SLASH = "slash"
+    HEAT = "heat"
+    COLD = "cold"
+    ELECTRICITY = "electricity"
+    TOXIN = "toxin"
+    BLAST = "blast"
+    RADIATION = "radiation"
+    GAS = "gas"
+    MAGNETIC = "magnetic"
+    VIRAL = "viral"
+    CORROSIVE = "corrosive"
+    VOID = "void"
+    TAU = "tau"
+
+
+class Category(StrEnum):
+    PRIMARY = "primary"
+    SECONDARY = "secondary"
+
+
+NonNegative = Annotated[float, Field(ge=0)]
+Positive = Annotated[float, Field(gt=0)]
+Damage = dict[DamageType, NonNegative]
+# ISO date (YYYY-MM-DD); compared as text.
+IsoDate = Annotated[str, Field(pattern=r"^\d{4}-\d{2}-\d{2}$")]
 
 
 class Model(BaseModel):
-    model_config = ConfigDict(frozen=True, extra="forbid")
+    # No NaN/inf anywhere: they would poison every later calculation and ranking.
+    model_config = ConfigDict(frozen=True, extra="forbid", allow_inf_nan=False)
 
 
 class Falloff(Model):
-    start: float | None = None
-    end: float | None = None
-    reduction: float | None = None
+    start: NonNegative | None = None
+    end: NonNegative | None = None
+    reduction: NonNegative | None = None
 
 
 class Attack(Model):
-    """One WFCD attack; chances as fractions (WFCD gives percent)."""
+    """One WFCD attack; chances as fractions (WFCD gives percent). Chances may exceed 1."""
 
     name: str
-    fire_rate: float | None
-    critical_chance: float
-    critical_multiplier: float
-    status_chance: float
+    fire_rate: Positive | None
+    critical_chance: NonNegative
+    critical_multiplier: NonNegative
+    status_chance: NonNegative
     shot_type: str | None
-    damage: dict[DamageType, float]
+    damage: Damage
     falloff: Falloff | None = None
-    charge_time: float | None = None
-    shot_speed: float | None = None
+    charge_time: NonNegative | None = None
+    shot_speed: NonNegative | None = None
 
 
 class Weapon(Model):
     unique_name: str
     slug: str
     name: str
-    category: Literal["primary", "secondary"]
+    category: Category
     weapon_type: str  # WFCD type: Rifle, Shotgun, Sniper, Bow, Pistol, ...
     trigger: str  # DE trigger
-    damage: dict[DamageType, float]
-    critical_chance: float
-    critical_multiplier: float
-    status_chance: float
-    fire_rate: float
-    multishot: float
-    magazine_size: int | None
-    reload_time: float
-    mastery_req: int
-    riven_disposition: float  # DE omegaAttenuation
+    damage: Damage
+    critical_chance: NonNegative
+    critical_multiplier: Annotated[float, Field(ge=1)]
+    status_chance: NonNegative
+    fire_rate: Positive
+    multishot: Positive
+    magazine_size: Annotated[int, Field(ge=0)] | None
+    reload_time: NonNegative
+    mastery_req: Annotated[int, Field(ge=0)]
+    riven_disposition: NonNegative  # DE omegaAttenuation
     polarities: list[str]
     exilus_polarity: str | None
     attacks: list[Attack]
@@ -94,19 +89,19 @@ class Weapon(Model):
 
 class ModSet(Model):
     unique_name: str
-    num_upgrades: int
+    num_upgrades: Annotated[int, Field(ge=1)]
     stats: list[str]
 
 
 class Mod(Model):
     unique_name: str
     name: str
-    type: Literal["PRIMARY", "SECONDARY"]
+    category: Category
     compat_name: str
     polarity: str
     rarity: str
-    base_drain: int
-    fusion_limit: int
+    base_drain: int  # negative for some mods that add capacity
+    fusion_limit: Annotated[int, Field(ge=0)]
     is_utility: bool
     mod_set: str | None
     level_stats: list[list[str]]  # per rank; cleaned free text, parsed in step 3
@@ -133,10 +128,13 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[1] = 1
+    schema_version: Literal[2] = 2
     dataset_hash: str
+    # Newest content update named in the data (WFCD `introduced`); a label only:
+    # DE publishes no update name, and hotfixes without new items do not change it.
     game_update: str | None
-    fetched: str  # newest download date of the DE/WFCD sources
+    fetched: IsoDate  # newest download date of the DE/WFCD sources
+    changed_on: IsoDate  # first refresh that produced this dataset_hash; staleness reference
     sources: list[SourceRecord]
     counts: dict[str, int]
     excluded_weapons: list[Exclusion]
