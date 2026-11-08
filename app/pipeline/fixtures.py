@@ -17,6 +17,7 @@ WEAPONS = (
     "Cyanex",  # gas damage slot
     "Embolist",  # beam with its own ramp-up start
     "Epitaph",  # no reload between shots; forced procs per attack
+    "Epitaph Prime",  # no reload between shots (own page)
     "Grimoire",  # slug collision (two entries)
     "Haalvu",  # tau damage slot
     "Kuva Hind",  # Kuva, burst

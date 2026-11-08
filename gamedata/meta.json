@@ -17,7 +17,7 @@
   "secondary": 149,
   "weapons": 345
  },
- "dataset_hash": "fe88d2e07b6de87c",
+ "dataset_hash": "df3bf9d5cebf7c82",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -233,6 +233,12 @@
    "retrieved": "2026-11-08",
    "sha256_16": "96cbe721931e8887",
    "url": "https://wiki.warframe.com/w/Epitaph"
+  },
+  {
+   "path": "wiki/Epitaph_Prime.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "518f5512462a15a2",
+   "url": "https://wiki.warframe.com/w/Epitaph_Prime"
   },
   {
    "path": "wiki/Exilus_Mods.wikitext",
