@@ -3,7 +3,7 @@
   "weapons": {
     "/Lotus/Weapons/ClanTech/Energy/Railgun": {
       "name": "Lanka",
-      "exclude": "fire rate 0 in DE, missing in WFCD and not on the saved Lanka page (automatic infobox); needs the charged-weapon rule from the saved wiki page Fire_Rate",
+      "exclude": "fire rate 0 in DE, missing in WFCD: Lanka has no delay between charged shots, so its effective fire rate is 1 / modded charge time (saved Fire_Rate, 'Fire Rate and Charge Time'); base charge time 1.00 s (Fire_Rate charge list, WFCD Charged Shot). Kept out until step 4 implements the charge rules (#4)",
       "verified": "2026-11-08"
     }
   }
