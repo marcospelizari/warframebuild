@@ -7,14 +7,17 @@ and shows them in the browser. This page summarizes how it works.
 
 For each weapon:
 
-- **Max damage**: highest burst DPS (average shot damage × effective fire rate) against a neutral target.
+- **Max damage**: highest burst DPS (average shot damage × effective fire rate) against a neutral target,
+  with sustained DPS (including reloads) shown next to it.
 - **Recommended**: one build to keep equipped for general play, without swapping mods per faction.
 - **Faction builds**: one build for each main faction (Grineer, Corpus, Infested, Corrupted,
   Sentient, The Murmur, Scaldra, Techrot).
 
 Each build covers the 8 mod slots in slot order (element combinations depend on it), exilus,
 arcane, Incarnon evolutions, the Kuva/Tenet/Coda bonus element and the forma needed to fit
-the mods. Later versions add Archon Shards, companions and riven advice.
+the mods. Later versions add Archon Shards, aura mods, companions, riven advice, Warframe ability buffs
+and an enemy picker that re-scores a build against one chosen enemy (for information; builds stay
+optimized per faction).
 
 ## Scoring
 
@@ -23,11 +26,18 @@ the mods. Later versions add Archon Shards, companions and riven advice.
   status effects, damage over time, reload and faction damage modifiers.
 - A faction build minimizes the geometric mean time-to-kill over that faction's enemies.
   Recommended maximizes the geometric mean, over the factions, of how close it gets to each
-  faction's own build.
+  faction's own build. Because those reference times are fixed, the search simply minimizes a
+  weighted geometric mean of time-to-kill; the ratios are only shown on the page.
+- Time-to-kill is the time of the event that kills: delayed damage (damage over time, Blast)
+  counts when it lands. Fights are capped at 10 seconds; an enemy still alive scores by the share
+  of its health removed, always worse than any kill, and is shown as "not killed in 10 s".
 - The calculation is deterministic. Monte Carlo simulation is used only for testing and to show
   the spread of real fights.
 - Every build lists its assumptions (headshots or body shots, enemy level, falloff, maximum stacks
-  for conditional effects, and similar).
+  for conditional effects, and similar), each with a link to its public source. The list is open
+  by default, next to the results.
+- A per-hit list shows each shot, damage-over-time tick and reload, so results can be compared
+  with in-game damage numbers.
 
 Damage formulas follow the WARFRAME Wiki pages "Damage/Calculation", "Calculating Bonuses" and
 "Status Effect".
@@ -36,7 +46,8 @@ Damage formulas follow the WARFRAME Wiki pages "Damage/Calculation", "Calculatin
 
 Builds are computed offline, not when a page is opened. A branch-and-bound search with a fixed,
 deterministic evaluation budget finds them. A build is labelled "optimal" only when the search
-proves it; otherwise it is "best found". The same data produces the same builds on any machine.
+proves it within the stated search scope (for example: the two best bonus elements); otherwise it
+is "best found". The same data produces the same builds on any machine.
 
 ## Data
 
@@ -51,6 +62,8 @@ proves it; otherwise it is "best found". The same data produces the same builds 
 - `wfb refresh` turns the downloads into validated, versioned data in `gamedata/`. `wfb check`
   reports which sources changed after a game update.
 - The site never contacts these sources at runtime.
+- Data, reference tables and computed builds are published together as one release; a failed
+  or interrupted build keeps the previous release in service.
 
 ## Stack
 
