@@ -1321,5 +1321,383 @@
   "wikiAvailable": true,
   "wikiaThumbnail": "https://wiki.warframe.com/images/StrunWraith.png?d9d6d",
   "wikiaUrl": "https://wiki.warframe.com/w/Strun_Wraith"
+ },
+ {
+  "accuracy": 13.333333,
+  "attacks": [
+   {
+    "crit_chance": 25,
+    "crit_mult": 2,
+    "damage": {
+     "impact": 90,
+     "puncture": 78.75,
+     "slash": 56.25
+    },
+    "falloff": {
+     "end": 600,
+     "reduction": 0.5,
+     "start": 400
+    },
+    "name": "Normal Attack",
+    "shot_type": "Hit-Scan",
+    "speed": 1.5,
+    "status_chance": 30
+   },
+   {
+    "crit_chance": 30,
+    "crit_mult": 2.5,
+    "damage": {
+     "cold": 5
+    },
+    "flight": 300,
+    "name": "Incarnon Form",
+    "shot_speed": 300,
+    "shot_type": "Projectile",
+    "speed": 1.333,
+    "status_chance": 30
+   },
+   {
+    "crit_chance": 30,
+    "crit_mult": 2.5,
+    "damage": {
+     "cold": 5
+    },
+    "falloff": {
+     "end": 6.7,
+     "reduction": 0,
+     "start": 0
+    },
+    "name": "Incarnon Form Headshot AoE",
+    "shot_type": "AoE",
+    "speed": 1.33,
+    "status_chance": 30
+   },
+   {
+    "crit_chance": 30,
+    "crit_mult": 2.5,
+    "damage": {
+     "cold": 5
+    },
+    "falloff": {
+     "end": 0.15,
+     "reduction": 0,
+     "start": 0
+    },
+    "name": "Incarnon Form Embed AoE",
+    "shot_type": "AoE",
+    "speed": 1.33,
+    "status_chance": 30
+   }
+  ],
+  "bpCost": 40000,
+  "buildPrice": 25000,
+  "buildQuantity": 1,
+  "buildTime": 86400,
+  "category": "Primary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/TennoSniperRifleBlueprint"
+   },
+   {
+    "itemCount": 3000,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Nanospores"
+   },
+   {
+    "itemCount": 4,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Neurode"
+   },
+   {
+    "itemCount": 4,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/OrokinCell"
+   },
+   {
+    "itemCount": 2500,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Rubedo"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.25,
+  "criticalMultiplier": 2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 90,
+   "magnetic": 0,
+   "puncture": 78.75,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 56.25,
+   "tau": 0,
+   "total": 225,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   90,
+   78.75,
+   56.25,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "A classic Tenno sniper rifle, the Vectis is ideal for ranged takedowns.",
+  "disposition": 4,
+  "exilusPolarity": "madurai",
+  "fireRate": 1.5000001,
+  "imageName": "Vectis.png",
+  "introduced": {
+   "aliases": [
+    "10.6.0",
+    "10.6"
+   ],
+   "date": "2013-10-30",
+   "name": "Update 10.6",
+   "parent": "10.6",
+   "url": "https://wiki.warframe.com/w/Update_10%23Update_10.6"
+  },
+  "isPrime": false,
+  "magazineSize": 1,
+  "marketCost": 250,
+  "masterable": true,
+  "masteryReq": 2,
+  "multishot": 1,
+  "name": "Vectis",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "madurai"
+  ],
+  "procChance": 0.30000001,
+  "productCategory": "LongGuns",
+  "releaseDate": "2013-10-30",
+  "reloadTime": 1,
+  "skipBuildTimePrice": 25,
+  "slot": 1,
+  "tags": [
+   "Tenno"
+  ],
+  "totalDamage": 225,
+  "tradable": false,
+  "trigger": "Semi",
+  "type": "Sniper",
+  "uniqueName": "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Vectis.png?403a3",
+  "wikiaUrl": "https://wiki.warframe.com/w/Vectis"
+ },
+ {
+  "accuracy": 13.333333,
+  "attacks": [
+   {
+    "crit_chance": 30,
+    "crit_mult": 2,
+    "damage": {
+     "impact": 140,
+     "puncture": 157.5,
+     "slash": 52.5
+    },
+    "falloff": {
+     "end": 600,
+     "reduction": 0.5,
+     "start": 400
+    },
+    "name": "Normal Attack",
+    "shot_type": "Hit-Scan",
+    "speed": 2.67,
+    "status_chance": 30
+   },
+   {
+    "crit_chance": 35,
+    "crit_mult": 3,
+    "damage": {
+     "cold": 150
+    },
+    "flight": 300,
+    "name": "Incarnon Form",
+    "shot_speed": 300,
+    "shot_type": "Projectile",
+    "speed": 1.333,
+    "status_chance": 30
+   },
+   {
+    "crit_chance": 35,
+    "crit_mult": 3,
+    "damage": {
+     "cold": 150
+    },
+    "falloff": {
+     "end": 6.7,
+     "reduction": 0,
+     "start": 0
+    },
+    "name": "Incarnon Form Headshot AoE",
+    "shot_type": "AoE",
+    "speed": 1.333,
+    "status_chance": 30
+   },
+   {
+    "crit_chance": 35,
+    "crit_mult": 3,
+    "damage": {
+     "cold": 25
+    },
+    "falloff": {
+     "end": 0.15,
+     "reduction": 0,
+     "start": 0
+    },
+    "name": "Incarnon Form Embed AoE",
+    "shot_type": "AoE",
+    "speed": 1.333,
+    "status_chance": 30
+   }
+  ],
+  "buildPrice": 15000,
+  "buildQuantity": 1,
+  "buildTime": 43200,
+  "category": "Primary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/VectisPrimeBarrel"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/VectisPrimeBlueprint"
+   },
+   {
+    "itemCount": 10,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/OrokinCell"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/VectisPrimeReceiver"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/VectisPrimeStock"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.30000001,
+  "criticalMultiplier": 2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 140,
+   "magnetic": 0,
+   "puncture": 157.5,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 52.499992,
+   "tau": 0,
+   "total": 350,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   140,
+   157.5,
+   52.499992,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "Once thought destroyed, the newly uncovered Vectis Prime revives Tenno martial traditions.",
+  "disposition": 4,
+  "estimatedVaultDate": "2017-05-30",
+  "exilusPolarity": "naramon",
+  "fireRate": 2.6666667,
+  "imageName": "VectisPrime.png",
+  "introduced": {
+   "aliases": [
+    "16.11.0",
+    "16.11"
+   ],
+   "date": "2015-07-07",
+   "name": "Update 16.11",
+   "parent": "16.11",
+   "url": "https://wiki.warframe.com/w/Update_16%23Update_16.11"
+  },
+  "isPrime": true,
+  "magazineSize": 2,
+  "masterable": true,
+  "masteryReq": 14,
+  "multishot": 1,
+  "name": "Vectis Prime",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "madurai",
+   "naramon"
+  ],
+  "procChance": 0.30000001,
+  "productCategory": "LongGuns",
+  "releaseDate": "2015-07-07",
+  "reloadTime": 0.85000002,
+  "skipBuildTimePrice": 50,
+  "slot": 1,
+  "tags": [
+   "Prime"
+  ],
+  "totalDamage": 350,
+  "tradable": false,
+  "trigger": "Semi",
+  "type": "Sniper",
+  "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle",
+  "vaultDate": "2017-05-30",
+  "vaulted": true,
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/VectisPrime.png?12ec1",
+  "wikiaUrl": "https://wiki.warframe.com/w/Vectis_Prime"
  }
 ]

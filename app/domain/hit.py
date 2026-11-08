@@ -62,7 +62,11 @@ class ModdedHit:
         return self.arsenal_total * factor * headshot * crit_avg
 
 
-def modded_hit(base: AttackStats, bonuses: Sequence[Bonus]) -> ModdedHit:
+def modded_hit(
+    base: AttackStats,
+    bonuses: Sequence[Bonus],
+    bonus_element: tuple[DamageType, float] | None = None,
+) -> ModdedHit:
     elements: list[Part] = []
     physical: dict[DamageType, float] = {}
     for e, v in bonuses:
@@ -72,7 +76,7 @@ def modded_hit(base: AttackStats, bonuses: Sequence[Bonus]) -> ModdedHit:
             elements.append(Part(e.damage_type, v))
         elif e.stat == Stat.PHYSICAL:
             physical[e.damage_type] = physical.get(e.damage_type, 0.0) + v
-    quantized = composition(base.damage, elements, physical)
+    quantized = composition(base.damage, elements, physical, bonus_element)
     factions = {e.faction for e, _ in bonuses if e.stat == Stat.FACTION_DAMAGE and e.faction}
     return ModdedHit(
         damage=scaled(quantized, modded(1.0, Stat.DAMAGE, bonuses)),

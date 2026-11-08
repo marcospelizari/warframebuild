@@ -1,5 +1,5 @@
 {
-  "about": "Fire data DE and WFCD lack (G10), each row from a saved wiki page. `exclude` keeps a gun out with a reason until real values are known. `no_reload`: shots come straight from the ammo pool, no reload between shots. `beam_ramp_start`: beam damage at the start of the 0.6 s ramp-up (HELD guns only); `defaults` applies to every beam without its own row. Forced procs, burst count/delay and Lanka's no-delay rule come from the wiki weapon data modules, not from here.",
+  "about": "Fire data DE and WFCD lack (G10), each row from a saved wiki page. `exclude` keeps a gun out with a reason until real values are known. `no_reload`: shots come straight from the ammo pool, no reload between shots. `reload_replaces_shot`: the reload takes the place of one shot interval (sustained DPS). `beam_ramp_start`: beam damage at the start of the 0.6 s ramp-up (HELD guns only); `defaults` applies to every beam without its own row. Forced procs, burst count/delay and Lanka's no-delay rule come from the wiki weapon data modules, not from here.",
   "defaults": {
     "beam_ramp_start": {
       "value": 0.2,
@@ -36,6 +36,18 @@
       "name": "Epitaph Prime",
       "no_reload": true,
       "source": "Epitaph_Prime: 'No magazine; does not need to reload.'",
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle": {
+      "name": "Vectis",
+      "reload_replaces_shot": true,
+      "source": "Calculation, Average Sustained DPS: 'For the Vectis and Vectis Prime specifically, one (1) should be subtracted from the denominator to account for their lack of a reload delay'",
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle": {
+      "name": "Vectis Prime",
+      "reload_replaces_shot": true,
+      "source": "Calculation, Average Sustained DPS: 'For the Vectis and Vectis Prime specifically, one (1) should be subtracted from the denominator to account for their lack of a reload delay'",
       "verified": "2026-11-08"
     }
   }

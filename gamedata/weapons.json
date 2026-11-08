@@ -2,6 +2,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17,6 +18,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -34,6 +36,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -80,6 +83,7 @@
    "vazarin",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "simulor",
@@ -93,6 +97,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -131,6 +136,7 @@
   "name": "Acrid",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
   "slug": "acrid",
@@ -144,6 +150,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -161,6 +168,7 @@
     "status_chance": 0.23
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -182,6 +190,7 @@
     "status_chance": 0.25
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -220,6 +229,7 @@
   "name": "Torid",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
   "slug": "torid",
@@ -233,6 +243,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -270,6 +281,7 @@
   "name": "Ignis",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "ignis",
@@ -283,6 +295,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -320,6 +333,7 @@
   "name": "Ignis Wraith",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
   "slug": "ignis-wraith",
@@ -333,6 +347,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.3,
@@ -350,6 +365,7 @@
     "status_chance": 0.35
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -392,6 +408,7 @@
   "name": "Ogris",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "ogris",
@@ -405,6 +422,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -445,6 +463,7 @@
   "name": "Supra",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "supra",
@@ -458,6 +477,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -495,6 +515,7 @@
   "name": "Spectra",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "spectra",
@@ -508,6 +529,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -547,6 +569,7 @@
   "name": "Flux Rifle",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.75,
   "riven_disposition": 1.2,
   "slug": "flux-rifle",
@@ -560,6 +583,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -579,6 +603,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -620,6 +645,7 @@
   "name": "Dera Vandal",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "dera-vandal",
@@ -633,6 +659,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -652,6 +679,7 @@
     "status_chance": 0.22
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -693,6 +721,7 @@
   "name": "Dera",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "dera",
@@ -706,6 +735,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.3,
@@ -727,6 +757,7 @@
     "status_chance": 0.25
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -763,6 +794,7 @@
   "name": "Lanka",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "lanka",
@@ -776,6 +808,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -820,6 +853,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "tenet-arca-plasmor",
@@ -833,6 +867,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.4,
@@ -852,6 +887,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -875,6 +911,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -896,6 +933,7 @@
     "status_chance": 0.4
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -938,6 +976,7 @@
    "madurai",
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "tenet-ferrox",
@@ -951,6 +990,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -989,6 +1029,7 @@
   "name": "Tenet Flux Rifle",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "tenet-flux-rifle",
@@ -1002,6 +1043,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1038,6 +1080,7 @@
   "name": "Tenet Glaxion",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "tenet-glaxion",
@@ -1051,6 +1094,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1068,6 +1112,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": 10.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1085,6 +1130,7 @@
     "status_chance": 1.0
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1106,6 +1152,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1151,6 +1198,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "tenet-quanta",
@@ -1164,6 +1212,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1183,6 +1232,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": 80.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1200,6 +1250,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": 80.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1242,6 +1293,7 @@
   "name": "Tenet Tetra",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
   "slug": "tenet-tetra",
@@ -1255,6 +1307,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1294,6 +1347,7 @@
    "naramon",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
   "slug": "tenet-cycron",
@@ -1307,6 +1361,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1328,6 +1383,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": 0.12,
     "charge_time": null,
@@ -1368,6 +1424,7 @@
   "name": "Tenet Detron",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "tenet-detron",
@@ -1381,6 +1438,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1399,6 +1457,7 @@
     "status_chance": 0.12
    },
    {
+    "ammo_cost": 10.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.8,
@@ -1418,6 +1477,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1465,6 +1525,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
   "slug": "tenet-plinx",
@@ -1478,6 +1539,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.2,
@@ -1497,6 +1559,7 @@
     "status_chance": 0.05
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.2,
@@ -1520,6 +1583,7 @@
     "status_chance": 0.05
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.2,
@@ -1567,6 +1631,7 @@
    "naramon",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "lenz",
@@ -1580,6 +1645,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.2,
@@ -1599,6 +1665,7 @@
     "status_chance": 0.16
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.2,
@@ -1622,6 +1689,7 @@
     "status_chance": 0.16
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.2,
@@ -1670,6 +1738,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "prisma-lenz",
@@ -1683,6 +1752,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1720,6 +1790,7 @@
   "name": "Amprex",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
   "slug": "amprex",
@@ -1733,6 +1804,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1771,6 +1843,7 @@
   "name": "Tetra",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "tetra",
@@ -1784,6 +1857,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1822,6 +1896,7 @@
   "name": "Prisma Tetra",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "prisma-tetra",
@@ -1835,6 +1910,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1852,6 +1928,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": 16.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -1869,6 +1946,7 @@
     "status_chance": 0.32
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.7,
@@ -1908,6 +1986,7 @@
   "name": "Ambassador",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
   "slug": "ambassador",
@@ -1921,6 +2000,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 2.0,
@@ -1942,6 +2022,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1963,6 +2044,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -1982,6 +2064,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2027,6 +2110,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "opticor",
@@ -2040,6 +2124,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.6,
@@ -2061,6 +2146,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2082,6 +2168,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2101,6 +2188,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2146,6 +2234,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
   "slug": "opticor-vandal",
@@ -2159,6 +2248,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2176,6 +2266,7 @@
     "status_chance": 0.24
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2218,6 +2309,7 @@
   "name": "Tenet Envoy",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 4.0,
   "riven_disposition": 1.2,
   "slug": "tenet-envoy",
@@ -2231,6 +2323,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2267,6 +2360,7 @@
   "name": "Glaxion",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
   "slug": "glaxion",
@@ -2280,6 +2374,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2316,6 +2411,7 @@
   "name": "Glaxion Vandal",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "glaxion-vandal",
@@ -2329,6 +2425,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2348,6 +2445,7 @@
     "status_chance": 0.22
    },
    {
+    "ammo_cost": 20.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.6,
@@ -2369,6 +2467,7 @@
     "status_chance": 0.32
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2414,6 +2513,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
   "slug": "stahlta",
@@ -2427,6 +2527,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2450,6 +2551,7 @@
     "status_chance": 0.35
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2492,6 +2594,7 @@
   "name": "Komorex",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "komorex",
@@ -2505,6 +2608,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 2,
     "burst_delay": 0.08,
     "charge_time": null,
@@ -2523,6 +2627,7 @@
     "status_chance": 0.18
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.4,
@@ -2540,6 +2645,7 @@
     "status_chance": 0.08
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2581,6 +2687,7 @@
   "name": "Battacor",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "battacor",
@@ -2594,6 +2701,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2643,6 +2751,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
   "slug": "exergis",
@@ -2656,6 +2765,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2673,6 +2783,7 @@
     "status_chance": 0.24
    },
    {
+    "ammo_cost": 10.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2690,6 +2801,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2711,6 +2823,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2754,6 +2867,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "quanta",
@@ -2767,6 +2881,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2784,6 +2899,7 @@
     "status_chance": 0.45
    },
    {
+    "ammo_cost": 10.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2801,6 +2917,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2822,6 +2939,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2865,6 +2983,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "quanta-vandal",
@@ -2878,6 +2997,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2922,6 +3042,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.8,
   "riven_disposition": 1.2,
   "slug": "arca-plasmor",
@@ -2935,6 +3056,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2954,6 +3076,7 @@
     "status_chance": 0.45
    },
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -2995,6 +3118,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "convectrix",
@@ -3008,6 +3132,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3025,6 +3150,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3068,6 +3194,7 @@
   "name": "Carmine Penta",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "carmine-penta",
@@ -3081,6 +3208,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3098,6 +3226,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3141,6 +3270,7 @@
   "name": "Penta",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "penta",
@@ -3154,6 +3284,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3197,6 +3328,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "supra-vandal",
@@ -3210,6 +3342,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.5,
@@ -3229,6 +3362,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3250,6 +3384,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3271,6 +3406,7 @@
     "status_chance": 0.33
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3312,6 +3448,7 @@
    "madurai",
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "ferrox",
@@ -3325,6 +3462,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3367,6 +3505,7 @@
   "name": "Detron",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.05,
   "riven_disposition": 1.2,
   "slug": "detron",
@@ -3380,6 +3519,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3398,6 +3538,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3435,6 +3576,7 @@
   "name": "Cestra",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "cestra",
@@ -3448,6 +3590,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3487,6 +3630,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.5,
   "riven_disposition": 1.2,
   "slug": "dual-cestra",
@@ -3500,6 +3644,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3537,6 +3682,7 @@
   "name": "Spectra Vandal",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
   "slug": "spectra-vandal",
@@ -3550,6 +3696,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3573,6 +3720,7 @@
     "status_chance": 0.0
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3614,6 +3762,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "sonicor",
@@ -3627,6 +3776,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3646,6 +3796,7 @@
     "status_chance": 0.14
    },
    {
+    "ammo_cost": 2.0,
     "burst_count": null,
     "burst_delay": 0.06,
     "charge_time": null,
@@ -3685,6 +3836,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.8,
   "riven_disposition": 1.2,
   "slug": "tenet-diplos",
@@ -3698,6 +3850,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3741,6 +3894,7 @@
    "naramon",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "cycron",
@@ -3754,6 +3908,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3771,6 +3926,7 @@
     "status_chance": 0.28
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3792,6 +3948,7 @@
     "status_chance": 0.28
    },
    {
+    "ammo_cost": 5.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -3809,6 +3966,7 @@
     "status_chance": 0.28
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -3851,6 +4009,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
   "slug": "staticor",
@@ -3864,6 +4023,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.5,
@@ -3881,6 +4041,7 @@
     "status_chance": 0.22
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.5,
@@ -3902,6 +4063,7 @@
     "status_chance": 0.22
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -3941,6 +4103,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "angstrum",
@@ -3954,6 +4117,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.2,
@@ -3971,6 +4135,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.2,
@@ -3992,6 +4157,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4031,6 +4197,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "prisma-angstrum",
@@ -4044,6 +4211,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4065,6 +4233,7 @@
     "status_chance": 0.4
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4111,6 +4280,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "tenet-spirex",
@@ -4124,6 +4294,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4141,6 +4312,7 @@
     "status_chance": 0.32
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4162,6 +4334,7 @@
     "status_chance": 0.32
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": 0.08,
     "charge_time": null,
@@ -4200,6 +4373,7 @@
   "name": "Cyanex",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
   "slug": "cyanex",
@@ -4213,6 +4387,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4251,6 +4426,7 @@
   "name": "Ocucor",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
   "slug": "ocucor",
@@ -4264,6 +4440,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4303,6 +4480,7 @@
   "name": "Plinx",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
   "slug": "plinx",
@@ -4316,6 +4494,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4356,6 +4535,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
   "slug": "arca-scisco",
@@ -4369,6 +4549,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.4,
@@ -4386,6 +4567,7 @@
     "status_chance": 0.21
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.4,
@@ -4407,6 +4589,7 @@
     "status_chance": 0.21
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.4,
@@ -4424,6 +4607,7 @@
     "status_chance": 0.21
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.4,
@@ -4470,6 +4654,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "kuva-bramma",
@@ -4483,6 +4668,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4524,6 +4710,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.1,
   "riven_disposition": 1.2,
   "slug": "twin-gremlins",
@@ -4537,6 +4724,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4576,6 +4764,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.69999999,
   "riven_disposition": 1.2,
   "slug": "viper",
@@ -4589,6 +4778,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 2,
     "burst_delay": 0.05,
     "charge_time": null,
@@ -4626,6 +4816,7 @@
   "name": "Kraken",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.45,
   "riven_disposition": 1.2,
   "slug": "kraken",
@@ -4639,6 +4830,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4679,6 +4871,7 @@
   "name": "Seer",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.8,
   "riven_disposition": 1.2,
   "slug": "seer",
@@ -4692,6 +4885,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4711,6 +4905,7 @@
     "status_chance": 0.09
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.3,
@@ -4750,6 +4945,7 @@
   "name": "Kuva Drakgoon",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "kuva-drakgoon",
@@ -4763,6 +4959,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4786,6 +4983,7 @@
     "status_chance": 0.133
    },
    {
+    "ammo_cost": 4.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4830,6 +5028,7 @@
   "name": "Kuva Hek",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.9,
   "riven_disposition": 1.2,
   "slug": "kuva-hek",
@@ -4843,6 +5042,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 5,
     "burst_delay": 0.07,
     "charge_time": null,
@@ -4862,6 +5062,7 @@
     "status_chance": 0.33
    },
    {
+    "ammo_cost": 3.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4881,6 +5082,7 @@
     "status_chance": 0.21
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4922,6 +5124,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.3,
   "riven_disposition": 1.2,
   "slug": "kuva-hind",
@@ -4935,6 +5138,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -4976,6 +5180,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
   "slug": "kuva-karak",
@@ -4989,6 +5194,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5012,6 +5218,7 @@
     "status_chance": 0.9
    },
    {
+    "ammo_cost": 4.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5055,6 +5262,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "kuva-kohm",
@@ -5068,6 +5276,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5088,6 +5297,7 @@
     "status_chance": 0.47
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5136,6 +5346,7 @@
   "name": "Kuva Ogris",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0999999,
   "riven_disposition": 1.2,
   "slug": "kuva-ogris",
@@ -5149,6 +5360,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5168,6 +5380,7 @@
     "status_chance": 0.33
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": 4,
     "burst_delay": 0.0,
     "charge_time": null,
@@ -5210,6 +5423,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
   "slug": "kuva-quartakk",
@@ -5223,6 +5437,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5264,6 +5479,7 @@
   "name": "Kuva Sobek",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0999999,
   "riven_disposition": 1.2,
   "slug": "kuva-sobek",
@@ -5277,6 +5493,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5296,6 +5513,7 @@
     "status_chance": 0.17
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5342,6 +5560,7 @@
   "name": "Kuva Tonkor",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
   "slug": "kuva-tonkor",
@@ -5355,6 +5574,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5372,6 +5592,7 @@
     "status_chance": 0.31
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5393,6 +5614,7 @@
     "status_chance": 0.31
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5410,6 +5632,7 @@
     "status_chance": 0.31
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5431,6 +5654,7 @@
     "status_chance": 0.31
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5481,6 +5705,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 4.8000002,
   "riven_disposition": 1.2,
   "slug": "kuva-zarr",
@@ -5494,6 +5719,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5541,6 +5767,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.1,
   "riven_disposition": 1.2,
   "slug": "kuva-brakk",
@@ -5554,6 +5781,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.03,
     "charge_time": null,
@@ -5573,6 +5801,7 @@
     "status_chance": 0.29
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": 0.05,
     "charge_time": null,
@@ -5610,6 +5839,7 @@
   "name": "Kuva Kraken",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
   "slug": "kuva-kraken",
@@ -5623,6 +5853,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5658,6 +5889,7 @@
   "name": "Kuva Nukor",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "kuva-nukor",
@@ -5671,6 +5903,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5690,6 +5923,7 @@
     "status_chance": 0.33
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5733,6 +5967,7 @@
   "name": "Kuva Seer",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.3,
   "riven_disposition": 1.2,
   "slug": "kuva-seer",
@@ -5746,6 +5981,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5785,6 +6021,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
   "slug": "kuva-twin-stubbas",
@@ -5798,6 +6035,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 5,
     "burst_delay": 0.12,
     "charge_time": null,
@@ -5817,6 +6055,7 @@
     "status_chance": 0.15
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5858,6 +6097,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "hind",
@@ -5871,6 +6111,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5910,6 +6151,7 @@
   "name": "Grakata",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "grakata",
@@ -5923,6 +6165,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 2.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5962,6 +6205,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "twin-grakatas",
@@ -5975,6 +6219,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -5994,6 +6239,7 @@
     "status_chance": 0.063
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.5,
@@ -6033,6 +6279,7 @@
   "name": "Drakgoon",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.3,
   "riven_disposition": 1.2,
   "slug": "drakgoon",
@@ -6046,6 +6293,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6088,6 +6336,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
   "slug": "grinlok",
@@ -6101,6 +6350,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6143,6 +6393,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
   "slug": "prisma-grinlok",
@@ -6156,6 +6407,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6197,6 +6449,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "karak",
@@ -6210,6 +6463,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6251,6 +6505,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "karak-wraith",
@@ -6264,6 +6519,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6283,6 +6539,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.8,
@@ -6302,6 +6559,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6321,6 +6579,7 @@
     "status_chance": 0.56
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6367,6 +6626,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "miter",
@@ -6380,6 +6640,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6426,6 +6687,7 @@
   "name": "Vulkar",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "vulkar",
@@ -6439,6 +6701,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6485,6 +6748,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "vulkar-wraith",
@@ -6498,6 +6762,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6515,6 +6780,7 @@
     "status_chance": 0.29
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6536,6 +6802,7 @@
     "status_chance": 0.29
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6553,6 +6820,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6574,6 +6842,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6618,6 +6887,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.25,
   "riven_disposition": 1.2,
   "slug": "zarr",
@@ -6631,6 +6901,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.3,
@@ -6648,6 +6919,7 @@
     "status_chance": 0.25
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6669,6 +6941,7 @@
     "status_chance": 0.25
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6691,6 +6964,7 @@
     "status_chance": 0.25
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6738,6 +7012,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.9,
   "riven_disposition": 1.2,
   "slug": "javlok",
@@ -6751,6 +7026,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 4,
     "burst_delay": 0.0,
     "charge_time": null,
@@ -6793,6 +7069,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.9,
   "riven_disposition": 1.2,
   "slug": "quartakk",
@@ -6806,6 +7083,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6825,6 +7103,7 @@
     "status_chance": 0.21
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6863,6 +7142,7 @@
   "name": "Buzlok",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "buzlok",
@@ -6876,6 +7156,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6895,6 +7176,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -6938,6 +7220,7 @@
   "name": "Tonkor",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
   "slug": "tonkor",
@@ -6951,6 +7234,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.1,
     "charge_time": null,
@@ -6970,6 +7254,7 @@
     "status_chance": 0.17
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7014,6 +7299,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "harpak",
@@ -7027,6 +7313,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7046,6 +7333,7 @@
     "status_chance": 0.27
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7098,6 +7386,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.3,
   "riven_disposition": 1.2,
   "slug": "kuva-chakkhurr",
@@ -7111,6 +7400,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7150,6 +7440,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "gotva-prime",
@@ -7163,6 +7454,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7186,6 +7478,7 @@
     "status_chance": 0.75
    },
    {
+    "ammo_cost": 4.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7229,6 +7522,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "kohm",
@@ -7242,6 +7536,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7261,6 +7556,7 @@
     "status_chance": 0.19
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7303,6 +7599,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "argonak",
@@ -7316,6 +7613,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7335,6 +7633,7 @@
     "status_chance": 0.15
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7354,6 +7653,7 @@
     "status_chance": 0.21
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7397,6 +7697,7 @@
   "name": "Prisma Gorgon",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "prisma-gorgon",
@@ -7410,6 +7711,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7429,6 +7731,7 @@
     "status_chance": 0.21
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7448,6 +7751,7 @@
     "status_chance": 0.27
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7491,6 +7795,7 @@
   "name": "Gorgon Wraith",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "gorgon-wraith",
@@ -7504,6 +7809,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7545,6 +7851,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.89999998,
   "riven_disposition": 1.2,
   "slug": "prisma-twin-gremlins",
@@ -7558,6 +7865,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7579,6 +7887,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7600,6 +7909,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7621,6 +7931,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7642,6 +7953,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7684,6 +7996,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "stug",
@@ -7697,6 +8010,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7745,6 +8059,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.05,
   "riven_disposition": 1.2,
   "slug": "brakk",
@@ -7758,6 +8073,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7799,6 +8115,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.6670001,
   "riven_disposition": 1.2,
   "slug": "marelok",
@@ -7812,6 +8129,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7847,6 +8165,7 @@
   "name": "Nukor",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "nukor",
@@ -7860,6 +8179,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7880,6 +8200,7 @@
     "status_chance": 0.27
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": 4,
     "burst_delay": 0.0,
     "charge_time": null,
@@ -7922,6 +8243,7 @@
   "name": "Quatz",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
   "slug": "quatz",
@@ -7935,6 +8257,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -7958,6 +8281,7 @@
     "status_chance": 0.69
    },
    {
+    "ammo_cost": 1.67,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8003,6 +8327,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
   "slug": "twin-kohmak",
@@ -8016,6 +8341,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8039,6 +8365,7 @@
     "status_chance": 0.69
    },
    {
+    "ammo_cost": 1.67,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8085,6 +8412,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "kohmak",
@@ -8098,6 +8426,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8138,6 +8467,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
   "slug": "sagek-prime",
@@ -8151,6 +8481,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8198,6 +8529,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
   "slug": "twin-rogga",
@@ -8211,6 +8543,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8230,6 +8563,7 @@
     "status_chance": 0.19
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8251,6 +8585,7 @@
     "status_chance": 0.19
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8268,6 +8603,7 @@
     "status_chance": 0.19
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8311,6 +8647,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "kulstar",
@@ -8324,6 +8661,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8361,6 +8699,7 @@
   "name": "Stubba",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
   "slug": "stubba",
@@ -8374,6 +8713,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8391,6 +8731,7 @@
     "status_chance": 0.21
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8408,6 +8749,7 @@
     "status_chance": 0.41
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8449,6 +8791,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "atomos",
@@ -8462,6 +8805,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8501,6 +8845,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.80000001,
   "riven_disposition": 1.2,
   "slug": "viper-wraith",
@@ -8514,6 +8859,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8553,6 +8899,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "twin-vipers-wraith",
@@ -8566,6 +8913,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8585,6 +8933,7 @@
     "status_chance": 0.19
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8633,6 +8982,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
   "slug": "aegrit",
@@ -8646,6 +8996,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8665,6 +9016,7 @@
     "status_chance": 0.49
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.5,
@@ -8684,6 +9036,7 @@
     "status_chance": 0.49
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8731,6 +9084,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "mutalist-cernos",
@@ -8744,6 +9098,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8766,6 +9121,7 @@
     "status_chance": 0.4
    },
    {
+    "ammo_cost": 4.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8807,6 +9163,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "coda-bassocyst",
@@ -8820,6 +9177,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8844,6 +9202,7 @@
     "status_chance": 0.1014
    },
    {
+    "ammo_cost": 3.0,
     "burst_count": 3,
     "burst_delay": 0.23,
     "charge_time": null,
@@ -8861,6 +9220,7 @@
     "status_chance": 0.61
    },
    {
+    "ammo_cost": 3.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8909,6 +9269,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 5.5,
   "riven_disposition": 1.2,
   "slug": "coda-bubonico",
@@ -8922,6 +9283,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.1,
     "charge_time": null,
@@ -8961,6 +9323,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "coda-hema",
@@ -8974,6 +9337,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -8997,6 +9361,7 @@
     "status_chance": 0.55
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9043,6 +9408,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "coda-sporothrix",
@@ -9056,6 +9422,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9094,6 +9461,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
   "slug": "coda-synapse",
@@ -9107,6 +9475,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9144,6 +9513,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.3299999,
   "riven_disposition": 1.2,
   "slug": "dual-coda-torxica",
@@ -9157,6 +9527,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9178,6 +9549,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9195,6 +9567,7 @@
     "status_chance": 0.43
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9216,6 +9589,7 @@
     "status_chance": 0.43
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9233,6 +9607,7 @@
     "status_chance": 0.59
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9275,6 +9650,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
   "slug": "coda-catabolyst",
@@ -9288,6 +9664,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9305,6 +9682,7 @@
     "status_chance": 0.45
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9348,6 +9726,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "coda-pox",
@@ -9361,6 +9740,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9380,6 +9760,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9421,6 +9802,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
   "slug": "coda-tysis",
@@ -9434,6 +9816,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9458,6 +9841,7 @@
     "status_chance": 0.0929
    },
    {
+    "ammo_cost": 3.0,
     "burst_count": 3,
     "burst_delay": 0.23,
     "charge_time": null,
@@ -9475,6 +9859,7 @@
     "status_chance": 0.57
    },
    {
+    "ammo_cost": 3.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9521,6 +9906,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 4.5,
   "riven_disposition": 1.2,
   "slug": "bubonico",
@@ -9534,6 +9920,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9553,6 +9940,7 @@
     "status_chance": 0.15
    },
    {
+    "ammo_cost": 5.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9574,6 +9962,7 @@
     "status_chance": 1.0
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9618,6 +10007,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "mutalist-quanta",
@@ -9631,6 +10021,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9654,6 +10045,7 @@
     "status_chance": 0.53
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9700,6 +10092,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
   "slug": "sporothrix",
@@ -9713,6 +10106,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.1,
     "charge_time": null,
@@ -9751,6 +10145,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "hema",
@@ -9764,6 +10159,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9800,6 +10196,7 @@
   "name": "Synapse",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
   "slug": "synapse",
@@ -9813,6 +10210,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.05,
     "charge_time": null,
@@ -9830,6 +10228,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.3,
@@ -9847,6 +10246,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9885,6 +10285,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "paracyst",
@@ -9898,6 +10299,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9935,6 +10337,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "phage",
@@ -9948,6 +10351,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9969,6 +10373,7 @@
     "status_chance": 0.43
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -9986,6 +10391,7 @@
     "status_chance": 0.43
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10007,6 +10413,7 @@
     "status_chance": 0.43
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10024,6 +10431,7 @@
     "status_chance": 0.59
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10066,6 +10474,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
   "slug": "catabolyst",
@@ -10079,6 +10488,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10096,6 +10506,7 @@
     "status_chance": 0.35
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10140,6 +10551,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "pox",
@@ -10153,6 +10565,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10173,6 +10586,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10194,6 +10608,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10217,6 +10632,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10237,6 +10653,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10281,6 +10698,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.2,
   "riven_disposition": 1.2,
   "slug": "zymos",
@@ -10294,6 +10712,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10313,6 +10732,7 @@
     "status_chance": 0.37
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10353,6 +10773,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.3499999,
   "riven_disposition": 1.2,
   "slug": "dual-toxocyst",
@@ -10366,6 +10787,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10385,6 +10807,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10424,6 +10847,7 @@
   "name": "Tysis",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
   "slug": "tysis",
@@ -10437,6 +10861,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10475,6 +10900,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
   "slug": "embolist",
@@ -10488,6 +10914,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10526,6 +10953,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "ax-52",
@@ -10539,6 +10967,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10558,6 +10987,7 @@
     "status_chance": 0.25
    },
    {
+    "ammo_cost": 15.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -10606,6 +11036,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "efv-5-jupiter",
@@ -10619,6 +11050,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10637,6 +11069,7 @@
     "status_chance": 0.17
    },
    {
+    "ammo_cost": 3.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10654,6 +11087,7 @@
     "status_chance": 0.33
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10695,6 +11129,7 @@
    "madurai",
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.6670001,
   "riven_disposition": 1.2,
   "slug": "efv-8-mars",
@@ -10708,6 +11143,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10751,6 +11187,7 @@
   "name": "Purgator 1",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
   "slug": "purgator-1",
@@ -10764,6 +11201,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10804,6 +11242,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.3499999,
   "riven_disposition": 1.2,
   "slug": "vesper-77",
@@ -10817,6 +11256,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10836,6 +11276,7 @@
     "status_chance": 0.01
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10877,6 +11318,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
   "slug": "mk1-furis",
@@ -10890,6 +11332,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10909,6 +11352,7 @@
     "status_chance": 0.025
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10952,6 +11396,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.75,
   "riven_disposition": 1.2,
   "slug": "mk1-kunai",
@@ -10965,6 +11410,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -10984,6 +11430,7 @@
     "status_chance": 0.15
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.5,
@@ -11003,6 +11450,7 @@
     "status_chance": 0.15
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.8,
@@ -11043,6 +11491,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.55000001,
   "riven_disposition": 1.2,
   "slug": "mk1-paris",
@@ -11056,6 +11505,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11079,6 +11529,7 @@
     "status_chance": 0.06
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11098,6 +11549,7 @@
     "status_chance": 0.4
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11145,6 +11597,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.75,
   "riven_disposition": 1.2,
   "slug": "mk1-strun",
@@ -11158,6 +11611,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11173,6 +11627,7 @@
     "status_chance": 0.19
    },
    {
+    "ammo_cost": 1.5,
     "burst_count": 2,
     "burst_delay": 0.05,
     "charge_time": null,
@@ -11210,6 +11665,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "haalvu",
@@ -11223,6 +11679,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11240,6 +11697,7 @@
     "status_chance": 0.29
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11261,6 +11719,7 @@
     "status_chance": 0.29
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11302,6 +11761,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.69999999,
   "riven_disposition": 1.2,
   "slug": "basmu",
@@ -11315,6 +11775,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11332,6 +11793,7 @@
     "status_chance": 0.23
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11378,6 +11840,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.64999998,
   "riven_disposition": 1.2,
   "slug": "shedu",
@@ -11391,6 +11854,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11409,6 +11873,7 @@
     "status_chance": 0.16
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11451,6 +11916,7 @@
    "vazarin",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "telos-boltor",
@@ -11464,6 +11930,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11505,6 +11972,7 @@
    "vazarin",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "telos-akbolto",
@@ -11518,6 +11986,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11533,6 +12002,7 @@
     "status_chance": 0.0
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11554,6 +12024,7 @@
     "status_chance": 0.35
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11577,6 +12048,7 @@
     "status_chance": 0.35
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11622,6 +12094,7 @@
    "vazarin",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "synoid-simulor",
@@ -11635,6 +12108,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11652,6 +12126,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11671,6 +12146,7 @@
     "status_chance": 0.22
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11714,6 +12190,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
   "slug": "gammacor",
@@ -11727,6 +12204,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11744,6 +12222,7 @@
     "status_chance": 0.28
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11763,6 +12242,7 @@
     "status_chance": 0.28
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11807,6 +12287,7 @@
    "vazarin",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "synoid-gammacor",
@@ -11820,6 +12301,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11867,6 +12349,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
   "slug": "sancti-tigris",
@@ -11880,6 +12363,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11901,6 +12385,7 @@
     "status_chance": 0.34
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11949,6 +12434,7 @@
    "madurai",
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "sancti-castanas",
@@ -11962,6 +12448,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -11979,6 +12466,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12026,6 +12514,7 @@
    "vazarin",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "secura-penta",
@@ -12039,6 +12528,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12079,6 +12569,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.5,
   "riven_disposition": 1.2,
   "slug": "secura-dual-cestra",
@@ -12092,6 +12583,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12111,6 +12603,7 @@
     "status_chance": 0.15
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.3,
@@ -12154,6 +12647,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "rakta-cernos",
@@ -12167,6 +12661,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 4,
     "burst_delay": 0.05,
     "charge_time": null,
@@ -12186,6 +12681,7 @@
     "status_chance": 0.05
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -12205,6 +12701,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.4,
@@ -12245,6 +12742,7 @@
    "vazarin",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "rakta-ballistica",
@@ -12258,6 +12756,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12305,6 +12804,7 @@
    "vazarin",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.25,
   "riven_disposition": 1.2,
   "slug": "vaykor-hek",
@@ -12318,6 +12818,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12360,6 +12861,7 @@
    "madurai",
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.6670001,
   "riven_disposition": 1.2,
   "slug": "vaykor-marelok",
@@ -12373,6 +12875,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12412,6 +12915,7 @@
   "name": "Aklex",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "aklex",
@@ -12425,6 +12929,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12464,6 +12969,7 @@
   "name": "Aklex Prime",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "aklex-prime",
@@ -12477,6 +12983,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12516,6 +13023,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "afuris",
@@ -12529,6 +13037,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12569,6 +13078,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
   "slug": "akbolto",
@@ -12582,6 +13092,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12621,6 +13132,7 @@
   "name": "Aklato",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "aklato",
@@ -12634,6 +13146,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12681,6 +13194,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "akbronco",
@@ -12694,6 +13208,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12733,6 +13248,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "twin-vipers",
@@ -12746,6 +13262,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12785,6 +13302,7 @@
   "name": "Akmagnus",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 3.2,
   "riven_disposition": 1.2,
   "slug": "akmagnus",
@@ -12798,6 +13316,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12840,6 +13359,7 @@
    "madurai",
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.8,
   "riven_disposition": 1.2,
   "slug": "akmagnus-prime",
@@ -12853,6 +13373,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12892,6 +13413,7 @@
   "name": "Akvasto",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
   "slug": "akvasto",
@@ -12905,6 +13427,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -12952,6 +13475,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.25,
   "riven_disposition": 1.2,
   "slug": "akbronco-prime",
@@ -12965,6 +13489,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -13006,6 +13531,7 @@
    "madurai",
    "aura"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "vinquibus",
@@ -13019,6 +13545,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -13038,6 +13565,7 @@
     "status_chance": 0.18
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.5,
@@ -13079,6 +13607,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "cernos",
@@ -13092,6 +13621,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -13136,6 +13666,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "daikyu",
@@ -13149,6 +13680,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -13167,6 +13699,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.5,
@@ -13185,6 +13718,7 @@
     "status_chance": 0.32
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.1,
@@ -13223,6 +13757,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "cinta",
@@ -13236,6 +13771,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.6,
@@ -13254,6 +13790,7 @@
     "status_chance": 0.32
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.5,
@@ -13293,6 +13830,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "nunchasa",
@@ -13306,6 +13844,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -13325,6 +13864,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.5,
@@ -13344,6 +13884,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.8,
@@ -13384,6 +13925,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.64999998,
   "riven_disposition": 1.2,
   "slug": "paris",
@@ -13397,6 +13939,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -13417,6 +13960,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -13435,6 +13979,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.7,
@@ -13479,6 +14024,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.050000001,
   "riven_disposition": 1.2,
   "slug": "nataruk",
@@ -13492,6 +14038,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -13511,6 +14058,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.5,
@@ -13553,6 +14101,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.64999998,
   "riven_disposition": 1.2,
   "slug": "cernos-prime",
@@ -13566,6 +14115,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.3,
@@ -13587,6 +14137,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -13632,6 +14183,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "daikyu-prime",
@@ -13645,6 +14197,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.7,
@@ -13664,6 +14217,7 @@
     "status_chance": 0.43
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.7,
@@ -13688,6 +14242,7 @@
     "status_chance": 0.43
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.7,
@@ -13733,6 +14288,7 @@
    "naramon",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "proboscis-cernos",
@@ -13746,6 +14302,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -13765,6 +14322,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.5,
@@ -13784,6 +14342,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.8,
@@ -13825,6 +14384,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.69999999,
   "riven_disposition": 1.2,
   "slug": "paris-prime",
@@ -13838,6 +14398,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -13857,6 +14418,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.5,
@@ -13876,6 +14438,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.6,
@@ -13918,6 +14481,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.69999999,
   "riven_disposition": 1.2,
   "slug": "dread",
@@ -13931,6 +14495,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -13949,6 +14514,7 @@
     "status_chance": 0.38
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.2,
@@ -13967,6 +14533,7 @@
     "status_chance": 0.38
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.2,
@@ -14011,6 +14578,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "evensong",
@@ -14024,6 +14592,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14041,6 +14610,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14062,6 +14632,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14079,6 +14650,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14123,6 +14695,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "grimoire-tndoppelgangergrimoire",
@@ -14136,6 +14709,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14153,6 +14727,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14174,6 +14749,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14193,6 +14769,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14238,6 +14815,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.0099999998,
   "riven_disposition": 1.2,
   "slug": "grimoire-tngrimoire",
@@ -14251,6 +14829,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 2,
     "burst_delay": 0.09,
     "charge_time": null,
@@ -14270,6 +14849,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": 4,
     "burst_delay": 0.09,
     "charge_time": null,
@@ -14311,6 +14891,7 @@
   "name": "Dex Sybaris",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
   "slug": "dex-sybaris",
@@ -14324,6 +14905,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14367,6 +14949,7 @@
   "name": "Tigris",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "tigris",
@@ -14380,6 +14963,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.06,
     "charge_time": null,
@@ -14421,6 +15005,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.26,
   "riven_disposition": 1.2,
   "slug": "tiberon",
@@ -14434,6 +15019,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14478,6 +15064,7 @@
   "name": "Rubico",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "rubico",
@@ -14491,6 +15078,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14512,6 +15100,7 @@
     "status_chance": 0.39
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": 9,
     "burst_delay": 0.15,
     "charge_time": null,
@@ -14557,6 +15146,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.3,
   "riven_disposition": 1.2,
   "slug": "nagantaka",
@@ -14570,6 +15160,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 5,
     "burst_delay": 0.1,
     "charge_time": null,
@@ -14588,6 +15179,7 @@
     "status_chance": 0.18
    },
    {
+    "ammo_cost": 0.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -14627,6 +15219,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "higasa",
@@ -14640,6 +15233,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14657,6 +15251,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": 4.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14676,6 +15271,7 @@
     "status_chance": 0.44
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14697,6 +15293,7 @@
     "status_chance": 0.44
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14740,6 +15337,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "alternox",
@@ -14753,6 +15351,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14772,6 +15371,7 @@
     "status_chance": 0.34
    },
    {
+    "ammo_cost": 3.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14814,6 +15414,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
   "slug": "zenith",
@@ -14827,6 +15428,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 2.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14846,6 +15448,7 @@
     "status_chance": 0.24
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14891,6 +15494,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "panthera",
@@ -14904,6 +15508,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14950,6 +15555,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
   "slug": "rauta",
@@ -14963,6 +15569,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -14982,6 +15589,7 @@
     "status_chance": 0.18
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15029,6 +15637,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
   "slug": "acceltra-prime",
@@ -15042,6 +15651,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15063,6 +15673,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15087,6 +15698,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15134,6 +15746,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "afentis-prime",
@@ -15147,6 +15760,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15164,6 +15778,7 @@
     "status_chance": 0.4
    },
    {
+    "ammo_cost": 4.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15183,6 +15798,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15204,6 +15820,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15247,6 +15864,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "alternox-prime",
@@ -15260,6 +15878,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15283,6 +15902,7 @@
     "status_chance": 0.37
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15329,6 +15949,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "astilla-prime",
@@ -15342,6 +15963,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15388,6 +16010,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.1,
   "riven_disposition": 1.2,
   "slug": "baza-prime",
@@ -15401,6 +16024,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15419,6 +16043,7 @@
     "status_chance": 0.34
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15461,6 +16086,7 @@
    "vazarin",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "boltor-prime",
@@ -15474,6 +16100,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.04,
     "charge_time": null,
@@ -15493,6 +16120,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15510,6 +16138,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15553,6 +16182,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "burston-prime",
@@ -15566,6 +16196,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15587,6 +16218,7 @@
     "status_chance": 0.02
    },
    {
+    "ammo_cost": 0.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15604,6 +16236,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": 0.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15647,6 +16280,7 @@
    "madurai",
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "cedo-prime",
@@ -15660,6 +16294,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15683,6 +16318,7 @@
     "status_chance": 0.09
    },
    {
+    "ammo_cost": 4.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15702,6 +16338,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": 4.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15748,6 +16385,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "corinth-prime",
@@ -15761,6 +16399,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15779,6 +16418,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 10.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15826,6 +16466,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
   "slug": "fulmin-prime",
@@ -15839,6 +16480,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.8,
@@ -15875,6 +16517,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
   "slug": "vadarya-prime",
@@ -15888,6 +16531,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15909,6 +16553,7 @@
     "status_chance": 0.39
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": 11,
     "burst_delay": 0.11,
     "charge_time": null,
@@ -15954,6 +16599,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.3,
   "riven_disposition": 1.2,
   "slug": "nagantaka-prime",
@@ -15967,6 +16613,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 2.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -15986,6 +16633,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16007,6 +16655,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16051,6 +16700,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "panthera-prime",
@@ -16064,6 +16714,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 4,
     "burst_delay": 0.04,
     "charge_time": null,
@@ -16111,6 +16762,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "perigale-prime",
@@ -16124,6 +16776,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16142,6 +16795,7 @@
     "status_chance": 0.222
    },
    {
+    "ammo_cost": 2.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -16161,6 +16815,7 @@
     "status_chance": 0.37
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16184,6 +16839,7 @@
     "status_chance": 0.37
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16203,6 +16859,7 @@
     "status_chance": 0.37
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16245,6 +16902,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.5,
   "riven_disposition": 1.2,
   "slug": "phantasma-prime",
@@ -16258,6 +16916,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16275,6 +16934,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16296,6 +16956,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16315,6 +16976,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16362,6 +17024,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
   "slug": "scourge-prime",
@@ -16375,6 +17038,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16394,6 +17058,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16440,6 +17105,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "soma-prime",
@@ -16453,6 +17119,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16495,6 +17162,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "steflos-prime",
@@ -16508,6 +17176,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16527,6 +17196,7 @@
     "status_chance": 0.12
    },
    {
+    "ammo_cost": 2.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16570,6 +17240,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "stradavar-prime",
@@ -16583,6 +17254,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16606,6 +17278,7 @@
     "status_chance": 0.0667
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16625,6 +17298,7 @@
     "status_chance": 0.46
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16674,6 +17348,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 4.5999999,
   "riven_disposition": 1.2,
   "slug": "strun-prime",
@@ -16687,6 +17362,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 2,
     "burst_delay": 0.062,
     "charge_time": null,
@@ -16706,6 +17382,7 @@
     "status_chance": 0.25
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": 4,
     "burst_delay": 0.062,
     "charge_time": null,
@@ -16751,6 +17428,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "sybaris-prime",
@@ -16764,6 +17442,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16783,6 +17462,7 @@
     "status_chance": 0.24
    },
    {
+    "ammo_cost": 10.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.8,
@@ -16825,6 +17505,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "tenora-prime",
@@ -16838,6 +17519,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.08,
     "charge_time": null,
@@ -16857,6 +17539,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16876,6 +17559,7 @@
     "status_chance": 0.18
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16919,6 +17603,7 @@
    "naramon",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "tiberon-prime",
@@ -16932,6 +17617,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -16978,6 +17664,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "tigris-prime",
@@ -16991,6 +17678,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17009,6 +17697,7 @@
     "status_chance": 0.34
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17030,6 +17719,7 @@
     "status_chance": 0.34
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17047,6 +17737,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17092,6 +17783,7 @@
    "vazarin",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 4.0,
   "riven_disposition": 1.2,
   "slug": "trumna-prime",
@@ -17105,6 +17797,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17130,6 +17823,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17149,6 +17843,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17172,6 +17867,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17220,6 +17916,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": true,
   "reload_time": 0.85000002,
   "riven_disposition": 1.2,
   "slug": "vectis-prime",
@@ -17233,6 +17930,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17252,6 +17950,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17301,6 +18000,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "zhuge-prime",
@@ -17314,6 +18014,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17357,6 +18058,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "zhuge",
@@ -17370,6 +18072,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 0.5,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17388,6 +18091,7 @@
     "status_chance": 0.222
    },
    {
+    "ammo_cost": 2.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -17407,6 +18111,7 @@
     "status_chance": 0.37
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17430,6 +18135,7 @@
     "status_chance": 0.37
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17449,6 +18155,7 @@
     "status_chance": 0.37
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17490,6 +18197,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.5,
   "riven_disposition": 1.2,
   "slug": "phantasma",
@@ -17503,6 +18211,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17550,6 +18259,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "rubico-prime",
@@ -17563,6 +18273,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17582,6 +18293,7 @@
     "status_chance": 0.06
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17628,6 +18340,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "acceltra",
@@ -17641,6 +18354,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17660,6 +18374,7 @@
     "status_chance": 0.12
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17702,6 +18417,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "stradavar",
@@ -17715,6 +18431,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17736,6 +18453,7 @@
     "status_chance": 0.003
    },
    {
+    "ammo_cost": 0.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17753,6 +18471,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": 0.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17795,6 +18514,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
   "slug": "cedo",
@@ -17808,6 +18528,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17827,6 +18548,7 @@
     "status_chance": 0.16
    },
    {
+    "ammo_cost": 10.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.8,
@@ -17866,6 +18588,7 @@
   "name": "Tenora",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "tenora",
@@ -17879,6 +18602,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17919,6 +18643,7 @@
    "vazarin",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 5.0,
   "riven_disposition": 1.2,
   "slug": "reconifex",
@@ -17932,6 +18657,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -17955,6 +18681,7 @@
     "status_chance": 0.33
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18000,6 +18727,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "astilla",
@@ -18013,6 +18741,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18036,6 +18765,7 @@
     "status_chance": 0.06
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18055,6 +18785,7 @@
     "status_chance": 0.28
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18102,6 +18833,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.3000002,
   "riven_disposition": 1.2,
   "slug": "corinth",
@@ -18115,6 +18847,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18136,6 +18869,7 @@
     "status_chance": 0.24
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18159,6 +18893,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18206,6 +18941,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "afentis",
@@ -18219,6 +18955,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18237,6 +18974,7 @@
     "status_chance": 0.32
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18255,6 +18993,7 @@
     "status_chance": 0.32
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18298,6 +19037,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
   "slug": "enkaus",
@@ -18311,6 +19051,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 4,
     "burst_delay": 0.066,
     "charge_time": null,
@@ -18352,6 +19093,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "thornbak",
@@ -18365,6 +19107,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18382,6 +19125,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18403,6 +19147,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18422,6 +19167,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18467,6 +19213,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
   "slug": "scourge",
@@ -18480,6 +19227,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 4,
     "burst_delay": 0.04,
     "charge_time": null,
@@ -18526,6 +19274,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "perigale",
@@ -18539,6 +19288,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18559,6 +19309,7 @@
     "status_chance": 0.38
    },
    {
+    "ammo_cost": 50.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.2,
@@ -18608,6 +19359,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 4.0,
   "riven_disposition": 1.2,
   "slug": "quellor",
@@ -18621,6 +19373,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18664,6 +19417,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "veldt",
@@ -18677,6 +19431,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18697,6 +19452,7 @@
     "status_chance": 0.33
    },
    {
+    "ammo_cost": 10.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.3,
@@ -18718,6 +19474,7 @@
     "status_chance": 0.33
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18765,6 +19522,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "aeolak",
@@ -18778,6 +19536,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18823,6 +19582,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
   "slug": "baza",
@@ -18836,6 +19596,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18854,6 +19615,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 10.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -18899,6 +19661,7 @@
   "name": "Fulmin",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "fulmin",
@@ -18912,6 +19675,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 2,
     "burst_delay": 0.101,
     "charge_time": null,
@@ -18931,6 +19695,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": 4,
     "burst_delay": 0.101,
     "charge_time": null,
@@ -18972,6 +19737,7 @@
   "name": "Sybaris",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "sybaris",
@@ -18985,6 +19751,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19030,6 +19797,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "steflos",
@@ -19043,6 +19811,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19086,6 +19855,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.8299999,
   "riven_disposition": 1.2,
   "slug": "attica",
@@ -19099,6 +19869,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19118,6 +19889,7 @@
     "status_chance": 0.14
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19135,6 +19907,7 @@
     "status_chance": 0.28
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19180,6 +19953,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "latron-wraith",
@@ -19193,6 +19967,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19212,6 +19987,7 @@
     "status_chance": 0.12
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19253,6 +20029,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
   "slug": "furis",
@@ -19266,6 +20043,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19289,6 +20067,7 @@
     "status_chance": 0.1286
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19334,6 +20113,7 @@
   "name": "Bronco Prime",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "bronco-prime",
@@ -19347,6 +20127,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.04,
     "charge_time": null,
@@ -19366,6 +20147,7 @@
     "status_chance": 0.06
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.04,
     "charge_time": null,
@@ -19405,6 +20187,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "sicarus",
@@ -19418,6 +20201,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19458,6 +20242,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
   "slug": "bolto",
@@ -19471,6 +20256,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19494,6 +20280,7 @@
     "status_chance": 0.0943
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19539,6 +20326,7 @@
   "name": "Bronco",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.05,
   "riven_disposition": 1.2,
   "slug": "bronco",
@@ -19552,6 +20340,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19571,6 +20360,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19611,6 +20401,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.3499999,
   "riven_disposition": 1.2,
   "slug": "lex",
@@ -19624,6 +20415,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19643,6 +20435,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19685,6 +20478,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "lato-prime",
@@ -19698,6 +20492,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19717,6 +20512,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19758,6 +20554,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "lato-vandal",
@@ -19771,6 +20568,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19790,6 +20588,7 @@
     "status_chance": 0.06
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19829,6 +20628,7 @@
   "name": "Lato",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "lato",
@@ -19842,6 +20642,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19861,6 +20662,7 @@
     "status_chance": 0.08
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": 6,
     "burst_delay": 0.1,
     "charge_time": null,
@@ -19904,6 +20706,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "vasto",
@@ -19917,6 +20720,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19934,6 +20738,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -19974,6 +20779,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.24,
   "riven_disposition": 1.2,
   "slug": "riot-848",
@@ -19987,6 +20793,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20006,6 +20813,7 @@
     "status_chance": 0.02
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20056,6 +20864,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "euphona-prime",
@@ -20069,6 +20878,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 4,
     "burst_delay": 0.05,
     "charge_time": null,
@@ -20088,6 +20898,7 @@
     "status_chance": 0.025
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 1.0,
@@ -20107,6 +20918,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.4,
@@ -20146,6 +20958,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "ballistica",
@@ -20159,6 +20972,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20178,6 +20992,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.6,
@@ -20196,6 +21011,7 @@
     "status_chance": 0.4
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20235,6 +21051,7 @@
   "name": "Zylok",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
   "slug": "zylok",
@@ -20248,6 +21065,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20287,6 +21105,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "dex-furis",
@@ -20300,6 +21119,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20337,6 +21157,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
   "slug": "aksondol",
@@ -20350,6 +21171,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20389,6 +21211,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "akzani",
@@ -20402,6 +21225,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20443,6 +21267,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "magnus",
@@ -20456,6 +21281,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20497,6 +21323,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
   "slug": "afuris-prime",
@@ -20510,6 +21337,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 2,
     "burst_delay": 0.12,
     "charge_time": null,
@@ -20527,6 +21355,7 @@
     "status_chance": 0.34
    },
    {
+    "ammo_cost": null,
     "burst_count": 2,
     "burst_delay": 0.12,
     "charge_time": null,
@@ -20571,6 +21400,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "akarius-prime",
@@ -20584,6 +21414,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20629,6 +21460,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
   "slug": "akbolto-prime",
@@ -20642,6 +21474,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 2,
     "burst_delay": 0.0,
     "charge_time": null,
@@ -20682,6 +21515,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
   "slug": "akjagara-prime",
@@ -20695,6 +21529,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20736,6 +21571,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
   "slug": "aksomati-prime",
@@ -20749,6 +21585,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20789,6 +21626,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.1,
   "riven_disposition": 1.2,
   "slug": "akstiletto-prime",
@@ -20802,6 +21640,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20820,6 +21659,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20860,6 +21700,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "athodai-prime",
@@ -20873,6 +21714,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 4.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -20892,6 +21734,7 @@
     "status_chance": 0.15
    },
    {
+    "ammo_cost": 4.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.8,
@@ -20911,6 +21754,7 @@
     "status_chance": 0.15
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.4,
@@ -20952,6 +21796,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
   "slug": "ballistica-prime",
@@ -20965,6 +21810,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.4,
@@ -20987,6 +21833,7 @@
     "status_chance": 0.14
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21008,6 +21855,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21056,6 +21904,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "epitaph-prime",
@@ -21069,6 +21918,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21090,6 +21940,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21111,6 +21962,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21132,6 +21984,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21174,6 +22027,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
   "slug": "hystrix-prime",
@@ -21187,6 +22041,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21229,6 +22084,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "knell-prime",
@@ -21242,6 +22098,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21259,6 +22116,7 @@
     "status_chance": 0.36
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21302,6 +22160,7 @@
    "vazarin",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "kompressa-prime",
@@ -21315,6 +22174,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21334,6 +22194,7 @@
     "status_chance": 0.25
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21380,6 +22241,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.3499999,
   "riven_disposition": 1.2,
   "slug": "lex-prime",
@@ -21393,6 +22255,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21434,6 +22297,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
   "slug": "magnus-prime",
@@ -21447,6 +22311,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21466,6 +22331,7 @@
     "status_chance": 0.24
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": 0.1,
     "charge_time": null,
@@ -21505,6 +22371,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "pandero-prime",
@@ -21518,6 +22385,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21564,6 +22432,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
   "slug": "pyrana-prime",
@@ -21577,6 +22446,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.04,
     "charge_time": null,
@@ -21596,6 +22466,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.04,
     "charge_time": null,
@@ -21635,6 +22506,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "sicarus-prime",
@@ -21648,6 +22520,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21690,6 +22563,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
   "slug": "akvasto-prime",
@@ -21703,6 +22577,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21722,6 +22597,7 @@
     "status_chance": 0.22
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": 6,
     "burst_delay": 0.1,
     "charge_time": null,
@@ -21766,6 +22642,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "vasto-prime",
@@ -21779,6 +22656,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21820,6 +22698,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
   "slug": "velox-prime",
@@ -21833,6 +22712,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21853,6 +22733,7 @@
     "status_chance": 0.42
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21899,6 +22780,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "zakti-prime",
@@ -21912,6 +22794,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21931,6 +22814,7 @@
     "status_chance": 0.36
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.6,
@@ -21949,6 +22833,7 @@
     "status_chance": 0.4
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -21991,6 +22876,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
   "slug": "zylok-prime",
@@ -22004,6 +22890,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22025,6 +22912,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22046,6 +22934,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22067,6 +22956,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22108,6 +22998,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
   "slug": "hystrix",
@@ -22121,6 +23012,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 2,
     "burst_delay": 0.12,
     "charge_time": null,
@@ -22138,6 +23030,7 @@
     "status_chance": 0.28
    },
    {
+    "ammo_cost": null,
     "burst_count": 2,
     "burst_delay": 0.12,
     "charge_time": null,
@@ -22181,6 +23074,7 @@
    "naramon",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.4000001,
   "riven_disposition": 1.2,
   "slug": "akarius",
@@ -22194,6 +23088,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22237,6 +23132,7 @@
   "name": "Pyrana",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "pyrana",
@@ -22250,6 +23146,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22289,6 +23186,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
   "slug": "aksomati",
@@ -22302,6 +23200,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22321,6 +23220,7 @@
     "status_chance": 0.16
    },
    {
+    "ammo_cost": 75.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22359,6 +23259,7 @@
    "naramon",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
   "slug": "azima",
@@ -22372,6 +23273,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22411,6 +23313,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.1,
   "riven_disposition": 1.2,
   "slug": "akstiletto",
@@ -22424,6 +23327,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 2,
     "burst_delay": 0.0,
     "charge_time": null,
@@ -22463,6 +23367,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.25,
   "riven_disposition": 1.2,
   "slug": "akjagara",
@@ -22476,6 +23381,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22495,6 +23401,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": 0.1,
     "charge_time": null,
@@ -22532,6 +23439,7 @@
   "name": "Pandero",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "pandero",
@@ -22545,6 +23453,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22565,6 +23474,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22611,6 +23521,7 @@
    "naramon",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.80000001,
   "riven_disposition": 1.2,
   "slug": "zakti",
@@ -22624,6 +23535,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22642,6 +23554,7 @@
     "status_chance": 0.08
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22680,6 +23593,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "athodai",
@@ -22693,6 +23607,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22733,6 +23648,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
   "slug": "velox",
@@ -22746,6 +23662,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22785,6 +23702,7 @@
   "name": "Knell",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "knell",
@@ -22798,6 +23716,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": 0.4,
@@ -22819,6 +23738,7 @@
     "status_chance": 0.04
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22840,6 +23760,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22888,6 +23809,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
   "slug": "epitaph",
@@ -22901,6 +23823,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22918,6 +23841,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22960,6 +23884,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
   "slug": "kompressa",
@@ -22973,6 +23898,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -22992,6 +23918,7 @@
     "status_chance": 0.14
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23034,6 +23961,7 @@
   "polarities": [
    "vazarin"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
   "slug": "boltor",
@@ -23047,6 +23975,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23066,6 +23995,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23085,6 +24015,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23126,6 +24057,7 @@
   "name": "Braton Prime",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.1500001,
   "riven_disposition": 1.2,
   "slug": "braton-prime",
@@ -23139,6 +24071,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 3,
     "burst_delay": 0.061,
     "charge_time": null,
@@ -23158,6 +24091,7 @@
     "status_chance": 0.18
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23175,6 +24109,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23218,6 +24153,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "burston",
@@ -23231,6 +24167,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23250,6 +24187,7 @@
     "status_chance": 0.09
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23269,6 +24207,7 @@
     "status_chance": 0.19
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23312,6 +24251,7 @@
   "name": "Gorgon",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 4.1999998,
   "riven_disposition": 1.2,
   "slug": "gorgon",
@@ -23325,6 +24265,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23344,6 +24285,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23363,6 +24305,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23409,6 +24352,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "latron-prime",
@@ -23422,6 +24366,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23441,6 +24386,7 @@
     "status_chance": 0.06
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23460,6 +24406,7 @@
     "status_chance": 0.12
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23501,6 +24448,7 @@
   "name": "Braton",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "braton",
@@ -23514,6 +24462,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23533,6 +24482,7 @@
     "status_chance": 0.12
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23550,6 +24500,7 @@
     "status_chance": 0.24
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23595,6 +24546,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
   "slug": "latron",
@@ -23608,6 +24560,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23654,6 +24607,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.5,
   "riven_disposition": 1.2,
   "slug": "snipetron",
@@ -23667,6 +24621,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23686,6 +24641,7 @@
     "status_chance": 0.05
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23705,6 +24661,7 @@
     "status_chance": 0.1
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23746,6 +24703,7 @@
   "name": "MK1-Braton",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "mk1-braton",
@@ -23759,6 +24717,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23778,6 +24737,7 @@
     "status_chance": 0.07
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23824,6 +24784,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
   "slug": "soma",
@@ -23837,6 +24798,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23860,6 +24822,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23879,6 +24842,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23902,6 +24866,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23950,6 +24915,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": true,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "vectis",
@@ -23963,6 +24929,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -23982,6 +24949,7 @@
     "status_chance": 0.16
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24001,6 +24969,7 @@
     "status_chance": 0.22
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24044,6 +25013,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.75,
   "riven_disposition": 1.2,
   "slug": "braton-vandal",
@@ -24057,6 +25027,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24103,6 +25074,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "snipetron-vandal",
@@ -24116,6 +25088,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24157,6 +25130,7 @@
   "name": "Sobek",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
   "slug": "sobek",
@@ -24170,6 +25144,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24193,6 +25168,7 @@
     "status_chance": 0.075
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24228,6 +25204,7 @@
   "name": "Boar",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
   "slug": "boar",
@@ -24241,6 +25218,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24264,6 +25242,7 @@
     "status_chance": 0.1125
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24299,6 +25278,7 @@
   "name": "Boar Prime",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.75,
   "riven_disposition": 1.2,
   "slug": "boar-prime",
@@ -24312,6 +25292,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24356,6 +25337,7 @@
   "name": "Hek",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "hek",
@@ -24369,6 +25351,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24392,6 +25375,7 @@
     "status_chance": 0.05
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24411,6 +25395,7 @@
     "status_chance": 0.4
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24458,6 +25443,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.75,
   "riven_disposition": 1.2,
   "slug": "strun",
@@ -24471,6 +25457,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24496,6 +25483,7 @@
     "status_chance": 0.12
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24515,6 +25503,7 @@
     "status_chance": 0.44
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24562,6 +25551,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 5.0,
   "riven_disposition": 1.2,
   "slug": "strun-wraith",
@@ -24575,6 +25565,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24593,6 +25584,7 @@
     "status_chance": 0.29
    },
    {
+    "ammo_cost": 3.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24633,6 +25625,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.80000001,
   "riven_disposition": 1.2,
   "slug": "fusilai",
@@ -24646,6 +25639,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24665,6 +25659,7 @@
     "status_chance": 0.08
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24708,6 +25703,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.75,
   "riven_disposition": 1.2,
   "slug": "kunai",
@@ -24721,6 +25717,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24764,6 +25761,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "spira",
@@ -24777,6 +25775,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24820,6 +25819,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.75,
   "riven_disposition": 1.2,
   "slug": "spira-prime",
@@ -24833,6 +25833,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24876,6 +25877,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.5,
   "riven_disposition": 1.2,
   "slug": "hikou-prime",
@@ -24889,6 +25891,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24908,6 +25911,7 @@
     "status_chance": 0.16
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24927,6 +25931,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -24972,6 +25977,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.75,
   "riven_disposition": 1.2,
   "slug": "despair",
@@ -24985,6 +25991,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25006,6 +26013,7 @@
     "status_chance": 0.22
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25053,6 +26061,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "castanas",
@@ -25066,6 +26075,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25109,6 +26119,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 0.75,
   "riven_disposition": 1.2,
   "slug": "hikou",
@@ -25122,6 +26133,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25163,6 +26175,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
   "slug": "cantare",
@@ -25176,6 +26189,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25194,6 +26208,7 @@
     "status_chance": 0.18
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25232,6 +26247,7 @@
   "polarities": [
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
   "slug": "scyotid",
@@ -25245,6 +26261,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25266,6 +26283,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25314,6 +26332,7 @@
    "madurai",
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
   "slug": "talons",
@@ -25327,6 +26346,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25350,6 +26370,7 @@
     "status_chance": 0.055
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25392,6 +26413,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 3.7,
   "riven_disposition": 1.2,
   "slug": "felarx",
@@ -25405,6 +26427,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25423,6 +26446,7 @@
     "status_chance": 0.2
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25464,6 +26488,7 @@
    "madurai",
    "naramon"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.8,
   "riven_disposition": 1.2,
   "slug": "phenmor",
@@ -25477,6 +26502,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25495,6 +26521,7 @@
     "status_chance": 0.22
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25512,6 +26539,7 @@
     "status_chance": 0.22
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25555,6 +26583,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "laetum",
@@ -25568,6 +26597,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25585,6 +26615,7 @@
     "status_chance": 0.22
    },
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25602,6 +26633,7 @@
     "status_chance": 0.18
    },
    {
+    "ammo_cost": 50.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25621,6 +26653,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25663,6 +26696,7 @@
   "polarities": [
    "madurai"
   ],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "onos",
@@ -25676,6 +26710,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": 2,
     "burst_delay": 0.0,
     "charge_time": null,
@@ -25695,6 +26730,7 @@
     "status_chance": 0.14
    },
    {
+    "ammo_cost": null,
     "burst_count": 2,
     "burst_delay": 0.0,
     "charge_time": null,
@@ -25716,6 +26752,7 @@
     "status_chance": 0.14
    },
    {
+    "ammo_cost": 0.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25737,6 +26774,7 @@
     "status_chance": 0.26
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25779,6 +26817,7 @@
   "name": "Sepulcrum",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 4.0,
   "riven_disposition": 1.2,
   "slug": "sepulcrum",
@@ -25792,6 +26831,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25810,6 +26850,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25831,6 +26872,7 @@
     "status_chance": 0.3
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25848,6 +26890,7 @@
     "status_chance": 0.5
    },
    {
+    "ammo_cost": null,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25890,6 +26933,7 @@
   "name": "Trumna",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 5.0,
   "riven_disposition": 1.2,
   "slug": "trumna",
@@ -25903,6 +26947,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25942,6 +26987,7 @@
   "name": "Prisma Grakata",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
   "slug": "prisma-grakata",
@@ -25955,6 +27001,7 @@
  {
   "attacks": [
    {
+    "ammo_cost": 1.0,
     "burst_count": null,
     "burst_delay": null,
     "charge_time": null,
@@ -25996,6 +27043,7 @@
   "name": "Mara Detron",
   "no_reload": false,
   "polarities": [],
+  "reload_replaces_shot": false,
   "reload_time": 1.05,
   "riven_disposition": 1.2,
   "slug": "mara-detron",

@@ -926,6 +926,93 @@
   "trigger": "BURST",
   "variantType": "VT_PRIME"
  },
+ "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle": {
+  "accuracy": 13.333333,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 140.000004,
+     "DT_PUNCTURE": 157.499997,
+     "DT_SLASH": 52.499993,
+     "procChance": 0.3
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   },
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 3.33333,
+     "DT_PUNCTURE": 3.33333,
+     "DT_SLASH": 3.33334,
+     "procChance": 0.1
+    },
+    "projectile": {
+     "attack": {
+      "DT_FREEZE": 150,
+      "procChance": 0.3
+     },
+     "explosiveAttack": {
+      "DT_FREEZE": 150,
+      "procChance": 0.3
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "SNIPER_AMMO",
+   "SINGLESHOT",
+   "SEMI_AUTO"
+  ],
+  "criticalChance": 0.3,
+  "criticalMultiplier": 2,
+  "damagePerShot": [
+   140,
+   157.5,
+   52.499992,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Items/PrimeVectisDesc",
+  "excludeFromMarket": true,
+  "fireRate": 2.666667,
+  "holsterCategory": "SNIPER",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/VectisPrime.png",
+  "introducedAt": 1436294470,
+  "magazineSize": 2,
+  "masteryReq": 14,
+  "multishot": 1,
+  "name": "/Lotus/Language/Items/PrimeVectisName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1,
+  "parentName": "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle",
+  "platinumCost": 250,
+  "procChance": 0.3,
+  "productCategory": "LongGuns",
+  "reloadTime": 0.85,
+  "slot": 1,
+  "totalDamage": 350,
+  "tradable": false,
+  "trigger": "SEMI",
+  "variantType": "VT_PRIME"
+ },
  "/Lotus/Weapons/Tenno/Pistols/PrimeEpitaph/PrimeEpitaphSidearmWeapon": {
   "accuracy": 80,
   "behaviours": [
@@ -1257,6 +1344,93 @@
   "tradable": false,
   "trigger": "AUTO",
   "variantType": "VT_PRIME"
+ },
+ "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle": {
+  "accuracy": 13.333333,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 90.000002,
+     "DT_PUNCTURE": 78.749998,
+     "DT_SLASH": 56.25,
+     "procChance": 0.3
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   },
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 3.33333,
+     "DT_PUNCTURE": 3.33333,
+     "DT_SLASH": 3.33334,
+     "procChance": 0.1
+    },
+    "projectile": {
+     "attack": {
+      "DT_FREEZE": 5,
+      "procChance": 0.3
+     },
+     "explosiveAttack": {
+      "DT_FREEZE": 5,
+      "procChance": 0.3
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "SNIPER_AMMO",
+   "Vectis",
+   "SINGLESHOT",
+   "SEMI_AUTO"
+  ],
+  "criticalChance": 0.25,
+  "criticalMultiplier": 2,
+  "damagePerShot": [
+   90,
+   78.75,
+   56.25,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Items/TennoSniperRifleDesc",
+  "fireRate": 1.5,
+  "holsterCategory": "SNIPER",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Vectis.png",
+  "introducedAt": 1383184610,
+  "magazineSize": 1,
+  "masteryReq": 2,
+  "multishot": 1,
+  "name": "/Lotus/Language/Items/TennoSniperRifleName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1.15,
+  "parentName": "/Lotus/Weapons/Tenno/Rifle/BaseTennoSniperRifle",
+  "platinumCost": 250,
+  "procChance": 0.3,
+  "productCategory": "LongGuns",
+  "reloadTime": 1,
+  "slot": 1,
+  "totalDamage": 225,
+  "tradable": false,
+  "trigger": "SEMI",
+  "variantType": "VT_NORMAL"
  },
  "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal": {
   "accuracy": 6.666666,
