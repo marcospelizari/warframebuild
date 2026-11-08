@@ -42,6 +42,8 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         load_json(de / "ExportUpgrades_en.json"),
         reference(reference_dir / "mod_filter.json"),
         overrides,
+        reference(reference_dir / "mod_families.json"),
+        reference(reference_dir / "exilus.json"),
     )
     arcane_list = arcanes.build(
         records(load_json(de / "ExportRelicArcane_en.json"), "ExportRelicArcane"),

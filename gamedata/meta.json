@@ -17,7 +17,7 @@
   "secondary": 149,
   "weapons": 344
  },
- "dataset_hash": "871da309f9730365",
+ "dataset_hash": "eb681299e84b44ee",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -39,7 +39,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 4,
+ "schema_version": 5,
  "sources": [
   {
    "path": "de/ExportManifest.json",
@@ -148,6 +148,24 @@
    "retrieved": "2026-11-07",
    "sha256_16": "01080a09ce7bf518",
    "url": "https://wiki.warframe.com/w/Enemy_Level_Scaling"
+  },
+  {
+   "path": "wiki/Exilus_Mods.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "d631522e3e0d83fc",
+   "url": "https://wiki.warframe.com/w/Exilus_Mods"
+  },
+  {
+   "path": "wiki/Exilus_Warframe_Adapter.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "61f17882d71c9503",
+   "url": "https://wiki.warframe.com/w/Exilus_Warframe_Adapter"
+  },
+  {
+   "path": "wiki/Exilus_Weapon_Adapter.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "d5435611083eeedb",
+   "url": "https://wiki.warframe.com/w/Exilus_Weapon_Adapter"
   },
   {
    "path": "wiki/Faction_Damage_Mods.wikitext",

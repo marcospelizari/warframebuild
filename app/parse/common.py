@@ -9,7 +9,16 @@ bounded repeats only (S5): no nested quantifiers, input is one short line.
 import re
 from dataclasses import dataclass, field
 
-from app.domain.effects import DamageType, Effect, Operation, Parsed, Stat, Trigger
+from app.domain.effects import (
+    PHYSICAL_TYPES,
+    DamageType,
+    Effect,
+    Faction,
+    Operation,
+    Parsed,
+    Stat,
+    Trigger,
+)
 
 _NUM = r"(?P<value>[+-]?\d{1,4}(?:\.\d{1,3})?)"
 
@@ -30,7 +39,7 @@ _STATS: dict[str, tuple[Stat, DamageType | None]] = {
     "magazine capacity": (Stat.MAGAZINE_CAPACITY, None),
     "reload speed": (Stat.RELOAD_SPEED, None),
     "ammo efficiency": (Stat.AMMO_EFFICIENCY, None),
-    **{t.value: (Stat.ELEMENT, t) for t in DamageType},
+    **{t.value: (Stat.PHYSICAL if t in PHYSICAL_TYPES else Stat.ELEMENT, t) for t in DamageType},
 }
 _STAT_NAMES = "|".join(re.escape(n) for n in sorted(_STATS, key=len, reverse=True))
 
@@ -211,12 +220,14 @@ def _line(line: str, ctx: _Context) -> list[Effect] | None:
     """Effects of one line, [] for nothing, None when not understood."""
     assert ctx.trigger is not None
     if m := _FACTION.fullmatch(line):
+        if m["faction"].lower() not in Faction.__members__.values():
+            return None  # new faction: unparsed, never full
         return [
             Effect(
                 stat=Stat.FACTION_DAMAGE,
                 value=float(m["value"]),
                 operation=Operation.MULTIPLY,
-                faction=m["faction"].lower(),
+                faction=Faction(m["faction"].lower()),
                 trigger=ctx.trigger,
                 trigger_damage_type=ctx.trigger_damage_type,
             )
@@ -256,8 +267,8 @@ def _line(line: str, ctx: _Context) -> list[Effect] | None:
 
 
 def _simple_list(line: str, ctx: _Context) -> list[Effect] | None:
-    assert ctx.trigger is not None
     """ "+3% Critical Damage and +2.25% Multishot for 12s. Stacks up to 40x." -> 2 effects."""
+    assert ctx.trigger is not None
     parts = re.split(r" and (?=[+-]\d)", line)
     if len(parts) > 3:
         return None

@@ -49,6 +49,13 @@ def clean_levels(levels: list[dict[str, Any]]) -> list[list[str]]:
     return [[clean_text(s) for s in level["stats"]] for level in levels]
 
 
+def require_verified(entry: dict[str, Any], file: str, key: str) -> None:
+    """Hand-checked reference entries carry `verified` (YYYY-MM-DD): `wfb check` lists
+    them for re-check once the data changes after that date (G48)."""
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(entry.get("verified", ""))):
+        raise RefreshError(f"reference/{file} {key}: `verified` (YYYY-MM-DD) is required")
+
+
 def slugify(name: str) -> str:
     return _SLUG.sub("-", name.lower()).strip("-")
 

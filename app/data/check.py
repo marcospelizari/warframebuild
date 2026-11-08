@@ -71,6 +71,7 @@ class RefRow:
     key: str  # uniqueName or rule id
     label: str
     verified: str  # ISO date
+    depends_on: tuple[str, ...] = ()  # uniqueNames in the row's `mods` list
 
 
 def reference_rows(reference_dir: Path) -> list[RefRow]:
@@ -95,7 +96,16 @@ def reference_rows(reference_dir: Path) -> list[RefRow]:
                         raise ValueError(
                             f"{path.name} {key}: verified must be YYYY-MM-DD, got {verified!r}"
                         )
-                    rows.append(RefRow(path.name, key, str(row.get("name", key)), verified))
+                    mods = row.get("mods", [])
+                    rows.append(
+                        RefRow(
+                            path.name,
+                            key,
+                            str(row.get("name", key)),
+                            verified,
+                            tuple(m for m in mods if isinstance(m, str)),
+                        )
+                    )
     return rows
 
 
@@ -152,7 +162,7 @@ def _differs(a: BaseModel, b: BaseModel) -> bool:
 def touched_rows(rows: list[RefRow], diff: EntryDiff) -> list[RefRow]:
     if diff.unavailable is not None:
         return rows  # unknown what changed: every row needs a look
-    return [r for r in rows if r.key in diff.ids]
+    return [r for r in rows if r.key in diff.ids or not diff.ids.isdisjoint(r.depends_on)]
 
 
 # ---------- report text ----------

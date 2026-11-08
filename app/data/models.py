@@ -95,8 +95,10 @@ class Mod(Model):
     rarity: str
     base_drain: int  # negative for some mods that add capacity
     fusion_limit: Annotated[int, Field(ge=0)]
-    is_utility: bool
+    is_utility: bool  # DE flag
+    exilus: bool  # fits the exilus slot: DE flag or reference/exilus.json (Q30)
     mod_set: str | None
+    family: str | None  # V4: mods sharing a family cannot be equipped together
     description: str  # DE rules text not in the stats ("Fire Rate cannot be modified."), or ""
     level_stats: list[list[str]]  # per rank; cleaned free text
     effects: Effects  # max rank
@@ -126,7 +128,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[4] = 4
+    schema_version: Literal[5] = 5
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.
