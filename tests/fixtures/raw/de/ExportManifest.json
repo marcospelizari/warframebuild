@@ -1,0 +1,56 @@
+{
+ "Manifest": [
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Lanka.png!00_eLlQzaFzXoJTY8J0-WL9NA",
+   "uniqueName": "/Lotus/Weapons/ClanTech/Energy/Railgun"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Sonicor.png!00_xujQFIichEBVQPjJHCksNg",
+   "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpAirPistol/CrpAirPistolArray"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/CrpSentAmalgPistol.png!00_yvOfaejZJbkOER0JqEsd2Q",
+   "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpSentAmalgPistol/CrpSentAmalgPistol"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/KuvaHind.png!00_4tdifZfPuvMlQURC1tzonw",
+   "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hind/KuvaHind"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/DrifterPistol.png!00_fDDlot+Ve7JPX+qVqOFJDw",
+   "uniqueName": "/Lotus/Weapons/Operator/Pistols/DrifterPistol/DrifterPistolPlayerWeapon"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/TnoOctaMiniGun.png!00_GMPx8f-mxokyz914mlPv9A",
+   "uniqueName": "/Lotus/Weapons/Sentients/SentOctaMiniGun/SentOctaMiniGun"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Grimoire.png!00_i9NOgyYNWmCnMXXnhQixow",
+   "uniqueName": "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Grimoire.png!00_i9NOgyYNWmCnMXXnhQixow",
+   "uniqueName": "/Lotus/Weapons/Tenno/Grimoire/TnGrimoire"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/BurstonPrime.png!00_EJ07-uFoUAKwJKFpVh3U0w",
+   "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/LexPrime.png!00_kYTVvNsdYXoUoTeBYKLlTw",
+   "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/BratonPrime.png!00_PCAHas9fsU8PVac+9N1lRg",
+   "uniqueName": "/Lotus/Weapons/Tenno/Rifle/BratonPrime"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/StrunWraith.png!00_6bv2u-BnBXEUpNR4g7BxfQ",
+   "uniqueName": "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/ZarimanHeavyPistol.png!00_1hBWd52+GqZa3vGplXCTbQ",
+   "uniqueName": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol"
+  }
+ ]
+}

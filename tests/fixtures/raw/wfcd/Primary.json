@@ -1,0 +1,1039 @@
+[
+ {
+  "accuracy": 28.571428,
+  "attacks": [
+   {
+    "crit_chance": 12,
+    "crit_mult": 2,
+    "damage": {
+     "impact": 1.75,
+     "puncture": 12.25,
+     "slash": 21
+    },
+    "name": "Normal Attack",
+    "shot_type": "Hit-Scan",
+    "speed": 9.58,
+    "status_chance": 26
+   },
+   {
+    "crit_chance": 30,
+    "crit_mult": 3,
+    "damage": {
+     "impact": 28,
+     "puncture": 2.8,
+     "slash": 39.2
+    },
+    "name": "Incarnon Form",
+    "shot_type": "Hit-Scan",
+    "speed": 5.67,
+    "status_chance": 30
+   },
+   {
+    "crit_chance": 30,
+    "crit_mult": 3,
+    "damage": {
+     "heat": 70
+    },
+    "falloff": {
+     "end": 3,
+     "reduction": 0.1,
+     "start": 0
+    },
+    "name": "Incarnon Form AoE",
+    "shot_type": "AoE",
+    "speed": 5.67,
+    "status_chance": 30
+   }
+  ],
+  "buildPrice": 15000,
+  "buildQuantity": 1,
+  "buildTime": 43200,
+  "category": "Primary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/BratonPrimeBarrel"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/BratonPrimeBlueprint"
+   },
+   {
+    "itemCount": 10,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/OrokinCell"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/BratonPrimeReceiver"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/BratonPrimeStock"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.12,
+  "criticalMultiplier": 2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 1.75,
+   "magnetic": 0,
+   "puncture": 12.25,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 21,
+   "tau": 0,
+   "total": 35,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   1.75,
+   12.25,
+   21,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "A classic Orokin weapon, Braton Prime features modified damage levels and a larger magazine over the standard model.",
+  "disposition": 4,
+  "estimatedVaultDate": "2015-04-13",
+  "exilusPolarity": "naramon",
+  "fireRate": 9.583334,
+  "imageName": "BratonPrime.png",
+  "introduced": {
+   "aliases": [
+    "Update 9",
+    "9",
+    "9.0"
+   ],
+   "date": "2013-07-13",
+   "name": "Update 9.0",
+   "parent": "9.0",
+   "url": "https://wiki.warframe.com/w/Update_9%23Update_9.0"
+  },
+  "isPrime": true,
+  "magazineSize": 75,
+  "masterable": true,
+  "masteryReq": 8,
+  "multishot": 1,
+  "name": "Braton Prime",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "procChance": 0.25999999,
+  "productCategory": "LongGuns",
+  "releaseDate": "2013-07-13",
+  "reloadTime": 2.1500001,
+  "skipBuildTimePrice": 50,
+  "slot": 1,
+  "tags": [
+   "Prime",
+   "Never Vaulted"
+  ],
+  "totalDamage": 35,
+  "tradable": false,
+  "trigger": "Auto",
+  "type": "Rifle",
+  "uniqueName": "/Lotus/Weapons/Tenno/Rifle/BratonPrime",
+  "vaulted": false,
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/BratonPrime.png?c49e4",
+  "wikiaUrl": "https://wiki.warframe.com/w/Braton_Prime"
+ },
+ {
+  "accuracy": 25,
+  "attacks": [
+   {
+    "crit_chance": 18,
+    "crit_mult": 1.8,
+    "damage": {
+     "impact": 13.8,
+     "puncture": 13.8,
+     "slash": 18.4
+    },
+    "name": "Normal Attack",
+    "shot_type": "Hit-Scan",
+    "speed": 5,
+    "status_chance": 30
+   },
+   {
+    "crit_chance": 28,
+    "crit_mult": 3,
+    "damage": {
+     "heat": 13
+    },
+    "name": "Incarnon Form",
+    "shot_type": "Hit-Scan",
+    "speed": 20,
+    "status_chance": 30
+   },
+   {
+    "crit_chance": 28,
+    "crit_mult": 3,
+    "damage": {
+     "heat": 13
+    },
+    "falloff": {
+     "end": 2,
+     "reduction": 1,
+     "start": 0
+    },
+    "name": "Incarnon Form Radial Attack",
+    "shot_type": "AoE",
+    "speed": 20,
+    "status_chance": 30
+   }
+  ],
+  "buildPrice": 15000,
+  "buildQuantity": 1,
+  "buildTime": 43200,
+  "category": "Primary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/BurstonPrimeBarrel"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/BurstonPrimeBlueprint"
+   },
+   {
+    "itemCount": 10,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/OrokinCell"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/BurstonPrimeReceiver"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/BurstonPrimeStock"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.18000001,
+  "criticalMultiplier": 1.8,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 13.8,
+   "magnetic": 0,
+   "puncture": 13.8,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 18.4,
+   "tau": 0,
+   "total": 46,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   13.8,
+   13.8,
+   18.4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "Once thought lost to the ages, attempts to reengineer the Burston Prime never fully replicated this weapon's power and agility.",
+  "disposition": 4,
+  "estimatedVaultDate": "2015-09-19",
+  "exilusPolarity": "naramon",
+  "fireRate": 9.375,
+  "imageName": "BurstonPrime.png",
+  "introduced": {
+   "aliases": [
+    "11.5.0",
+    "11.5"
+   ],
+   "date": "2013-12-19",
+   "name": "Update 11.5",
+   "parent": "11.5",
+   "url": "https://wiki.warframe.com/w/Update_11%23Update_11.5"
+  },
+  "isPrime": true,
+  "magazineSize": 45,
+  "masterable": true,
+  "masteryReq": 12,
+  "multishot": 1,
+  "name": "Burston Prime",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "madurai"
+  ],
+  "procChance": 0.30000001,
+  "productCategory": "LongGuns",
+  "releaseDate": "2013-12-19",
+  "reloadTime": 2,
+  "skipBuildTimePrice": 50,
+  "slot": 1,
+  "tags": [
+   "Prime",
+   "Never Vaulted"
+  ],
+  "totalDamage": 46,
+  "tradable": false,
+  "trigger": "Burst",
+  "type": "Rifle",
+  "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston",
+  "vaulted": false,
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/BurstonPrime.png?8fc05",
+  "wikiaUrl": "https://wiki.warframe.com/w/Burston_Prime"
+ },
+ {
+  "accuracy": 100,
+  "attacks": [
+   {
+    "crit_chance": 25,
+    "crit_mult": 2.5,
+    "damage": {},
+    "name": "Normal Attack",
+    "shot_type": "Hit-Scan",
+    "speed": 13,
+    "status_chance": 19
+   },
+   {
+    "crit_chance": 20,
+    "crit_mult": 1.8,
+    "damage": {},
+    "name": "Alt-Fire",
+    "shot_type": "Hit-Scan",
+    "speed": 12,
+    "status_chance": 26
+   }
+  ],
+  "category": "Primary",
+  "codexSecret": false,
+  "criticalChance": 0.25,
+  "criticalMultiplier": 2.5,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 0,
+   "magnetic": 0,
+   "puncture": 0,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 0,
+   "tau": 33,
+   "total": 33,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   33,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "Deliver a ruthless barrage of Sentient artillery from this instrument of death. Alt-fire splits the weapon apart into separate rifles, expanding its devastation by tracking up to 4 targets at once, while consuming more ammo per shot.",
+  "disposition": 4,
+  "exilusPolarity": "universal",
+  "fireRate": 13.000001,
+  "imageName": "TnoOctaMiniGun.png",
+  "introduced": {
+   "aliases": [
+    "43.0.7"
+   ],
+   "date": "2026-07-11",
+   "name": "Hotfix 43.0.7",
+   "parent": "43.0",
+   "url": "https://wiki.warframe.com/w/Update_43%23Hotfix_43.0.7"
+  },
+  "isPrime": false,
+  "magazineSize": 150,
+  "masterable": true,
+  "masteryReq": 14,
+  "multishot": 1,
+  "name": "Haalvu",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "madurai",
+   "madurai"
+  ],
+  "procChance": 0.19,
+  "productCategory": "LongGuns",
+  "releaseDate": "2026-07-11",
+  "reloadTime": 1,
+  "slot": 1,
+  "tags": [
+   "Sentient"
+  ],
+  "totalDamage": 33,
+  "tradable": false,
+  "trigger": "Auto",
+  "type": "Rifle",
+  "uniqueName": "/Lotus/Weapons/Sentients/SentOctaMiniGun/SentOctaMiniGun",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Haalvu.png?c2ddd",
+  "wikiaUrl": "https://wiki.warframe.com/w/Haalvu"
+ },
+ {
+  "accuracy": 33.333332,
+  "attacks": [
+   {
+    "crit_chance": 25,
+    "crit_mult": 2.1,
+    "damage": {
+     "impact": 7.5,
+     "puncture": 7.5,
+     "slash": 15
+    },
+    "name": "Burst",
+    "shot_type": "Hit-Scan",
+    "speed": 5,
+    "status_chance": 33
+   },
+   {
+    "crit_chance": 37,
+    "crit_mult": 2.9,
+    "damage": {
+     "impact": 18,
+     "puncture": 18,
+     "slash": 54
+    },
+    "name": "Semi-Auto",
+    "shot_type": "Hit-Scan",
+    "speed": 2.5,
+    "status_chance": 21
+   },
+   {
+    "crit_chance": 21,
+    "crit_mult": 1.9,
+    "damage": {
+     "impact": 6,
+     "puncture": 6,
+     "slash": 18
+    },
+    "name": "Auto",
+    "shot_type": "Hit-Scan",
+    "speed": 10,
+    "status_chance": 33
+   }
+  ],
+  "buildPrice": 10000,
+  "buildQuantity": 1,
+  "buildTime": 60,
+  "category": "Primary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/KuvaWeapons/KuvaHindBlueprint"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.25,
+  "criticalMultiplier": 2.0999999,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 7.5,
+   "magnetic": 0,
+   "puncture": 7.5,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 15,
+   "tau": 0,
+   "total": 30,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   7.5,
+   7.5,
+   15,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "This powerful Grineer burst rifle has been retrofitted to add semi-automatic and automatic fire modes. ",
+  "disposition": 4,
+  "exilusPolarity": "naramon",
+  "fireRate": 9.09091,
+  "imageName": "KuvaHind.png",
+  "introduced": {
+   "aliases": [
+    "27.1",
+    "Kuva Lich Changes"
+   ],
+   "date": "2020-02-04",
+   "name": "Update 27.1",
+   "parent": "27.1",
+   "url": "https://wiki.warframe.com/w/Update_27%23Update_27.1"
+  },
+  "isPrime": false,
+  "magazineSize": 90,
+  "masterable": true,
+  "masteryReq": 15,
+  "maxLevelCap": 40,
+  "multishot": 1,
+  "name": "Kuva Hind",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "madurai"
+  ],
+  "procChance": 0.33000004,
+  "productCategory": "LongGuns",
+  "releaseDate": "2020-02-04",
+  "reloadTime": 2.3,
+  "skipBuildTimePrice": 0,
+  "slot": 1,
+  "tags": [
+   "Grineer",
+   "Kuva Lich"
+  ],
+  "totalDamage": 30,
+  "tradable": false,
+  "trigger": "Burst",
+  "type": "Rifle",
+  "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hind/KuvaHind",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/KuvaHind.png?a568a",
+  "wikiaUrl": "https://wiki.warframe.com/w/Kuva_Hind"
+ },
+ {
+  "accuracy": 100,
+  "attacks": [
+   {
+    "charge_time": 0.3,
+    "crit_chance": 20,
+    "crit_mult": 2,
+    "damage": {
+     "electricity": 200
+    },
+    "falloff": {
+     "end": 600,
+     "reduction": 0.5,
+     "start": 400
+    },
+    "flight": 200,
+    "name": "Partially Charged Shot",
+    "shot_speed": 200,
+    "shot_type": "Projectile",
+    "status_chance": 25
+   },
+   {
+    "charge_time": 1,
+    "crit_chance": 25,
+    "crit_mult": 2,
+    "damage": {
+     "electricity": 525
+    },
+    "flight": 250,
+    "name": "Charged Shot",
+    "shot_speed": 250,
+    "shot_type": "Projectile",
+    "status_chance": 25
+   }
+  ],
+  "bpCost": 15000,
+  "buildPrice": 30000,
+  "buildQuantity": 1,
+  "buildTime": 86400,
+  "category": "Primary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 600,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/AlloyPlate"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Weapons/ClanTech/Energy/RailgunBlueprint"
+   },
+   {
+    "itemCount": 5,
+    "uniqueName": "/Lotus/Types/Items/Research/EnergyComponent"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Forma"
+   },
+   {
+    "itemCount": 20,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Gallium"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.2,
+  "criticalMultiplier": 2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 525,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 0,
+   "magnetic": 0,
+   "puncture": 0,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 0,
+   "tau": 0,
+   "total": 525,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   525,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "The Lanka fires a high velocity projectile through magnetic induction.",
+  "disposition": 4,
+  "exilusPolarity": "madurai",
+  "fireRate": 0,
+  "imageName": "Lanka.png",
+  "introduced": {
+   "aliases": [
+    "8",
+    "8.0",
+    "Update 8"
+   ],
+   "date": "2013-05-23",
+   "name": "Update 8.0",
+   "parent": "8.0",
+   "url": "https://wiki.warframe.com/w/Update_8%23Update_8.0"
+  },
+  "isPrime": false,
+  "magazineSize": 10,
+  "masterable": true,
+  "masteryReq": 10,
+  "multishot": 1,
+  "name": "Lanka",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "procChance": 0.25,
+  "productCategory": "LongGuns",
+  "releaseDate": "2013-05-23",
+  "reloadTime": 2,
+  "skipBuildTimePrice": 35,
+  "slot": 1,
+  "tags": [
+   "Corpus"
+  ],
+  "totalDamage": 525,
+  "tradable": false,
+  "trigger": "Charge",
+  "type": "Sniper",
+  "uniqueName": "/Lotus/Weapons/ClanTech/Energy/Railgun",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Lanka.png?b8db7",
+  "wikiaUrl": "https://wiki.warframe.com/w/Lanka"
+ },
+ {
+  "accuracy": 16,
+  "attacks": [
+   {
+    "crit_chance": 40,
+    "crit_mult": 2,
+    "damage": {
+     "void": 2000
+    },
+    "name": "Normal Attack",
+    "shot_type": "Projectile",
+    "speed": 3,
+    "status_chance": 20
+   },
+   {
+    "crit_chance": 80,
+    "crit_mult": 2,
+    "damage": {
+     "void": 3600
+    },
+    "name": "Overcharged Shot",
+    "shot_type": "Projectile",
+    "speed": 0.833,
+    "status_chance": 50
+   }
+  ],
+  "category": "Primary",
+  "codexSecret": false,
+  "criticalChance": 0.40000001,
+  "criticalMultiplier": 2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 0,
+   "magnetic": 0,
+   "puncture": 0,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 0,
+   "tau": 0,
+   "total": 2000,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 2000
+  },
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2000,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "A silent, pistol-style Amp for the Drifter. Generates its own ammunition from Void energy. A precisely timed reload over-charges the next shot.",
+  "disposition": 3,
+  "drops": [
+   {
+    "chance": 100,
+    "location": "Cephalon Simaris, Complete The New War",
+    "rarity": "Common",
+    "type": "Sirocco"
+   }
+  ],
+  "fireRate": 3.0000002,
+  "imageName": "DrifterPistol.png",
+  "introduced": {
+   "aliases": [
+    "31",
+    "31.0",
+    "The New War"
+   ],
+   "date": "2021-12-15",
+   "name": "Update 31.0",
+   "parent": "31.0",
+   "url": "https://wiki.warframe.com/w/Update_31%23Update_31.0"
+  },
+  "isPrime": false,
+  "magazineSize": 10,
+  "masterable": true,
+  "masteryReq": 0,
+  "multishot": 1,
+  "name": "Sirocco",
+  "noise": "Silent",
+  "omegaAttenuation": 1,
+  "procChance": 0.19999999,
+  "productCategory": "OperatorAmps",
+  "releaseDate": "2021-12-15",
+  "reloadTime": 2,
+  "slot": 1,
+  "tags": [],
+  "totalDamage": 2000,
+  "tradable": false,
+  "trigger": "Semi",
+  "type": "Pistol",
+  "uniqueName": "/Lotus/Weapons/Operator/Pistols/DrifterPistol/DrifterPistolPlayerWeapon",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Sirocco.png?76b26",
+  "wikiaUrl": "https://wiki.warframe.com/w/Sirocco"
+ },
+ {
+  "accuracy": 6.6666665,
+  "attacks": [
+   {
+    "crit_chance": 18,
+    "crit_mult": 2.2,
+    "damage": {
+     "impact": 26,
+     "puncture": 6,
+     "slash": 8
+    },
+    "falloff": {
+     "end": 30,
+     "reduction": 0.5,
+     "start": 15
+    },
+    "name": "Normal Attack",
+    "shot_type": "Hit-Scan",
+    "speed": 2.5,
+    "status_chance": 12
+   },
+   {
+    "crit_chance": 56,
+    "crit_mult": 3.4,
+    "damage": {
+     "impact": 100
+    },
+    "flight": 200,
+    "name": "Incarnon Form",
+    "shot_speed": 200,
+    "shot_type": "Projectile",
+    "speed": 2,
+    "status_chance": 44
+   },
+   {
+    "crit_chance": 56,
+    "crit_mult": 3.4,
+    "damage": {
+     "blast": 70,
+     "puncture": 40,
+     "slash": 90
+    },
+    "falloff": {
+     "end": 4,
+     "reduction": 0.2,
+     "start": 0
+    },
+    "name": "Incarnon Form AoE",
+    "shot_type": "AoE",
+    "speed": 2,
+    "status_chance": 44
+   }
+  ],
+  "buildPrice": 25000,
+  "buildQuantity": 1,
+  "buildTime": 43200,
+  "category": "Primary",
+  "codexSecret": true,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/StrunWraithBarrel"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/StrunWraithBlueprint"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/StrunWraithReceiver"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/StrunWraithStock"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.18000001,
+  "criticalMultiplier": 2.2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 26,
+   "magnetic": 0,
+   "puncture": 6,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 8.0000019,
+   "tau": 0,
+   "total": 40,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   26,
+   6,
+   8.0000019,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "A different take on a familiar shotgun, the Strun Wraith features unique styling.",
+  "disposition": 4,
+  "exilusPolarity": "madurai",
+  "fireRate": 2.5000002,
+  "imageName": "StrunWraith.png",
+  "introduced": {
+   "aliases": [
+    "9.7.2"
+   ],
+   "date": "2013-09-03",
+   "name": "Hotfix 9.7.2",
+   "parent": "9.7",
+   "url": "https://wiki.warframe.com/w/Update_9%23Hotfix_9.7.2"
+  },
+  "isPrime": false,
+  "magazineSize": 10,
+  "masterable": true,
+  "masteryReq": 10,
+  "multishot": 10,
+  "name": "Strun Wraith",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "naramon"
+  ],
+  "procChance": 0.12,
+  "productCategory": "LongGuns",
+  "releaseDate": "2013-09-03",
+  "reloadTime": 5,
+  "skipBuildTimePrice": 50,
+  "slot": 1,
+  "tags": [
+   "Tenno",
+   "Invasion Reward",
+   "Wraith"
+  ],
+  "totalDamage": 40,
+  "tradable": true,
+  "trigger": "Semi",
+  "type": "Shotgun",
+  "uniqueName": "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/StrunWraith.png?d9d6d",
+  "wikiaUrl": "https://wiki.warframe.com/w/Strun_Wraith"
+ }
+]

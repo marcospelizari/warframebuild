@@ -1,0 +1,1722 @@
+[
+ {
+  "de_name": "Simulor",
+  "unique_name": "/Lotus/Weapons/Cephalon/Primary/CephPrimary/CephPrimary",
+  "wfcd_name": "Simulor"
+ },
+ {
+  "de_name": "Acrid",
+  "unique_name": "/Lotus/Weapons/ClanTech/Bio/AcidDartPistol",
+  "wfcd_name": "Acrid"
+ },
+ {
+  "de_name": "Torid",
+  "unique_name": "/Lotus/Weapons/ClanTech/Bio/BioWeapon",
+  "wfcd_name": "Torid"
+ },
+ {
+  "de_name": "Ignis",
+  "unique_name": "/Lotus/Weapons/ClanTech/Chemical/FlameThrower",
+  "wfcd_name": "Ignis"
+ },
+ {
+  "de_name": "Ignis Wraith",
+  "unique_name": "/Lotus/Weapons/ClanTech/Chemical/FlameThrowerWraith",
+  "wfcd_name": "Ignis Wraith"
+ },
+ {
+  "de_name": "Ogris",
+  "unique_name": "/Lotus/Weapons/ClanTech/Chemical/RocketLauncher",
+  "wfcd_name": "Ogris"
+ },
+ {
+  "de_name": "Supra",
+  "unique_name": "/Lotus/Weapons/ClanTech/Energy/CrpHeavyRifle",
+  "wfcd_name": "Supra"
+ },
+ {
+  "de_name": "Spectra",
+  "unique_name": "/Lotus/Weapons/ClanTech/Energy/CrpLaserPistol",
+  "wfcd_name": "Spectra"
+ },
+ {
+  "de_name": "Flux Rifle",
+  "unique_name": "/Lotus/Weapons/ClanTech/Energy/CrpLaserRifle",
+  "wfcd_name": "Flux Rifle"
+ },
+ {
+  "de_name": "Dera Vandal",
+  "unique_name": "/Lotus/Weapons/ClanTech/Energy/DeraVandal",
+  "wfcd_name": "Dera Vandal"
+ },
+ {
+  "de_name": "Dera",
+  "unique_name": "/Lotus/Weapons/ClanTech/Energy/EnergyRifle",
+  "wfcd_name": "Dera"
+ },
+ {
+  "de_name": "Tenet Arca Plasmor",
+  "unique_name": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEArcaPlasmor/CrpBEArcaPlasmor",
+  "wfcd_name": "Tenet Arca Plasmor"
+ },
+ {
+  "de_name": "Tenet Ferrox",
+  "unique_name": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEFerrox/CrpBEFerrox",
+  "wfcd_name": "Tenet Ferrox"
+ },
+ {
+  "de_name": "Tenet Flux Rifle",
+  "unique_name": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEFluxRifle/CrpBEFluxRifle",
+  "wfcd_name": "Tenet Flux Rifle"
+ },
+ {
+  "de_name": "Tenet Glaxion",
+  "unique_name": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEGlaxion/CrpBEGlaxion",
+  "wfcd_name": "Tenet Glaxion"
+ },
+ {
+  "de_name": "Tenet Quanta",
+  "unique_name": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEQuanta/CrpBEQuanta",
+  "wfcd_name": "Tenet Quanta"
+ },
+ {
+  "de_name": "Tenet Tetra",
+  "unique_name": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBETetra/CrpBETetra",
+  "wfcd_name": "Tenet Tetra"
+ },
+ {
+  "de_name": "Tenet Cycron",
+  "unique_name": "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBECycron/CrpBECycron",
+  "wfcd_name": "Tenet Cycron"
+ },
+ {
+  "de_name": "Tenet Detron",
+  "unique_name": "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBEDetron/CrpBEDetron",
+  "wfcd_name": "Tenet Detron"
+ },
+ {
+  "de_name": "Tenet Plinx",
+  "unique_name": "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBEPlinx/CrpBEPlinxWeapon",
+  "wfcd_name": "Tenet Plinx"
+ },
+ {
+  "de_name": "Lenz",
+  "unique_name": "/Lotus/Weapons/Corpus/Bow/Longbow/CrpBow",
+  "wfcd_name": "Lenz"
+ },
+ {
+  "de_name": "Prisma Lenz",
+  "unique_name": "/Lotus/Weapons/Corpus/Bow/Longbow/PrismaLenz/PrismaLenzWeapon",
+  "wfcd_name": "Prisma Lenz"
+ },
+ {
+  "de_name": "Amprex",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/ChainLightningGun/ChainLightningRifle",
+  "wfcd_name": "Amprex"
+ },
+ {
+  "de_name": "Tetra",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/CorpusUMP",
+  "wfcd_name": "Tetra"
+ },
+ {
+  "de_name": "Prisma Tetra",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/PrismaCorpusUMP",
+  "wfcd_name": "Prisma Tetra"
+ },
+ {
+  "de_name": "Ambassador",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpArSniper/CrpArSniperRifle",
+  "wfcd_name": "Ambassador"
+ },
+ {
+  "de_name": "Opticor",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/CrpBFG",
+  "wfcd_name": "Opticor"
+ },
+ {
+  "de_name": "Opticor Vandal",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/Vandal/VandalCrpBFG",
+  "wfcd_name": "Opticor Vandal"
+ },
+ {
+  "de_name": "Tenet Envoy",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpBriefcaseLauncher/CrpBriefcaseLauncher",
+  "wfcd_name": "Tenet Envoy"
+ },
+ {
+  "de_name": "Glaxion",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/CrpFreezeRayRifle",
+  "wfcd_name": "Glaxion"
+ },
+ {
+  "de_name": "Glaxion Vandal",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/Vandal/CrpFreezeRayVandalRifle",
+  "wfcd_name": "Glaxion Vandal"
+ },
+ {
+  "de_name": "Stahlta",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpRubanRifle/CrpRubanRifle",
+  "wfcd_name": "Stahlta"
+ },
+ {
+  "de_name": "Komorex",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpSentAmlgSniper/CrpSentAmlgSniper",
+  "wfcd_name": "Komorex"
+ },
+ {
+  "de_name": "Battacor",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpSentExperimentRifle/CrpSentExperimentRifle",
+  "wfcd_name": "Battacor"
+ },
+ {
+  "de_name": "Exergis",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpShapeBlast/CrpShapeBlastShotgun",
+  "wfcd_name": "Exergis"
+ },
+ {
+  "de_name": "Quanta",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpShockRifle/CrpShockRifle",
+  "wfcd_name": "Quanta"
+ },
+ {
+  "de_name": "Quanta Vandal",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpShockRifle/QuantaVandal",
+  "wfcd_name": "Quanta Vandal"
+ },
+ {
+  "de_name": "Arca Plasmor",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpShotgun/CrpShotgun",
+  "wfcd_name": "Arca Plasmor"
+ },
+ {
+  "de_name": "Convectrix",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpSplitLaser/CrpSplitLaser",
+  "wfcd_name": "Convectrix"
+ },
+ {
+  "de_name": "Carmine Penta",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/GrenadeLauncher/CarminePenta",
+  "wfcd_name": "Carmine Penta"
+ },
+ {
+  "de_name": "Penta",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/GrenadeLauncher/GrenadeLauncher",
+  "wfcd_name": "Penta"
+ },
+ {
+  "de_name": "Supra Vandal",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/Machinegun/SupraVandal",
+  "wfcd_name": "Supra Vandal"
+ },
+ {
+  "de_name": "Ferrox",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/Spears/Railgun/CorpusRailgun",
+  "wfcd_name": "Ferrox"
+ },
+ {
+  "de_name": "Detron",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CorpusHandShotgun/CorpusHandCannon",
+  "wfcd_name": "Detron"
+ },
+ {
+  "de_name": "Cestra",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/CorpusMinigun",
+  "wfcd_name": "Cestra"
+ },
+ {
+  "de_name": "Dual Cestra",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/DualCorpusMinigun",
+  "wfcd_name": "Dual Cestra"
+ },
+ {
+  "de_name": "Spectra Vandal",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CorpusModularPistol/Vandal/CrpLaserPistolVandal",
+  "wfcd_name": "Spectra Vandal"
+ },
+ {
+  "de_name": "Sonicor",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpAirPistol/CrpAirPistolArray",
+  "wfcd_name": "Sonicor"
+ },
+ {
+  "de_name": "Tenet Diplos",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpBriefcaseAkimbo/CrpBriefcaseAkimboPistol",
+  "wfcd_name": "Tenet Diplos"
+ },
+ {
+  "de_name": "Cycron",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpChargeGun/CrpChargeGun",
+  "wfcd_name": "Cycron"
+ },
+ {
+  "de_name": "Staticor",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpElectroMag/CrpElectroMag",
+  "wfcd_name": "Staticor"
+ },
+ {
+  "de_name": "Angstrum",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher",
+  "wfcd_name": "Angstrum"
+ },
+ {
+  "de_name": "Prisma Angstrum",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/PrismaAngstrum",
+  "wfcd_name": "Prisma Angstrum"
+ },
+ {
+  "de_name": "Tenet Spirex",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpIgniterPistol/CrpIgniterPistol",
+  "wfcd_name": "Tenet Spirex"
+ },
+ {
+  "de_name": "Cyanex",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpSentAmalgPistol/CrpSentAmalgPistol",
+  "wfcd_name": "Cyanex"
+ },
+ {
+  "de_name": "Ocucor",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpSentExperimentPistol/CrpSentExperimentPistol",
+  "wfcd_name": "Ocucor"
+ },
+ {
+  "de_name": "Plinx",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpSonificBlastor/CrpBlastorWeapon",
+  "wfcd_name": "Plinx"
+ },
+ {
+  "de_name": "Arca Scisco",
+  "unique_name": "/Lotus/Weapons/Corpus/Pistols/SniperPistol/CrpScopeGun",
+  "wfcd_name": "Arca Scisco"
+ },
+ {
+  "de_name": "Kuva Bramma",
+  "unique_name": "/Lotus/Weapons/Grineer/Bows/GrnBow/GrnBowWeapon",
+  "wfcd_name": "Kuva Bramma"
+ },
+ {
+  "de_name": "Twin Gremlins",
+  "unique_name": "/Lotus/Weapons/Grineer/GrineerPistol/GrineerAkimboPistol",
+  "wfcd_name": "Twin Gremlins"
+ },
+ {
+  "de_name": "Viper",
+  "unique_name": "/Lotus/Weapons/Grineer/GrineerPistol/GrineerLightPistol",
+  "wfcd_name": "Viper"
+ },
+ {
+  "de_name": "Kraken",
+  "unique_name": "/Lotus/Weapons/Grineer/GrineerPistol/GrnHeavyPistol",
+  "wfcd_name": "Kraken"
+ },
+ {
+  "de_name": "Seer",
+  "unique_name": "/Lotus/Weapons/Grineer/GrineerPistol/GrnScopedPistolPlayer",
+  "wfcd_name": "Seer"
+ },
+ {
+  "de_name": "Kuva Drakgoon",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Drakgoon/KuvaDrakgoon",
+  "wfcd_name": "Kuva Drakgoon"
+ },
+ {
+  "de_name": "Kuva Hek",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hek/KuvaHekWeapon",
+  "wfcd_name": "Kuva Hek"
+ },
+ {
+  "de_name": "Kuva Hind",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hind/KuvaHind",
+  "wfcd_name": "Kuva Hind"
+ },
+ {
+  "de_name": "Kuva Karak",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Karak/KuvaKarak",
+  "wfcd_name": "Kuva Karak"
+ },
+ {
+  "de_name": "Kuva Kohm",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Kohm/KuvaKohm",
+  "wfcd_name": "Kuva Kohm"
+ },
+ {
+  "de_name": "Kuva Ogris",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Ogris/KuvaOgris",
+  "wfcd_name": "Kuva Ogris"
+ },
+ {
+  "de_name": "Kuva Quartakk",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Quartakk/KuvaQuartakk",
+  "wfcd_name": "Kuva Quartakk"
+ },
+ {
+  "de_name": "Kuva Sobek",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Sobek/KuvaSobek",
+  "wfcd_name": "Kuva Sobek"
+ },
+ {
+  "de_name": "Kuva Tonkor",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Tonkor/KuvaTonkor",
+  "wfcd_name": "Kuva Tonkor"
+ },
+ {
+  "de_name": "Kuva Zarr",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Zarr/KuvaZarr",
+  "wfcd_name": "Kuva Zarr"
+ },
+ {
+  "de_name": "Kuva Brakk",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Brakk/KuvaBrakk",
+  "wfcd_name": "Kuva Brakk"
+ },
+ {
+  "de_name": "Kuva Kraken",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Kraken/KuvaKraken",
+  "wfcd_name": "Kuva Kraken"
+ },
+ {
+  "de_name": "Kuva Nukor",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Nukor/KuvaNukor",
+  "wfcd_name": "Kuva Nukor"
+ },
+ {
+  "de_name": "Kuva Seer",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Seer/KuvaSeer",
+  "wfcd_name": "Kuva Seer"
+ },
+ {
+  "de_name": "Kuva Twin Stubbas",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Stubba/KuvaStubba",
+  "wfcd_name": "Kuva Twin Stubbas"
+ },
+ {
+  "de_name": "Hind",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/BurstRifle/GrnBurstRifle",
+  "wfcd_name": "Hind"
+ },
+ {
+  "de_name": "Grakata",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/GrnAssaultRifle",
+  "wfcd_name": "Grakata"
+ },
+ {
+  "de_name": "Twin Grakatas",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/TwinGrakatas",
+  "wfcd_name": "Twin Grakatas"
+ },
+ {
+  "de_name": "Drakgoon",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerFlakCannon/FlakCannon",
+  "wfcd_name": "Drakgoon"
+ },
+ {
+  "de_name": "Grinlok",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/GLARifle",
+  "wfcd_name": "Grinlok"
+ },
+ {
+  "de_name": "Prisma Grinlok",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/PrismaGrinlokWeapon",
+  "wfcd_name": "Prisma Grinlok"
+ },
+ {
+  "de_name": "Karak",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerM16Homage/GrineerM16Rifle",
+  "wfcd_name": "Karak"
+ },
+ {
+  "de_name": "Karak Wraith",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerM16Homage/KarakWraith",
+  "wfcd_name": "Karak Wraith"
+ },
+ {
+  "de_name": "Miter",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun",
+  "wfcd_name": "Miter"
+ },
+ {
+  "de_name": "Vulkar",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/GrnSniperRifle",
+  "wfcd_name": "Vulkar"
+ },
+ {
+  "de_name": "Vulkar Wraith",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/VulkarWraith",
+  "wfcd_name": "Vulkar Wraith"
+ },
+ {
+  "de_name": "Zarr",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrnCannon/GrnCannonWeapon",
+  "wfcd_name": "Zarr"
+ },
+ {
+  "de_name": "Javlok",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrnFlameSpear/GrnFlameSpear",
+  "wfcd_name": "Javlok"
+ },
+ {
+  "de_name": "Quartakk",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrnFourBarrelRifle/GrnFourBarrelRifleWeapon",
+  "wfcd_name": "Quartakk"
+ },
+ {
+  "de_name": "Buzlok",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrnGorgSniperRifle/GrnGorgSniperRifle",
+  "wfcd_name": "Buzlok"
+ },
+ {
+  "de_name": "Tonkor",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrnGrenadeLauncher/GrnGrenadeLauncher",
+  "wfcd_name": "Tonkor"
+ },
+ {
+  "de_name": "Harpak",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrnHarpoonGun/GrnHarpoonGun",
+  "wfcd_name": "Harpak"
+ },
+ {
+  "de_name": "Kuva Chakkhurr",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrnKuvaLichRifle/GrnKuvaLichRifleWeapon",
+  "wfcd_name": "Kuva Chakkhurr"
+ },
+ {
+  "de_name": "Gotva Prime",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrnOrokinRifle/GrnOrokinRifleWeapon",
+  "wfcd_name": "Gotva Prime"
+ },
+ {
+  "de_name": "Kohm",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrnSpark/GrnSparkRifle",
+  "wfcd_name": "Kohm"
+ },
+ {
+  "de_name": "Argonak",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/LaserAimRifle/LaserAimRifle",
+  "wfcd_name": "Argonak"
+ },
+ {
+  "de_name": "Prisma Gorgon",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/VoidTraderGorgon/VTGorgon",
+  "wfcd_name": "Prisma Gorgon"
+ },
+ {
+  "de_name": "Gorgon Wraith",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/WraithGorgon/WraithGorgon",
+  "wfcd_name": "Gorgon Wraith"
+ },
+ {
+  "de_name": "Prisma Twin Gremlins",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrineerBulbousSMG/Prisma/PrismaTwinGremlinsWeapon",
+  "wfcd_name": "Prisma Twin Gremlins"
+ },
+ {
+  "de_name": "Stug",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun",
+  "wfcd_name": "Stug"
+ },
+ {
+  "de_name": "Brakk",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrineerHandShotgun/GrineerHandCannon",
+  "wfcd_name": "Brakk"
+ },
+ {
+  "de_name": "Marelok",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrineerLeverActionPistol/GLAPistol",
+  "wfcd_name": "Marelok"
+ },
+ {
+  "de_name": "Nukor",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrineerMicrowavegun/GrnMicrowavePistol",
+  "wfcd_name": "Nukor"
+ },
+ {
+  "de_name": "Quatz",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrnAmphisPistol/GrnAmphisPistol",
+  "wfcd_name": "Quatz"
+ },
+ {
+  "de_name": "Twin Kohmak",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrnDWUniques/GrnTwinKohmaks",
+  "wfcd_name": "Twin Kohmak"
+ },
+ {
+  "de_name": "Kohmak",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrnKohmPistol/GrnKohmPistol",
+  "wfcd_name": "Kohmak"
+ },
+ {
+  "de_name": "Sagek Prime",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrnOrokinPistol/GrnOrokinPistol",
+  "wfcd_name": "Sagek Prime"
+ },
+ {
+  "de_name": "Twin Rogga",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrnQueenGuardDualPistol/GrnQueenGuardDualPistols",
+  "wfcd_name": "Twin Rogga"
+ },
+ {
+  "de_name": "Kulstar",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrnTorpedoPistol/GrnTorpedoPistol",
+  "wfcd_name": "Kulstar"
+ },
+ {
+  "de_name": "Stubba",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrnUzi/GrnUziWeapon",
+  "wfcd_name": "Stubba"
+ },
+ {
+  "de_name": "Atomos",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun",
+  "wfcd_name": "Atomos"
+ },
+ {
+  "de_name": "Viper Wraith",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/WraithSingleViper/WraithSingleViper",
+  "wfcd_name": "Viper Wraith"
+ },
+ {
+  "de_name": "Twin Vipers Wraith",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/WraithTwinVipers/WraithTwinVipers",
+  "wfcd_name": "Twin Vipers Wraith"
+ },
+ {
+  "de_name": "Aegrit",
+  "unique_name": "/Lotus/Weapons/Grineer/ThrowingWeapons/GrnVorStickyBomb/GrnVorStickyBomb",
+  "wfcd_name": "Aegrit"
+ },
+ {
+  "de_name": "Mutalist Cernos",
+  "unique_name": "/Lotus/Weapons/Infested/Bow/InfCernosBow/InfCernos",
+  "wfcd_name": "Mutalist Cernos"
+ },
+ {
+  "de_name": "Coda Bassocyst",
+  "unique_name": "/Lotus/Weapons/Infested/InfestedLich/LongGuns/1999InfShotgun/1999InfShotgunWeapon",
+  "wfcd_name": "Coda Bassocyst"
+ },
+ {
+  "de_name": "Coda Bubonico",
+  "unique_name": "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaBubonico/CodaBubonicoCannon",
+  "wfcd_name": "Coda Bubonico"
+ },
+ {
+  "de_name": "Coda Hema",
+  "unique_name": "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaHema",
+  "wfcd_name": "Coda Hema"
+ },
+ {
+  "de_name": "Coda Sporothrix",
+  "unique_name": "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaSporothrix",
+  "wfcd_name": "Coda Sporothrix"
+ },
+ {
+  "de_name": "Coda Synapse",
+  "unique_name": "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaSynapse",
+  "wfcd_name": "Coda Synapse"
+ },
+ {
+  "de_name": "Dual Coda Torxica",
+  "unique_name": "/Lotus/Weapons/Infested/InfestedLich/Pistols/1999InfSporePistol/1999InfSporePistolWeapon",
+  "wfcd_name": "Dual Coda Torxica"
+ },
+ {
+  "de_name": "Coda Catabolyst",
+  "unique_name": "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaCatabolyst",
+  "wfcd_name": "Coda Catabolyst"
+ },
+ {
+  "de_name": "Coda Pox",
+  "unique_name": "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaPox",
+  "wfcd_name": "Coda Pox"
+ },
+ {
+  "de_name": "Coda Tysis",
+  "unique_name": "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaTysis",
+  "wfcd_name": "Coda Tysis"
+ },
+ {
+  "de_name": "Bubonico",
+  "unique_name": "/Lotus/Weapons/Infested/LongGuns/InfArmCannon/InfArmCannon",
+  "wfcd_name": "Bubonico"
+ },
+ {
+  "de_name": "Mutalist Quanta",
+  "unique_name": "/Lotus/Weapons/Infested/LongGuns/InfCrpShockSwarm/InfCrpShockSwarmRifle",
+  "wfcd_name": "Mutalist Quanta"
+ },
+ {
+  "de_name": "Sporothrix",
+  "unique_name": "/Lotus/Weapons/Infested/LongGuns/InfSniperRifle/InfSniperRifle",
+  "wfcd_name": "Sporothrix"
+ },
+ {
+  "de_name": "Hema",
+  "unique_name": "/Lotus/Weapons/Infested/LongGuns/InfWFAccompanyingPri/InfestedBurstRifle",
+  "wfcd_name": "Hema"
+ },
+ {
+  "de_name": "Synapse",
+  "unique_name": "/Lotus/Weapons/Infested/LongGuns/InfestedRifle",
+  "wfcd_name": "Synapse"
+ },
+ {
+  "de_name": "Paracyst",
+  "unique_name": "/Lotus/Weapons/Infested/LongGuns/QuantaFullyInfested/InfQuantaRifle",
+  "wfcd_name": "Paracyst"
+ },
+ {
+  "de_name": "Phage",
+  "unique_name": "/Lotus/Weapons/Infested/LongGuns/Tentacluster/InfestedShotgun",
+  "wfcd_name": "Phage"
+ },
+ {
+  "de_name": "Catabolyst",
+  "unique_name": "/Lotus/Weapons/Infested/Pistols/InfBeamPistol/InfBeamPistol",
+  "wfcd_name": "Catabolyst"
+ },
+ {
+  "de_name": "Pox",
+  "unique_name": "/Lotus/Weapons/Infested/Pistols/InfProximityStars/InfProximityStars",
+  "wfcd_name": "Pox"
+ },
+ {
+  "de_name": "Zymos",
+  "unique_name": "/Lotus/Weapons/Infested/Pistols/InfUzi/InfUziWeapon",
+  "wfcd_name": "Zymos"
+ },
+ {
+  "de_name": "Dual Toxocyst",
+  "unique_name": "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep",
+  "wfcd_name": "Dual Toxocyst"
+ },
+ {
+  "de_name": "Tysis",
+  "unique_name": "/Lotus/Weapons/Infested/Pistols/InfestedDartPistol/InfestedDartPistol",
+  "wfcd_name": "Tysis"
+ },
+ {
+  "de_name": "Embolist",
+  "unique_name": "/Lotus/Weapons/Infested/Pistols/InfestedPistol",
+  "wfcd_name": "Embolist"
+ },
+ {
+  "de_name": "AX-52",
+  "unique_name": "/Lotus/Weapons/Lasria/AK47/TC2024AK47Weapon",
+  "wfcd_name": "Ax-52"
+ },
+ {
+  "de_name": "EFV-5 Jupiter",
+  "unique_name": "/Lotus/Weapons/Lasria/LasGooAK/LasGooAKPlayerWeapon",
+  "wfcd_name": "Efv-5 Jupiter"
+ },
+ {
+  "de_name": "EFV-8 Mars",
+  "unique_name": "/Lotus/Weapons/Lasria/LasGooPistol/LasGooPistolPlayerWeapon",
+  "wfcd_name": "Efv-8 Mars"
+ },
+ {
+  "de_name": "Purgator 1",
+  "unique_name": "/Lotus/Weapons/Lasria/LasGrenadeLauncher/LasrianNoxPlayerWeapon",
+  "wfcd_name": "Purgator 1"
+ },
+ {
+  "de_name": "Vesper 77",
+  "unique_name": "/Lotus/Weapons/Lasria/LasSilencedPistol/LasSilencedPistolWeapon",
+  "wfcd_name": "Vesper 77"
+ },
+ {
+  "de_name": "MK1-Furis",
+  "unique_name": "/Lotus/Weapons/MK1Series/MK1Furis",
+  "wfcd_name": "Mk1-Furis"
+ },
+ {
+  "de_name": "MK1-Kunai",
+  "unique_name": "/Lotus/Weapons/MK1Series/MK1Kunai",
+  "wfcd_name": "Mk1-Kunai"
+ },
+ {
+  "de_name": "MK1-Paris",
+  "unique_name": "/Lotus/Weapons/MK1Series/MK1Paris",
+  "wfcd_name": "Mk1-Paris"
+ },
+ {
+  "de_name": "MK1-Strun",
+  "unique_name": "/Lotus/Weapons/MK1Series/MK1Strun",
+  "wfcd_name": "Mk1-Strun"
+ },
+ {
+  "de_name": "Haalvu",
+  "unique_name": "/Lotus/Weapons/Sentients/SentOctaMiniGun/SentOctaMiniGun",
+  "wfcd_name": "Haalvu"
+ },
+ {
+  "de_name": "Basmu",
+  "unique_name": "/Lotus/Weapons/Sentients/SentRifleNewWar/SentRifleNewWarGun",
+  "wfcd_name": "Basmu"
+ },
+ {
+  "de_name": "Shedu",
+  "unique_name": "/Lotus/Weapons/Sentients/Shedu/SheduHeavyWeapon",
+  "wfcd_name": "Shedu"
+ },
+ {
+  "de_name": "Telos Boltor",
+  "unique_name": "/Lotus/Weapons/Syndicates/ArbitersOfHexis/LongGuns/AHBoltor",
+  "wfcd_name": "Telos Boltor"
+ },
+ {
+  "de_name": "Telos Akbolto",
+  "unique_name": "/Lotus/Weapons/Syndicates/ArbitersOfHexis/Pistols/AHAkbolto",
+  "wfcd_name": "Telos Akbolto"
+ },
+ {
+  "de_name": "Synoid Simulor",
+  "unique_name": "/Lotus/Weapons/Syndicates/CephalonSuda/LongGuns/CSSimulor",
+  "wfcd_name": "Synoid Simulor"
+ },
+ {
+  "de_name": "Gammacor",
+  "unique_name": "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSDroidArray",
+  "wfcd_name": "Gammacor"
+ },
+ {
+  "de_name": "Synoid Gammacor",
+  "unique_name": "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSSynoidGammacor",
+  "wfcd_name": "Synoid Gammacor"
+ },
+ {
+  "de_name": "Sancti Tigris",
+  "unique_name": "/Lotus/Weapons/Syndicates/NewLoka/LongGuns/NLTigris",
+  "wfcd_name": "Sancti Tigris"
+ },
+ {
+  "de_name": "Sancti Castanas",
+  "unique_name": "/Lotus/Weapons/Syndicates/NewLoka/Pistols/NLCastanas",
+  "wfcd_name": "Sancti Castanas"
+ },
+ {
+  "de_name": "Secura Penta",
+  "unique_name": "/Lotus/Weapons/Syndicates/PerrinSequence/LongGuns/PSPenta",
+  "wfcd_name": "Secura Penta"
+ },
+ {
+  "de_name": "Secura Dual Cestra",
+  "unique_name": "/Lotus/Weapons/Syndicates/PerrinSequence/Pistols/PSDualCestra",
+  "wfcd_name": "Secura Dual Cestra"
+ },
+ {
+  "de_name": "Rakta Cernos",
+  "unique_name": "/Lotus/Weapons/Syndicates/RedVeil/Bows/RVCernos",
+  "wfcd_name": "Rakta Cernos"
+ },
+ {
+  "de_name": "Rakta Ballistica",
+  "unique_name": "/Lotus/Weapons/Syndicates/RedVeil/Pistols/RVBallistica",
+  "wfcd_name": "Rakta Ballistica"
+ },
+ {
+  "de_name": "Vaykor Hek",
+  "unique_name": "/Lotus/Weapons/Syndicates/SteelMeridian/LongGuns/SMHek",
+  "wfcd_name": "Vaykor Hek"
+ },
+ {
+  "de_name": "Vaykor Marelok",
+  "unique_name": "/Lotus/Weapons/Syndicates/SteelMeridian/Pistols/SMMarelok",
+  "wfcd_name": "Vaykor Marelok"
+ },
+ {
+  "de_name": "Aklex",
+  "unique_name": "/Lotus/Weapons/Tenno/Akimbo/AkLexPistols",
+  "wfcd_name": "Aklex"
+ },
+ {
+  "de_name": "Aklex Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Akimbo/AkLexPrimePistols",
+  "wfcd_name": "Aklex Prime"
+ },
+ {
+  "de_name": "Afuris",
+  "unique_name": "/Lotus/Weapons/Tenno/Akimbo/AkimboAutoPistols",
+  "wfcd_name": "Afuris"
+ },
+ {
+  "de_name": "Akbolto",
+  "unique_name": "/Lotus/Weapons/Tenno/Akimbo/AkimboBolto",
+  "wfcd_name": "Akbolto"
+ },
+ {
+  "de_name": "Aklato",
+  "unique_name": "/Lotus/Weapons/Tenno/Akimbo/AkimboPistol",
+  "wfcd_name": "Aklato"
+ },
+ {
+  "de_name": "Akbronco",
+  "unique_name": "/Lotus/Weapons/Tenno/Akimbo/AkimboShotGun",
+  "wfcd_name": "Akbronco"
+ },
+ {
+  "de_name": "Twin Vipers",
+  "unique_name": "/Lotus/Weapons/Tenno/Akimbo/AkimboViperPistols",
+  "wfcd_name": "Twin Vipers"
+ },
+ {
+  "de_name": "Akmagnus",
+  "unique_name": "/Lotus/Weapons/Tenno/Akimbo/DualMagnus",
+  "wfcd_name": "Akmagnus"
+ },
+ {
+  "de_name": "Akmagnus Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Akimbo/DualMagnusPrime",
+  "wfcd_name": "Akmagnus Prime"
+ },
+ {
+  "de_name": "Akvasto",
+  "unique_name": "/Lotus/Weapons/Tenno/Akimbo/DualVastos",
+  "wfcd_name": "Akvasto"
+ },
+ {
+  "de_name": "Akbronco Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Akimbo/PrimeAkimboShotGun",
+  "wfcd_name": "Akbronco Prime"
+ },
+ {
+  "de_name": "Vinquibus",
+  "unique_name": "/Lotus/Weapons/Tenno/Bayonet/TnBayonetRifleWeapon",
+  "wfcd_name": "Vinquibus"
+ },
+ {
+  "de_name": "Cernos",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/AntlerBow/AntlerBow",
+  "wfcd_name": "Cernos"
+ },
+ {
+  "de_name": "Daikyu",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/AsymetricalBow/AsymetricalBow",
+  "wfcd_name": "Daikyu"
+ },
+ {
+  "de_name": "Cinta",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/DaxDuviriAsymetricalBow/DaxDuviriAsymmetricalLongBowPlayerWeapon",
+  "wfcd_name": "Cinta"
+ },
+ {
+  "de_name": "Nunchasa",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/DuelistBow/DuelistBow",
+  "wfcd_name": "Nunchasa"
+ },
+ {
+  "de_name": "Paris",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/HuntingBow",
+  "wfcd_name": "Paris"
+ },
+ {
+  "de_name": "Nataruk",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep",
+  "wfcd_name": "Nataruk"
+ },
+ {
+  "de_name": "Cernos Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/PrimeCernos/PrimeCernos",
+  "wfcd_name": "Cernos Prime"
+ },
+ {
+  "de_name": "Daikyu Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/PrimeDaikyu/PrimeDaikyuBow",
+  "wfcd_name": "Daikyu Prime"
+ },
+ {
+  "de_name": "Proboscis Cernos",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/PrimeDerelictCernos/DerelictCernos",
+  "wfcd_name": "Proboscis Cernos"
+ },
+ {
+  "de_name": "Paris Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow",
+  "wfcd_name": "Paris Prime"
+ },
+ {
+  "de_name": "Dread",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/StalkerBow",
+  "wfcd_name": "Dread"
+ },
+ {
+  "de_name": "Evensong",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/TnChoirBow/TnChoirBow",
+  "wfcd_name": "Evensong"
+ },
+ {
+  "de_name": "Grimoire",
+  "unique_name": "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire",
+  "wfcd_name": "Grimoire"
+ },
+ {
+  "de_name": "Grimoire",
+  "unique_name": "/Lotus/Weapons/Tenno/Grimoire/TnGrimoire",
+  "wfcd_name": "Grimoire"
+ },
+ {
+  "de_name": "Dex Sybaris",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/DexTheThird/DexTheThird",
+  "wfcd_name": "Dex Sybaris"
+ },
+ {
+  "de_name": "Tigris",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/DoubleBarrelShotgun/TennoDoubleBarrelShotgun",
+  "wfcd_name": "Tigris"
+ },
+ {
+  "de_name": "Tiberon",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/DrakeRifle/DrakeRifle",
+  "wfcd_name": "Tiberon"
+ },
+ {
+  "de_name": "Rubico",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/FiveShotSniper/FiveShotSniper",
+  "wfcd_name": "Rubico"
+ },
+ {
+  "de_name": "Nagantaka",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/GarudaCrossbow/GarudaCrossbow",
+  "wfcd_name": "Nagantaka"
+ },
+ {
+  "de_name": "Higasa",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/Gunbrella/ShrineMaidenGunbrellaWeapon",
+  "wfcd_name": "Higasa"
+ },
+ {
+  "de_name": "Alternox",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/GyreRifle/GyreRifleWeapon",
+  "wfcd_name": "Alternox"
+ },
+ {
+  "de_name": "Zenith",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/LoginPrimary/SundialRifle",
+  "wfcd_name": "Zenith"
+ },
+ {
+  "de_name": "Panthera",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/Miter/TnoMiter",
+  "wfcd_name": "Panthera"
+ },
+ {
+  "de_name": "Rauta",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PaxDuviricusShotgun/PaxDuviricusShotgun",
+  "wfcd_name": "Rauta"
+ },
+ {
+  "de_name": "Acceltra Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeAcceltra/PrimeAcceltraWeapon",
+  "wfcd_name": "Acceltra Prime"
+ },
+ {
+  "de_name": "Afentis Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeAfentis/PrimeAfentisWeapon",
+  "wfcd_name": "Afentis Prime"
+ },
+ {
+  "de_name": "Alternox Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeAlternox/PrimeAlternoxWeapon",
+  "wfcd_name": "Alternox Prime"
+ },
+ {
+  "de_name": "Astilla Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeAstilla/AstillaPrimeWeapon",
+  "wfcd_name": "Astilla Prime"
+ },
+ {
+  "de_name": "Baza Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeBaza/PrimeBazaGun",
+  "wfcd_name": "Baza Prime"
+ },
+ {
+  "de_name": "Boltor Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeBoltor/PrimeBoltor",
+  "wfcd_name": "Boltor Prime"
+ },
+ {
+  "de_name": "Burston Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston",
+  "wfcd_name": "Burston Prime"
+ },
+ {
+  "de_name": "Cedo Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeCedo/PrimeCedoWeapon",
+  "wfcd_name": "Cedo Prime"
+ },
+ {
+  "de_name": "Corinth Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeCorinth/PrimeCorinth",
+  "wfcd_name": "Corinth Prime"
+ },
+ {
+  "de_name": "Fulmin Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeFulmin/PrimeFulmin",
+  "wfcd_name": "Fulmin Prime"
+ },
+ {
+  "de_name": "Vadarya Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeLightningGun/PrimeLightningGun",
+  "wfcd_name": "Vadarya Prime"
+ },
+ {
+  "de_name": "Nagantaka Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeNagantaka/PrimeNagantakaWeapon",
+  "wfcd_name": "Nagantaka Prime"
+ },
+ {
+  "de_name": "Panthera Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimePanthera/PrimePanthera",
+  "wfcd_name": "Panthera Prime"
+ },
+ {
+  "de_name": "Perigale Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimePerigale/PrimePerigaleSniper",
+  "wfcd_name": "Perigale Prime"
+ },
+ {
+  "de_name": "Phantasma Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimePhantasma/PhantasmaPrimeShotgun",
+  "wfcd_name": "Phantasma Prime"
+ },
+ {
+  "de_name": "Scourge Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeScourge/PrimeScourgeWeapon",
+  "wfcd_name": "Scourge Prime"
+ },
+ {
+  "de_name": "Soma Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle",
+  "wfcd_name": "Soma Prime"
+ },
+ {
+  "de_name": "Steflos Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeSteflos/PrimeSteflosShotgun",
+  "wfcd_name": "Steflos Prime"
+ },
+ {
+  "de_name": "Stradavar Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeStradavar/PrimeStradavarGun",
+  "wfcd_name": "Stradavar Prime"
+ },
+ {
+  "de_name": "Strun Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon",
+  "wfcd_name": "Strun Prime"
+ },
+ {
+  "de_name": "Sybaris Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeSybaris/PrimeSybarisRifle",
+  "wfcd_name": "Sybaris Prime"
+ },
+ {
+  "de_name": "Tenora Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeTenora/TenoraPrimeWeapon",
+  "wfcd_name": "Tenora Prime"
+ },
+ {
+  "de_name": "Tiberon Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeTiberon/PrimeTiberonRifle",
+  "wfcd_name": "Tiberon Prime"
+ },
+ {
+  "de_name": "Tigris Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeTigris/PrimeTigris",
+  "wfcd_name": "Tigris Prime"
+ },
+ {
+  "de_name": "Trumna Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeTrumna/PrimeTrumnaWeapon",
+  "wfcd_name": "Trumna Prime"
+ },
+ {
+  "de_name": "Vectis Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle",
+  "wfcd_name": "Vectis Prime"
+ },
+ {
+  "de_name": "Zhuge Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeZhuge/PrimeZhugeCrossbow",
+  "wfcd_name": "Zhuge Prime"
+ },
+ {
+  "de_name": "Zhuge",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/RepeatingCrossbow/RepeatingCrossbow",
+  "wfcd_name": "Zhuge"
+ },
+ {
+  "de_name": "Phantasma",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/RevenantShotgun/RevenantShotgun",
+  "wfcd_name": "Phantasma"
+ },
+ {
+  "de_name": "Rubico Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/RubicoPrime/RubicoPrimeWeapon",
+  "wfcd_name": "Rubico Prime"
+ },
+ {
+  "de_name": "Acceltra",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon",
+  "wfcd_name": "Acceltra"
+ },
+ {
+  "de_name": "Stradavar",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TennoTommyGun/TennoTommyGunRifle",
+  "wfcd_name": "Stradavar"
+ },
+ {
+  "de_name": "Cedo",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnAlchemistShotgun/TnAlchemistShotgun",
+  "wfcd_name": "Cedo"
+ },
+ {
+  "de_name": "Tenora",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnBardRifle/TnBardRifle",
+  "wfcd_name": "Tenora"
+ },
+ {
+  "de_name": "Reconifex",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnBeltFedRifle/TnBeltFedRifleWeapon",
+  "wfcd_name": "Reconifex"
+ },
+ {
+  "de_name": "Astilla",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnGlassShotgun/TnGlassShotgunGun",
+  "wfcd_name": "Astilla"
+ },
+ {
+  "de_name": "Corinth",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnHeavyShotgun/TnHeavyShotgunGun",
+  "wfcd_name": "Corinth"
+ },
+ {
+  "de_name": "Afentis",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnHopliteSpear/TnHopliteSpearGunWeapon",
+  "wfcd_name": "Afentis"
+ },
+ {
+  "de_name": "Enkaus",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnInkRifle/TnInkRifleWeapon",
+  "wfcd_name": "Enkaus"
+ },
+ {
+  "de_name": "Thornbak",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnModQuestRifle/TnModQuestRifleWeapon",
+  "wfcd_name": "Thornbak"
+ },
+ {
+  "de_name": "Scourge",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnPriestSpear/TnPriestSpearGun",
+  "wfcd_name": "Scourge"
+ },
+ {
+  "de_name": "Perigale",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnQuadSniper/TnQuadSniper",
+  "wfcd_name": "Perigale"
+ },
+ {
+  "de_name": "Quellor",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnRailjackRifle/RailjackRifleGun",
+  "wfcd_name": "Quellor"
+ },
+ {
+  "de_name": "Veldt",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnRevolverRifle/TnRevolverRifleGun",
+  "wfcd_name": "Veldt"
+ },
+ {
+  "de_name": "Aeolak",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnRifleErsatz/TnRifleErsatzWeapon",
+  "wfcd_name": "Aeolak"
+ },
+ {
+  "de_name": "Baza",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnSMG/TnSMGWeapon",
+  "wfcd_name": "Baza"
+ },
+ {
+  "de_name": "Fulmin",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnWispRifle/TnWispRifle",
+  "wfcd_name": "Fulmin"
+ },
+ {
+  "de_name": "Sybaris",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle",
+  "wfcd_name": "Sybaris"
+ },
+ {
+  "de_name": "Steflos",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnoLotusPodShotgun/TnoLotusPodShotgun",
+  "wfcd_name": "Steflos"
+ },
+ {
+  "de_name": "Attica",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnoPrmryXbow/TnoPrmryXbowWeapon",
+  "wfcd_name": "Attica"
+ },
+ {
+  "de_name": "Latron Wraith",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron",
+  "wfcd_name": "Latron Wraith"
+ },
+ {
+  "de_name": "Furis",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/AutoPistol",
+  "wfcd_name": "Furis"
+ },
+ {
+  "de_name": "Bronco Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/BroncoPrime",
+  "wfcd_name": "Bronco Prime"
+ },
+ {
+  "de_name": "Sicarus",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/BurstPistol",
+  "wfcd_name": "Sicarus"
+ },
+ {
+  "de_name": "Bolto",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/CrossBow",
+  "wfcd_name": "Bolto"
+ },
+ {
+  "de_name": "Bronco",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/HandShotGun",
+  "wfcd_name": "Bronco"
+ },
+ {
+  "de_name": "Lex",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/HeavyPistol",
+  "wfcd_name": "Lex"
+ },
+ {
+  "de_name": "Lato Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/LatoPrime",
+  "wfcd_name": "Lato Prime"
+ },
+ {
+  "de_name": "Lato Vandal",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/LatoVandal",
+  "wfcd_name": "Lato Vandal"
+ },
+ {
+  "de_name": "Lato",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/Pistol",
+  "wfcd_name": "Lato"
+ },
+ {
+  "de_name": "Vasto",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/RevolverPistol",
+  "wfcd_name": "Vasto"
+ },
+ {
+  "de_name": "Riot-848",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/1999EntHybridPistolWeapon/1999EntHybridPistolWeapon",
+  "wfcd_name": "Riot-848"
+ },
+ {
+  "de_name": "Euphona Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/AllNew1hSG/AllNew1hSG",
+  "wfcd_name": "Euphona Prime"
+ },
+ {
+  "de_name": "Ballistica",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/AutomaticHandCrossbow/AutoCrossBow",
+  "wfcd_name": "Ballistica"
+ },
+ {
+  "de_name": "Zylok",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol",
+  "wfcd_name": "Zylok"
+ },
+ {
+  "de_name": "Dex Furis",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/DexFuris/DexFuris",
+  "wfcd_name": "Dex Furis"
+ },
+ {
+  "de_name": "Aksondol",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/DuelistPistols/DuelistPistols",
+  "wfcd_name": "Aksondol"
+ },
+ {
+  "de_name": "Akzani",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/HarlequinGun/HarlequinPistols",
+  "wfcd_name": "Akzani"
+ },
+ {
+  "de_name": "Magnus",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/Magnum/Magnum",
+  "wfcd_name": "Magnus"
+ },
+ {
+  "de_name": "Afuris Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeAfuris/PrimeAFurisWeapon",
+  "wfcd_name": "Afuris Prime"
+ },
+ {
+  "de_name": "Akarius Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeAkarius/PrimeAkariusWeapon",
+  "wfcd_name": "Akarius Prime"
+ },
+ {
+  "de_name": "Akbolto Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeAkbolto/PrimeAkBoltoWeapon",
+  "wfcd_name": "Akbolto Prime"
+ },
+ {
+  "de_name": "Akjagara Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeAkjagara/AkJagaraPrime",
+  "wfcd_name": "Akjagara Prime"
+ },
+ {
+  "de_name": "Aksomati Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeAksomati/PrimeAksomati",
+  "wfcd_name": "Aksomati Prime"
+ },
+ {
+  "de_name": "Akstiletto Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeAkstiletto/PrimeAkstiletto",
+  "wfcd_name": "Akstiletto Prime"
+ },
+ {
+  "de_name": "Athodai Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeAthodai/PrimeAthodaiPistolWeapon",
+  "wfcd_name": "Athodai Prime"
+ },
+ {
+  "de_name": "Ballistica Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeBallistica/PrimeBallistica",
+  "wfcd_name": "Ballistica Prime"
+ },
+ {
+  "de_name": "Epitaph Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeEpitaph/PrimeEpitaphSidearmWeapon",
+  "wfcd_name": "Epitaph Prime"
+ },
+ {
+  "de_name": "Hystrix Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeHystrix/PrimeHystrixWeapon",
+  "wfcd_name": "Hystrix Prime"
+ },
+ {
+  "de_name": "Knell Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeKnell/PrimeKnellWeapon",
+  "wfcd_name": "Knell Prime"
+ },
+ {
+  "de_name": "Kompressa Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeKompressa/PrimeKompressa",
+  "wfcd_name": "Kompressa Prime"
+ },
+ {
+  "de_name": "Lex Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex",
+  "wfcd_name": "Lex Prime"
+ },
+ {
+  "de_name": "Magnus Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeMagnus/PrimeMagnusWeapon",
+  "wfcd_name": "Magnus Prime"
+ },
+ {
+  "de_name": "Pandero Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimePandero/PanderoPrimeWeapon",
+  "wfcd_name": "Pandero Prime"
+ },
+ {
+  "de_name": "Pyrana Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimePyrana/PrimePyranaPistol",
+  "wfcd_name": "Pyrana Prime"
+ },
+ {
+  "de_name": "Sicarus Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeSicarus/PrimeSicarusPistol",
+  "wfcd_name": "Sicarus Prime"
+ },
+ {
+  "de_name": "Akvasto Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/AkPrimeVasto/AkPrimeVastoPistol",
+  "wfcd_name": "Akvasto Prime"
+ },
+ {
+  "de_name": "Vasto Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol",
+  "wfcd_name": "Vasto Prime"
+ },
+ {
+  "de_name": "Velox Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeVelox/PrimeVeloxPistol",
+  "wfcd_name": "Velox Prime"
+ },
+ {
+  "de_name": "Zakti Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeZakti/PrimeZaktiPistol",
+  "wfcd_name": "Zakti Prime"
+ },
+ {
+  "de_name": "Zylok Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeZylok/ZylokPrimePistol",
+  "wfcd_name": "Zylok Prime"
+ },
+ {
+  "de_name": "Hystrix",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/QuillDartgun/QuillDartGunWeapon",
+  "wfcd_name": "Hystrix"
+ },
+ {
+  "de_name": "Akarius",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/SapientPistol/SapientPistol",
+  "wfcd_name": "Akarius"
+ },
+ {
+  "de_name": "Pyrana",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/SawnOffShotgun/TennoHandShotgun",
+  "wfcd_name": "Pyrana"
+ },
+ {
+  "de_name": "Aksomati",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/SomaSidearm/AkimboSomaPistols",
+  "wfcd_name": "Aksomati"
+ },
+ {
+  "de_name": "Azima",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/SundialGun/SundialPistol",
+  "wfcd_name": "Azima"
+ },
+ {
+  "de_name": "Akstiletto",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/TennoUzi/TennoUzi",
+  "wfcd_name": "Akstiletto"
+ },
+ {
+  "de_name": "Akjagara",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/TigrisRedeemerSetPistol/TnoBladedPistols",
+  "wfcd_name": "Akjagara"
+ },
+ {
+  "de_name": "Pandero",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/TnBardPistol/TnBardPistolGun",
+  "wfcd_name": "Pandero"
+ },
+ {
+  "de_name": "Zakti",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/TnGuandoPistol/TnGuandoPistolGun",
+  "wfcd_name": "Zakti"
+ },
+ {
+  "de_name": "Athodai",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/TnJetTurbine/TnJetTurbinePistolWeapon",
+  "wfcd_name": "Athodai"
+ },
+ {
+  "de_name": "Velox",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/TnOdaliskSmg/TnOdaliskSmgPistol",
+  "wfcd_name": "Velox"
+ },
+ {
+  "de_name": "Knell",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/TnPriestPistolScope/TnPriestPistolWeapon",
+  "wfcd_name": "Knell"
+ },
+ {
+  "de_name": "Epitaph",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon",
+  "wfcd_name": "Epitaph"
+ },
+ {
+  "de_name": "Kompressa",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/TnYareliPistol/TnYareliPistolWeapon",
+  "wfcd_name": "Kompressa"
+ },
+ {
+  "de_name": "Boltor",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/BoltoRifle",
+  "wfcd_name": "Boltor"
+ },
+ {
+  "de_name": "Braton Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/BratonPrime",
+  "wfcd_name": "Braton Prime"
+ },
+ {
+  "de_name": "Burston",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/BurstRifle",
+  "wfcd_name": "Burston"
+ },
+ {
+  "de_name": "Gorgon",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/HeavyRifle",
+  "wfcd_name": "Gorgon"
+ },
+ {
+  "de_name": "Latron Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/LatronPrime",
+  "wfcd_name": "Latron Prime"
+ },
+ {
+  "de_name": "Braton",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/Rifle",
+  "wfcd_name": "Braton"
+ },
+ {
+  "de_name": "Latron",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle",
+  "wfcd_name": "Latron"
+ },
+ {
+  "de_name": "Snipetron",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/SniperRifle",
+  "wfcd_name": "Snipetron"
+ },
+ {
+  "de_name": "MK1-Braton",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/StartingRifle",
+  "wfcd_name": "Mk1-Braton"
+ },
+ {
+  "de_name": "Soma",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/TennoAR",
+  "wfcd_name": "Soma"
+ },
+ {
+  "de_name": "Vectis",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle",
+  "wfcd_name": "Vectis"
+ },
+ {
+  "de_name": "Braton Vandal",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/VIPRifle",
+  "wfcd_name": "Braton Vandal"
+ },
+ {
+  "de_name": "Snipetron Vandal",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/VandalSniperRifle",
+  "wfcd_name": "Snipetron Vandal"
+ },
+ {
+  "de_name": "Sobek",
+  "unique_name": "/Lotus/Weapons/Tenno/Shotgun/DoubleBarrelShotgun",
+  "wfcd_name": "Sobek"
+ },
+ {
+  "de_name": "Boar",
+  "unique_name": "/Lotus/Weapons/Tenno/Shotgun/FullAutoShotgun",
+  "wfcd_name": "Boar"
+ },
+ {
+  "de_name": "Boar Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Shotgun/PrimeBoar",
+  "wfcd_name": "Boar Prime"
+ },
+ {
+  "de_name": "Hek",
+  "unique_name": "/Lotus/Weapons/Tenno/Shotgun/QuadShotgun",
+  "wfcd_name": "Hek"
+ },
+ {
+  "de_name": "Strun",
+  "unique_name": "/Lotus/Weapons/Tenno/Shotgun/Shotgun",
+  "wfcd_name": "Strun"
+ },
+ {
+  "de_name": "Strun Wraith",
+  "unique_name": "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal",
+  "wfcd_name": "Strun Wraith"
+ },
+ {
+  "de_name": "Fusilai",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/GlassKunai/GlassKunaiWeapon",
+  "wfcd_name": "Fusilai"
+ },
+ {
+  "de_name": "Kunai",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai",
+  "wfcd_name": "Kunai"
+ },
+ {
+  "de_name": "Spira",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/LiDagger/LiDagger",
+  "wfcd_name": "Spira"
+ },
+ {
+  "de_name": "Spira Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/PrimeLiDagger/PrimeLiDagger",
+  "wfcd_name": "Spira Prime"
+ },
+ {
+  "de_name": "Hikou Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/PrimeThrowingStar/PrimeHikou",
+  "wfcd_name": "Hikou Prime"
+ },
+ {
+  "de_name": "Despair",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/StalkerKunai",
+  "wfcd_name": "Despair"
+ },
+ {
+  "de_name": "Castanas",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/StickyBomb/StickyBombs",
+  "wfcd_name": "Castanas"
+ },
+ {
+  "de_name": "Hikou",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/TennoStars",
+  "wfcd_name": "Hikou"
+ },
+ {
+  "de_name": "Cantare",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/TnChoirframeKunai/TnChoirframeKunai",
+  "wfcd_name": "Cantare"
+ },
+ {
+  "de_name": "Scyotid",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/TnOraxiaFlechette/TnOraxiaFlechette",
+  "wfcd_name": "Scyotid"
+ },
+ {
+  "de_name": "Talons",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/U18ThrowingKnives/U18throwingknives",
+  "wfcd_name": "Talons"
+ },
+ {
+  "de_name": "Felarx",
+  "unique_name": "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun",
+  "wfcd_name": "Felarx"
+ },
+ {
+  "de_name": "Phenmor",
+  "unique_name": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle",
+  "wfcd_name": "Phenmor"
+ },
+ {
+  "de_name": "Laetum",
+  "unique_name": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol",
+  "wfcd_name": "Laetum"
+ },
+ {
+  "de_name": "Onos",
+  "unique_name": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon",
+  "wfcd_name": "Onos"
+ },
+ {
+  "de_name": "Sepulcrum",
+  "unique_name": "/Lotus/Weapons/Thanotech/ThanoPistol/ThanotechPistol",
+  "wfcd_name": "Sepulcrum"
+ },
+ {
+  "de_name": "Trumna",
+  "unique_name": "/Lotus/Weapons/Thanotech/ThanoRifle/ThanotechRifle",
+  "wfcd_name": "Trumna"
+ },
+ {
+  "de_name": "Prisma Grakata",
+  "unique_name": "/Lotus/Weapons/VoidTrader/PrismaGrakata",
+  "wfcd_name": "Prisma Grakata"
+ },
+ {
+  "de_name": "Mara Detron",
+  "unique_name": "/Lotus/Weapons/VoidTrader/VTDetron",
+  "wfcd_name": "Mara Detron"
+ }
+]

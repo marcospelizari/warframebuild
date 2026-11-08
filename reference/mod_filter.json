@@ -1,0 +1,25 @@
+{
+  "about": "Gun mods are chosen by uniqueName, never by name (G11/G31). A rule denies a mod when its uniqueName contains `path_contains`, unless its name starts with `unless_name_starts`. `allow` lists uniqueNames kept regardless. Refresh fails on a gun-mod name still duplicated after filtering.",
+  "rules": [
+    {
+      "id": "beginner",
+      "path_contains": "/Beginner/",
+      "reason": "low-rank starter copy of a normal mod",
+      "verified": "Update 44.0"
+    },
+    {
+      "id": "intermediate",
+      "path_contains": "/Intermediate/",
+      "reason": "mid-rank copy of a normal mod",
+      "verified": "Update 44.0"
+    },
+    {
+      "id": "expert",
+      "path_contains": "/Expert/",
+      "unless_name_starts": "Primed",
+      "reason": "non-Primed /Expert/ copy with higher values; not in the game or on the wiki (Marcos, 2026-11-07)",
+      "verified": "Update 44.0"
+    }
+  ],
+  "allow": []
+}
