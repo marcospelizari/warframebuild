@@ -5,7 +5,7 @@
       "name": "wfb serve",
       "type": "debugpy",
       "request": "launch",
-      "module": "app.data.cli",
+      "module": "app.cli",
       "args": ["serve"],
       "python": "${workspaceFolder}/.venv/bin/python",
       "cwd": "${workspaceFolder}",

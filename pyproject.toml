@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [project.scripts]
-wfb = "app.data.cli:main"
+wfb = "app.cli:main"
 
 [dependency-groups]
 dev = [
