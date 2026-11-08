@@ -14,7 +14,30 @@ The damage math follows the WARFRAME Wiki pages
 [Damage/Calculation](https://wiki.warframe.com/w/Damage/Calculation) and
 [Calculating Bonuses](https://wiki.warframe.com/w/Calculating_Bonuses).
 
-Status: planning done, implementation starting. How it works: [ARCHITECTURE.md](ARCHITECTURE.md).
+Status: early development (scaffold). How it works: [ARCHITECTURE.md](ARCHITECTURE.md).
+
+## Development
+
+Needs [uv](https://docs.astral.sh/uv/) (Python 3.12 is fetched by uv) and Node.js 24.
+
+```sh
+uv sync                      # Python environment in .venv
+cd web && npm ci && npm run build && cd ..
+uv run wfb serve             # http://127.0.0.1:8000
+```
+
+Checks (the same as CI):
+
+```sh
+uv run ruff check . && uv run ruff format --check . && uv run mypy && uv run pytest
+cd web && npm run lint && npm run typecheck && npm test
+```
+
+After an API change, regenerate the frontend types:
+
+```sh
+uv run wfb openapi > web/openapi.json && (cd web && npm run gen:types)
+```
 
 ## Repository
 

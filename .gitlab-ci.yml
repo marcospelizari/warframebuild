@@ -1,0 +1,140 @@
+# CI gates: any failing job blocks the merge.
+# Images are pinned by digest; Renovate keeps tags and digests current.
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+stages: [check, build]
+
+variables:
+  UV_VERSION: "0.13.7"
+  UV_CACHE_DIR: "$CI_PROJECT_DIR/.cache/uv"
+  npm_config_cache: "$CI_PROJECT_DIR/.cache/npm"
+
+.not-scheduled:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+      when: never
+    - when: on_success
+
+.python:
+  extends: .not-scheduled
+  image: python:3.12-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df
+  cache:
+    key: { files: [uv.lock] }
+    paths: [.cache/uv]
+  before_script:
+    - pip install --no-cache-dir "uv==$UV_VERSION"
+    - uv sync --locked
+
+.node:
+  extends: .not-scheduled
+  image: node:24.21.0-bookworm-slim@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20
+  cache:
+    key: { files: [web/package-lock.json] }
+    paths: [.cache/npm]
+  before_script:
+    - cd web
+    - npm ci
+
+ruff:
+  extends: .python
+  stage: check
+  script:
+    - uv run ruff check .
+    - uv run ruff format --check .
+
+mypy:
+  extends: .python
+  stage: check
+  script:
+    - uv run mypy
+
+pytest:
+  extends: .python
+  stage: check
+  script:
+    - uv run pytest
+
+pip-audit:
+  extends: .python
+  stage: check
+  script:
+    - uv export --frozen --no-dev --no-emit-project -o requirements.txt
+    - uv run pip-audit --strict --require-hashes --disable-pip -r requirements.txt
+
+openapi:
+  extends: .python
+  stage: check
+  script:
+    - uv run wfb openapi > web/openapi.json
+  artifacts:
+    paths: [web/openapi.json]
+    expire_in: 1 day
+
+eslint:
+  extends: .node
+  stage: check
+  script:
+    - npm run lint
+
+typecheck:
+  extends: .node
+  stage: check
+  script:
+    - npm run typecheck
+
+vitest:
+  extends: .node
+  stage: check
+  script:
+    - npm test
+
+npm-audit:
+  extends: .node
+  stage: check
+  script:
+    - npm audit --omit=dev
+
+gitleaks:
+  extends: .not-scheduled
+  stage: check
+  image:
+    name: zricethezav/gitleaks:v8.30.1@sha256:c00b6bd0aeb3071cbcb79009cb16a60dd9e0a7c60e2be9ab65d25e6bc8abbb7f
+    entrypoint: [""]
+  variables:
+    GIT_DEPTH: "0"
+  script:
+    - gitleaks git --redact --verbose .
+
+# The committed web/src/api/types.ts must match the API schema.
+types-fresh:
+  extends: .node
+  stage: build
+  needs: [openapi]
+  script:
+    - npm run gen:types
+    - git diff --exit-code -- src/api/types.ts
+
+vite-build:
+  extends: .node
+  stage: build
+  script:
+    - npm run build
+
+# Renovate: weekly pipeline schedule with RENOVATE_TOKEN set (masked, protected).
+renovate:
+  stage: check
+  image: renovate/renovate:44.143.0@sha256:dbf6d872ec42127773239c318b999864fefc732ceb2174abc710eb7277ceead4
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule" && $RENOVATE_TOKEN
+  variables:
+    RENOVATE_PLATFORM: gitlab
+    RENOVATE_ENDPOINT: "$CI_API_V4_URL"
+    RENOVATE_REPOSITORIES: "$CI_PROJECT_PATH"
+    LOG_LEVEL: info
+  script:
+    - renovate

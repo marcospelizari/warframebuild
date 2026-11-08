@@ -1,5 +1,7 @@
 # Local caches: raw downloads, game images, optimizer results
 cache/
+.cache/
+requirements.txt
 
 # Python
 .venv/
@@ -12,6 +14,7 @@ __pycache__/
 # Frontend
 web/node_modules/
 web/dist/
+web/openapi.json
 
 # Editors / OS
 .vscode/*
