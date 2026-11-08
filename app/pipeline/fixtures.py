@@ -1,4 +1,4 @@
-"""`wfb fixtures`: trim cache/raw/ DE + WFCD data to a few entries for tests/fixtures/raw/.
+"""`wfb fixtures`: trim cache/raw/ DE, WFCD and export-plus data for tests/fixtures/raw/.
 
 Wiki pages are never copied: saved copies stay private (G23); tests create stubs.
 """
@@ -8,7 +8,7 @@ import shutil
 from pathlib import Path
 from typing import Any
 
-from app.pipeline.sources import load_json
+from app.pipeline.sources import export_plus, load_json
 
 WEAPONS = (
     "Braton Prime",  # Incarnon, AoE attack
@@ -77,6 +77,7 @@ def write(raw_dir: Path, out_dir: Path) -> None:
 def _write(raw_dir: Path, out_dir: Path) -> None:
     (out_dir / "de").mkdir(parents=True)
     (out_dir / "wfcd").mkdir()
+    (out_dir / export_plus.DIR).mkdir()
 
     weapons = load_json(raw_dir / "de/ExportWeapons_en.json")
     assert isinstance(weapons, dict)
@@ -119,6 +120,12 @@ def _write(raw_dir: Path, out_dir: Path) -> None:
     wfcd_arcanes = load_json(raw_dir / "wfcd/Arcanes.json")
     assert isinstance(wfcd_arcanes, list)
     _save(out_dir / "wfcd/Arcanes.json", _pick(wfcd_arcanes, ARCANE_NAMES))
+
+    mod_ids = {m["uniqueName"] for m in mods}
+    for name, keep in ((export_plus.WEAPONS, ids), (export_plus.UPGRADES, mod_ids)):
+        data = load_json(raw_dir / export_plus.DIR / name)
+        assert isinstance(data, dict)
+        _save(out_dir / export_plus.DIR / name, {u: e for u, e in data.items() if u in keep})
 
 
 def _pick(items: list[dict[str, Any]], names: tuple[str, ...]) -> list[dict[str, Any]]:

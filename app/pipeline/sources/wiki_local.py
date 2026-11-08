@@ -3,12 +3,11 @@
 The page list lives in reference/wiki_pages.json (stem, canonical title, what it feeds).
 """
 
-import datetime
 import json
 from dataclasses import dataclass
 from pathlib import Path
 
-from app.pipeline.sources import SourceFile, sha256_16
+from app.pipeline.sources import SourceFile, saved_date, sha256_16
 
 WIKI_URL = "https://wiki.warframe.com/w"
 IMPACT_ORDER = {"high": 0, "medium": 1, "low": 2}
@@ -65,7 +64,3 @@ def scan(raw_dir: Path, reference_dir: Path) -> list[SourceFile]:
             SourceFile(f"wiki/{path.name}", url, saved_date(path), sha256_16(path.read_bytes()))
         )
     return files
-
-
-def saved_date(path: Path) -> str:
-    return datetime.date.fromtimestamp(path.stat().st_mtime).isoformat()

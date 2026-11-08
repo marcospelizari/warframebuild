@@ -55,10 +55,12 @@ is "best found". The same data produces the same builds on any machine.
 |--------|----------|
 | [Warframe Public Export](https://content.warframe.com/PublicExport) (Digital Extremes) | Weapons, mods, arcanes, sentinels, item images |
 | [WFCD warframe-items](https://github.com/WFCD/warframe-items) | Weapon polarities, weapon class, attack modes, falloff, arcane slots |
+| [warframe-public-export-plus](https://github.com/calamity-inc/warframe-public-export-plus) | Mod and weapon compatibility tags, starter-mod flag (fields the Public Export lacks) |
 | [WARFRAME Wiki](https://wiki.warframe.com) | Incarnon evolutions, faction damage modifiers, enemy stats, status rules, Archon Shards, riven ranges |
 
 - Downloads are cached locally and never committed. Game images are never stored in the repository.
-- Wiki pages are not fetched automatically. They are saved by hand and parsed locally.
+- Wiki pages and export-plus files are not fetched automatically. They are saved by hand and
+  parsed locally.
 - `wfb refresh` turns the downloads into validated, versioned data in `gamedata/`. `wfb check`
   reports which sources changed after a game update.
 - The site never contacts these sources at runtime.
@@ -112,7 +114,7 @@ comes back.
 ## Licences
 
 Code: GNU AGPL-3.0. Data: Digital Extremes content under the Warframe Content Policy (non-commercial);
-WFCD-derived data under MIT; WARFRAME Wiki-derived data, and the builds computed from it, under
+WFCD- and export-plus-derived data under MIT; WARFRAME Wiki-derived data, and the builds computed from it, under
 CC BY-NC-SA 3.0. See [NOTICE](NOTICE).
 
 This is a free, non-commercial fan project, not affiliated with Digital Extremes.

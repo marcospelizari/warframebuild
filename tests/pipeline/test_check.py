@@ -206,7 +206,7 @@ def test_unreadable_previous_dataset_is_reported(paths: Paths) -> None:
     run(paths, offline=True, fetch_images=False)
     (paths.gamedata / "meta.json").write_text('{"schema_version": 1}')
     previous, error = load_previous(paths.gamedata)
-    assert previous is None and error and "schema version 1, this code reads 5" in error
+    assert previous is None and error and "schema version 1, this code reads 6" in error
     report = run(paths, offline=True, fetch_images=False)
     text = "\n".join(report.lines())
     assert "previous dataset unreadable" in text
@@ -231,6 +231,13 @@ def test_wiki_lines_sorted_by_impact(paths: Paths) -> None:
     lines = [ln for ln in check.wiki_lines(paths.raw, paths.reference) if ln.startswith("  [")]
     impacts = [ln.split("]")[0].strip(" [") for ln in lines]
     assert impacts == sorted(impacts, key=["high", "medium", "low"].index)
+
+
+def test_export_plus_lines_list_each_saved_file(paths: Paths) -> None:
+    (paths.raw / "export-plus/ExportWeapons.json").unlink()
+    lines = check.export_plus_lines(paths.raw)
+    assert any("ExportUpgrades.json (saved 20" in ln for ln in lines)
+    assert any("ExportWeapons.json (saved MISSING)" in ln for ln in lines)
 
 
 def test_unreadable_dataset_source_line_says_so(paths: Paths) -> None:

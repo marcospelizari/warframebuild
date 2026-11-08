@@ -67,6 +67,9 @@ class Weapon(Model):
     exilus_polarity: str | None
     attacks: list[Attack]
     texture_location: str | None
+    # export-plus compatibilityTags (e.g. PROJECTILE, AOE), stored as given; their meaning
+    # for mod eligibility is decided in step 8. None = weapon not in the saved export-plus.
+    compatibility_tags: list[str] | None
 
 
 class Effects(Model):
@@ -102,6 +105,10 @@ class Mod(Model):
     description: str  # DE rules text not in the stats ("Fire Rate cannot be modified."), or ""
     level_stats: list[list[str]]  # per rank; cleaned free text
     effects: Effects  # max rank
+    # export-plus tags a weapon must / must not carry (Sinister Reach needs BEAM), stored as
+    # given for step 8. None = mod not in the saved export-plus.
+    compatibility_tags: list[str] | None
+    incompatibility_tags: list[str] | None
 
 
 class Arcane(Model):
@@ -128,7 +135,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[5] = 5
+    schema_version: Literal[6] = 6
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

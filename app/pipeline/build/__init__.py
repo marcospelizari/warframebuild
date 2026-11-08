@@ -8,7 +8,7 @@ from app.pipeline.build import arcanes, mods, weapons
 from app.pipeline.build.effects import Overrides
 from app.pipeline.build.inputs import as_list, records, reference
 from app.pipeline.errors import RefreshError
-from app.pipeline.sources import load_json
+from app.pipeline.sources import export_plus, load_json
 
 __all__ = ["Dataset", "build"]
 
@@ -32,11 +32,13 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         *as_list(load_json(raw_dir / "wfcd/Secondary.json")),
     ]
     wfcd_arcanes = as_list(load_json(raw_dir / "wfcd/Arcanes.json"))
+    plus = export_plus.load(raw_dir)
     gun_list, excluded, joins = weapons.build(
         records(load_json(de / "ExportWeapons_en.json"), "ExportWeapons"),
         wfcd,
         records(load_json(de / "ExportManifest.json"), "Manifest"),
         reference(reference_dir / "fire_overrides.json")["weapons"],
+        plus.weapon_tags,
     )
     overrides = Overrides(reference(reference_dir / "overrides.json"))
     mod_list, sets, denied = mods.build(
@@ -45,6 +47,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         overrides,
         reference(reference_dir / "mod_families.json"),
         reference(reference_dir / "exilus.json"),
+        plus,
     )
     arcane_list = arcanes.build(
         records(load_json(de / "ExportRelicArcane_en.json"), "ExportRelicArcane"),

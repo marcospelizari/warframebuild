@@ -1,0 +1,2396 @@
+{
+ "/Lotus/Upgrades/Mods/Pistol/Beginner/WeaponCritChanceModBeginner": {
+  "baseDrain": 2,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+  "compatName": "Pistol",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Pistol/PistolCritChanceMod.png",
+  "introducedAt": 1405676692,
+  "isStarter": true,
+  "name": "/Lotus/Language/Items/PistolModCritChance",
+  "polarity": "AP_ATTACK",
+  "rarity": "COMMON",
+  "tradable": true,
+  "type": "SECONDARY"
+ },
+ "/Lotus/Upgrades/Mods/Pistol/Beginner/WeaponDamageAmountModBeginner": {
+  "baseDrain": 2,
+  "codexSecret": true,
+  "compat": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+  "compatName": "Pistol",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageAmountMod.png",
+  "introducedAt": 1405676692,
+  "isStarter": true,
+  "name": "/Lotus/Language/Items/PistolModDamageAmount",
+  "polarity": "AP_ATTACK",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "SECONDARY"
+ },
+ "/Lotus/Upgrades/Mods/Pistol/Beginner/WeaponFireIterationsModBeginner": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+  "compatName": "Pistol",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Pistol/PistolFireIterationsMod.png",
+  "introducedAt": 1405676692,
+  "isStarter": true,
+  "name": "/Lotus/Language/Items/PistolModFireIterations",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "SECONDARY"
+ },
+ "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedCritChanceFireRatePistol": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+  "compatName": "Pistol",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Pistol/CorruptedCritChanceFireRatePistolMod.png",
+  "introducedAt": 1414155128,
+  "name": "/Lotus/Language/Items/CorruptedCritChanceFireRatePistolMod",
+  "polarity": "AP_TACTIC",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "SECONDARY"
+ },
+ "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponFireIterationsModExpert": {
+  "baseDrain": 6,
+  "codexSecret": true,
+  "compat": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+  "compatName": "Pistol",
+  "fusionLimit": 10,
+  "icon": "/Lotus/Interface/Cards/Images/Pistol/PistolFireIterationsMod.png",
+  "isFrivolous": true,
+  "name": "/Lotus/Language/Items/PistolModFireIterations",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": false,
+  "type": "SECONDARY"
+ },
+ "/Lotus/Upgrades/Mods/Pistol/Intermediate/WeaponDamageAmountModIntermediate": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+  "compatName": "Pistol",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageAmountMod.png",
+  "isFrivolous": true,
+  "name": "/Lotus/Language/Items/PistolModDamageAmount",
+  "polarity": "AP_ATTACK",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "SECONDARY"
+ },
+ "/Lotus/Upgrades/Mods/Pistol/WeaponCritChanceMod": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+  "compatName": "Pistol",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Pistol/PistolCritChanceMod.png",
+  "introducedAt": 1351177200,
+  "name": "/Lotus/Language/Items/PistolModCritChance",
+  "polarity": "AP_ATTACK",
+  "rarity": "COMMON",
+  "tradable": true,
+  "type": "SECONDARY"
+ },
+ "/Lotus/Upgrades/Mods/Pistol/WeaponDamageAmountMod": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+  "compatName": "Pistol",
+  "fusionLimit": 10,
+  "icon": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageAmountMod.png",
+  "introducedAt": 1351177200,
+  "name": "/Lotus/Language/Items/PistolModDamageAmount",
+  "polarity": "AP_ATTACK",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "SECONDARY"
+ },
+ "/Lotus/Upgrades/Mods/Pistol/WeaponFireIterationsMod": {
+  "baseDrain": 6,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+  "compatName": "Pistol",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Pistol/PistolFireIterationsMod.png",
+  "introducedAt": 1351177200,
+  "name": "/Lotus/Language/Items/PistolModFireIterations",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "SECONDARY"
+ },
+ "/Lotus/Upgrades/Mods/PvPMods/Rifle/DamageBiasImpactRifleMod": {
+  "baseDrain": 2,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/PvP/Rifle/DamageBiasImpactRifleMod.png",
+  "introducedAt": 1438355365,
+  "name": "/Lotus/Language/Mods/DamageBiasImpactRifleMod",
+  "polarity": "AP_ATTACK",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/PvPMods/Rifle/MoreDamageonTripleTapRifleMod": {
+  "baseDrain": 10,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle",
+  "compatName": "Latron",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/PvP/Rifle/LatronThree.png",
+  "incompatibilityTags": [
+   "SINGLESHOT"
+  ],
+  "introducedAt": 1445464703,
+  "name": "/Lotus/Language/Mods/MoreDamageonTripleTapRifleMod",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Randomized/LotusRifleRandomModRare": {
+  "availableChallenges": [
+   {
+    "complicationChance": 1,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Undetected",
+      "fullName": "/Lotus/Types/Challenges/Complications/Undetected",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Sliding",
+      "fullName": "/Lotus/Types/Challenges/Complications/Sliding",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 0.5,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_AimGliding",
+      "fullName": "/Lotus/Types/Challenges/Complications/AimGliding",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDamageTaken",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDamageTaken",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnAlarmRaised",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnAlarmRaised",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDisrupt",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDisrupt",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnProc",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnProc",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnAllyDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnAllyDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedHealthDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedHealthDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedShieldDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedShieldDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearHealthRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearHealthRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearShieldRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearShieldRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearAmmoRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearAmmoRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearEnergyRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearEnergyRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 5,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnNewDay",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnNewDay",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     50,
+     70
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedKill_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedKill",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedKill_Single_Description"
+   },
+   {
+    "complicationChance": 1,
+    "complications": [
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Undetected",
+      "fullName": "/Lotus/Types/Challenges/Complications/Undetected",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Sliding",
+      "fullName": "/Lotus/Types/Challenges/Complications/Sliding",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_AimGliding",
+      "fullName": "/Lotus/Types/Challenges/Complications/AimGliding",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDamageTaken",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDamageTaken",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 3,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnAlarmRaised",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnAlarmRaised",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnProc",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnProc",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearEnergyRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearEnergyRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 4,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnNewDay",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnNewDay",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     15,
+     20
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedHeadshot_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedHeadshot",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedHeadshot_Single_Description"
+   },
+   {
+    "complicationChance": 0.4,
+    "complications": [
+     {
+      "countMultiplier": 0.5,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Sliding",
+      "fullName": "/Lotus/Types/Challenges/Complications/Sliding",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 0.25,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDamageTaken",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDamageTaken",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnMissionFailure",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnMissionFailure",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnProc",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnProc",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnAllyDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnAllyDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Invisible",
+      "fullName": "/Lotus/Types/Challenges/Complications/Invisible",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedHealthDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedHealthDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedShieldDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedShieldDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearHealthRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearHealthRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearEnergyRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearEnergyRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnNewDay",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnNewDay",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     4,
+     6
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedKillSentients_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedKillSentients",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedKillSentients_Single_Description"
+   },
+   {
+    "complicationChance": 1,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDamageTaken",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDamageTaken",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 4,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnMissionFailure",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnMissionFailure",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnAlarmRaised",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnAlarmRaised",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnProc",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnProc",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearHealthRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearHealthRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 3,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnNewDay",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnNewDay",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     15,
+     25
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedFinisherKill_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedFinisherKill",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedFinisherKill_Single_Description"
+   },
+   {
+    "complicationChance": 1,
+    "complications": [
+     {
+      "countMultiplier": 0.5,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Undetected",
+      "fullName": "/Lotus/Types/Challenges/Complications/Undetected",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDamageTaken",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDamageTaken",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 3,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnMissionFailure",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnMissionFailure",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnAlarmRaised",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnAlarmRaised",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnProc",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnProc",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 2,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnAllyDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnAllyDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Invisible",
+      "fullName": "/Lotus/Types/Challenges/Complications/Invisible",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedHealthDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedHealthDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedShieldDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedShieldDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 4,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnNewDay",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnNewDay",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     10,
+     16
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedStyleKill_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedStyleKill",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedStyleKill_Single_Description"
+   },
+   {
+    "complicationChance": 1,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     1,
+     1
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_HighExterminationUndetected_Description",
+    "fullName": "/Lotus/Types/Challenges/HighExterminationUndetected",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_HighExterminationUndetected_Single_Description"
+   },
+   {
+    "complicationChance": 0.7,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedHealthDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedHealthDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedShieldDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedShieldDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearEnergyRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearEnergyRestores",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     1,
+     1
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_HighPerfectDefense_Description",
+    "fullName": "/Lotus/Types/Challenges/HighPerfectDefense",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_HighPerfectDefense_Single_Description"
+   },
+   {
+    "complicationChance": 0.5,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedHealthDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedHealthDebuffKey",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedShieldDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedShieldDebuffKey",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearEnergyRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearEnergyRestores",
+      "overrideTag": "/Lotus/Language/Challenges/Challenge_HighSurvivalPacifist_ResetOnGearEnergyRestores",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearHealthRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearHealthRestores",
+      "overrideTag": "/Lotus/Language/Challenges/Challenge_HighSurvivalPacifist_ResetOnGearHealthRestores",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDowned",
+      "overrideTag": "/Lotus/Language/Challenges/Challenge_HighSurvivalPacifist_ResetOnDowned",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     1,
+     1
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_HighSurvivalPacifist_Description",
+    "fullName": "/Lotus/Types/Challenges/HighSurvivalPacifist",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_HighSurvivalPacifist_Single_Description"
+   },
+   {
+    "complicationChance": 0.5,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDowned",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     1,
+     1
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_HighSoloInterceptionHobbled_Description",
+    "fullName": "/Lotus/Types/Challenges/HighSoloInterceptionHobbled",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_HighSoloInterceptionHobbled_Single_Description"
+   },
+   {
+    "complicationChance": 1,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     8,
+     12
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedFindRareMedallions_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedFindRareMedallions",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedFindRareMedallions_Single_Description"
+   },
+   {
+    "complicationChance": 1,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_PetPresent",
+      "fullName": "/Lotus/Types/Challenges/Complications/PetPresent",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SentinelPresent",
+      "fullName": "/Lotus/Types/Challenges/Complications/SentinelPresent",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnAlarmRaised",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnAlarmRaised",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 0.5,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDamageTaken",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDamageTaken",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDisrupt",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDisrupt",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnMissionFailure",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnMissionFailure",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnAllyDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnAllyDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedHealthDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedHealthDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedShieldDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedShieldDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearCipher",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearCipher",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearAirSupport",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearAirSupport",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearHealthRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearHealthRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearShieldRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearShieldRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearAmmoRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearAmmoRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnGearEnergyRestores",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnGearEnergyRestores",
+      "weight": 0.15
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnNewDay",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnNewDay",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     2,
+     4
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedFindCaches_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedFindCaches",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedFindCaches_Single_Description"
+   },
+   {
+    "complicationChance": 0.2,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 0.25
+     }
+    ],
+    "countRange": [
+     3,
+     3
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedHeadshotGlide_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedHeadshotGlide",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedHeadshotGlide_Single_Description"
+   },
+   {
+    "complicationChance": 0.25,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnAlarmRaised",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnAlarmRaised",
+      "overrideTag": "/Lotus/Language/Challenges/Challenge_RandomizedWallClingKillstreak_ResetOnAlarmRaised",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDamageTaken",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDamageTaken",
+      "overrideTag": "/Lotus/Language/Challenges/Challenge_RandomizedWallClingKillstreak_ResetOnDamageTaken",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Invisible",
+      "fullName": "/Lotus/Types/Challenges/Complications/Invisible",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 0.25
+     }
+    ],
+    "countRange": [
+     10,
+     20
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedWallClingKillstreak_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedWallClingKillstreak",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedWallClingKillstreak_Single_Description"
+   },
+   {
+    "complicationChance": 1,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SentinelPresent",
+      "fullName": "/Lotus/Types/Challenges/Complications/SentinelPresent",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_PetPresent",
+      "fullName": "/Lotus/Types/Challenges/Complications/PetPresent",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedHealthDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedHealthDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedShieldDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedShieldDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 0.25
+     }
+    ],
+    "countRange": [
+     1,
+     1
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_SustainMeleeComboThree_Description",
+    "fullName": "/Lotus/Types/Challenges/SustainMeleeComboThree",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_SustainMeleeComboThree_Single_Description"
+   },
+   {
+    "complicationChance": 0.5,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDamageTaken",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDamageTaken",
+      "overrideTag": "/Lotus/Language/Challenges/Challenge_LimitedSynthesis_ResetOnDamageTaken",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     1,
+     1
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_LimitedSynthesis_Description",
+    "fullName": "/Lotus/Types/Challenges/LimitedSynthesis",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_LimitedSynthesis_Single_Description"
+   },
+   {
+    "complicationChance": 0.5,
+    "complications": [
+     {
+      "countMultiplier": 0.7,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_AimGliding",
+      "fullName": "/Lotus/Types/Challenges/Complications/AimGliding",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 0.8,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Sliding",
+      "fullName": "/Lotus/Types/Challenges/Complications/Sliding",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnNewDay",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnNewDay",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     3,
+     6
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedKillFallingPilots_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedKillFallingPilots",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedKillFallingPilots_Single_Description"
+   },
+   {
+    "complicationChance": 0.5,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Invisible",
+      "fullName": "/Lotus/Types/Challenges/Complications/Invisible",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Undetected",
+      "fullName": "/Lotus/Types/Challenges/Complications/Undetected",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 0.8,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnAlarmRaised",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnAlarmRaised",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 0.8,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnNewDay",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnNewDay",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     4,
+     8
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedHeadshotUnawareBallistas_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedHeadshotUnawareBallistas",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedHeadshotUnawareBallistas_Single_Description"
+   },
+   {
+    "complicationChance": 0.5,
+    "complications": [
+     {
+      "countMultiplier": 0.8,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_AimGliding",
+      "fullName": "/Lotus/Types/Challenges/Complications/AimGliding",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 0.6,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnProc",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnProc",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 0.6,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnNewDay",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnNewDay",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     5,
+     8
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedSkiffArcher_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedSkiffArcher",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedSkiffArcher_Single_Description"
+   },
+   {
+    "complicationChance": 0.5,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Invisible",
+      "fullName": "/Lotus/Types/Challenges/Complications/Invisible",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Undetected",
+      "fullName": "/Lotus/Types/Challenges/Complications/Undetected",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 0.9,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnNewDay",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnNewDay",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     8,
+     12
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedLongRangeSniper_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedLongRangeSniper",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedLongRangeSniper_Single_Description"
+   },
+   {
+    "complicationChance": 0.5,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDisrupt",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDisrupt",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnProc",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnProc",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     6,
+     9
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedFlyingHeadshotSeries_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedFlyingHeadshotSeries"
+   },
+   {
+    "complicationChance": 0.7,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedHealthDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedHealthDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedShieldDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedShieldDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnProc",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnProc",
+      "overrideTag": "/Lotus/Language/Challenges/Challenge_RandomizedAntiAntiAir_ResetOnProc",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     3,
+     5
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedAntiAntiAir_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedAntiAntiAir"
+   },
+   {
+    "complicationChance": 0.5,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Undetected",
+      "fullName": "/Lotus/Types/Challenges/Complications/Undetected",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDowned",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDowned",
+      "overrideTag": "/Lotus/Language/Challenges/Challenge_RandomizedFisherman_ResetOnDowned",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "overrideTag": "/Lotus/Language/Challenges/Challenge_RandomizedFisherman_SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 0.8,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnDamageTaken",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnDamageTaken",
+      "overrideTag": "/Lotus/Language/Challenges/Challenge_RandomizedFisherman_ResetOnDamageTaken",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     4,
+     6
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedFisherman_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedFisherman",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_RandomizedFisherman_Single_Description"
+   },
+   {
+    "complicationChance": 0.5,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_AimGliding",
+      "fullName": "/Lotus/Types/Challenges/Complications/AimGliding",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Invisible",
+      "fullName": "/Lotus/Types/Challenges/Complications/Invisible",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Sliding",
+      "fullName": "/Lotus/Types/Challenges/Complications/Sliding",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_ResetOnNewDay",
+      "fullName": "/Lotus/Types/Challenges/Complications/ResetOnNewDay",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     12,
+     20
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_RandomizedKillPassengers_Description",
+    "fullName": "/Lotus/Types/Challenges/RandomizedKillPassengers"
+   },
+   {
+    "complicationChance": 0.5,
+    "complications": [
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedDamageDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedDamageDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedHealthDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedHealthDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedShieldDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedShieldDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_EquippedSpeedDebuffKey",
+      "fullName": "/Lotus/Types/Challenges/Complications/EquippedSpeedDebuffKey",
+      "weight": 0.25
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_SoloPlayer",
+      "fullName": "/Lotus/Types/Challenges/Complications/SoloPlayer",
+      "weight": 1
+     },
+     {
+      "countMultiplier": 1,
+      "description": "/Lotus/Language/Challenges/Challenge_Complication_Undetected",
+      "fullName": "/Lotus/Types/Challenges/Complications/Undetected",
+      "weight": 1
+     }
+    ],
+    "countRange": [
+     1,
+     1
+    ],
+    "description": "/Lotus/Language/Challenges/Challenge_PlainsTimedVariety_Description",
+    "fullName": "/Lotus/Types/Challenges/PlainsTimedVariety",
+    "singleDescription": "/Lotus/Language/Challenges/Challenge_PlainsTimedVariety_Single_Description"
+   }
+  ],
+  "baseDrain": 10,
+  "codexSecret": true,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatibleItems": [
+   "/Lotus/Weapons/Cephalon/Primary/CephPrimary/CephPrimary",
+   "/Lotus/Weapons/ClanTech/Bio/BioWeapon",
+   "/Lotus/Weapons/ClanTech/Chemical/FlameThrower",
+   "/Lotus/Weapons/ClanTech/Chemical/RocketLauncher",
+   "/Lotus/Weapons/ClanTech/Energy/CrpHeavyRifle",
+   "/Lotus/Weapons/ClanTech/Energy/CrpLaserRifle",
+   "/Lotus/Weapons/ClanTech/Energy/EnergyRifle",
+   "/Lotus/Weapons/ClanTech/Energy/Railgun",
+   "/Lotus/Weapons/Corpus/Bow/Longbow/CrpBow",
+   "/Lotus/Weapons/Corpus/LongGuns/ChainLightningGun/ChainLightningRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/CorpusUMP",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpArSniper/CrpArSniperRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/CrpBFG",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpBriefcaseLauncher/CrpBriefcaseLauncher",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/CrpFreezeRayRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpRubanRifle/CrpRubanRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpSentAmlgSniper/CrpSentAmlgSniper",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpSentExperimentRifle/CrpSentExperimentRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpShockRifle/CrpShockRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/GrenadeLauncher/GrenadeLauncher",
+   "/Lotus/Weapons/Corpus/LongGuns/Spears/Railgun/CorpusRailgun",
+   "/Lotus/Weapons/Grineer/Bows/GrnBow/GrnBowWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/BurstRifle/GrnBurstRifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/GrnAssaultRifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/GLARifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerM16Homage/GrineerM16Rifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/GrnSniperRifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnCannon/GrnCannonWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnFlameSpear/GrnFlameSpear",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnFourBarrelRifle/GrnFourBarrelRifleWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnGorgSniperRifle/GrnGorgSniperRifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnGrenadeLauncher/GrnGrenadeLauncher",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnHarpoonGun/GrnHarpoonGun",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnKuvaLichRifle/GrnKuvaLichRifleWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnOrokinRifle/GrnOrokinRifleWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/LaserAimRifle/LaserAimRifle",
+   "/Lotus/Weapons/Infested/Bow/InfCernosBow/InfCernos",
+   "/Lotus/Weapons/Infested/LongGuns/InfCrpShockSwarm/InfCrpShockSwarmRifle",
+   "/Lotus/Weapons/Infested/LongGuns/InfSniperRifle/InfSniperRifle",
+   "/Lotus/Weapons/Infested/LongGuns/InfWFAccompanyingPri/InfestedBurstRifle",
+   "/Lotus/Weapons/Infested/LongGuns/QuantaFullyInfested/InfQuantaRifle",
+   "/Lotus/Weapons/Infested/LongGuns/InfestedRifle",
+   "/Lotus/Weapons/Lasria/AK47/TC2024AK47Weapon",
+   "/Lotus/Weapons/Lasria/LasGooAK/LasGooAKPlayerWeapon",
+   "/Lotus/Weapons/Lasria/LasGrenadeLauncher/LasrianNoxPlayerWeapon",
+   "/Lotus/Weapons/Sentients/SentOctaMiniGun/SentOctaMiniGun",
+   "/Lotus/Weapons/Sentients/SentRifleNewWar/SentRifleNewWarGun",
+   "/Lotus/Weapons/Sentients/Shedu/SheduHeavyWeapon",
+   "/Lotus/Weapons/Tenno/Bayonet/TnBayonetRifleWeapon",
+   "/Lotus/Weapons/Tenno/Bows/AntlerBow/AntlerBow",
+   "/Lotus/Weapons/Tenno/Bows/AsymetricalBow/AsymetricalBow",
+   "/Lotus/Weapons/Tenno/Bows/DaxDuviriAsymetricalBow/DaxDuviriAsymmetricalLongBowPlayerWeapon",
+   "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep",
+   "/Lotus/Weapons/Tenno/Bows/PrimeDerelictCernos/DerelictCernos",
+   "/Lotus/Weapons/Tenno/Bows/TnChoirBow/TnChoirBow",
+   "/Lotus/Weapons/Tenno/Bows/HuntingBow",
+   "/Lotus/Weapons/Tenno/Bows/StalkerBow",
+   "/Lotus/Weapons/Tenno/LongGuns/DrakeRifle/DrakeRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/FiveShotSniper/FiveShotSniper",
+   "/Lotus/Weapons/Tenno/LongGuns/GarudaCrossbow/GarudaCrossbow",
+   "/Lotus/Weapons/Tenno/LongGuns/Gunbrella/ShrineMaidenGunbrellaWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/GyreRifle/GyreRifleWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/LoginPrimary/SundialRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/Miter/TnoMiter",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeLightningGun/PrimeLightningGun",
+   "/Lotus/Weapons/Tenno/LongGuns/RepeatingCrossbow/RepeatingCrossbow",
+   "/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TennoTommyGun/TennoTommyGunRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/TnBardRifle/TnBardRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/TnBeltFedRifle/TnBeltFedRifleWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnHopliteSpear/TnHopliteSpearGunWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnInkRifle/TnInkRifleWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnModQuestRifle/TnModQuestRifleWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnPriestSpear/TnPriestSpearGun",
+   "/Lotus/Weapons/Tenno/LongGuns/TnQuadSniper/TnQuadSniper",
+   "/Lotus/Weapons/Tenno/LongGuns/TnRailjackRifle/RailjackRifleGun",
+   "/Lotus/Weapons/Tenno/LongGuns/TnRevolverRifle/TnRevolverRifleGun",
+   "/Lotus/Weapons/Tenno/LongGuns/TnRifleErsatz/TnRifleErsatzWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnSMG/TnSMGWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnWispRifle/TnWispRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/TnoPrmryXbow/TnoPrmryXbowWeapon",
+   "/Lotus/Weapons/Tenno/Rifle/BoltoRifle",
+   "/Lotus/Weapons/Tenno/Rifle/BurstRifle",
+   "/Lotus/Weapons/Tenno/Rifle/HeavyRifle",
+   "/Lotus/Weapons/Tenno/Rifle/Rifle",
+   "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle",
+   "/Lotus/Weapons/Tenno/Rifle/SniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/TennoAR",
+   "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle",
+   "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle",
+   "/Lotus/Weapons/Thanotech/ThanoRifle/ThanotechRifle",
+   "/Lotus/Types/Friendly/Pets/MoaPets/MoaPetComponents/CryoxionWeapon",
+   "/Lotus/Types/Friendly/Pets/MoaPets/MoaPetComponents/HextraWeapon",
+   "/Lotus/Types/Friendly/Pets/MoaPets/MoaPetComponents/SwarmerWeapon",
+   "/Lotus/Types/Friendly/Pets/MoaPets/MoaPetComponents/TazronWeapon",
+   "/Lotus/Types/Friendly/Pets/MoaPets/MoaPetComponents/ThermocorMoaWeapon",
+   "/Lotus/Types/Sentinels/SentinelWeapons/DethMachineRifle",
+   "/Lotus/Types/Sentinels/SentinelWeapons/Gremlin",
+   "/Lotus/Types/Sentinels/SentinelWeapons/LaserRifle",
+   "/Lotus/Types/Sentinels/SentinelWeapons/SentBioWeapon",
+   "/Lotus/Types/Sentinels/SentinelWeapons/SentElecRailgun",
+   "/Lotus/Types/Sentinels/SentinelWeapons/SentinelFreezeRayRifle"
+  ],
+  "fusionLimit": 8,
+  "icon": "/Lotus/Interface/Cards/Images/OmegaMod.png",
+  "introducedAt": 1478923348,
+  "name": "/Lotus/Language/Omega/OmegaRifleMod",
+  "polarity": "AP_UNIVERSAL",
+  "rarity": "COMMON",
+  "tradable": true,
+  "upgradeEntries": [
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/PuncturePrefix",
+    "suffixTag": "/Lotus/Language/Omega/PunctureSuffix",
+    "tag": "WeaponArmorPiercingDamageMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponPunctureDamage",
+      "value": 0.01333
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/CritChancePrefix",
+    "suffixTag": "/Lotus/Language/Omega/CritChanceSuffix",
+    "tag": "WeaponCritChanceMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponCritChance",
+      "value": 0.016666
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/CritDamagePrefix",
+    "suffixTag": "/Lotus/Language/Omega/CritDamageSuffix",
+    "tag": "WeaponCritDamageMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponCritDamage",
+      "value": 0.013333
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": false,
+    "prefixTag": "/Lotus/Language/Omega/ElectricityPrefix",
+    "suffixTag": "/Lotus/Language/Omega/ElectricitySuffix",
+    "tag": "WeaponElectricityDamageMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponElectricityDamage",
+      "value": 0.01
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": false,
+    "prefixTag": "/Lotus/Language/Omega/FirePrefix",
+    "suffixTag": "/Lotus/Language/Omega/FireSuffix",
+    "tag": "WeaponFireDamageMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponFireDamage",
+      "value": 0.01
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/FireRatePrefix",
+    "suffixTag": "/Lotus/Language/Omega/FireRateSuffix",
+    "tag": "WeaponFireRateMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponFireRate",
+      "value": 0.00667
+     },
+     {
+      "value": 0.00667
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": false,
+    "prefixTag": "/Lotus/Language/Omega/FrostPrefix",
+    "suffixTag": "/Lotus/Language/Omega/FrostSuffix",
+    "tag": "WeaponFreezeDamageMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponFreezeDamage",
+      "value": 0.01
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/ImpactPrefix",
+    "suffixTag": "/Lotus/Language/Omega/ImpactSuffix",
+    "tag": "WeaponImpactDamageMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponImpactDamage",
+      "value": 0.013333
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/ProcTimePrefix",
+    "suffixTag": "/Lotus/Language/Omega/ProcTimeSuffix",
+    "tag": "WeaponProcTimeMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponProcTimeModDesc",
+      "value": 0.01111
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/SlashPrefix",
+    "suffixTag": "/Lotus/Language/Omega/SlashSuffix",
+    "tag": "WeaponSlashDamageMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponSlashDamage",
+      "value": 0.013333
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/StatusChancePrefix",
+    "suffixTag": "/Lotus/Language/Omega/StatusChanceSuffix",
+    "tag": "WeaponStunChanceMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/StatusChance",
+      "value": 0.01
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": false,
+    "prefixTag": "/Lotus/Language/Omega/ToxinPrefix",
+    "suffixTag": "/Lotus/Language/Omega/ToxinSuffix",
+    "tag": "WeaponToxinDamageMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponPoisonDamage",
+      "value": 0.01
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/MaxAmmoPrefix",
+    "suffixTag": "/Lotus/Language/Omega/MaxAmmoSuffix",
+    "tag": "WeaponAmmoMaxMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponMaxAmmoModDesc",
+      "value": 0.00555
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/ClipSizePrefix",
+    "suffixTag": "/Lotus/Language/Omega/ClipSizeSuffix",
+    "tag": "WeaponClipMaxMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponClipMaxModDesc",
+      "value": 0.005555
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/DamagePrefix",
+    "suffixTag": "/Lotus/Language/Omega/DamageSuffix",
+    "tag": "WeaponDamageAmountMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponDamageModDesc",
+      "value": 0.018333
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/MultishotPrefix",
+    "suffixTag": "/Lotus/Language/Omega/MultishotSuffix",
+    "tag": "WeaponFireIterationsMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponMultishotModDesc",
+      "value": 0.01
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/ProjectileSpeedPrefix",
+    "suffixTag": "/Lotus/Language/Omega/ProjectileSpeedSuffix",
+    "tag": "WeaponProjectileSpeedMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponProjectileSpeedModDesc",
+      "value": 0.01
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": false,
+    "prefixTag": "/Lotus/Language/Omega/PunchThroughPrefix",
+    "suffixTag": "/Lotus/Language/Omega/PunchThroughSuffix",
+    "tag": "WeaponPunctureDepthMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponPunctureDepthModDesc",
+      "value": 0.03
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/RecoilPrefix",
+    "suffixTag": "/Lotus/Language/Omega/RecoilSuffix",
+    "tag": "WeaponRecoilReductionMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponRecoilModDesc",
+      "value": -0.01
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/ReloadSpeedPrefix",
+    "suffixTag": "/Lotus/Language/Omega/ReloadSpeedSuffix",
+    "tag": "WeaponReloadSpeedMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponReloadSpeedModDesc",
+      "value": 0.005555
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/CorpusDamagePrefix",
+    "suffixTag": "/Lotus/Language/Omega/CorpusDamageSuffix",
+    "tag": "WeaponFactionDamageCorpus",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponFactionDamageCorpusDesc",
+      "value": 0.005
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/GrineerDamagePrefix",
+    "suffixTag": "/Lotus/Language/Omega/GrineerDamageSuffix",
+    "tag": "WeaponFactionDamageGrineer",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponFactionDamageGrineerDesc",
+      "value": 0.005
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/InfestedDamagePrefix",
+    "suffixTag": "/Lotus/Language/Omega/InfestedDamageSuffix",
+    "tag": "WeaponFactionDamageInfested",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponFactionDamageInfestedDesc",
+      "value": 0.005
+     }
+    ]
+   },
+   {
+    "canBeBuff": true,
+    "canBeCurse": true,
+    "prefixTag": "/Lotus/Language/Omega/ZoomPrefix",
+    "suffixTag": "/Lotus/Language/Omega/ZoomSuffix",
+    "tag": "WeaponZoomFovMod",
+    "upgradeValues": [
+     {
+      "locTag": "/Lotus/Language/Upgrades/WeaponZoomModDesc",
+      "value": 0.006666
+     }
+    ]
+   }
+  ]
+ },
+ "/Lotus/Upgrades/Mods/Randomized/RawRifleRandomMod": {
+  "baseDrain": 0,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/OmegaModIndistinctUnveiled.png",
+  "incompatibilityTags": [
+   "SENTINEL_WEAPON"
+  ],
+  "name": "/Lotus/Language/Omega/OmegaRifleMod",
+  "polarity": "AP_UNIVERSAL",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Beginner/WeaponCritChanceModBeginner": {
+  "baseDrain": 2,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleCritChanceMod.png",
+  "introducedAt": 1405676692,
+  "isStarter": true,
+  "name": "/Lotus/Language/Items/RifleModCritChance",
+  "polarity": "AP_ATTACK",
+  "rarity": "COMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Beginner/WeaponCritDamageModBeginner": {
+  "baseDrain": 2,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleCritDamageMod.png",
+  "introducedAt": 1405676692,
+  "isStarter": true,
+  "name": "/Lotus/Language/Items/RifleModCritDamage",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Beginner/WeaponDamageAmountModBeginner": {
+  "baseDrain": 2,
+  "codexSecret": true,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageAmountMod.png",
+  "introducedAt": 1405676692,
+  "isStarter": true,
+  "name": "/Lotus/Language/Items/RifleModDamageAmount",
+  "polarity": "AP_ATTACK",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Beginner/WeaponFireIterationsModBeginner": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleFireIterationsMod.png",
+  "introducedAt": 1405676692,
+  "isStarter": true,
+  "name": "/Lotus/Language/Items/RifleModFireIterations",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Beginner/WeaponStatusChanceModBeginner": {
+  "baseDrain": 2,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/StatusChanceRifleMod.png",
+  "isStarter": true,
+  "name": "/Lotus/Language/Items/RifleModStunChance",
+  "polarity": "AP_DEFENSE",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/BowExplosionChanceMod": {
+  "baseDrain": 6,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Bows/LotusBow",
+  "compatName": "Bow",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RambowMod.png",
+  "incompatibilityTags": [
+   "CRPBOW"
+  ],
+  "introducedAt": 1367634536,
+  "name": "/Lotus/Language/Items/ParisModExplosionChance",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedCritRateFireRateRifle": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/CorruptedCriticalRateForFireRateMod.png",
+  "introducedAt": 1381356724,
+  "name": "/Lotus/Language/Items/RifleModCorruptedCritRateFireRate",
+  "polarity": "AP_TACTIC",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/ShootPickUpRifleMod": {
+  "baseDrain": 0,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle (No Aoe)",
+  "fusionLimit": 10,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/ShootPickupRifleMod.png",
+  "incompatibilityTags": [
+   "POWER_WEAPON",
+   "AOE"
+  ],
+  "introducedAt": 1585069387,
+  "isUtility": true,
+  "name": "/Lotus/Language/Mods/ShootPickupRifleModName",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/EventSniperReloadDamageMod": {
+  "baseDrain": 4,
+  "codexSecret": true,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
+  "compatName": "Sniper",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleChargedChamberMod.png",
+  "introducedAt": 1373065832,
+  "name": "/Lotus/Language/Items/EventSniperModReloadDamage",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Expert/BowExplosionChanceModExpert": {
+  "baseDrain": 6,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Bows/LotusBow",
+  "compatName": "Bow",
+  "fusionLimit": 10,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RambowMod.png",
+  "incompatibilityTags": [
+   "CRPBOW"
+  ],
+  "isFrivolous": true,
+  "name": "/Lotus/Language/Items/ParisModExplosionChance",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": false,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponCritChanceModExpert": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 10,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleCritChanceMod.png",
+  "isFrivolous": true,
+  "name": "/Lotus/Language/Items/RifleModCritChance",
+  "polarity": "AP_ATTACK",
+  "rarity": "COMMON",
+  "tradable": false,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponCritDamageModExpert": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 10,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleCritDamageMod.png",
+  "isFrivolous": true,
+  "name": "/Lotus/Language/Items/RifleModCritDamage",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": false,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponFireIterationsModExpert": {
+  "baseDrain": 10,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 10,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleFireIterationsMod.png",
+  "isFrivolous": true,
+  "name": "/Lotus/Language/Items/RifleModFireIterations",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": false,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponFreezeDamageModExpert": {
+  "baseDrain": 6,
+  "codexSecret": true,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 10,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleFreezeDamageMod.png",
+  "introducedAt": 1478209235,
+  "name": "/Lotus/Language/Mods/PrimedRifleModFreezeDamage",
+  "polarity": "AP_DEFENSE",
+  "rarity": "LEGENDARY",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponStatusChanceModExpert": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 10,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/StatusChanceRifleMod.png",
+  "isFrivolous": true,
+  "name": "/Lotus/Language/Items/RifleModStunChance",
+  "polarity": "AP_DEFENSE",
+  "rarity": "UNCOMMON",
+  "tradable": false,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Intermediate/BowExplosionChanceModIntermediate": {
+  "baseDrain": 6,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Bows/LotusBow",
+  "compatName": "Bow",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RambowMod.png",
+  "incompatibilityTags": [
+   "CRPBOW"
+  ],
+  "isFrivolous": true,
+  "name": "/Lotus/Language/Items/ParisModExplosionChance",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Intermediate/SniperReloadDamageModIntermediate": {
+  "baseDrain": 6,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
+  "compatName": "Sniper",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleChargedChamberMod.png",
+  "isFrivolous": true,
+  "name": "/Lotus/Language/Items/SniperModReloadDamage",
+  "polarity": "AP_ATTACK",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Intermediate/WeaponDamageAmountModIntermediate": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageAmountMod.png",
+  "isFrivolous": true,
+  "name": "/Lotus/Language/Items/RifleModDamageAmount",
+  "polarity": "AP_ATTACK",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Intermediate/WeaponSnipersConvertAmmoModIntermediate": {
+  "baseDrain": 2,
+  "codexSecret": false,
+  "compat": "/Lotus/Types/Game/LotusWeapon",
+  "compatName": "Sniper",
+  "compatibilityTags": [
+   "SNIPER_AMMO",
+   "LAUNCHER_AMMO"
+  ],
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/SniperAmmoMutatorMod.png",
+  "isFrivolous": true,
+  "isUtility": true,
+  "name": "/Lotus/Language/Items/SniperModConvertAmmo",
+  "polarity": "AP_TACTIC",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "---"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/Intermediate/WeaponStatusChanceModIntermediate": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/StatusChanceRifleMod.png",
+  "isFrivolous": true,
+  "name": "/Lotus/Language/Items/RifleModStunChance",
+  "polarity": "AP_DEFENSE",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/RifleSemiAutoFantasyMod": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "compatibilityTags": [
+   "SEMI_AUTO"
+  ],
+  "description": "/Lotus/Language/Upgrades/SemiAutoFantasyModDesc",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleSemiAutoFantasyMod.png",
+  "incompatibilityTags": [
+   "MODULAR_GUN"
+  ],
+  "introducedAt": 1718723953,
+  "name": "/Lotus/Language/Upgrades/RifleSemiAutoFantasyModName",
+  "polarity": "AP_DEFENSE",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/SniperReloadDamageMod": {
+  "baseDrain": 6,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
+  "compatName": "Sniper",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleChargedChamberMod.png",
+  "introducedAt": 1369347222,
+  "name": "/Lotus/Language/Items/SniperModReloadDamage",
+  "polarity": "AP_ATTACK",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/WeaponCritChanceMod": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleCritChanceMod.png",
+  "introducedAt": 1351177200,
+  "name": "/Lotus/Language/Items/RifleModCritChance",
+  "polarity": "AP_ATTACK",
+  "rarity": "COMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/WeaponCritDamageMod": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleCritDamageMod.png",
+  "introducedAt": 1351177200,
+  "name": "/Lotus/Language/Items/RifleModCritDamage",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 10,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageAmountMod.png",
+  "introducedAt": 1351177200,
+  "name": "/Lotus/Language/Items/RifleModDamageAmount",
+  "polarity": "AP_ATTACK",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/WeaponFireIterationsMod": {
+  "baseDrain": 10,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/RifleFireIterationsMod.png",
+  "introducedAt": 1351177200,
+  "name": "/Lotus/Language/Items/RifleModFireIterations",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/WeaponSnipersConvertAmmoMod": {
+  "baseDrain": 2,
+  "codexSecret": false,
+  "compat": "/Lotus/Types/Game/LotusWeapon",
+  "compatName": "Sniper",
+  "compatibilityTags": [
+   "SNIPER_AMMO",
+   "LAUNCHER_AMMO"
+  ],
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/SniperAmmoMutatorMod.png",
+  "introducedAt": 1374873916,
+  "isUtility": true,
+  "name": "/Lotus/Language/Items/SniperModConvertAmmo",
+  "polarity": "AP_TACTIC",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "---"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/WeaponStatusChanceSPMod": {
+  "baseDrain": 2,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 10,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/Galvanized/WeaponStatusChanceSPMod.png",
+  "introducedAt": 1625583730,
+  "name": "/Lotus/Language/Mods/WeaponStatusChanceSPMod",
+  "polarity": "AP_DEFENSE",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Rifle/WeaponStunChanceMod": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+  "compatName": "Rifle",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Rifle/StatusChanceRifleMod.png",
+  "introducedAt": 1384993412,
+  "name": "/Lotus/Language/Items/RifleModStunChance",
+  "polarity": "AP_DEFENSE",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Sets/Hunter/PrimaryHunterMunitionsMod": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/LotusLongGun",
+  "compatName": "PRIMARY",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Sets/Hunter/HunterMunitions.png",
+  "introducedAt": 1510764655,
+  "modSet": "/Lotus/Upgrades/Mods/Sets/Hunter/HunterSetMod",
+  "name": "/Lotus/Language/Mods/PrimaryHunterMunitionsModName",
+  "polarity": "AP_ATTACK",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Sets/Vigilante/PrimaryVigilanteArmamentsMod": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/LotusLongGun",
+  "compatName": "PRIMARY",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Sets/Vigilante/VigilanteArmaments.png",
+  "introducedAt": 1507845620,
+  "modSet": "/Lotus/Upgrades/Mods/Sets/Vigilante/VigilanteSetMod",
+  "name": "/Lotus/Language/Mods/PrimaryVigilanteArmamentsModName",
+  "polarity": "AP_TACTIC",
+  "rarity": "COMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Shotgun/Beginner/WeaponCritChanceModBeginner": {
+  "baseDrain": 2,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+  "compatName": "Shotgun",
+  "fusionLimit": 3,
+  "icon": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunCriticalChanceMod.png",
+  "introducedAt": 1405676692,
+  "isStarter": true,
+  "name": "/Lotus/Language/Items/ShotgunModCritChance",
+  "polarity": "AP_ATTACK",
+  "rarity": "COMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedCritChanceFireRateShotgun": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+  "compatName": "Shotgun",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Shotgun/CorruptedCritChanceFireRateShotgunMod.png",
+  "introducedAt": 1414155128,
+  "name": "/Lotus/Language/Items/CorruptedCritChanceFireRateShotgunMod",
+  "polarity": "AP_ATTACK",
+  "rarity": "RARE",
+  "tradable": true,
+  "type": "PRIMARY"
+ },
+ "/Lotus/Upgrades/Mods/Shotgun/WeaponCritChanceMod": {
+  "baseDrain": 4,
+  "codexSecret": false,
+  "compat": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+  "compatName": "Shotgun",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunCriticalChanceMod.png",
+  "introducedAt": 1351177200,
+  "name": "/Lotus/Language/Items/ShotgunModCritChance",
+  "polarity": "AP_ATTACK",
+  "rarity": "COMMON",
+  "tradable": true,
+  "type": "PRIMARY"
+ }
+}
