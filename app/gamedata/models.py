@@ -50,6 +50,7 @@ class Attack(Model):
     forced_procs: list[ForcedProc] | None = None
     burst_count: Annotated[int, Field(ge=1)] | None = None
     burst_delay: NonNegative | None = None
+    ammo_cost: NonNegative | None = None  # ammo per shot, 0 = none; None = not in the module
 
 
 class Weapon(Model):
@@ -80,6 +81,8 @@ class Weapon(Model):
     compatibility_tags: list[str] | None
     sniper_combo_min: Annotated[int, Field(ge=1)] | None  # saved Sniper_Rifle, wiki module
     no_reload: bool  # shots come straight from the ammo pool (Epitaph), fire_overrides.json
+    # Reload replaces one shot interval (Vectis; saved Calculation, Average Sustained DPS).
+    reload_replaces_shot: bool
     # Beam damage at the start of the ramp-up (saved Continuous_Weapon); HELD trigger only.
     beam_ramp_start: Fraction | None
 
@@ -147,7 +150,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[7] = 7
+    schema_version: Literal[8] = 8
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

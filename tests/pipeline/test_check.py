@@ -3,7 +3,7 @@ import json
 import pytest
 
 from app.gamedata import store
-from app.gamedata.models import SourceRecord
+from app.gamedata.models import Meta, SourceRecord
 from app.pipeline import check, publish
 from app.pipeline.build import build
 from app.pipeline.refresh import Paths, load_previous, run
@@ -208,7 +208,8 @@ def test_unreadable_previous_dataset_is_reported(paths: Paths) -> None:
     run(paths, offline=True, fetch_images=False)
     (paths.gamedata / "meta.json").write_text('{"schema_version": 1}')
     previous, error = load_previous(paths.gamedata)
-    assert previous is None and error and "schema version 1, this code reads 7" in error
+    current = Meta.model_fields["schema_version"].default
+    assert previous is None and error and f"schema version 1, this code reads {current}" in error
     report = run(paths, offline=True, fetch_images=False)
     text = "\n".join(report.lines())
     assert "previous dataset unreadable" in text

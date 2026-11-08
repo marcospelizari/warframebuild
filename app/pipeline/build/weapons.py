@@ -115,6 +115,7 @@ def _weapon(
             compatibility_tags=tags.get(d["uniqueName"]),
             sniper_combo_min=data.sniper_combo_min if data else None,
             no_reload=fire.no_reload(d["uniqueName"]),
+            reload_replaces_shot=fire.reload_replaces_shot(d["uniqueName"]),
             beam_ramp_start=fire.beam_start(d["uniqueName"], d["name"], d["trigger"]),
         )
     except ValidationError as error:
@@ -151,6 +152,7 @@ def _attack_model(
         forced_procs=extra.forced_procs if extra else None,
         burst_count=extra.burst_count if extra else None,
         burst_delay=extra.burst_delay if extra else None,
+        ammo_cost=extra.ammo_cost if extra else None,
     )
 
 

@@ -9,7 +9,15 @@ from app.pipeline.errors import RefreshError
 from app.pipeline.sources.wiki_weapon_data import AttackData, WeaponData
 
 FILE = "fire_overrides.json"
-WEAPON_KEYS = {"name", "exclude", "no_reload", "beam_ramp_start", "source", "verified"}
+WEAPON_KEYS = {
+    "name",
+    "exclude",
+    "no_reload",
+    "reload_replaces_shot",
+    "beam_ramp_start",
+    "source",
+    "verified",
+}
 HELD = "HELD"  # DE trigger of continuous (beam) weapons
 CHARGE = "CHARGE"
 
@@ -44,6 +52,9 @@ class FireOverrides:
 
     def no_reload(self, uid: str) -> bool:
         return bool(self.weapons.get(uid, {}).get("no_reload", False))
+
+    def reload_replaces_shot(self, uid: str) -> bool:
+        return bool(self.weapons.get(uid, {}).get("reload_replaces_shot", False))
 
     def beam_start(self, uid: str, name: str, trigger: str) -> float | None:
         value = self.weapons.get(uid, {}).get("beam_ramp_start")

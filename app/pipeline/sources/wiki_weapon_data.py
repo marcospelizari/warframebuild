@@ -53,6 +53,7 @@ class AttackData:
     burst_count: int | None
     burst_delay: float | None
     no_shot_delay: bool  # FireRate = math.huge
+    ammo_cost: float | None  # ammo per shot (0.5 per beam tick, 0 = none); None = not listed
 
 
 @dataclass(frozen=True)
@@ -130,4 +131,15 @@ def _attack(where: str, a: dict[str, Any]) -> AttackData:
         burst_count=count,
         burst_delay=float(delay) if delay is not None else None,
         no_shot_delay=a.get("FireRate") == math.inf,
+        ammo_cost=_ammo_cost(where, a),
     )
+
+
+def _ammo_cost(where: str, a: dict[str, Any]) -> float | None:
+    # One module entry spells the key `Ammocost`.
+    cost = a.get("AmmoCost", a.get("Ammocost"))
+    if cost is None:
+        return None
+    if not isinstance(cost, int | float) or not 0 <= cost < math.inf:
+        raise RefreshError(f"{where}: AmmoCost must be a finite number >= 0")
+    return float(cost)

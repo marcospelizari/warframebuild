@@ -51,3 +51,12 @@ def test_quantize_rounds_half_away_from_zero() -> None:
 def test_physical_bonus_on_a_non_physical_type_fails() -> None:
     with pytest.raises(ValueError, match="non-physical"):
         composition({D.IMPACT: 10}, [], {D.HEAT: 1.0})
+
+
+def test_kuva_bonus_element_is_innate() -> None:
+    """Saved Damage: the progenitor element counts as innate; a single mod element combines
+    with it (Toxin mod + 60% Heat -> Gas)."""
+    base = {D.IMPACT: 30, D.PUNCTURE: 30, D.SLASH: 40}
+    out = composition(base, [Part(D.TOXIN, 0.9)], {}, bonus_element=(D.HEAT, 0.6))
+    assert out[D.GAS] == quantize(0.9 * 100 + 0.6 * 100, 100)
+    assert D.HEAT not in out and D.TOXIN not in out

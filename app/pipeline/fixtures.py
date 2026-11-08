@@ -28,6 +28,8 @@ WEAPONS = (
     "Sirocco",  # Drifter weapon -> excluded by category
     "Sonicor",  # attacks differ from DE summary
     "Strun Wraith",  # shotgun, falloff
+    "Vectis",  # reload replaces one shot interval
+    "Vectis Prime",
 )
 MOD_NAMES = (
     "Serration",  # normal + beginner + intermediate
