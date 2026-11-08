@@ -33,6 +33,8 @@ OTHER_ARCANE_TYPES = frozenset(
 SHOT_TYPE_DIRECT: dict[str | None, DirectBonus] = {
     "Hit-Scan": DirectBonus.ADDING,
     "Hitscan": DirectBonus.ADDING,
+    # The catalog lists only discrepant attacks; unlisted ones are adding (saved page,
+    # line 195), even though projectiles "tend to" multiply (line 190).
     "Projectile": DirectBonus.ADDING,
     None: DirectBonus.ADDING,  # not given: a direct attack
     "AoE": DirectBonus.NONE,

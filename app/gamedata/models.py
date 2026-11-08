@@ -72,7 +72,7 @@ class Weapon(Model):
     # module FireRate = math.huge, saved Fire_Rate). Only on charge weapons.
     fire_rate: Positive | None
     multishot: Positive
-    magazine_size: Annotated[int, Field(ge=0)] | None
+    magazine_size: Annotated[int, Field(ge=0)] | None  # None = no magazine (verified)
     reload_time: NonNegative
     mastery_req: Annotated[int, Field(ge=0)]
     riven_disposition: NonNegative  # DE omegaAttenuation

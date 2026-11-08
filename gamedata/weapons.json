@@ -3194,7 +3194,7 @@
   },
   "exilus_polarity": "naramon",
   "fire_rate": 12.000001,
-  "magazine_size": null,
+  "magazine_size": 70,
   "mastery_req": 7,
   "multishot": 2.0,
   "name": "Convectrix",
@@ -14375,7 +14375,7 @@
   },
   "exilus_polarity": "naramon",
   "fire_rate": 0.66666669,
-  "magazine_size": null,
+  "magazine_size": 1,
   "mastery_req": 0,
   "multishot": 1.0,
   "name": "Nataruk",
@@ -14982,127 +14982,6 @@
     "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
-    "forced_procs": null,
-    "name": "Normal Attack",
-    "shot_speed": 40.0,
-    "shot_type": "Projectile",
-    "status_chance": 0.26
-   },
-   {
-    "ammo_cost": null,
-    "burst_count": null,
-    "burst_delay": null,
-    "charge_time": null,
-    "critical_chance": 0.2,
-    "critical_multiplier": 2.0,
-    "damage": {
-     "electricity": 50.0
-    },
-    "direct_bonus": "none",
-    "falloff": {
-     "end": 1.0,
-     "reduction": 0.8,
-     "start": 0.0
-    },
-    "fire_rate": 1.5,
-    "forced_procs": null,
-    "name": "Normal Radial Attack",
-    "shot_speed": null,
-    "shot_type": "AoE",
-    "status_chance": 0.26
-   },
-   {
-    "ammo_cost": null,
-    "burst_count": null,
-    "burst_delay": null,
-    "charge_time": null,
-    "critical_chance": 0.2,
-    "critical_multiplier": 2.0,
-    "damage": {
-     "electricity": 350.0
-    },
-    "direct_bonus": "adding",
-    "falloff": null,
-    "fire_rate": 1.0,
-    "forced_procs": null,
-    "name": "Active Attack",
-    "shot_speed": 6.0,
-    "shot_type": "Projectile",
-    "status_chance": 0.26
-   },
-   {
-    "ammo_cost": null,
-    "burst_count": null,
-    "burst_delay": null,
-    "charge_time": null,
-    "critical_chance": 0.2,
-    "critical_multiplier": 2.0,
-    "damage": {
-     "electricity": 250.0
-    },
-    "direct_bonus": "none",
-    "falloff": {
-     "end": 6.0,
-     "reduction": 0.8,
-     "start": 0.0
-    },
-    "fire_rate": 1.0,
-    "forced_procs": null,
-    "name": "Active Radial Attack",
-    "shot_speed": null,
-    "shot_type": "AoE",
-    "status_chance": 0.26
-   }
-  ],
-  "beam_ramp_start": null,
-  "category": "secondary",
-  "compatibility_tags": [
-   "PROJECTILE",
-   "THROWN"
-  ],
-  "critical_chance": 0.079999998,
-  "critical_multiplier": 1.6,
-  "damage": {
-   "impact": 17.5,
-   "puncture": 7.5000005
-  },
-  "exilus_polarity": null,
-  "fire_rate": 1.5000001,
-  "magazine_size": null,
-  "mastery_req": 10,
-  "multishot": 1.0,
-  "name": "Grimoire",
-  "no_reload": false,
-  "polarities": [
-   "madurai",
-   "naramon"
-  ],
-  "reload_replaces_shot": false,
-  "reload_time": 2.0,
-  "riven_disposition": 1.2,
-  "slug": "grimoire-tndoppelgangergrimoire",
-  "sniper_combo_min": null,
-  "status_chance": 0.10000002,
-  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Grimoire.png!00_i9NOgyYNWmCnMXXnhQixow",
-  "trigger": "AUTO",
-  "unique_name": "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire",
-  "weapon_type": "Pistol"
- },
- {
-  "attacks": [
-   {
-    "ammo_cost": null,
-    "burst_count": null,
-    "burst_delay": null,
-    "charge_time": null,
-    "critical_chance": 0.2,
-    "critical_multiplier": 2.0,
-    "damage": {
-     "electricity": 100.0
-    },
-    "direct_bonus": "adding",
-    "falloff": null,
-    "fire_rate": 1.5,
     "forced_procs": [],
     "name": "Normal Attack",
     "shot_speed": 40.0,
@@ -15204,7 +15083,7 @@
   "reload_replaces_shot": false,
   "reload_time": 0.0099999998,
   "riven_disposition": 1.2,
-  "slug": "grimoire-tngrimoire",
+  "slug": "grimoire",
   "sniper_combo_min": null,
   "status_chance": 0.25999999,
   "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Grimoire.png!00_i9NOgyYNWmCnMXXnhQixow",

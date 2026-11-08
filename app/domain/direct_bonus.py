@@ -3,8 +3,10 @@ Condition_Overload_(Mechanic): Mechanics, Application Behaviors, Math.
 
 The bonus is `value x stacks x status types on the target` and joins the damage in one of
 three ways per attack: `adding` (with the Serration group: `(damage bonuses x other
-multipliers) + bonus`, most hitscan), `multiplying` (a separate factor, most projectiles)
-or `none` (AoE parts, some attacks). Which one an attack uses is data (weapons.json,
+multipliers) + bonus`), `multiplying` (a separate factor) or `none` (AoE parts, some
+attacks). The page's catalog lists only discrepant attacks and says anything not listed is
+adding, so `adding` is the default even for projectiles (which the page says "tend to"
+multiply). Which one an attack uses is data (weapons.json,
 reference/galvanized_behaviour.json).
 """
 

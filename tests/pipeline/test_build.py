@@ -15,7 +15,7 @@ def test_weapons_join_and_exclusions(paths: Paths) -> None:
     data = build(paths.raw, paths.reference)
     names = {w.name for w in data.weapons}
     assert "Braton Prime" in names
-    assert {e.name: e.reason for e in data.excluded_weapons}.keys() == {"Sirocco"}
+    assert {e.name: e.reason for e in data.excluded_weapons}.keys() == {"Sirocco", "Grimoire"}
     assert {j.unique_name for j in data.joins} == {w.unique_name for w in data.weapons}
 
 
@@ -34,6 +34,16 @@ def test_attack_chances_are_fractions(paths: Paths) -> None:
 
 
 def test_slug_collision_is_disambiguated(paths: Paths) -> None:
+    """Keep the excluded second Grimoire by giving it a magazine size."""
+    doppel = "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire"
+    table = paths.reference / "fire_overrides.json"
+    overrides = json.loads(table.read_text())
+    del overrides["weapons"][doppel]
+    table.write_text(json.dumps(overrides))
+    export = paths.raw / "de/ExportWeapons_en.json"
+    de = json.loads(export.read_text())
+    next(w for w in de["ExportWeapons"] if w["uniqueName"] == doppel)["magazineSize"] = 1
+    export.write_text(json.dumps(de))
     slugs = [w.slug for w in build(paths.raw, paths.reference).weapons if w.name == "Grimoire"]
     assert len(slugs) == 2 and len(set(slugs)) == 2
 
@@ -395,6 +405,27 @@ def test_gun_missing_in_the_modules_has_unknown_forced_procs(paths: Paths) -> No
     braton = _weapons(paths)["Braton Prime"]
     assert all(a.forced_procs is None for a in braton.attacks)
     assert not braton.no_reload
+
+
+def test_magazine_missing_in_de_comes_from_the_wiki_module(paths: Paths) -> None:
+    """DE gives Convectrix no magazine; the module says 70. Grimoire's 0 = no magazine."""
+    weapons = _weapons(paths)
+    assert weapons["Convectrix"].magazine_size == 70
+    assert weapons["Grimoire"].magazine_size is None
+
+
+def test_unknown_magazine_fails(paths: Paths) -> None:
+    module = paths.raw / "wiki/Module_Weapons_data_primary.lua"
+    module.write_text(module.read_text().replace("\t\tMagazine = 70,\n", ""))
+    with pytest.raises(RefreshError, match="Convectrix: no magazine size"):
+        _weapons(paths)
+
+
+def test_fire_override_flag_must_be_a_boolean(paths: Paths) -> None:
+    table = paths.reference / "fire_overrides.json"
+    table.write_text(table.read_text().replace('"no_reload": true', '"no_reload": "false"'))
+    with pytest.raises(RefreshError, match="no_reload must be true or false"):
+        _weapons(paths)
 
 
 def test_beam_ramp_start_default_and_rows(paths: Paths) -> None:

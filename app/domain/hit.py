@@ -38,11 +38,14 @@ class ModdedHit:
     multishot: float  # expected projectiles per shot
     faction_multiplier: dict[Faction, float]  # Bane-style factor per faction (1 if none)
     crit_upgrade_chance: float  # Vigilante set (crit_tier_upgrade)
+    unscaled: dict[DamageType, float]  # quantized composition before damage multipliers
+    base_total: float  # the attack's unmodded base damage total
     modded_base: float  # base damage total x damage bonuses: the DoT seed before crit
     damage_multiplier: float  # Serration group x separate damage factors
-    element_bonus: dict[DamageType, float]  # mod bonus behind each final element (DoT)
+    element_bonus: dict[DamageType, float]  # summed bonus of the mods of each element (DoT)
     status_damage: float  # bonus (Elementalist), additive group, separate factor on DoT
     status_duration: float  # bonus (Hunter Track +0.9)
+    direct_bonus: float | None = None  # Galvanized-style bonus once applied
 
     @property
     def projectile_damage(self) -> float:
@@ -98,6 +101,8 @@ def modded_hit(
         crit_upgrade_chance=min(
             1.0, math.fsum(v for e, v in bonuses if e.stat == Stat.CRIT_TIER_UPGRADE)
         ),
+        unscaled=quantized,
+        base_total=math.fsum(base.damage.values()),
         modded_base=math.fsum(base.damage.values()) * damage_multiplier,
         damage_multiplier=damage_multiplier,
         element_bonus=element_bonuses(elements),
@@ -107,8 +112,22 @@ def modded_hit(
 
 
 def with_direct_bonus(hit: ModdedHit, behaviour: DirectBonus, direct: float) -> ModdedHit:
-    """The hit with a Galvanized-style bonus of `direct` applied the attack's way."""
-    if hit.damage_multiplier <= 0:
-        return hit  # no damage to scale
+    """The hit with a Galvanized-style bonus applied the attack's way.
+
+    `direct` is the summed bonus of every CO-like source: they stack additively with each
+    other (saved Condition_Overload_(Mechanic), Math), so call this once per hit, never
+    once per source: a second call raises. The DoT seed takes the same factor: procs are
+    generated from the bonused hit (same page, Blast/Electricity/Gas line; G63 extends it
+    to Heat, Slash and Toxin as an assumption). Attack-specific DoT parts (Tysis, Stinger)
+    are separate attacks with behaviour `none`.
+    """
+    if hit.direct_bonus is not None:
+        raise ValueError("direct bonus already applied: pass the summed bonus once")
     factor = damage_factor(behaviour, hit.damage_multiplier, direct)
-    return replace(hit, damage=scaled(hit.damage, factor / hit.damage_multiplier))
+    return replace(
+        hit,
+        direct_bonus=direct,
+        damage=scaled(hit.unscaled, factor),
+        modded_base=hit.base_total * factor,
+        damage_multiplier=factor,
+    )

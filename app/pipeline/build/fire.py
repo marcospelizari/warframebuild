@@ -18,6 +18,7 @@ WEAPON_KEYS = {
     "source",
     "verified",
 }
+FLAGS = ("no_reload", "reload_replaces_shot")
 HELD = "HELD"  # DE trigger of continuous (beam) weapons
 CHARGE = "CHARGE"
 
@@ -39,6 +40,9 @@ class FireOverrides:
             if unknown:
                 raise RefreshError(f"reference/{FILE} {uid}: unknown keys {unknown}")
             require_verified(row, FILE, uid)
+            for flag in FLAGS:
+                if flag in row and not isinstance(row[flag], bool):
+                    raise RefreshError(f"reference/{FILE} {uid}: {flag} must be true or false")
         return cls(weapons, _fraction(default.get("value"), "defaults.beam_ramp_start"))
 
     def excluded(self, uid: str) -> str | None:
@@ -51,10 +55,10 @@ class FireOverrides:
             raise RefreshError(f"reference/{FILE}: unknown guns {unknown}")
 
     def no_reload(self, uid: str) -> bool:
-        return bool(self.weapons.get(uid, {}).get("no_reload", False))
+        return self.weapons.get(uid, {}).get("no_reload", False) is True
 
     def reload_replaces_shot(self, uid: str) -> bool:
-        return bool(self.weapons.get(uid, {}).get("reload_replaces_shot", False))
+        return self.weapons.get(uid, {}).get("reload_replaces_shot", False) is True
 
     def beam_start(self, uid: str, name: str, trigger: str) -> float | None:
         value = self.weapons.get(uid, {}).get("beam_ramp_start")

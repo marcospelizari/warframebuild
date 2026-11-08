@@ -108,7 +108,7 @@ def _weapon(
             status_chance=d["procChance"],
             fire_rate=fire_rate(d, data),
             multishot=d["multishot"],
-            magazine_size=d.get("magazineSize"),
+            magazine_size=_magazine(d, data),
             reload_time=d["reloadTime"],
             mastery_req=d["masteryReq"],
             riven_disposition=d["omegaAttenuation"],
@@ -205,3 +205,17 @@ _SLUG = re.compile(r"[^a-z0-9]+")
 
 def slugify(name: str) -> str:
     return _SLUG.sub("-", name.lower()).strip("-")
+
+
+def _magazine(d: dict[str, Any], data: WeaponData | None) -> int | None:
+    """DE magazine size, else the wiki module's (0 there = no magazine -> None). Unknown
+    fails the refresh: treating it as "no magazine" would mean "never reloads"."""
+    size = d.get("magazineSize")
+    if size is not None:
+        return int(size)
+    if data is None or data.magazine is None:
+        raise RefreshError(
+            f"{d['name']}: no magazine size in DE or the wiki module "
+            "(exclude it in reference/fire_overrides.json until known)"
+        )
+    return data.magazine or None
