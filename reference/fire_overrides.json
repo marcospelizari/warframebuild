@@ -1,9 +1,35 @@
 {
-  "about": "Per-gun fire data the sources lack (G10). `exclude` keeps a gun out of the dataset with a reason until real values are entered; values come from saved wiki pages, never guessed.",
+  "about": "Fire data DE and WFCD lack (G10), each row from a saved wiki page. `exclude` keeps a gun out with a reason until real values are known. `no_reload`: shots come straight from the ammo pool, no reload between shots. `beam_ramp_start`: beam damage at the start of the 0.6 s ramp-up (HELD guns only); `defaults` applies to every beam without its own row. Forced procs, burst count/delay and Lanka's no-delay rule come from the wiki weapon data modules, not from here.",
+  "defaults": {
+    "beam_ramp_start": {
+      "value": 0.2,
+      "source": "Continuous_Weapon: 'For most weapons, this lower percentage is 20%'",
+      "verified": "2026-11-08"
+    }
+  },
   "weapons": {
-    "/Lotus/Weapons/ClanTech/Energy/Railgun": {
-      "name": "Lanka",
-      "exclude": "fire rate 0 in DE, missing in WFCD: Lanka has no delay between charged shots, so its effective fire rate is 1 / modded charge time (saved Fire_Rate, 'Fire Rate and Charge Time'); base charge time 1.00 s (Fire_Rate charge list, WFCD Charged Shot). Kept out until step 4 implements the charge rules (#4)",
+    "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon": {
+      "name": "Epitaph",
+      "no_reload": true,
+      "source": "Epitaph: 'does not \"reload\" between shots ... displayed 0.6s reload time has no purpose'",
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/LongGuns/CrpSplitLaser/CrpSplitLaser": {
+      "name": "Convectrix",
+      "beam_ramp_start": 0.6,
+      "source": "Continuous_Weapon, Update 22.14: primary fire starts at 60%",
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Infested/LongGuns/Tentacluster/InfestedShotgun": {
+      "name": "Phage",
+      "beam_ramp_start": 0.7,
+      "source": "Continuous_Weapon, Update 22.14: starts at 70%",
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Infested/Pistols/InfestedPistol": {
+      "name": "Embolist",
+      "beam_ramp_start": 0.3,
+      "source": "Continuous_Weapon, Update 22.14: starts at 30%",
       "verified": "2026-11-08"
     }
   }

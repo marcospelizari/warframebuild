@@ -1,9 +1,11 @@
 import json
+from pathlib import Path
+from typing import Any
 
 import pytest
 
 from app.domain.effects import DamageType, Stat, Support, Trigger
-from app.gamedata.models import Category
+from app.gamedata.models import Category, Weapon
 from app.pipeline.build import build
 from app.pipeline.errors import RefreshError
 from app.pipeline.refresh import Paths
@@ -13,7 +15,7 @@ def test_weapons_join_and_exclusions(paths: Paths) -> None:
     data = build(paths.raw, paths.reference)
     names = {w.name for w in data.weapons}
     assert "Braton Prime" in names
-    assert {e.name: e.reason for e in data.excluded_weapons}.keys() == {"Lanka", "Sirocco"}
+    assert {e.name: e.reason for e in data.excluded_weapons}.keys() == {"Sirocco"}
     assert {j.unique_name for j in data.joins} == {w.unique_name for w in data.weapons}
 
 
@@ -110,8 +112,13 @@ def test_export_plus_tags_must_be_strings(paths: Paths) -> None:
         build(paths.raw, paths.reference)
 
 
+def _drop_module_entries(paths: Paths) -> None:
+    (paths.raw / "wiki/Module_Weapons_data_primary.lua").write_text("return {}")
+
+
 def test_gun_without_fire_rate_fails(paths: Paths) -> None:
-    (paths.reference / "fire_overrides.json").write_text('{"weapons": {}}')
+    """Lanka's DE fire rate is 0; without the module's no-delay rule it has no usable rate."""
+    _drop_module_entries(paths)
     with pytest.raises(RefreshError, match="Lanka"):
         build(paths.raw, paths.reference)
 
@@ -171,7 +178,7 @@ def test_unknown_wfcd_arcane_type_fails(paths: Paths) -> None:
 
 def test_fire_rate_error_names_the_field_that_works(paths: Paths) -> None:
     """Review bug 5: the advice must point at what the build reads (`exclude`)."""
-    (paths.reference / "fire_overrides.json").write_text('{"weapons": {}}')
+    _drop_module_entries(paths)
     with pytest.raises(RefreshError, match="`exclude` entry"):
         build(paths.raw, paths.reference)
 
@@ -210,7 +217,7 @@ def test_wfcd_speed_zero_means_no_own_fire_rate() -> None:
         "status_chance": 0,
         "damage": {"corrosive": 10},
     }
-    assert _attack(dot, "Tysis").fire_rate is None
+    assert _attack(dot, "Tysis", None).fire_rate is None
 
 
 def test_allowed_conclave_mod_is_kept(paths: Paths) -> None:
@@ -359,4 +366,85 @@ def test_exilus_entry_without_verified_fails(paths: Paths) -> None:
     data["mods"] = [{"id": "/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod", "name": "Serration"}]
     path.write_text(json.dumps(data))
     with pytest.raises(RefreshError, match="verified"):
+        build(paths.raw, paths.reference)
+
+
+def _weapons(paths: Paths) -> dict[str, Weapon]:
+    return {w.name: w for w in build(paths.raw, paths.reference).weapons}
+
+
+def test_lanka_has_no_delay_between_shots(paths: Paths) -> None:
+    """Saved Fire_Rate: Lanka's rate is 1 / charge time; the module says FireRate = math.huge."""
+    lanka = _weapons(paths)["Lanka"]
+    assert lanka.fire_rate is None
+    assert lanka.sniper_combo_min == 2
+
+
+def test_forced_procs_per_attack_from_the_wiki_module(paths: Paths) -> None:
+    epitaph = _weapons(paths)["Epitaph"]
+    procs = {a.name: a.forced_procs for a in epitaph.attacks}
+    assert procs == {
+        "Charged Shot": [DamageType.IMPACT],
+        "Uncharged Direct Hit": [DamageType.IMPACT],
+        "Uncharged AoE": [DamageType.COLD],
+    }
+    assert epitaph.no_reload
+
+
+def test_gun_missing_in_the_modules_has_unknown_forced_procs(paths: Paths) -> None:
+    braton = _weapons(paths)["Braton Prime"]
+    assert all(a.forced_procs is None for a in braton.attacks)
+    assert not braton.no_reload
+
+
+def test_beam_ramp_start_default_and_rows(paths: Paths) -> None:
+    weapons = _weapons(paths)
+    assert weapons["Phage"].beam_ramp_start == 0.7
+    assert weapons["Convectrix"].beam_ramp_start == 0.6
+    assert weapons["Embolist"].beam_ramp_start == 0.3
+    assert weapons["Braton Prime"].beam_ramp_start is None  # not a beam
+
+
+def _fire_rows(paths: Paths) -> tuple[Path, dict[str, Any]]:
+    path = paths.reference / "fire_overrides.json"
+    return path, json.loads(path.read_text())
+
+
+def test_beam_ramp_start_on_a_non_beam_fails(paths: Paths) -> None:
+    path, fire = _fire_rows(paths)
+    fire["weapons"]["/Lotus/Weapons/Tenno/Rifle/BratonPrime"] = {
+        "name": "Braton Prime",
+        "beam_ramp_start": 0.5,
+        "verified": "2026-11-08",
+    }
+    path.write_text(json.dumps(fire))
+    with pytest.raises(RefreshError, match="non-beam"):
+        build(paths.raw, paths.reference)
+
+
+def test_fire_override_with_unknown_key_or_gun_fails(paths: Paths) -> None:
+    path, fire = _fire_rows(paths)
+    epitaph = "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon"
+    fire["weapons"][epitaph]["reload"] = 0
+    path.write_text(json.dumps(fire))
+    with pytest.raises(RefreshError, match="unknown keys"):
+        build(paths.raw, paths.reference)
+    del fire["weapons"][epitaph]["reload"]
+    fire["weapons"]["/Lotus/Weapons/Nope"] = {"name": "Nope", "verified": "2026-11-08"}
+    path.write_text(json.dumps(fire))
+    with pytest.raises(RefreshError, match="unknown guns"):
+        build(paths.raw, paths.reference)
+
+
+def test_module_attacks_must_match_wfcd(paths: Paths) -> None:
+    module = paths.raw / "wiki/Module_Weapons_data_secondary.lua"
+    module.write_text(module.read_text().replace('"Uncharged AoE"', '"Uncharged Cloud"'))
+    with pytest.raises(RefreshError, match="differ from the wiki module"):
+        build(paths.raw, paths.reference)
+
+
+def test_unknown_forced_proc_fails(paths: Paths) -> None:
+    module = paths.raw / "wiki/Module_Weapons_data_secondary.lua"
+    module.write_text(module.read_text().replace('{ "Cold" }', '{ "Frostbite" }'))
+    with pytest.raises(RefreshError, match="Frostbite"):
         build(paths.raw, paths.reference)

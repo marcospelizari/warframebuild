@@ -7,17 +7,17 @@
   "arcanes_primary": 16,
   "arcanes_secondary": 18,
   "arcanes_unsupported": 21,
-  "excluded_weapons": 2,
+  "excluded_weapons": 1,
   "mod_sets": 10,
   "mods": 328,
   "mods_full": 237,
   "mods_partial": 21,
   "mods_unsupported": 70,
-  "primary": 195,
+  "primary": 196,
   "secondary": 149,
-  "weapons": 344
+  "weapons": 345
  },
- "dataset_hash": "1b9703a7bc46cf75",
+ "dataset_hash": "fe88d2e07b6de87c",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -27,11 +27,6 @@
  },
  "excluded_weapons": [
   {
-   "name": "Lanka",
-   "reason": "fire rate 0 in DE, missing in WFCD: Lanka has no delay between charged shots, so its effective fire rate is 1 / modded charge time (saved Fire_Rate, 'Fire Rate and Charge Time'); base charge time 1.00 s (Fire_Rate charge list, WFCD Charged Shot). Kept out until step 4 implements the charge rules (#4)",
-   "unique_name": "/Lotus/Weapons/ClanTech/Energy/Railgun"
-  },
-  {
    "name": "Sirocco",
    "reason": "not a primary or secondary gun (DE category OperatorAmps)",
    "unique_name": "/Lotus/Weapons/Operator/Pistols/DrifterPistol/DrifterPistolPlayerWeapon"
@@ -39,7 +34,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 6,
+ "schema_version": 7,
  "sources": [
   {
    "path": "de/ExportManifest.json",
@@ -234,6 +229,12 @@
    "url": "https://wiki.warframe.com/w/Enemy_Level_Scaling"
   },
   {
+   "path": "wiki/Epitaph.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "96cbe721931e8887",
+   "url": "https://wiki.warframe.com/w/Epitaph"
+  },
+  {
    "path": "wiki/Exilus_Mods.wikitext",
    "retrieved": "2026-11-08",
    "sha256_16": "d631522e3e0d83fc",
@@ -366,6 +367,24 @@
    "url": "https://wiki.warframe.com/w/Lumbering_Fragment"
   },
   {
+   "path": "wiki/Module_Weapons_data_melee.lua",
+   "retrieved": "2026-11-08",
+   "sha256_16": "633f674dc86fb9d5",
+   "url": "https://wiki.warframe.com/w/Module:Weapons/data/melee"
+  },
+  {
+   "path": "wiki/Module_Weapons_data_primary.lua",
+   "retrieved": "2026-11-08",
+   "sha256_16": "f00f60aa4dfca6ae",
+   "url": "https://wiki.warframe.com/w/Module:Weapons/data/primary"
+  },
+  {
+   "path": "wiki/Module_Weapons_data_secondary.lua",
+   "retrieved": "2026-11-08",
+   "sha256_16": "ae871e3a6f327955",
+   "url": "https://wiki.warframe.com/w/Module:Weapons/data/secondary"
+  },
+  {
    "path": "wiki/Multishot.wikitext",
    "retrieved": "2026-11-07",
    "sha256_16": "5ac03c170f1ddc57",
@@ -418,12 +437,6 @@
    "retrieved": "2026-11-08",
    "sha256_16": "599c88517a226870",
    "url": "https://wiki.warframe.com/w/Ruvox"
-  },
-  {
-   "path": "wiki/Sandbox2.wikitext",
-   "retrieved": "2026-11-07",
-   "sha256_16": "85c9eedf1394bd0b",
-   "url": "https://wiki.warframe.com/w/Sandbox2"
   },
   {
    "path": "wiki/Scaldra.wikitext",

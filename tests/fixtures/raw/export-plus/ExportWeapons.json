@@ -74,6 +74,78 @@
   "trigger": "CHARGE",
   "variantType": "VT_NORMAL"
  },
+ "/Lotus/Weapons/Corpus/LongGuns/CrpSplitLaser/CrpSplitLaser": {
+  "accuracy": 50,
+  "behaviours": [
+   {
+    "fireIterations": 2,
+    "impact": {
+     "DT_IMPACT": 1.2,
+     "DT_PUNCTURE": 1.2,
+     "DT_SLASH": 9.6,
+     "procChance": 0.9
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerContinous"
+   },
+   {
+    "fireIterations": 2,
+    "impact": {
+     "DT_IMPACT": 0.9,
+     "DT_PUNCTURE": 0.9,
+     "DT_SLASH": 7.2,
+     "procChance": 0.9
+    }
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "BEAM"
+  ],
+  "criticalChance": 0.16,
+  "criticalMultiplier": 2.4,
+  "damagePerShot": [
+   1.2,
+   1.2,
+   9.6,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Items/CrpSplitLaserDesc",
+  "fireRate": 12.000001,
+  "holsterCategory": "WIDE_RIFLE",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Convectrix.png",
+  "introducedAt": 1443751533,
+  "masteryReq": 7,
+  "multishot": 2,
+  "name": "/Lotus/Language/Items/CrpSplitLaserName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1.46,
+  "parentName": "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun",
+  "platinumCost": 175,
+  "procChance": 0.45,
+  "productCategory": "LongGuns",
+  "reloadTime": 2,
+  "slot": 1,
+  "totalDamage": 12,
+  "tradable": false,
+  "trigger": "HELD",
+  "variantType": "VT_NORMAL"
+ },
  "/Lotus/Weapons/Corpus/Pistols/CrpAirPistol/CrpAirPistolArray": {
   "accuracy": 100,
   "behaviours": [
@@ -327,6 +399,144 @@
   "tradable": false,
   "trigger": "BURST",
   "variantType": "VT_KUVA"
+ },
+ "/Lotus/Weapons/Infested/LongGuns/Tentacluster/InfestedShotgun": {
+  "accuracy": 50,
+  "behaviours": [
+   {
+    "fireIterations": 6,
+    "impact": {
+     "DT_VIRAL": 5,
+     "procChance": 0.93
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerContinous"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "BEAM"
+  ],
+  "criticalChance": 0.19,
+  "criticalMultiplier": 2,
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   5,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Items/InfestedShotgunDesc",
+  "fireRate": 12.000001,
+  "holsterCategory": "WIDE_RIFLE",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Phage.png",
+  "introducedAt": 1391656799,
+  "magazineSize": 90,
+  "masteryReq": 11,
+  "multishot": 7,
+  "name": "/Lotus/Language/Items/InfestedShotgunName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1.46,
+  "parentName": "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun",
+  "platinumCost": 175,
+  "procChance": 0.155,
+  "productCategory": "LongGuns",
+  "reloadTime": 2,
+  "slot": 1,
+  "totalDamage": 5,
+  "tradable": false,
+  "trigger": "HELD",
+  "variantType": "VT_NORMAL"
+ },
+ "/Lotus/Weapons/Infested/Pistols/InfestedPistol": {
+  "accuracy": 100,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_POISON": 35,
+     "procChance": 0.41
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerContinous"
+   },
+   {
+    "impact": {
+     "DT_POISON": 14,
+     "procChance": 0
+    },
+    "projectile": {
+     "attack": {
+      "DT_IMPACT": 10,
+      "procChance": 0
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "BEAM",
+   "AOE"
+  ],
+  "criticalChance": 0.03,
+  "criticalMultiplier": 1.5,
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   35,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Items/InfestedPistolDesc",
+  "excludeFromMarket": true,
+  "fireRate": 8,
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Embolist.png",
+  "introducedAt": 1379122770,
+  "magazineSize": 33,
+  "masteryReq": 9,
+  "multishot": 1,
+  "name": "/Lotus/Language/Items/InfestedPistolName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1.4,
+  "parentName": "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam",
+  "platinumCost": 175,
+  "procChance": 0.41,
+  "productCategory": "Pistols",
+  "reloadTime": 1.3,
+  "slot": 0,
+  "totalDamage": 35,
+  "tradable": false,
+  "trigger": "HELD",
+  "variantType": "VT_NORMAL"
  },
  "/Lotus/Weapons/Operator/Pistols/DrifterPistol/DrifterPistolPlayerWeapon": {
   "accuracy": 16,
@@ -796,6 +1006,94 @@
   "tradable": false,
   "trigger": "SEMI",
   "variantType": "VT_PRIME"
+ },
+ "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon": {
+  "accuracy": 80,
+  "behaviours": [
+   {
+    "chargedProjectile": {
+     "attack": {
+      "DT_IMPACT": 120.000003,
+      "DT_PUNCTURE": 45.000003,
+      "DT_SLASH": 134.999997,
+      "procChance": 0.04
+     }
+    },
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 150,
+     "procChance": 0
+    },
+    "projectile": {
+     "attack": {
+      "DT_IMPACT": 40.000001,
+      "DT_PUNCTURE": 30.000001,
+      "DT_SLASH": 29.999995,
+      "procChance": 0.5
+     },
+     "embedDeathAttack": {
+      "DT_RADIATION": 200,
+      "procChance": 0.5
+     },
+     "explosiveAttack": {
+      "DT_EXPLOSION": 20,
+      "procChance": 0.5
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerCharge"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "PROJECTILE",
+   "SINGLESHOT",
+   "AOE"
+  ],
+  "criticalChance": 0.02,
+  "criticalMultiplier": 1.2,
+  "damagePerShot": [
+   120,
+   45,
+   135,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Weapons/TnWraitheSidearmDesc",
+  "fireRate": 1.5,
+  "holsterCategory": "ARM_MOUNTED",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/TnWraithSidearmWeapon.png",
+  "introducedAt": 1618337042,
+  "magazineSize": 1,
+  "masteryReq": 8,
+  "multishot": 1,
+  "name": "/Lotus/Language/Weapons/TnWraitheSidearmName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 0.6,
+  "parentName": "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+  "platinumCost": 200,
+  "procChance": 0.04,
+  "productCategory": "Pistols",
+  "reloadTime": 0.6,
+  "slot": 0,
+  "totalDamage": 300,
+  "tradable": false,
+  "trigger": "CHARGE",
+  "variantType": "VT_NORMAL"
  },
  "/Lotus/Weapons/Tenno/Rifle/BratonPrime": {
   "accuracy": 28.571428,

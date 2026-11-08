@@ -55,6 +55,11 @@
   "wfcd_name": "Dera"
  },
  {
+  "de_name": "Lanka",
+  "unique_name": "/Lotus/Weapons/ClanTech/Energy/Railgun",
+  "wfcd_name": "Lanka"
+ },
+ {
   "de_name": "Tenet Arca Plasmor",
   "unique_name": "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEArcaPlasmor/CrpBEArcaPlasmor",
   "wfcd_name": "Tenet Arca Plasmor"

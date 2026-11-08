@@ -1,0 +1,133 @@
+"""Weapon data modules of the WARFRAME Wiki (`Module:Weapons/data/<slot>`), saved by hand (T2).
+
+Read only for data DE and WFCD lack, per attack: forced procs (saved Status_Effect,
+Forced Procs), burst count and delay (saved Fire_Rate), and per weapon: sniper minimum
+combo (saved Sniper_Rifle) and attacks with no delay between shots (`FireRate =
+math.huge`: Lanka, saved Fire_Rate). Keyed by `InternalName` = DE uniqueName; attack
+names equal WFCD's. Wiki-derived: CC BY-NC-SA 3.0 (NOTICE).
+"""
+
+import math
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
+
+from app.domain.effects import DamageType
+from app.domain.status import CrowdControl, ForcedProc
+from app.pipeline.errors import RefreshError
+from app.pipeline.sources.wiki_lua import LuaError, parse_module
+
+MODULES = ("Module_Weapons_data_primary", "Module_Weapons_data_secondary")
+SUFFIX = ".lua"
+
+# Wiki proc names -> our types; an unknown name fails the refresh.
+FORCED_PROCS: dict[str, ForcedProc] = {
+    "Impact": DamageType.IMPACT,
+    "Puncture": DamageType.PUNCTURE,
+    "Slash": DamageType.SLASH,
+    "Heat": DamageType.HEAT,
+    "Cold": DamageType.COLD,
+    "Electricity": DamageType.ELECTRICITY,
+    "Toxin": DamageType.TOXIN,
+    "Blast": DamageType.BLAST,
+    "Radiation": DamageType.RADIATION,
+    "Gas": DamageType.GAS,
+    "Magnetic": DamageType.MAGNETIC,
+    "Viral": DamageType.VIRAL,
+    "Corrosive": DamageType.CORROSIVE,
+    "Void": DamageType.VOID,
+    "Tau": DamageType.TAU,
+    "Knockdown": CrowdControl.KNOCKDOWN,
+    "Lifted": CrowdControl.LIFTED,
+    "Ragdoll": CrowdControl.RAGDOLL,
+    "Stagger": CrowdControl.STAGGER,
+    "Big Stagger": CrowdControl.BIG_STAGGER,
+    "Blind": CrowdControl.BLIND,
+    "Stun": CrowdControl.STUN,
+}
+
+
+@dataclass(frozen=True)
+class AttackData:
+    forced_procs: list[ForcedProc]
+    burst_count: int | None
+    burst_delay: float | None
+    no_shot_delay: bool  # FireRate = math.huge
+
+
+@dataclass(frozen=True)
+class WeaponData:
+    name: str
+    attacks: dict[str, AttackData]  # by attack name
+    sniper_combo_min: int | None
+
+    @property
+    def no_shot_delay(self) -> bool:
+        """Every attack fires again as soon as it is charged (Lanka)."""
+        return bool(self.attacks) and all(a.no_shot_delay for a in self.attacks.values())
+
+
+def load(wiki_dir: Path) -> dict[str, WeaponData]:
+    out: dict[str, WeaponData] = {}
+    for stem in MODULES:
+        path = wiki_dir / f"{stem}{SUFFIX}"
+        try:
+            module = parse_module(path.read_text(encoding="utf-8"))
+        except LuaError as error:
+            raise RefreshError(f"{path.name}: {error}") from error
+        if module == []:  # `{}`: Lua cannot tell an empty list from an empty table
+            module = {}
+        if not isinstance(module, dict):
+            raise RefreshError(f"{path.name}: expected a table of weapons")
+        for key, entry in module.items():
+            weapon = _weapon(f"{path.name} {key}", entry)
+            if weapon is None:
+                continue
+            unique_name, data = weapon
+            if unique_name in out:
+                raise RefreshError(f"{path.name} {key}: InternalName listed twice")
+            out[unique_name] = data
+    return out
+
+
+def _weapon(where: str, entry: Any) -> tuple[str, WeaponData] | None:
+    if not isinstance(entry, dict):
+        raise RefreshError(f"{where}: expected a table")
+    if entry.get("_IgnoreEntry"):
+        return None
+    unique_name = entry.get("InternalName")
+    if not isinstance(unique_name, str) or not unique_name:
+        raise RefreshError(f"{where}: no InternalName")
+    attacks: dict[str, AttackData] = {}
+    for attack in entry.get("Attacks") or []:
+        if not isinstance(attack, dict) or not isinstance(attack.get("AttackName"), str):
+            raise RefreshError(f"{where}: attack without AttackName")
+        name = attack["AttackName"]
+        if name in attacks:
+            raise RefreshError(f"{where}: attack {name!r} listed twice")
+        attacks[name] = _attack(f"{where} / {name}", attack)
+    combo = entry.get("SniperComboMin")
+    if combo is not None and (not isinstance(combo, int) or combo < 1):
+        raise RefreshError(f"{where}: SniperComboMin must be a positive integer")
+    return unique_name, WeaponData(str(entry.get("Name", "")), attacks, combo)
+
+
+def _attack(where: str, a: dict[str, Any]) -> AttackData:
+    procs = a.get("ForcedProcs") or []
+    if not isinstance(procs, list):
+        raise RefreshError(f"{where}: ForcedProcs is not a list")
+    unknown = [p for p in procs if p not in FORCED_PROCS]
+    if unknown:
+        raise RefreshError(f"{where}: unknown forced procs {unknown}")
+    count = a.get("BurstCount")
+    delay = a.get("BurstDelay")
+    if count is not None and (not isinstance(count, int) or count < 1):
+        raise RefreshError(f"{where}: BurstCount must be a positive integer")
+    if delay is not None and (not isinstance(delay, int | float) or not 0 <= delay < math.inf):
+        raise RefreshError(f"{where}: BurstDelay must be a finite number >= 0")
+    return AttackData(
+        forced_procs=[FORCED_PROCS[p] for p in procs],
+        burst_count=count,
+        burst_delay=float(delay) if delay is not None else None,
+        no_shot_delay=a.get("FireRate") == math.inf,
+    )

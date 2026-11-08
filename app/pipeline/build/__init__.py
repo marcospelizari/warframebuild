@@ -6,9 +6,10 @@ from pathlib import Path
 from app.gamedata.models import Arcane, Exclusion, Join, Mod, ModSet, Weapon
 from app.pipeline.build import arcanes, mods, weapons
 from app.pipeline.build.effects import Overrides
+from app.pipeline.build.fire import FireOverrides
 from app.pipeline.build.inputs import as_list, records, reference
 from app.pipeline.errors import RefreshError
-from app.pipeline.sources import export_plus, load_json
+from app.pipeline.sources import export_plus, load_json, wiki_weapon_data
 
 __all__ = ["Dataset", "build"]
 
@@ -37,8 +38,9 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         records(load_json(de / "ExportWeapons_en.json"), "ExportWeapons"),
         wfcd,
         records(load_json(de / "ExportManifest.json"), "Manifest"),
-        reference(reference_dir / "fire_overrides.json")["weapons"],
+        FireOverrides.load(reference(reference_dir / "fire_overrides.json")),
         plus.weapon_tags,
+        wiki_weapon_data.load(raw_dir / "wiki"),
     )
     overrides = Overrides(reference(reference_dir / "overrides.json"))
     mod_list, sets, denied = mods.build(

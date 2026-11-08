@@ -150,6 +150,13 @@
         "enemy stats at Steel Path level (enemies.json)"
       ]
     },
+    "Epitaph": {
+      "title": "Epitaph",
+      "impact": "medium",
+      "feeds": [
+        "Epitaph no reload between shots (fire_overrides.json, G10)"
+      ]
+    },
     "Exilus_Mods": {
       "title": "Exilus_Mods",
       "impact": "high",
@@ -288,6 +295,30 @@
       "impact": "medium",
       "feeds": [
         "representative The Murmur enemy (enemies.json, step 8)"
+      ]
+    },
+    "Module_Weapons_data_melee": {
+      "title": "Module:Weapons/data/melee",
+      "impact": "low",
+      "format": "lua",
+      "feeds": [
+        "melee weapons (later; not read yet)"
+      ]
+    },
+    "Module_Weapons_data_primary": {
+      "title": "Module:Weapons/data/primary",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "forced procs, burst count and delay, sniper minimum combo, no delay between shots (weapons.json, step 4)"
+      ]
+    },
+    "Module_Weapons_data_secondary": {
+      "title": "Module:Weapons/data/secondary",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "forced procs, burst count and delay, no delay between shots (weapons.json, step 4)"
       ]
     },
     "Multishot": {

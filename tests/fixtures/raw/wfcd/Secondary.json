@@ -171,6 +171,309 @@
   "accuracy": 100,
   "attacks": [
    {
+    "crit_chance": 3,
+    "crit_mult": 1.5,
+    "damage": {
+     "toxin": 35
+    },
+    "name": "Normal Attack",
+    "shot_type": "Hit-Scan",
+    "speed": 8,
+    "status_chance": 41
+   }
+  ],
+  "bpCost": 50000,
+  "buildPrice": 30000,
+  "buildQuantity": 1,
+  "buildTime": 86400,
+  "category": "Secondary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Weapons/ClanTech/Bio/InfestedPistolBioWeaponBlueprint"
+   },
+   {
+    "itemCount": 1200,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Circuits"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Forma"
+   },
+   {
+    "itemCount": 5,
+    "uniqueName": "/Lotus/Types/Items/Research/BioComponent"
+   },
+   {
+    "itemCount": 15000,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Salvage"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.029999999,
+  "criticalMultiplier": 1.5,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 0,
+   "magnetic": 0,
+   "puncture": 0,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 0,
+   "tau": 0,
+   "total": 35,
+   "toxin": 35,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   35,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "A living weapon, the infested Embolist pistol kills its victims with an acidic venomous gas.",
+  "disposition": 4,
+  "exilusPolarity": "naramon",
+  "fireRate": 8,
+  "imageName": "Embolist.png",
+  "introduced": {
+   "aliases": [
+    "Update 10",
+    "10",
+    "10.0"
+   ],
+   "date": "2013-09-13",
+   "name": "Update 10.0",
+   "parent": "10.0",
+   "url": "https://wiki.warframe.com/w/Update_10%23Update_10.0"
+  },
+  "isPrime": false,
+  "magazineSize": 33,
+  "masterable": true,
+  "masteryReq": 9,
+  "multishot": 1,
+  "name": "Embolist",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "naramon"
+  ],
+  "procChance": 0.40999997,
+  "productCategory": "Pistols",
+  "releaseDate": "2013-09-13",
+  "reloadTime": 1.3,
+  "skipBuildTimePrice": 35,
+  "slot": 0,
+  "tags": [
+   "Infested"
+  ],
+  "totalDamage": 35,
+  "tradable": false,
+  "trigger": "Held",
+  "type": "Pistol",
+  "uniqueName": "/Lotus/Weapons/Infested/Pistols/InfestedPistol",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Embolist.png?a05c2",
+  "wikiaUrl": "https://wiki.warframe.com/w/Embolist"
+ },
+ {
+  "accuracy": 80,
+  "attacks": [
+   {
+    "charge_time": 0.4,
+    "crit_chance": 48,
+    "crit_mult": 2.6,
+    "damage": {
+     "impact": 120,
+     "puncture": 45,
+     "slash": 135
+    },
+    "flight": 200,
+    "name": "Charged Shot",
+    "shot_speed": 200,
+    "shot_type": "Projectile",
+    "speed": 1.5,
+    "status_chance": 4
+   },
+   {
+    "crit_chance": 2,
+    "crit_mult": 1.2,
+    "damage": {
+     "impact": 40,
+     "puncture": 30,
+     "slash": 30
+    },
+    "flight": 50,
+    "name": "Uncharged Direct Hit",
+    "shot_speed": 50,
+    "shot_type": "Projectile",
+    "speed": 1.5,
+    "status_chance": 50
+   },
+   {
+    "crit_chance": 2,
+    "crit_mult": 1.2,
+    "damage": {
+     "blast": 20
+    },
+    "falloff": {
+     "end": 8,
+     "reduction": 0.8,
+     "start": 0
+    },
+    "name": "Uncharged AoE",
+    "shot_type": "AoE",
+    "speed": 1.5,
+    "status_chance": 50
+   }
+  ],
+  "buildPrice": 15000,
+  "buildQuantity": 1,
+  "buildTime": 43200,
+  "category": "Secondary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/WraithSidearmBarrel"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WraithSidearmBlueprint"
+   },
+   {
+    "itemCount": 7,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/OrokinCell"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/WraithSidearmReceiver"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.02,
+  "criticalMultiplier": 1.2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 120,
+   "magnetic": 0,
+   "puncture": 45,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 135,
+   "tau": 0,
+   "total": 300,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   120,
+   45,
+   135,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "Sevagoth's wrist-mounted sidearm fires a chilling slow-moving slab, guaranteed to slow enemies for easier marksmanship. Charge the shot to fire a punishing high-velocity, high critical chance slab that punches through barriers. Deals additional headshot damage in Sevagoth's hands.",
+  "disposition": 4,
+  "exilusPolarity": "naramon",
+  "fireRate": 1.5000001,
+  "imageName": "TnWraithSidearmWeapon.png",
+  "introduced": {
+   "aliases": [
+    "30",
+    "30.0",
+    "Call of the Tempestarii"
+   ],
+   "date": "2021-04-13",
+   "name": "Update 30.0",
+   "parent": "30.0",
+   "url": "https://wiki.warframe.com/w/Update_30"
+  },
+  "isPrime": false,
+  "magazineSize": 1,
+  "marketCost": 225,
+  "masterable": true,
+  "masteryReq": 8,
+  "multishot": 1,
+  "name": "Epitaph",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "madurai",
+   "madurai"
+  ],
+  "procChance": 0.040000021,
+  "productCategory": "Pistols",
+  "releaseDate": "2021-04-13",
+  "reloadTime": 0.60000002,
+  "skipBuildTimePrice": 35,
+  "slot": 0,
+  "tags": [],
+  "totalDamage": 300,
+  "tradable": true,
+  "trigger": "Charge",
+  "type": "Pistol",
+  "uniqueName": "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Epitaph.png?77a9d",
+  "wikiaUrl": "https://wiki.warframe.com/w/Epitaph"
+ },
+ {
+  "accuracy": 100,
+  "attacks": [
+   {
     "crit_chance": 20,
     "crit_mult": 2,
     "damage": {
