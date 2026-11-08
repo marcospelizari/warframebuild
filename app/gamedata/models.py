@@ -5,6 +5,7 @@ from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from app.domain.direct_bonus import DirectBonus
 from app.domain.effects import DamageType, Effect, Support
 from app.domain.status import ForcedProc
 
@@ -51,6 +52,9 @@ class Attack(Model):
     burst_count: Annotated[int, Field(ge=1)] | None = None
     burst_delay: NonNegative | None = None
     ammo_cost: NonNegative | None = None  # ammo per shot, 0 = none; None = not in the module
+    # How a Galvanized-style bonus joins this attack's damage (G56): default from the shot
+    # type, exceptions from reference/galvanized_behaviour.json.
+    direct_bonus: DirectBonus = DirectBonus.ADDING
 
 
 class Weapon(Model):
@@ -150,7 +154,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[9] = 9
+    schema_version: Literal[10] = 10
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

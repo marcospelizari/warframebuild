@@ -1,3 +1,4 @@
+import json
 import shutil
 from pathlib import Path
 
@@ -47,9 +48,23 @@ def paths(tmp_path: Path) -> Paths:
     (raw / "wiki").mkdir()
     reference = tmp_path / "reference"
     shutil.copytree(ROOT / "reference", reference)
+    _keep_fixture_guns(raw, reference / "galvanized_behaviour.json")
     for page in wiki_local.pages(reference):
         stub = MODULE_STUBS.get(page.stem, "return {}") if page.format == "lua" else "stub"
         (raw / "wiki" / page.filename).write_text(stub, encoding="utf-8")
     return Paths(
         raw=raw, reference=reference, gamedata=tmp_path / "gamedata", img=tmp_path / "cache/img"
     )
+
+
+def _keep_fixture_guns(raw: Path, table: Path) -> None:
+    """The real table names ~70 guns; the fixtures hold a few. Rows for other guns are
+    checked against the committed gamedata/ by tests/pipeline/test_direct_bonus.py."""
+    guns = {
+        w["uniqueName"]
+        for name in ("Primary.json", "Secondary.json")
+        for w in json.loads((raw / "wfcd" / name).read_text())
+    }
+    data = json.loads(table.read_text())
+    data["weapons"] = {u: row for u, row in data["weapons"].items() if u in guns}
+    table.write_text(json.dumps(data))

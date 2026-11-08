@@ -128,6 +128,9 @@ class Effect(BaseModel):
     # Value per WFCD weapon_type where it differs ("x2 for Bows" -> {"Bow": 2 * value}).
     class_values: dict[str, float] = Field(default_factory=dict)
     fire_rate_boost: FireRateBoost | None = None
+    # Value counts once per status type on the target (Galvanized: "+40% Direct Damage per
+    # Status Type affecting the target").
+    per_status_type: bool = False
 
     @model_validator(mode="after")
     def _shape(self) -> "Effect":
@@ -144,6 +147,8 @@ class Effect(BaseModel):
             raise ValueError("trigger_damage_type only on on_status")
         if self.fire_rate_boost is not None and self.stat != Stat.FORCED_PROC:
             raise ValueError("fire_rate_boost only on forced_proc")
+        if self.per_status_type and self.stat != Stat.DIRECT_DAMAGE:
+            raise ValueError("per_status_type only on direct_damage")
         return self
 
 

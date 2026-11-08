@@ -8,10 +8,11 @@ DoT and fire rate are steps 4c and 8.
 
 import math
 from collections.abc import Mapping, Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 
 from app.domain import crit
 from app.domain.damage import composition, element_bonuses, scaled
+from app.domain.direct_bonus import DirectBonus, damage_factor
 from app.domain.effects import DamageType, Effect, Faction, Stat
 from app.domain.elements import Part
 from app.domain.stats import modded
@@ -38,6 +39,7 @@ class ModdedHit:
     faction_multiplier: dict[Faction, float]  # Bane-style factor per faction (1 if none)
     crit_upgrade_chance: float  # Vigilante set (crit_tier_upgrade)
     modded_base: float  # base damage total x damage bonuses: the DoT seed before crit
+    damage_multiplier: float  # Serration group x separate damage factors
     element_bonus: dict[DamageType, float]  # mod bonus behind each final element (DoT)
     status_damage: float  # bonus (Elementalist), additive group, separate factor on DoT
     status_duration: float  # bonus (Hunter Track +0.9)
@@ -97,7 +99,16 @@ def modded_hit(
             1.0, math.fsum(v for e, v in bonuses if e.stat == Stat.CRIT_TIER_UPGRADE)
         ),
         modded_base=math.fsum(base.damage.values()) * damage_multiplier,
+        damage_multiplier=damage_multiplier,
         element_bonus=element_bonuses(elements),
         status_damage=modded(1.0, Stat.STATUS_DAMAGE, bonuses) - 1,
         status_duration=modded(1.0, Stat.STATUS_DURATION, bonuses) - 1,
     )
+
+
+def with_direct_bonus(hit: ModdedHit, behaviour: DirectBonus, direct: float) -> ModdedHit:
+    """The hit with a Galvanized-style bonus of `direct` applied the attack's way."""
+    if hit.damage_multiplier <= 0:
+        return hit  # no damage to scale
+    factor = damage_factor(behaviour, hit.damage_multiplier, direct)
+    return replace(hit, damage=scaled(hit.damage, factor / hit.damage_multiplier))
