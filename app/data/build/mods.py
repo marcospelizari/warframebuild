@@ -7,12 +7,13 @@ from typing import Any
 from pydantic import ValidationError
 
 from app.data.build.common import RefreshError, clean_levels, clean_text, records
+from app.data.build.effects import Overrides, set_bonuses
 from app.data.models import Category, Mod, ModSet
 from app.data.sources.de_export import MOD_CATEGORY
 
 
 def build(
-    upgrades: Any, mod_filter: dict[str, Any]
+    upgrades: Any, mod_filter: dict[str, Any], overrides: Overrides
 ) -> tuple[list[Mod], list[ModSet], dict[str, int]]:
     rules = mod_filter["rules"]
     allow = {a["id"] for a in mod_filter.get("allow", [])}
@@ -43,7 +44,7 @@ def build(
         )
 
     try:
-        mods = sorted((_mod(m) for m in kept), key=lambda m: m.unique_name)
+        mods = sorted((_mod(m, overrides) for m in kept), key=lambda m: m.unique_name)
     except ValidationError as error:
         raise RefreshError(f"invalid mod values: {error}") from error
     used_sets = {m.mod_set for m in mods if m.mod_set}
@@ -51,18 +52,23 @@ def build(
     missing = sorted(used_sets - sets_raw.keys())
     if missing:
         raise RefreshError(f"mod sets missing in ExportModSet: {missing}")
-    sets = [
-        ModSet(
-            unique_name=uid,
-            num_upgrades=sets_raw[uid]["numUpgradesInSet"],
-            stats=[clean_text(s) for s in sets_raw[uid].get("stats", [])],
+    sets = []
+    for uid in sorted(used_sets):
+        stats = [clean_text(s) for s in sets_raw[uid].get("stats", [])]
+        sets.append(
+            ModSet(
+                unique_name=uid,
+                num_upgrades=sets_raw[uid]["numUpgradesInSet"],
+                stats=stats,
+                bonuses=set_bonuses(stats),
+            )
         )
-        for uid in sorted(used_sets)
-    ]
     return mods, sets, dict(sorted(denied.items()))
 
 
-def _mod(m: dict[str, Any]) -> Mod:
+def _mod(m: dict[str, Any], overrides: Overrides) -> Mod:
+    description = clean_text("\n".join(m.get("description") or []))
+    levels = clean_levels(m["levelStats"])
     return Mod(
         unique_name=m["uniqueName"],
         name=m["name"],
@@ -74,8 +80,9 @@ def _mod(m: dict[str, Any]) -> Mod:
         fusion_limit=m["fusionLimit"],
         is_utility=bool(m.get("isUtility", False)),
         mod_set=m.get("modSet"),
-        description=clean_text("\n".join(m.get("description") or [])),
-        level_stats=clean_levels(m["levelStats"]),
+        description=description,
+        level_stats=levels,
+        effects=overrides.effects(m["uniqueName"], levels[-1], description),
     )
 
 

@@ -46,12 +46,14 @@ class Report:
     diff: check.EntryDiff = field(default_factory=check.EntryDiff)
     touched: list[check.RefRow] = field(default_factory=list)
     wiki: list[str] = field(default_factory=list)
+    support: list[str] = field(default_factory=list)
     image_failures: list[str] = field(default_factory=list)
 
     def lines(self) -> list[str]:
         out = check.source_lines(self.source_changes)
         out += self._dataset_lines(self.meta, self.previous)
         out += check.diff_lines(self.diff, self.touched, self.meta.changed_on)
+        out += self.support
         out += self.wiki
         if self.image_failures:
             out.append(f"{len(self.image_failures)} image downloads failed:")
@@ -128,6 +130,7 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
         source_changes=changes,
         diff=diff,
         touched=check.touched_rows(reference_rows, diff),
+        support=check.support_lines(dataset),
         # After a game update the saved wiki pages need a look too.
         wiki=check.wiki_lines(paths.raw, paths.reference) if changes else [],
     )

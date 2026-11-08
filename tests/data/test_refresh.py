@@ -114,3 +114,14 @@ def test_offline_refuses_files_left_by_a_killed_refresh(paths: Paths) -> None:
     (paths.raw / "wfcd/.Primary.json.prev").write_text("[]")
     with pytest.raises(RuntimeError, match=r"wfcd/\.Primary\.json\.prev"):
         run(paths, offline=True, fetch_images=False)
+
+
+def test_report_lists_support_coverage(paths: Paths) -> None:
+    report = run(paths, offline=True, fetch_images=False)
+    counts = report.meta.counts
+    assert (
+        counts["mods_full"] + counts["mods_partial"] + counts["mods_unsupported"] == counts["mods"]
+    )
+    text = "\n".join(report.lines())
+    assert "support (damage-related text not modelled):" in text
+    assert "Galvanized Aptitude" in text  # partial: per-status-type bonus

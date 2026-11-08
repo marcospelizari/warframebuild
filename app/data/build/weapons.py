@@ -6,8 +6,9 @@ from typing import Any
 from pydantic import ValidationError
 
 from app.data.build.common import RefreshError, slugify
-from app.data.models import Attack, DamageType, Exclusion, Falloff, Join, Weapon
+from app.data.models import Attack, Exclusion, Falloff, Join, Weapon
 from app.data.sources.de_export import DAMAGE_SLOT_COUNT, DAMAGE_SLOTS, WEAPON_CATEGORY
+from app.domain.effects import DamageType
 
 
 def build(

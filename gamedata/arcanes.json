@@ -1,6 +1,15 @@
 [
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "While sliding or aim gliding: Gain 65% ammo efficiency with Dual Pistols."
+   ]
+  },
   "level_stats": [
    [
     "While sliding or aim gliding: Gain 15% ammo efficiency with Dual Pistols."
@@ -28,6 +37,15 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Next shot gains a Damage Multiplier for every 200 current Energy, up to x8."
+   ]
+  },
   "level_stats": [
    [
     "On Ability Cast: Next shot gains a Damage Multiplier for every 200 current Energy, up to x3."
@@ -55,6 +73,15 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Gain +1% damage for each unit of armor past 1,000, up to a max of +500%."
+   ]
+  },
   "level_stats": [
    [
     "Gain +1% damage for each unit of armor past 1,000, up to a max of +250%."
@@ -82,6 +109,15 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Gain +300% damage on your next shot."
+   ]
+  },
   "level_stats": [
    [
     "On Weak Point Hit: Gain +50% damage on your next shot."
@@ -109,6 +145,15 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On swapping to Secondary Weapon, consume all Combo Multipliers to increase Secondary Weapon Critical Chance and Critical Damage by 20% per Combo consumed for 30s."
+   ]
+  },
   "level_stats": [
    [
     "On swapping to Secondary Weapon, consume all Combo Multipliers to increase Secondary Weapon Critical Chance and Critical Damage by 5% per Combo consumed for 30s."
@@ -136,6 +181,15 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "While at or above 90% Energy: Gain 35% of Max Energy as Multishot, capped at 350%."
+   ]
+  },
   "level_stats": [
    [
     "While at or above 90% Energy: Gain 35% of Max Energy as Multishot, capped at 100%."
@@ -163,6 +217,16 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Gain 1 Overguard for every 100 Damage dealt to an enemy's Overguard.",
+    "Deals x8 Extra Damage to Overguard."
+   ]
+  },
   "level_stats": [
    [
     "Gain 1 Overguard for every 100 Damage dealt to an enemy's Overguard.\nDeals x3 Extra Damage to Overguard.",
@@ -196,6 +260,42 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "stat": "critical_damage",
+     "trigger": "on_status",
+     "trigger_damage_type": "cold",
+     "value": 0.03,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "stat": "multishot",
+     "trigger": "on_status",
+     "trigger_damage_type": "cold",
+     "value": 0.0225,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Cold Status Effect:\n+0.5% Critical Damage and +0.38% Multishot for 12s. Stacks up to 40x."
@@ -223,6 +323,42 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 4.0,
+     "faction": null,
+     "max_stacks": 12,
+     "operation": "stacking_multiply",
+     "stat": "damage",
+     "trigger": "on_kill",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "stat": "reload_speed",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Kill:\n+5% Damage for 4s. Stacks up to 12x."
@@ -251,6 +387,28 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 20.0,
+     "faction": null,
+     "max_stacks": 6,
+     "operation": "stacking_multiply",
+     "stat": "damage",
+     "trigger": "on_melee_kill",
+     "trigger_damage_type": null,
+     "value": 0.6,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Melee Kill:\n+10% Damage for 20s. Stacks up to 6x."
@@ -279,6 +437,42 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 24.0,
+     "faction": null,
+     "max_stacks": 3,
+     "operation": "stacking_multiply",
+     "stat": "damage",
+     "trigger": "on_weak_point_kill",
+     "trigger_damage_type": null,
+     "value": 1.2,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "stat": "headshot_multiplier",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Weak Point Kill:\n+20% Damage for 24s. Stacks up to 3x."
@@ -308,6 +502,16 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Deal increased damage per round loaded based on max magazine size.",
+    "Lasts for 10s."
+   ]
+  },
   "level_stats": [
    [
     "On Reload: Deal increased damage per round loaded based on max magazine size. Lasts for 3s."
@@ -335,6 +539,13 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Weapon Impact Status Effect:\n+0.2 Energy Regen/s for 10s. Stacks up to 3x."
@@ -362,6 +573,42 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "stat": "critical_damage",
+     "trigger": "on_status",
+     "trigger_damage_type": "toxin",
+     "value": 0.036,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "stat": "multishot",
+     "trigger": "on_status",
+     "trigger_damage_type": "toxin",
+     "value": 0.018,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Toxin Status Effect:\n+0.6% Critical Damage and +0.3% Multishot for 12s. Stacks up to 40x."
@@ -389,6 +636,16 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Enemy weapons jam within 15m of target.",
+    "Cooldown 10s."
+   ]
+  },
   "level_stats": [
    [
     "On Weapon Magnetic Status Effect: Enemy weapons jam within 15m of target. Cooldown 60s."
@@ -416,6 +673,15 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On hitting enemies afflicted by 10 stacks of Radiation: Deal 180% of the hit damage to enemies within 7m."
+   ]
+  },
   "level_stats": [
    [
     "On hitting enemies afflicted by 10 stacks of Radiation: Deal 80% of the hit damage to enemies within 4.5m."
@@ -443,6 +709,15 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On Puncture: Apply 3 Cold stacks on targets within 15m."
+   ]
+  },
   "level_stats": [
    [
     "On Puncture: Apply 1 Cold stacks on targets within 10m."
@@ -470,6 +745,15 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "While Buffing Ally Warframes: +20% Critical Chance per buff"
+   ]
+  },
   "level_stats": [
    [
     "While Buffing Ally Warframes: +3% Critical Chance per buff"
@@ -497,6 +781,16 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Increase Critical Chance by 10%.",
+    "Resets after 6 Big Critical Hit."
+   ]
+  },
   "level_stats": [
    [
     "On Hit: Increase Critical Chance by 10%. Resets after 1 Big Critical Hit."
@@ -524,6 +818,28 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 10.0,
+     "faction": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "stat": "damage",
+     "trigger": "on_status",
+     "trigger_damage_type": "heat",
+     "value": 0.12,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Heat Status Effect:\n+2% Damage for 10s. Stacks up to 80%."
@@ -551,6 +867,42 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 4.0,
+     "faction": null,
+     "max_stacks": 12,
+     "operation": "stacking_multiply",
+     "stat": "damage",
+     "trigger": "on_kill",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "stat": "reload_speed",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Kill:\n+5% Damage for 4s. Stacks up to 12x."
@@ -579,6 +931,28 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 20.0,
+     "faction": null,
+     "max_stacks": 6,
+     "operation": "stacking_multiply",
+     "stat": "damage",
+     "trigger": "on_melee_kill",
+     "trigger_damage_type": null,
+     "value": 0.6,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Melee Kill:\n+10% Damage for 20s. Stacks up to 6x."
@@ -607,6 +981,42 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 24.0,
+     "faction": null,
+     "max_stacks": 3,
+     "operation": "stacking_multiply",
+     "stat": "damage",
+     "trigger": "on_weak_point_kill",
+     "trigger_damage_type": null,
+     "value": 1.2,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "stat": "headshot_multiplier",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Weak Point Kill:\n+20% Damage for 24s. Stacks up to 3x."
@@ -636,6 +1046,15 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Enemies take +45% damage per Cold Status"
+   ]
+  },
   "level_stats": [
    [
     "Enemies take +7.5% damage per Cold Status"
@@ -663,6 +1082,42 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "stat": "reload_speed",
+     "trigger": "on_status",
+     "trigger_damage_type": "electricity",
+     "value": 0.015,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "stat": "multishot",
+     "trigger": "on_status",
+     "trigger_damage_type": "electricity",
+     "value": 0.03,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Electricity Status Effect:\n+0.25% Reload Speed and +0.5% Multishot for 12s. Stacks up to 40x."
@@ -690,6 +1145,15 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On shotgun kill within 5m of target: +180% Multishot and +75% Reload Speed for 15s."
+   ]
+  },
   "level_stats": [
    [
     "On shotgun kill within 5m of target:\n+30% Multishot and +12.5% Reload Speed for 15s."
@@ -717,6 +1181,15 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "If an enemy has 10 stacks of a combined Status Effect, inflicting the same Status Effect again has a 100% chance to inflict one of the base Status Effects it is composed of."
+   ]
+  },
   "level_stats": [
    [
     "If an enemy has 10 stacks of a combined Status Effect, inflicting the same Status Effect again has a 50% chance to inflict one of the base Status Effects it is composed of."
@@ -744,6 +1217,42 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 10.0,
+     "faction": null,
+     "max_stacks": 10,
+     "operation": "stacking_multiply",
+     "stat": "status_chance",
+     "trigger": "on_weak_point_hit",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 10.0,
+     "faction": null,
+     "max_stacks": 10,
+     "operation": "stacking_multiply",
+     "stat": "ammo_efficiency",
+     "trigger": "on_weak_point_hit",
+     "trigger_damage_type": null,
+     "value": 0.06,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Weak Point Hit: Gain +5% Status Chance and +1% Ammo Efficiency for 10s. Stacks up to 10x."
@@ -771,6 +1280,15 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On aim: x0.2 explosion radius, +100% damage and +5.5% ammo efficiency for every 1m radius lost."
+   ]
+  },
   "level_stats": [
    [
     "On aim: x0.2 explosion radius, +50% damage and +3.0% ammo efficiency for every 1m radius lost."
@@ -798,6 +1316,15 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "+24% chance to trigger a second random Status Effect."
+   ]
+  },
   "level_stats": [
    [
     "On Status Effect: +4% chance to trigger a second random Status Effect."
@@ -825,6 +1352,28 @@
  },
  {
   "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 5.0,
+     "faction": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "stat": "reload_speed",
+     "trigger": "on_ability_cast",
+     "trigger_damage_type": null,
+     "value": 2.4,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
   "level_stats": [
    [
     "On Ability Cast:\n+40% Reload Speed for 5s"
@@ -852,6 +1401,15 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "While Overshields Active: +300% Critical Chance"
+   ]
+  },
   "level_stats": [
    [
     "While Overshields Active: +50% Critical Chance"
@@ -879,6 +1437,15 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On Roll: +300% Critical Chance on Weak Point Hits for 4s"
+   ]
+  },
   "level_stats": [
    [
     "On Roll:\n+50% Critical Chance on Weak Point Hits for 4s"
@@ -906,6 +1473,15 @@
  },
  {
   "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Deals +750 Damage matching the Damage Type of the Status Effect"
+   ]
+  },
   "level_stats": [
    [
     "On Status Effect:\nDeals +250 Damage matching the Damage Type of the Status Effect"

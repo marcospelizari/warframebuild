@@ -20,6 +20,7 @@ from pydantic import BaseModel, TypeAdapter
 
 from app.data.build import Dataset
 from app.data.models import Arcane, Category, Join, Meta, ModsFile, SourceRecord, Weapon
+from app.domain.effects import Support
 
 DATA_FILES = ("weapons.json", "mods.json", "arcanes.json", "joins.json")
 
@@ -119,6 +120,11 @@ def write(
     counts |= {
         f"arcanes_{c.value}": sum(a.category == c for a in dataset.arcanes) for c in Category
     }
+    for kind, entries in (("mods", dataset.mods), ("arcanes", dataset.arcanes)):
+        counts |= {
+            f"{kind}_{level.value}": sum(e.effects.support == level for e in entries)
+            for level in Support
+        }
     meta = Meta(
         dataset_hash=digest,
         game_update=dataset.game_update,

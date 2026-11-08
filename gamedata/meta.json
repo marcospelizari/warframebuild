@@ -2,16 +2,22 @@
  "changed_on": "2026-11-08",
  "counts": {
   "arcanes": 34,
+  "arcanes_full": 13,
+  "arcanes_partial": 0,
   "arcanes_primary": 16,
   "arcanes_secondary": 18,
+  "arcanes_unsupported": 21,
   "excluded_weapons": 2,
   "mod_sets": 10,
   "mods": 328,
+  "mods_full": 237,
+  "mods_partial": 21,
+  "mods_unsupported": 70,
   "primary": 195,
   "secondary": 149,
   "weapons": 344
  },
- "dataset_hash": "2e178f37e9cb780a",
+ "dataset_hash": "871da309f9730365",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -33,7 +39,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 3,
+ "schema_version": 4,
  "sources": [
   {
    "path": "de/ExportManifest.json",
