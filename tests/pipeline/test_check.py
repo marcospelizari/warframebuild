@@ -115,7 +115,9 @@ def test_online_refresh_downloads_each_source_once(paths: Paths) -> None:
 def test_reference_rows_and_staleness_by_date(paths: Paths) -> None:
     rows = check.reference_rows(paths.reference)
     keys = {(r.file, r.key) for r in rows}
-    assert ("fire_overrides.json", "/Lotus/Weapons/ClanTech/Energy/Railgun") in keys
+    epitaph = "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon"
+    assert ("fire_overrides.json", epitaph) in keys
+    assert ("fire_overrides.json", "beam_ramp_start") in keys
     assert ("mod_filter.json", "expert") in keys
     assert check.stale_rows(rows, "2026-11-08") == []
     assert len(check.stale_rows(rows, "2026-12-01")) == len(rows)
@@ -206,7 +208,7 @@ def test_unreadable_previous_dataset_is_reported(paths: Paths) -> None:
     run(paths, offline=True, fetch_images=False)
     (paths.gamedata / "meta.json").write_text('{"schema_version": 1}')
     previous, error = load_previous(paths.gamedata)
-    assert previous is None and error and "schema version 1, this code reads 6" in error
+    assert previous is None and error and "schema version 1, this code reads 7" in error
     report = run(paths, offline=True, fetch_images=False)
     text = "\n".join(report.lines())
     assert "previous dataset unreadable" in text

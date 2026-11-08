@@ -69,6 +69,12 @@ def test_report_lists_entries_missing_in_export_plus(paths: Paths) -> None:
     assert "  weapons (1): Braton Prime" in text
 
 
+def test_report_lists_guns_missing_in_the_wiki_modules(paths: Paths) -> None:
+    text = "\n".join(run(paths, offline=True, fetch_images=False).lines())
+    assert "not in the saved wiki weapon modules" in text
+    assert "Braton Prime" in text.split("not in the saved wiki weapon modules")[1]
+
+
 def test_bad_reference_date_fails_before_publishing(paths: Paths) -> None:
     """Review 3 R9: a changed dataset is never published by a refresh that then fails."""
     run(paths, offline=True, fetch_images=False)

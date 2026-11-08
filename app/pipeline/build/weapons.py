@@ -8,16 +8,19 @@ from pydantic import ValidationError
 
 from app.domain.effects import DamageType
 from app.gamedata.models import Attack, Exclusion, Falloff, Join, Weapon
+from app.pipeline.build.fire import FireOverrides, attack_data, fire_rate
 from app.pipeline.errors import RefreshError
 from app.pipeline.sources.de_export import DAMAGE_SLOT_COUNT, DAMAGE_SLOTS, WEAPON_CATEGORY
+from app.pipeline.sources.wiki_weapon_data import AttackData, WeaponData
 
 
 def build(
     de_weapons: list[dict[str, Any]],
     wfcd: list[dict[str, Any]],
     manifest: list[dict[str, Any]],
-    fire_overrides: dict[str, dict[str, Any]],
+    fire: FireOverrides,
     tags: dict[str, list[str]],
+    module: dict[str, WeaponData],
 ) -> tuple[list[Weapon], list[Exclusion], list[Join]]:
     de = {w["uniqueName"]: w for w in de_weapons}
     textures = {m["uniqueName"]: m.get("textureLocation") for m in manifest}
@@ -43,21 +46,18 @@ def build(
         reason = None
         if d["productCategory"] not in WEAPON_CATEGORY:
             reason = f"not a primary or secondary gun (DE category {d['productCategory']})"
-        elif "exclude" in fire_overrides.get(uid, {}):
-            reason = str(fire_overrides[uid]["exclude"])
-        elif not d.get("fireRate") or d["fireRate"] <= 0:
-            raise RefreshError(
-                f"{d['name']} ({uid}): no usable fire rate. Add an `exclude` entry with the "
-                "reason to reference/fire_overrides.json until real values are known."
-            )
+        else:
+            reason = fire.excluded(uid)
         if reason:
             excluded.append(Exclusion(unique_name=uid, name=d["name"], reason=reason))
         else:
             kept.append((d, w))
 
+    fire.check_known({d["uniqueName"] for d, _ in kept} | {e.unique_name for e in excluded})
     slugs = _slugs([(d["uniqueName"], d["name"]) for d, _ in kept])
     weapons = [
-        _weapon(d, w, slugs[d["uniqueName"]], textures.get(d["uniqueName"]), tags) for d, w in kept
+        _weapon(d, w, slugs[d["uniqueName"]], textures.get(d["uniqueName"]), tags, fire, module)
+        for d, w in kept
     ]
     joins = [
         Join(unique_name=d["uniqueName"], de_name=d["name"], wfcd_name=w["name"]) for d, w in kept
@@ -71,6 +71,8 @@ def _weapon(
     slug: str,
     texture: str | None,
     tags: dict[str, list[str]],
+    fire: FireOverrides,
+    module: dict[str, WeaponData],
 ) -> Weapon:
     per_shot = d["damagePerShot"]
     if len(per_shot) != DAMAGE_SLOT_COUNT:
@@ -81,6 +83,8 @@ def _weapon(
         raise RefreshError(f"{d['name']}: damage in an unmapped damagePerShot slot")
     damage = {t: float(v) for t, v in zip(DAMAGE_SLOTS, per_shot, strict=False) if v}
     category = WEAPON_CATEGORY[d["productCategory"]]
+    data = module.get(d["uniqueName"])
+    extra = attack_data(d["name"], [a["name"] for a in w.get("attacks") or []], data)
     if w.get("category", "").lower() != category:
         raise RefreshError(f"{d['name']}: DE says {category}, WFCD says {w.get('category')}")
     try:
@@ -95,7 +99,7 @@ def _weapon(
             critical_chance=d["criticalChance"],
             critical_multiplier=d["criticalMultiplier"],
             status_chance=d["procChance"],
-            fire_rate=d["fireRate"],
+            fire_rate=fire_rate(d, data),
             multishot=d["multishot"],
             magazine_size=d.get("magazineSize"),
             reload_time=d["reloadTime"],
@@ -105,28 +109,33 @@ def _weapon(
             exilus_polarity=w.get("exilusPolarity"),
             # WFCD lists each attack (charged, per pellet, AoE part); DE gives one summary,
             # so values legitimately differ. The main attack is chosen later (main_attack.json).
-            attacks=[_attack(a, d["name"]) for a in w.get("attacks") or []],
+            attacks=[_attack(a, d["name"], extra[a["name"]]) for a in w.get("attacks") or []],
             texture_location=texture,
             # export-plus can lag DE after an update: unknown tags stay None (report lists them).
             compatibility_tags=tags.get(d["uniqueName"]),
+            sniper_combo_min=data.sniper_combo_min if data else None,
+            no_reload=fire.no_reload(d["uniqueName"]),
+            beam_ramp_start=fire.beam_start(d["uniqueName"], d["name"], d["trigger"]),
         )
     except ValidationError as error:
         raise RefreshError(f"{d['name']}: invalid values: {error}") from error
 
 
-def _attack(a: dict[str, Any], weapon: str) -> Attack:
+def _attack(a: dict[str, Any], weapon: str, extra: AttackData | None) -> Attack:
     known = {t.value for t in DamageType}
     unknown = set(a.get("damage", {})) - known
     if unknown:
         raise RefreshError(f"{weapon} / {a.get('name')}: unknown damage types {sorted(unknown)}")
     falloff = a.get("falloff")
     try:
-        return _attack_model(a, falloff)
+        return _attack_model(a, falloff, extra)
     except ValidationError as error:
         raise RefreshError(f"{weapon} / {a.get('name')}: invalid values: {error}") from error
 
 
-def _attack_model(a: dict[str, Any], falloff: dict[str, Any] | None) -> Attack:
+def _attack_model(
+    a: dict[str, Any], falloff: dict[str, Any] | None, extra: AttackData | None
+) -> Attack:
     return Attack(
         name=a["name"],
         # WFCD uses speed 0 on DoT pseudo-attacks (e.g. Tysis "Corrosive DoT"): no own rate.
@@ -139,6 +148,9 @@ def _attack_model(a: dict[str, Any], falloff: dict[str, Any] | None) -> Attack:
         falloff=Falloff(**falloff) if falloff else None,
         charge_time=a.get("charge_time"),
         shot_speed=a.get("shot_speed"),
+        forced_procs=extra.forced_procs if extra else None,
+        burst_count=extra.burst_count if extra else None,
+        burst_delay=extra.burst_delay if extra else None,
     )
 
 

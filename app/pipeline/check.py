@@ -198,6 +198,19 @@ def untagged_lines(dataset: Dataset) -> list[str]:
     return ["not in the saved export-plus (tags unknown; re-save when it catches up):", *out]
 
 
+def module_gap_lines(dataset: Dataset) -> list[str]:
+    """Guns the saved wiki weapon modules do not list: forced procs and burst data unknown."""
+    names = sorted(
+        w.name for w in dataset.weapons if w.attacks and w.attacks[0].forced_procs is None
+    )
+    if not names:
+        return []
+    return [
+        "not in the saved wiki weapon modules (forced procs unknown; re-save the modules):",
+        f"  weapons ({len(names)}): {_names(names)}",
+    ]
+
+
 def source_lines(changes: list[str] | None) -> list[str]:
     if changes is None:
         return ["sources: not checked (offline)"]
@@ -235,7 +248,7 @@ def diff_lines(diff: EntryDiff, touched: list[RefRow], changed_on: str) -> list[
 def wiki_lines(raw_dir: Path, reference_dir: Path) -> list[str]:
     out = ["wiki pages to compare with their history (open, re-save changed ones):"]
     for p in pages(reference_dir):
-        path = raw_dir / "wiki" / f"{p.stem}.wikitext"
+        path = raw_dir / "wiki" / p.filename
         saved = saved_date(path) if path.is_file() else "MISSING"
         out.append(f"  [{p.impact}] {p.title} (saved {saved}) {p.history_url}")
         out.append(f"      feeds: {'; '.join(p.feeds)}")

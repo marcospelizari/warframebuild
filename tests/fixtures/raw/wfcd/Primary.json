@@ -332,6 +332,156 @@
   "wikiaUrl": "https://wiki.warframe.com/w/Burston_Prime"
  },
  {
+  "accuracy": 50,
+  "attacks": [
+   {
+    "crit_chance": 16,
+    "crit_mult": 2.4,
+    "damage": {
+     "impact": 1.2,
+     "puncture": 1.2,
+     "slash": 9.6
+    },
+    "name": "Normal Attack",
+    "shot_type": "Hit-Scan",
+    "speed": 12,
+    "status_chance": 45
+   },
+   {
+    "crit_chance": 16,
+    "crit_mult": 2.4,
+    "damage": {
+     "impact": 0.9,
+     "puncture": 0.9,
+     "slash": 7.2
+    },
+    "name": "Alt-Fire",
+    "shot_type": "Hit-Scan",
+    "speed": 16,
+    "status_chance": 45
+   }
+  ],
+  "bpCost": 15000,
+  "buildPrice": 30000,
+  "buildQuantity": 1,
+  "buildTime": 86400,
+  "category": "Primary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Weapons/ClanTech/Energy/CrpSplitLaserBlueprint"
+   },
+   {
+    "itemCount": 10,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/ControlModule"
+   },
+   {
+    "itemCount": 5,
+    "uniqueName": "/Lotus/Types/Items/Research/EnergyComponent"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Forma"
+   },
+   {
+    "itemCount": 900,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/OxiumAlloy"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.16,
+  "criticalMultiplier": 2.4000001,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 1.2,
+   "magnetic": 0,
+   "puncture": 1.2,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 9.6000004,
+   "tau": 0,
+   "total": 12,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   1.2,
+   1.2,
+   9.6000004,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "When its twin-lasers converge on a target a circuit is created, frying the subject.",
+  "disposition": 4,
+  "exilusPolarity": "naramon",
+  "fireRate": 12.000001,
+  "imageName": "Convectrix.png",
+  "introduced": {
+   "aliases": [
+    "17.5.0",
+    "17.5"
+   ],
+   "date": "2015-10-01",
+   "name": "Update 17.5",
+   "parent": "17.5",
+   "url": "https://wiki.warframe.com/w/Update_17%23Update_17.5"
+  },
+  "isPrime": false,
+  "marketCost": 175,
+  "masterable": true,
+  "masteryReq": 7,
+  "multishot": 2,
+  "name": "Convectrix",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "naramon"
+  ],
+  "procChance": 0.44999999,
+  "productCategory": "LongGuns",
+  "releaseDate": "2015-10-01",
+  "reloadTime": 2,
+  "skipBuildTimePrice": 35,
+  "slot": 1,
+  "tags": [
+   "Corpus"
+  ],
+  "totalDamage": 12,
+  "tradable": false,
+  "trigger": "Held",
+  "type": "Shotgun",
+  "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpSplitLaser/CrpSplitLaser",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Convectrix.png?373e0",
+  "wikiaUrl": "https://wiki.warframe.com/w/Convectrix"
+ },
+ {
   "accuracy": 100,
   "attacks": [
    {
@@ -745,6 +895,142 @@
   "wikiAvailable": true,
   "wikiaThumbnail": "https://wiki.warframe.com/images/Lanka.png?b8db7",
   "wikiaUrl": "https://wiki.warframe.com/w/Lanka"
+ },
+ {
+  "accuracy": 50,
+  "attacks": [
+   {
+    "crit_chance": 19,
+    "crit_mult": 2,
+    "damage": {
+     "viral": 5
+    },
+    "name": "Normal Attack",
+    "shot_type": "Hit-Scan",
+    "speed": 12,
+    "status_chance": 15.5
+   }
+  ],
+  "bpCost": 15000,
+  "buildPrice": 30000,
+  "buildQuantity": 1,
+  "buildTime": 86400,
+  "category": "Primary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/InfestedShotgunBlueprint"
+   },
+   {
+    "itemCount": 1500,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Circuits"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Forma"
+   },
+   {
+    "itemCount": 4,
+    "uniqueName": "/Lotus/Types/Items/Research/BioComponent"
+   },
+   {
+    "itemCount": 6000,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Nanospores"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.19,
+  "criticalMultiplier": 2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 0,
+   "magnetic": 0,
+   "puncture": 0,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 0,
+   "tau": 0,
+   "total": 5,
+   "toxin": 0,
+   "true": 0,
+   "viral": 5,
+   "void": 0
+  },
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   5,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "Fires seven beams of continuous biochemical energy which depletes the life of any surface they contact.",
+  "disposition": 4,
+  "fireRate": 12.000001,
+  "imageName": "Phage.png",
+  "introduced": {
+   "aliases": [
+    "Update 12",
+    "12",
+    "12.0"
+   ],
+   "date": "2014-02-05",
+   "name": "Update 12.0",
+   "parent": "12.0",
+   "url": "https://wiki.warframe.com/w/Update_12%23Update_12.0"
+  },
+  "isPrime": false,
+  "magazineSize": 90,
+  "marketCost": 175,
+  "masterable": true,
+  "masteryReq": 11,
+  "multishot": 7,
+  "name": "Phage",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "naramon"
+  ],
+  "procChance": 0.15499997,
+  "productCategory": "LongGuns",
+  "releaseDate": "2014-02-05",
+  "reloadTime": 2,
+  "skipBuildTimePrice": 35,
+  "slot": 1,
+  "tags": [
+   "Infested"
+  ],
+  "totalDamage": 5,
+  "tradable": false,
+  "trigger": "Held",
+  "type": "Shotgun",
+  "uniqueName": "/Lotus/Weapons/Infested/LongGuns/Tentacluster/InfestedShotgun",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Phage.png?10a4c",
+  "wikiaUrl": "https://wiki.warframe.com/w/Phage"
  },
  {
   "accuracy": 16,

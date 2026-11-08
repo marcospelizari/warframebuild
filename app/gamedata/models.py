@@ -6,6 +6,7 @@ from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field
 
 from app.domain.effects import DamageType, Effect, Support
+from app.domain.status import ForcedProc
 
 
 class Category(StrEnum):
@@ -14,6 +15,7 @@ class Category(StrEnum):
 
 
 NonNegative = Annotated[float, Field(ge=0)]
+Fraction = Annotated[float, Field(ge=0, le=1)]
 Positive = Annotated[float, Field(gt=0)]
 Damage = dict[DamageType, NonNegative]
 # ISO date (YYYY-MM-DD); compared as text.
@@ -44,6 +46,10 @@ class Attack(Model):
     falloff: Falloff | None = None
     charge_time: NonNegative | None = None
     shot_speed: NonNegative | None = None
+    # From the wiki weapon data modules; None = weapon not in the saved modules.
+    forced_procs: list[ForcedProc] | None = None
+    burst_count: Annotated[int, Field(ge=1)] | None = None
+    burst_delay: NonNegative | None = None
 
 
 class Weapon(Model):
@@ -57,7 +63,9 @@ class Weapon(Model):
     critical_chance: NonNegative
     critical_multiplier: Annotated[float, Field(ge=1)]
     status_chance: NonNegative
-    fire_rate: Positive
+    # None = no delay between shots: the charge time alone sets the rate (Lanka; wiki
+    # module FireRate = math.huge, saved Fire_Rate). Only on charge weapons.
+    fire_rate: Positive | None
     multishot: Positive
     magazine_size: Annotated[int, Field(ge=0)] | None
     reload_time: NonNegative
@@ -70,6 +78,10 @@ class Weapon(Model):
     # export-plus compatibilityTags (e.g. PROJECTILE, AOE), stored as given; their meaning
     # for mod eligibility is decided in step 8. None = weapon not in the saved export-plus.
     compatibility_tags: list[str] | None
+    sniper_combo_min: Annotated[int, Field(ge=1)] | None  # saved Sniper_Rifle, wiki module
+    no_reload: bool  # shots come straight from the ammo pool (Epitaph), fire_overrides.json
+    # Beam damage at the start of the ramp-up (saved Continuous_Weapon); HELD trigger only.
+    beam_ramp_start: Fraction | None
 
 
 class Effects(Model):
@@ -135,7 +147,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[6] = 6
+    schema_version: Literal[7] = 7
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

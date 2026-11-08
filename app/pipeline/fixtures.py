@@ -13,13 +13,17 @@ from app.pipeline.sources import export_plus, load_json
 WEAPONS = (
     "Braton Prime",  # Incarnon, AoE attack
     "Burston Prime",  # burst trigger
+    "Convectrix",  # beam with its own ramp-up start (fire_overrides.json)
     "Cyanex",  # gas damage slot
+    "Embolist",  # beam with its own ramp-up start
+    "Epitaph",  # no reload between shots; forced procs per attack
     "Grimoire",  # slug collision (two entries)
     "Haalvu",  # tau damage slot
     "Kuva Hind",  # Kuva, burst
     "Laetum",  # native Incarnon
-    "Lanka",  # fire rate 0 -> excluded by override
+    "Lanka",  # fire rate 0: no delay between shots (wiki module)
     "Lex Prime",  # secondary
+    "Phage",  # beam with its own ramp-up start
     "Sirocco",  # Drifter weapon -> excluded by category
     "Sonicor",  # attacks differ from DE summary
     "Strun Wraith",  # shotgun, falloff

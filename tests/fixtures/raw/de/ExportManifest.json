@@ -5,6 +5,10 @@
    "uniqueName": "/Lotus/Weapons/ClanTech/Energy/Railgun"
   },
   {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Convectrix.png!00_aHxOVRtXTDwOVUYO3TsWOA",
+   "uniqueName": "/Lotus/Weapons/Corpus/LongGuns/CrpSplitLaser/CrpSplitLaser"
+  },
+  {
    "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Sonicor.png!00_xujQFIichEBVQPjJHCksNg",
    "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpAirPistol/CrpAirPistolArray"
   },
@@ -15,6 +19,14 @@
   {
    "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/KuvaHind.png!00_4tdifZfPuvMlQURC1tzonw",
    "uniqueName": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hind/KuvaHind"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Phage.png!00_DegY9RdqdwSNYBcWsOEA9A",
+   "uniqueName": "/Lotus/Weapons/Infested/LongGuns/Tentacluster/InfestedShotgun"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Embolist.png!00_LzDAjhHJGkXHGntQmwpsBA",
+   "uniqueName": "/Lotus/Weapons/Infested/Pistols/InfestedPistol"
   },
   {
    "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/DrifterPistol.png!00_fDDlot+Ve7JPX+qVqOFJDw",
@@ -39,6 +51,10 @@
   {
    "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/LexPrime.png!00_kYTVvNsdYXoUoTeBYKLlTw",
    "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex"
+  },
+  {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/TnWraithSidearmWeapon.png!00_INdMo2MGhyRIGtHsnKx50A",
+   "uniqueName": "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon"
   },
   {
    "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/BratonPrime.png!00_PCAHas9fsU8PVac+9N1lRg",
