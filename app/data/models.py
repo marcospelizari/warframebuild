@@ -104,12 +104,15 @@ class Mod(Model):
     fusion_limit: Annotated[int, Field(ge=0)]
     is_utility: bool
     mod_set: str | None
+    description: str  # DE rules text not in the stats ("Fire Rate cannot be modified."), or ""
     level_stats: list[list[str]]  # per rank; cleaned free text, parsed in step 3
 
 
 class Arcane(Model):
     unique_name: str
     name: str
+    category: Category
+    weapon_type: str | None  # slot limited to this WFCD weapon_type (Shotgun, Bow)
     rarity: str | None
     level_stats: list[list[str]]
 
@@ -128,7 +131,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[2] = 2
+    schema_version: Literal[3] = 3
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

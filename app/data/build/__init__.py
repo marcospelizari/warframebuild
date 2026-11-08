@@ -29,6 +29,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         *as_list(load_json(raw_dir / "wfcd/Primary.json")),
         *as_list(load_json(raw_dir / "wfcd/Secondary.json")),
     ]
+    wfcd_arcanes = as_list(load_json(raw_dir / "wfcd/Arcanes.json"))
     gun_list, excluded, joins = weapons.build(
         records(load_json(de / "ExportWeapons_en.json"), "ExportWeapons"),
         wfcd,
@@ -39,8 +40,9 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         load_json(de / "ExportUpgrades_en.json"), reference(reference_dir / "mod_filter.json")
     )
     arcane_list = arcanes.build(
-        records(load_json(de / "ExportRelicArcane_en.json"), "ExportRelicArcane")
+        records(load_json(de / "ExportRelicArcane_en.json"), "ExportRelicArcane"), wfcd_arcanes
     )
+    _check_arcane_classes(arcane_list, gun_list)
     if not gun_list or not mod_list or not arcane_list:
         raise RefreshError(
             f"empty dataset: {len(gun_list)} weapons, {len(mod_list)} mods, "
@@ -49,3 +51,16 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
     return Dataset(
         gun_list, excluded, mod_list, sets, denied, arcane_list, joins, weapons.game_update(wfcd)
     )
+
+
+def _check_arcane_classes(arcane_list: list[Arcane], gun_list: list[Weapon]) -> None:
+    """A class-limited arcane (Shotgun Vendetta) must fit at least one gun: the link is
+    two WFCD strings, and a renamed class would otherwise fit nothing silently."""
+    classes = {(w.category, w.weapon_type) for w in gun_list}
+    unmatched = [
+        f"{a.name} ({a.weapon_type})"
+        for a in arcane_list
+        if a.weapon_type is not None and (a.category, a.weapon_type) not in classes
+    ]
+    if unmatched:
+        raise RefreshError(f"arcanes limited to a weapon type no gun has: {unmatched}")

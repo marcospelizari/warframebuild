@@ -1,5 +1,6 @@
 """`wfb refresh`: download, compare, build, validate, swap into gamedata/ (Q32/T1/T2/G48)."""
 
+from contextlib import AbstractContextManager, nullcontext
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -10,7 +11,8 @@ from app.data.models import Meta, SourceRecord
 from app.data.sources import (
     SourceFile,
     de_export,
-    save,
+    interrupted_saves,
+    saved_until_failure,
     scan_downloaded,
     wfcd,
     wiki_local,
@@ -77,23 +79,46 @@ class Report:
 def run(
     paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClient | None = None
 ) -> Report:
+    """One refresh at a time: the lock covers the raw cache from download to publish."""
+    paths.raw.mkdir(parents=True, exist_ok=True)
+    with store.exclusive(paths.raw / ".refresh.lock"):
+        return _run(paths, offline=offline, fetch_images=fetch_images, client=client)
+
+
+def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClient | None) -> Report:
     previous, previous_error = load_previous(paths.gamedata)
     # Fail early: nothing is downloaded while a listed wiki page is missing.
     wiki_files = wiki_local.scan(paths.raw, paths.reference)
+    reference_rows = check.reference_rows(paths.reference)  # bad dates fail before publishing
     changes: list[str] | None = None
+    saving: AbstractContextManager[list[SourceFile]]
     if offline:
-        downloaded = scan_downloaded(paths.raw, DOWNLOADED)
+        leftovers = interrupted_saves(paths.raw)
+        if leftovers:
+            raise RuntimeError(
+                "an interrupted refresh left previous downloads aside "
+                f"({', '.join(leftovers)}); which copy is good is unknown: "
+                "run `wfb refresh` without --offline"
+            )
+        saving = nullcontext(scan_downloaded(paths.raw, DOWNLOADED))
     else:
         client = client or PoliteClient()
         fetched = de_export.fetch(client) + wfcd.fetch(client)
-        changes = check.changed(fetched, previous.meta.sources if previous else None)
-        downloaded = save(paths.raw, fetched)
-    files = sorted(downloaded + wiki_files, key=lambda f: f.path)
-
-    dataset = build(paths.raw, paths.reference)
-    meta = store.write(
-        dataset, [_record(f) for f in files], paths.gamedata, previous.meta if previous else None
-    )
+        changes = check.changed(
+            fetched,
+            previous.meta.sources if previous else None,
+            "previous dataset unreadable" if previous_error else "no current dataset",
+        )
+        saving = saved_until_failure(paths.raw, fetched)
+    with saving as downloaded:
+        files = sorted(downloaded + wiki_files, key=lambda f: f.path)
+        dataset = build(paths.raw, paths.reference)
+        meta = store.write(
+            dataset,
+            [_record(f) for f in files],
+            paths.gamedata,
+            previous.meta if previous else None,
+        )
     write_sources(paths.raw, files)  # only once the new dataset is in place
 
     diff = check.entry_diff(previous, previous_error, dataset)
@@ -102,7 +127,7 @@ def run(
         previous=previous.meta if previous else None,
         source_changes=changes,
         diff=diff,
-        touched=check.touched_rows(check.reference_rows(paths.reference), diff),
+        touched=check.touched_rows(reference_rows, diff),
         # After a game update the saved wiki pages need a look too.
         wiki=check.wiki_lines(paths.raw, paths.reference) if changes else [],
     )

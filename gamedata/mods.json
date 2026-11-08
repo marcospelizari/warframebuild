@@ -4,6 +4,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Tome",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -30,6 +31,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Tome",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -56,6 +58,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Tome",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -82,6 +85,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Tome",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -108,6 +112,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Tome",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -134,6 +139,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Tome",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -160,6 +166,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Tome",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -186,6 +193,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Tome",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -212,6 +220,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Dread",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -244,6 +253,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -282,6 +292,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Argonak",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -320,6 +331,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Daikyu",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -364,6 +376,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Javlok",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -402,6 +415,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -460,6 +474,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -498,6 +513,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Bronco",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -524,6 +540,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Glaxion",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -562,6 +579,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Magnus",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -588,6 +606,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Simulor",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -620,6 +639,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Vesper 77",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -652,6 +672,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "AX-52",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -684,6 +705,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Athodai",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -716,6 +738,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Sobek",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -748,6 +771,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -786,6 +810,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -824,6 +849,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -882,6 +908,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -920,6 +947,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -958,6 +986,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -996,6 +1025,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -1026,6 +1056,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -1056,6 +1087,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -1094,6 +1126,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -1124,6 +1157,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -1154,6 +1188,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -1184,6 +1219,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -1214,6 +1250,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -1244,6 +1281,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -1274,6 +1312,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -1306,6 +1345,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Akbronco Prime",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -1338,6 +1378,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Akstiletto Prime",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -1370,6 +1411,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -1417,6 +1459,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -1443,6 +1486,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -1475,6 +1519,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -1522,6 +1567,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -1554,6 +1600,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -1586,6 +1633,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Catabolyst",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -1618,6 +1666,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "EFV-8 Mars",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -1650,6 +1699,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Ocucor",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -1682,6 +1732,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Velox",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -1714,6 +1765,7 @@
    "base_drain": 0,
    "category": "secondary",
    "compat_name": "Pistol (No Aoe)",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": true,
    "level_stats": [
@@ -1761,6 +1813,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -1793,6 +1846,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -1840,6 +1894,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -1887,6 +1942,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -1934,6 +1990,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -1981,6 +2038,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -2028,6 +2086,7 @@
    "base_drain": 0,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": true,
    "level_stats": [
@@ -2075,6 +2134,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -2122,6 +2182,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -2169,6 +2230,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -2216,6 +2278,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -2263,6 +2326,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -2310,6 +2374,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": true,
    "level_stats": [
@@ -2357,6 +2422,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -2404,6 +2470,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "Only compatible with Semi-Auto Trigger. Fire Rate cannot be modified.",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2442,6 +2509,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2480,6 +2548,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -2506,6 +2575,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Thrown",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -2532,6 +2602,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -2564,6 +2635,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2596,6 +2668,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -2622,6 +2695,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2654,6 +2728,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2686,6 +2761,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2718,6 +2794,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2750,6 +2827,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -2797,6 +2875,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2829,6 +2908,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2861,6 +2941,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2893,6 +2974,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2925,6 +3007,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2957,6 +3040,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -2989,6 +3073,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -3047,6 +3132,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3079,6 +3165,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3111,6 +3198,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3143,6 +3231,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -3169,6 +3258,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -3201,6 +3291,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3233,6 +3324,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3265,6 +3357,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3297,6 +3390,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3329,6 +3423,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3361,6 +3456,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -3387,6 +3483,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3419,6 +3516,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -3445,6 +3543,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3477,6 +3576,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -3503,6 +3603,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3535,6 +3636,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3567,6 +3669,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -3625,6 +3728,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3657,6 +3761,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -3689,6 +3794,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -3745,1340 +3851,9 @@
   },
   {
    "base_drain": 10,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+25% Blast Radius",
-     "-12.5% Projectile Speed"
-    ],
-    [
-     "+50% Blast Radius",
-     "-25% Projectile Speed"
-    ],
-    [
-     "+75% Blast Radius",
-     "-37.5% Projectile Speed"
-    ],
-    [
-     "+100% Blast Radius",
-     "-50% Projectile Speed"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Heavy Warhead",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/BiggerRadiusSlowerVelocityPistolMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "5% of Damage converted into Impact"
-    ],
-    [
-     "10% of Damage converted into Impact"
-    ],
-    [
-     "15% of Damage converted into Impact"
-    ],
-    [
-     "20% of Damage converted into Impact"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Meteor Munitions",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/DamageBiasImpactPistolMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "5% of Damage converted into Puncture"
-    ],
-    [
-     "10% of Damage converted into Puncture"
-    ],
-    [
-     "15% of Damage converted into Puncture"
-    ],
-    [
-     "20% of Damage converted into Puncture"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Impaler Munitions",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/DamageBiasPuncturePistolMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "5% of Damage converted into Slash"
-    ],
-    [
-     "10% of Damage converted into Slash"
-    ],
-    [
-     "15% of Damage converted into Slash"
-    ],
-    [
-     "20% of Damage converted into Slash"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Razor Munitions",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/DamageBiasSlashPistolMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "secondary",
-   "compat_name": "Despair",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+25% chance of Energy Drain explosion",
-     "-15% Magazine Capacity",
-     "-15% Ammo Maximum"
-    ],
-    [
-     "+50% chance of Energy Drain explosion",
-     "-30% Magazine Capacity",
-     "-30% Ammo Maximum"
-    ],
-    [
-     "+75% chance of Energy Drain explosion",
-     "-45% Magazine Capacity",
-     "-45% Ammo Maximum"
-    ],
-    [
-     "+100% chance of Energy Drain explosion",
-     "-60% Magazine Capacity",
-     "-60% Ammo Maximum"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Draining Gloom",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/DespairEnergyDrainAoE"
-  },
-  {
-   "base_drain": 2,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "+5% Movement Speed when Aiming"
-    ],
-    [
-     "+10% Movement Speed when Aiming"
-    ],
-    [
-     "+15% Movement Speed when Aiming"
-    ],
-    [
-     "+20% Movement Speed when Aiming"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Spry Sights",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/FasterMovementWhileAimingPistolMod"
-  },
-  {
-   "base_drain": 4,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 5,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+8.3% Reload Speed",
-     "+8.3% Weapon Recoil"
-    ],
-    [
-     "+16.7% Reload Speed",
-     "+16.7% Weapon Recoil"
-    ],
-    [
-     "+25% Reload Speed",
-     "+25% Weapon Recoil"
-    ],
-    [
-     "+33.4% Reload Speed",
-     "+33.3% Weapon Recoil"
-    ],
-    [
-     "+41.7% Reload Speed",
-     "+41.7% Weapon Recoil"
-    ],
-    [
-     "+50% Reload Speed",
-     "+50% Weapon Recoil"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Loose Magazine",
-   "polarity": "AP_TACTIC",
-   "rarity": "COMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/FasterReloadMoreRecoilPistolMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Kill:\n+12.5% Reload Speed for 1s"
-    ],
-    [
-     "On Kill:\n+25% Reload Speed for 2s"
-    ],
-    [
-     "On Kill:\n+37.5% Reload Speed for 3s"
-    ],
-    [
-     "On Kill:\n+50% Reload Speed for 4s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Secondary Wind",
-   "polarity": "AP_DEFENSE",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/HealthRegenonKillPistolMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 5,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "-10% Zoom while Aim Gliding"
-    ],
-    [
-     "-20% Zoom while Aim Gliding"
-    ],
-    [
-     "-30% Zoom while Aim Gliding"
-    ],
-    [
-     "-40% Zoom while Aim Gliding"
-    ],
-    [
-     "-50% Zoom while Aim Gliding"
-    ],
-    [
-     "-60% Zoom while Aim Gliding"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Air Recon",
-   "polarity": "AP_TACTIC",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/HigherAirAimFoVPistolMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+10% Projectile Speed",
-     "-1% Accuracy"
-    ],
-    [
-     "+20% Projectile Speed",
-     "-2% Accuracy"
-    ],
-    [
-     "+30% Projectile Speed",
-     "-3% Accuracy"
-    ],
-    [
-     "+40% Projectile Speed",
-     "-4% Accuracy"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Blind Shot",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/HigherVelocityLessAccuratePistolMod"
-  },
-  {
-   "base_drain": 4,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "On Equip: \n-10% Weapon Recoil and +10% Accuracy for 8s"
-    ],
-    [
-     "On Equip: \n-20% Weapon Recoil and +20% Accuracy for 8s"
-    ],
-    [
-     "On Equip: \n-30% Weapon Recoil and +30% Accuracy for 8s"
-    ],
-    [
-     "On Equip: \n-40% Weapon Recoil and +40% Accuracy for 8s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Reflex Draw",
-   "polarity": "AP_TACTIC",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/HolsterSpeedBonusMod"
-  },
-  {
-   "base_drain": 4,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 5,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+5% Magazine Capacity",
-     "-2.5% Reload Speed"
-    ],
-    [
-     "+10% Magazine Capacity",
-     "-5% Reload Speed"
-    ],
-    [
-     "+15% Magazine Capacity",
-     "-7.5% Reload Speed"
-    ],
-    [
-     "+20% Magazine Capacity",
-     "-10% Reload Speed"
-    ],
-    [
-     "+25% Magazine Capacity",
-     "-12.5% Reload Speed"
-    ],
-    [
-     "+30% Magazine Capacity",
-     "-15% Reload Speed"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Full Capacity",
-   "polarity": "AP_TACTIC",
-   "rarity": "COMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/LargerMagLongerReloadPistolMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "-10% Weapon Recoil",
-     "-5% Magazine Capacity"
-    ],
-    [
-     "-20% Weapon Recoil",
-     "-10% Magazine Capacity"
-    ],
-    [
-     "-30% Weapon Recoil",
-     "-15% Magazine Capacity"
-    ],
-    [
-     "-40% Weapon Recoil",
-     "-20% Magazine Capacity"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Hydraulic Barrel",
-   "polarity": "AP_TACTIC",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/LessRecoilSmallerMagPistolMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "secondary",
-   "compat_name": "Marelok",
-   "fusion_limit": 0,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+200% Multishot",
-     "-66% Damage"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Shrapnel Rounds",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/MarelokMultishot"
-  },
-  {
-   "base_drain": 2,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 5,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "Reveals target on Minimap for +1s."
-    ],
-    [
-     "Reveals target on Minimap for +2s."
-    ],
-    [
-     "Reveals target on Minimap for +3s."
-    ],
-    [
-     "Reveals target on Minimap for +4s."
-    ],
-    [
-     "Reveals target on Minimap for +5s."
-    ],
-    [
-     "Reveals target on Minimap for +6s."
-    ]
-   ],
-   "mod_set": null,
-   "name": "Night Stalker",
-   "polarity": "AP_TACTIC",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/MarkTargetPistolMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "-5% Weapon Recoil",
-     "and +5% Accuracy when Sliding"
-    ],
-    [
-     "-10% Weapon Recoil",
-     "and +10% Accuracy when Sliding"
-    ],
-    [
-     "-15% Weapon Recoil",
-     "and +15% Accuracy when Sliding"
-    ],
-    [
-     "-20% Weapon Recoil",
-     "and +20% Accuracy when Sliding"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Strafing Slide",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/MoreAccuracyLessRecoilSlidingPistolMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "+5% Magazine Reloaded/s when Holstered"
-    ],
-    [
-     "+10% Magazine Reloaded/s when Holstered"
-    ],
-    [
-     "+15% Magazine Reloaded/s when Holstered"
-    ],
-    [
-     "+20% Magazine Reloaded/s when Holstered"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Eject Magazine",
-   "polarity": "AP_TACTIC",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/PassiveReloadMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Kill:\n+3.8 Heal Rate for 3s",
-     "-6.2% from Health Orbs"
-    ],
-    [
-     "On Kill:\n+7.5 Heal Rate for 5s",
-     "-12.5% from Health Orbs"
-    ],
-    [
-     "On Kill:\n+11.3 Heal Rate for 8s",
-     "-18.7% from Health Orbs"
-    ],
-    [
-     "On Kill:\n+15 Heal Rate for 10s",
-     "-25% from Health Orbs"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Recuperate",
-   "polarity": "AP_DEFENSE",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/RestoreHealthOnKillMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "secondary",
-   "compat_name": "Pistol",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Kill:\n-25% Shield Recharge Delay for 3s",
-     "-6.2% from Health Orbs"
-    ],
-    [
-     "On Kill:\n-50% Shield Recharge Delay for 5s",
-     "-12.5% from Health Orbs"
-    ],
-    [
-     "On Kill:\n-75% Shield Recharge Delay for 8s",
-     "-18.7% from Health Orbs"
-    ],
-    [
-     "On Kill:\n-100% Shield Recharge Delay for 10s",
-     "-25% from Health Orbs"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Calculated Victory",
-   "polarity": "AP_DEFENSE",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/RestoreShieldsOnKillMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "secondary",
-   "compat_name": "Staticor",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+12.5% Projectile Speed",
-     "-12.5% Blast Radius"
-    ],
-    [
-     "+25% Projectile Speed",
-     "-25% Blast Radius"
-    ],
-    [
-     "+37.5% Projectile Speed",
-     "-37.5% Blast Radius"
-    ],
-    [
-     "+50% Projectile Speed",
-     "-50% Blast Radius"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Static Alacrity",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/StaticorFasterProjLessAoE"
-  },
-  {
-   "base_drain": 10,
-   "category": "secondary",
-   "compat_name": "Viper",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Headshot:\n10% chance for Infinite Ammo for 0.5s"
-    ],
-    [
-     "On Headshot:\n20% chance for Infinite Ammo for 1s"
-    ],
-    [
-     "On Headshot:\n30% chance for Infinite Ammo for 2s"
-    ],
-    [
-     "On Headshot:\n40% chance for Infinite Ammo for 2s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Skull Shots",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Pistol/ViperUnlimitedAmmo"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Daikyu",
-   "fusion_limit": 5,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "Increase damage by +40%",
-     "if the target is over 45m away."
-    ],
-    [
-     "Increase damage by +40%",
-     "if the target is over 39m away."
-    ],
-    [
-     "Increase damage by +40%",
-     "if the target is over 33m away."
-    ],
-    [
-     "Increase damage by +40%",
-     "if the target is over 27m away."
-    ],
-    [
-     "Increase damage by +40%",
-     "if the target is over 21m away."
-    ],
-    [
-     "Increase damage by +40%",
-     "if the target is over 15m away."
-    ]
-   ],
-   "mod_set": null,
-   "name": "Spring-Loaded Broadhead",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/DaikyuMoreDamageOverDistanceMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Rifle",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "5% of Damage converted into Impact"
-    ],
-    [
-     "10% of Damage converted into Impact"
-    ],
-    [
-     "15% of Damage converted into Impact"
-    ],
-    [
-     "20% of Damage converted into Impact"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Comet Rounds",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/DamageBiasImpactRifleMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Rifle",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "5% of Damage converted into Puncture"
-    ],
-    [
-     "10% of Damage converted into Puncture"
-    ],
-    [
-     "15% of Damage converted into Puncture"
-    ],
-    [
-     "20% of Damage converted into Puncture"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Ripper Rounds",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/DamageBiasPunctureRifleMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Rifle",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "5% of Damage converted into Slash"
-    ],
-    [
-     "10% of Damage converted into Slash"
-    ],
-    [
-     "15% of Damage converted into Slash"
-    ],
-    [
-     "20% of Damage converted into Slash"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Serrated Rounds",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/DamageBiasSlashRifleMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Miter",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+25% chance charged Projectiles explode",
-     "-15% Magazine Capacity"
-    ],
-    [
-     "+50% chance charged Projectiles explode",
-     "-30% Magazine Capacity"
-    ],
-    [
-     "+75% chance charged Projectiles explode",
-     "-45% Magazine Capacity"
-    ],
-    [
-     "+100% chance charged Projectiles explode",
-     "-60% Magazine Capacity"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Thundermiter",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/ExplodingMiterBlades"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Assault Rifle",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Headshot:\n+2.5% Mobility for 1s"
-    ],
-    [
-     "On Headshot:\n+5% Mobility for 2s"
-    ],
-    [
-     "On Headshot:\n+7.5% Mobility for 3s"
-    ],
-    [
-     "On Headshot:\n+10% Mobility for 4s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Deft Tempo",
-   "polarity": "AP_TACTIC",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/FasterBulletJumponHeadshotRifleMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Bow",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+12.5% Fire Rate when Airborne"
-    ],
-    [
-     "+25% Fire Rate when Airborne"
-    ],
-    [
-     "+37.5% Fire Rate when Airborne"
-    ],
-    [
-     "+50% Fire Rate when Airborne"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Soaring Strike",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/FasterChargeInAirBowMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Rifle",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "+5% Movement Speed when Aiming"
-    ],
-    [
-     "+10% Movement Speed when Aiming"
-    ],
-    [
-     "+15% Movement Speed when Aiming"
-    ],
-    [
-     "+20% Movement Speed when Aiming"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Agile Aim",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/FasterMovementWhileAimingRifleMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Bow",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Hit:\n+5% Secondary Weapon Fire Rate for 0.75s"
-    ],
-    [
-     "On Hit:\n+10% Secondary Weapon Fire Rate for 2s"
-    ],
-    [
-     "On Hit:\n+15% Secondary Weapon Fire Rate for 2s"
-    ],
-    [
-     "On Hit:\n+20% Secondary Weapon Fire Rate for 3s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Plan B",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/FasterPistolRoFOnHitBowMod"
-  },
-  {
-   "base_drain": 4,
-   "category": "primary",
-   "compat_name": "Assault Rifle",
-   "fusion_limit": 5,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+5% Reload Speed",
-     "+8.3% Weapon Recoil"
-    ],
-    [
-     "+10% Reload Speed",
-     "+16.7% Weapon Recoil"
-    ],
-    [
-     "+15% Reload Speed",
-     "+25% Weapon Recoil"
-    ],
-    [
-     "+20% Reload Speed",
-     "+33.3% Weapon Recoil"
-    ],
-    [
-     "+25% Reload Speed",
-     "+41.7% Weapon Recoil"
-    ],
-    [
-     "+30% Reload Speed",
-     "+50% Weapon Recoil"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Loose Hatch",
-   "polarity": "AP_TACTIC",
-   "rarity": "COMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/FasterReloadMoreRecoilRifleMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Sniper",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Kill:\n+12.5% Reload Speed for 0.75s"
-    ],
-    [
-     "On Kill:\n+25% Reload Speed for 2s"
-    ],
-    [
-     "On Kill:\n+37.5% Reload Speed for 2s"
-    ],
-    [
-     "On Kill:\n+50% Reload Speed for 3s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Emergent Aftermath",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/FasterReloadOnKillSniperMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Gorgon",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Kill:\n+7.5% Fire Rate for 0.75s"
-    ],
-    [
-     "On Kill:\n+15% Fire Rate for 2s"
-    ],
-    [
-     "On Kill:\n+22.5% Fire Rate for 2s"
-    ],
-    [
-     "On Kill:\n+30% Fire Rate for 3s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Gorgon Frenzy",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/FasterRoFonKillGorgonMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Grakata",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Headshot:\n10% chance for Infinite Ammo for 0.5s"
-    ],
-    [
-     "On Headshot:\n20% chance for Infinite Ammo for 1s"
-    ],
-    [
-     "On Headshot:\n30% chance for Infinite Ammo for 2s"
-    ],
-    [
-     "On Headshot:\n40% chance for Infinite Ammo for 2s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Brain Storm",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/GrakataUnlimitedAmmo"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Sniper",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+5% Fire Rate when Crouching",
-     "+25% Weapon Recoil"
-    ],
-    [
-     "+10% Fire Rate when Crouching",
-     "+50% Weapon Recoil"
-    ],
-    [
-     "+15% Fire Rate when Crouching",
-     "+75% Weapon Recoil"
-    ],
-    [
-     "+20% Fire Rate when Crouching",
-     "+100% Weapon Recoil"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Lie In Wait",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/HigherAimedDamageMoreRecoilSniperMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Assault Rifle",
-   "fusion_limit": 5,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "-10% Zoom while Aim Gliding"
-    ],
-    [
-     "-20% Zoom while Aim Gliding"
-    ],
-    [
-     "-30% Zoom while Aim Gliding"
-    ],
-    [
-     "-40% Zoom while Aim Gliding"
-    ],
-    [
-     "-50% Zoom while Aim Gliding"
-    ],
-    [
-     "-60% Zoom while Aim Gliding"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Overview",
-   "polarity": "AP_TACTIC",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/HigherAirAimFoVRifleMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "primary",
-   "compat_name": "Rifle",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+10% Projectile Speed",
-     "-0.5% Accuracy"
-    ],
-    [
-     "+20% Projectile Speed",
-     "-1% Accuracy"
-    ],
-    [
-     "+30% Projectile Speed",
-     "-1.5% Accuracy"
-    ],
-    [
-     "+40% Projectile Speed",
-     "-2% Accuracy"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Lucky Shot",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/HigherVelocityLessAccurateRifleMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "primary",
-   "compat_name": "Bow",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+15% Projectile Speed",
-     "-5% Damage"
-    ],
-    [
-     "+30% Projectile Speed",
-     "-10% Damage"
-    ],
-    [
-     "+45% Projectile Speed",
-     "-15% Damage"
-    ],
-    [
-     "+60% Projectile Speed",
-     "-20% Damage"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Feathered Arrows",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/HigherVelocityLessDamageBowMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Hind",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On 4 Hits within 0.05s:\n+25% Damage for 0.05s"
-    ],
-    [
-     "On 4 Hits within 0.05s:\n+50% Damage for 0.1s"
-    ],
-    [
-     "On 4 Hits within 0.05s:\n+75% Damage for 0.15s"
-    ],
-    [
-     "On 4 Hits within 0.05s:\n+100% Damage for 0.2s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Final Tap",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/HindDamageonFifthHit"
-  },
-  {
-   "base_drain": 4,
-   "category": "primary",
-   "compat_name": "Rifle",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "On Equip: \n-10% Weapon Recoil and +10% Accuracy for 8s"
-    ],
-    [
-     "On Equip: \n-20% Weapon Recoil and +20% Accuracy for 8s"
-    ],
-    [
-     "On Equip: \n-30% Weapon Recoil and +30% Accuracy for 8s"
-    ],
-    [
-     "On Equip: \n-40% Weapon Recoil and +40% Accuracy for 8s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Twitch",
-   "polarity": "AP_TACTIC",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/HolsterSpeedBonusMod"
-  },
-  {
-   "base_drain": 4,
-   "category": "primary",
-   "compat_name": "Assault Rifle",
-   "fusion_limit": 5,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+5% Magazine Capacity",
-     "-2.5% Reload Speed"
-    ],
-    [
-     "+10% Magazine Capacity",
-     "-5% Reload Speed"
-    ],
-    [
-     "+15% Magazine Capacity",
-     "-7.5% Reload Speed"
-    ],
-    [
-     "+20% Magazine Capacity",
-     "-10% Reload Speed"
-    ],
-    [
-     "+25% Magazine Capacity",
-     "-12.5% Reload Speed"
-    ],
-    [
-     "+30% Magazine Capacity",
-     "-15% Reload Speed"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Maximum Capacity",
-   "polarity": "AP_TACTIC",
-   "rarity": "COMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/LargerMagLongerReloadRifleMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "primary",
-   "compat_name": "Assault Rifle",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "-15% Weapon Recoil",
-     "-2.5% Magazine Capacity"
-    ],
-    [
-     "-30% Weapon Recoil",
-     "-5% Magazine Capacity"
-    ],
-    [
-     "-45% Weapon Recoil",
-     "-7.5% Magazine Capacity"
-    ],
-    [
-     "-60% Weapon Recoil",
-     "-10% Magazine Capacity"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Hydraulic Gauge",
-   "polarity": "AP_TACTIC",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/LessRecoilSmallerMagRifleMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Rifle",
-   "fusion_limit": 5,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "Reveals target on Minimap for +1s."
-    ],
-    [
-     "Reveals target on Minimap for +2s."
-    ],
-    [
-     "Reveals target on Minimap for +3s."
-    ],
-    [
-     "Reveals target on Minimap for +4s."
-    ],
-    [
-     "Reveals target on Minimap for +5s."
-    ],
-    [
-     "Reveals target on Minimap for +6s."
-    ]
-   ],
-   "mod_set": null,
-   "name": "Apex Predator",
-   "polarity": "AP_TACTIC",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/MarkTargetRifleMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "primary",
-   "compat_name": "Assault Rifle",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "-5% Weapon Recoil",
-     "and +5% Accuracy when Sliding"
-    ],
-    [
-     "-10% Weapon Recoil",
-     "and +10% Accuracy when Sliding"
-    ],
-    [
-     "-15% Weapon Recoil",
-     "and +15% Accuracy when Sliding"
-    ],
-    [
-     "-20% Weapon Recoil",
-     "and +20% Accuracy when Sliding"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Gun Glide",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/MoreAccuracyLessRecoilSlidingMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Grinlok",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+15% Accuracy when Aiming"
-    ],
-    [
-     "+30% Accuracy when Aiming"
-    ],
-    [
-     "+45% Accuracy when Aiming"
-    ],
-    [
-     "+60% Accuracy when Aiming"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Grinloked",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/MoreAccuracyOnHitGrinlokMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Burston",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On 2 Hits within 0.02s:\n+10% Damage for 0.05s"
-    ],
-    [
-     "On 2 Hits within 0.02s:\n+20% Damage for 0.1s"
-    ],
-    [
-     "On 2 Hits within 0.02s:\n+30% Damage for 0.15s"
-    ],
-    [
-     "On 2 Hits within 0.02s:\n+40% Damage for 0.2s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Triple Tap",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/MoreDamageonMultiHitRifleMod"
-  },
-  {
-   "base_drain": 10,
    "category": "primary",
    "compat_name": "Latron",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -5104,687 +3879,8 @@
   {
    "base_drain": 6,
    "category": "primary",
-   "compat_name": "Assault Rifle",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "+5% Magazine Reloaded/s when Holstered"
-    ],
-    [
-     "+10% Magazine Reloaded/s when Holstered"
-    ],
-    [
-     "+15% Magazine Reloaded/s when Holstered"
-    ],
-    [
-     "+20% Magazine Reloaded/s when Holstered"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Tactical Reload",
-   "polarity": "AP_TACTIC",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/PassiveReloadMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Assault Rifle",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Kill:\n+3.8 Heal Rate for 3s",
-     "-6.2% from Health Orbs"
-    ],
-    [
-     "On Kill:\n+7.5 Heal Rate for 5s",
-     "-12.5% from Health Orbs"
-    ],
-    [
-     "On Kill:\n+11.3 Heal Rate for 8s",
-     "-18.7% from Health Orbs"
-    ],
-    [
-     "On Kill:\n+15 Heal Rate for 10s",
-     "-25% from Health Orbs"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Recover",
-   "polarity": "AP_DEFENSE",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/RestoreHealthOnKillMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Assault Rifle",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Kill:\n-25% Shield Recharge Delay for 3s",
-     "-6.2% from Health Orbs"
-    ],
-    [
-     "On Kill:\n-50% Shield Recharge Delay for 5s",
-     "-12.5% from Health Orbs"
-    ],
-    [
-     "On Kill:\n-75% Shield Recharge Delay for 8s",
-     "-18.7% from Health Orbs"
-    ],
-    [
-     "On Kill:\n-100% Shield Recharge Delay for 10s",
-     "-25% from Health Orbs"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Vanquished Prey",
-   "polarity": "AP_DEFENSE",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/RestoreShieldsOnKillMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "primary",
-   "compat_name": "Rubico",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "-12.5% Zoom"
-    ],
-    [
-     "-25% Zoom"
-    ],
-    [
-     "-37.5% Zoom"
-    ],
-    [
-     "-50% Zoom"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Ambush Optics",
-   "polarity": "AP_TACTIC",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/RubicoLowZoom"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Supra",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "+25% Accuracy when Aiming"
-    ],
-    [
-     "+50% Accuracy when Aiming"
-    ],
-    [
-     "+75% Accuracy when Aiming"
-    ],
-    [
-     "+100% Accuracy when Aiming"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Directed Convergence",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/SupraHigherAccuracyAiming"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Sybaris",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On 2 Hits within 0.2s:\n+7.5% Fire Rate for 0.5s"
-    ],
-    [
-     "On 2 Hits within 0.2s:\n+15% Fire Rate for 1s"
-    ],
-    [
-     "On 2 Hits within 0.2s:\n+22.5% Fire Rate for 2s"
-    ],
-    [
-     "On 2 Hits within 0.2s:\n+30% Fire Rate for 2s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Sudden Justice",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/SybarisIncreaseRoFonHit"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Tetra",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "+20% Projectile Speed"
-    ],
-    [
-     "+40% Projectile Speed"
-    ],
-    [
-     "+60% Projectile Speed"
-    ],
-    [
-     "+80% Projectile Speed"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Focused Acceleration",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/TetraFasterProjAiming"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Tiberon",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "-15% Fire Rate",
-     "+7.5% Damage"
-    ],
-    [
-     "-30% Fire Rate",
-     "+15% Damage"
-    ],
-    [
-     "-45% Fire Rate",
-     "+22.5% Damage"
-    ],
-    [
-     "-60% Fire Rate",
-     "+30% Damage"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Measured Burst",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/TiberonLowRoFAiming"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Tonkor",
-   "fusion_limit": 0,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+100% Accuracy",
-     "+50% Projectile Speed"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Precision Munition",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/TonkorAccuracySmallerMag"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "5% of Damage converted into Impact"
-    ],
-    [
-     "10% of Damage converted into Impact"
-    ],
-    [
-     "15% of Damage converted into Impact"
-    ],
-    [
-     "20% of Damage converted into Impact"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Crash Shot",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/DamageBiasImpactShotgunMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "5% of Damage converted into Puncture"
-    ],
-    [
-     "10% of Damage converted into Puncture"
-    ],
-    [
-     "15% of Damage converted into Puncture"
-    ],
-    [
-     "20% of Damage converted into Puncture"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Shred Shot",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/DamageBiasPunctureShotgunMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "5% of Damage converted into Slash"
-    ],
-    [
-     "10% of Damage converted into Slash"
-    ],
-    [
-     "15% of Damage converted into Slash"
-    ],
-    [
-     "20% of Damage converted into Slash"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Flak Shot",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/DamageBiasSlashShotgunMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "+5% Movement Speed when Aiming"
-    ],
-    [
-     "+10% Movement Speed when Aiming"
-    ],
-    [
-     "+15% Movement Speed when Aiming"
-    ],
-    [
-     "+20% Movement Speed when Aiming"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Snap Shot",
-   "polarity": "AP_ATTACK",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/FasterMovementWhileAimingShotgunlMod"
-  },
-  {
-   "base_drain": 4,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 5,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+5% Reload Speed",
-     "+8.3% Weapon Recoil"
-    ],
-    [
-     "+10% Reload Speed",
-     "+16.7% Weapon Recoil"
-    ],
-    [
-     "+15% Reload Speed",
-     "+25% Weapon Recoil"
-    ],
-    [
-     "+20% Reload Speed",
-     "+33.3% Weapon Recoil"
-    ],
-    [
-     "+25% Reload Speed",
-     "+41.7% Weapon Recoil"
-    ],
-    [
-     "+30% Reload Speed",
-     "+50% Weapon Recoil"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Loose Chamber",
-   "polarity": "AP_TACTIC",
-   "rarity": "COMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/FasterReloadMoreRecoilShotgunMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Kill:\n+12.5% Reload Speed for 0.75s"
-    ],
-    [
-     "On Kill:\n+25% Reload Speed for 2s"
-    ],
-    [
-     "On Kill:\n+37.5% Reload Speed for 2s"
-    ],
-    [
-     "On Kill:\n+50% Reload Speed for 3s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Kill Switch",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/FasterReloadOnKillShotgunMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 5,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "-10% Zoom while Aim Gliding"
-    ],
-    [
-     "-20% Zoom while Aim Gliding"
-    ],
-    [
-     "-30% Zoom while Aim Gliding"
-    ],
-    [
-     "-40% Zoom while Aim Gliding"
-    ],
-    [
-     "-50% Zoom while Aim Gliding"
-    ],
-    [
-     "-60% Zoom while Aim Gliding"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Broad Eye",
-   "polarity": "AP_TACTIC",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/HigherAirAimFoVShotgunMod"
-  },
-  {
-   "base_drain": 4,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "On Equip: \n-10% Weapon Recoil and +10% Accuracy for 8s"
-    ],
-    [
-     "On Equip: \n-20% Weapon Recoil and +20% Accuracy for 8s"
-    ],
-    [
-     "On Equip: \n-30% Weapon Recoil and +30% Accuracy for 8s"
-    ],
-    [
-     "On Equip: \n-40% Weapon Recoil and +40% Accuracy for 8s"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Soft Hands",
-   "polarity": "AP_TACTIC",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/HolsterSpeedBonusMod"
-  },
-  {
-   "base_drain": 4,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 5,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "+5% Magazine Capacity",
-     "-2.5% Reload Speed"
-    ],
-    [
-     "+10% Magazine Capacity",
-     "-5% Reload Speed"
-    ],
-    [
-     "+15% Magazine Capacity",
-     "-7.5% Reload Speed"
-    ],
-    [
-     "+20% Magazine Capacity",
-     "-10% Reload Speed"
-    ],
-    [
-     "+25% Magazine Capacity",
-     "-12.5% Reload Speed"
-    ],
-    [
-     "+30% Magazine Capacity",
-     "-15% Reload Speed"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Loaded Capacity",
-   "polarity": "AP_TACTIC",
-   "rarity": "COMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/LargerMagLongerReloadShotgunMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "-15% Weapon Recoil",
-     "-2.5% Magazine Capacity"
-    ],
-    [
-     "-30% Weapon Recoil",
-     "-5% Magazine Capacity"
-    ],
-    [
-     "-45% Weapon Recoil",
-     "-7.5% Magazine Capacity"
-    ],
-    [
-     "-60% Weapon Recoil",
-     "-10% Magazine Capacity"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Hydraulic Chamber",
-   "polarity": "AP_TACTIC",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/LessRecoilSmallerMagShotgunMod"
-  },
-  {
-   "base_drain": 2,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 5,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "Reveals target on Minimap for +1s."
-    ],
-    [
-     "Reveals target on Minimap for +2s."
-    ],
-    [
-     "Reveals target on Minimap for +3s."
-    ],
-    [
-     "Reveals target on Minimap for +4s."
-    ],
-    [
-     "Reveals target on Minimap for +5s."
-    ],
-    [
-     "Reveals target on Minimap for +6s."
-    ]
-   ],
-   "mod_set": null,
-   "name": "Bounty Hunter",
-   "polarity": "AP_TACTIC",
-   "rarity": "UNCOMMON",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/MarkTargetShotgunMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "-5% Weapon Recoil",
-     "and +5% Accuracy when Sliding"
-    ],
-    [
-     "-10% Weapon Recoil",
-     "and +10% Accuracy when Sliding"
-    ],
-    [
-     "-15% Weapon Recoil",
-     "and +15% Accuracy when Sliding"
-    ],
-    [
-     "-20% Weapon Recoil",
-     "and +20% Accuracy when Sliding"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Double-Barrel Drift",
-   "polarity": "AP_ATTACK",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/MoreAccuracyLessRecoilSlidingShotgunMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 3,
-   "is_utility": true,
-   "level_stats": [
-    [
-     "+5% Magazine Reloaded/s when Holstered"
-    ],
-    [
-     "+10% Magazine Reloaded/s when Holstered"
-    ],
-    [
-     "+15% Magazine Reloaded/s when Holstered"
-    ],
-    [
-     "+20% Magazine Reloaded/s when Holstered"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Lock and Load",
-   "polarity": "AP_TACTIC",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/PassiveReloadMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Kill:\n+3.8 Heal Rate for 3s",
-     "-6.2% from Health Orbs"
-    ],
-    [
-     "On Kill:\n+7.5 Heal Rate for 5s",
-     "-12.5% from Health Orbs"
-    ],
-    [
-     "On Kill:\n+11.3 Heal Rate for 8s",
-     "-18.7% from Health Orbs"
-    ],
-    [
-     "On Kill:\n+15 Heal Rate for 10s",
-     "-25% from Health Orbs"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Momentary Pause",
-   "polarity": "AP_DEFENSE",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/RestoreHealthOnKillMod"
-  },
-  {
-   "base_drain": 10,
-   "category": "primary",
-   "compat_name": "Shotgun",
-   "fusion_limit": 3,
-   "is_utility": false,
-   "level_stats": [
-    [
-     "On Kill:\n-25% Shield Recharge Delay for 3s",
-     "-6.2% from Health Orbs"
-    ],
-    [
-     "On Kill:\n-50% Shield Recharge Delay for 5s",
-     "-12.5% from Health Orbs"
-    ],
-    [
-     "On Kill:\n-75% Shield Recharge Delay for 8s",
-     "-18.7% from Health Orbs"
-    ],
-    [
-     "On Kill:\n-100% Shield Recharge Delay for 10s",
-     "-25% from Health Orbs"
-    ]
-   ],
-   "mod_set": null,
-   "name": "Prize Kill",
-   "polarity": "AP_DEFENSE",
-   "rarity": "RARE",
-   "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Shotgun/RestoreShieldsOnKillMod"
-  },
-  {
-   "base_drain": 6,
-   "category": "primary",
    "compat_name": "Bow",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -5811,6 +3907,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Bow",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -5843,6 +3940,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -5881,6 +3979,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -5939,6 +4038,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -5977,6 +4077,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Assault Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -6035,6 +4136,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -6073,6 +4175,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Sniper",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -6111,6 +4214,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -6141,6 +4245,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -6171,6 +4276,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -6201,6 +4307,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -6231,6 +4338,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -6261,6 +4369,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -6291,6 +4400,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -6349,6 +4459,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -6379,6 +4490,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -6417,6 +4529,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -6447,6 +4560,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Sniper",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -6494,6 +4608,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Assault Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -6526,6 +4641,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Grakata",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -6558,6 +4674,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Tonkor",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -6584,6 +4701,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Harpak",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -6616,6 +4734,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Vulkar",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -6654,6 +4773,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Mutalist Quanta",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -6686,6 +4806,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -6718,6 +4839,7 @@
    "base_drain": 0,
    "category": "primary",
    "compat_name": "Rifle (No Aoe)",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": true,
    "level_stats": [
@@ -6765,6 +4887,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Flux Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -6797,6 +4920,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Penta",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -6829,6 +4953,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Detron",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -6855,6 +4980,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Tetra",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -6887,6 +5013,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -6919,6 +5046,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -6966,6 +5094,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -6998,6 +5127,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Assault Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7030,6 +5160,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Akjagara",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7062,6 +5193,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Basmu",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7094,6 +5226,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Battacor",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7126,6 +5259,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Embolist",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7158,6 +5292,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Gorgon",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7202,6 +5337,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Hema",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7234,6 +5370,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "EFV-5 Jupiter",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7266,6 +5403,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Sporothrix",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7298,6 +5436,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Tiberon",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7330,6 +5469,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Tigris",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7362,6 +5502,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Zylok",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7394,6 +5535,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Paris Prime",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -7432,6 +5574,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Ogris",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7464,6 +5607,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Sniper",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7496,6 +5640,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Soma Prime",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7528,6 +5673,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -7560,6 +5706,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Sniper",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -7586,6 +5733,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -7633,6 +5781,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -7680,6 +5829,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -7727,6 +5877,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -7774,6 +5925,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -7821,6 +5973,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Sniper",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -7868,6 +6021,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -7915,6 +6069,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -7962,6 +6117,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -8009,6 +6165,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": true,
    "level_stats": [
@@ -8056,6 +6213,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -8103,6 +6261,7 @@
    "base_drain": 0,
    "category": "primary",
    "compat_name": "Assault Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": true,
    "level_stats": [
@@ -8147,9 +6306,58 @@
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponRifleConvertAmmoModExpert"
   },
   {
+   "base_drain": 0,
+   "category": "primary",
+   "compat_name": "Sniper",
+   "description": "",
+   "fusion_limit": 10,
+   "is_utility": true,
+   "level_stats": [
+    [
+     "Converts Secondary ammo pickups to 8% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 16% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 25% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 33% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 42% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 50% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 58% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 67% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 75% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 84% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 92% of Ammo Pick Up."
+    ]
+   ],
+   "mod_set": null,
+   "name": "Primed Sniper Ammo Mutation",
+   "polarity": "AP_TACTIC",
+   "rarity": "LEGENDARY",
+   "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponSnipersConvertAmmoModExpert"
+  },
+  {
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Penta",
+   "description": "Grenades leave a burning patch on impact.",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8182,6 +6390,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "Only compatible with Semi-Auto Trigger. Fire Rate cannot be modified.",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8220,6 +6429,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8258,6 +6468,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Sniper",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8290,6 +6501,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Sniper",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -8316,6 +6528,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -8348,6 +6561,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8380,6 +6594,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -8406,6 +6621,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8438,6 +6654,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8470,6 +6687,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Bow",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -8502,6 +6720,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8534,6 +6753,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8566,6 +6786,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8598,6 +6819,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -8645,6 +6867,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -8692,6 +6915,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8724,6 +6948,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8756,6 +6981,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8788,6 +7014,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8820,6 +7047,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8852,6 +7080,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8884,6 +7113,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8916,6 +7146,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8948,6 +7179,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -8980,6 +7212,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9012,6 +7245,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9044,6 +7278,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -9102,6 +7337,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9134,6 +7370,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9166,6 +7403,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Unique",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -9198,6 +7436,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9230,6 +7469,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -9256,6 +7496,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -9282,6 +7523,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -9308,6 +7550,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -9334,6 +7577,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9366,6 +7610,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -9392,6 +7637,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9424,6 +7670,7 @@
    "base_drain": 0,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": true,
    "level_stats": [
@@ -9471,6 +7718,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Assault Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -9503,6 +7751,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9532,9 +7781,43 @@
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponSlashDamageMod"
   },
   {
+   "base_drain": 2,
+   "category": "primary",
+   "compat_name": "Sniper",
+   "description": "",
+   "fusion_limit": 5,
+   "is_utility": true,
+   "level_stats": [
+    [
+     "Converts Secondary ammo pickups to 8% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 16% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 25% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 33% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 42% of Ammo Pick Up."
+    ],
+    [
+     "Converts Secondary ammo pickups to 50% of Ammo Pick Up."
+    ]
+   ],
+   "mod_set": null,
+   "name": "Sniper Ammo Mutation",
+   "polarity": "AP_TACTIC",
+   "rarity": "RARE",
+   "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponSnipersConvertAmmoMod"
+  },
+  {
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9567,6 +7850,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -9625,6 +7909,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9657,6 +7942,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9689,6 +7975,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -9747,6 +8034,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -9773,6 +8061,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9811,6 +8100,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9843,6 +8133,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9875,6 +8166,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9913,6 +8205,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -9951,6 +8244,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Sniper",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -9977,6 +8271,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -10003,26 +8298,27 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
     [
-     "+5% chance to apply  on Critical"
+     "+5% chance to apply Slash on Critical"
     ],
     [
-     "+10% chance to apply  on Critical"
+     "+10% chance to apply Slash on Critical"
     ],
     [
-     "+15% chance to apply  on Critical"
+     "+15% chance to apply Slash on Critical"
     ],
     [
-     "+20% chance to apply  on Critical"
+     "+20% chance to apply Slash on Critical"
     ],
     [
-     "+25% chance to apply  on Critical"
+     "+25% chance to apply Slash on Critical"
     ],
     [
-     "+30% chance to apply  on Critical"
+     "+30% chance to apply Slash on Critical"
     ]
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Hunter/HunterSetMod",
@@ -10035,6 +8331,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10067,6 +8364,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10093,6 +8391,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10119,6 +8418,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10145,6 +8445,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10177,6 +8478,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10209,6 +8511,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10241,6 +8544,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -10273,6 +8577,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10303,6 +8608,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10333,6 +8639,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10363,6 +8670,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -10421,6 +8729,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10459,6 +8768,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10497,6 +8807,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10535,6 +8846,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10573,6 +8885,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10603,6 +8916,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10633,6 +8947,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10663,6 +8978,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10693,6 +9009,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10723,6 +9040,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -10753,6 +9071,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10791,6 +9110,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -10823,6 +9143,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Convectrix",
+   "description": "Only consume ammo when dealing damage.",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10855,6 +9176,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10887,6 +9209,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10919,6 +9242,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -10951,6 +9275,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Drakgoon",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -10977,6 +9302,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Sobek",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -11009,6 +9335,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -11035,6 +9362,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -11067,6 +9395,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11114,6 +9443,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11161,6 +9491,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11208,6 +9539,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11255,6 +9587,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11302,6 +9635,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11349,6 +9683,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": true,
    "level_stats": [
@@ -11396,6 +9731,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11443,6 +9779,7 @@
    "base_drain": 0,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": true,
    "level_stats": [
@@ -11490,6 +9827,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11537,6 +9875,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11584,6 +9923,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11631,6 +9971,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11678,6 +10019,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -11725,6 +10067,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "Only compatible with Semi-Auto Trigger. Fire Rate cannot be modified.",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -11763,6 +10106,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -11801,6 +10145,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -11833,6 +10178,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -11865,6 +10211,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -11897,6 +10244,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -11929,6 +10277,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -11961,6 +10310,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -11993,6 +10343,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12025,6 +10376,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12057,6 +10409,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12089,6 +10442,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12121,6 +10475,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12153,6 +10508,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12185,6 +10541,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -12243,6 +10600,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12275,6 +10633,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12307,6 +10666,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12339,6 +10699,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12371,6 +10732,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12403,6 +10765,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -12429,6 +10792,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": true,
    "level_stats": [
@@ -12487,6 +10851,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12519,6 +10884,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": true,
    "level_stats": [
@@ -12545,6 +10911,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12577,6 +10944,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": true,
    "level_stats": [
@@ -12609,6 +10977,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12641,6 +11010,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12673,6 +11043,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12705,6 +11076,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12737,6 +11109,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12769,6 +11142,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12801,6 +11175,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 10,
    "is_utility": false,
    "level_stats": [
@@ -12859,6 +11234,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12891,6 +11267,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "description": "",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [
@@ -12923,6 +11300,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Acrid",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -12953,6 +11331,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Ballistica",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -12983,6 +11362,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Bolto",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13013,6 +11393,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Burston Prime",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13043,6 +11424,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Embolist",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13073,6 +11455,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Furis",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13103,6 +11486,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Grinlok",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13133,6 +11517,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Hek",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13163,6 +11548,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Kunai",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13193,6 +11579,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Lanka",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13223,6 +11610,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Miter",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13253,6 +11641,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Panthera",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13283,6 +11672,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Sobek",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13313,6 +11703,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Spectra",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13343,6 +11734,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Supra",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13373,6 +11765,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Viper",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13403,6 +11796,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Vulkar",
+   "description": "",
    "fusion_limit": 3,
    "is_utility": false,
    "level_stats": [
@@ -13433,6 +11827,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Higasa",
+   "description": "Alternate Fire applies a random Status Effect to enemies hit.",
    "fusion_limit": 5,
    "is_utility": false,
    "level_stats": [

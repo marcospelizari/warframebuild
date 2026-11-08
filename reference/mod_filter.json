@@ -1,5 +1,5 @@
 {
-  "about": "Gun mods are chosen by uniqueName, never by name (G11/G31). A rule denies a mod when its uniqueName contains `path_contains`, unless its name starts with `unless_name_starts`. `allow` lists uniqueNames kept regardless. Refresh fails on a gun-mod name still duplicated after filtering.",
+  "about": "Gun mods are chosen by uniqueName, never by name (G11/G31). A rule denies a mod when its uniqueName contains `path_contains`, unless its name starts with `unless_name_starts`. `allow` lists mods kept regardless (`id` = uniqueName), each with its reason. Refresh fails on a gun-mod name still duplicated after filtering.",
   "rules": [
     {
       "id": "beginner",
@@ -19,7 +19,20 @@
       "unless_name_starts": "Primed",
       "reason": "non-Primed /Expert/ copy with higher values; not in the game or on the wiki (Marcos, 2026-11-07)",
       "verified": "2026-11-08"
+    },
+    {
+      "id": "conclave",
+      "path_contains": "/PvPMods/",
+      "reason": "Conclave (PvP) mod; cannot be equipped outside Conclave",
+      "verified": "2026-11-08"
     }
   ],
-  "allow": []
+  "allow": [
+    {
+      "id": "/Lotus/Upgrades/Mods/PvPMods/Rifle/MoreDamageonTripleTapRifleMod",
+      "name": "Double Tap",
+      "reason": "Conclave mod that also works outside Conclave (DE text: \"Stacks up to 20x outside of Conclave\"); Marcos, 2026-11-08",
+      "verified": "2026-11-08"
+    }
+  ]
 }

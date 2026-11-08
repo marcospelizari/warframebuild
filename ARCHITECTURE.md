@@ -54,7 +54,7 @@ is "best found". The same data produces the same builds on any machine.
 | Source | Used for |
 |--------|----------|
 | [Warframe Public Export](https://content.warframe.com/PublicExport) (Digital Extremes) | Weapons, mods, arcanes, sentinels, item images |
-| [WFCD warframe-items](https://github.com/WFCD/warframe-items) | Weapon polarities, weapon class, attack modes, falloff |
+| [WFCD warframe-items](https://github.com/WFCD/warframe-items) | Weapon polarities, weapon class, attack modes, falloff, arcane slots |
 | [WARFRAME Wiki](https://wiki.warframe.com) | Incarnon evolutions, faction damage modifiers, enemy stats, status rules, Archon Shards, riven ranges |
 
 - Downloads are cached locally and never committed. Game images are never stored in the repository.

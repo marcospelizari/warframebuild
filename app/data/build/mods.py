@@ -7,7 +7,7 @@ from typing import Any
 from pydantic import ValidationError
 
 from app.data.build.common import RefreshError, clean_levels, clean_text, records
-from app.data.models import Mod, ModSet
+from app.data.models import Category, Mod, ModSet
 from app.data.sources.de_export import MOD_CATEGORY
 
 
@@ -15,11 +15,14 @@ def build(
     upgrades: Any, mod_filter: dict[str, Any]
 ) -> tuple[list[Mod], list[ModSet], dict[str, int]]:
     rules = mod_filter["rules"]
-    allow = set(mod_filter.get("allow", []))
+    allow = {a["id"] for a in mod_filter.get("allow", [])}
     denied: Counter[str] = Counter()
     kept = []
-    for m in records(upgrades, "ExportUpgrades"):
-        if m.get("type") not in MOD_CATEGORY:
+    entries = records(upgrades, "ExportUpgrades")
+    compat = _gun_compat(entries)
+    for m in entries:
+        category = _category(m, compat)
+        if category is None:
             continue
         rule = None if m["uniqueName"] in allow else _deny_rule(m, rules)
         if rule:
@@ -27,7 +30,7 @@ def build(
         elif not m.get("levelStats"):
             denied["no-level-stats"] += 1  # rivens (M2)
         else:
-            kept.append(m)
+            kept.append(m | {"_category": category})
 
     names: defaultdict[str, list[str]] = defaultdict(list)
     for m in kept:
@@ -63,7 +66,7 @@ def _mod(m: dict[str, Any]) -> Mod:
     return Mod(
         unique_name=m["uniqueName"],
         name=m["name"],
-        category=MOD_CATEGORY[m["type"]],
+        category=m["_category"],
         compat_name=m.get("compatName") or "",
         polarity=m["polarity"],
         rarity=m["rarity"],
@@ -71,8 +74,25 @@ def _mod(m: dict[str, Any]) -> Mod:
         fusion_limit=m["fusionLimit"],
         is_utility=bool(m.get("isUtility", False)),
         mod_set=m.get("modSet"),
+        description=clean_text("\n".join(m.get("description") or [])),
         level_stats=clean_levels(m["levelStats"]),
     )
+
+
+def _gun_compat(entries: list[dict[str, Any]]) -> dict[str, Category]:
+    """Compat names used by typed gun mods of exactly one category (Sniper -> primary)."""
+    seen: defaultdict[str, set[Category]] = defaultdict(set)
+    for m in entries:
+        if m.get("type") in MOD_CATEGORY and m.get("compatName"):
+            seen[m["compatName"]].add(MOD_CATEGORY[m["type"]])
+    return {name: next(iter(cats)) for name, cats in seen.items() if len(cats) == 1}
+
+
+def _category(m: dict[str, Any], compat: dict[str, Category]) -> Category | None:
+    """DE `type`, or for an untyped mod (`---`: Sniper Ammo Mutation) its gun compat name."""
+    if m.get("type") in MOD_CATEGORY:
+        return MOD_CATEGORY[m["type"]]
+    return compat.get(m.get("compatName") or "")
 
 
 def _deny_rule(m: dict[str, Any], rules: list[dict[str, Any]]) -> str | None:
