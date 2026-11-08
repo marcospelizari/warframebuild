@@ -9,6 +9,7 @@
     "critical_chance": 0.12,
     "critical_multiplier": 2.0,
     "damage": {},
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.0,
     "forced_procs": [],
@@ -27,6 +28,7 @@
     "damage": {
      "magnetic": 100.0
     },
+    "direct_bonus": "none",
     "falloff": null,
     "fire_rate": 3.0,
     "forced_procs": [],
@@ -45,6 +47,7 @@
     "damage": {
      "magnetic": 200.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.0,
      "reduction": 0.6,
@@ -106,6 +109,7 @@
     "damage": {
      "toxin": 43.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [
@@ -159,6 +163,7 @@
     "damage": {
      "toxin": 100.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [],
@@ -177,6 +182,7 @@
     "damage": {
      "toxin": 40.0
     },
+    "direct_bonus": "multiplying",
     "falloff": {
      "end": 3.0,
      "reduction": 1.0,
@@ -199,6 +205,7 @@
     "damage": {
      "toxin": 51.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.0,
     "forced_procs": [],
@@ -252,6 +259,7 @@
     "damage": {
      "heat": 33.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.0,
     "forced_procs": [],
@@ -304,6 +312,7 @@
     "damage": {
      "heat": 35.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.0,
     "forced_procs": [],
@@ -356,6 +365,7 @@
     "damage": {
      "blast": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [],
@@ -374,6 +384,7 @@
     "damage": {
      "blast": 600.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.1,
      "reduction": 0.8,
@@ -433,6 +444,7 @@
      "puncture": 30.0,
      "slash": 6.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.5,
     "forced_procs": [],
@@ -487,6 +499,7 @@
      "puncture": 7.56,
      "slash": 10.44
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -539,6 +552,7 @@
      "puncture": 4.84,
      "slash": 17.16
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -594,6 +608,7 @@
      "puncture": 24.0,
      "slash": 1.6
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 11.25,
     "forced_procs": [],
@@ -615,6 +630,7 @@
      "puncture": 140.0,
      "slash": 90.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -670,6 +686,7 @@
      "puncture": 22.5,
      "slash": 1.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 11.25,
     "forced_procs": [],
@@ -691,6 +708,7 @@
      "puncture": 130.0,
      "slash": 80.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -744,6 +762,7 @@
     "damage": {
      "electricity": 200.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -766,6 +785,7 @@
     "damage": {
      "electricity": 525.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": null,
     "forced_procs": [],
@@ -817,6 +837,7 @@
     "damage": {
      "radiation": 760.0
     },
+    "direct_bonus": "multiplying",
     "falloff": {
      "end": 36.0,
      "reduction": 0.5,
@@ -878,6 +899,7 @@
      "puncture": 140.0,
      "slash": 40.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.67,
     "forced_procs": [],
@@ -898,6 +920,7 @@
      "puncture": 42.0,
      "slash": 12.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.3,
@@ -922,6 +945,7 @@
      "puncture": 5.0,
      "slash": 10.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -942,6 +966,7 @@
     "damage": {
      "electricity": 150.0
     },
+    "direct_bonus": "none",
     "falloff": null,
     "fire_rate": 0.5,
     "forced_procs": [],
@@ -1000,6 +1025,7 @@
      "puncture": 4.84,
      "slash": 17.16
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 15.0,
     "forced_procs": [],
@@ -1052,6 +1078,7 @@
     "damage": {
      "cold": 34.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -1103,6 +1130,7 @@
     "damage": {
      "electricity": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -1121,6 +1149,7 @@
     "damage": {
      "electricity": 180.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.0,
     "forced_procs": [],
@@ -1139,6 +1168,7 @@
     "damage": {
      "blast": 150.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 0.5,
      "reduction": 0.0,
@@ -1161,6 +1191,7 @@
     "damage": {
      "blast": 600.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 6.0,
      "reduction": 0.0,
@@ -1223,6 +1254,7 @@
      "puncture": 33.6,
      "slash": 13.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -1241,6 +1273,7 @@
     "damage": {
      "impact": 200.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.33,
     "forced_procs": [],
@@ -1259,6 +1292,7 @@
     "damage": {
      "blast": 1000.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 8.0,
      "reduction": 0.6,
@@ -1316,6 +1350,7 @@
     "damage": {
      "heat": 22.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -1370,6 +1405,7 @@
     "damage": {
      "radiation": 26.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 52.0,
      "reduction": 0.3077,
@@ -1392,6 +1428,7 @@
     "damage": {
      "radiation": 26.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 52.0,
      "reduction": 0.3077,
@@ -1448,6 +1485,7 @@
      "heat": 30.0,
      "puncture": 40.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -1466,6 +1504,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -1486,6 +1525,7 @@
     "damage": {
      "radiation": 100.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.4,
@@ -1548,6 +1588,7 @@
     "damage": {
      "impact": 50.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -1568,6 +1609,7 @@
     "damage": {
      "cold": 10.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.2,
      "reduction": 0.7,
@@ -1592,6 +1634,7 @@
     "damage": {
      "blast": 660.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.2,
      "reduction": 0.7,
@@ -1654,6 +1697,7 @@
     "damage": {
      "impact": 56.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -1674,6 +1718,7 @@
     "damage": {
      "cold": 10.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.2,
      "reduction": 0.7,
@@ -1698,6 +1743,7 @@
     "damage": {
      "blast": 740.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.2,
      "reduction": 0.7,
@@ -1761,6 +1807,7 @@
     "damage": {
      "electricity": 22.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -1814,6 +1861,7 @@
      "impact": 6.4,
      "puncture": 25.6
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.67,
     "forced_procs": [],
@@ -1867,6 +1915,7 @@
      "impact": 7.6,
      "puncture": 30.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.08,
     "forced_procs": [],
@@ -1919,6 +1968,7 @@
     "damage": {
      "electricity": 29.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 13.33,
     "forced_procs": [],
@@ -1937,6 +1987,7 @@
     "damage": {
      "electricity": 600.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -1955,6 +2006,7 @@
     "damage": {
      "electricity": 800.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.5,
@@ -2011,6 +2063,7 @@
      "puncture": 850.0,
      "slash": 50.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -2031,6 +2084,7 @@
     "damage": {
      "magnetic": 400.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.6,
@@ -2055,6 +2109,7 @@
      "puncture": 425.0,
      "slash": 25.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -2073,6 +2128,7 @@
     "damage": {
      "magnetic": 200.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.6,
@@ -2135,6 +2191,7 @@
      "puncture": 280.0,
      "slash": 80.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -2155,6 +2212,7 @@
     "damage": {
      "magnetic": 200.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.6,
      "reduction": 0.6,
@@ -2179,6 +2237,7 @@
      "puncture": 140.0,
      "slash": 40.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -2197,6 +2256,7 @@
     "damage": {
      "magnetic": 100.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.6,
      "reduction": 0.6,
@@ -2257,6 +2317,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 0.83,
     "forced_procs": [],
@@ -2275,6 +2336,7 @@
     "damage": {
      "cold": 640.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 8.0,
      "reduction": 0.8,
@@ -2332,6 +2394,7 @@
     "damage": {
      "cold": 26.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -2383,6 +2446,7 @@
     "damage": {
      "cold": 29.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -2436,6 +2500,7 @@
      "puncture": 16.64,
      "slash": 28.08
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 6.0,
     "forced_procs": [],
@@ -2456,6 +2521,7 @@
      "puncture": 180.0,
      "slash": 300.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 0.667,
     "forced_procs": [
@@ -2476,6 +2542,7 @@
     "damage": {
      "radiation": 1200.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.2,
      "reduction": 0.7,
@@ -2538,6 +2605,7 @@
      "puncture": 40.74,
      "slash": 46.56
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -2560,6 +2628,7 @@
     "damage": {
      "viral": 53.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 3.6,
      "reduction": 0.4,
@@ -2618,6 +2687,7 @@
      "magnetic": 42.0,
      "puncture": 24.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -2636,6 +2706,7 @@
     "damage": {
      "radiation": 208.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -2654,6 +2725,7 @@
     "damage": {
      "radiation": 208.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.4,
      "reduction": 0.4,
@@ -2713,6 +2785,7 @@
      "radiation": 140.0,
      "slash": 260.0
     },
+    "direct_bonus": "multiplying",
     "falloff": {
      "end": 60.0,
      "reduction": 0.508,
@@ -2774,6 +2847,7 @@
     "damage": {
      "electricity": 10.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -2792,6 +2866,7 @@
     "damage": {
      "electricity": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.0,
     "forced_procs": [],
@@ -2810,6 +2885,7 @@
     "damage": {
      "blast": 150.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 0.5,
      "reduction": 0.0,
@@ -2832,6 +2908,7 @@
     "damage": {
      "blast": 600.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 6.0,
      "reduction": 0.0,
@@ -2890,6 +2967,7 @@
     "damage": {
      "electricity": 13.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -2908,6 +2986,7 @@
     "damage": {
      "electricity": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.0,
     "forced_procs": [],
@@ -2926,6 +3005,7 @@
     "damage": {
      "blast": 150.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 0.5,
      "reduction": 0.0,
@@ -2948,6 +3028,7 @@
     "damage": {
      "blast": 600.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 6.0,
      "reduction": 0.0,
@@ -3006,6 +3087,7 @@
     "damage": {
      "radiation": 600.0
     },
+    "direct_bonus": "multiplying",
     "falloff": {
      "end": 20.0,
      "reduction": 0.6667,
@@ -3067,6 +3149,7 @@
      "puncture": 1.2,
      "slash": 9.6
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -3087,6 +3170,7 @@
      "puncture": 0.9,
      "slash": 7.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 16.0,
     "forced_procs": [],
@@ -3141,6 +3225,7 @@
     "damage": {
      "impact": 75.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.7,
     "forced_procs": [],
@@ -3159,6 +3244,7 @@
     "damage": {
      "blast": 350.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.5,
@@ -3217,6 +3303,7 @@
     "damage": {
      "impact": 75.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -3235,6 +3322,7 @@
     "damage": {
      "blast": 350.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.5,
@@ -3295,6 +3383,7 @@
      "puncture": 30.0,
      "slash": 6.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.5,
     "forced_procs": [],
@@ -3353,6 +3442,7 @@
      "puncture": 245.0,
      "slash": 70.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.33,
     "forced_procs": [],
@@ -3371,6 +3461,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.6,
      "reduction": 0.4,
@@ -3395,6 +3486,7 @@
      "puncture": 5.0,
      "slash": 10.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -3415,6 +3507,7 @@
     "damage": {
      "electricity": 150.0
     },
+    "direct_bonus": "none",
     "falloff": null,
     "fire_rate": 0.5,
     "forced_procs": [],
@@ -3471,6 +3564,7 @@
     "damage": {
      "radiation": 40.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 22.0,
      "reduction": 0.6231,
@@ -3529,6 +3623,7 @@
      "impact": 5.2,
      "puncture": 20.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.33,
     "forced_procs": [],
@@ -3548,6 +3643,7 @@
      "impact": 10.0,
      "puncture": 40.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.67,
     "forced_procs": [],
@@ -3600,6 +3696,7 @@
      "impact": 5.2,
      "puncture": 20.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 18.75,
     "forced_procs": [],
@@ -3654,6 +3751,7 @@
      "puncture": 9.24,
      "slash": 12.76
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -3705,6 +3803,7 @@
     "damage": {
      "impact": 150.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 20.0,
      "reduction": 0.8333,
@@ -3729,6 +3828,7 @@
     "damage": {
      "impact": 50.0
     },
+    "direct_bonus": "none",
     "falloff": null,
     "fire_rate": 1.25,
     "forced_procs": [
@@ -3787,6 +3887,7 @@
      "puncture": 9.0,
      "slash": 7.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 9.67,
     "forced_procs": [],
@@ -3807,6 +3908,7 @@
      "puncture": 9.0,
      "slash": 7.8
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -3861,6 +3963,7 @@
      "radiation": 10.0,
      "slash": 5.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -3917,6 +4020,7 @@
     "damage": {
      "radiation": 44.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.5,
     "forced_procs": [],
@@ -3935,6 +4039,7 @@
     "damage": {
      "radiation": 88.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.4,
      "reduction": 0.3,
@@ -3957,6 +4062,7 @@
     "damage": {
      "radiation": 44.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.5,
     "forced_procs": [],
@@ -3975,6 +4081,7 @@
     "damage": {
      "radiation": 106.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 9.6,
      "reduction": 0.9,
@@ -4032,6 +4139,7 @@
     "damage": {
      "blast": 200.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -4050,6 +4158,7 @@
     "damage": {
      "blast": 250.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.6,
      "reduction": 0.4,
@@ -4072,6 +4181,7 @@
     "damage": {
      "heat": 30.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 6.0,
     "forced_procs": [],
@@ -4126,6 +4236,7 @@
     "damage": {
      "blast": 200.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -4144,6 +4255,7 @@
     "damage": {
      "blast": 250.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.6,
      "reduction": 0.4,
@@ -4166,6 +4278,7 @@
     "damage": {
      "heat": 50.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 6.0,
     "forced_procs": [],
@@ -4222,6 +4335,7 @@
      "impact": 40.0,
      "puncture": 20.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 2.33,
     "forced_procs": [
@@ -4242,6 +4356,7 @@
     "damage": {
      "heat": 80.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.0,
      "reduction": 0.2,
@@ -4303,6 +4418,7 @@
     "damage": {
      "impact": 50.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 4.67,
     "forced_procs": [],
@@ -4321,6 +4437,7 @@
     "damage": {
      "gas": 41.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 0.7,
      "reduction": 0.2,
@@ -4345,6 +4462,7 @@
      "puncture": 30.24,
      "slash": 38.88
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 4.67,
     "forced_procs": [],
@@ -4397,6 +4515,7 @@
      "puncture": 1.0,
      "radiation": 10.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -4450,6 +4569,7 @@
      "heat": 20.0,
      "puncture": 26.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -4504,6 +4624,7 @@
      "puncture": 36.0,
      "slash": 24.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.667,
     "forced_procs": [],
@@ -4558,6 +4679,7 @@
     "damage": {
      "impact": 187.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 0.667,
     "forced_procs": [],
@@ -4576,6 +4698,7 @@
     "damage": {
      "blast": 839.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 8.3,
      "reduction": 0.9,
@@ -4598,6 +4721,7 @@
     "damage": {
      "impact": 49.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -4616,6 +4740,7 @@
     "damage": {
      "blast": 57.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.5,
      "reduction": 0.5,
@@ -4679,6 +4804,7 @@
      "puncture": 12.33,
      "slash": 12.33
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -4735,6 +4861,7 @@
      "puncture": 1.7,
      "slash": 5.1
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 14.38,
     "forced_procs": [],
@@ -4789,6 +4916,7 @@
      "puncture": 6.13,
      "slash": 6.13
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.83,
     "forced_procs": [],
@@ -4841,6 +4969,7 @@
      "puncture": 33.67,
      "slash": 33.67
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -4896,6 +5025,7 @@
      "puncture": 4.6,
      "slash": 13.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -4916,6 +5046,7 @@
      "puncture": 4.6,
      "slash": 36.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -4970,6 +5101,7 @@
      "puncture": 56.55,
      "slash": 17.4
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 30.0,
      "reduction": 0.828,
@@ -4994,6 +5126,7 @@
      "puncture": 56.55,
      "slash": 17.4
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 30.0,
      "reduction": 0.989,
@@ -5053,6 +5186,7 @@
      "puncture": 7.5,
      "slash": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -5073,6 +5207,7 @@
      "puncture": 18.0,
      "slash": 54.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -5093,6 +5228,7 @@
      "puncture": 6.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -5149,6 +5285,7 @@
      "puncture": 6.21,
      "slash": 9.66
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 11.67,
     "forced_procs": [],
@@ -5205,6 +5342,7 @@
      "puncture": 4.0,
      "slash": 12.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 26.0,
      "reduction": 0.9,
@@ -5229,6 +5367,7 @@
      "puncture": 4.0,
      "slash": 12.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 26.0,
      "reduction": 0.9,
@@ -5286,6 +5425,7 @@
      "impact": 18.9,
      "puncture": 8.1
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [
@@ -5308,6 +5448,7 @@
      "puncture": 183.0,
      "slash": 155.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.9,
      "reduction": 0.8,
@@ -5371,6 +5512,7 @@
      "puncture": 15.66,
      "slash": 18.36
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.83,
     "forced_procs": [],
@@ -5391,6 +5533,7 @@
      "puncture": 15.66,
      "slash": 18.36
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.58,
     "forced_procs": [],
@@ -5448,6 +5591,7 @@
      "puncture": 9.63,
      "slash": 9.63
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 40.0,
      "reduction": 0.4805,
@@ -5502,6 +5646,7 @@
     "damage": {
      "puncture": 59.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.17,
     "forced_procs": [
@@ -5524,6 +5669,7 @@
      "puncture": 168.0,
      "slash": 204.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.0,
      "reduction": 0.7,
@@ -5583,6 +5729,7 @@
     "damage": {
      "impact": 50.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.17,
     "forced_procs": [],
@@ -5601,6 +5748,7 @@
     "damage": {
      "blast": 673.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.0,
      "reduction": 0.7,
@@ -5623,6 +5771,7 @@
     "damage": {
      "impact": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.17,
     "forced_procs": [],
@@ -5641,6 +5790,7 @@
     "damage": {
      "blast": 50.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.1,
@@ -5665,6 +5815,7 @@
      "puncture": 25.0,
      "slash": 10.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 40.0,
      "reduction": 0.98,
@@ -5730,6 +5881,7 @@
      "puncture": 3.75,
      "slash": 4.5
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 20.0,
      "reduction": 0.96,
@@ -5792,6 +5944,7 @@
      "puncture": 5.38,
      "slash": 5.38
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.83,
     "forced_procs": [],
@@ -5812,6 +5965,7 @@
      "puncture": 5.38,
      "slash": 5.38
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.17,
     "forced_procs": [],
@@ -5862,6 +6016,7 @@
     "damage": {
      "radiation": 21.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -5914,6 +6069,7 @@
      "puncture": 68.12,
      "slash": 36.68
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -5932,6 +6088,7 @@
     "damage": {
      "corrosive": 69.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.3,
      "reduction": 0.3,
@@ -5992,6 +6149,7 @@
      "puncture": 2.7,
      "slash": 12.69
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -6046,6 +6204,7 @@
      "puncture": 7.5,
      "slash": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -6066,6 +6225,7 @@
      "puncture": 12.0,
      "slash": 36.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -6122,6 +6282,7 @@
      "puncture": 3.7,
      "slash": 2.9
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 20.0,
     "forced_procs": [],
@@ -6176,6 +6337,7 @@
      "puncture": 3.33,
      "slash": 2.67
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 20.0,
     "forced_procs": [],
@@ -6230,6 +6392,7 @@
      "puncture": 8.0,
      "slash": 24.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -6250,6 +6413,7 @@
      "puncture": 7.0,
      "slash": 56.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -6304,6 +6468,7 @@
      "puncture": 18.7,
      "slash": 74.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.67,
     "forced_procs": [],
@@ -6361,6 +6526,7 @@
      "puncture": 18.7,
      "slash": 93.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.67,
     "forced_procs": [],
@@ -6418,6 +6584,7 @@
      "puncture": 8.7,
      "slash": 7.25
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 11.67,
     "forced_procs": [],
@@ -6474,6 +6641,7 @@
      "puncture": 9.3,
      "slash": 7.75
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 11.67,
     "forced_procs": [],
@@ -6530,6 +6698,7 @@
      "puncture": 10.0,
      "slash": 70.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -6550,6 +6719,7 @@
      "puncture": 25.0,
      "slash": 450.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -6570,6 +6740,7 @@
      "puncture": 6.0,
      "slash": 42.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -6588,6 +6759,7 @@
     "damage": {
      "heat": 80.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.2,
@@ -6651,6 +6823,7 @@
      "puncture": 33.8,
      "slash": 11.2
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -6711,6 +6884,7 @@
      "impact": 245.7,
      "puncture": 27.3
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -6771,6 +6945,7 @@
     "damage": {
      "impact": 25.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.67,
     "forced_procs": [],
@@ -6789,6 +6964,7 @@
     "damage": {
      "blast": 175.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.9,
      "reduction": 0.5,
@@ -6811,6 +6987,7 @@
     "damage": {
      "impact": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.67,
     "forced_procs": [],
@@ -6829,6 +7006,7 @@
     "damage": {
      "blast": 50.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.9,
@@ -6853,6 +7031,7 @@
      "puncture": 40.0,
      "slash": 16.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.0,
     "forced_procs": [],
@@ -6910,6 +7089,7 @@
     "damage": {
      "heat": 160.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -6928,6 +7108,7 @@
     "damage": {
      "heat": 120.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.4,
      "reduction": 0.3,
@@ -6952,6 +7133,7 @@
      "puncture": 75.0,
      "slash": 30.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -6973,6 +7155,7 @@
     "damage": {
      "heat": 300.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.6,
@@ -7037,6 +7220,7 @@
      "puncture": 14.21,
      "slash": 16.66
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.58,
     "forced_procs": [],
@@ -7094,6 +7278,7 @@
      "puncture": 24.0,
      "slash": 6.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 6.25,
     "forced_procs": [],
@@ -7112,6 +7297,7 @@
     "damage": {
      "puncture": 3.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.67,
     "forced_procs": [],
@@ -7165,6 +7351,7 @@
     "damage": {
      "puncture": 75.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.17,
     "forced_procs": [
@@ -7185,6 +7372,7 @@
     "damage": {
      "blast": 650.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.0,
      "reduction": 0.7,
@@ -7245,6 +7433,7 @@
      "puncture": 37.5,
      "slash": 7.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -7265,6 +7454,7 @@
      "puncture": 50.0,
      "slash": 10.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [
@@ -7322,6 +7512,7 @@
     "damage": {
      "impact": 260.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.17,
     "forced_procs": [
@@ -7344,6 +7535,7 @@
      "puncture": 52.0,
      "slash": 29.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.9,
      "reduction": 0.3,
@@ -7409,6 +7601,7 @@
     "damage": {
      "puncture": 25.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 13.33,
     "forced_procs": [],
@@ -7465,6 +7658,7 @@
      "puncture": 6.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 25.0,
      "reduction": 0.46667,
@@ -7489,6 +7683,7 @@
      "puncture": 6.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 25.0,
      "reduction": 0.46667,
@@ -7547,6 +7742,7 @@
      "puncture": 6.27,
      "slash": 26.22
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.33,
     "forced_procs": [],
@@ -7567,6 +7763,7 @@
      "puncture": 6.27,
      "slash": 26.22
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.0,
     "forced_procs": [],
@@ -7624,6 +7821,7 @@
      "puncture": 3.45,
      "slash": 2.3
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 14.17,
     "forced_procs": [],
@@ -7644,6 +7842,7 @@
      "puncture": 45.0,
      "slash": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.167,
     "forced_procs": [],
@@ -7662,6 +7861,7 @@
     "damage": {
      "heat": 700.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.0,
      "reduction": 0.1,
@@ -7722,6 +7922,7 @@
      "puncture": 2.7,
      "slash": 1.35
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 13.33,
     "forced_procs": [],
@@ -7742,6 +7943,7 @@
      "puncture": 75.0,
      "slash": 25.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -7760,6 +7962,7 @@
     "damage": {
      "heat": 750.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.0,
      "reduction": 0.1,
@@ -7820,6 +8023,7 @@
      "puncture": 12.69,
      "slash": 11.34
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.83,
     "forced_procs": [],
@@ -7874,6 +8078,7 @@
     "damage": {
      "corrosive": 4.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.0,
      "reduction": 1.0,
@@ -7896,6 +8101,7 @@
     "damage": {
      "corrosive": 75.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 0.3,
      "reduction": 0.3,
@@ -7918,6 +8124,7 @@
     "damage": {
      "corrosive": 50.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.0,
      "reduction": 1.0,
@@ -7940,6 +8147,7 @@
     "damage": {
      "corrosive": 200.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 0.3,
      "reduction": 0.3,
@@ -7962,6 +8170,7 @@
     "damage": {
      "corrosive": 200.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.5,
      "reduction": 0.0,
@@ -8021,6 +8230,7 @@
      "puncture": 5.0,
      "slash": 6.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 22.0,
      "reduction": 0.6,
@@ -8084,6 +8294,7 @@
      "puncture": 16.0,
      "slash": 64.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -8138,6 +8349,7 @@
     "damage": {
      "radiation": 22.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -8191,6 +8403,7 @@
      "puncture": 2.0,
      "slash": 7.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 15.0,
     "forced_procs": [],
@@ -8212,6 +8425,7 @@
      "puncture": 2.0,
      "slash": 7.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -8268,6 +8482,7 @@
      "puncture": 6.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 24.0,
      "reduction": 0.8333,
@@ -8292,6 +8507,7 @@
      "puncture": 6.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 24.0,
      "reduction": 0.8333,
@@ -8352,6 +8568,7 @@
      "puncture": 6.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 24.0,
      "reduction": 0.8333,
@@ -8376,6 +8593,7 @@
      "puncture": 6.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 24.0,
      "reduction": 0.8333,
@@ -8437,6 +8655,7 @@
      "puncture": 8.25,
      "slash": 11.64
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.33,
     "forced_procs": [],
@@ -8492,6 +8711,7 @@
      "puncture": 23.5,
      "slash": 4.7
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 20.0,
      "reduction": 0.7872,
@@ -8552,6 +8772,7 @@
     "damage": {
      "impact": 200.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -8572,6 +8793,7 @@
     "damage": {
      "blast": 300.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.9,
      "reduction": 0.4,
@@ -8594,6 +8816,7 @@
     "damage": {
      "impact": 75.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -8612,6 +8835,7 @@
     "damage": {
      "blast": 90.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.9,
      "reduction": 0.4,
@@ -8672,6 +8896,7 @@
      "puncture": 3.3,
      "slash": 15.51
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.33,
     "forced_procs": [],
@@ -8722,6 +8947,7 @@
     "damage": {
      "heat": 29.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.0,
     "forced_procs": [],
@@ -8740,6 +8966,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [],
@@ -8758,6 +8985,7 @@
     "damage": {
      "blast": 450.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.9,
      "reduction": 0.8,
@@ -8816,6 +9044,7 @@
      "puncture": 1.8,
      "slash": 1.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 14.38,
     "forced_procs": [],
@@ -8870,6 +9099,7 @@
      "puncture": 1.8,
      "slash": 1.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 25.0,
     "forced_procs": [],
@@ -8924,6 +9154,7 @@
      "puncture": 1.8,
      "slash": 2.7
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -8942,6 +9173,7 @@
     "damage": {
      "blast": 797.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 9.0,
      "reduction": 0.7,
@@ -9007,6 +9239,7 @@
      "puncture": 10.25,
      "slash": 10.25
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -9027,6 +9260,7 @@
      "puncture": 20.5,
      "slash": 20.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -9045,6 +9279,7 @@
     "damage": {
      "toxin": 5.0
     },
+    "direct_bonus": "multiplying",
     "falloff": {
      "end": 2.5,
      "reduction": 0.0,
@@ -9108,6 +9343,7 @@
      "blast": 789.0,
      "radiation": 19.0
     },
+    "direct_bonus": "multiplying",
     "falloff": {
      "end": 60.0,
      "reduction": 0.6745,
@@ -9130,6 +9366,7 @@
     "damage": {
      "blast": 303.0
     },
+    "direct_bonus": "none",
     "falloff": null,
     "fire_rate": 1.67,
     "forced_procs": [
@@ -9189,6 +9426,7 @@
      "slash": 19.0,
      "toxin": 7.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 41.0,
      "reduction": 0.5,
@@ -9211,6 +9449,7 @@
     "damage": {
      "impact": 9.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.0,
     "forced_procs": [],
@@ -9229,6 +9468,7 @@
     "damage": {
      "viral": 143.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.0,
      "reduction": 0.5,
@@ -9292,6 +9532,7 @@
     "damage": {
      "viral": 52.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 5.33,
     "forced_procs": [],
@@ -9348,6 +9589,7 @@
      "puncture": 116.56,
      "slash": 157.92
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -9371,6 +9613,7 @@
      "slash": 25.0,
      "viral": 23.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.0,
      "reduction": 0.1,
@@ -9431,6 +9674,7 @@
     "damage": {
      "corrosive": 26.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -9485,6 +9729,7 @@
      "puncture": 17.5,
      "slash": 32.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.0,
     "forced_procs": [],
@@ -9536,6 +9781,7 @@
     "damage": {
      "corrosive": 56.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 19.0,
      "reduction": 0.9811,
@@ -9558,6 +9804,7 @@
     "damage": {
      "impact": 11.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -9576,6 +9823,7 @@
     "damage": {
      "corrosive": 74.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.5,
@@ -9598,6 +9846,7 @@
     "damage": {
      "impact": 11.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -9616,6 +9865,7 @@
     "damage": {
      "corrosive": 658.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.0,
      "reduction": 0.5,
@@ -9673,6 +9923,7 @@
     "damage": {
      "toxin": 55.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.08,
     "forced_procs": [],
@@ -9691,6 +9942,7 @@
     "damage": {
      "toxin": 35.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.8,
      "reduction": 0.0,
@@ -9751,6 +10003,7 @@
      "puncture": 32.0,
      "slash": 26.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -9769,6 +10022,7 @@
     "damage": {
      "corrosive": 59.0
     },
+    "direct_bonus": "none",
     "falloff": null,
     "fire_rate": null,
     "forced_procs": [],
@@ -9828,6 +10082,7 @@
      "slash": 19.0,
      "toxin": 7.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 41.0,
      "reduction": 0.5,
@@ -9850,6 +10105,7 @@
     "damage": {
      "impact": 9.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -9868,6 +10124,7 @@
     "damage": {
      "viral": 143.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.0,
      "reduction": 0.5,
@@ -9931,6 +10188,7 @@
      "puncture": 15.0,
      "slash": 7.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -9949,6 +10207,7 @@
     "damage": {
      "radiation": 20.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 2.0,
      "reduction": 0.0,
@@ -9971,6 +10230,7 @@
     "damage": {
      "toxin": 100.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.4,
      "reduction": 0.5,
@@ -10032,6 +10292,7 @@
      "puncture": 115.01,
      "slash": 155.82
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -10055,6 +10316,7 @@
      "slash": 22.0,
      "viral": 19.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.7,
      "reduction": 0.1,
@@ -10115,6 +10377,7 @@
     "damage": {
      "viral": 47.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -10168,6 +10431,7 @@
     "damage": {
      "corrosive": 20.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -10219,6 +10483,7 @@
     "damage": {
      "toxin": 33.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.33,
     "forced_procs": [],
@@ -10237,6 +10502,7 @@
     "damage": {
      "toxin": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -10255,6 +10521,7 @@
     "damage": {
      "toxin": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -10308,6 +10575,7 @@
     "damage": {
      "viral": 5.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -10360,6 +10628,7 @@
     "damage": {
      "corrosive": 53.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 19.0,
      "reduction": 0.9811,
@@ -10382,6 +10651,7 @@
     "damage": {
      "impact": 11.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -10400,6 +10670,7 @@
     "damage": {
      "corrosive": 203.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.0,
      "reduction": 0.5,
@@ -10422,6 +10693,7 @@
     "damage": {
      "impact": 11.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -10440,6 +10712,7 @@
     "damage": {
      "corrosive": 1997.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.0,
      "reduction": 0.5,
@@ -10497,6 +10770,7 @@
     "damage": {
      "toxin": 50.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.08,
     "forced_procs": [],
@@ -10515,6 +10789,7 @@
     "damage": {
      "toxin": 20.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.5,
      "reduction": 0.0,
@@ -10575,6 +10850,7 @@
      "impact": 9.2,
      "puncture": 13.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.33,
     "forced_procs": [
@@ -10595,6 +10871,7 @@
     "damage": {
      "toxin": 61.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.3,
      "reduction": 0.3,
@@ -10617,6 +10894,7 @@
     "damage": {
      "toxin": 953.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.3,
      "reduction": 0.3,
@@ -10642,6 +10920,7 @@
      "puncture": 11.5,
      "slash": 11.5
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.33,
     "forced_procs": [
@@ -10662,6 +10941,7 @@
     "damage": {
      "toxin": 333.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.3,
      "reduction": 0.3,
@@ -10723,6 +11003,7 @@
      "puncture": 60.0,
      "slash": 7.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -10743,6 +11024,7 @@
      "puncture": 37.5,
      "slash": 22.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.5,
     "forced_procs": [],
@@ -10798,6 +11080,7 @@
      "puncture": 23.0,
      "slash": 17.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -10816,6 +11099,7 @@
     "damage": {
      "corrosive": 27.0
     },
+    "direct_bonus": "none",
     "falloff": null,
     "fire_rate": null,
     "forced_procs": [],
@@ -10870,6 +11154,7 @@
     "damage": {
      "toxin": 35.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.0,
     "forced_procs": [],
@@ -10923,6 +11208,7 @@
     "damage": {
      "puncture": 40.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -10978,6 +11264,7 @@
      "puncture": 31.0,
      "slash": 23.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.8334,
     "forced_procs": [],
@@ -10998,6 +11285,7 @@
      "puncture": 57.0,
      "slash": 35.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 10.0,
      "reduction": 0.9921,
@@ -11060,6 +11348,7 @@
      "impact": 20.0,
      "puncture": 55.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.5,
     "forced_procs": [],
@@ -11078,6 +11367,7 @@
     "damage": {
      "corrosive": 35.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [],
@@ -11096,6 +11386,7 @@
     "damage": {
      "corrosive": 313.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.8,
@@ -11153,6 +11444,7 @@
      "impact": 351.45,
      "puncture": 429.55
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [
@@ -11211,6 +11503,7 @@
      "impact": 72.0,
      "puncture": 108.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.08,
     "forced_procs": [],
@@ -11267,6 +11560,7 @@
      "puncture": 9.1,
      "slash": 1.95
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.33,
     "forced_procs": [],
@@ -11285,6 +11579,7 @@
     "damage": {
      "heat": 60.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 16.0,
      "reduction": 0.2167,
@@ -11343,6 +11638,7 @@
      "puncture": 30.0,
      "slash": 6.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -11363,6 +11659,7 @@
      "puncture": 8.4,
      "slash": 10.8
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -11421,6 +11718,7 @@
      "puncture": 86.25,
      "slash": 23.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -11441,6 +11739,7 @@
      "puncture": 184.0,
      "slash": 34.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -11460,6 +11759,7 @@
      "heat": 250.0,
      "impact": 50.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -11516,6 +11816,7 @@
      "puncture": 2.7,
      "slash": 5.4
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 25.0,
      "reduction": 0.5,
@@ -11538,6 +11839,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [
@@ -11560,6 +11862,7 @@
      "puncture": 25.0,
      "slash": 60.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.2,
@@ -11618,6 +11921,7 @@
     "critical_chance": 0.25,
     "critical_multiplier": 2.5,
     "damage": {},
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 13.0,
     "forced_procs": [],
@@ -11634,6 +11938,7 @@
     "critical_chance": 0.2,
     "critical_multiplier": 1.8,
     "damage": {},
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -11688,6 +11993,7 @@
     "damage": {
      "electricity": 39.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -11706,6 +12012,7 @@
     "damage": {
      "heat": 19.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.7,
      "reduction": 0.2,
@@ -11728,6 +12035,7 @@
     "damage": {
      "electricity": 12.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -11784,6 +12092,7 @@
     "damage": {
      "heat": 71.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -11802,6 +12111,7 @@
     "damage": {
      "electricity": 87.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.6,
      "reduction": 0.6,
@@ -11864,6 +12174,7 @@
      "impact": 3.0,
      "puncture": 27.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 9.33,
     "forced_procs": [],
@@ -11884,6 +12195,7 @@
      "puncture": 6.0,
      "slash": 12.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.33,
     "forced_procs": [],
@@ -11940,6 +12252,7 @@
      "impact": 7.0,
      "puncture": 63.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -11993,6 +12306,7 @@
     "critical_chance": 0.0,
     "critical_multiplier": 1.0,
     "damage": {},
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -12011,6 +12325,7 @@
     "damage": {
      "magnetic": 125.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.0,
@@ -12033,6 +12348,7 @@
     "damage": {
      "magnetic": 240.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.0,
      "reduction": 1.0,
@@ -12057,6 +12373,7 @@
     "damage": {
      "magnetic": 50.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.0,
      "reduction": 0.0,
@@ -12117,6 +12434,7 @@
     "damage": {
      "magnetic": 16.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -12135,6 +12453,7 @@
     "damage": {
      "impact": 80.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -12155,6 +12474,7 @@
     "damage": {
      "cold": 660.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.0,
      "reduction": 0.3,
@@ -12213,6 +12533,7 @@
     "damage": {
      "magnetic": 21.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -12231,6 +12552,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -12251,6 +12573,7 @@
     "damage": {
      "cold": 800.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.0,
      "reduction": 0.3,
@@ -12312,6 +12635,7 @@
      "puncture": 21.0,
      "slash": 168.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 20.0,
      "reduction": 0.5714,
@@ -12372,6 +12696,7 @@
     "damage": {
      "electricity": 300.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.6,
      "reduction": 0.4,
@@ -12394,6 +12719,7 @@
     "damage": {
      "electricity": 300.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.6,
      "reduction": 0.4,
@@ -12457,6 +12783,7 @@
     "damage": {
      "impact": 75.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -12475,6 +12802,7 @@
     "damage": {
      "blast": 300.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.6,
@@ -12538,6 +12866,7 @@
      "impact": 5.6,
      "puncture": 22.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.5,
     "forced_procs": [],
@@ -12594,6 +12923,7 @@
      "puncture": 11.75,
      "slash": 11.75
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -12614,6 +12944,7 @@
      "puncture": 23.5,
      "slash": 23.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -12672,6 +13003,7 @@
      "puncture": 37.5,
      "slash": 18.75
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.67,
     "forced_procs": [],
@@ -12692,6 +13024,7 @@
      "puncture": 270.0,
      "slash": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -12710,6 +13043,7 @@
     "damage": {
      "slash": 734.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -12767,6 +13101,7 @@
      "puncture": 48.75,
      "slash": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 25.0,
      "reduction": 0.7333,
@@ -12829,6 +13164,7 @@
      "puncture": 16.0,
      "slash": 48.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -12886,6 +13222,7 @@
      "puncture": 104.0,
      "slash": 13.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.58,
     "forced_procs": [],
@@ -12940,6 +13277,7 @@
      "puncture": 120.0,
      "slash": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.67,
     "forced_procs": [],
@@ -12994,6 +13332,7 @@
      "puncture": 14.0,
      "slash": 3.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.5,
     "forced_procs": [],
@@ -13047,6 +13386,7 @@
      "impact": 6.4,
      "puncture": 57.6
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.5,
     "forced_procs": [],
@@ -13103,6 +13443,7 @@
      "puncture": 10.0,
      "slash": 24.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -13157,6 +13498,7 @@
      "puncture": 4.2,
      "slash": 4.2
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 14.0,
      "reduction": 0.75,
@@ -13219,6 +13561,7 @@
      "puncture": 1.7,
      "slash": 5.1
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 25.0,
     "forced_procs": [],
@@ -13273,6 +13616,7 @@
      "puncture": 26.95,
      "slash": 26.95
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -13327,6 +13671,7 @@
      "puncture": 26.95,
      "slash": 26.95
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.67,
     "forced_procs": [],
@@ -13384,6 +13729,7 @@
      "puncture": 22.5,
      "slash": 45.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -13438,6 +13784,7 @@
      "puncture": 5.0,
      "slash": 5.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 18.0,
      "reduction": 0.75,
@@ -13499,6 +13846,7 @@
      "puncture": 280.0,
      "slash": 120.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [],
@@ -13556,6 +13904,7 @@
      "puncture": 9.5,
      "slash": 9.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -13576,6 +13925,7 @@
      "puncture": 19.0,
      "slash": 19.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -13632,6 +13982,7 @@
      "puncture": 280.0,
      "slash": 210.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -13690,6 +14041,7 @@
      "puncture": 360.0,
      "slash": 90.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 0.667,
     "forced_procs": [],
@@ -13709,6 +14061,7 @@
      "puncture": 640.0,
      "slash": 160.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 0.667,
     "forced_procs": [],
@@ -13727,6 +14080,7 @@
     "damage": {
      "heat": 600.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 0.667,
     "forced_procs": [],
@@ -13781,6 +14135,7 @@
      "cold": 200.0,
      "puncture": 200.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -13801,6 +14156,7 @@
      "puncture": 250.0,
      "slash": 250.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -13855,6 +14211,7 @@
      "puncture": 120.0,
      "slash": 32.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -13875,6 +14232,7 @@
      "puncture": 256.0,
      "slash": 48.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -13894,6 +14252,7 @@
      "heat": 365.0,
      "impact": 95.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -13949,6 +14308,7 @@
      "puncture": 405.0,
      "slash": 45.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 0.667,
     "forced_procs": [
@@ -13970,6 +14330,7 @@
      "puncture": 648.0,
      "slash": 252.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 0.667,
     "forced_procs": [],
@@ -13989,6 +14350,7 @@
      "puncture": 648.0,
      "slash": 252.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 0.667,
     "forced_procs": [],
@@ -14049,6 +14411,7 @@
      "puncture": 4.6,
      "slash": 4.6
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -14069,6 +14432,7 @@
      "puncture": 9.2,
      "slash": 9.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -14126,6 +14490,7 @@
      "puncture": 150.0,
      "slash": 112.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -14148,6 +14513,7 @@
      "puncture": 300.0,
      "slash": 225.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -14208,6 +14574,7 @@
      "puncture": 30.69,
      "slash": 145.08
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -14227,6 +14594,7 @@
      "slash": 49.0,
      "viral": 41.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 9.0,
      "reduction": 0.0,
@@ -14251,6 +14619,7 @@
     "damage": {
      "viral": 1003.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.0,
      "reduction": 0.5,
@@ -14313,6 +14682,7 @@
      "puncture": 153.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -14333,6 +14703,7 @@
      "puncture": 288.0,
      "slash": 63.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -14352,6 +14723,7 @@
      "heat": 420.0,
      "impact": 100.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -14409,6 +14781,7 @@
      "puncture": 16.8,
      "slash": 134.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -14429,6 +14802,7 @@
      "puncture": 16.8,
      "slash": 302.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -14449,6 +14823,7 @@
      "impact": 100.0,
      "slash": 100.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [],
@@ -14505,6 +14880,7 @@
      "puncture": 97.5,
      "slash": 227.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -14524,6 +14900,7 @@
      "puncture": 150.0,
      "slash": 350.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -14543,6 +14920,7 @@
      "puncture": 45.0,
      "slash": 105.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.7,
@@ -14601,6 +14979,7 @@
     "damage": {
      "electricity": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": null,
@@ -14619,6 +14998,7 @@
     "damage": {
      "electricity": 50.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.0,
      "reduction": 0.8,
@@ -14641,6 +15021,7 @@
     "damage": {
      "electricity": 350.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": null,
@@ -14659,6 +15040,7 @@
     "damage": {
      "electricity": 250.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.8,
@@ -14718,6 +15100,7 @@
     "damage": {
      "electricity": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [],
@@ -14736,6 +15119,7 @@
     "damage": {
      "electricity": 50.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.0,
      "reduction": 0.8,
@@ -14758,6 +15142,7 @@
     "damage": {
      "electricity": 350.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -14778,6 +15163,7 @@
     "damage": {
      "electricity": 250.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.8,
@@ -14840,6 +15226,7 @@
      "puncture": 18.75,
      "slash": 33.75
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -14860,6 +15247,7 @@
      "puncture": 24.0,
      "slash": 43.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [
@@ -14916,6 +15304,7 @@
      "puncture": 21.0,
      "slash": 168.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 20.0,
      "reduction": 0.5238,
@@ -14974,6 +15363,7 @@
      "puncture": 22.0,
      "slash": 11.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.67,
     "forced_procs": [],
@@ -15030,6 +15420,7 @@
      "puncture": 27.0,
      "slash": 9.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -15089,6 +15480,7 @@
      "puncture": 14.3,
      "slash": 143.1
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [
@@ -15111,6 +15503,7 @@
      "puncture": 14.3,
      "slash": 143.1
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [
@@ -15170,6 +15563,7 @@
      "puncture": 15.6,
      "slash": 10.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -15188,6 +15582,7 @@
     "damage": {
      "blast": 390.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.2,
     "forced_procs": [],
@@ -15242,6 +15637,7 @@
     "damage": {
      "electricity": 62.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 4.33,
     "forced_procs": [],
@@ -15262,6 +15658,7 @@
      "puncture": 37.5,
      "slash": 7.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [],
@@ -15280,6 +15677,7 @@
     "damage": {
      "electricity": 50.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 6.0,
      "reduction": 0.6,
@@ -15302,6 +15700,7 @@
     "damage": {
      "electricity": 100.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.6,
@@ -15362,6 +15761,7 @@
      "puncture": 6.0,
      "slash": 19.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.83,
     "forced_procs": [],
@@ -15382,6 +15782,7 @@
      "puncture": 120.0,
      "slash": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.0,
     "forced_procs": [],
@@ -15439,6 +15840,7 @@
      "puncture": 10.0,
      "slash": 70.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.0,
     "forced_procs": [],
@@ -15459,6 +15861,7 @@
      "puncture": 10.0,
      "slash": 80.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -15519,6 +15922,7 @@
      "puncture": 26.0,
      "slash": 78.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 20.0,
      "reduction": 0.8,
@@ -15578,6 +15982,7 @@
     "damage": {
      "impact": 44.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [
@@ -15599,6 +16004,7 @@
      "puncture": 42.4,
      "slash": 10.6
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.0,
      "reduction": 0.5,
@@ -15662,6 +16068,7 @@
      "puncture": 120.0,
      "slash": 40.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 0.833,
     "forced_procs": [
@@ -15683,6 +16090,7 @@
      "blast": 800.0,
      "heat": 250.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.5,
      "reduction": 0.5,
@@ -15709,6 +16117,7 @@
      "puncture": 165.0,
      "slash": 55.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -15769,6 +16178,7 @@
     "damage": {
      "electricity": 75.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 5.33,
     "forced_procs": [],
@@ -15789,6 +16199,7 @@
      "puncture": 52.5,
      "slash": 10.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [],
@@ -15807,6 +16218,7 @@
     "damage": {
      "electricity": 70.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 6.0,
      "reduction": 0.6,
@@ -15829,6 +16241,7 @@
     "damage": {
      "electricity": 140.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.6,
@@ -15887,6 +16300,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 100.0,
      "reduction": 0.5,
@@ -15912,6 +16326,7 @@
      "puncture": 49.0,
      "slash": 91.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.4,
      "reduction": 0.3,
@@ -15974,6 +16389,7 @@
      "puncture": 6.72,
      "slash": 3.52
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 60.0,
      "reduction": 0.5,
@@ -16034,6 +16450,7 @@
      "impact": 4.6,
      "puncture": 41.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -16054,6 +16471,7 @@
      "puncture": 7.2,
      "slash": 14.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 11.33,
     "forced_procs": [],
@@ -16111,6 +16529,7 @@
      "puncture": 13.8,
      "slash": 18.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -16129,6 +16548,7 @@
     "damage": {
      "heat": 13.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 20.0,
     "forced_procs": [],
@@ -16147,6 +16567,7 @@
     "damage": {
      "heat": 13.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.0,
      "reduction": 1.0,
@@ -16205,6 +16626,7 @@
     "damage": {
      "puncture": 32.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 52.0,
      "reduction": 0.9667,
@@ -16227,6 +16649,7 @@
     "damage": {
      "slash": 20.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -16245,6 +16668,7 @@
     "damage": {
      "blast": 10.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.0,
@@ -16305,6 +16729,7 @@
      "puncture": 37.8,
      "slash": 27.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 36.0,
      "reduction": 0.64444,
@@ -16327,6 +16752,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 0.667,
     "forced_procs": [
@@ -16347,6 +16773,7 @@
     "damage": {
      "blast": 2200.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 9.8,
      "reduction": 0.9,
@@ -16409,6 +16836,7 @@
      "electricity": 25.0,
      "puncture": 8.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 9.33,
     "forced_procs": [],
@@ -16428,6 +16856,7 @@
      "electricity": 440.0,
      "impact": 110.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 24.0,
      "reduction": 0.6666,
@@ -16489,6 +16918,7 @@
     "damage": {
      "electricity": 400.0
     },
+    "direct_bonus": "none",
     "falloff": null,
     "fire_rate": 2.8,
     "forced_procs": [],
@@ -16542,6 +16972,7 @@
      "puncture": 15.6,
      "slash": 155.7
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [
@@ -16564,6 +16995,7 @@
      "puncture": 15.6,
      "slash": 155.7
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [
@@ -16624,6 +17056,7 @@
      "puncture": 10.0,
      "slash": 70.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.67,
     "forced_procs": [],
@@ -16642,6 +17075,7 @@
     "damage": {
      "slash": 20.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.6,
      "reduction": 0.2,
@@ -16664,6 +17098,7 @@
     "damage": {
      "slash": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -16725,6 +17160,7 @@
      "puncture": 103.04,
      "slash": 58.88
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.2,
@@ -16786,6 +17222,7 @@
      "impact": 5.0,
      "radiation": 10.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -16804,6 +17241,7 @@
     "damage": {
      "impact": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -16824,6 +17262,7 @@
     "damage": {
      "radiation": 73.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.8,
      "reduction": 0.5,
@@ -16848,6 +17287,7 @@
     "damage": {
      "impact": 3.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -16868,6 +17308,7 @@
     "damage": {
      "radiation": 18.0
     },
+    "direct_bonus": "none",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -16925,6 +17366,7 @@
     "damage": {
      "corrosive": 80.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.67,
     "forced_procs": [],
@@ -16943,6 +17385,7 @@
     "damage": {
      "corrosive": 60.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.7,
      "reduction": 0.3,
@@ -16967,6 +17410,7 @@
      "puncture": 30.0,
      "slash": 30.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -16985,6 +17429,7 @@
     "damage": {
      "corrosive": 55.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.0,
      "reduction": 0.6,
@@ -17049,6 +17494,7 @@
      "puncture": 4.8,
      "slash": 6.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 15.0,
     "forced_procs": [],
@@ -17069,6 +17515,7 @@
      "puncture": 5.04,
      "slash": 11.88
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 0.0,
      "reduction": 0.0,
@@ -17129,6 +17576,7 @@
      "heat": 285.0,
      "impact": 195.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 24.0,
      "reduction": 0.625,
@@ -17187,6 +17635,7 @@
      "puncture": 10.5,
      "slash": 9.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -17207,6 +17656,7 @@
      "puncture": 24.0,
      "slash": 48.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -17265,6 +17715,7 @@
      "puncture": 8.1,
      "slash": 21.6
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 52.0,
      "reduction": 0.78,
@@ -17287,6 +17738,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [
@@ -17309,6 +17761,7 @@
      "puncture": 40.0,
      "slash": 100.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.2,
@@ -17373,6 +17826,7 @@
      "puncture": 29.04,
      "slash": 29.92
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -17393,6 +17847,7 @@
      "puncture": 36.3,
      "slash": 37.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [
@@ -17453,6 +17908,7 @@
      "puncture": 11.2,
      "slash": 8.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.67,
     "forced_procs": [],
@@ -17473,6 +17929,7 @@
      "puncture": 168.0,
      "slash": 56.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -17530,6 +17987,7 @@
      "puncture": 19.2,
      "slash": 14.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -17550,6 +18008,7 @@
      "puncture": 19.2,
      "slash": 14.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -17570,6 +18029,7 @@
      "puncture": 19.2,
      "slash": 14.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.33,
     "forced_procs": [],
@@ -17628,6 +18088,7 @@
      "puncture": 19.5,
      "slash": 156.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 20.0,
      "reduction": 0.4872,
@@ -17688,6 +18149,7 @@
      "heat": 53.0,
      "impact": 32.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.67,
     "forced_procs": [],
@@ -17706,6 +18168,7 @@
     "damage": {
      "heat": 50.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.6,
      "reduction": 0.15,
@@ -17728,6 +18191,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.33,
     "forced_procs": [],
@@ -17746,6 +18210,7 @@
     "damage": {
      "heat": 1150.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.4,
@@ -17808,6 +18273,7 @@
      "puncture": 157.5,
      "slash": 52.5
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -17832,6 +18298,7 @@
     "damage": {
      "cold": 150.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.333,
     "forced_procs": [
@@ -17852,6 +18319,7 @@
     "damage": {
      "cold": 150.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.7,
      "reduction": 0.0,
@@ -17876,6 +18344,7 @@
     "damage": {
      "cold": 25.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 0.15,
      "reduction": 0.0,
@@ -17941,6 +18410,7 @@
      "puncture": 22.5,
      "slash": 17.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.5,
     "forced_procs": [],
@@ -17961,6 +18431,7 @@
      "puncture": 4.0,
      "slash": 24.8
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.6,
      "reduction": 0.3,
@@ -18025,6 +18496,7 @@
      "puncture": 75.0,
      "slash": 20.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.17,
     "forced_procs": [],
@@ -18082,6 +18554,7 @@
      "impact": 5.0,
      "radiation": 10.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -18100,6 +18573,7 @@
     "damage": {
      "impact": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -18120,6 +18594,7 @@
     "damage": {
      "radiation": 73.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.8,
      "reduction": 0.5,
@@ -18144,6 +18619,7 @@
     "damage": {
      "impact": 3.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -18164,6 +18640,7 @@
     "damage": {
      "radiation": 18.0
     },
+    "direct_bonus": "none",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -18222,6 +18699,7 @@
      "puncture": 28.1,
      "slash": 9.3
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -18282,6 +18760,7 @@
     "damage": {
      "impact": 35.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [
@@ -18303,6 +18782,7 @@
      "puncture": 35.2,
      "slash": 8.8
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.5,
@@ -18365,6 +18845,7 @@
      "puncture": 9.8,
      "slash": 8.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -18385,6 +18866,7 @@
      "puncture": 30.0,
      "slash": 12.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -18440,6 +18922,7 @@
     "damage": {
      "puncture": 30.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 52.0,
      "reduction": 0.9667,
@@ -18462,6 +18945,7 @@
     "damage": {
      "slash": 20.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -18480,6 +18964,7 @@
     "damage": {
      "blast": 10.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.0,
@@ -18539,6 +19024,7 @@
      "puncture": 9.6,
      "slash": 7.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 11.67,
     "forced_procs": [],
@@ -18559,6 +19045,7 @@
      "puncture": 144.0,
      "slash": 48.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -18612,6 +19099,7 @@
      "impact": 16.0,
      "puncture": 24.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.0,
     "forced_procs": [],
@@ -18666,6 +19154,7 @@
     "damage": {
      "impact": 70.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 60.0,
      "reduction": 0.5,
@@ -18691,6 +19180,7 @@
      "puncture": 42.0,
      "slash": 78.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.4,
      "reduction": 0.3,
@@ -18752,6 +19242,7 @@
      "puncture": 37.8,
      "slash": 27.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 36.0,
      "reduction": 0.6667,
@@ -18774,6 +19265,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.17,
     "forced_procs": [
@@ -18794,6 +19286,7 @@
     "damage": {
      "blast": 404.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 9.4,
      "reduction": 0.9,
@@ -18858,6 +19351,7 @@
      "puncture": 60.0,
      "slash": 20.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 0.833,
     "forced_procs": [
@@ -18878,6 +19372,7 @@
     "damage": {
      "blast": 800.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.2,
@@ -18904,6 +19399,7 @@
      "puncture": 120.0,
      "slash": 40.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -18965,6 +19461,7 @@
      "corrosive": 20.0,
      "puncture": 8.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": null,
@@ -18984,6 +19481,7 @@
      "corrosive": 12.0,
      "puncture": 4.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": null,
@@ -19003,6 +19501,7 @@
      "corrosive": 10.0,
      "puncture": 4.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 8.0,
      "reduction": 0.5,
@@ -19062,6 +19561,7 @@
      "puncture": 9.33,
      "slash": 9.34
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.0,
     "forced_procs": [],
@@ -19116,6 +19616,7 @@
     "damage": {
      "corrosive": 70.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.67,
     "forced_procs": [],
@@ -19134,6 +19635,7 @@
     "damage": {
      "corrosive": 55.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.7,
      "reduction": 0.3,
@@ -19158,6 +19660,7 @@
      "puncture": 22.5,
      "slash": 22.5
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -19176,6 +19679,7 @@
     "damage": {
      "corrosive": 55.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.0,
      "reduction": 0.6,
@@ -19238,6 +19742,7 @@
      "puncture": 96.32,
      "slash": 55.04
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.2,
@@ -19300,6 +19805,7 @@
      "puncture": 22.0,
      "slash": 12.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.0,
     "forced_procs": [],
@@ -19319,6 +19825,7 @@
      "cold": 800.0,
      "impact": 600.0
     },
+    "direct_bonus": "multiplying",
     "falloff": {
      "end": 18.0,
      "reduction": 0.6657,
@@ -19384,6 +19891,7 @@
      "puncture": 23.4,
      "slash": 43.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.67,
     "forced_procs": [],
@@ -19443,6 +19951,7 @@
      "radiation": 5.0,
      "slash": 17.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 6.0,
     "forced_procs": [],
@@ -19463,6 +19972,7 @@
      "puncture": 9.7,
      "slash": 29.1
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [
@@ -19483,6 +19993,7 @@
     "damage": {
      "blast": 789.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.0,
      "reduction": 0.5,
@@ -19547,6 +20058,7 @@
      "puncture": 6.72,
      "slash": 3.52
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 34.0,
      "reduction": 0.5,
@@ -19606,6 +20118,7 @@
      "electricity": 25.0,
      "puncture": 8.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 9.33,
     "forced_procs": [],
@@ -19625,6 +20138,7 @@
      "electricity": 400.0,
      "impact": 100.0
     },
+    "direct_bonus": "multiplying",
     "falloff": {
      "end": 20.0,
      "reduction": 0.6666,
@@ -19686,6 +20200,7 @@
      "puncture": 26.4,
      "slash": 27.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -19706,6 +20221,7 @@
      "puncture": 29.7,
      "slash": 30.6
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [
@@ -19761,6 +20277,7 @@
      "heat": 190.0,
      "impact": 130.0
     },
+    "direct_bonus": "multiplying",
     "falloff": {
      "end": 16.0,
      "reduction": 0.96875,
@@ -19822,6 +20339,7 @@
      "puncture": 60.0,
      "slash": 16.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.67,
     "forced_procs": [],
@@ -19880,6 +20398,7 @@
      "puncture": 43.4,
      "slash": 3.1
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -19898,6 +20417,7 @@
     "damage": {
      "impact": 50.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.67,
     "forced_procs": [],
@@ -19917,6 +20437,7 @@
      "heat": 50.0,
      "puncture": 50.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.2,
@@ -19978,6 +20499,7 @@
      "puncture": 14.0,
      "slash": 3.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -19996,6 +20518,7 @@
     "damage": {
      "heat": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 16.0,
      "reduction": 0.48,
@@ -20054,6 +20577,7 @@
      "puncture": 5.0,
      "slash": 5.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 18.0,
      "reduction": 0.74,
@@ -20078,6 +20602,7 @@
      "puncture": 3.4,
      "slash": 3.4
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 36.0,
      "reduction": 0.5588,
@@ -20138,6 +20663,7 @@
      "puncture": 4.5,
      "slash": 4.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.5,
     "forced_procs": [],
@@ -20158,6 +20684,7 @@
      "puncture": 6.0,
      "slash": 6.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.5,
     "forced_procs": [],
@@ -20211,6 +20738,7 @@
      "impact": 6.4,
      "puncture": 57.6
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -20267,6 +20795,7 @@
      "puncture": 4.2,
      "slash": 4.2
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 14.0,
      "reduction": 0.75,
@@ -20291,6 +20820,7 @@
      "puncture": 2.2,
      "slash": 6.6
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 28.0,
      "reduction": 0.5455,
@@ -20351,6 +20881,7 @@
      "puncture": 104.0,
      "slash": 13.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.08,
     "forced_procs": [],
@@ -20370,6 +20901,7 @@
      "impact": 300.0,
      "radiation": 700.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 0.67,
     "forced_procs": [],
@@ -20426,6 +20958,7 @@
      "puncture": 12.0,
      "slash": 42.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -20446,6 +20979,7 @@
      "puncture": 19.5,
      "slash": 39.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.0,
     "forced_procs": [],
@@ -20503,6 +21037,7 @@
      "puncture": 11.5,
      "slash": 27.6
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -20523,6 +21058,7 @@
      "puncture": 19.0,
      "slash": 38.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.0,
     "forced_procs": [],
@@ -20579,6 +21115,7 @@
      "puncture": 10.0,
      "slash": 20.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.5,
     "forced_procs": [],
@@ -20599,6 +21136,7 @@
      "puncture": 16.0,
      "slash": 32.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.5,
     "forced_procs": [],
@@ -20653,6 +21191,7 @@
      "puncture": 22.5,
      "slash": 45.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -20673,6 +21212,7 @@
      "puncture": 7.5,
      "slash": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 32.0,
      "reduction": 0.9667,
@@ -20729,6 +21269,7 @@
     "damage": {
      "puncture": 12.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.0,
     "forced_procs": [],
@@ -20747,6 +21288,7 @@
     "damage": {
      "blast": 48.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.5,
      "reduction": 0.5,
@@ -20804,6 +21346,7 @@
      "puncture": 16.25,
      "slash": 16.25
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [],
@@ -20824,6 +21367,7 @@
      "puncture": 17.6,
      "slash": 66.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 12.0,
      "reduction": 0.9886,
@@ -20889,6 +21433,7 @@
      "puncture": 12.5,
      "slash": 6.25
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.67,
     "forced_procs": [],
@@ -20909,6 +21454,7 @@
      "puncture": 80.0,
      "slash": 10.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -20927,6 +21473,7 @@
     "damage": {
      "slash": 640.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -20983,6 +21530,7 @@
      "puncture": 16.8,
      "slash": 78.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.8,
     "forced_procs": [],
@@ -21002,6 +21550,7 @@
      "impact": 160.0,
      "puncture": 240.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -21020,6 +21569,7 @@
     "damage": {
      "heat": 600.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.6,
@@ -21076,6 +21626,7 @@
      "puncture": 11.2,
      "slash": 2.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 20.0,
     "forced_procs": [],
@@ -21129,6 +21680,7 @@
      "cold": 70.0,
      "puncture": 70.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.0,
     "forced_procs": [],
@@ -21182,6 +21734,7 @@
      "puncture": 8.4,
      "slash": 1.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 20.0,
     "forced_procs": [],
@@ -21236,6 +21789,7 @@
      "puncture": 26.95,
      "slash": 26.95
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.33,
     "forced_procs": [],
@@ -21292,6 +21846,7 @@
      "puncture": 18.2,
      "slash": 3.9
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.5,
     "forced_procs": [],
@@ -21346,6 +21901,7 @@
     "damage": {
      "impact": 68.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 3.667,
     "forced_procs": [],
@@ -21364,6 +21920,7 @@
     "damage": {
      "blast": 509.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.8,
      "reduction": 0.7,
@@ -21425,6 +21982,7 @@
      "puncture": 37.84,
      "slash": 1.76
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -21485,6 +22043,7 @@
      "puncture": 3.8,
      "slash": 30.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -21540,6 +22099,7 @@
      "puncture": 8.0,
      "slash": 10.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 13.33,
     "forced_procs": [],
@@ -21596,6 +22156,7 @@
      "puncture": 3.6,
      "slash": 10.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.08,
     "forced_procs": [],
@@ -21650,6 +22211,7 @@
      "heat": 56.0,
      "puncture": 24.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -21668,6 +22230,7 @@
     "damage": {
      "heat": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -21725,6 +22288,7 @@
      "puncture": 22.0,
      "slash": 16.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -21745,6 +22309,7 @@
      "puncture": 41.8,
      "slash": 30.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -21763,6 +22328,7 @@
     "damage": {
      "slash": 830.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -21821,6 +22387,7 @@
      "puncture": 47.25,
      "slash": 141.75
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.75,
     "forced_procs": [
@@ -21844,6 +22411,7 @@
      "puncture": 30.0,
      "slash": 30.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.75,
     "forced_procs": [
@@ -21864,6 +22432,7 @@
     "damage": {
      "blast": 30.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 10.0,
      "reduction": 0.8,
@@ -21929,6 +22498,7 @@
      "puncture": 39.56,
      "slash": 3.68
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.0,
     "forced_procs": [
@@ -21951,6 +22521,7 @@
      "puncture": 39.56,
      "slash": 3.68
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.0,
     "forced_procs": [
@@ -21973,6 +22544,7 @@
      "puncture": 39.56,
      "slash": 3.68
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.0,
     "forced_procs": [
@@ -21995,6 +22567,7 @@
      "puncture": 39.56,
      "slash": 3.68
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.0,
     "forced_procs": [
@@ -22052,6 +22625,7 @@
      "puncture": 82.8,
      "slash": 21.6
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -22107,6 +22681,7 @@
     "damage": {
      "viral": 2.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -22125,6 +22700,7 @@
     "damage": {
      "viral": 46.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.8,
      "reduction": 0.2,
@@ -22185,6 +22761,7 @@
      "puncture": 144.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.08,
     "forced_procs": [],
@@ -22204,6 +22781,7 @@
      "impact": 400.0,
      "radiation": 800.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 18.0,
      "reduction": 0.3333,
@@ -22266,6 +22844,7 @@
      "puncture": 26.95,
      "slash": 26.95
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -22322,6 +22901,7 @@
      "puncture": 26.0,
      "slash": 52.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.0,
     "forced_procs": [],
@@ -22342,6 +22922,7 @@
      "puncture": 26.0,
      "slash": 52.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.17,
     "forced_procs": [],
@@ -22396,6 +22977,7 @@
      "puncture": 1.92,
      "slash": 20.16
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 36.0,
      "reduction": 0.75,
@@ -22457,6 +23039,7 @@
      "puncture": 15.0,
      "slash": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -22477,6 +23060,7 @@
      "puncture": 18.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -22531,6 +23115,7 @@
      "puncture": 16.5,
      "slash": 77.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -22588,6 +23173,7 @@
      "puncture": 16.5,
      "slash": 77.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -22608,6 +23194,7 @@
      "puncture": 10.5,
      "slash": 49.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 32.0,
      "reduction": 0.9857,
@@ -22667,6 +23254,7 @@
      "puncture": 7.56,
      "slash": 12.96
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 17.0,
     "forced_procs": [],
@@ -22722,6 +23310,7 @@
      "impact": 12.0,
      "puncture": 18.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [
@@ -22742,6 +23331,7 @@
     "damage": {
      "gas": 100.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.8,
      "reduction": 0.0,
@@ -22805,6 +23395,7 @@
      "puncture": 21.0,
      "slash": 126.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.8,
     "forced_procs": [],
@@ -22824,6 +23415,7 @@
      "impact": 200.0,
      "puncture": 300.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [],
@@ -22842,6 +23434,7 @@
     "damage": {
      "heat": 700.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.6,
@@ -22901,6 +23494,7 @@
      "puncture": 30.96,
      "slash": 2.88
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.0,
     "forced_procs": [
@@ -22923,6 +23517,7 @@
      "puncture": 34.4,
      "slash": 3.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.0,
     "forced_procs": [
@@ -22945,6 +23540,7 @@
      "puncture": 34.4,
      "slash": 3.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.0,
     "forced_procs": [
@@ -22967,6 +23563,7 @@
      "puncture": 30.96,
      "slash": 2.88
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.0,
     "forced_procs": [
@@ -23021,6 +23618,7 @@
     "damage": {
      "impact": 68.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.33,
     "forced_procs": [],
@@ -23039,6 +23637,7 @@
     "damage": {
      "blast": 419.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 7.2,
      "reduction": 0.7,
@@ -23099,6 +23698,7 @@
      "puncture": 2.2,
      "slash": 17.6
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 30.0,
      "reduction": 0.7273,
@@ -23157,6 +23757,7 @@
      "puncture": 7.2,
      "slash": 9.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.5,
     "forced_procs": [],
@@ -23211,6 +23812,7 @@
      "puncture": 5.0,
      "slash": 13.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -23229,6 +23831,7 @@
     "damage": {
      "blast": 75.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -23284,6 +23887,7 @@
      "puncture": 2.8,
      "slash": 8.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -23338,6 +23942,7 @@
      "puncture": 5.4,
      "slash": 25.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -23392,6 +23997,7 @@
      "puncture": 18.0,
      "slash": 36.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.0,
     "forced_procs": [],
@@ -23412,6 +24018,7 @@
      "puncture": 18.0,
      "slash": 36.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.17,
     "forced_procs": [],
@@ -23463,6 +24070,7 @@
      "impact": 12.0,
      "puncture": 18.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [
@@ -23483,6 +24091,7 @@
     "damage": {
      "gas": 80.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.5,
      "reduction": 0.0,
@@ -23545,6 +24154,7 @@
      "heat": 48.0,
      "puncture": 22.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -23563,6 +24173,7 @@
     "damage": {
      "heat": 88.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.0,
     "forced_procs": [],
@@ -23618,6 +24229,7 @@
      "puncture": 8.16,
      "slash": 11.52
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 15.0,
     "forced_procs": [],
@@ -23673,6 +24285,7 @@
      "puncture": 69.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.0,
     "forced_procs": [],
@@ -23727,6 +24340,7 @@
      "puncture": 45.0,
      "slash": 135.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [
@@ -23749,6 +24363,7 @@
      "puncture": 30.0,
      "slash": 30.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [
@@ -23769,6 +24384,7 @@
     "damage": {
      "blast": 20.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 8.0,
      "reduction": 0.8,
@@ -23832,6 +24448,7 @@
     "damage": {
      "viral": 2.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -23850,6 +24467,7 @@
     "damage": {
      "viral": 42.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.4,
      "reduction": 0.2,
@@ -23909,6 +24527,7 @@
      "puncture": 20.0,
      "slash": 2.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.75,
     "forced_procs": [],
@@ -23929,6 +24548,7 @@
      "puncture": 1.2,
      "slash": 2.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 10.0,
     "forced_procs": [],
@@ -23986,6 +24606,7 @@
      "puncture": 12.25,
      "slash": 21.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 9.58,
     "forced_procs": [],
@@ -24006,6 +24627,7 @@
      "puncture": 2.8,
      "slash": 39.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.67,
     "forced_procs": [],
@@ -24024,6 +24646,7 @@
     "damage": {
      "heat": 70.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.1,
@@ -24082,6 +24705,7 @@
      "puncture": 10.0,
      "slash": 10.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -24100,6 +24724,7 @@
     "damage": {
      "heat": 3.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 20.0,
     "forced_procs": [],
@@ -24118,6 +24743,7 @@
     "damage": {
      "heat": 3.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.0,
      "reduction": 0.0,
@@ -24178,6 +24804,7 @@
      "puncture": 3.75,
      "slash": 2.5
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 12.5,
     "forced_procs": [],
@@ -24198,6 +24825,7 @@
      "puncture": 60.0,
      "slash": 20.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 0.833,
     "forced_procs": [],
@@ -24216,6 +24844,7 @@
     "damage": {
      "heat": 750.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 5.0,
      "reduction": 0.1,
@@ -24276,6 +24905,7 @@
      "puncture": 72.0,
      "slash": 9.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.17,
     "forced_procs": [],
@@ -24294,6 +24924,7 @@
     "damage": {
      "impact": 50.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [
@@ -24315,6 +24946,7 @@
      "heat": 70.0,
      "puncture": 70.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.2,
@@ -24377,6 +25009,7 @@
      "puncture": 7.92,
      "slash": 8.16
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.75,
     "forced_procs": [],
@@ -24397,6 +25030,7 @@
      "puncture": 2.0,
      "slash": 28.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -24415,6 +25049,7 @@
     "damage": {
      "heat": 50.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.1,
@@ -24473,6 +25108,7 @@
      "puncture": 38.5,
      "slash": 8.25
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.17,
     "forced_procs": [],
@@ -24491,6 +25127,7 @@
     "damage": {
      "impact": 50.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -24510,6 +25147,7 @@
      "heat": 40.0,
      "puncture": 40.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.2,
@@ -24571,6 +25209,7 @@
      "puncture": 144.0,
      "slash": 18.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -24632,6 +25271,7 @@
      "puncture": 4.5,
      "slash": 9.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.5,
     "forced_procs": [],
@@ -24652,6 +25292,7 @@
      "puncture": 2.0,
      "slash": 28.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.0,
     "forced_procs": [],
@@ -24670,6 +25311,7 @@
     "damage": {
      "heat": 50.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.1,
@@ -24728,6 +25370,7 @@
      "puncture": 4.8,
      "slash": 6.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 15.0,
     "forced_procs": [],
@@ -24748,6 +25391,7 @@
      "puncture": 2.24,
      "slash": 5.28
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 0.0,
      "reduction": 0.0,
@@ -24809,6 +25453,7 @@
      "puncture": 78.75,
      "slash": 56.25
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -24831,6 +25476,7 @@
     "damage": {
      "cold": 5.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.333,
     "forced_procs": [
@@ -24851,6 +25497,7 @@
     "damage": {
      "cold": 5.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.7,
      "reduction": 0.0,
@@ -24875,6 +25522,7 @@
     "damage": {
      "cold": 5.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 0.15,
      "reduction": 0.0,
@@ -24940,6 +25588,7 @@
      "puncture": 1.75,
      "slash": 21.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.5,
     "forced_procs": [],
@@ -24960,6 +25609,7 @@
      "puncture": 2.6,
      "slash": 36.4
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.67,
     "forced_procs": [],
@@ -24978,6 +25628,7 @@
     "damage": {
      "heat": 65.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.1,
@@ -25038,6 +25689,7 @@
      "puncture": 180.0,
      "slash": 10.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 600.0,
      "reduction": 0.5,
@@ -25099,6 +25751,7 @@
      "puncture": 8.75,
      "slash": 8.75
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 30.0,
      "reduction": 0.5,
@@ -25155,6 +25808,7 @@
      "puncture": 3.3,
      "slash": 6.6
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 25.0,
      "reduction": 0.5,
@@ -25177,6 +25831,7 @@
     "damage": {
      "heat": 20.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 7.5,
     "forced_procs": [],
@@ -25229,6 +25884,7 @@
      "puncture": 6.0,
      "slash": 8.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 25.0,
      "reduction": 0.7,
@@ -25251,6 +25907,7 @@
     "damage": {
      "heat": 30.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 8.0,
     "forced_procs": [],
@@ -25303,6 +25960,7 @@
      "puncture": 48.75,
      "slash": 15.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 20.0,
      "reduction": 0.8,
@@ -25362,6 +26020,7 @@
      "puncture": 3.75,
      "slash": 7.5
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 25.0,
      "reduction": 0.4,
@@ -25384,6 +26043,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -25406,6 +26066,7 @@
      "puncture": 30.0,
      "slash": 80.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.2,
@@ -25468,6 +26129,7 @@
      "puncture": 6.0,
      "slash": 8.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 30.0,
      "reduction": 0.5,
@@ -25492,6 +26154,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [
@@ -25514,6 +26177,7 @@
      "puncture": 40.0,
      "slash": 90.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.2,
@@ -25575,6 +26239,7 @@
      "puncture": 30.8,
      "slash": 46.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.83,
     "forced_procs": [],
@@ -25594,6 +26259,7 @@
      "puncture": 30.8,
      "slash": 46.2
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [],
@@ -25650,6 +26316,7 @@
      "puncture": 34.5,
      "slash": 6.9
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -25670,6 +26337,7 @@
      "puncture": 14.0,
      "slash": 18.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -25728,6 +26396,7 @@
      "puncture": 49.2,
      "slash": 24.6
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -25786,6 +26455,7 @@
      "puncture": 48.0,
      "slash": 6.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -25844,6 +26514,7 @@
      "puncture": 30.6,
      "slash": 1.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 5.83,
     "forced_procs": [],
@@ -25902,6 +26573,7 @@
      "puncture": 46.4,
      "slash": 8.7
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -25922,6 +26594,7 @@
      "puncture": 48.0,
      "slash": 9.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.0,
     "forced_procs": [],
@@ -25940,6 +26613,7 @@
     "damage": {
      "heat": 160.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.2,
@@ -26000,6 +26674,7 @@
     "damage": {
      "electricity": 160.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.6,
      "reduction": 0.4,
@@ -26022,6 +26697,7 @@
     "damage": {
      "electricity": 160.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.6,
      "reduction": 0.4,
@@ -26086,6 +26762,7 @@
      "puncture": 15.6,
      "slash": 7.8
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.67,
     "forced_procs": [],
@@ -26143,6 +26820,7 @@
      "puncture": 27.0,
      "slash": 63.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.33,
     "forced_procs": [],
@@ -26199,6 +26877,7 @@
      "puncture": 8.0,
      "toxin": 32.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.4,
     "forced_procs": [],
@@ -26217,6 +26896,7 @@
     "damage": {
      "toxin": 40.0
     },
+    "direct_bonus": "none",
     "falloff": null,
     "fire_rate": 1.6,
     "forced_procs": [],
@@ -26270,6 +26950,7 @@
     "damage": {
      "blast": 120.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.5,
@@ -26292,6 +26973,7 @@
     "damage": {
      "blast": 250.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 4.0,
      "reduction": 0.5,
@@ -26357,6 +27039,7 @@
      "puncture": 68.4,
      "slash": 83.6
     },
+    "direct_bonus": "multiplying",
     "falloff": {
      "end": 28.0,
      "reduction": 0.9947,
@@ -26380,6 +27063,7 @@
      "impact": 200.0,
      "radiation": 400.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.5,
     "forced_procs": [
@@ -26437,6 +27121,7 @@
      "puncture": 42.0,
      "slash": 98.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 3.0,
     "forced_procs": [],
@@ -26456,6 +27141,7 @@
      "radiation": 60.0,
      "slash": 80.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 13.33,
     "forced_procs": [],
@@ -26512,6 +27198,7 @@
      "impact": 64.0,
      "slash": 96.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.5,
     "forced_procs": [],
@@ -26530,6 +27217,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 6.67,
     "forced_procs": [],
@@ -26548,6 +27236,7 @@
     "damage": {
      "radiation": 300.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 2.0,
      "reduction": 0.2,
@@ -26606,6 +27295,7 @@
     "damage": {
      "puncture": 220.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 1.4,
     "forced_procs": [],
@@ -26624,6 +27314,7 @@
     "damage": {
      "radiation": 30.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 2.0,
     "forced_procs": [],
@@ -26642,6 +27333,7 @@
     "damage": {
      "heat": 2200.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 0.25,
     "forced_procs": [
@@ -26662,6 +27354,7 @@
     "damage": {
      "heat": 1100.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.3,
@@ -26721,6 +27414,7 @@
      "puncture": 26.88,
      "slash": 11.52
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.83,
     "forced_procs": [],
@@ -26739,6 +27433,7 @@
     "damage": {
      "heat": 46.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.6,
      "reduction": 0.2,
@@ -26763,6 +27458,7 @@
      "puncture": 53.76,
      "slash": 23.04
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.0,
     "forced_procs": [
@@ -26783,6 +27479,7 @@
     "damage": {
      "heat": 480.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 3.0,
      "reduction": 0.2,
@@ -26841,6 +27538,7 @@
      "heat": 53.0,
      "impact": 29.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 4.67,
     "forced_procs": [],
@@ -26859,6 +27557,7 @@
     "damage": {
      "heat": 50.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 1.6,
      "reduction": 0.15,
@@ -26881,6 +27580,7 @@
     "damage": {
      "impact": 100.0
     },
+    "direct_bonus": "multiplying",
     "falloff": null,
     "fire_rate": 1.33,
     "forced_procs": [],
@@ -26899,6 +27599,7 @@
     "damage": {
      "heat": 1000.0
     },
+    "direct_bonus": "none",
     "falloff": {
      "end": 6.0,
      "reduction": 0.4,
@@ -26958,6 +27659,7 @@
      "puncture": 5.0,
      "slash": 4.0
     },
+    "direct_bonus": "adding",
     "falloff": null,
     "fire_rate": 21.67,
     "forced_procs": [],
@@ -27010,6 +27712,7 @@
     "damage": {
      "radiation": 40.0
     },
+    "direct_bonus": "adding",
     "falloff": {
      "end": 30.0,
      "reduction": 0.625,

@@ -149,4 +149,4 @@ def test_report_lists_support_coverage(paths: Paths) -> None:
     )
     text = "\n".join(report.lines())
     assert "support (damage-related text not modelled):" in text
-    assert "Galvanized Aptitude" in text  # partial: per-status-type bonus
+    assert "Thunderbolt" in text  # unsupported: explode chance

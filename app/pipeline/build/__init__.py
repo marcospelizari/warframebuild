@@ -5,6 +5,7 @@ from pathlib import Path
 
 from app.gamedata.models import Arcane, Exclusion, Join, Mod, ModSet, Weapon
 from app.pipeline.build import arcanes, mods, weapons
+from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.effects import Overrides
 from app.pipeline.build.fire import FireOverrides
 from app.pipeline.build.inputs import as_list, records, reference
@@ -41,6 +42,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         FireOverrides.load(reference(reference_dir / "fire_overrides.json")),
         plus.weapon_tags,
         wiki_weapon_data.load(raw_dir / "wiki"),
+        DirectBonusTable.load(reference(reference_dir / "galvanized_behaviour.json")),
     )
     overrides = Overrides(reference(reference_dir / "overrides.json"))
     mod_list, sets, denied = mods.build(

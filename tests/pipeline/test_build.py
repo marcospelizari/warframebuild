@@ -342,12 +342,12 @@ def test_override_without_verified_fails(paths: Paths) -> None:
 def test_support_full_override_clears_unparsed(paths: Paths) -> None:
     """Review: support full means the leftover text was reviewed as no damage effect."""
     mods = {m.name: m for m in build(paths.raw, paths.reference).mods}
-    aptitude = mods["Galvanized Aptitude"]
-    assert aptitude.effects.unparsed
+    thunderbolt = mods["Thunderbolt"]
+    assert thunderbolt.effects.unparsed
     _override(
         paths,
         {
-            aptitude.unique_name: {
+            thunderbolt.unique_name: {
                 "name": "x",
                 "verified": "2026-11-08",
                 "support": "full",
@@ -355,9 +355,9 @@ def test_support_full_override_clears_unparsed(paths: Paths) -> None:
             }
         },
     )
-    after = {m.name: m for m in build(paths.raw, paths.reference).mods}["Galvanized Aptitude"]
+    after = {m.name: m for m in build(paths.raw, paths.reference).mods}["Thunderbolt"]
     assert (after.effects.support, after.effects.unparsed) == (Support.FULL, [])
-    assert after.effects.effects == aptitude.effects.effects
+    assert after.effects.effects == thunderbolt.effects.effects
 
 
 def test_exilus_entry_without_verified_fails(paths: Paths) -> None:
@@ -447,4 +447,27 @@ def test_unknown_forced_proc_fails(paths: Paths) -> None:
     module = paths.raw / "wiki/Module_Weapons_data_secondary.lua"
     module.write_text(module.read_text().replace('{ "Cold" }', '{ "Frostbite" }'))
     with pytest.raises(RefreshError, match="Frostbite"):
+        build(paths.raw, paths.reference)
+
+
+def test_direct_bonus_default_and_exceptions(paths: Paths) -> None:
+    """Default: adding on direct attacks, none on AoE; exceptions from the table (Epitaph:
+    multiplying on its projectiles, Condition_Overload_(Mechanic) catalog)."""
+    attacks = {a.name: a.direct_bonus for a in _weapons(paths)["Epitaph"].attacks}
+    assert attacks == {
+        "Charged Shot": "multiplying",
+        "Uncharged Direct Hit": "multiplying",
+        "Uncharged AoE": "none",
+    }
+    braton = {a.name: a.direct_bonus for a in _weapons(paths)["Braton Prime"].attacks}
+    assert braton["Normal Attack"] == "adding"
+
+
+def test_direct_bonus_row_for_unknown_attack_fails(paths: Paths) -> None:
+    path = paths.reference / "galvanized_behaviour.json"
+    data = json.loads(path.read_text())
+    epitaph = "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon"
+    data["weapons"][epitaph]["attacks"]["Throw"] = "none"
+    path.write_text(json.dumps(data))
+    with pytest.raises(RefreshError, match="unknown attacks"):
         build(paths.raw, paths.reference)

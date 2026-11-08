@@ -259,19 +259,6 @@ def test_unmodelled_condition_is_never_always_on() -> None:
     ]
 
 
-def test_galvanized_shot_per_status_type_is_partial() -> None:
-    parsed = parse(
-        [
-            "+80% Status Chance",
-            "On Kill:\n+40% Direct Damage per Status Type affecting the target for 14s. "
-            "Stacks up to 3x.",
-        ]
-    )
-    assert parsed.support == Support.PARTIAL
-    assert parsed.effects == [Effect(stat=Stat.STATUS_CHANCE, value=0.8)]
-    assert len(parsed.unparsed) == 1
-
-
 def test_free_text_damage_effect_is_unsupported() -> None:
     parsed = parse(["Enemies hit are pulled toward the impact point and take 20% more damage"])
     assert parsed.support == Support.UNSUPPORTED and parsed.damage_related
@@ -301,3 +288,18 @@ def test_long_input_stays_fast() -> None:
     start = time.perf_counter()
     parse(["+" + "9" * 5000 + "% " + "and " * 2000 + "Damage", "On " + "a" * 5000 + ":"])
     assert time.perf_counter() - start < 1.0
+
+
+def test_galvanized_direct_damage_per_status_type() -> None:
+    """Saved Galvanized_Shot: on kill, +40% Direct Damage per status type, 14 s, 3 stacks."""
+    parsed = parse(
+        [
+            "On Kill:\n+40% Direct Damage per Status Type affecting the target for 14s. "
+            "Stacks up to 3x."
+        ]
+    )
+    assert parsed.support == Support.FULL
+    (effect,) = parsed.effects
+    assert effect.stat == Stat.DIRECT_DAMAGE and effect.per_status_type
+    assert effect.trigger == Trigger.ON_KILL
+    assert (effect.value, effect.duration_s, effect.max_stacks) == (0.4, 14.0, 3)

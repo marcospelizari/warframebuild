@@ -1,0 +1,744 @@
+{
+  "about": "Galvanized (Condition Overload-style) bonus per attack where it differs from the default (Marcos 2026-11-08, PLAN G56 option b). Default: `adding` (joins the Serration group) on direct hits, `none` on AoE parts (WFCD shot_type AoE). Rows: `multiplying` (separate factor) or `none`, from the Attack Catalog of the saved page Condition_Overload_(Mechanic) (community-sourced); `catalog_rows` names the page line and the catalog attack name when it differs from ours (matched by name or by unmodded damage). Catalog rows marked Adding with a different base are not used (option c would add them).",
+  "source": "Condition_Overload_(Mechanic), Attack Catalog",
+  "weapons": {
+    "/Lotus/Weapons/Grineer/ThrowingWeapons/GrnVorStickyBomb/GrnVorStickyBomb": {
+      "name": "Aegrit",
+      "attacks": {
+        "Direct Hit": "multiplying"
+      },
+      "catalog_rows": [
+        "line 391: Direct Hit"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/TnRifleErsatz/TnRifleErsatzWeapon": {
+      "name": "Aeolak",
+      "attacks": {
+        "Alt-Fire": "multiplying",
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 203: Normal Attack",
+        "line 205: Alt-fire -> Alt-Fire"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeAkarius/PrimeAkariusWeapon": {
+      "name": "Akarius Prime",
+      "attacks": {
+        "Rocket Detonation": "none",
+        "Rocket Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 385: Rocket Impact",
+        "line 387: Rocket Detonation"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/GyreRifle/GyreRifleWeapon": {
+      "name": "Alternox",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 207: Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeAlternox/PrimeAlternoxWeapon": {
+      "name": "Alternox Prime",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 209: Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher": {
+      "name": "Angstrum",
+      "attacks": {
+        "Incarnon Form": "multiplying"
+      },
+      "catalog_rows": [
+        "line 393: Incarnon Mode -> Incarnon Form"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/LongGuns/CrpShotgun/CrpShotgun": {
+      "name": "Arca Plasmor",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 213: Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeBallistica/PrimeBallistica": {
+      "name": "Ballistica Prime",
+      "attacks": {
+        "Incarnon Form": "multiplying"
+      },
+      "catalog_rows": [
+        "line 405: Incarnon Mode -> Incarnon Form"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Sentients/SentRifleNewWar/SentRifleNewWarGun": {
+      "name": "Basmu",
+      "attacks": {
+        "Auto": "multiplying"
+      },
+      "catalog_rows": [
+        "line 217: Main-fire -> Auto"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/LongGuns/CrpSentExperimentRifle/CrpSentExperimentRifle": {
+      "name": "Battacor",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 219: Main-fire -> Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Infested/LongGuns/InfArmCannon/InfArmCannon": {
+      "name": "Bubonico",
+      "attacks": {
+        "Burst": "multiplying"
+      },
+      "catalog_rows": [
+        "line 225: Alt-fire -> Burst"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Grineer/LongGuns/GrnGorgSniperRifle/GrnGorgSniperRifle": {
+      "name": "Buzlok",
+      "attacks": {
+        "Beacon": "multiplying",
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 229: Normal Attack",
+        "line 231: Alt-fire -> Beacon"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/ThrowingWeapons/StickyBomb/StickyBombs": {
+      "name": "Castanas",
+      "attacks": {
+        "Embedded Detonation": "none",
+        "Mid-Flight Detonation": "none"
+      },
+      "catalog_rows": [
+        "line 411: Normal Attack -> Mid-Flight Detonation",
+        "line 411: Normal Attack -> Embedded Detonation"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Infested/Pistols/InfBeamPistol/InfBeamPistol": {
+      "name": "Catabolyst",
+      "attacks": {
+        "Partial Reload Impact": "multiplying",
+        "Reload From Empty Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 417: Partial Reload Impact",
+        "line 419: Reload From Empty Impact"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/TnAlchemistShotgun/TnAlchemistShotgun": {
+      "name": "Cedo",
+      "attacks": {
+        "Alt-Fire Glaive": "multiplying"
+      },
+      "catalog_rows": [
+        "line 235: Alt-fire -> Alt-Fire Glaive"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeCedo/PrimeCedoWeapon": {
+      "name": "Cedo Prime",
+      "attacks": {
+        "Alt-Fire Glaive": "multiplying"
+      },
+      "catalog_rows": [
+        "line 235: Alt-fire -> Alt-Fire Glaive"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Bows/DaxDuviriAsymetricalBow/DaxDuviriAsymmetricalLongBowPlayerWeapon": {
+      "name": "Cinta",
+      "attacks": {
+        "Charged Shot": "multiplying",
+        "Perfect Shot": "multiplying",
+        "Quick Shot": "multiplying"
+      },
+      "catalog_rows": [
+        "line 257: Uncharged Attack -> Quick Shot",
+        "line 259: Charged Attack -> Charged Shot",
+        "line 261: Perfect Shot"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Infested/InfestedLich/LongGuns/1999InfShotgun/1999InfShotgunWeapon": {
+      "name": "Coda Bassocyst",
+      "attacks": {
+        "Alt-Fire": "none",
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 241: Normal Attack",
+        "line 243: Alt-fire -> Alt-Fire"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaHema": {
+      "name": "Coda Hema",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 245: Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/Pistols/CrpSentAmalgPistol/CrpSentAmalgPistol": {
+      "name": "Cyanex",
+      "attacks": {
+        "Burst Mode": "multiplying",
+        "Projectile Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 427: Projectile Impact",
+        "line 429: Burst Mode"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Bows/StalkerBow": {
+      "name": "Dread",
+      "attacks": {
+        "Incarnon Form Charged Shot": "multiplying"
+      },
+      "catalog_rows": [
+        "line 271: Incarnon Mode -> Incarnon Form Charged Shot"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon": {
+      "name": "Epitaph",
+      "attacks": {
+        "Charged Shot": "multiplying",
+        "Uncharged Direct Hit": "multiplying"
+      },
+      "catalog_rows": [
+        "line 441: Charged Shot",
+        "line 443: Uncharged Direct Hit"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Bows/TnChoirBow/TnChoirBow": {
+      "name": "Evensong",
+      "attacks": {
+        "Charged Radial Attack": "none"
+      },
+      "catalog_rows": [
+        "line 275: Charged Radial Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/LongGuns/CrpShapeBlast/CrpShapeBlastShotgun": {
+      "name": "Exergis",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 277: Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun": {
+      "name": "Felarx",
+      "attacks": {
+        "Incarnon Form": "multiplying",
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 279: Normal Attack",
+        "line 281: Incarnon Mode -> Incarnon Form"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/TnWispRifle/TnWispRifle": {
+      "name": "Fulmin",
+      "attacks": {
+        "Semi-Auto Mode": "multiplying"
+      },
+      "catalog_rows": [
+        "line 287: Semi-Mode -> Semi-Auto Mode"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Grineer/LongGuns/GrnHarpoonGun/GrnHarpoonGun": {
+      "name": "Harpak",
+      "attacks": {
+        "Harpoon": "multiplying"
+      },
+      "catalog_rows": [
+        "line 291: Alt-fire -> Harpoon"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Infested/LongGuns/InfWFAccompanyingPri/InfestedBurstRifle": {
+      "name": "Hema",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 293: Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Grineer/LongGuns/GrnFlameSpear/GrnFlameSpear": {
+      "name": "Javlok",
+      "attacks": {
+        "Projectile Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 295: Main-fire -> Projectile Impact"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeKompressa/PrimeKompressa": {
+      "name": "Kompressa Prime",
+      "attacks": {
+        "Explosion": "none"
+      },
+      "catalog_rows": [
+        "line 447: Radial Attack -> Explosion"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai": {
+      "name": "Kunai",
+      "attacks": {
+        "Incarnon Form": "multiplying"
+      },
+      "catalog_rows": [
+        "line 453: Incarnon Mode -> Incarnon Form"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Seer/KuvaSeer": {
+      "name": "Kuva Seer",
+      "attacks": {
+        "Projectile Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 471: Projectile Impact"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle": {
+      "name": "Latron",
+      "attacks": {
+        "Incarnon Form": "multiplying"
+      },
+      "catalog_rows": [
+        "line 297: Incarnon Mode -> Incarnon Form"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/LatronPrime": {
+      "name": "Latron Prime",
+      "attacks": {
+        "Incarnon Form": "multiplying"
+      },
+      "catalog_rows": [
+        "line 297: Incarnon Mode -> Incarnon Form"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/MK1Series/MK1Kunai": {
+      "name": "MK1-Kunai",
+      "attacks": {
+        "Incarnon Form": "multiplying"
+      },
+      "catalog_rows": [
+        "line 455: Incarnon Mode -> Incarnon Form"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun": {
+      "name": "Miter",
+      "attacks": {
+        "Incarnon Form": "multiplying"
+      },
+      "catalog_rows": [
+        "line 303: Incarnon Mode -> Incarnon Form"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Infested/Bow/InfCernosBow/InfCernos": {
+      "name": "Mutalist Cernos",
+      "attacks": {
+        "Toxin Cloud": "multiplying",
+        "Uncharged Shot": "multiplying"
+      },
+      "catalog_rows": [
+        "line 249: Uncharged Attack -> Uncharged Shot",
+        "line 253: Uncharged AoE Toxin Cloud -> Toxin Cloud"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep": {
+      "name": "Nataruk",
+      "attacks": {
+        "Charged Shot": "multiplying",
+        "Perfect Shot": "multiplying"
+      },
+      "catalog_rows": [
+        "line 307: Perfect Shot",
+        "line 305: Charged Attack -> Charged Shot"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Bows/DuelistBow/DuelistBow": {
+      "name": "Nunchasa",
+      "attacks": {
+        "Alt-Fire": "multiplying"
+      },
+      "catalog_rows": [
+        "line 309: Alternate Fire -> Alt-Fire"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Bows/HuntingBow": {
+      "name": "Paris",
+      "attacks": {
+        "Incarnon Form Charged Shot": "multiplying"
+      },
+      "catalog_rows": [
+        "line 323: Incarnon Mode -> Incarnon Form Charged Shot"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow": {
+      "name": "Paris Prime",
+      "attacks": {
+        "Incarnon Form Charged Shot": "multiplying"
+      },
+      "catalog_rows": [
+        "line 323: Incarnon Mode -> Incarnon Form Charged Shot"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/RevenantShotgun/RevenantShotgun": {
+      "name": "Phantasma",
+      "attacks": {
+        "Cluster Bombs Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 325: Alt-fire Child Bomb -> Cluster Bombs Impact"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimePhantasma/PhantasmaPrimeShotgun": {
+      "name": "Phantasma Prime",
+      "attacks": {
+        "Cluster Bombs Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 327: Alt-fire Child Bomb -> Cluster Bombs Impact"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/PrismaAngstrum": {
+      "name": "Prisma Angstrum",
+      "attacks": {
+        "Incarnon Form": "multiplying"
+      },
+      "catalog_rows": [
+        "line 393: Incarnon Mode -> Incarnon Form"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Bows/PrimeDerelictCernos/DerelictCernos": {
+      "name": "Proboscis Cernos",
+      "attacks": {
+        "Appendages": "none",
+        "Charged Shot Explosion": "none"
+      },
+      "catalog_rows": [
+        "line 329: Radial attack -> Charged Shot Explosion",
+        "line 331: Tendrils -> Appendages"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/TnRailjackRifle/RailjackRifleGun": {
+      "name": "Quellor",
+      "attacks": {
+        "Alt-Fire": "multiplying"
+      },
+      "catalog_rows": [
+        "line 333: Alt-fire -> Alt-Fire"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Syndicates/NewLoka/Pistols/NLCastanas": {
+      "name": "Sancti Castanas",
+      "attacks": {
+        "Embedded Detonation": "none",
+        "Mid-Flight Detonation": "none"
+      },
+      "catalog_rows": [
+        "line 413: Mid-Flight Detonation",
+        "line 415: Embedded Detonation"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/TnPriestSpear/TnPriestSpearGun": {
+      "name": "Scourge",
+      "attacks": {
+        "Spear Throw Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 335: Throw -> Spear Throw Impact"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeScourge/PrimeScourgeWeapon": {
+      "name": "Scourge Prime",
+      "attacks": {
+        "Spear Throw": "multiplying"
+      },
+      "catalog_rows": [
+        "line 337: Throw -> Spear Throw"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Grineer/GrineerPistol/GrnScopedPistolPlayer": {
+      "name": "Seer",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 469: Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Thanotech/ThanoPistol/ThanotechPistol": {
+      "name": "Sepulcrum",
+      "attacks": {
+        "Lock-On Mode": "multiplying",
+        "Primary-Fire": "multiplying"
+      },
+      "catalog_rows": [
+        "line 473: Primary-Fire",
+        "line 475: Lock-On Mode"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Sentients/Shedu/SheduHeavyWeapon": {
+      "name": "Shedu",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 339: Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/Pistols/CrpAirPistol/CrpAirPistolArray": {
+      "name": "Sonicor",
+      "attacks": {
+        "Projectile Impact": "none"
+      },
+      "catalog_rows": [
+        "line 477: Projectile Impact"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/LongGuns/CrpRubanRifle/CrpRubanRifle": {
+      "name": "Stahlta",
+      "attacks": {
+        "Alt-Fire": "multiplying",
+        "Auto": "multiplying"
+      },
+      "catalog_rows": [
+        "line 343: Main-fire -> Auto",
+        "line 345: Alt-fire -> Alt-Fire"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/TnoLotusPodShotgun/TnoLotusPodShotgun": {
+      "name": "Steflos",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 347: Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun": {
+      "name": "Stug",
+      "attacks": {
+        "Blob Embed": "none"
+      },
+      "catalog_rows": [
+        "line 483: Blob Impact -> Blob Embed"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEArcaPlasmor/CrpBEArcaPlasmor": {
+      "name": "Tenet Arca Plasmor",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 215: Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/Pistols/CrpBriefcaseAkimbo/CrpBriefcaseAkimboPistol": {
+      "name": "Tenet Diplos",
+      "attacks": {
+        "Lock-on Mode": "multiplying"
+      },
+      "catalog_rows": [
+        "line 491: Lock-on Mode"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/LongGuns/CrpBriefcaseLauncher/CrpBriefcaseLauncher": {
+      "name": "Tenet Envoy",
+      "attacks": {
+        "Grenade Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 349: Normal Attack -> Grenade Impact"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBEPlinx/CrpBEPlinxWeapon": {
+      "name": "Tenet Plinx",
+      "attacks": {
+        "Alt-Fire": "multiplying"
+      },
+      "catalog_rows": [
+        "line 465: Alt Fire Impact -> Alt-Fire"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Corpus/Pistols/CrpIgniterPistol/CrpIgniterPistol": {
+      "name": "Tenet Spirex",
+      "attacks": {
+        "Slug Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 493: Slug Impact"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/ClanTech/Bio/BioWeapon": {
+      "name": "Torid",
+      "attacks": {
+        "Grenade Impact": "multiplying",
+        "Poison Cloud": "multiplying"
+      },
+      "catalog_rows": [
+        "line 353: Main-fire -> Grenade Impact",
+        "line 355: Toxin AoE Cloud -> Poison Cloud"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Thanotech/ThanoRifle/ThanotechRifle": {
+      "name": "Trumna",
+      "attacks": {
+        "Grenade Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 359: Alt-fire -> Grenade Impact"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeLightningGun/PrimeLightningGun": {
+      "name": "Vadarya Prime",
+      "attacks": {
+        "Normal Attack": "none"
+      },
+      "catalog_rows": [
+        "line 361: Primary Fire Lightning Strikes -> Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/TnGuandoPistol/TnGuandoPistolGun": {
+      "name": "Zakti",
+      "attacks": {
+        "Dart Impact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 501: Normal Attack -> Dart Impact"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeZakti/PrimeZaktiPistol": {
+      "name": "Zakti Prime",
+      "attacks": {
+        "Normal Attack": "multiplying"
+      },
+      "catalog_rows": [
+        "line 501: Normal Attack"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeZhuge/PrimeZhugeCrossbow": {
+      "name": "Zhuge Prime",
+      "attacks": {
+        "Arrow Explosion": "none"
+      },
+      "catalog_rows": [
+        "line 371: Arrow Embedded Explosion -> Arrow Explosion"
+      ],
+      "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Infested/Pistols/InfUzi/InfUziWeapon": {
+      "name": "Zymos",
+      "attacks": {
+        "Homing Spore Contact": "multiplying"
+      },
+      "catalog_rows": [
+        "line 507: Homing Spore Contact"
+      ],
+      "verified": "2026-11-08"
+    }
+  },
+  "not_mapped": [
+    {
+      "catalog": "Azima / Alt-Fire Turret Bullets",
+      "reason": "alt-fire turret; our only attack is the main fire with the same damage (alt-fire not modelled in v1)"
+    },
+    {
+      "catalog": "Bubonico / Main-fire (287)",
+      "reason": "no attack with that damage in our data"
+    },
+    {
+      "catalog": "Paracyst / Alt-fire",
+      "reason": "two harpoon parts with the same damage (alt-fire not modelled in v1)"
+    },
+    {
+      "catalog": "Zenith / Alt-fire Disk Bonk",
+      "reason": "no such attack in our data"
+    },
+    {
+      "catalog": "Catchmoon, Sporelacer, Tombfinger (Kitgun chambers), Balefire Charger",
+      "reason": "not in the gun dataset (Kitguns excluded, V11)"
+    }
+  ]
+}

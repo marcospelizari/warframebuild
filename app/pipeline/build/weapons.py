@@ -6,8 +6,10 @@ from typing import Any
 
 from pydantic import ValidationError
 
+from app.domain.direct_bonus import DirectBonus
 from app.domain.effects import DamageType
 from app.gamedata.models import Attack, Exclusion, Falloff, Join, Weapon
+from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.fire import FireOverrides, attack_data, fire_rate
 from app.pipeline.errors import RefreshError
 from app.pipeline.sources.de_export import DAMAGE_SLOT_COUNT, DAMAGE_SLOTS, WEAPON_CATEGORY
@@ -21,6 +23,7 @@ def build(
     fire: FireOverrides,
     tags: dict[str, list[str]],
     module: dict[str, WeaponData],
+    direct: DirectBonusTable,
 ) -> tuple[list[Weapon], list[Exclusion], list[Join]]:
     de = {w["uniqueName"]: w for w in de_weapons}
     textures = {m["uniqueName"]: m.get("textureLocation") for m in manifest}
@@ -54,9 +57,12 @@ def build(
             kept.append((d, w))
 
     fire.check_known({d["uniqueName"] for d, _ in kept} | {e.unique_name for e in excluded})
+    direct.check({d["uniqueName"]: [a["name"] for a in w.get("attacks") or []] for d, w in kept})
     slugs = _slugs([(d["uniqueName"], d["name"]) for d, _ in kept])
     weapons = [
-        _weapon(d, w, slugs[d["uniqueName"]], textures.get(d["uniqueName"]), tags, fire, module)
+        _weapon(
+            d, w, slugs[d["uniqueName"]], textures.get(d["uniqueName"]), tags, fire, module, direct
+        )
         for d, w in kept
     ]
     joins = [
@@ -73,6 +79,7 @@ def _weapon(
     tags: dict[str, list[str]],
     fire: FireOverrides,
     module: dict[str, WeaponData],
+    direct: DirectBonusTable,
 ) -> Weapon:
     per_shot = d["damagePerShot"]
     if len(per_shot) != DAMAGE_SLOT_COUNT:
@@ -109,7 +116,15 @@ def _weapon(
             exilus_polarity=w.get("exilusPolarity"),
             # WFCD lists each attack (charged, per pellet, AoE part); DE gives one summary,
             # so values legitimately differ. The main attack is chosen later (main_attack.json).
-            attacks=[_attack(a, d["name"], extra[a["name"]]) for a in w.get("attacks") or []],
+            attacks=[
+                _attack(
+                    a,
+                    d["name"],
+                    extra[a["name"]],
+                    direct.behaviour(d["uniqueName"], a["name"], a.get("shot_type")),
+                )
+                for a in w.get("attacks") or []
+            ],
             texture_location=texture,
             # export-plus can lag DE after an update: unknown tags stay None (report lists them).
             compatibility_tags=tags.get(d["uniqueName"]),
@@ -122,20 +137,28 @@ def _weapon(
         raise RefreshError(f"{d['name']}: invalid values: {error}") from error
 
 
-def _attack(a: dict[str, Any], weapon: str, extra: AttackData | None) -> Attack:
+def _attack(
+    a: dict[str, Any],
+    weapon: str,
+    extra: AttackData | None,
+    direct: DirectBonus = DirectBonus.ADDING,
+) -> Attack:
     known = {t.value for t in DamageType}
     unknown = set(a.get("damage", {})) - known
     if unknown:
         raise RefreshError(f"{weapon} / {a.get('name')}: unknown damage types {sorted(unknown)}")
     falloff = a.get("falloff")
     try:
-        return _attack_model(a, falloff, extra)
+        return _attack_model(a, falloff, extra, direct)
     except ValidationError as error:
         raise RefreshError(f"{weapon} / {a.get('name')}: invalid values: {error}") from error
 
 
 def _attack_model(
-    a: dict[str, Any], falloff: dict[str, Any] | None, extra: AttackData | None
+    a: dict[str, Any],
+    falloff: dict[str, Any] | None,
+    extra: AttackData | None,
+    direct: DirectBonus,
 ) -> Attack:
     return Attack(
         name=a["name"],
@@ -153,6 +176,7 @@ def _attack_model(
         burst_count=extra.burst_count if extra else None,
         burst_delay=extra.burst_delay if extra else None,
         ammo_cost=extra.ammo_cost if extra else None,
+        direct_bonus=direct,
     )
 
 

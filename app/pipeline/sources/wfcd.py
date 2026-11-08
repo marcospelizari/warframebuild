@@ -1,5 +1,6 @@
 """WFCD warframe-items JSON (MIT): polarities, class, attacks, falloff, images, arcane slots."""
 
+from app.domain.direct_bonus import DirectBonus
 from app.gamedata.models import Category
 from app.pipeline.sources import Fetched
 from app.pipeline.sources.http import PoliteClient
@@ -26,6 +27,17 @@ OTHER_ARCANE_TYPES = frozenset(
         "Arcane",
     }
 )
+# WFCD attack shot_type -> the default Galvanized behaviour (saved
+# Condition_Overload_(Mechanic): "Direct Damage" excludes radial/AoE damage). An unknown
+# shot type fails the refresh.
+SHOT_TYPE_DIRECT: dict[str | None, DirectBonus] = {
+    "Hit-Scan": DirectBonus.ADDING,
+    "Hitscan": DirectBonus.ADDING,
+    "Projectile": DirectBonus.ADDING,
+    None: DirectBonus.ADDING,  # not given: a direct attack
+    "AoE": DirectBonus.NONE,
+    "DoT": DirectBonus.NONE,  # DoT pseudo-attacks (Tysis "Corrosive DoT")
+}
 MAX_BYTES = 32 * 1024 * 1024
 
 

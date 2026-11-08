@@ -65,6 +65,13 @@ _PROC_ON_STATUS = re.compile(
     r"(?: \(x(?P<factor>\d{1,2}) when Fire Rate is below (?P<below>\d{1,2}(?:\.\d{1,2})?)\))?\.?",
     re.IGNORECASE,
 )
+# Galvanized: "+40% Direct Damage per Status Type affecting the target for 20s. Stacks up
+# to 2x." (under "On Kill:")
+_PER_STATUS_TYPE = re.compile(
+    rf"{_NUM}% Direct Damage per Status Type affecting the target"
+    r"(?: for (?P<dur>\d{1,3}(?:\.\d{1,2})?)s)?\.?(?: Stacks up to (?P<stacks>\d{1,3})x\.?)?",
+    re.IGNORECASE,
+)
 _SET_CRIT_UPGRADE = re.compile(
     rf"{_NUM}% chance to enhance Critical Hits from (?:Primary|Secondary) Weapons\.?",
     re.IGNORECASE,
@@ -143,6 +150,18 @@ def line_effects(line: str, ctx: Context) -> list[Effect] | None:
                 trigger=Trigger.ON_STATUS,
                 trigger_damage_type=DamageType(source),
                 fire_rate_boost=boost,
+            )
+        ]
+    if m := _PER_STATUS_TYPE.fullmatch(line):
+        return [
+            Effect(
+                stat=Stat.DIRECT_DAMAGE,
+                value=_pct(m["value"]),
+                per_status_type=True,
+                trigger=ctx.trigger,
+                trigger_damage_type=ctx.trigger_damage_type,
+                duration_s=float(m["dur"]) if m["dur"] else None,
+                max_stacks=int(m["stacks"]) if m["stacks"] else 1,
             )
         ]
     if m := _SET_CRIT_UPGRADE.fullmatch(line):

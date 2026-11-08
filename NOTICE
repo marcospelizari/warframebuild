@@ -100,6 +100,8 @@ the wiki itself. This applies to these files:
                                  and no_reload, and a null fire_rate, taken from
                                  the wiki weapon data modules and pages)
   reference/fire_overrides.json (beam ramp-up starts, no-reload weapons)
+  reference/galvanized_behaviour.json (Galvanized bonus behaviour per attack,
+                                 from the Condition Overload attack catalog)
   gamedata/factions.json        (faction damage-type modifiers)
   reference/enemies.json        (representative enemies and level scaling)
   reference/archon_shards.json  (Archon Shard bonuses)
