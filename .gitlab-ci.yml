@@ -116,8 +116,9 @@ types-fresh:
   stage: build
   needs: [openapi]
   script:
+    - cp src/api/types.ts /tmp/types.committed.ts
     - npm run gen:types
-    - git diff --exit-code -- src/api/types.ts
+    - diff -u /tmp/types.committed.ts src/api/types.ts
 
 vite-build:
   extends: .node
