@@ -21,6 +21,7 @@ from app.data.sources import Fetched, sha256_16, wfcd
 from app.data.sources import de_export as de
 from app.data.sources.wiki_local import pages, saved_date
 from app.data.store import GameData
+from app.domain.effects import Support
 
 MAX_LISTED = 25
 _ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
@@ -160,6 +161,17 @@ def touched_rows(rows: list[RefRow], diff: EntryDiff) -> list[RefRow]:
 def _names(names: list[str]) -> str:
     shown = ", ".join(names[:MAX_LISTED])
     return shown + (f" … (+{len(names) - MAX_LISTED})" if len(names) > MAX_LISTED else "")
+
+
+def support_lines(dataset: Dataset) -> list[str]:
+    """R6: entries the calculator does not fully model; builds leave them out."""
+    out = []
+    for kind, entries in (("mods", dataset.mods), ("arcanes", dataset.arcanes)):
+        for level in (Support.UNSUPPORTED, Support.PARTIAL):
+            names = sorted(e.name for e in entries if e.effects.support == level)
+            if names:
+                out.append(f"  {level.value} {kind} ({len(names)}): " + ", ".join(names))
+    return ["support (damage-related text not modelled):", *out] if out else []
 
 
 def source_lines(changes: list[str] | None) -> list[str]:

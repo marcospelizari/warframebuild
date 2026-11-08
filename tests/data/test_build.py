@@ -5,6 +5,7 @@ import pytest
 from app.data.build import RefreshError, build, clean_text
 from app.data.models import Category
 from app.data.refresh import Paths
+from app.domain.effects import DamageType, Stat, Support, Trigger
 
 
 def test_weapons_join_and_exclusions(paths: Paths) -> None:
@@ -224,4 +225,67 @@ def test_arcane_class_limit_must_match_a_gun(paths: Paths) -> None:
             w["type"] = "Scattergun"
     path.write_text(json.dumps(data))
     with pytest.raises(RefreshError, match=r"Shotgun Vendetta \(Shotgun\)"):
+        build(paths.raw, paths.reference)
+
+
+def test_mods_and_sets_carry_parsed_effects(paths: Paths) -> None:
+    data = build(paths.raw, paths.reference)
+    mods = {m.name: m for m in data.mods}
+    assert mods["Serration"].effects.support == Support.FULL
+    assert mods["Serration"].effects.effects[0].value == 1.65
+    hunter = mods["Hunter Munitions"].effects.effects[0]
+    assert (hunter.stat, hunter.damage_type) == (Stat.FORCED_PROC, DamageType.SLASH)
+    assert mods["Semi-Rifle Cannonade"].effects.requires_trigger == "SEMI"
+    vigilante = next(s for s in data.mod_sets if s.unique_name.endswith("VigilanteSetMod"))
+    assert len(vigilante.bonuses) == vigilante.num_upgrades == 6
+    assert vigilante.bonuses[-1].effects[0].stat == Stat.CRIT_TIER_UPGRADE
+
+
+def _override(paths: Paths, entries: dict[str, object]) -> None:
+    path = paths.reference / "overrides.json"
+    data = json.loads(path.read_text())
+    data["entries"] = entries
+    path.write_text(json.dumps(data))
+
+
+def test_override_replaces_parsed_effects(paths: Paths) -> None:
+    uid = "/Lotus/Upgrades/CosmeticEnhancers/Offensive/ShotgunMultishotAndReloadSpeedOnCloseKill"
+    _override(
+        paths,
+        {
+            uid: {
+                "name": "Shotgun Vendetta",
+                "verified": "2026-11-08",
+                "note": "test",
+                "effects": [
+                    {"stat": "multishot", "value": 1.8, "trigger": "on_kill", "duration_s": 15}
+                ],
+            }
+        },
+    )
+    arcane = next(a for a in build(paths.raw, paths.reference).arcanes if a.unique_name == uid)
+    assert arcane.effects.support == Support.FULL and arcane.effects.unparsed == []
+    assert arcane.effects.effects[0].trigger == Trigger.ON_KILL
+    assert arcane.effects.note == "test"
+
+
+def test_override_matching_nothing_fails(paths: Paths) -> None:
+    _override(paths, {"/Lotus/Nope": {"name": "x", "verified": "2026-11-08", "support": "partial"}})
+    with pytest.raises(RefreshError, match="/Lotus/Nope"):
+        build(paths.raw, paths.reference)
+
+
+def test_invalid_override_effect_fails(paths: Paths) -> None:
+    uid = "/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod"
+    _override(
+        paths,
+        {
+            uid: {
+                "name": "Serration",
+                "verified": "2026-11-08",
+                "effects": [{"stat": "element", "value": 1}],
+            }
+        },
+    )
+    with pytest.raises(RefreshError, match="damage_type required"):
         build(paths.raw, paths.reference)

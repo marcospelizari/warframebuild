@@ -205,7 +205,7 @@ def test_unreadable_previous_dataset_is_reported(paths: Paths) -> None:
     run(paths, offline=True, fetch_images=False)
     (paths.gamedata / "meta.json").write_text('{"schema_version": 1}')
     previous, error = load_previous(paths.gamedata)
-    assert previous is None and error and "schema version 1, this code reads 3" in error
+    assert previous is None and error and "schema version 1, this code reads 4" in error
     report = run(paths, offline=True, fetch_images=False)
     text = "\n".join(report.lines())
     assert "previous dataset unreadable" in text

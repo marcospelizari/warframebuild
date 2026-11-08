@@ -4,8 +4,9 @@ import lzma
 import re
 
 from app.data.http import PoliteClient
-from app.data.models import Category, DamageType
+from app.data.models import Category
 from app.data.sources import Fetched
+from app.domain.effects import DamageType
 
 BASE_URL = "https://content.warframe.com/PublicExport"
 INDEX_URL = f"{BASE_URL}/index_en.txt.lzma"

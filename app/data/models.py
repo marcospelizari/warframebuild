@@ -5,25 +5,7 @@ from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-
-class DamageType(StrEnum):
-    """Damage types the data layer accepts. Source encodings live in their adapters."""
-
-    IMPACT = "impact"
-    PUNCTURE = "puncture"
-    SLASH = "slash"
-    HEAT = "heat"
-    COLD = "cold"
-    ELECTRICITY = "electricity"
-    TOXIN = "toxin"
-    BLAST = "blast"
-    RADIATION = "radiation"
-    GAS = "gas"
-    MAGNETIC = "magnetic"
-    VIRAL = "viral"
-    CORROSIVE = "corrosive"
-    VOID = "void"
-    TAU = "tau"
+from app.domain.effects import DamageType, Effect, Support
 
 
 class Category(StrEnum):
@@ -87,10 +69,21 @@ class Weapon(Model):
     texture_location: str | None
 
 
+class Effects(Model):
+    """Parsed max-rank effects (step 3) and how far the calculator supports them (R6)."""
+
+    support: Support
+    effects: list[Effect]
+    unparsed: list[str]  # damage-related text not modelled; empty when support is full
+    requires_trigger: str | None = None  # DE trigger the entry is limited to (SEMI)
+    note: str | None = None  # from reference/overrides.json
+
+
 class ModSet(Model):
     unique_name: str
     num_upgrades: Annotated[int, Field(ge=1)]
     stats: list[str]
+    bonuses: list[Effects]  # index = equipped pieces - 1
 
 
 class Mod(Model):
@@ -105,7 +98,8 @@ class Mod(Model):
     is_utility: bool
     mod_set: str | None
     description: str  # DE rules text not in the stats ("Fire Rate cannot be modified."), or ""
-    level_stats: list[list[str]]  # per rank; cleaned free text, parsed in step 3
+    level_stats: list[list[str]]  # per rank; cleaned free text
+    effects: Effects  # max rank
 
 
 class Arcane(Model):
@@ -115,6 +109,7 @@ class Arcane(Model):
     weapon_type: str | None  # slot limited to this WFCD weapon_type (Shotgun, Bow)
     rarity: str | None
     level_stats: list[list[str]]
+    effects: Effects  # max rank
 
 
 class Exclusion(Model):
@@ -131,7 +126,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[3] = 3
+    schema_version: Literal[4] = 4
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

@@ -5,6 +5,7 @@ from pathlib import Path
 
 from app.data.build import arcanes, mods, weapons
 from app.data.build.common import RefreshError, as_list, clean_text, records, reference
+from app.data.build.effects import Overrides
 from app.data.models import Arcane, Exclusion, Join, Mod, ModSet, Weapon
 from app.data.sources import load_json
 
@@ -36,12 +37,18 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         records(load_json(de / "ExportManifest.json"), "Manifest"),
         reference(reference_dir / "fire_overrides.json")["weapons"],
     )
+    overrides = Overrides(reference(reference_dir / "overrides.json"))
     mod_list, sets, denied = mods.build(
-        load_json(de / "ExportUpgrades_en.json"), reference(reference_dir / "mod_filter.json")
+        load_json(de / "ExportUpgrades_en.json"),
+        reference(reference_dir / "mod_filter.json"),
+        overrides,
     )
     arcane_list = arcanes.build(
-        records(load_json(de / "ExportRelicArcane_en.json"), "ExportRelicArcane"), wfcd_arcanes
+        records(load_json(de / "ExportRelicArcane_en.json"), "ExportRelicArcane"),
+        wfcd_arcanes,
+        overrides,
     )
+    overrides.check_all_used()
     _check_arcane_classes(arcane_list, gun_list)
     if not gun_list or not mod_list or not arcane_list:
         raise RefreshError(

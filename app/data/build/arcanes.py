@@ -5,13 +5,16 @@ from typing import Any
 from pydantic import ValidationError
 
 from app.data.build.common import RefreshError, clean_levels
+from app.data.build.effects import Overrides
 from app.data.models import Arcane
 from app.data.sources.wfcd import GUN_ARCANE_TYPES, OTHER_ARCANE_TYPES
 
 ARCANE_PREFIX = "/Lotus/Upgrades/CosmeticEnhancers/"
 
 
-def build(de_entries: list[dict[str, Any]], wfcd_arcanes: list[dict[str, Any]]) -> list[Arcane]:
+def build(
+    de_entries: list[dict[str, Any]], wfcd_arcanes: list[dict[str, Any]], overrides: Overrides
+) -> list[Arcane]:
     """Every DE arcane must be typed by WFCD: one WFCD has not listed yet fails the
     refresh instead of silently missing from the optimizer."""
     slots: dict[str, str] = {}
@@ -49,18 +52,20 @@ def build(de_entries: list[dict[str, Any]], wfcd_arcanes: list[dict[str, Any]]) 
             "wait for WFCD or rerun later"
         )
     try:
-        return [_arcane(de[uid], slots[uid]) for uid in sorted(slots)]
+        return [_arcane(de[uid], slots[uid], overrides) for uid in sorted(slots)]
     except ValidationError as error:
         raise RefreshError(f"invalid arcane values: {error}") from error
 
 
-def _arcane(a: dict[str, Any], kind: str) -> Arcane:
+def _arcane(a: dict[str, Any], kind: str, overrides: Overrides) -> Arcane:
     category, weapon_type = GUN_ARCANE_TYPES[kind]
+    levels = clean_levels(a["levelStats"])
     return Arcane(
         unique_name=a["uniqueName"],
         name=a["name"],
         category=category,
         weapon_type=weapon_type,
         rarity=a.get("rarity"),
-        level_stats=clean_levels(a["levelStats"]),
+        level_stats=levels,
+        effects=overrides.effects(a["uniqueName"], levels[-1]),
     )
