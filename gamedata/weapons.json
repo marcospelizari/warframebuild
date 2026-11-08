@@ -21051,7 +21051,7 @@
   "mastery_req": 14,
   "multishot": 1.0,
   "name": "Epitaph Prime",
-  "no_reload": false,
+  "no_reload": true,
   "polarities": [
    "madurai",
    "madurai"

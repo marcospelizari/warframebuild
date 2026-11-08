@@ -157,6 +157,13 @@
         "Epitaph no reload between shots (fire_overrides.json, G10)"
       ]
     },
+    "Epitaph_Prime": {
+      "title": "Epitaph_Prime",
+      "impact": "medium",
+      "feeds": [
+        "Epitaph Prime no reload between shots (fire_overrides.json, G10)"
+      ]
+    },
     "Exilus_Mods": {
       "title": "Exilus_Mods",
       "impact": "high",

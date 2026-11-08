@@ -31,6 +31,12 @@
       "beam_ramp_start": 0.3,
       "source": "Continuous_Weapon, Update 22.14: starts at 30%",
       "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeEpitaph/PrimeEpitaphSidearmWeapon": {
+      "name": "Epitaph Prime",
+      "no_reload": true,
+      "source": "Epitaph_Prime: 'No magazine; does not need to reload.'",
+      "verified": "2026-11-08"
     }
   }
 }

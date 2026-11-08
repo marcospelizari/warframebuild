@@ -49,6 +49,10 @@
    "uniqueName": "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston"
   },
   {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/EpitaphPrime.png!00_SDd4zptErDE90VxuSDr+gQ",
+   "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeEpitaph/PrimeEpitaphSidearmWeapon"
+  },
+  {
    "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/LexPrime.png!00_kYTVvNsdYXoUoTeBYKLlTw",
    "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex"
   },

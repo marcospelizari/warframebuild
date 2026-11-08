@@ -926,6 +926,94 @@
   "trigger": "BURST",
   "variantType": "VT_PRIME"
  },
+ "/Lotus/Weapons/Tenno/Pistols/PrimeEpitaph/PrimeEpitaphSidearmWeapon": {
+  "accuracy": 80,
+  "behaviours": [
+   {
+    "chargedProjectile": {
+     "attack": {
+      "DT_IMPACT": 126.000003,
+      "DT_PUNCTURE": 47.250003,
+      "DT_SLASH": 141.749997,
+      "procChance": 0.14
+     }
+    },
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 150,
+     "procChance": 0
+    },
+    "projectile": {
+     "attack": {
+      "DT_IMPACT": 40.000001,
+      "DT_PUNCTURE": 30.000001,
+      "DT_SLASH": 29.999995,
+      "procChance": 0.5
+     },
+     "embedDeathAttack": {
+      "DT_RADIATION": 200,
+      "procChance": 0.5
+     },
+     "explosiveAttack": {
+      "DT_EXPLOSION": 30,
+      "procChance": 0.5
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerCharge"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "PROJECTILE",
+   "SINGLESHOT",
+   "AOE"
+  ],
+  "criticalChance": 0.04,
+  "criticalMultiplier": 1.8,
+  "damagePerShot": [
+   126,
+   47.25,
+   141.75,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Primes/EpitaphPrimeDesc",
+  "excludeFromMarket": true,
+  "fireRate": 1.75,
+  "holsterCategory": "ARM_MOUNTED",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/EpitaphPrime.png",
+  "introducedAt": 1724252712,
+  "magazineSize": 1,
+  "masteryReq": 14,
+  "multishot": 1,
+  "name": "/Lotus/Language/Primes/EpitaphPrimeName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 0.55,
+  "parentName": "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon",
+  "procChance": 0.14,
+  "productCategory": "Pistols",
+  "reloadTime": 0.6,
+  "slot": 0,
+  "totalDamage": 315,
+  "tradable": false,
+  "trigger": "CHARGE",
+  "variantType": "VT_PRIME"
+ },
  "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex": {
   "accuracy": 16,
   "behaviours": [

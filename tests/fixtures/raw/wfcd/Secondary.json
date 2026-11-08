@@ -471,6 +471,173 @@
   "wikiaUrl": "https://wiki.warframe.com/w/Epitaph"
  },
  {
+  "accuracy": 80,
+  "attacks": [
+   {
+    "charge_time": 0.4,
+    "crit_chance": 50,
+    "crit_mult": 3,
+    "damage": {
+     "impact": 126,
+     "puncture": 47.25,
+     "slash": 141.75
+    },
+    "flight": 300,
+    "name": "Charged Shot",
+    "shot_speed": 300,
+    "shot_type": "Projectile",
+    "speed": 1.75,
+    "status_chance": 14
+   },
+   {
+    "crit_chance": 4,
+    "crit_mult": 1.8,
+    "damage": {
+     "impact": 40,
+     "puncture": 30,
+     "slash": 30
+    },
+    "flight": 80,
+    "name": "Uncharged Direct Hit",
+    "shot_speed": 80,
+    "shot_type": "Projectile",
+    "speed": 1.75,
+    "status_chance": 50
+   },
+   {
+    "crit_chance": 4,
+    "crit_mult": 1.8,
+    "damage": {
+     "blast": 30
+    },
+    "falloff": {
+     "end": 10,
+     "reduction": 0.8,
+     "start": 0
+    },
+    "name": "Uncharged AoE",
+    "shot_type": "AoE",
+    "speed": 1.75,
+    "status_chance": 50
+   }
+  ],
+  "buildPrice": 15000,
+  "buildQuantity": 1,
+  "buildTime": 43200,
+  "category": "Secondary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/EpitaphPrimeBarrel"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/EpitaphPrimeBlueprint"
+   },
+   {
+    "itemCount": 10,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/OrokinCell"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/EpitaphPrimeReceiver"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.039999999,
+  "criticalMultiplier": 1.8,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 126,
+   "magnetic": 0,
+   "puncture": 47.25,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 141.75,
+   "tau": 0,
+   "total": 315,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   126,
+   47.25,
+   141.75,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "Send shivers down your enemies' spines with this wrist-mounted sidearm. As the signature weapon of Sevagoth Prime, it deals additional headshot damage when wielded by him.",
+  "disposition": 4,
+  "estimatedVaultDate": "2026-06-17",
+  "exilusPolarity": "naramon",
+  "fireRate": 1.7500001,
+  "imageName": "EpitaphPrime.png",
+  "introduced": {
+   "aliases": [
+    "36.1"
+   ],
+   "date": "2024-08-21",
+   "name": "Update 36.1",
+   "parent": "36.0",
+   "url": "https://wiki.warframe.com/w/Update_36%23Update_36.1"
+  },
+  "isPrime": true,
+  "magazineSize": 1,
+  "masterable": true,
+  "masteryReq": 14,
+  "multishot": 1,
+  "name": "Epitaph Prime",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "madurai",
+   "madurai"
+  ],
+  "procChance": 0.13999999,
+  "productCategory": "Pistols",
+  "releaseDate": "2024-08-21",
+  "reloadTime": 0.60000002,
+  "skipBuildTimePrice": 50,
+  "slot": 0,
+  "tags": [],
+  "totalDamage": 315,
+  "tradable": false,
+  "trigger": "Charge",
+  "type": "Pistol",
+  "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeEpitaph/PrimeEpitaphSidearmWeapon",
+  "vaultDate": "2026-06-17",
+  "vaulted": true,
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/EpitaphPrime.png?21ae3",
+  "wikiaUrl": "https://wiki.warframe.com/w/Epitaph_Prime"
+ },
+ {
   "accuracy": 100,
   "attacks": [
    {
