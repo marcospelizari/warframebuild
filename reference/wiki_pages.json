@@ -136,6 +136,13 @@
         "damage types and status table"
       ]
     },
+    "Damage_over_Time": {
+      "title": "Damage_over_Time",
+      "impact": "high",
+      "feeds": [
+        "DoT tick count, element bonus per literal type, DoT scaling (step 4)"
+      ]
+    },
     "Enemy_Body_Parts": {
       "title": "Enemy_Body_Parts",
       "impact": "high",

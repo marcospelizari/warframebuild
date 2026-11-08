@@ -1,6 +1,15 @@
 """Stat text -> effects (step 3). Text is real DE max-rank text, already plain."""
 
-from app.domain.effects import DamageType, Effect, Faction, Operation, Stat, Support, Trigger
+from app.domain.effects import (
+    DamageType,
+    Effect,
+    Faction,
+    FireRateBoost,
+    Operation,
+    Stat,
+    Support,
+    Trigger,
+)
 from app.parse.effects import parse
 
 
@@ -264,13 +273,25 @@ def test_galvanized_shot_per_status_type_is_partial() -> None:
 
 
 def test_free_text_damage_effect_is_unsupported() -> None:
+    parsed = parse(["Enemies hit are pulled toward the impact point and take 20% more damage"])
+    assert parsed.support == Support.UNSUPPORTED and parsed.damage_related
+
+
+def test_internal_bleeding_forced_slash_on_impact_proc() -> None:
+    """Saved Internal_Bleeding: 35% Slash on an Impact proc, x2 below 2.5 fire rate."""
     parsed = parse(
         [
             "Impact Status Effects have 35% chance to apply a Slash Status Effect "
             "(x2 when Fire Rate is below 2.5)"
         ]
     )
-    assert parsed.support == Support.UNSUPPORTED and parsed.damage_related
+    assert parsed.support == Support.FULL
+    (effect,) = parsed.effects
+    assert effect.stat == Stat.FORCED_PROC and effect.damage_type == DamageType.SLASH
+    assert effect.trigger == Trigger.ON_STATUS
+    assert effect.trigger_damage_type == DamageType.IMPACT
+    assert effect.value == 0.35
+    assert effect.fire_rate_boost == FireRateBoost(below=2.5, factor=2)
 
 
 def test_long_input_stays_fast() -> None:

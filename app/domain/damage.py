@@ -61,5 +61,16 @@ def composition(
     return {t: v for t, v in sorted(out.items()) if v}
 
 
+def element_bonuses(element_mods: Sequence[Part]) -> dict[DamageType, float]:
+    """Mod bonus per literal element type, for that type's DoT (saved Damage_over_Time, DoT
+    Damage Scaling): a combined DoT is not buffed by its component mods (Gas only by Gas
+    mods such as Leaded Gas), and a primary-element mod still buffs that element's forced
+    DoT after it was combined away (Corrosive mods buff a forced Toxin DoT)."""
+    out: dict[DamageType, float] = {}
+    for p in element_mods:
+        out[p.element] = out.get(p.element, 0.0) + p.mod_fraction
+    return out
+
+
 def scaled(composition: Mapping[DamageType, float], factor: float) -> dict[DamageType, float]:
     return {t: v * factor for t, v in composition.items()}
