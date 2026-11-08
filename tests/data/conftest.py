@@ -16,10 +16,10 @@ def paths(tmp_path: Path) -> Paths:
     raw = tmp_path / "cache/raw"
     shutil.copytree(FIXTURE_RAW, raw)
     (raw / "wiki").mkdir()
-    for page in wiki_local.REQUIRED_PAGES:
-        (raw / "wiki" / f"{page}.wikitext").write_text("stub", encoding="utf-8")
     reference = tmp_path / "reference"
     shutil.copytree(ROOT / "reference", reference)
+    for page in wiki_local.pages(reference):
+        (raw / "wiki" / f"{page.stem}.wikitext").write_text("stub", encoding="utf-8")
     return Paths(
         raw=raw, reference=reference, gamedata=tmp_path / "gamedata", img=tmp_path / "cache/img"
     )

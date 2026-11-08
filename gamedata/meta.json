@@ -1,4 +1,5 @@
 {
+ "changed_on": "2026-11-08",
  "counts": {
   "arcanes": 168,
   "excluded_weapons": 2,
@@ -8,7 +9,7 @@
   "secondary": 149,
   "weapons": 344
  },
- "dataset_hash": "7867583a65103724",
+ "dataset_hash": "93d18cba80ea970a",
  "denied_mods": {
   "beginner": 60,
   "expert": 42,
@@ -18,7 +19,7 @@
  "excluded_weapons": [
   {
    "name": "Lanka",
-   "reason": "fire rate 0 in DE and missing in WFCD; needs the saved wiki page Lanka",
+   "reason": "fire rate 0 in DE, missing in WFCD and not on the saved Lanka page (automatic infobox); needs the charged-weapon rule from the saved wiki page Fire_Rate",
    "unique_name": "/Lotus/Weapons/ClanTech/Energy/Railgun"
   },
   {
@@ -29,7 +30,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 1,
+ "schema_version": 2,
  "sources": [
   {
    "path": "de/ExportManifest.json",
@@ -101,7 +102,7 @@
    "path": "wiki/Calculation.wikitext",
    "retrieved": "2026-11-07",
    "sha256_16": "0d0f96d5e5506e65",
-   "url": "https://wiki.warframe.com/w/Calculation"
+   "url": "https://wiki.warframe.com/w/Damage/Calculation"
   },
   {
    "path": "wiki/Corpus.wikitext",
@@ -158,6 +159,12 @@
    "url": "https://wiki.warframe.com/w/Infested"
   },
   {
+   "path": "wiki/Lanka.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "92d5a3724203063e",
+   "url": "https://wiki.warframe.com/w/Lanka"
+  },
+  {
    "path": "wiki/Multishot.wikitext",
    "retrieved": "2026-11-07",
    "sha256_16": "5ac03c170f1ddc57",
@@ -167,7 +174,7 @@
    "path": "wiki/Overview_Table.wikitext",
    "retrieved": "2026-11-07",
    "sha256_16": "f460701c6d9acf4a",
-   "url": "https://wiki.warframe.com/w/Overview_Table"
+   "url": "https://wiki.warframe.com/w/Damage/Overview_Table"
   },
   {
    "path": "wiki/Polarity.wikitext",
@@ -185,7 +192,7 @@
    "path": "wiki/Sandbox2.wikitext",
    "retrieved": "2026-11-07",
    "sha256_16": "85c9eedf1394bd0b",
-   "url": "https://wiki.warframe.com/w/Sandbox2"
+   "url": "https://wiki.warframe.com/w/User:Sandbox2"
   },
   {
    "path": "wiki/Scaldra.wikitext",
