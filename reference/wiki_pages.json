@@ -1,6 +1,13 @@
 {
   "about": "Hand-saved WARFRAME Wiki pages (T2/G41/G48): file stem in cache/raw/wiki/, canonical title, what each page feeds, and how much a change matters (high > medium > low). Refresh fails when a listed page is missing. `wfb check` prints this list with save dates and history links after each game update.",
   "pages": {
+    "Ancient_Healer": {
+      "title": "Ancient_Healer",
+      "impact": "medium",
+      "feeds": [
+        "representative Infested enemy (enemies.json, step 8)"
+      ]
+    },
     "Archon_Shard": {
       "title": "Archon_Shard",
       "impact": "low",
@@ -13,6 +20,13 @@
       "impact": "high",
       "feeds": [
         "armor reduction and strip (step 8)"
+      ]
+    },
+    "Battalyst": {
+      "title": "Battalyst",
+      "impact": "medium",
+      "feeds": [
+        "representative Sentient enemy (enemies.json, step 8)"
       ]
     },
     "Calculating_Bonuses": {
@@ -30,12 +44,40 @@
         "Toxin shield-bypass exceptions"
       ]
     },
+    "Charger": {
+      "title": "Charger",
+      "impact": "medium",
+      "feeds": [
+        "representative Infested enemy (enemies.json, step 8)"
+      ]
+    },
     "Compatibility": {
       "title": "Mod/Compatibility",
       "impact": "high",
       "feeds": [
         "mod families: parent types and non-obvious clashes (reference/mod_families.json, V4)",
         "item compatibility tags such as BEAM, IncompatibilityTags (step 8 mod eligibility)"
+      ]
+    },
+    "Conculyst": {
+      "title": "Conculyst",
+      "impact": "medium",
+      "feeds": [
+        "representative Sentient enemy (enemies.json, step 8)"
+      ]
+    },
+    "Condition_Overload_(Mechanic)": {
+      "title": "Condition_Overload_(Mechanic)",
+      "impact": "high",
+      "feeds": [
+        "Galvanized bonus behaviour per attack: adding, multiplying, none (step 4)"
+      ]
+    },
+    "Continuous_Weapon": {
+      "title": "Continuous_Weapon",
+      "impact": "medium",
+      "feeds": [
+        "beam ramp-up, combined multishot hits (step 4)"
       ]
     },
     "Corpus": {
@@ -45,11 +87,39 @@
         "faction enemy list (enemies.json)"
       ]
     },
+    "Corpus_Tech": {
+      "title": "Corpus_Tech",
+      "impact": "medium",
+      "feeds": [
+        "representative Corpus enemy (enemies.json, step 8)"
+      ]
+    },
     "Corrupted": {
       "title": "Corrupted",
       "impact": "medium",
       "feeds": [
         "faction enemy list (enemies.json)"
+      ]
+    },
+    "Corrupted_Crewman": {
+      "title": "Corrupted_Crewman",
+      "impact": "medium",
+      "feeds": [
+        "representative Corrupted enemy (enemies.json, step 8)"
+      ]
+    },
+    "Corrupted_Heavy_Gunner": {
+      "title": "Corrupted_Heavy_Gunner",
+      "impact": "medium",
+      "feeds": [
+        "representative Corrupted enemy (enemies.json, step 8)"
+      ]
+    },
+    "Crewman": {
+      "title": "Crewman",
+      "impact": "medium",
+      "feeds": [
+        "representative Corpus enemy (enemies.json, step 8)"
       ]
     },
     "Critical_Hit": {
@@ -64,6 +134,13 @@
       "impact": "high",
       "feeds": [
         "damage types and status table"
+      ]
+    },
+    "Enemy_Body_Parts": {
+      "title": "Enemy_Body_Parts",
+      "impact": "high",
+      "feeds": [
+        "headshot multiplier and critical-headshot flag per enemy (enemies.json, step 8)"
       ]
     },
     "Enemy_Level_Scaling": {
@@ -87,11 +164,74 @@
         "Bane mod rules"
       ]
     },
+    "Felarx": {
+      "title": "Felarx",
+      "impact": "high",
+      "feeds": [
+        "native Incarnon perks (step 6)"
+      ]
+    },
+    "Fire_Rate": {
+      "title": "Fire_Rate",
+      "impact": "high",
+      "feeds": [
+        "effective fire rate per trigger: charge, bow, Lanka, burst, spool-up (step 4)"
+      ]
+    },
+    "Galvanized_Aptitude": {
+      "title": "Galvanized_Aptitude",
+      "impact": "high",
+      "feeds": [
+        "per-status direct-damage bonus, not on AoE (step 4)"
+      ]
+    },
+    "Galvanized_Savvy": {
+      "title": "Galvanized_Savvy",
+      "impact": "high",
+      "feeds": [
+        "per-status direct-damage bonus, not on AoE (step 4)"
+      ]
+    },
+    "Galvanized_Shot": {
+      "title": "Galvanized_Shot",
+      "impact": "high",
+      "feeds": [
+        "per-status direct-damage bonus, not on AoE (step 4)"
+      ]
+    },
     "Grineer": {
       "title": "Grineer",
       "impact": "medium",
       "feeds": [
         "faction enemy list (enemies.json)"
+      ]
+    },
+    "Heat_Damage": {
+      "title": "Heat_Damage",
+      "impact": "high",
+      "feeds": [
+        "Heat armor strip timing, Heat stacking (step 8)"
+      ]
+    },
+    "Heavy_Gunner": {
+      "title": "Heavy_Gunner",
+      "impact": "medium",
+      "feeds": [
+        "representative Grineer enemy (enemies.json, step 8)"
+      ]
+    },
+    "Hunter_Munitions": {
+      "title": "Hunter_Munitions",
+      "impact": "high",
+      "feeds": [
+        "forced Slash on crit, combined with Internal Bleeding (step 4)"
+      ]
+    },
+    "Incarnon": {
+      "title": "Incarnon",
+      "impact": "medium",
+      "feeds": [
+        "Incarnon evolution rules: tiers, one perk per tier (step 6)"
       ]
     },
     "Incarnon_Evolutions": {
@@ -108,11 +248,60 @@
         "faction enemy list (enemies.json)"
       ]
     },
+    "Innodem": {
+      "title": "Innodem",
+      "impact": "high",
+      "feeds": [
+        "native Incarnon perks (step 6)"
+      ]
+    },
+    "Internal_Bleeding": {
+      "title": "Internal_Bleeding",
+      "impact": "high",
+      "feeds": [
+        "forced Slash on Impact proc, fire-rate threshold (step 4)"
+      ]
+    },
+    "Laetum": {
+      "title": "Laetum",
+      "impact": "high",
+      "feeds": [
+        "native Incarnon perks (step 6)"
+      ]
+    },
+    "Lancer": {
+      "title": "Lancer",
+      "impact": "medium",
+      "feeds": [
+        "representative Grineer enemy (enemies.json, step 8)"
+      ]
+    },
+    "Lanka": {
+      "title": "Lanka",
+      "impact": "medium",
+      "feeds": [
+        "Lanka charge time (reference/fire_overrides.json, G10)"
+      ]
+    },
+    "Lumbering_Fragment": {
+      "title": "Lumbering_Fragment",
+      "impact": "medium",
+      "feeds": [
+        "representative The Murmur enemy (enemies.json, step 8)"
+      ]
+    },
     "Multishot": {
       "title": "Multishot",
       "impact": "high",
       "feeds": [
         "multishot and per-pellet status (step 4)"
+      ]
+    },
+    "Onos": {
+      "title": "Onos",
+      "impact": "high",
+      "feeds": [
+        "native Incarnon perks (step 6)"
       ]
     },
     "Overview_Table": {
@@ -122,11 +311,32 @@
         "faction modifiers (factions.json)"
       ]
     },
+    "Phenmor": {
+      "title": "Phenmor",
+      "impact": "high",
+      "feeds": [
+        "native Incarnon perks (step 6)"
+      ]
+    },
     "Polarity": {
       "title": "Polarity",
       "impact": "medium",
       "feeds": [
         "drain and forma rules (step 8)"
+      ]
+    },
+    "Praedos": {
+      "title": "Praedos",
+      "impact": "high",
+      "feeds": [
+        "native Incarnon perks (step 6)"
+      ]
+    },
+    "Primary_Merciless": {
+      "title": "Primary_Merciless",
+      "impact": "medium",
+      "feeds": [
+        "arcane damage bonus stacking group (step 4)"
       ]
     },
     "Riven_Mods": {
@@ -136,11 +346,11 @@
         "riven_factors.json (M2)"
       ]
     },
-    "Sandbox2": {
-      "title": "User:Sandbox2",
+    "Ruvox": {
+      "title": "Ruvox",
       "impact": "high",
       "feeds": [
-        "native Incarnon perks (step 6); personal page, may disappear"
+        "native Incarnon perks (step 6)"
       ]
     },
     "Scaldra": {
@@ -150,11 +360,39 @@
         "faction enemy list (enemies.json)"
       ]
     },
+    "Scaldra_Dedicant": {
+      "title": "Scaldra_Dedicant",
+      "impact": "medium",
+      "feeds": [
+        "representative Scaldra enemy (enemies.json, step 8)"
+      ]
+    },
+    "Scaldra_Jaeger": {
+      "title": "Scaldra_Jaeger",
+      "impact": "medium",
+      "feeds": [
+        "representative Scaldra enemy (enemies.json, step 8)"
+      ]
+    },
+    "Secondary_Merciless": {
+      "title": "Secondary_Merciless",
+      "impact": "medium",
+      "feeds": [
+        "arcane damage bonus stacking group (step 4)"
+      ]
+    },
     "Sentient": {
       "title": "Sentient",
       "impact": "medium",
       "feeds": [
         "faction enemy list (enemies.json)"
+      ]
+    },
+    "Sniper_Rifle": {
+      "title": "Sniper_Rifle",
+      "impact": "medium",
+      "feeds": [
+        "sniper shot combo and zoom buffs (step 4)"
       ]
     },
     "Status_Effect": {
@@ -170,6 +408,34 @@
       "impact": "medium",
       "feeds": [
         "faction enemy list (enemies.json)"
+      ]
+    },
+    "Techrot_Obsolyte": {
+      "title": "Techrot_Obsolyte",
+      "impact": "medium",
+      "feeds": [
+        "representative Techrot enemy (enemies.json, step 8)"
+      ]
+    },
+    "Techrot_Volatile_Galliflex": {
+      "title": "Techrot_Volatile_Galliflex",
+      "impact": "medium",
+      "feeds": [
+        "representative Techrot enemy (enemies.json, step 8)"
+      ]
+    },
+    "Thalys": {
+      "title": "Thalys",
+      "impact": "high",
+      "feeds": [
+        "native Incarnon perks (step 6)"
+      ]
+    },
+    "The_Hollow_Vein": {
+      "title": "The_Hollow_Vein",
+      "impact": "medium",
+      "feeds": [
+        "representative The Murmur enemy (enemies.json, step 8)"
       ]
     },
     "The_Murmur": {
