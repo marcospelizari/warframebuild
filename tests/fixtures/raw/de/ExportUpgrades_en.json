@@ -29,6 +29,98 @@
   {
    "baseDrain": 4,
    "codexSecret": false,
+   "compatName": "Shotgun",
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "+15% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+45% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+60% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+75% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+90% Critical Chance"
+     ]
+    }
+   ],
+   "name": "Blunderbuss",
+   "polarity": "AP_ATTACK",
+   "rarity": "COMMON",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Shotgun/WeaponCritChanceMod"
+  },
+  {
+   "baseDrain": 4,
+   "codexSecret": false,
+   "compatName": "Shotgun",
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "+33.3% Critical Chance",
+      "-3.3% Fire Rate"
+     ]
+    },
+    {
+     "stats": [
+      "+66.7% Critical Chance",
+      "-6.7% Fire Rate"
+     ]
+    },
+    {
+     "stats": [
+      "+100% Critical Chance",
+      "-10% Fire Rate"
+     ]
+    },
+    {
+     "stats": [
+      "+133.3% Critical Chance",
+      "-13.3% Fire Rate"
+     ]
+    },
+    {
+     "stats": [
+      "+166.7% Critical Chance",
+      "-16.6% Fire Rate"
+     ]
+    },
+    {
+     "stats": [
+      "+200% Critical Chance",
+      "-20% Fire Rate"
+     ]
+    }
+   ],
+   "name": "Critical Deceleration",
+   "polarity": "AP_ATTACK",
+   "rarity": "RARE",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedCritChanceFireRateShotgun"
+  },
+  {
+   "baseDrain": 4,
+   "codexSecret": false,
    "compatName": "PRIMARY",
    "fusionLimit": 5,
    "levelStats": [
@@ -597,6 +689,39 @@
   },
   {
    "baseDrain": 6,
+   "codexSecret": false,
+   "compatName": "Bow",
+   "fusionLimit": 3,
+   "levelStats": [
+    {
+     "stats": [
+      "+7.5% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+15% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+22.5% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Chance to Explode (Use with Caution)"
+     ]
+    }
+   ],
+   "name": "Thunderbolt",
+   "polarity": "AP_ATTACK",
+   "rarity": "RARE",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/BowExplosionChanceMod"
+  },
+  {
+   "baseDrain": 6,
    "codexSecret": true,
    "compatName": "Rifle",
    "fusionLimit": 10,
@@ -662,6 +787,124 @@
    "rarity": "LEGENDARY",
    "type": "PRIMARY",
    "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponFreezeDamageModExpert"
+  },
+  {
+   "baseDrain": 0,
+   "codexSecret": false,
+   "compatName": "Rifle (No Aoe)",
+   "fusionLimit": 10,
+   "isUtility": true,
+   "levelStats": [
+    {
+     "stats": [
+      "Shoot Health Orbs to obtain them with +10% extra effect."
+     ]
+    },
+    {
+     "stats": [
+      "Shoot Health Orbs to obtain them with +20% extra effect."
+     ]
+    },
+    {
+     "stats": [
+      "Shoot Health Orbs to obtain them with +30% extra effect."
+     ]
+    },
+    {
+     "stats": [
+      "Shoot Health Orbs to obtain them with +40% extra effect."
+     ]
+    },
+    {
+     "stats": [
+      "Shoot Health Orbs to obtain them with +50% extra effect."
+     ]
+    },
+    {
+     "stats": [
+      "Shoot Health Orbs to obtain them with +60% extra effect."
+     ]
+    },
+    {
+     "stats": [
+      "Shoot Health Orbs to obtain them with +70% extra effect."
+     ]
+    },
+    {
+     "stats": [
+      "Shoot Health Orbs to obtain them with +80% extra effect."
+     ]
+    },
+    {
+     "stats": [
+      "Shoot Health Orbs to obtain them with +90% extra effect."
+     ]
+    },
+    {
+     "stats": [
+      "Shoot Health Orbs to obtain them with +100% extra effect."
+     ]
+    },
+    {
+     "stats": [
+      "Shoot Health Orbs to obtain them with +110% extra effect."
+     ]
+    }
+   ],
+   "name": "Mending Shot",
+   "polarity": "AP_ATTACK",
+   "rarity": "RARE",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/ShootPickUpRifleMod"
+  },
+  {
+   "baseDrain": 4,
+   "codexSecret": false,
+   "compatName": "Rifle",
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "+33.3% Critical Chance",
+      "-3.3% Fire Rate (x2 for Bows)"
+     ]
+    },
+    {
+     "stats": [
+      "+66.7% Critical Chance",
+      "-6.7% Fire Rate (x2 for Bows)"
+     ]
+    },
+    {
+     "stats": [
+      "+100% Critical Chance",
+      "-10% Fire Rate (x2 for Bows)"
+     ]
+    },
+    {
+     "stats": [
+      "+133.3% Critical Chance",
+      "-13.3% Fire Rate (x2 for Bows)"
+     ]
+    },
+    {
+     "stats": [
+      "+166.7% Critical Chance",
+      "-16.6% Fire Rate (x2 for Bows)"
+     ]
+    },
+    {
+     "stats": [
+      "+200% Critical Chance",
+      "-20% Fire Rate (x2 for Bows)"
+     ]
+    }
+   ],
+   "name": "Critical Delay",
+   "polarity": "AP_TACTIC",
+   "rarity": "RARE",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedCritRateFireRateRifle"
   },
   {
    "baseDrain": 0,
@@ -850,6 +1093,131 @@
    "rarity": "UNCOMMON",
    "type": "SECONDARY",
    "uniqueName": "/Lotus/Upgrades/Mods/Pistol/WeaponDamageAmountMod"
+  },
+  {
+   "baseDrain": 4,
+   "codexSecret": false,
+   "compatName": "Pistol",
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "+20% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+40% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+60% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+80% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+100% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+120% Critical Chance"
+     ]
+    }
+   ],
+   "name": "Pistol Gambit",
+   "polarity": "AP_ATTACK",
+   "rarity": "COMMON",
+   "type": "SECONDARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Pistol/WeaponCritChanceMod"
+  },
+  {
+   "baseDrain": 4,
+   "codexSecret": false,
+   "compatName": "Pistol",
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "+33.3% Critical Chance",
+      "-3.3% Fire Rate"
+     ]
+    },
+    {
+     "stats": [
+      "+66.7% Critical Chance",
+      "-6.7% Fire Rate"
+     ]
+    },
+    {
+     "stats": [
+      "+100% Critical Chance",
+      "-10% Fire Rate"
+     ]
+    },
+    {
+     "stats": [
+      "+133.3% Critical Chance",
+      "-13.3% Fire Rate"
+     ]
+    },
+    {
+     "stats": [
+      "+166.7% Critical Chance",
+      "-16.7% Fire Rate"
+     ]
+    },
+    {
+     "stats": [
+      "+200% Critical Chance",
+      "-20% Fire Rate"
+     ]
+    }
+   ],
+   "name": "Creeping Bullseye",
+   "polarity": "AP_TACTIC",
+   "rarity": "RARE",
+   "type": "SECONDARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedCritChanceFireRatePistol"
+  },
+  {
+   "baseDrain": 2,
+   "codexSecret": false,
+   "compatName": "Pistol",
+   "fusionLimit": 3,
+   "levelStats": [
+    {
+     "stats": [
+      "+15% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+45% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+60% Critical Chance"
+     ]
+    }
+   ],
+   "name": "Pistol Gambit",
+   "polarity": "AP_ATTACK",
+   "rarity": "COMMON",
+   "type": "SECONDARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Pistol/Beginner/WeaponCritChanceModBeginner"
   },
   {
    "baseDrain": 2,
@@ -11606,6 +11974,74 @@
    "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Beginner/WeaponStatusChanceModBeginner"
   },
   {
+   "baseDrain": 6,
+   "codexSecret": false,
+   "compatName": "Bow",
+   "fusionLimit": 10,
+   "levelStats": [
+    {
+     "stats": [
+      "+7.5% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+15% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+22.5% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+37.5% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+45% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+52.5% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+60% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+67.5% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+75% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+82.5% Chance to Explode (Use with Caution)"
+     ]
+    }
+   ],
+   "name": "Thunderbolt",
+   "polarity": "AP_ATTACK",
+   "rarity": "RARE",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Expert/BowExplosionChanceModExpert"
+  },
+  {
    "baseDrain": 4,
    "codexSecret": false,
    "compatName": "Rifle",
@@ -11880,6 +12316,49 @@
   {
    "baseDrain": 6,
    "codexSecret": false,
+   "compatName": "Bow",
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "+7.5% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+15% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+22.5% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+37.5% Chance to Explode (Use with Caution)"
+     ]
+    },
+    {
+     "stats": [
+      "+45% Chance to Explode (Use with Caution)"
+     ]
+    }
+   ],
+   "name": "Thunderbolt",
+   "polarity": "AP_ATTACK",
+   "rarity": "RARE",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Intermediate/BowExplosionChanceModIntermediate"
+  },
+  {
+   "baseDrain": 6,
+   "codexSecret": false,
    "compatName": "Sniper",
    "fusionLimit": 5,
    "levelStats": [
@@ -12049,6 +12528,39 @@
    "rarity": "UNCOMMON",
    "type": "PRIMARY",
    "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Intermediate/WeaponStatusChanceModIntermediate"
+  },
+  {
+   "baseDrain": 2,
+   "codexSecret": false,
+   "compatName": "Shotgun",
+   "fusionLimit": 3,
+   "levelStats": [
+    {
+     "stats": [
+      "+10% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+20% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Critical Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+40% Critical Chance"
+     ]
+    }
+   ],
+   "name": "Blunderbuss",
+   "polarity": "AP_ATTACK",
+   "rarity": "COMMON",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Shotgun/Beginner/WeaponCritChanceModBeginner"
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
-  "about": "Corrections to the mod families refresh derives from DE data (V4; rule in app/pipeline/build/families.py). `join` merges mods the data does not link, `split` takes mods out of their derived family. Each entry: id, mods (uniqueNames), names, reason, verified (checked in the arsenal or on a saved wiki page).",
+  "about": "Corrections to the mod families refresh derives from DE data (V4; rule in app/pipeline/build/families.py). `join` merges mods the data does not link, `split` takes mods out of their derived family. In game two mods clash when they share a hidden parent type (saved Mod/Compatibility, Mod Incompatibility); DE's export has no parent field, so families are derived and corrected here. Each entry: id, mods (uniqueNames), names, reason, source (arsenal check or saved wiki page), verified.",
   "join": [
     {
       "id": "galvanized-aptitude-rifle-aptitude",
@@ -27,6 +27,62 @@
       ],
       "reason": "cannot be equipped together",
       "source": "Marcos, arsenal",
+      "verified": "2026-11-08"
+    },
+    {
+      "id": "critical-delay-point-strike",
+      "mods": [
+        "/Lotus/Upgrades/Mods/Rifle/WeaponCritChanceMod",
+        "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedCritRateFireRateRifle"
+      ],
+      "names": [
+        "Point Strike",
+        "Critical Delay"
+      ],
+      "reason": "cannot be equipped together (rifle); data does not link the dual-stat crit mod to the base crit mod",
+      "source": "Marcos, arsenal",
+      "verified": "2026-11-08"
+    },
+    {
+      "id": "critical-deceleration-blunderbuss",
+      "mods": [
+        "/Lotus/Upgrades/Mods/Shotgun/WeaponCritChanceMod",
+        "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedCritChanceFireRateShotgun"
+      ],
+      "names": [
+        "Blunderbuss",
+        "Critical Deceleration"
+      ],
+      "reason": "cannot be equipped together (shotgun); data does not link the dual-stat crit mod to the base crit mod",
+      "source": "Marcos, arsenal; saved Mod/Compatibility (Mod Incompatibility): inherits Shotgun/WeaponCritChanceMod",
+      "verified": "2026-11-08"
+    },
+    {
+      "id": "creeping-bullseye-pistol-gambit",
+      "mods": [
+        "/Lotus/Upgrades/Mods/Pistol/WeaponCritChanceMod",
+        "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedCritChanceFireRatePistol"
+      ],
+      "names": [
+        "Pistol Gambit",
+        "Creeping Bullseye"
+      ],
+      "reason": "cannot be equipped together (pistol); data does not link the dual-stat crit mod to the base crit mod",
+      "source": "Marcos, arsenal",
+      "verified": "2026-11-08"
+    },
+    {
+      "id": "mending-shot-thunderbolt",
+      "mods": [
+        "/Lotus/Upgrades/Mods/Rifle/BowExplosionChanceMod",
+        "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/ShootPickUpRifleMod"
+      ],
+      "names": [
+        "Thunderbolt",
+        "Mending Shot"
+      ],
+      "reason": "Mending Shot inherits Rifle/BowExplosionChanceMod (Thunderbolt): same parent type",
+      "source": "saved Mod/Compatibility (Mod Incompatibility)",
       "verified": "2026-11-08"
     }
   ],

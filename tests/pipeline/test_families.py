@@ -117,3 +117,19 @@ def test_checked_joins_in_reference_apply(paths) -> None:  # type: ignore[no-unt
     mods = {m.name: m for m in build(paths.raw, paths.reference).mods}
     assert mods["Primed Chamber"].family == mods["Charged Chamber"].family is not None
     assert mods["Galvanized Aptitude"].family == mods["Rifle Aptitude"].family is not None
+
+
+def test_dual_stat_crit_mods_clash_with_the_base_crit_mod(paths) -> None:  # type: ignore[no-untyped-def]
+    """R15 (arsenal, 2026-11-08) and saved Mod/Compatibility; the data does not link them."""
+    from app.domain.families import clashes
+    from app.pipeline.build import build
+
+    mods = {m.name: m for m in build(paths.raw, paths.reference).mods}
+    for base, dual in [
+        ("Point Strike", "Critical Delay"),
+        ("Blunderbuss", "Critical Deceleration"),
+        ("Pistol Gambit", "Creeping Bullseye"),
+        ("Thunderbolt", "Mending Shot"),  # saved Mod/Compatibility
+    ]:
+        pair = [(mods[n].unique_name, mods[n].family) for n in (base, dual)]
+        assert clashes(pair) == [(mods[base].unique_name, mods[dual].unique_name)]
