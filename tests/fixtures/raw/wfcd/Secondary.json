@@ -1,0 +1,984 @@
+[
+ {
+  "accuracy": 1.8181819,
+  "attacks": [
+   {
+    "crit_chance": 8,
+    "crit_mult": 1.4,
+    "damage": {
+     "impact": 50
+    },
+    "flight": 24,
+    "name": "Projectile Impact",
+    "shot_speed": 24,
+    "shot_type": "Projectile",
+    "speed": 4.67,
+    "status_chance": 32
+   },
+   {
+    "crit_chance": 8,
+    "crit_mult": 1.4,
+    "damage": {
+     "gas": 41
+    },
+    "falloff": {
+     "end": 0.7,
+     "reduction": 0.2,
+     "start": 0
+    },
+    "name": "Projectile Explosion",
+    "shot_type": "AoE",
+    "speed": 4.67,
+    "status_chance": 32
+   },
+   {
+    "crit_chance": 8,
+    "crit_mult": 1.4,
+    "damage": {
+     "impact": 2.88,
+     "puncture": 30.24,
+     "slash": 38.88
+    },
+    "flight": 60,
+    "name": "Burst Mode",
+    "shot_speed": 60,
+    "shot_type": "Projectile",
+    "speed": 4.67,
+    "status_chance": 32
+   }
+  ],
+  "bpCost": 15000,
+  "buildPrice": 20000,
+  "buildQuantity": 1,
+  "buildTime": 43200,
+  "category": "Secondary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/CrpSentAmalgPistolBlueprint"
+   },
+   {
+    "itemCount": 5,
+    "uniqueName": "/Lotus/Types/Items/Research/EnergyComponent"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Forma"
+   },
+   {
+    "itemCount": 250,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/ConcentratedGas"
+   },
+   {
+    "itemCount": 8750,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Nanospores"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.079999998,
+  "criticalMultiplier": 1.4,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 41,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 50,
+   "magnetic": 0,
+   "puncture": 0,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 0,
+   "tau": 0,
+   "total": 91,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   50,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   41,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "Sentient tech merges with Corpus design to deliver this lethal sidearm. Fully automatic, it fires ricocheting, homing projectiles that release small clouds of <DT_GAS_COLOR>Gas on impact. Alt-fire to release the entire magazine without homing as a single burst.",
+  "disposition": 4,
+  "exilusPolarity": "madurai",
+  "fireRate": 4.666667,
+  "imageName": "CrpSentAmalgPistol.png",
+  "introduced": {
+   "aliases": [
+    "25",
+    "25.0",
+    "The Jovian Concord"
+   ],
+   "date": "2019-05-22",
+   "name": "Update 25.0",
+   "parent": "25.0",
+   "url": "https://wiki.warframe.com/w/Update_25%23Update_25.0"
+  },
+  "isPrime": false,
+  "magazineSize": 11,
+  "marketCost": 175,
+  "masterable": true,
+  "masteryReq": 8,
+  "multishot": 1,
+  "name": "Cyanex",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "procChance": 0.31999999,
+  "productCategory": "Pistols",
+  "releaseDate": "2019-05-22",
+  "reloadTime": 2.2,
+  "skipBuildTimePrice": 35,
+  "slot": 0,
+  "tags": [
+   "Corpus",
+   "Sentient"
+  ],
+  "totalDamage": 91,
+  "tradable": false,
+  "trigger": "Auto",
+  "type": "Pistol",
+  "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpSentAmalgPistol/CrpSentAmalgPistol",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Cyanex.png?56ba3",
+  "wikiaUrl": "https://wiki.warframe.com/w/Cyanex"
+ },
+ {
+  "accuracy": 100,
+  "attacks": [
+   {
+    "crit_chance": 20,
+    "crit_mult": 2,
+    "damage": {
+     "electricity": 100
+    },
+    "flight": 40,
+    "name": "Normal Attack",
+    "shot_speed": 40,
+    "shot_type": "Projectile",
+    "speed": 1.5,
+    "status_chance": 26
+   },
+   {
+    "crit_chance": 20,
+    "crit_mult": 2,
+    "damage": {
+     "electricity": 50
+    },
+    "falloff": {
+     "end": 1,
+     "reduction": 0.8,
+     "start": 0
+    },
+    "name": "Normal Radial Attack",
+    "shot_type": "AoE",
+    "speed": 1.5,
+    "status_chance": 26
+   },
+   {
+    "crit_chance": 20,
+    "crit_mult": 2,
+    "damage": {
+     "electricity": 350
+    },
+    "flight": 6,
+    "name": "Active Attack",
+    "shot_speed": 6,
+    "shot_type": "Projectile",
+    "speed": 1,
+    "status_chance": 26
+   },
+   {
+    "crit_chance": 20,
+    "crit_mult": 2,
+    "damage": {
+     "electricity": 250
+    },
+    "falloff": {
+     "end": 6,
+     "reduction": 0.8,
+     "start": 0
+    },
+    "name": "Active Radial Attack",
+    "shot_type": "AoE",
+    "speed": 1,
+    "status_chance": 26
+   }
+  ],
+  "category": "Secondary",
+  "codexSecret": true,
+  "criticalChance": 0.079999998,
+  "criticalMultiplier": 1.6,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 17.5,
+   "magnetic": 0,
+   "puncture": 7.5000005,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 0,
+   "tau": 0,
+   "total": 25,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   17.5,
+   7.5000005,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "Claim the power of Albrecht Entrati's knowledge. Customize the Grimoire with Tome Mods that enhance Warframe Abilities and reward strategic combat. Its alternate attack releases a voltaic orb with guaranteed <DT_ELECTRICITY_COLOR>Electricity Status.",
+  "disposition": 4,
+  "fireRate": 1.5000001,
+  "imageName": "Grimoire.png",
+  "introduced": {
+   "aliases": [
+    "35",
+    "35.0",
+    "Whispers in the Wall"
+   ],
+   "date": "2023-12-13",
+   "name": "Update 35.0",
+   "parent": "35.0",
+   "url": "https://wiki.warframe.com/w/Update_35%23Update_35.0"
+  },
+  "isPrime": false,
+  "masterable": true,
+  "masteryReq": 10,
+  "multishot": 1,
+  "name": "Grimoire",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "madurai",
+   "naramon"
+  ],
+  "procChance": 0.10000002,
+  "productCategory": "Pistols",
+  "releaseDate": "2023-12-13",
+  "reloadTime": 2,
+  "slot": 2,
+  "tags": [
+   "Entrati"
+  ],
+  "totalDamage": 25,
+  "tradable": false,
+  "trigger": "Auto",
+  "type": "Pistol",
+  "uniqueName": "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Grimoire.png?e8ce6",
+  "wikiaUrl": "https://wiki.warframe.com/w/Grimoire"
+ },
+ {
+  "accuracy": 100,
+  "attacks": [
+   {
+    "crit_chance": 20,
+    "crit_mult": 2,
+    "damage": {
+     "electricity": 100
+    },
+    "flight": 40,
+    "name": "Normal Attack",
+    "shot_speed": 40,
+    "shot_type": "Projectile",
+    "speed": 1.5,
+    "status_chance": 26
+   },
+   {
+    "crit_chance": 20,
+    "crit_mult": 2,
+    "damage": {
+     "electricity": 50
+    },
+    "falloff": {
+     "end": 1,
+     "reduction": 0.8,
+     "start": 0
+    },
+    "name": "Normal Radial Attack",
+    "shot_type": "AoE",
+    "speed": 1.5,
+    "status_chance": 26
+   },
+   {
+    "crit_chance": 20,
+    "crit_mult": 2,
+    "damage": {
+     "electricity": 350
+    },
+    "flight": 6,
+    "name": "Active Attack",
+    "shot_speed": 6,
+    "shot_type": "Projectile",
+    "speed": 1,
+    "status_chance": 26
+   },
+   {
+    "crit_chance": 20,
+    "crit_mult": 2,
+    "damage": {
+     "electricity": 250
+    },
+    "falloff": {
+     "end": 6,
+     "reduction": 0.8,
+     "start": 0
+    },
+    "name": "Active Radial Attack",
+    "shot_type": "AoE",
+    "speed": 1,
+    "status_chance": 26
+   }
+  ],
+  "buildPrice": 25000,
+  "buildQuantity": 1,
+  "buildTime": 43200,
+  "category": "Secondary",
+  "codexSecret": true,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/GrimoireBlueprint"
+   },
+   {
+    "itemCount": 15,
+    "uniqueName": "/Lotus/Types/Gameplay/EntratiLab/Resources/EntratiLabDogTagRare"
+   },
+   {
+    "itemCount": 10,
+    "uniqueName": "/Lotus/Types/Gameplay/Zariman/Resources/ZarimanMiscItemB"
+   },
+   {
+    "itemCount": 2000,
+    "uniqueName": "/Lotus/Types/Gameplay/EntratiLab/Resources/EntratiLabMiscItemA"
+   },
+   {
+    "itemCount": 50,
+    "uniqueName": "/Lotus/Types/Gameplay/EntratiLab/Resources/EntratiLabMiscItemB"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.2,
+  "criticalMultiplier": 2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 150,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 0,
+   "magnetic": 0,
+   "puncture": 0,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 0,
+   "tau": 0,
+   "total": 150,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   150,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "Claim the power of Albrecht Entrati's knowledge. Customize the Grimoire with Tome Mods that enhance Warframe Abilities and reward strategic combat. Its alternate attack releases a voltaic orb with guaranteed <DT_ELECTRICITY_COLOR>Electricity Status.",
+  "disposition": 4,
+  "fireRate": 1.5000001,
+  "imageName": "Grimoire.png",
+  "introduced": {
+   "aliases": [
+    "35",
+    "35.0",
+    "Whispers in the Wall"
+   ],
+   "date": "2023-12-13",
+   "name": "Update 35.0",
+   "parent": "35.0",
+   "url": "https://wiki.warframe.com/w/Update_35%23Update_35.0"
+  },
+  "isPrime": false,
+  "masterable": true,
+  "masteryReq": 10,
+  "multishot": 1,
+  "name": "Grimoire",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "madurai",
+   "naramon"
+  ],
+  "procChance": 0.25999999,
+  "productCategory": "Pistols",
+  "releaseDate": "2023-12-13",
+  "reloadTime": 0.0099999998,
+  "skipBuildTimePrice": 50,
+  "slot": 0,
+  "tags": [
+   "Entrati"
+  ],
+  "totalDamage": 150,
+  "tradable": false,
+  "trigger": "Auto",
+  "type": "Pistol",
+  "uniqueName": "/Lotus/Weapons/Tenno/Grimoire/TnGrimoire",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Grimoire.png?e8ce6",
+  "wikiaUrl": "https://wiki.warframe.com/w/Grimoire"
+ },
+ {
+  "accuracy": 16,
+  "attacks": [
+   {
+    "crit_chance": 22,
+    "crit_mult": 2.2,
+    "damage": {
+     "impact": 64,
+     "slash": 96
+    },
+    "flight": 100,
+    "name": "Normal Attack",
+    "shot_speed": 100,
+    "shot_type": "Projectile",
+    "speed": 2.5,
+    "status_chance": 22
+   },
+   {
+    "crit_chance": 22,
+    "crit_mult": 2.2,
+    "damage": {
+     "impact": 100
+    },
+    "flight": 40,
+    "name": "Incarnon Form",
+    "shot_speed": 40,
+    "shot_type": "Projectile",
+    "speed": 6.67,
+    "status_chance": 22
+   },
+   {
+    "crit_chance": 22,
+    "crit_mult": 2.2,
+    "damage": {
+     "radiation": 300
+    },
+    "falloff": {
+     "end": 2,
+     "reduction": 0.2,
+     "start": 0
+    },
+    "name": "Auto Radial Attack",
+    "shot_type": "AoE",
+    "speed": 6.67,
+    "status_chance": 22
+   }
+  ],
+  "buildPrice": 30000,
+  "buildQuantity": 1,
+  "buildTime": 86400,
+  "category": "Secondary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/Evolving/ZarimanHeavyPistolBlueprint"
+   },
+   {
+    "itemCount": 4000,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Ferrite"
+   },
+   {
+    "itemCount": 20,
+    "uniqueName": "/Lotus/Types/Gameplay/Zariman/Resources/ZarimanMiscItemA"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Gameplay/Zariman/Resources/VoidAngelItem"
+   },
+   {
+    "itemCount": 5,
+    "uniqueName": "/Lotus/Types/Gameplay/Zariman/Resources/ZarimanDogTagBounty"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.22,
+  "criticalMultiplier": 2.2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 64,
+   "magnetic": 0,
+   "puncture": 0,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 96,
+   "tau": 0,
+   "total": 160,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   64,
+   0,
+   96,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "During parades and victory marches, the Laetum fired pigmented airburst rounds that rained onto festive crowds. The Orokin sent Laetum with the Zariman so they could properly celebrate a successful maiden voyage to Tau. There would be no such celebration, but the Void imbued the Laetum with a much more explosive capacity.",
+  "disposition": 4,
+  "exilusPolarity": "naramon",
+  "fireRate": 2.5000002,
+  "imageName": "ZarimanHeavyPistol.png",
+  "introduced": {
+   "aliases": [
+    "31.5",
+    "Angels of the Zariman"
+   ],
+   "date": "2022-04-27",
+   "name": "Update 31.5",
+   "parent": "31.0",
+   "url": "https://wiki.warframe.com/w/Update_31%23Update_31.5"
+  },
+  "isPrime": false,
+  "magazineSize": 12,
+  "masterable": true,
+  "masteryReq": 14,
+  "multishot": 1,
+  "name": "Laetum",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "madurai"
+  ],
+  "procChance": 0.22000003,
+  "productCategory": "Pistols",
+  "releaseDate": "2022-04-27",
+  "reloadTime": 2,
+  "skipBuildTimePrice": 25,
+  "slot": 0,
+  "tags": [
+   "Zariman",
+   "Incarnon"
+  ],
+  "totalDamage": 160,
+  "tradable": false,
+  "trigger": "Semi",
+  "type": "Pistol",
+  "uniqueName": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Laetum.png?b6a44",
+  "wikiaUrl": "https://wiki.warframe.com/w/Laetum"
+ },
+ {
+  "accuracy": 16,
+  "attacks": [
+   {
+    "crit_chance": 25,
+    "crit_mult": 2,
+    "damage": {
+     "impact": 18,
+     "puncture": 144,
+     "slash": 18
+    },
+    "name": "Normal Attack",
+    "shot_type": "Hit-Scan",
+    "speed": 2.08,
+    "status_chance": 25
+   },
+   {
+    "crit_chance": 35,
+    "crit_mult": 3,
+    "damage": {
+     "impact": 400,
+     "radiation": 800
+    },
+    "falloff": {
+     "end": 18,
+     "reduction": 0.3333,
+     "start": 10
+    },
+    "flight": 110,
+    "name": "Incarnon Form",
+    "shot_speed": 110,
+    "shot_type": "Projectile",
+    "speed": 0.67,
+    "status_chance": 44
+   }
+  ],
+  "buildPrice": 15000,
+  "buildQuantity": 1,
+  "buildTime": 43200,
+  "category": "Secondary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/LexPrimeBarrel"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/LexPrimeBlueprint"
+   },
+   {
+    "itemCount": 10,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/OrokinCell"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/WeaponParts/LexPrimeReceiver"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.25,
+  "criticalMultiplier": 2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 18,
+   "magnetic": 0,
+   "puncture": 144,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 17.999994,
+   "tau": 0,
+   "total": 180,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   18,
+   144,
+   17.999994,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "The Lex Prime is a powerful, accurate pistol that has a low Fire Rate and Magazine Capacity. Very efficient at long range.",
+  "disposition": 4,
+  "estimatedVaultDate": "2016-01-09",
+  "exilusPolarity": "naramon",
+  "fireRate": 2.0833335,
+  "imageName": "LexPrime.png",
+  "introduced": {
+   "aliases": [
+    "Update 13",
+    "13",
+    "13.0"
+   ],
+   "date": "2014-04-09",
+   "name": "Update 13.0",
+   "parent": "13.0",
+   "url": "https://wiki.warframe.com/w/Update_13%23Update_13.0"
+  },
+  "isPrime": true,
+  "magazineSize": 8,
+  "masterable": true,
+  "masteryReq": 8,
+  "multishot": 1,
+  "name": "Lex Prime",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "parentUniqueNames": [
+   "/Lotus/Weapons/Tenno/Akimbo/AkLexPrimePistols"
+  ],
+  "polarities": [
+   "madurai"
+  ],
+  "procChance": 0.25,
+  "productCategory": "Pistols",
+  "releaseDate": "2014-04-09",
+  "reloadTime": 2.3499999,
+  "skipBuildTimePrice": 50,
+  "slot": 0,
+  "tags": [
+   "Prime",
+   "Never Vaulted"
+  ],
+  "totalDamage": 180,
+  "tradable": false,
+  "trigger": "Semi",
+  "type": "Pistol",
+  "uniqueName": "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex",
+  "vaulted": false,
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/LexPrime.png?422f9",
+  "wikiaUrl": "https://wiki.warframe.com/w/Lex_Prime"
+ },
+ {
+  "accuracy": 100,
+  "attacks": [
+   {
+    "crit_chance": 0,
+    "crit_mult": 1,
+    "damage": {
+     "impact": 150
+    },
+    "falloff": {
+     "end": 20,
+     "reduction": 0.8333,
+     "start": 0
+    },
+    "flight": 80,
+    "name": "Projectile Impact",
+    "shot_speed": 80,
+    "shot_type": "Projectile",
+    "speed": 1.25,
+    "status_chance": 0
+   },
+   {
+    "crit_chance": 10,
+    "crit_mult": 2,
+    "damage": {
+     "impact": 50
+    },
+    "name": "Explosion",
+    "shot_type": "AoE",
+    "speed": 1.25,
+    "status_chance": 25
+   }
+  ],
+  "bpCost": 20000,
+  "buildPrice": 20000,
+  "buildQuantity": 1,
+  "buildTime": 43200,
+  "category": "Secondary",
+  "codexSecret": false,
+  "components": [
+   {
+    "itemCount": 6500,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/AlloyPlate"
+   },
+   {
+    "itemCount": 2,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/ArgonCrystal"
+   },
+   {
+    "itemCount": 1,
+    "uniqueName": "/Lotus/Types/Recipes/Weapons/CrpAirPistolArrayBlueprint"
+   },
+   {
+    "itemCount": 600,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/OxiumAlloy"
+   },
+   {
+    "itemCount": 2600,
+    "uniqueName": "/Lotus/Types/Items/MiscItems/Plastids"
+   }
+  ],
+  "consumeOnBuild": true,
+  "criticalChance": 0.1,
+  "criticalMultiplier": 2,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 50,
+   "magnetic": 0,
+   "puncture": 0,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 0,
+   "tau": 0,
+   "total": 50,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   50,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "Blasts targets with a massive wave of sonic energy. Results reported to be: 'Very Satisfying'.",
+  "disposition": 4,
+  "exilusPolarity": "naramon",
+  "fireRate": 1.2500001,
+  "imageName": "Sonicor.png",
+  "introduced": {
+   "aliases": [
+    "17.5.0",
+    "17.5"
+   ],
+   "date": "2015-10-01",
+   "name": "Update 17.5",
+   "parent": "17.5",
+   "url": "https://wiki.warframe.com/w/Update_17%23Update_17.5"
+  },
+  "isPrime": false,
+  "magazineSize": 15,
+  "marketCost": 200,
+  "masterable": true,
+  "masteryReq": 2,
+  "multishot": 1,
+  "name": "Sonicor",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "vazarin"
+  ],
+  "procChance": 0,
+  "productCategory": "Pistols",
+  "releaseDate": "2015-10-01",
+  "reloadTime": 3,
+  "skipBuildTimePrice": 35,
+  "slot": 0,
+  "tags": [
+   "Corpus"
+  ],
+  "totalDamage": 50,
+  "tradable": false,
+  "trigger": "Semi",
+  "type": "Pistol",
+  "uniqueName": "/Lotus/Weapons/Corpus/Pistols/CrpAirPistol/CrpAirPistolArray",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Sonicor.png?ee6d0",
+  "wikiaUrl": "https://wiki.warframe.com/w/Sonicor"
+ }
+]

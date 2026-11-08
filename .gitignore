@@ -25,3 +25,7 @@ web/openapi.json
 Headshot.md
 # GitLab wiki clone (private project report, never mirrored to GitHub)
 wiki/
+
+# Refresh staging folders (wfb refresh)
+.gamedata.staging/
+.gamedata.old/

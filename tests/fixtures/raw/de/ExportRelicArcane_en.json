@@ -1,0 +1,124 @@
+{
+ "ExportRelicArcane": [
+  {
+   "codexSecret": true,
+   "levelStats": [
+    {
+     "stats": [
+      "On Kill:\r\n+5% Damage for 4s. Stacks up to 12x."
+     ]
+    },
+    {
+     "stats": [
+      "On Kill:\r\n+10% Damage for 4s. Stacks up to 12x."
+     ]
+    },
+    {
+     "stats": [
+      "On Kill:\r\n+15% Damage for 4s. Stacks up to 12x."
+     ]
+    },
+    {
+     "stats": [
+      "On Kill:\r\n+20% Damage for 4s. Stacks up to 12x."
+     ]
+    },
+    {
+     "stats": [
+      "On Kill:\r\n+25% Damage for 4s. Stacks up to 12x."
+     ]
+    },
+    {
+     "stats": [
+      "On Kill:\r\n+30% Damage for 4s. Stacks up to 12x.\r\n+30% Reload Speed",
+      "+30% Reload Speed"
+     ]
+    }
+   ],
+   "name": "Primary Merciless",
+   "rarity": "RARE",
+   "uniqueName": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryDamageOnKill"
+  },
+  {
+   "codexSecret": true,
+   "levelStats": [
+    {
+     "stats": [
+      "On Weak Point Kill:\r\n+20% Damage for 24s. Stacks up to 3x."
+     ]
+    },
+    {
+     "stats": [
+      "On Weak Point Kill:\r\n+40% Damage for 24s. Stacks up to 3x."
+     ]
+    },
+    {
+     "stats": [
+      "On Weak Point Kill:\r\n+60% Damage for 24s. Stacks up to 3x."
+     ]
+    },
+    {
+     "stats": [
+      "On Weak Point Kill:\r\n+80% Damage for 24s. Stacks up to 3x."
+     ]
+    },
+    {
+     "stats": [
+      "On Weak Point Kill:\r\n+100% Damage for 24s. Stacks up to 3x."
+     ]
+    },
+    {
+     "stats": [
+      "On Weak Point Kill:\r\n+120% Damage for 24s. Stacks up to 3x.\r\n+30% to Headshot Multiplier\r\n-50% Weapon Recoil",
+      "+30% to Headshot Multiplier",
+      "-50% Weapon Recoil"
+     ]
+    }
+   ],
+   "name": "Secondary Deadhead",
+   "rarity": "RARE",
+   "uniqueName": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryDamageOnNoMelee"
+  },
+  {
+   "codexSecret": true,
+   "levelStats": [
+    {
+     "stats": [
+      "On Energy Pickup:\r\n60% chance to replenish 25 Energy to self and allies within 15m\r\n15s cooldown"
+     ]
+    },
+    {
+     "stats": [
+      "On Energy Pickup:\r\n60% chance to replenish 50 Energy to self and allies within 15m\r\n15s cooldown"
+     ]
+    },
+    {
+     "stats": [
+      "On Energy Pickup:\r\n60% chance to replenish 75 Energy to self and allies within 15m\r\n15s cooldown"
+     ]
+    },
+    {
+     "stats": [
+      "On Energy Pickup:\r\n60% chance to replenish 100 Energy to self and allies within 15m\r\n15s cooldown\r\n+1 Arcane Revive",
+      "+1 Arcane Revive"
+     ]
+    },
+    {
+     "stats": [
+      "On Energy Pickup:\r\n60% chance to replenish 125 Energy to self and allies within 15m\r\n15s cooldown\r\n+1 Arcane Revive",
+      "+1 Arcane Revive"
+     ]
+    },
+    {
+     "stats": [
+      "On Energy Pickup:\r\n60% chance to replenish 150 Energy to self and allies within 15m\r\n15s cooldown\r\n+1 Arcane Revive",
+      "+1 Arcane Revive"
+     ]
+    }
+   ],
+   "name": "Arcane Energize",
+   "rarity": "LEGENDARY",
+   "uniqueName": "/Lotus/Upgrades/CosmeticEnhancers/Utility/GolemArcaneRadialEnergyOnEnergyPickup"
+  }
+ ]
+}

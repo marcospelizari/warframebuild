@@ -26,6 +26,17 @@ cd web && npm ci && npm run build && cd ..
 uv run wfb serve             # http://127.0.0.1:8000
 ```
 
+Game data: `gamedata/` is generated and committed. To rebuild it:
+
+```sh
+uv run wfb refresh            # downloads DE Public Export + WFCD into cache/raw/, rebuilds gamedata/
+uv run wfb refresh --offline  # rebuild from files already in cache/raw/
+```
+
+WARFRAME Wiki pages are never downloaded by the tool; they are saved by hand into
+`cache/raw/wiki/<Page>.wikitext` (`https://wiki.warframe.com/w/<Page>?action=raw`).
+Refresh names any missing page.
+
 Checks (the same as CI):
 
 ```sh

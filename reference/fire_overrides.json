@@ -1,0 +1,10 @@
+{
+  "about": "Per-gun fire data the sources lack (G10). `exclude` keeps a gun out of the dataset with a reason until real values are entered; values come from saved wiki pages, never guessed.",
+  "weapons": {
+    "/Lotus/Weapons/ClanTech/Energy/Railgun": {
+      "name": "Lanka",
+      "exclude": "fire rate 0 in DE and missing in WFCD; needs the saved wiki page Lanka",
+      "verified": "Update 44.0"
+    }
+  }
+}
