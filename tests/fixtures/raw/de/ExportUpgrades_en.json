@@ -194,6 +194,50 @@
    "uniqueName": "/Lotus/Upgrades/Mods/Rifle/WeaponStatusChanceSPMod"
   },
   {
+   "baseDrain": 2,
+   "codexSecret": false,
+   "compatName": "Sniper",
+   "fusionLimit": 5,
+   "isUtility": true,
+   "levelStats": [
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 8% of Ammo Pick Up."
+     ]
+    },
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 16% of Ammo Pick Up."
+     ]
+    },
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 25% of Ammo Pick Up."
+     ]
+    },
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 33% of Ammo Pick Up."
+     ]
+    },
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 42% of Ammo Pick Up."
+     ]
+    },
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 50% of Ammo Pick Up."
+     ]
+    }
+   ],
+   "name": "Sniper Ammo Mutation",
+   "polarity": "AP_TACTIC",
+   "rarity": "RARE",
+   "type": "---",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/WeaponSnipersConvertAmmoMod"
+  },
+  {
    "baseDrain": 10,
    "codexSecret": false,
    "compatName": "Rifle",
@@ -392,6 +436,91 @@
   },
   {
    "baseDrain": 6,
+   "codexSecret": false,
+   "compatName": "Sniper",
+   "fusionLimit": 3,
+   "levelStats": [
+    {
+     "stats": [
+      "+10% Damage on first shot in Magazine"
+     ]
+    },
+    {
+     "stats": [
+      "+20% Damage on first shot in Magazine"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Damage on first shot in Magazine"
+     ]
+    },
+    {
+     "stats": [
+      "+40% Damage on first shot in Magazine"
+     ]
+    }
+   ],
+   "name": "Charged Chamber",
+   "polarity": "AP_ATTACK",
+   "rarity": "UNCOMMON",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/SniperReloadDamageMod"
+  },
+  {
+   "baseDrain": 4,
+   "codexSecret": false,
+   "compatName": "Rifle",
+   "description": [
+    "Only compatible with Semi-Auto Trigger. Fire Rate cannot be modified."
+   ],
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "+40% Damage",
+      "+0.25 Punch Through"
+     ]
+    },
+    {
+     "stats": [
+      "+80% Damage",
+      "+0.5 Punch Through"
+     ]
+    },
+    {
+     "stats": [
+      "+120% Damage",
+      "+0.75 Punch Through"
+     ]
+    },
+    {
+     "stats": [
+      "+160% Damage",
+      "+1 Punch Through"
+     ]
+    },
+    {
+     "stats": [
+      "+200% Damage",
+      "+1.25 Punch Through"
+     ]
+    },
+    {
+     "stats": [
+      "+240% Damage",
+      "+1.5 Punch Through"
+     ]
+    }
+   ],
+   "name": "Semi-Rifle Cannonade",
+   "polarity": "AP_DEFENSE",
+   "rarity": "UNCOMMON",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/RifleSemiAutoFantasyMod"
+  },
+  {
+   "baseDrain": 6,
    "codexSecret": true,
    "compatName": "Rifle",
    "fusionLimit": 10,
@@ -468,6 +597,72 @@
    "rarity": "RARE",
    "type": "PRIMARY",
    "uniqueName": "/Lotus/Upgrades/Mods/Randomized/RawRifleRandomMod"
+  },
+  {
+   "baseDrain": 10,
+   "codexSecret": false,
+   "compatName": "Latron",
+   "fusionLimit": 3,
+   "levelStats": [
+    {
+     "stats": [
+      "ON HIT:\r\n5% Bonus Damage on next Shot for 0.5s.\r\nStacks up to 80x outside of Conclave."
+     ]
+    },
+    {
+     "stats": [
+      "ON HIT:\r\n10% Bonus Damage on next Shot for 1s.\r\nStacks up to 40x outside of Conclave."
+     ]
+    },
+    {
+     "stats": [
+      "ON HIT:\r\n15% Bonus Damage on next Shot for 1.5s.\r\nStacks up to 26x outside of Conclave."
+     ]
+    },
+    {
+     "stats": [
+      "ON HIT:\r\n20% Bonus Damage on next Shot for 2s.\r\nStacks up to 20x outside of Conclave."
+     ]
+    }
+   ],
+   "name": "Double Tap",
+   "polarity": "AP_ATTACK",
+   "rarity": "RARE",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/PvPMods/Rifle/MoreDamageonTripleTapRifleMod"
+  },
+  {
+   "baseDrain": 2,
+   "codexSecret": false,
+   "compatName": "Rifle",
+   "fusionLimit": 3,
+   "levelStats": [
+    {
+     "stats": [
+      "5% of Damage converted into <DT_IMPACT_COLOR>Impact"
+     ]
+    },
+    {
+     "stats": [
+      "10% of Damage converted into <DT_IMPACT_COLOR>Impact"
+     ]
+    },
+    {
+     "stats": [
+      "15% of Damage converted into <DT_IMPACT_COLOR>Impact"
+     ]
+    },
+    {
+     "stats": [
+      "20% of Damage converted into <DT_IMPACT_COLOR>Impact"
+     ]
+    }
+   ],
+   "name": "Comet Rounds",
+   "polarity": "AP_ATTACK",
+   "rarity": "UNCOMMON",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/PvPMods/Rifle/DamageBiasImpactRifleMod"
   },
   {
    "baseDrain": 6,
@@ -11506,6 +11701,49 @@
    "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponFireIterationsModExpert"
   },
   {
+   "baseDrain": 6,
+   "codexSecret": false,
+   "compatName": "Sniper",
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "+10% Damage on first shot in Magazine"
+     ]
+    },
+    {
+     "stats": [
+      "+20% Damage on first shot in Magazine"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Damage on first shot in Magazine"
+     ]
+    },
+    {
+     "stats": [
+      "+40% Damage on first shot in Magazine"
+     ]
+    },
+    {
+     "stats": [
+      "+50% Damage on first shot in Magazine"
+     ]
+    },
+    {
+     "stats": [
+      "+60% Damage on first shot in Magazine"
+     ]
+    }
+   ],
+   "name": "Charged Chamber",
+   "polarity": "AP_ATTACK",
+   "rarity": "UNCOMMON",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Intermediate/SniperReloadDamageModIntermediate"
+  },
+  {
    "baseDrain": 4,
    "codexSecret": false,
    "compatName": "Rifle",
@@ -11547,6 +11785,50 @@
    "rarity": "UNCOMMON",
    "type": "PRIMARY",
    "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Intermediate/WeaponDamageAmountModIntermediate"
+  },
+  {
+   "baseDrain": 2,
+   "codexSecret": false,
+   "compatName": "Sniper",
+   "fusionLimit": 5,
+   "isUtility": true,
+   "levelStats": [
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 8% of Ammo Pick Up."
+     ]
+    },
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 16% of Ammo Pick Up."
+     ]
+    },
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 25% of Ammo Pick Up."
+     ]
+    },
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 33% of Ammo Pick Up."
+     ]
+    },
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 42% of Ammo Pick Up."
+     ]
+    },
+    {
+     "stats": [
+      "Converts Secondary ammo pickups to 50% of Ammo Pick Up."
+     ]
+    }
+   ],
+   "name": "Sniper Ammo Mutation",
+   "polarity": "AP_TACTIC",
+   "rarity": "RARE",
+   "type": "---",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Intermediate/WeaponSnipersConvertAmmoModIntermediate"
   }
  ]
 }

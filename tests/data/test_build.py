@@ -3,6 +3,7 @@ import json
 import pytest
 
 from app.data.build import RefreshError, build, clean_text
+from app.data.models import Category
 from app.data.refresh import Paths
 
 
@@ -40,7 +41,14 @@ def test_mod_filter(paths: Paths) -> None:
     assert "/Expert/" not in by_name["Split Chamber"].unique_name
     assert "/Expert/" in by_name["Primed Cryo Rounds"].unique_name
     assert "Rifle Riven Mod" not in by_name
-    assert set(data.denied_mods) >= {"beginner", "intermediate", "expert", "no-level-stats"}
+    assert "Comet Rounds" not in by_name
+    assert set(data.denied_mods) >= {
+        "beginner",
+        "intermediate",
+        "expert",
+        "conclave",
+        "no-level-stats",
+    }
     assert data.mod_sets  # Vigilante set kept for its member
 
 
@@ -61,6 +69,84 @@ def test_gun_without_fire_rate_fails(paths: Paths) -> None:
 
 def test_clean_text_strips_markup() -> None:
     assert clean_text("+90% <DT_POISON_COLOR>Toxin\r\nx<LINE_SEPARATOR>y") == "+90% Toxin\nx\ny"
+    assert clean_text("Remove all. <LOWER_IS_BETTER>7s cooldown.") == "Remove all. 7s cooldown."
+
+
+def test_damage_tag_without_its_word_keeps_the_type() -> None:
+    # Hunter Munitions: the tag is the only place the damage type appears.
+    assert clean_text("+30% chance to apply <DT_SLASH_COLOR> on Critical") == (
+        "+30% chance to apply Slash on Critical"
+    )
+    assert clean_text("On <DT_PUNCTURE_COLOR> Puncture: <DT_SENTIENT>Tau") == "On Puncture: Tau"
+
+
+def test_damage_tag_followed_by_a_de_synonym_is_not_doubled() -> None:
+    """Review 2 bug 1: DE writes other words after the tag (Prototype Shock Coils)."""
+    assert (
+        clean_text("Adds +90% <DT_ELECTRICITY_COLOR>Electric damage") == "Adds +90% Electric damage"
+    )
+    assert clean_text("<DT_FREEZE_COLOR>Freeze") == "Freeze"
+    assert clean_text("+300% <DT_GAS_COLOR>Extra Gas Damage") == "+300% Extra Gas Damage"
+    assert clean_text("by a <DT_MAGNETIC>Magnetic Status") == "by a Magnetic Status"  # no _COLOR
+
+
+def test_unknown_damage_tag_fails() -> None:
+    """Review 2 bug 2: a new tag must never vanish from the text silently."""
+    with pytest.raises(RefreshError, match="DT_ARCHON_COLOR"):
+        clean_text("+30% chance to apply <DT_ARCHON_COLOR> on Critical")
+
+
+def test_no_doubled_damage_words_in_built_text(paths: Paths) -> None:
+    data = build(paths.raw, paths.reference)
+    levels = [m.level_stats for m in data.mods] + [a.level_stats for a in data.arcanes]
+    text = " ".join(s for entry in levels for lvl in entry for s in lvl)
+    for word in ("Electricity Electric", "Cold Freeze", "Gas Extra"):
+        assert word not in text
+
+
+def test_hunter_munitions_text_names_slash(paths: Paths) -> None:
+    mod = next(m for m in build(paths.raw, paths.reference).mods if m.name == "Hunter Munitions")
+    assert "Slash on Critical" in mod.level_stats[-1][0]
+
+
+def test_gun_arcanes_get_their_slot_from_wfcd(paths: Paths) -> None:
+    arcanes = {a.name: a for a in build(paths.raw, paths.reference).arcanes}
+    assert (arcanes["Primary Merciless"].category, arcanes["Primary Merciless"].weapon_type) == (
+        Category.PRIMARY,
+        None,
+    )
+    assert arcanes["Secondary Deadhead"].category == Category.SECONDARY
+    assert (arcanes["Shotgun Vendetta"].category, arcanes["Shotgun Vendetta"].weapon_type) == (
+        Category.PRIMARY,
+        "Shotgun",
+    )
+    assert "Arcane Energize" not in arcanes  # Warframe arcane
+
+
+def test_de_arcane_missing_in_wfcd_fails(paths: Paths) -> None:
+    """Review 2 bug 3: a new DE arcane WFCD has not typed yet is never dropped silently."""
+    path = paths.raw / "wfcd/Arcanes.json"
+    data = json.loads(path.read_text())
+    path.write_text(json.dumps([a for a in data if a["name"] != "Primary Merciless"]))
+    with pytest.raises(RefreshError, match="PrimaryDamageOnKill"):
+        build(paths.raw, paths.reference)
+
+
+def test_arcane_listed_twice_in_wfcd_fails(paths: Paths) -> None:
+    path = paths.raw / "wfcd/Arcanes.json"
+    data = json.loads(path.read_text())
+    path.write_text(json.dumps([*data, data[0]]))
+    with pytest.raises(RefreshError, match="listed twice"):
+        build(paths.raw, paths.reference)
+
+
+def test_unknown_wfcd_arcane_type_fails(paths: Paths) -> None:
+    path = paths.raw / "wfcd/Arcanes.json"
+    data = json.loads(path.read_text())
+    data[0]["type"] = "Archgun Arcane"
+    path.write_text(json.dumps(data))
+    with pytest.raises(RefreshError, match="Archgun Arcane"):
+        build(paths.raw, paths.reference)
 
 
 def test_fire_rate_error_names_the_field_that_works(paths: Paths) -> None:
@@ -105,3 +191,37 @@ def test_wfcd_speed_zero_means_no_own_fire_rate() -> None:
         "damage": {"corrosive": 10},
     }
     assert _attack(dot, "Tysis").fire_rate is None
+
+
+def test_allowed_conclave_mod_is_kept(paths: Paths) -> None:
+    """Review 3 R10: Double Tap works outside Conclave, kept through `allow`."""
+    names = {m.name for m in build(paths.raw, paths.reference).mods}
+    assert "Double Tap" in names and "Comet Rounds" not in names
+
+
+def test_mod_keeps_de_description(paths: Paths) -> None:
+    """Review 3 R11: rules only in the description reach the parser."""
+    mods = {m.name: m for m in build(paths.raw, paths.reference).mods}
+    assert mods["Semi-Rifle Cannonade"].description == (
+        "Only compatible with Semi-Auto Trigger. Fire Rate cannot be modified."
+    )
+    assert mods["Serration"].description == ""
+
+
+def test_untyped_gun_mod_gets_category_from_compat_name(paths: Paths) -> None:
+    """Review 4 P2: DE files Sniper Ammo Mutation under type `---`."""
+    mods = {m.name: m for m in build(paths.raw, paths.reference).mods}
+    assert mods["Sniper Ammo Mutation"].category == Category.PRIMARY
+    assert "/Intermediate/" not in mods["Sniper Ammo Mutation"].unique_name
+
+
+def test_arcane_class_limit_must_match_a_gun(paths: Paths) -> None:
+    """Review 4 P3: a renamed WFCD class never leaves Shotgun Vendetta fitting nothing."""
+    path = paths.raw / "wfcd/Primary.json"
+    data = json.loads(path.read_text())
+    for w in data:
+        if w["type"] == "Shotgun":
+            w["type"] = "Scattergun"
+    path.write_text(json.dumps(data))
+    with pytest.raises(RefreshError, match=r"Shotgun Vendetta \(Shotgun\)"):
+        build(paths.raw, paths.reference)

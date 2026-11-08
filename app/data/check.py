@@ -29,10 +29,17 @@ _ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
 # ---------- sources ----------
 
 
-def changed(fetched: list[Fetched], built_from: list[SourceRecord] | None) -> list[str]:
-    """Sources that differ from the ones the current dataset was built from."""
+def changed(
+    fetched: list[Fetched],
+    built_from: list[SourceRecord] | None,
+    no_dataset: str = "no current dataset",
+) -> list[str]:
+    """Sources that differ from the ones the current dataset was built from.
+
+    `no_dataset` is the line when there is nothing to compare with (unreadable or none).
+    """
     if built_from is None:
-        return ["no current dataset"]
+        return [no_dataset]
     known = {s.path: s for s in built_from}
     out = []
     for f in fetched:

@@ -84,6 +84,44 @@
    "levelStats": [
     {
      "stats": [
+      "On shotgun kill within 5m of target:\r\n+30% Multishot and +12.5% Reload Speed for 15s."
+     ]
+    },
+    {
+     "stats": [
+      "On shotgun kill within 5m of target:\r\n+60% Multishot and +25% Reload Speed for 15s."
+     ]
+    },
+    {
+     "stats": [
+      "On shotgun kill within 5m of target:\r\n+90% Multishot and +37.5% Reload Speed for 15s."
+     ]
+    },
+    {
+     "stats": [
+      "On shotgun kill within 5m of target:\r\n+120% Multishot and +50% Reload Speed for 15s."
+     ]
+    },
+    {
+     "stats": [
+      "On shotgun kill within 5m of target:\r\n+150% Multishot and +62.5% Reload Speed for 15s."
+     ]
+    },
+    {
+     "stats": [
+      "On shotgun kill within 5m of target:\r\n+180% Multishot and +75% Reload Speed for 15s."
+     ]
+    }
+   ],
+   "name": "Shotgun Vendetta",
+   "rarity": "RARE",
+   "uniqueName": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/ShotgunMultishotAndReloadSpeedOnCloseKill"
+  },
+  {
+   "codexSecret": true,
+   "levelStats": [
+    {
+     "stats": [
       "On Energy Pickup:\r\n60% chance to replenish 25 Energy to self and allies within 15m\r\n15s cooldown"
      ]
     },

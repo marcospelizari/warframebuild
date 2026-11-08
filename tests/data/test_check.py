@@ -81,6 +81,22 @@ def test_failed_refresh_does_not_hide_the_change(paths: Paths) -> None:
     assert check.source_changes(changed_client, meta.sources) == ["wfcd/Primary.json"]
 
 
+def test_failed_refresh_restores_the_downloads(paths: Paths) -> None:
+    """Review 2 (#1): a refresh that fails after downloading puts the previous raw
+    files back, so --offline still rebuilds the last good dataset."""
+    run(paths, offline=False, fetch_images=False, client=FakeClient())
+    primary = paths.raw / "wfcd/Primary.json"
+    good = primary.read_bytes()
+    broken = FakeClient()
+    broken.files[f"{wfcd.BASE_URL}/Primary.json"] = b"{}"
+    with pytest.raises(Exception, match="WFCD file is not a list"):
+        run(paths, offline=False, fetch_images=False, client=broken)
+    assert primary.read_bytes() == good
+    assert not list(paths.raw.rglob(".*.prev"))
+    report = run(paths, offline=True, fetch_images=False)
+    assert report.meta == store.load(paths.gamedata).meta
+
+
 def test_online_refresh_downloads_each_source_once(paths: Paths) -> None:
     client = FakeClient()
     asked: list[str] = []
@@ -121,21 +137,48 @@ def test_changed_on_moves_only_when_data_changes(paths: Paths) -> None:
             SourceRecord(path="de/ExportWeapons_en.json", url="u", retrieved=day, sha256_16="x")
         ]
 
-    first = store.write(dataset, source("2026-11-01"), paths.gamedata, None)
+    first = store.write(dataset, source("2026-11-01"), paths.gamedata, None, today="2026-11-01")
     assert first.changed_on == "2026-11-01"
-    same = store.write(dataset, source("2026-11-20"), paths.gamedata, first)
+    same = store.write(dataset, source("2026-11-20"), paths.gamedata, first, today="2026-11-20")
     assert (same.fetched, same.changed_on) == ("2026-11-20", "2026-11-01")
 
-    weapons = paths.raw / "de/ExportWeapons_en.json"
-    data = json.loads(weapons.read_text())
-    data["ExportWeapons"][0]["criticalChance"] += 0.01
-    weapons.write_text(json.dumps(data))
+    _bump_first_weapon(paths)
     moved = store.write(
-        build(paths.raw, paths.reference), source("2026-12-03"), paths.gamedata, same
+        build(paths.raw, paths.reference),
+        source("2026-12-03"),
+        paths.gamedata,
+        same,
+        today="2026-12-03",
     )
     assert moved.changed_on == "2026-12-03"
     rows = check.reference_rows(paths.reference)
     assert check.stale_rows(rows, moved.changed_on) == rows
+
+
+def test_changed_on_is_the_refresh_date_never_earlier(paths: Paths) -> None:
+    """Review 2: an offline rebuild of old downloads that changes the data dates the
+    change today, and changed_on never moves backwards."""
+    old_download = [
+        SourceRecord(
+            path="de/ExportWeapons_en.json", url="u", retrieved="2026-10-01", sha256_16="x"
+        )
+    ]
+    first = store.write(
+        build(paths.raw, paths.reference), old_download, paths.gamedata, None, today="2026-11-08"
+    )
+    assert first.changed_on == "2026-11-08"
+    _bump_first_weapon(paths)
+    clock_behind = store.write(
+        build(paths.raw, paths.reference), old_download, paths.gamedata, first, today="2026-11-07"
+    )
+    assert clock_behind.changed_on == "2026-11-08"
+
+
+def _bump_first_weapon(paths: Paths) -> None:
+    weapons = paths.raw / "de/ExportWeapons_en.json"
+    data = json.loads(weapons.read_text())
+    data["ExportWeapons"][0]["criticalChance"] += 0.01
+    weapons.write_text(json.dumps(data))
 
 
 def test_entry_diff_and_touched_rows(paths: Paths) -> None:
@@ -162,7 +205,7 @@ def test_unreadable_previous_dataset_is_reported(paths: Paths) -> None:
     run(paths, offline=True, fetch_images=False)
     (paths.gamedata / "meta.json").write_text('{"schema_version": 1}')
     previous, error = load_previous(paths.gamedata)
-    assert previous is None and error
+    assert previous is None and error and "schema version 1, this code reads 3" in error
     report = run(paths, offline=True, fetch_images=False)
     text = "\n".join(report.lines())
     assert "previous dataset unreadable" in text
@@ -187,3 +230,12 @@ def test_wiki_lines_sorted_by_impact(paths: Paths) -> None:
     lines = [ln for ln in check.wiki_lines(paths.raw, paths.reference) if ln.startswith("  [")]
     impacts = [ln.split("]")[0].strip(" [") for ln in lines]
     assert impacts == sorted(impacts, key=["high", "medium", "low"].index)
+
+
+def test_unreadable_dataset_source_line_says_so(paths: Paths) -> None:
+    """Review 4 P3: the source line no longer claims there is no dataset."""
+    run(paths, offline=True, fetch_images=False)
+    (paths.gamedata / "meta.json").write_text('{"schema_version": 1}')
+    report = run(paths, offline=False, fetch_images=False, client=FakeClient())
+    assert report.source_changes == ["previous dataset unreadable"]
+    assert not list(paths.raw.rglob(".*.prev"))

@@ -1,19 +1,22 @@
 {
  "changed_on": "2026-11-08",
  "counts": {
-  "arcanes": 168,
+  "arcanes": 34,
+  "arcanes_primary": 16,
+  "arcanes_secondary": 18,
   "excluded_weapons": 2,
   "mod_sets": 10,
-  "mods": 396,
+  "mods": 328,
   "primary": 195,
   "secondary": 149,
   "weapons": 344
  },
- "dataset_hash": "93d18cba80ea970a",
+ "dataset_hash": "2e178f37e9cb780a",
  "denied_mods": {
   "beginner": 60,
+  "conclave": 70,
   "expert": 42,
-  "intermediate": 14,
+  "intermediate": 15,
   "no-level-stats": 4
  },
  "excluded_weapons": [
@@ -30,7 +33,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 2,
+ "schema_version": 3,
  "sources": [
   {
    "path": "de/ExportManifest.json",
@@ -67,6 +70,12 @@
    "retrieved": "2026-11-08",
    "sha256_16": "4a6e4acee99be6d0",
    "url": "https://content.warframe.com/PublicExport/index_en.txt.lzma"
+  },
+  {
+   "path": "wfcd/Arcanes.json",
+   "retrieved": "2026-11-08",
+   "sha256_16": "72d67360bdce45b9",
+   "url": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/Arcanes.json"
   },
   {
    "path": "wfcd/Primary.json",
@@ -139,6 +148,12 @@
    "retrieved": "2026-11-07",
    "sha256_16": "db249fddfd33a332",
    "url": "https://wiki.warframe.com/w/Faction_Damage_Mods"
+  },
+  {
+   "path": "wiki/Fire_Rate.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "80e2b859aed5a0ca",
+   "url": "https://wiki.warframe.com/w/Fire_Rate"
   },
   {
    "path": "wiki/Grineer.wikitext",

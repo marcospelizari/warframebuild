@@ -4,6 +4,8 @@ import datetime
 import hashlib
 import json
 import os
+from collections.abc import Iterator
+from contextlib import contextmanager
 from dataclasses import asdict, dataclass
 from pathlib import Path
 
@@ -46,6 +48,46 @@ def save(raw_dir: Path, fetched: list[Fetched]) -> list[SourceFile]:
         atomic_write(raw_dir / f.path, f.data)
         files.append(SourceFile(f.path, f.url, today, sha256_16(f.data)))
     return files
+
+
+@contextmanager
+def saved_until_failure(raw_dir: Path, fetched: list[Fetched]) -> Iterator[list[SourceFile]]:
+    """Save downloads, keeping each previous file as `.<name>.prev` until the block ends.
+
+    An error anywhere inside (also while setting the copies aside) puts back every
+    file already set aside, so a failed refresh leaves cache/raw/ able to rebuild
+    the last good dataset offline. A hard kill leaves `.prev` files whose state is
+    unknown: an offline refresh refuses them (`interrupted_saves`); this fresh
+    download drops them first. Callers hold the refresh lock.
+    """
+    for rel in interrupted_saves(raw_dir):
+        (raw_dir / rel).unlink()
+    handled: list[Path] = []
+    try:
+        for path in (raw_dir / f.path for f in fetched):
+            if path.exists():
+                os.replace(path, _prev(path))
+            handled.append(path)
+        yield save(raw_dir, fetched)
+    except BaseException:
+        for path in handled:
+            prev = _prev(path)
+            if prev.exists():
+                os.replace(prev, path)
+            else:
+                path.unlink(missing_ok=True)  # new file with no previous copy
+        raise
+    for path in handled:
+        _prev(path).unlink(missing_ok=True)
+
+
+def interrupted_saves(raw_dir: Path) -> list[str]:
+    """`.prev` copies left by a refresh that was killed (paths relative to raw_dir)."""
+    return sorted(str(p.relative_to(raw_dir)) for p in raw_dir.rglob(".*.prev"))
+
+
+def _prev(path: Path) -> Path:
+    return path.with_name(f".{path.name}.prev")
 
 
 def write_sources(raw_dir: Path, files: list[SourceFile]) -> None:

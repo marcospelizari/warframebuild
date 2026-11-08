@@ -1,0 +1,355 @@
+[
+ {
+  "category": "Arcanes",
+  "codexSecret": true,
+  "drops": [
+   {
+    "chance": 1.41,
+    "location": "Veil Proxima/Erato (Skirmish), Rotation C",
+    "rarity": "Rare",
+    "type": "Arcane Energize"
+   },
+   {
+    "chance": 5,
+    "location": "Eidolon Hydrolyst (Capture)",
+    "rarity": "Rare",
+    "type": "Arcane Energize"
+   }
+  ],
+  "imageName": "ArcaneProjectionBI.png",
+  "introduced": {
+   "aliases": [
+    "17.9.1"
+   ],
+   "date": "2015-10-29",
+   "name": "Update 17.9.1",
+   "parent": "17.9",
+   "url": "https://wiki.warframe.com/w/Update_17%23Update_17.9.1"
+  },
+  "levelStats": [
+   {
+    "stats": [
+     "On Energy Pickup:\\n60% chance to replenish 25 Energy to self and allies within 15m\\n15s cooldown"
+    ]
+   },
+   {
+    "stats": [
+     "On Energy Pickup:\\n60% chance to replenish 50 Energy to self and allies within 15m\\n15s cooldown"
+    ]
+   },
+   {
+    "stats": [
+     "On Energy Pickup:\\n60% chance to replenish 75 Energy to self and allies within 15m\\n15s cooldown"
+    ]
+   },
+   {
+    "stats": [
+     "On Energy Pickup:\\n60% chance to replenish 100 Energy to self and allies within 15m\\n15s cooldown\\n+1 Arcane Revive",
+     "+1 Arcane Revive"
+    ]
+   },
+   {
+    "stats": [
+     "On Energy Pickup:\\n60% chance to replenish 125 Energy to self and allies within 15m\\n15s cooldown\\n+1 Arcane Revive",
+     "+1 Arcane Revive"
+    ]
+   },
+   {
+    "stats": [
+     "On Energy Pickup:\\n60% chance to replenish 150 Energy to self and allies within 15m\\n15s cooldown\\n+1 Arcane Revive",
+     "+1 Arcane Revive"
+    ]
+   }
+  ],
+  "masterable": false,
+  "name": "Arcane Energize",
+  "rarity": "Legendary",
+  "releaseDate": "2015-10-29",
+  "tradable": true,
+  "type": "Warframe Arcane",
+  "uniqueName": "/Lotus/Upgrades/CosmeticEnhancers/Utility/GolemArcaneRadialEnergyOnEnergyPickup",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/ArcaneEnergize.png?cc86e",
+  "wikiaUrl": "https://wiki.warframe.com/w/Arcane_Energize"
+ },
+ {
+  "category": "Arcanes",
+  "codexSecret": true,
+  "drops": [
+   {
+    "chance": 16.67,
+    "location": "Angst (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Primary Merciless"
+   },
+   {
+    "chance": 16.67,
+    "location": "Malice (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Primary Merciless"
+   },
+   {
+    "chance": 16.67,
+    "location": "Mania (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Primary Merciless"
+   },
+   {
+    "chance": 16.67,
+    "location": "Misery (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Primary Merciless"
+   },
+   {
+    "chance": 16.67,
+    "location": "Torment (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Primary Merciless"
+   },
+   {
+    "chance": 16.67,
+    "location": "Violence (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Primary Merciless"
+   }
+  ],
+  "imageName": "ArcaneProjectionSteelPathWarcrimesB.png",
+  "introduced": {
+   "aliases": [
+    "30.5"
+   ],
+   "date": "2021-07-06",
+   "name": "Update 30.5",
+   "parent": "30.5",
+   "url": "https://wiki.warframe.com/w/Update_30%23Update_30.5"
+  },
+  "levelStats": [
+   {
+    "stats": [
+     "On Kill:\\n+5% Damage for 4s. Stacks up to 12x."
+    ]
+   },
+   {
+    "stats": [
+     "On Kill:\\n+10% Damage for 4s. Stacks up to 12x."
+    ]
+   },
+   {
+    "stats": [
+     "On Kill:\\n+15% Damage for 4s. Stacks up to 12x."
+    ]
+   },
+   {
+    "stats": [
+     "On Kill:\\n+20% Damage for 4s. Stacks up to 12x."
+    ]
+   },
+   {
+    "stats": [
+     "On Kill:\\n+25% Damage for 4s. Stacks up to 12x."
+    ]
+   },
+   {
+    "stats": [
+     "On Kill:\\n+30% Damage for 4s. Stacks up to 12x.\\n+30% Reload Speed",
+     "+30% Reload Speed"
+    ]
+   }
+  ],
+  "masterable": false,
+  "name": "Primary Merciless",
+  "rarity": "Rare",
+  "releaseDate": "2021-07-06",
+  "tradable": true,
+  "type": "Primary Arcane",
+  "uniqueName": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryDamageOnKill",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/PrimaryMerciless.png?ccf7d",
+  "wikiaUrl": "https://wiki.warframe.com/w/Primary_Merciless"
+ },
+ {
+  "category": "Arcanes",
+  "codexSecret": true,
+  "drops": [
+   {
+    "chance": 16.67,
+    "location": "Angst (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Secondary Deadhead"
+   },
+   {
+    "chance": 16.67,
+    "location": "Malice (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Secondary Deadhead"
+   },
+   {
+    "chance": 16.67,
+    "location": "Mania (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Secondary Deadhead"
+   },
+   {
+    "chance": 16.67,
+    "location": "Misery (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Secondary Deadhead"
+   },
+   {
+    "chance": 16.67,
+    "location": "Torment (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Secondary Deadhead"
+   },
+   {
+    "chance": 16.67,
+    "location": "Violence (Level 0 - 100)",
+    "rarity": "Uncommon",
+    "type": "Secondary Deadhead"
+   }
+  ],
+  "imageName": "ArcaneProjectionSteelPathPrecisionHeadshotA.png",
+  "introduced": {
+   "aliases": [
+    "30.5"
+   ],
+   "date": "2021-07-06",
+   "name": "Update 30.5",
+   "parent": "30.5",
+   "url": "https://wiki.warframe.com/w/Update_30%23Update_30.5"
+  },
+  "levelStats": [
+   {
+    "stats": [
+     "On Weak Point Kill:\\n+20% Damage for 24s. Stacks up to 3x."
+    ]
+   },
+   {
+    "stats": [
+     "On Weak Point Kill:\\n+40% Damage for 24s. Stacks up to 3x."
+    ]
+   },
+   {
+    "stats": [
+     "On Weak Point Kill:\\n+60% Damage for 24s. Stacks up to 3x."
+    ]
+   },
+   {
+    "stats": [
+     "On Weak Point Kill:\\n+80% Damage for 24s. Stacks up to 3x."
+    ]
+   },
+   {
+    "stats": [
+     "On Weak Point Kill:\\n+100% Damage for 24s. Stacks up to 3x."
+    ]
+   },
+   {
+    "stats": [
+     "On Weak Point Kill:\\n+120% Damage for 24s. Stacks up to 3x.\\n+30% to Headshot Multiplier\\n-50% Weapon Recoil",
+     "+30% to Headshot Multiplier",
+     "-50% Weapon Recoil"
+    ]
+   }
+  ],
+  "masterable": false,
+  "name": "Secondary Deadhead",
+  "rarity": "Rare",
+  "releaseDate": "2021-07-06",
+  "tradable": true,
+  "type": "Secondary Arcane",
+  "uniqueName": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryDamageOnNoMelee",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/SecondaryDeadhead.png?048e8",
+  "wikiaUrl": "https://wiki.warframe.com/w/Secondary_Deadhead"
+ },
+ {
+  "category": "Arcanes",
+  "codexSecret": true,
+  "drops": [
+   {
+    "chance": 10.19,
+    "location": "Duviri Static Undercroft Portal (Steel Path)",
+    "rarity": "Uncommon",
+    "type": "Shotgun Vendetta"
+   },
+   {
+    "chance": 4.43,
+    "location": "Duviri/Endless: Tier 1 (Hard)",
+    "rarity": "Rare",
+    "type": "Shotgun Vendetta"
+   },
+   {
+    "chance": 4.43,
+    "location": "Duviri/Endless: Tier 3 (Hard)",
+    "rarity": "Rare",
+    "type": "Shotgun Vendetta"
+   },
+   {
+    "chance": 4.43,
+    "location": "Duviri/Endless: Tier 4 (Hard)",
+    "rarity": "Rare",
+    "type": "Shotgun Vendetta"
+   },
+   {
+    "chance": 9.09,
+    "location": "Duviri/Endless: Repeated Rewards (Hard)",
+    "rarity": "Rare",
+    "type": "Shotgun Vendetta"
+   }
+  ],
+  "imageName": "ArcaneProjectionCO.png",
+  "introduced": {
+   "aliases": [
+    "33",
+    "33.0"
+   ],
+   "date": "2023-04-26",
+   "name": "Update 33.0",
+   "parent": "33.0",
+   "url": "https://wiki.warframe.com/w/Update_33%23Update_33.0"
+  },
+  "levelStats": [
+   {
+    "stats": [
+     "On shotgun kill within 5m of target:\\n+30% Multishot and +12.5% Reload Speed for 15s."
+    ]
+   },
+   {
+    "stats": [
+     "On shotgun kill within 5m of target:\\n+60% Multishot and +25% Reload Speed for 15s."
+    ]
+   },
+   {
+    "stats": [
+     "On shotgun kill within 5m of target:\\n+90% Multishot and +37.5% Reload Speed for 15s."
+    ]
+   },
+   {
+    "stats": [
+     "On shotgun kill within 5m of target:\\n+120% Multishot and +50% Reload Speed for 15s."
+    ]
+   },
+   {
+    "stats": [
+     "On shotgun kill within 5m of target:\\n+150% Multishot and +62.5% Reload Speed for 15s."
+    ]
+   },
+   {
+    "stats": [
+     "On shotgun kill within 5m of target:\\n+180% Multishot and +75% Reload Speed for 15s."
+    ]
+   }
+  ],
+  "masterable": false,
+  "name": "Shotgun Vendetta",
+  "rarity": "Rare",
+  "releaseDate": "2023-04-26",
+  "tradable": true,
+  "type": "Shotgun Arcane",
+  "uniqueName": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/ShotgunMultishotAndReloadSpeedOnCloseKill",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/ShotgunVendetta.png?86017",
+  "wikiaUrl": "https://wiki.warframe.com/w/Shotgun_Vendetta"
+ }
+]

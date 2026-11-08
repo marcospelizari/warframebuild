@@ -6,6 +6,7 @@ else, and `.old` is removed only once the new folder is in place. A lock file ke
 two writers apart.
 """
 
+import datetime
 import hashlib
 import json
 import os
@@ -46,7 +47,8 @@ def _siblings(gamedata_dir: Path) -> tuple[Path, Path, Path]:
 
 
 @contextmanager
-def _lock(path: Path) -> Iterator[None]:
+def exclusive(path: Path) -> Iterator[None]:
+    """Lock file created with O_EXCL; a second holder fails instead of waiting."""
     try:
         fd = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
     except FileExistsError:
@@ -91,7 +93,11 @@ def dataset_hash(payloads: dict[str, bytes]) -> str:
 
 
 def write(
-    dataset: Dataset, sources: list[SourceRecord], gamedata_dir: Path, previous: Meta | None
+    dataset: Dataset,
+    sources: list[SourceRecord],
+    gamedata_dir: Path,
+    previous: Meta | None,
+    today: str | None = None,
 ) -> Meta:
     """Stage, re-load through the models, then swap in. On failure gamedata/ stays as it was."""
     payloads = {
@@ -110,11 +116,14 @@ def write(
         "mod_sets": len(dataset.mod_sets),
         "arcanes": len(dataset.arcanes),
     }
+    counts |= {
+        f"arcanes_{c.value}": sum(a.category == c for a in dataset.arcanes) for c in Category
+    }
     meta = Meta(
         dataset_hash=digest,
         game_update=dataset.game_update,
         fetched=fetched,
-        changed_on=previous.changed_on if previous and previous.dataset_hash == digest else fetched,
+        changed_on=_changed_on(previous, digest, today or datetime.date.today().isoformat()),
         sources=sorted(sources, key=lambda s: s.path),
         counts=counts,
         excluded_weapons=dataset.excluded_weapons,
@@ -123,7 +132,7 @@ def write(
     payloads["meta.json"] = _dump(meta)
 
     staging, old, lock = _siblings(gamedata_dir)
-    with _lock(lock):
+    with exclusive(lock):
         recover(gamedata_dir)
         if staging.exists():
             shutil.rmtree(staging)
@@ -143,7 +152,12 @@ def load(gamedata_dir: Path) -> GameData:
     def read(name: str) -> bytes:
         return (gamedata_dir / name).read_bytes()
 
-    meta = Meta.model_validate_json(read("meta.json"))
+    raw_meta = json.loads(read("meta.json"))
+    version = raw_meta.get("schema_version") if isinstance(raw_meta, dict) else None
+    expected = Meta.model_fields["schema_version"].default
+    if version != expected:
+        raise ValueError(f"{gamedata_dir}: schema version {version}, this code reads {expected}")
+    meta = Meta.model_validate(raw_meta)
     payloads = {name: read(name) for name in DATA_FILES}
     if dataset_hash(payloads) != meta.dataset_hash:
         raise ValueError(f"{gamedata_dir}: files do not match meta.json dataset_hash")
@@ -154,3 +168,16 @@ def load(gamedata_dir: Path) -> GameData:
         arcanes=TypeAdapter(list[Arcane]).validate_json(payloads["arcanes.json"]),
         joins=TypeAdapter(list[Join]).validate_json(payloads["joins.json"]),
     )
+
+
+def _changed_on(previous: Meta | None, digest: str, today: str) -> str:
+    """Date of the refresh that first produced this dataset, never moving backwards.
+
+    The refresh date, not the download date: an offline rebuild of old downloads
+    with new rules still changes the data today.
+    """
+    if previous is None:
+        return today
+    if previous.dataset_hash == digest:
+        return previous.changed_on
+    return max(today, previous.changed_on)

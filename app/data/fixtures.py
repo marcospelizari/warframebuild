@@ -1,4 +1,4 @@
-"""`wfb fixtures`: trim cache/raw/ DE + WFCD data to a few weapons for tests/fixtures/raw/.
+"""`wfb fixtures`: trim cache/raw/ DE + WFCD data to a few entries for tests/fixtures/raw/.
 
 Wiki pages are never copied: saved copies stay private (G23); tests create stubs.
 """
@@ -36,13 +36,36 @@ MOD_NAMES = (
     "Hunter Munitions",
     "Vigilante Armaments",  # set member
     "Rifle Riven Mod",  # no levelStats
+    "Comet Rounds",  # Conclave only
+    "Double Tap",  # Conclave mod allowed: works outside Conclave
+    "Semi-Rifle Cannonade",  # rules in DE description
+    "Sniper Ammo Mutation",  # DE type `---`, category from compat name Sniper
+    "Charged Chamber",  # typed PRIMARY mod with compat name Sniper
 )
-ARCANE_NAMES = ("Primary Merciless", "Secondary Deadhead", "Arcane Energize")
+ARCANE_NAMES = (
+    "Primary Merciless",
+    "Secondary Deadhead",
+    "Shotgun Vendetta",  # slot limited to shotguns
+    "Arcane Energize",  # Warframe arcane, not a gun slot
+)
 
 
 def write(raw_dir: Path, out_dir: Path) -> None:
+    """Build in a sibling staging folder; the old fixtures are replaced only on success."""
+    staging = out_dir.with_name(f".{out_dir.name}.staging")
+    if staging.exists():
+        shutil.rmtree(staging)
+    try:
+        _write(raw_dir, staging)
+    except BaseException:
+        shutil.rmtree(staging, ignore_errors=True)
+        raise
     if out_dir.exists():
         shutil.rmtree(out_dir)
+    staging.rename(out_dir)
+
+
+def _write(raw_dir: Path, out_dir: Path) -> None:
     (out_dir / "de").mkdir(parents=True)
     (out_dir / "wfcd").mkdir()
 
@@ -84,6 +107,9 @@ def write(raw_dir: Path, out_dir: Path) -> None:
         data = load_json(raw_dir / "wfcd" / name)
         assert isinstance(data, list)
         _save(out_dir / "wfcd" / name, [w for w in data if w["uniqueName"] in ids])
+    wfcd_arcanes = load_json(raw_dir / "wfcd/Arcanes.json")
+    assert isinstance(wfcd_arcanes, list)
+    _save(out_dir / "wfcd/Arcanes.json", _pick(wfcd_arcanes, ARCANE_NAMES))
 
 
 def _pick(items: list[dict[str, Any]], names: tuple[str, ...]) -> list[dict[str, Any]]:

@@ -49,6 +49,33 @@ CATEGORIES: dict[Category, tuple[str, str]] = {
 WEAPON_CATEGORY = {de: ours for ours, (de, _) in CATEGORIES.items()}
 MOD_CATEGORY = {de: ours for ours, (_, de) in CATEGORIES.items()}
 
+# Damage-type markup in stat text -> our type. DE writes `<DT_FIRE_COLOR>` and
+# `<DT_FIRE>`; the `_COLOR` suffix is dropped before the lookup. The tag sometimes
+# replaces the word ("+30% chance to apply <DT_SLASH_COLOR> on Critical"), so it
+# carries data; an unknown DT_ tag fails the refresh.
+DAMAGE_TAGS: dict[str, DamageType] = {
+    "DT_IMPACT": DamageType.IMPACT,
+    "DT_PUNCTURE": DamageType.PUNCTURE,
+    "DT_SLASH": DamageType.SLASH,
+    "DT_FIRE": DamageType.HEAT,
+    "DT_FREEZE": DamageType.COLD,
+    "DT_ELECTRICITY": DamageType.ELECTRICITY,
+    "DT_POISON": DamageType.TOXIN,
+    "DT_EXPLOSION": DamageType.BLAST,
+    "DT_RADIATION": DamageType.RADIATION,
+    "DT_GAS": DamageType.GAS,
+    "DT_MAGNETIC": DamageType.MAGNETIC,
+    "DT_VIRAL": DamageType.VIRAL,
+    "DT_CORROSIVE": DamageType.CORROSIVE,
+    "DT_RADIANT": DamageType.VOID,
+    "DT_SENTIENT": DamageType.TAU,
+}
+# Other words DE writes after a tag for the same type ("<DT_ELECTRICITY_COLOR>Electric").
+DAMAGE_WORDS: dict[DamageType, tuple[str, ...]] = {
+    DamageType.ELECTRICITY: ("Electric",),
+    DamageType.COLD: ("Freeze",),
+}
+
 _UNKNOWN_SIZE = 2**64 - 1
 _INDEX_LINE = re.compile(r"(?P<name>Export\w+\.json)!00_[A-Za-z0-9+\-_]{20,30}")
 
