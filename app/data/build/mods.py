@@ -6,14 +6,19 @@ from typing import Any
 
 from pydantic import ValidationError
 
-from app.data.build.common import RefreshError, clean_levels, clean_text, records
+from app.data.build.common import RefreshError, clean_levels, clean_text, records, require_verified
 from app.data.build.effects import Overrides, set_bonuses
+from app.data.build.families import derive as derive_families
 from app.data.models import Category, Mod, ModSet
 from app.data.sources.de_export import MOD_CATEGORY
 
 
 def build(
-    upgrades: Any, mod_filter: dict[str, Any], overrides: Overrides
+    upgrades: Any,
+    mod_filter: dict[str, Any],
+    overrides: Overrides,
+    families: dict[str, Any],
+    exilus: dict[str, Any],
 ) -> tuple[list[Mod], list[ModSet], dict[str, int]]:
     rules = mod_filter["rules"]
     allow = {a["id"] for a in mod_filter.get("allow", [])}
@@ -44,7 +49,20 @@ def build(
         )
 
     try:
-        mods = sorted((_mod(m, overrides) for m in kept), key=lambda m: m.unique_name)
+        family = derive_families(kept, families)
+        for entry in exilus.get("mods", []):
+            require_verified(entry, "exilus.json", entry["id"])
+        extra_exilus = {e["id"] for e in exilus.get("mods", [])}
+        unknown = sorted(extra_exilus - {m["uniqueName"] for m in kept})
+        if unknown:
+            raise RefreshError(f"reference/exilus.json: unknown gun mods {unknown}")
+        mods = sorted(
+            (
+                _mod(m, overrides, family.get(m["uniqueName"]), m["uniqueName"] in extra_exilus)
+                for m in kept
+            ),
+            key=lambda m: m.unique_name,
+        )
     except ValidationError as error:
         raise RefreshError(f"invalid mod values: {error}") from error
     used_sets = {m.mod_set for m in mods if m.mod_set}
@@ -66,7 +84,7 @@ def build(
     return mods, sets, dict(sorted(denied.items()))
 
 
-def _mod(m: dict[str, Any], overrides: Overrides) -> Mod:
+def _mod(m: dict[str, Any], overrides: Overrides, family: str | None, exilus: bool) -> Mod:
     description = clean_text("\n".join(m.get("description") or []))
     levels = clean_levels(m["levelStats"])
     return Mod(
@@ -79,7 +97,9 @@ def _mod(m: dict[str, Any], overrides: Overrides) -> Mod:
         base_drain=m["baseDrain"],
         fusion_limit=m["fusionLimit"],
         is_utility=bool(m.get("isUtility", False)),
+        exilus=exilus or bool(m.get("isUtility", False)),
         mod_set=m.get("modSet"),
+        family=family,
         description=description,
         level_stats=levels,
         effects=overrides.effects(m["uniqueName"], levels[-1], description),

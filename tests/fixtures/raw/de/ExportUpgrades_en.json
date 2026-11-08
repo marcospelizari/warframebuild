@@ -115,6 +115,49 @@
    "uniqueName": "/Lotus/Upgrades/Mods/Sets/Hunter/PrimaryHunterMunitionsMod"
   },
   {
+   "baseDrain": 4,
+   "codexSecret": false,
+   "compatName": "Rifle",
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "+15% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+45% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+60% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+75% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+90% Status Chance"
+     ]
+    }
+   ],
+   "name": "Rifle Aptitude",
+   "polarity": "AP_DEFENSE",
+   "rarity": "UNCOMMON",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/WeaponStunChanceMod"
+  },
+  {
    "baseDrain": 2,
    "codexSecret": false,
    "compatName": "Rifle",
@@ -518,6 +561,39 @@
    "rarity": "UNCOMMON",
    "type": "PRIMARY",
    "uniqueName": "/Lotus/Upgrades/Mods/Rifle/RifleSemiAutoFantasyMod"
+  },
+  {
+   "baseDrain": 4,
+   "codexSecret": true,
+   "compatName": "Sniper",
+   "fusionLimit": 3,
+   "levelStats": [
+    {
+     "stats": [
+      "+25% Damage on first shot in Magazine"
+     ]
+    },
+    {
+     "stats": [
+      "+50% Damage on first shot in Magazine"
+     ]
+    },
+    {
+     "stats": [
+      "+75% Damage on first shot in Magazine"
+     ]
+    },
+    {
+     "stats": [
+      "+100% Damage on first shot in Magazine"
+     ]
+    }
+   ],
+   "name": "Primed Chamber",
+   "polarity": "AP_ATTACK",
+   "rarity": "RARE",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/EventSniperReloadDamageMod"
   },
   {
    "baseDrain": 6,
@@ -11497,6 +11573,39 @@
    "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Beginner/WeaponFireIterationsModBeginner"
   },
   {
+   "baseDrain": 2,
+   "codexSecret": false,
+   "compatName": "Rifle",
+   "fusionLimit": 3,
+   "levelStats": [
+    {
+     "stats": [
+      "+15% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+45% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+60% Status Chance"
+     ]
+    }
+   ],
+   "name": "Rifle Aptitude",
+   "polarity": "AP_DEFENSE",
+   "rarity": "UNCOMMON",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Beginner/WeaponStatusChanceModBeginner"
+  },
+  {
    "baseDrain": 4,
    "codexSecret": false,
    "compatName": "Rifle",
@@ -11701,6 +11810,74 @@
    "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponFireIterationsModExpert"
   },
   {
+   "baseDrain": 4,
+   "codexSecret": false,
+   "compatName": "Rifle",
+   "fusionLimit": 10,
+   "levelStats": [
+    {
+     "stats": [
+      "+15% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+45% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+60% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+75% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+90% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+105% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+120% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+135% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+150% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+165% Status Chance"
+     ]
+    }
+   ],
+   "name": "Rifle Aptitude",
+   "polarity": "AP_DEFENSE",
+   "rarity": "UNCOMMON",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponStatusChanceModExpert"
+  },
+  {
    "baseDrain": 6,
    "codexSecret": false,
    "compatName": "Sniper",
@@ -11829,6 +12006,49 @@
    "rarity": "RARE",
    "type": "---",
    "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Intermediate/WeaponSnipersConvertAmmoModIntermediate"
+  },
+  {
+   "baseDrain": 4,
+   "codexSecret": false,
+   "compatName": "Rifle",
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "+15% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+30% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+45% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+60% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+75% Status Chance"
+     ]
+    },
+    {
+     "stats": [
+      "+90% Status Chance"
+     ]
+    }
+   ],
+   "name": "Rifle Aptitude",
+   "polarity": "AP_DEFENSE",
+   "rarity": "UNCOMMON",
+   "type": "PRIMARY",
+   "uniqueName": "/Lotus/Upgrades/Mods/Rifle/Intermediate/WeaponStatusChanceModIntermediate"
   }
  ]
 }

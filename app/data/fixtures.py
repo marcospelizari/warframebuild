@@ -41,6 +41,8 @@ MOD_NAMES = (
     "Semi-Rifle Cannonade",  # rules in DE description
     "Sniper Ammo Mutation",  # DE type `---`, category from compat name Sniper
     "Charged Chamber",  # typed PRIMARY mod with compat name Sniper
+    "Primed Chamber",  # joined to Charged Chamber (mod_families.json)
+    "Rifle Aptitude",  # joined to Galvanized Aptitude (mod_families.json)
 )
 ARCANE_NAMES = (
     "Primary Merciless",

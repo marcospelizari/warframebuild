@@ -33,7 +33,9 @@ class DamageType(StrEnum):
 
 class Stat(StrEnum):
     DAMAGE = "damage"  # base damage (Serration)
-    ELEMENT = "element"  # +X% of base as `damage_type` (Hellfire, Bore)
+    ELEMENT = "element"  # +X% of base as elemental `damage_type` (Hellfire)
+    PHYSICAL = "physical"  # +X% to the base's own Impact/Puncture/Slash only (Bore);
+    # no effect when the gun has none of that type (saved Calculating_Bonuses)
     FACTION_DAMAGE = "faction_damage"  # vs `faction` (Bane, Expel)
     MULTISHOT = "multishot"
     FIRE_RATE = "fire_rate"
@@ -51,6 +53,23 @@ class Stat(StrEnum):
     AMMO_EFFICIENCY = "ammo_efficiency"
     FORCED_PROC = "forced_proc"  # chance to add a `damage_type` proc (V8)
     CRIT_TIER_UPGRADE = "crit_tier_upgrade"  # Vigilante set: chance to enhance a crit
+
+
+PHYSICAL_TYPES = frozenset({DamageType.IMPACT, DamageType.PUNCTURE, DamageType.SLASH})
+
+
+class Faction(StrEnum):
+    """Faction names as mod text writes them (Bane/Expel/Cleanse "Damage to X").
+
+    Mapping to the enemy factions (factions.json, R4) is step 8's job; a name not
+    listed here leaves the line unparsed, so a new faction never passes as full.
+    """
+
+    CORPUS = "corpus"
+    GRINEER = "grineer"
+    INFESTED = "infested"
+    OROKIN = "orokin"  # Corrupted
+    MURMUR = "murmur"
 
 
 class Operation(StrEnum):
@@ -89,7 +108,7 @@ class Effect(BaseModel):
     value: float  # sign kept: -15% Damage -> -0.15
     operation: Operation = Operation.STACKING_MULTIPLY
     damage_type: DamageType | None = None
-    faction: str | None = None
+    faction: Faction | None = None
     trigger: Trigger = Trigger.ALWAYS
     trigger_damage_type: DamageType | None = None
     while_aiming: bool = False
@@ -101,9 +120,13 @@ class Effect(BaseModel):
 
     @model_validator(mode="after")
     def _shape(self) -> "Effect":
-        needs_type = self.stat in (Stat.ELEMENT, Stat.FORCED_PROC)
+        needs_type = self.stat in (Stat.ELEMENT, Stat.PHYSICAL, Stat.FORCED_PROC)
         if needs_type != (self.damage_type is not None):
             raise ValueError(f"{self.stat}: damage_type {'required' if needs_type else 'unused'}")
+        if self.stat == Stat.PHYSICAL and self.damage_type not in PHYSICAL_TYPES:
+            raise ValueError("physical: damage_type must be impact, puncture or slash")
+        if self.stat == Stat.ELEMENT and self.damage_type in PHYSICAL_TYPES:
+            raise ValueError("element: physical types use stat physical")
         if (self.stat == Stat.FACTION_DAMAGE) != (self.faction is not None):
             raise ValueError("faction only (and always) on faction_damage")
         if (self.trigger_damage_type is not None) and self.trigger != Trigger.ON_STATUS:

@@ -289,3 +289,55 @@ def test_invalid_override_effect_fails(paths: Paths) -> None:
     )
     with pytest.raises(RefreshError, match="damage_type required"):
         build(paths.raw, paths.reference)
+
+
+def test_exilus_from_flag_and_reference(paths: Paths) -> None:
+    uid = "/Lotus/Upgrades/Mods/Sets/Vigilante/PrimaryVigilanteArmamentsMod"
+    mods = {m.unique_name: m for m in build(paths.raw, paths.reference).mods}
+    assert not mods[uid].exilus
+    path = paths.reference / "exilus.json"
+    data = json.loads(path.read_text())
+    data["mods"] = [{"id": uid, "name": "Vigilante Armaments", "verified": "2026-11-08"}]
+    path.write_text(json.dumps(data))
+    assert {m.unique_name: m for m in build(paths.raw, paths.reference).mods}[uid].exilus
+    data["mods"] = [{"id": "/Nope", "name": "x", "verified": "2026-11-08"}]
+    path.write_text(json.dumps(data))
+    with pytest.raises(RefreshError, match="/Nope"):
+        build(paths.raw, paths.reference)
+
+
+def test_override_without_verified_fails(paths: Paths) -> None:
+    uid = "/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod"
+    _override(paths, {uid: {"name": "Serration", "support": "partial"}})
+    with pytest.raises(RefreshError, match="verified"):
+        build(paths.raw, paths.reference)
+
+
+def test_support_full_override_clears_unparsed(paths: Paths) -> None:
+    """Review: support full means the leftover text was reviewed as no damage effect."""
+    mods = {m.name: m for m in build(paths.raw, paths.reference).mods}
+    aptitude = mods["Galvanized Aptitude"]
+    assert aptitude.effects.unparsed
+    _override(
+        paths,
+        {
+            aptitude.unique_name: {
+                "name": "x",
+                "verified": "2026-11-08",
+                "support": "full",
+                "note": "n",
+            }
+        },
+    )
+    after = {m.name: m for m in build(paths.raw, paths.reference).mods}["Galvanized Aptitude"]
+    assert (after.effects.support, after.effects.unparsed) == (Support.FULL, [])
+    assert after.effects.effects == aptitude.effects.effects
+
+
+def test_exilus_entry_without_verified_fails(paths: Paths) -> None:
+    path = paths.reference / "exilus.json"
+    data = json.loads(path.read_text())
+    data["mods"] = [{"id": "/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod", "name": "Serration"}]
+    path.write_text(json.dumps(data))
+    with pytest.raises(RefreshError, match="verified"):
+        build(paths.raw, paths.reference)

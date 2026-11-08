@@ -1,29 +1,182 @@
 {
   "about": "Hand-saved WARFRAME Wiki pages (T2/G41/G48): file stem in cache/raw/wiki/, canonical title, what each page feeds, and how much a change matters (high > medium > low). Refresh fails when a listed page is missing. `wfb check` prints this list with save dates and history links after each game update.",
   "pages": {
-    "Calculation": {"title": "Damage/Calculation", "impact": "high", "feeds": ["damage pipeline (step 4)", "Toxin shield-bypass exceptions"]},
-    "Calculating_Bonuses": {"title": "Calculating_Bonuses", "impact": "high", "feeds": ["bonus operations and stacking (step 4)"]},
-    "Status_Effect": {"title": "Status_Effect", "impact": "high", "feeds": ["status, DoT and Blast rules (step 4)", "mechanics checklist"]},
-    "Critical_Hit": {"title": "Critical_Hit", "impact": "high", "feeds": ["crit tiers, headshot crit (G38)"]},
-    "Multishot": {"title": "Multishot", "impact": "high", "feeds": ["multishot and per-pellet status (step 4)"]},
-    "Armor": {"title": "Armor", "impact": "high", "feeds": ["armor reduction and strip (step 8)"]},
-    "Damage": {"title": "Damage", "impact": "high", "feeds": ["damage types and status table"]},
-    "Overview_Table": {"title": "Damage/Overview_Table", "impact": "high", "feeds": ["faction modifiers (factions.json)"]},
-    "Incarnon_Evolutions": {"title": "Incarnon_Evolutions", "impact": "high", "feeds": ["Genesis Incarnon perks (step 6)"]},
-    "Sandbox2": {"title": "User:Sandbox2", "impact": "high", "feeds": ["native Incarnon perks (step 6); personal page, may disappear"]},
-    "Faction_Damage_Mods": {"title": "Faction_Damage_Mods", "impact": "medium", "feeds": ["Bane mod rules"]},
-    "Enemy_Level_Scaling": {"title": "Enemy_Level_Scaling", "impact": "medium", "feeds": ["enemy stats at Steel Path level (enemies.json)"]},
-    "The_Steel_Path": {"title": "The_Steel_Path", "impact": "medium", "feeds": ["Steel Path modifiers (R1)"]},
-    "Polarity": {"title": "Polarity", "impact": "medium", "feeds": ["drain and forma rules (step 8)"]},
-    "Corpus": {"title": "Corpus", "impact": "medium", "feeds": ["faction enemy list (enemies.json)"]},
-    "Corrupted": {"title": "Corrupted", "impact": "medium", "feeds": ["faction enemy list (enemies.json)"]},
-    "Grineer": {"title": "Grineer", "impact": "medium", "feeds": ["faction enemy list (enemies.json)"]},
-    "Infested": {"title": "Infested", "impact": "medium", "feeds": ["faction enemy list (enemies.json)"]},
-    "Scaldra": {"title": "Scaldra", "impact": "medium", "feeds": ["faction enemy list (enemies.json)"]},
-    "Sentient": {"title": "Sentient", "impact": "medium", "feeds": ["faction enemy list (enemies.json)"]},
-    "Techrot": {"title": "Techrot", "impact": "medium", "feeds": ["faction enemy list (enemies.json)"]},
-    "The_Murmur": {"title": "The_Murmur", "impact": "medium", "feeds": ["faction enemy list (enemies.json)"]},
-    "Archon_Shard": {"title": "Archon_Shard", "impact": "low", "feeds": ["archon_shards.json (M2)"]},
-    "Riven_Mods": {"title": "Riven_Mods", "impact": "low", "feeds": ["riven_factors.json (M2)"]}
+    "Archon_Shard": {
+      "title": "Archon_Shard",
+      "impact": "low",
+      "feeds": [
+        "archon_shards.json (M2)"
+      ]
+    },
+    "Armor": {
+      "title": "Armor",
+      "impact": "high",
+      "feeds": [
+        "armor reduction and strip (step 8)"
+      ]
+    },
+    "Calculating_Bonuses": {
+      "title": "Calculating_Bonuses",
+      "impact": "high",
+      "feeds": [
+        "bonus operations and stacking (step 4)"
+      ]
+    },
+    "Calculation": {
+      "title": "Damage/Calculation",
+      "impact": "high",
+      "feeds": [
+        "damage pipeline (step 4)",
+        "Toxin shield-bypass exceptions"
+      ]
+    },
+    "Corpus": {
+      "title": "Corpus",
+      "impact": "medium",
+      "feeds": [
+        "faction enemy list (enemies.json)"
+      ]
+    },
+    "Corrupted": {
+      "title": "Corrupted",
+      "impact": "medium",
+      "feeds": [
+        "faction enemy list (enemies.json)"
+      ]
+    },
+    "Critical_Hit": {
+      "title": "Critical_Hit",
+      "impact": "high",
+      "feeds": [
+        "crit tiers, headshot crit (G38)"
+      ]
+    },
+    "Damage": {
+      "title": "Damage",
+      "impact": "high",
+      "feeds": [
+        "damage types and status table"
+      ]
+    },
+    "Enemy_Level_Scaling": {
+      "title": "Enemy_Level_Scaling",
+      "impact": "medium",
+      "feeds": [
+        "enemy stats at Steel Path level (enemies.json)"
+      ]
+    },
+    "Exilus_Mods": {
+      "title": "Exilus_Mods",
+      "impact": "high",
+      "feeds": [
+        "weapon exilus list, checked against DE isUtility (reference/exilus.json for mods the flag misses, Q30)"
+      ]
+    },
+    "Faction_Damage_Mods": {
+      "title": "Faction_Damage_Mods",
+      "impact": "medium",
+      "feeds": [
+        "Bane mod rules"
+      ]
+    },
+    "Grineer": {
+      "title": "Grineer",
+      "impact": "medium",
+      "feeds": [
+        "faction enemy list (enemies.json)"
+      ]
+    },
+    "Incarnon_Evolutions": {
+      "title": "Incarnon_Evolutions",
+      "impact": "high",
+      "feeds": [
+        "Genesis Incarnon perks (step 6)"
+      ]
+    },
+    "Infested": {
+      "title": "Infested",
+      "impact": "medium",
+      "feeds": [
+        "faction enemy list (enemies.json)"
+      ]
+    },
+    "Multishot": {
+      "title": "Multishot",
+      "impact": "high",
+      "feeds": [
+        "multishot and per-pellet status (step 4)"
+      ]
+    },
+    "Overview_Table": {
+      "title": "Damage/Overview_Table",
+      "impact": "high",
+      "feeds": [
+        "faction modifiers (factions.json)"
+      ]
+    },
+    "Polarity": {
+      "title": "Polarity",
+      "impact": "medium",
+      "feeds": [
+        "drain and forma rules (step 8)"
+      ]
+    },
+    "Riven_Mods": {
+      "title": "Riven_Mods",
+      "impact": "low",
+      "feeds": [
+        "riven_factors.json (M2)"
+      ]
+    },
+    "Sandbox2": {
+      "title": "User:Sandbox2",
+      "impact": "high",
+      "feeds": [
+        "native Incarnon perks (step 6); personal page, may disappear"
+      ]
+    },
+    "Scaldra": {
+      "title": "Scaldra",
+      "impact": "medium",
+      "feeds": [
+        "faction enemy list (enemies.json)"
+      ]
+    },
+    "Sentient": {
+      "title": "Sentient",
+      "impact": "medium",
+      "feeds": [
+        "faction enemy list (enemies.json)"
+      ]
+    },
+    "Status_Effect": {
+      "title": "Status_Effect",
+      "impact": "high",
+      "feeds": [
+        "status, DoT and Blast rules (step 4)",
+        "mechanics checklist"
+      ]
+    },
+    "Techrot": {
+      "title": "Techrot",
+      "impact": "medium",
+      "feeds": [
+        "faction enemy list (enemies.json)"
+      ]
+    },
+    "The_Murmur": {
+      "title": "The_Murmur",
+      "impact": "medium",
+      "feeds": [
+        "faction enemy list (enemies.json)"
+      ]
+    },
+    "The_Steel_Path": {
+      "title": "The_Steel_Path",
+      "impact": "medium",
+      "feeds": [
+        "Steel Path modifiers (R1)"
+      ]
+    }
   }
 }

@@ -72,6 +72,49 @@ is "best found". The same data produces the same builds on any machine.
 - The editor re-scores an edited build on the server (`POST /api/calc`). Builds can be shared
   by link.
 
+## Code structure
+
+The backend is split into layers. Every module belongs to exactly one layer, and a layer
+imports only the layers listed for it. `tests/test_layers.py` checks this on every CI run.
+
+| Layer | Owns | May import | Files and network |
+|-------|------|------------|-------------------|
+| `app/domain/` | Game rules and their types: effects, damage, elements, status, fire rate, enemies, combat score, families, polarity | nothing in `app` | none (pure) |
+| `app/parse/` | Turning stat text into domain effects: mods, arcanes, set bonuses, Incarnon perks | `domain` | none (pure) |
+| `app/gamedata/` | The published data contract: `gamedata/` schema and the loader that reads a dataset or release | `domain` | reads only |
+| `app/optimize/` | Build search and scoring over loaded data | `domain`, `gamedata` | none |
+| `app/pipeline/` | Everything offline: downloads, source adapters, building and validating `gamedata/`, publishing, `check`, images, fixtures, `build-all` and releases | `domain`, `parse`, `gamedata`, `optimize` | the only layer that downloads or writes files |
+| `app/api/` | HTTP routes, request and response schemas, serving the frontend | `domain`, `gamedata`, `optimize` | reads through `gamedata` |
+| `app/cli.py` | The `wfb` command: argument parsing only, calls the layers above | everything | via the layers |
+
+Rules for placing code:
+
+1. **New code goes into the layer that owns its job.** A game formula goes in `domain`,
+   never in `api` or `pipeline`. A new top-level package means changing this table and
+   `tests/test_layers.py` together.
+2. **Game facts that change with updates live in data, not in code.** Damage types,
+   factions, enemies, weapon categories and mod rules come from `gamedata/` or `reference/`.
+   Code holds only one table per source that maps that source's encoding (DE damage slots,
+   DE tags, WFCD type names) to our types, and an unknown value fails the refresh.
+   A domain type such as `DamageType` is the single list of its values.
+3. **Source encodings stay in their adapter** (`pipeline/sources/`). `domain` and `parse`
+   never know about DE or WFCD field names.
+4. **One module per entity.** A module that passes about 300 lines becomes a subpackage of
+   modules per entity. Shared helpers stay inside their layer; no project-wide `utils`.
+5. **Tests mirror `app/`**: `tests/domain/test_damage.py` tests `app/domain/damage.py`.
+
+`app/data/` predates this rule and moves as follows; no new module goes there:
+
+| Now | Target |
+|-----|--------|
+| `app/data/models.py` | `app/gamedata/models.py` |
+| `app/data/store.py` (read side: `load`, `GameData`, `dataset_hash`) | `app/gamedata/store.py` |
+| `app/data/store.py` (write side: `write`, `recover`, `exclusive`) | `app/pipeline/publish.py` |
+| `app/data/cli.py` | `app/cli.py` (and the `wfb` entry in `pyproject.toml`) |
+| `app/data/http.py` | `app/pipeline/sources/http.py` |
+| everything else in `app/data/` | `app/pipeline/` (same names) |
+| `tests/data/` | `tests/pipeline/` and `tests/gamedata/` |
+
 ## Licences
 
 Code: GNU AGPL-3.0. Data: Digital Extremes content under the Warframe Content Policy (non-commercial);

@@ -1,6 +1,6 @@
 """Stat text -> effects (step 3). Text is real DE max-rank text after clean_text."""
 
-from app.domain.effects import DamageType, Effect, Operation, Stat, Support, Trigger
+from app.domain.effects import DamageType, Effect, Faction, Operation, Stat, Support, Trigger
 from app.parse.common import parse
 
 
@@ -22,6 +22,28 @@ def test_negative_value_keeps_its_sign() -> None:
 def test_element_mod() -> None:
     effect = _one(["+90% Heat"])
     assert (effect.stat, effect.damage_type) == (Stat.ELEMENT, DamageType.HEAT)
+
+
+def test_physical_mod_is_not_an_element() -> None:
+    """Review: Bore scales the base's own Puncture only (saved Calculating_Bonuses)."""
+    effect = _one(["+120% Puncture"])
+    assert (effect.stat, effect.damage_type) == (Stat.PHYSICAL, DamageType.PUNCTURE)
+
+
+def test_physical_and_element_types_cannot_be_swapped() -> None:
+    import pytest
+    from pydantic import ValidationError
+
+    with pytest.raises(ValidationError, match="physical"):
+        Effect(stat=Stat.ELEMENT, value=1, damage_type=DamageType.SLASH)
+    with pytest.raises(ValidationError, match="physical"):
+        Effect(stat=Stat.PHYSICAL, value=1, damage_type=DamageType.HEAT)
+
+
+def test_unknown_faction_is_unparsed() -> None:
+    """Review: a new faction name never passes as full support."""
+    parsed = parse(["x1.55 Damage to Scaldra"])
+    assert parsed.support == Support.UNSUPPORTED
 
 
 def test_galvanized_chamber_has_a_kill_stack() -> None:
@@ -105,7 +127,7 @@ def test_faction_mod_multiplies() -> None:
         Stat.FACTION_DAMAGE,
         Operation.MULTIPLY,
         1.55,
-        "murmur",
+        Faction.MURMUR,
     )
 
 

@@ -1,0 +1,34 @@
+{
+  "about": "Corrections to the mod families refresh derives from DE data (V4; rule in app/data/build/families.py). `join` merges mods the data does not link, `split` takes mods out of their derived family. Each entry: id, mods (uniqueNames), names, reason, verified (checked in the arsenal or on a saved wiki page).",
+  "join": [
+    {
+      "id": "galvanized-aptitude-rifle-aptitude",
+      "mods": [
+        "/Lotus/Upgrades/Mods/Rifle/WeaponStunChanceMod",
+        "/Lotus/Upgrades/Mods/Rifle/WeaponStatusChanceSPMod"
+      ],
+      "names": [
+        "Rifle Aptitude",
+        "Galvanized Aptitude"
+      ],
+      "reason": "cannot be equipped together (also joins their pistol/shotgun counterparts, which never meet across classes)",
+      "source": "Marcos, arsenal",
+      "verified": "2026-11-08"
+    },
+    {
+      "id": "primed-chamber-charged-chamber",
+      "mods": [
+        "/Lotus/Upgrades/Mods/Rifle/SniperReloadDamageMod",
+        "/Lotus/Upgrades/Mods/Rifle/EventSniperReloadDamageMod"
+      ],
+      "names": [
+        "Charged Chamber",
+        "Primed Chamber"
+      ],
+      "reason": "cannot be equipped together",
+      "source": "Marcos, arsenal",
+      "verified": "2026-11-08"
+    }
+  ],
+  "split": []
+}

@@ -1,0 +1,4 @@
+{
+  "about": "Gun mods that fit the exilus slot although DE `isUtility` is false (Q30). Each entry: id (uniqueName), name, source, verified. 2026-11-08: the weapon list on the saved Exilus_Mods page adds no kept gun mod beyond the DE flag; its 17 extra names are Conclave mods (denied), and it omits Primed Sniper Ammo Mutation, which DE flags.",
+  "mods": []
+}

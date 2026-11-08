@@ -4,7 +4,7 @@ from typing import Any
 
 from pydantic import ValidationError
 
-from app.data.build.common import RefreshError
+from app.data.build.common import RefreshError, require_verified
 from app.data.models import Effects
 from app.domain.effects import Effect, Parsed, Support
 from app.parse.common import parse
@@ -25,13 +25,19 @@ class Overrides:
             return _stored(parsed)
         self._used.add(unique_name)
         try:
+            require_verified(entry, "overrides.json", unique_name)
             effects = [Effect(**e) for e in entry["effects"]] if "effects" in entry else None
+            default = Support.FULL if effects is not None else parsed.support
+            support = Support(entry.get("support", default))
+            if effects is not None:
+                unparsed = entry.get("unparsed", [])
+            else:
+                # `support: full` alone = reviewed: the leftover text changes no damage.
+                unparsed = [] if support == Support.FULL else parsed.unparsed
             return Effects(
-                support=Support(
-                    entry.get("support", Support.FULL if effects is not None else parsed.support)
-                ),
+                support=support,
                 effects=effects if effects is not None else parsed.effects,
-                unparsed=entry.get("unparsed", []) if effects is not None else parsed.unparsed,
+                unparsed=unparsed,
                 requires_trigger=entry.get("requires_trigger", parsed.requires_trigger),
                 note=entry.get("note"),
             )
