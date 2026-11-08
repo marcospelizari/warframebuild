@@ -75,7 +75,8 @@ is "best found". The same data produces the same builds on any machine.
 ## Code structure
 
 The backend is split into layers. Every module belongs to exactly one layer, and a layer
-imports only the layers listed for it. `tests/test_layers.py` checks this on every CI run.
+imports only the layers listed for it. `tests/test_layers.py` checks the import rule and
+rules 4 (size and names) on every CI run, so they hold while a task grows.
 
 | Layer | Owns | May import | Files and network |
 |-------|------|------------|-------------------|
@@ -99,21 +100,14 @@ Rules for placing code:
    A domain type such as `DamageType` is the single list of its values.
 3. **Source encodings stay in their adapter** (`pipeline/sources/`). `domain` and `parse`
    never know about DE or WFCD field names.
-4. **One module per entity.** A module that passes about 300 lines becomes a subpackage of
-   modules per entity. Shared helpers stay inside their layer; no project-wide `utils`.
+4. **One module per entity or job.** A module over 300 lines fails CI and becomes a
+   subpackage of modules per entity. Names say the job: `common`, `utils`, `helpers` and
+   `misc` fail CI. Shared code stays inside its layer (e.g. `pipeline/errors.py`).
 5. **Tests mirror `app/`**: `tests/domain/test_damage.py` tests `app/domain/damage.py`.
 
-`app/data/` predates this rule and moves as follows; no new module goes there:
-
-| Now | Target |
-|-----|--------|
-| `app/data/models.py` | `app/gamedata/models.py` |
-| `app/data/store.py` (read side: `load`, `GameData`, `dataset_hash`) | `app/gamedata/store.py` |
-| `app/data/store.py` (write side: `write`, `recover`, `exclusive`) | `app/pipeline/publish.py` |
-| `app/data/cli.py` | `app/cli.py` (and the `wfb` entry in `pyproject.toml`) |
-| `app/data/http.py` | `app/pipeline/sources/http.py` |
-| everything else in `app/data/` | `app/pipeline/` (same names) |
-| `tests/data/` | `tests/pipeline/` and `tests/gamedata/` |
+The old `app/data/` package was split into these layers in step 3d (models and loader →
+`gamedata`, everything offline → `pipeline`, the command → `app/cli.py`); CI fails if it
+comes back.
 
 ## Licences
 

@@ -1,6 +1,6 @@
-"""Code structure rule (ARCHITECTURE.md, "Code structure"): every module belongs to one
-layer, and a layer imports only the layers listed for it. Checked statically from the
-import statements, so a wrong dependency fails CI before it spreads."""
+"""Code structure rules (ARCHITECTURE.md, "Code structure"), checked in CI so they hold
+while a task grows: every module belongs to one layer and imports only the layers listed
+for it; modules stay small and are named after their job; app/data/ is gone for good."""
 
 import ast
 from pathlib import Path
@@ -27,11 +27,6 @@ LAYER_OF: dict[str, str] = {
     "app.pipeline": "pipeline",
     "app.api": "api",
     "app.cli": "cli",
-    # Pending move out of app/data/ (ARCHITECTURE.md lists the targets); remove each
-    # line when its module moves. Do not add new modules under app/data/.
-    "app.data": "pipeline",
-    "app.data.models": "gamedata",
-    "app.data.cli": "cli",
 }
 
 # Layers that stay pure: no file, network or process access.
@@ -108,4 +103,40 @@ def test_rule_catches_wrong_imports(tmp_path: Path) -> None:
         "app/domain/damage.py:1: domain may not import gamedata (app.gamedata.models)",
         "app/domain/damage.py:2: domain must stay pure, imports os",
         "app/stray/x.py: belongs to no layer (add it to LAYER_OF)",
+    ]
+
+
+MAX_LINES = 300  # past this, a module becomes a subpackage of modules per entity (rule 4)
+BANNED_NAMES = frozenset({"common", "utils", "util", "helpers", "misc"})
+
+
+def structure_violations(root: Path = APP) -> list[str]:
+    found = []
+    if (root / "data").exists():
+        found.append("app/data/: removed in step 3d; use app/gamedata/ or app/pipeline/")
+    for path in sorted(root.rglob("*.py")):
+        where = path.relative_to(root.parent)
+        if path.stem in BANNED_NAMES or path.parent.name in BANNED_NAMES:
+            found.append(f"{where}: name says nothing about its job (no common/utils/helpers)")
+        lines = len(path.read_text(encoding="utf-8").splitlines())
+        if lines > MAX_LINES:
+            found.append(f"{where}: {lines} lines > {MAX_LINES}, split into a subpackage")
+    return found
+
+
+def test_app_follows_structure_rules() -> None:
+    assert structure_violations() == []
+
+
+def test_structure_rules_catch_violations(tmp_path: Path) -> None:
+    app = tmp_path / "app"
+    (app / "data").mkdir(parents=True)
+    (app / "parse").mkdir()
+    (app / "parse" / "common.py").write_text("")
+    (app / "domain").mkdir()
+    (app / "domain" / "damage.py").write_text("x = 1\n" * (MAX_LINES + 1))
+    assert structure_violations(app) == [
+        "app/data/: removed in step 3d; use app/gamedata/ or app/pipeline/",
+        f"app/domain/damage.py: {MAX_LINES + 1} lines > {MAX_LINES}, split into a subpackage",
+        "app/parse/common.py: name says nothing about its job (no common/utils/helpers)",
     ]

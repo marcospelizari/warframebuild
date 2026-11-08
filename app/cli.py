@@ -1,0 +1,80 @@
+"""`wfb` command line."""
+
+import argparse
+import json
+import sys
+from collections.abc import Callable
+from pathlib import Path
+
+import uvicorn
+
+from app.api.app import create_app
+from app.pipeline import check, fixtures, refresh
+from app.pipeline.sources.http import PoliteClient
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(prog="wfb")
+    sub = parser.add_subparsers(dest="command", required=True)
+    serve = sub.add_parser("serve", help="run the app on http://127.0.0.1:8000")
+    serve.add_argument("--host", default="127.0.0.1")
+    serve.add_argument("--port", type=int, default=8000)
+    sub.add_parser("openapi", help="print the OpenAPI schema (input for web/src/api/types.ts)")
+    ref = sub.add_parser("refresh", help="download sources, rebuild and validate gamedata/")
+    ref.add_argument("--offline", action="store_true", help="use files already in cache/raw/")
+    ref.add_argument("--no-images", action="store_true", help="skip weapon icon downloads")
+    sub.add_parser("fixtures", help="trim cache/raw/ into tests/fixtures/raw/")
+    chk = sub.add_parser("check", help="after a game update: what changed, what to re-check")
+    chk.add_argument("--offline", action="store_true", help="skip the DE/WFCD source check")
+    args = parser.parse_args(argv)
+
+    if args.command == "serve":
+        uvicorn.run(create_app(), host=args.host, port=args.port)
+    elif args.command == "openapi":
+        json.dump(create_app().openapi(), sys.stdout, indent=2, sort_keys=True)
+        sys.stdout.write("\n")
+    elif args.command == "refresh":
+        return _guarded(
+            lambda: refresh.run(
+                refresh.Paths.project(ROOT), offline=args.offline, fetch_images=not args.no_images
+            ).lines(),
+            "refresh failed, gamedata/ unchanged",
+        )
+    elif args.command == "check":
+        return _guarded(lambda: run_check(offline=args.offline), "check failed")
+    elif args.command == "fixtures":
+        fixtures.write(ROOT / "cache/raw", ROOT / "tests/fixtures/raw")
+    return 0
+
+
+def _guarded(task: Callable[[], list[str]], failure: str) -> int:
+    """Print the task's lines; on any error print one plain line instead of a traceback."""
+    try:
+        lines = task()
+    except Exception as error:
+        print(f"{failure}: {error}", file=sys.stderr)
+        return 1
+    print("\n".join(lines))
+    return 0
+
+
+def run_check(*, offline: bool) -> list[str]:
+    paths = refresh.Paths.project(ROOT)
+    current, error = refresh.load_previous(paths.gamedata)
+    if current is None:
+        raise RuntimeError(error or "no gamedata/ yet: run `uv run wfb refresh`")
+    meta = current.meta
+    changes = None if offline else check.source_changes(PoliteClient(), meta.sources)
+    lines = check.source_lines(changes)
+    rows = check.reference_rows(paths.reference)
+    lines += check.stale_lines(check.stale_rows(rows, meta.changed_on), meta.changed_on)
+    lines += check.wiki_lines(paths.raw, paths.reference)
+    if changes:
+        lines.append("next: `uv run wfb refresh`, then re-check the rows it lists")
+    return lines
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

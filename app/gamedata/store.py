@@ -1,0 +1,54 @@
+"""Read side of gamedata/: the loader the app and the pipeline share (E12).
+
+A dataset is valid only when its files match meta.json's dataset_hash and its
+schema version is the one this code reads.
+"""
+
+import hashlib
+import json
+from dataclasses import dataclass
+from pathlib import Path
+
+from pydantic import TypeAdapter
+
+from app.gamedata.models import Arcane, Join, Meta, ModsFile, Weapon
+
+DATA_FILES = ("weapons.json", "mods.json", "arcanes.json", "joins.json")
+
+
+@dataclass(frozen=True)
+class GameData:
+    meta: Meta
+    weapons: list[Weapon]
+    mods: ModsFile
+    arcanes: list[Arcane]
+    joins: list[Join]
+
+
+def dataset_hash(payloads: dict[str, bytes]) -> str:
+    digest = hashlib.sha256()
+    for name in sorted(payloads):
+        digest.update(name.encode() + b"\0" + payloads[name] + b"\0")
+    return digest.hexdigest()[:16]
+
+
+def load(gamedata_dir: Path) -> GameData:
+    def read(name: str) -> bytes:
+        return (gamedata_dir / name).read_bytes()
+
+    raw_meta = json.loads(read("meta.json"))
+    version = raw_meta.get("schema_version") if isinstance(raw_meta, dict) else None
+    expected = Meta.model_fields["schema_version"].default
+    if version != expected:
+        raise ValueError(f"{gamedata_dir}: schema version {version}, this code reads {expected}")
+    meta = Meta.model_validate(raw_meta)
+    payloads = {name: read(name) for name in DATA_FILES}
+    if dataset_hash(payloads) != meta.dataset_hash:
+        raise ValueError(f"{gamedata_dir}: files do not match meta.json dataset_hash")
+    return GameData(
+        meta=meta,
+        weapons=TypeAdapter(list[Weapon]).validate_json(payloads["weapons.json"]),
+        mods=ModsFile.model_validate_json(payloads["mods.json"]),
+        arcanes=TypeAdapter(list[Arcane]).validate_json(payloads["arcanes.json"]),
+        joins=TypeAdapter(list[Join]).validate_json(payloads["joins.json"]),
+    )
