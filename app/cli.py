@@ -71,6 +71,7 @@ def run_check(*, offline: bool) -> list[str]:
     rows = check.reference_rows(paths.reference)
     lines += check.stale_lines(check.stale_rows(rows, meta.changed_on), meta.changed_on)
     lines += check.wiki_lines(paths.raw, paths.reference)
+    lines += check.export_plus_lines(paths.raw)
     if changes:
         lines.append("next: `uv run wfb refresh`, then re-check the rows it lists")
     return lines

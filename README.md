@@ -37,6 +37,9 @@ uv run wfb check              # after a game update: changed sources, rows and w
 WARFRAME Wiki pages are never downloaded by the tool; they are saved by hand into
 `cache/raw/wiki/<Page>.wikitext` (`https://wiki.warframe.com/w/<Page>?action=raw`).
 Refresh names any missing page; the list is `reference/wiki_pages.json`.
+The same holds for `ExportUpgrades.json` and `ExportWeapons.json` from
+[warframe-public-export-plus](https://github.com/calamity-inc/warframe-public-export-plus),
+saved by hand into `cache/raw/export-plus/`.
 
 Checks (the same as CI):
 
@@ -58,7 +61,7 @@ Developed on GitLab; GitHub is a read-only mirror.
 ## License
 
 Code: [GNU AGPL-3.0](LICENSE).
-Data: WFCD-derived data under MIT; WARFRAME Wiki-derived data under CC BY-NC-SA 3.0.
+Data: WFCD- and export-plus-derived data under MIT; WARFRAME Wiki-derived data under CC BY-NC-SA 3.0.
 See [NOTICE](NOTICE) for details.
 
 ## Credits
@@ -67,5 +70,7 @@ See [NOTICE](NOTICE) for details.
   This project is not affiliated with or endorsed by Digital Extremes.
 - [Warframe Community Developers (WFCD)](https://github.com/WFCD): game data via
   [warframestat.us](https://api.warframestat.us) and `warframe-items`.
+- [warframe-public-export-plus](https://github.com/calamity-inc/warframe-public-export-plus)
+  (Calamity, Inc. and AMelonInsideLemon): mod and weapon compatibility tags.
 - [WARFRAME Wiki](https://wiki.warframe.com) contributors: damage formulas, Incarnon evolutions,
   faction modifiers, Archon Shards.

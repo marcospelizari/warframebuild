@@ -13,6 +13,7 @@ from app.pipeline.build.inputs import records, require_verified
 from app.pipeline.errors import RefreshError
 from app.pipeline.sources.de_export import MOD_CATEGORY
 from app.pipeline.sources.de_text import clean_levels, clean_text
+from app.pipeline.sources.export_plus import ExportPlus
 
 
 def build(
@@ -21,6 +22,7 @@ def build(
     overrides: Overrides,
     families: dict[str, Any],
     exilus: dict[str, Any],
+    plus: ExportPlus,
 ) -> tuple[list[Mod], list[ModSet], dict[str, int]]:
     rules = mod_filter["rules"]
     allow = {a["id"] for a in mod_filter.get("allow", [])}
@@ -39,6 +41,13 @@ def build(
             denied["no-level-stats"] += 1  # rivens (M2)
         else:
             kept.append(m | {"_category": category})
+
+    starters = sorted(m["uniqueName"] for m in kept if m["uniqueName"] in plus.starter_mods)
+    if starters:
+        raise RefreshError(
+            f"starter copies (export-plus isStarter) kept, add a reference/mod_filter.json rule: "
+            f"{starters}"
+        )
 
     names: defaultdict[str, list[str]] = defaultdict(list)
     for m in kept:
@@ -60,7 +69,13 @@ def build(
             raise RefreshError(f"reference/exilus.json: unknown gun mods {unknown}")
         mods = sorted(
             (
-                _mod(m, overrides, family.get(m["uniqueName"]), m["uniqueName"] in extra_exilus)
+                _mod(
+                    m,
+                    overrides,
+                    family.get(m["uniqueName"]),
+                    m["uniqueName"] in extra_exilus,
+                    plus,
+                )
                 for m in kept
             ),
             key=lambda m: m.unique_name,
@@ -86,7 +101,10 @@ def build(
     return mods, sets, dict(sorted(denied.items()))
 
 
-def _mod(m: dict[str, Any], overrides: Overrides, family: str | None, exilus: bool) -> Mod:
+def _mod(
+    m: dict[str, Any], overrides: Overrides, family: str | None, exilus: bool, plus: ExportPlus
+) -> Mod:
+    tags = plus.mod_tags.get(m["uniqueName"])
     description = clean_text("\n".join(m.get("description") or []))
     levels = clean_levels(m["levelStats"])
     return Mod(
@@ -105,6 +123,8 @@ def _mod(m: dict[str, Any], overrides: Overrides, family: str | None, exilus: bo
         description=description,
         level_stats=levels,
         effects=overrides.effects(m["uniqueName"], levels[-1], description),
+        compatibility_tags=tags.compatibility if tags else None,
+        incompatibility_tags=tags.incompatibility if tags else None,
     )
 
 

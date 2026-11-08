@@ -18,10 +18,10 @@ from app.domain.effects import Support
 from app.gamedata.models import SourceRecord
 from app.gamedata.store import GameData
 from app.pipeline.build import Dataset
-from app.pipeline.sources import Fetched, sha256_16, wfcd
+from app.pipeline.sources import Fetched, export_plus, saved_date, sha256_16, wfcd
 from app.pipeline.sources import de_export as de
 from app.pipeline.sources.http import PoliteClient
-from app.pipeline.sources.wiki_local import pages, saved_date
+from app.pipeline.sources.wiki_local import pages
 
 MAX_LISTED = 25
 _ISO_DATE = re.compile(r"\d{4}-\d{2}-\d{2}")
@@ -184,6 +184,20 @@ def support_lines(dataset: Dataset) -> list[str]:
     return ["support (damage-related text not modelled):", *out] if out else []
 
 
+def untagged_lines(dataset: Dataset) -> list[str]:
+    """Weapons and mods the saved export-plus does not list yet: their tags are unknown."""
+    out = []
+    for kind, names in (
+        ("weapons", sorted(w.name for w in dataset.weapons if w.compatibility_tags is None)),
+        ("mods", sorted(m.name for m in dataset.mods if m.compatibility_tags is None)),
+    ):
+        if names:
+            out.append(f"  {kind} ({len(names)}): {_names(names)}")
+    if not out:
+        return []
+    return ["not in the saved export-plus (tags unknown; re-save when it catches up):", *out]
+
+
 def source_lines(changes: list[str] | None) -> list[str]:
     if changes is None:
         return ["sources: not checked (offline)"]
@@ -225,6 +239,15 @@ def wiki_lines(raw_dir: Path, reference_dir: Path) -> list[str]:
         saved = saved_date(path) if path.is_file() else "MISSING"
         out.append(f"  [{p.impact}] {p.title} (saved {saved}) {p.history_url}")
         out.append(f"      feeds: {'; '.join(p.feeds)}")
+    return out
+
+
+def export_plus_lines(raw_dir: Path) -> list[str]:
+    out = [f"export-plus files to compare with {export_plus.REPO_URL} (re-save changed ones):"]
+    for name in export_plus.FILES:
+        path = raw_dir / export_plus.DIR / name
+        saved = saved_date(path) if path.is_file() else "MISSING"
+        out.append(f"  {name} (saved {saved}) {export_plus.RAW_URL}/{name}")
     return out
 
 

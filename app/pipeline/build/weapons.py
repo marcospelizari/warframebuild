@@ -17,6 +17,7 @@ def build(
     wfcd: list[dict[str, Any]],
     manifest: list[dict[str, Any]],
     fire_overrides: dict[str, dict[str, Any]],
+    tags: dict[str, list[str]],
 ) -> tuple[list[Weapon], list[Exclusion], list[Join]]:
     de = {w["uniqueName"]: w for w in de_weapons}
     textures = {m["uniqueName"]: m.get("textureLocation") for m in manifest}
@@ -56,7 +57,7 @@ def build(
 
     slugs = _slugs([(d["uniqueName"], d["name"]) for d, _ in kept])
     weapons = [
-        _weapon(d, w, slugs[d["uniqueName"]], textures.get(d["uniqueName"])) for d, w in kept
+        _weapon(d, w, slugs[d["uniqueName"]], textures.get(d["uniqueName"]), tags) for d, w in kept
     ]
     joins = [
         Join(unique_name=d["uniqueName"], de_name=d["name"], wfcd_name=w["name"]) for d, w in kept
@@ -64,7 +65,13 @@ def build(
     return weapons, excluded, joins
 
 
-def _weapon(d: dict[str, Any], w: dict[str, Any], slug: str, texture: str | None) -> Weapon:
+def _weapon(
+    d: dict[str, Any],
+    w: dict[str, Any],
+    slug: str,
+    texture: str | None,
+    tags: dict[str, list[str]],
+) -> Weapon:
     per_shot = d["damagePerShot"]
     if len(per_shot) != DAMAGE_SLOT_COUNT:
         raise RefreshError(
@@ -100,6 +107,8 @@ def _weapon(d: dict[str, Any], w: dict[str, Any], slug: str, texture: str | None
             # so values legitimately differ. The main attack is chosen later (main_attack.json).
             attacks=[_attack(a, d["name"]) for a in w.get("attacks") or []],
             texture_location=texture,
+            # export-plus can lag DE after an update: unknown tags stay None (report lists them).
+            compatibility_tags=tags.get(d["uniqueName"]),
         )
     except ValidationError as error:
         raise RefreshError(f"{d['name']}: invalid values: {error}") from error

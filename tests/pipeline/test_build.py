@@ -57,9 +57,56 @@ def test_mod_filter(paths: Paths) -> None:
 def test_unclassified_duplicate_name_fails(paths: Paths) -> None:
     rules_path = paths.reference / "mod_filter.json"
     rules = json.loads(rules_path.read_text())
-    rules["rules"] = [r for r in rules["rules"] if r["id"] != "beginner"]
+    rules["rules"] = [r for r in rules["rules"] if r["id"] != "intermediate"]
     rules_path.write_text(json.dumps(rules))
     with pytest.raises(RefreshError, match="Serration"):
+        build(paths.raw, paths.reference)
+
+
+def test_kept_starter_copy_fails(paths: Paths) -> None:
+    """export-plus isStarter marks exactly the /Beginner/ copies: a gap in the rule fails."""
+    rules_path = paths.reference / "mod_filter.json"
+    rules = json.loads(rules_path.read_text())
+    rules["rules"] = [r for r in rules["rules"] if r["id"] != "beginner"]
+    rules_path.write_text(json.dumps(rules))
+    with pytest.raises(RefreshError, match=r"isStarter.*WeaponDamageAmountModBeginner"):
+        build(paths.raw, paths.reference)
+
+
+def test_export_plus_tags_are_stored(paths: Paths) -> None:
+    data = build(paths.raw, paths.reference)
+    weapons = {w.name: w for w in data.weapons}
+    mods = {m.name: m for m in data.mods}
+    assert weapons["Braton Prime"].compatibility_tags == ["ASSAULT_AMMO"]
+    assert mods["Sniper Ammo Mutation"].compatibility_tags == ["LAUNCHER_AMMO", "SNIPER_AMMO"]
+    assert mods["Semi-Rifle Cannonade"].compatibility_tags == ["SEMI_AUTO"]
+    assert mods["Semi-Rifle Cannonade"].incompatibility_tags == ["MODULAR_GUN"]
+    assert mods["Serration"].compatibility_tags == []
+    assert mods["Serration"].incompatibility_tags == []
+
+
+def test_entry_missing_in_export_plus_has_unknown_tags(paths: Paths) -> None:
+    """export-plus can lag DE after an update: the entry is kept, its tags are None."""
+    for name, uid in (
+        ("ExportWeapons.json", "/Lotus/Weapons/Tenno/Rifle/BratonPrime"),
+        ("ExportUpgrades.json", "/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod"),
+    ):
+        path = paths.raw / "export-plus" / name
+        data = json.loads(path.read_text())
+        del data[uid]
+        path.write_text(json.dumps(data))
+    data = build(paths.raw, paths.reference)
+    assert next(w for w in data.weapons if w.name == "Braton Prime").compatibility_tags is None
+    serration = next(m for m in data.mods if m.name == "Serration")
+    assert serration.compatibility_tags is None and serration.incompatibility_tags is None
+
+
+def test_export_plus_tags_must_be_strings(paths: Paths) -> None:
+    path = paths.raw / "export-plus/ExportUpgrades.json"
+    data = json.loads(path.read_text())
+    data["/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod"]["incompatibilityTags"] = "AOE"
+    path.write_text(json.dumps(data))
+    with pytest.raises(RefreshError, match="incompatibilityTags"):
         build(paths.raw, paths.reference)
 
 

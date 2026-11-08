@@ -122,9 +122,13 @@ def scan_downloaded(raw_dir: Path, names: list[str]) -> list[SourceFile]:
         if entry and entry.sha256_16 == digest:
             files.append(entry)
         else:
-            saved = datetime.date.fromtimestamp(path.stat().st_mtime).isoformat()
-            files.append(SourceFile(rel, "", saved, digest))
+            files.append(SourceFile(rel, "", saved_date(path), digest))
     return files
+
+
+def saved_date(path: Path) -> str:
+    """Save date of a hand-saved file (wiki page, export-plus file): its mtime."""
+    return datetime.date.fromtimestamp(path.stat().st_mtime).isoformat()
 
 
 def load_json(path: Path) -> object:

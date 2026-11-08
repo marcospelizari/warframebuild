@@ -11,6 +11,7 @@ from app.pipeline.build import build
 from app.pipeline.sources import (
     SourceFile,
     de_export,
+    export_plus,
     interrupted_saves,
     saved_until_failure,
     scan_downloaded,
@@ -48,6 +49,8 @@ class Report:
     touched: list[check.RefRow] = field(default_factory=list)
     wiki: list[str] = field(default_factory=list)
     support: list[str] = field(default_factory=list)
+    untagged: list[str] = field(default_factory=list)
+    export_plus: list[str] = field(default_factory=list)
     image_failures: list[str] = field(default_factory=list)
 
     def lines(self) -> list[str]:
@@ -55,7 +58,9 @@ class Report:
         out += self._dataset_lines(self.meta, self.previous)
         out += check.diff_lines(self.diff, self.touched, self.meta.changed_on)
         out += self.support
+        out += self.untagged
         out += self.wiki
+        out += self.export_plus
         if self.image_failures:
             out.append(f"{len(self.image_failures)} image downloads failed:")
             out += [f"  {f}" for f in self.image_failures]
@@ -90,8 +95,8 @@ def run(
 
 def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClient | None) -> Report:
     previous, previous_error = load_previous(paths.gamedata)
-    # Fail early: nothing is downloaded while a listed wiki page is missing.
-    wiki_files = wiki_local.scan(paths.raw, paths.reference)
+    # Fail early: nothing is downloaded while a hand-saved file is missing.
+    saved_files = wiki_local.scan(paths.raw, paths.reference) + export_plus.scan(paths.raw)
     reference_rows = check.reference_rows(paths.reference)  # bad dates fail before publishing
     changes: list[str] | None = None
     saving: AbstractContextManager[list[SourceFile]]
@@ -114,7 +119,7 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
         )
         saving = saved_until_failure(paths.raw, fetched)
     with saving as downloaded:
-        files = sorted(downloaded + wiki_files, key=lambda f: f.path)
+        files = sorted(downloaded + saved_files, key=lambda f: f.path)
         dataset = build(paths.raw, paths.reference)
         meta = publish.write(
             dataset,
@@ -132,8 +137,10 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
         diff=diff,
         touched=check.touched_rows(reference_rows, diff),
         support=check.support_lines(dataset),
-        # After a game update the saved wiki pages need a look too.
+        untagged=check.untagged_lines(dataset),
+        # After a game update the hand-saved files need a look too.
         wiki=check.wiki_lines(paths.raw, paths.reference) if changes else [],
+        export_plus=check.export_plus_lines(paths.raw) if changes else [],
     )
     if fetch_images and client is not None:
         report.image_failures = images.fetch_missing(client, dataset.weapons, paths.img)

@@ -47,6 +47,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.12,
   "critical_multiplier": 2.0,
   "damage": {
@@ -89,6 +94,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.050000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -160,6 +169,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.15000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -199,6 +214,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "BEAM"
+  ],
   "critical_chance": 0.11,
   "critical_multiplier": 2.0,
   "damage": {
@@ -238,6 +258,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "BEAM"
+  ],
   "critical_chance": 0.17,
   "critical_multiplier": 2.5,
   "damage": {
@@ -295,6 +320,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.050000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -336,6 +367,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.12,
   "critical_multiplier": 1.8,
   "damage": {
@@ -378,6 +413,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.14,
   "critical_multiplier": 2.0,
   "damage": {
@@ -419,6 +457,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BATTERY",
+   "BEAM"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -478,6 +521,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 2.0,
   "damage": {
@@ -538,6 +585,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 1.6,
   "damage": {
@@ -583,6 +634,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.22,
   "critical_multiplier": 2.0,
   "damage": {
@@ -677,6 +731,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.34,
   "critical_multiplier": 3.0,
   "damage": {
@@ -723,6 +781,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BEAM"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 1.8,
   "damage": {
@@ -763,6 +825,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BEAM"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.2,
   "damage": {
@@ -852,6 +918,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BEAM",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.31,
   "critical_multiplier": 2.5,
   "damage": {
@@ -929,6 +1000,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.28,
   "critical_multiplier": 2.2,
   "damage": {
@@ -970,6 +1045,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BATTERY",
+   "BEAM"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 1.8,
   "damage": {
@@ -1034,6 +1113,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SECONDARYSHOTGUN"
+  ],
   "critical_chance": 0.18000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -1106,6 +1189,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "BATTERY",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.44,
   "critical_multiplier": 3.0,
   "damage": {
@@ -1185,6 +1273,13 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "CRPBOW",
+   "PROJECTILE",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.5,
   "critical_multiplier": 2.0,
   "damage": {
@@ -1264,6 +1359,13 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "CRPBOW",
+   "PROJECTILE",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.5,
   "critical_multiplier": 2.8,
   "damage": {
@@ -1308,6 +1410,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "BEAM"
+  ],
   "critical_chance": 0.31999999,
   "critical_multiplier": 2.2,
   "damage": {
@@ -1348,6 +1455,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.039999999,
   "critical_multiplier": 1.5,
   "damage": {
@@ -1389,6 +1500,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -1461,6 +1576,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.14,
   "critical_multiplier": 2.8,
   "damage": {
@@ -1554,6 +1672,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.5,
   "damage": {
@@ -1651,6 +1774,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.5999999,
   "damage": {
@@ -1712,6 +1840,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.28,
   "critical_multiplier": 2.5999999,
   "damage": {
@@ -1752,6 +1885,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BEAM"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 2.0,
   "damage": {
@@ -1791,6 +1928,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BEAM"
+  ],
   "critical_chance": 0.14,
   "critical_multiplier": 2.0,
   "damage": {
@@ -1866,6 +2007,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 1.8,
   "damage": {
@@ -1933,6 +2079,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 2.0999999,
   "damage": {
@@ -2007,6 +2157,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.31999999,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -2054,6 +2208,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 1.4,
   "damage": {
@@ -2148,6 +2307,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BEAM",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 2.2,
   "damage": {
@@ -2239,6 +2403,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BEAM",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.22,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -2284,6 +2453,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.22,
   "critical_multiplier": 1.6,
   "damage": {
@@ -2344,6 +2516,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -2405,6 +2580,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -2463,6 +2644,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -2505,6 +2692,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 2.0,
   "damage": {
@@ -2599,6 +2790,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.31999999,
   "critical_multiplier": 2.8,
   "damage": {
@@ -2647,6 +2842,12 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SECONDARYSHOTGUN",
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.039999999,
   "critical_multiplier": 1.5,
   "damage": {
@@ -2702,6 +2903,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 1.6,
   "damage": {
@@ -2743,6 +2947,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 1.6,
   "damage": {
@@ -2786,6 +2993,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -2844,6 +3054,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -2903,6 +3117,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.36000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -2948,6 +3163,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BATTERY",
+   "BEAM"
+  ],
   "critical_chance": 0.12,
   "critical_multiplier": 1.8,
   "damage": {
@@ -3042,6 +3261,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.14,
   "critical_multiplier": 2.2,
   "damage": {
@@ -3115,6 +3338,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 2.0,
   "damage": {
@@ -3188,6 +3416,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.18000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -3249,6 +3482,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "BEAM",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.25999999,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -3327,6 +3565,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 1.4,
   "damage": {
@@ -3368,6 +3609,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BEAM",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 1.8,
   "damage": {
@@ -3409,6 +3654,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BATTERY",
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.31999999,
   "critical_multiplier": 3.0,
   "damage": {
@@ -3450,6 +3700,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.18000001,
   "critical_multiplier": 1.6,
   "damage": {
@@ -3543,6 +3796,13 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "GRNBOW",
+   "PROJECTILE",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.34999999,
   "critical_multiplier": 2.0999999,
   "damage": {
@@ -3587,6 +3847,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.15000001,
   "critical_multiplier": 1.5,
   "damage": {
@@ -3632,6 +3895,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.15000001,
   "critical_multiplier": 1.5,
   "damage": {
@@ -3677,6 +3941,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.050000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -3720,6 +3985,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.050000001,
   "critical_multiplier": 1.5,
   "damage": {
@@ -3779,6 +4048,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.19,
   "critical_multiplier": 2.0999999,
   "damage": {
@@ -3846,6 +4118,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.23,
   "critical_multiplier": 2.0999999,
   "damage": {
@@ -3921,6 +4197,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.0999999,
   "damage": {
@@ -3966,6 +4245,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.23,
   "critical_multiplier": 2.0999999,
   "damage": {
@@ -4035,6 +4317,7 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [],
   "critical_chance": 0.19,
   "critical_multiplier": 2.3,
   "damage": {
@@ -4099,6 +4382,13 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SEMI_AUTO",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.090000004,
   "critical_multiplier": 2.0,
   "damage": {
@@ -4159,6 +4449,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.20999999,
   "critical_multiplier": 1.9,
   "damage": {
@@ -4209,6 +4502,7 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [],
   "critical_chance": 0.20999999,
   "critical_multiplier": 2.3,
   "damage": {
@@ -4270,6 +4564,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.5,
   "damage": {
@@ -4381,6 +4681,13 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE",
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.5,
   "damage": {
@@ -4431,6 +4738,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SECONDARYSHOTGUN",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.28999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -4493,6 +4804,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.20999999,
   "critical_multiplier": 2.3,
   "damage": {
@@ -4534,6 +4846,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.07,
   "critical_multiplier": 5.0,
   "damage": {
@@ -4593,6 +4908,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.20999999,
   "critical_multiplier": 1.9,
   "damage": {
@@ -4637,6 +4956,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.23,
   "critical_multiplier": 1.9,
   "damage": {
@@ -4698,6 +5018,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.07,
   "critical_multiplier": 1.5,
   "damage": {
@@ -4743,6 +5066,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.0,
   "damage": {
@@ -4786,6 +5112,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.25,
   "critical_multiplier": 2.7,
   "damage": {
@@ -4847,6 +5174,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.050000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -4890,6 +5220,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.15000001,
   "critical_multiplier": 2.5,
   "damage": {
@@ -4935,6 +5269,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.20999999,
   "critical_multiplier": 2.9000001,
   "damage": {
@@ -4980,6 +5318,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.090000004,
   "critical_multiplier": 1.5,
   "damage": {
@@ -5025,6 +5366,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.13,
   "critical_multiplier": 2.0,
   "damage": {
@@ -5120,6 +5464,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "MITER",
+   "PROJECTILE",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.050000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -5169,6 +5519,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -5215,6 +5569,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -5323,6 +5681,13 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE",
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.17,
   "critical_multiplier": 2.5,
   "damage": {
@@ -5417,6 +5782,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "IMPACTEXPLODE",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -5461,6 +5831,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.19,
   "critical_multiplier": 2.3,
   "damage": {
@@ -5521,6 +5894,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.23,
   "critical_multiplier": 2.5,
   "damage": {
@@ -5580,6 +5957,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.5,
   "damage": {
@@ -5638,6 +6021,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.3,
   "damage": {
@@ -5701,6 +6088,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.5,
   "critical_multiplier": 2.3,
   "damage": {
@@ -5746,6 +6139,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.23,
   "critical_multiplier": 2.5,
   "damage": {
@@ -5815,6 +6211,7 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [],
   "critical_chance": 0.11,
   "critical_multiplier": 2.3,
   "damage": {
@@ -5876,6 +6273,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.27000001,
   "critical_multiplier": 2.3,
   "damage": {
@@ -5956,6 +6356,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.3,
   "damage": {
@@ -6033,6 +6436,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.15000001,
   "critical_multiplier": 1.9,
   "damage": {
@@ -6076,6 +6482,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.23,
   "critical_multiplier": 1.9,
   "damage": {
@@ -6195,6 +6604,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.050000001,
   "critical_multiplier": 1.5,
   "damage": {
@@ -6242,6 +6655,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SECONDARYSHOTGUN",
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.17,
   "critical_multiplier": 2.0,
   "damage": {
@@ -6288,6 +6706,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.15000001,
   "critical_multiplier": 1.5,
   "damage": {
@@ -6331,6 +6752,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.029999999,
   "critical_multiplier": 4.0,
   "damage": {
@@ -6390,6 +6814,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SECONDARYSHOTGUN"
+  ],
   "critical_chance": 0.13,
   "critical_multiplier": 1.5,
   "damage": {
@@ -6458,6 +6886,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SECONDARYSHOTGUN"
+  ],
   "critical_chance": 0.11,
   "critical_multiplier": 2.0,
   "damage": {
@@ -6527,6 +6958,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SECONDARYSHOTGUN"
+  ],
   "critical_chance": 0.11,
   "critical_multiplier": 2.0,
   "damage": {
@@ -6572,6 +7007,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -6622,6 +7058,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -6716,6 +7156,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.17,
   "critical_multiplier": 2.3,
   "damage": {
@@ -6760,6 +7204,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.23,
   "critical_multiplier": 1.9,
   "damage": {
@@ -6833,6 +7278,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.15000001,
   "critical_multiplier": 1.7,
   "damage": {
@@ -6876,6 +7324,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.19,
   "critical_multiplier": 2.0,
   "damage": {
@@ -6921,6 +7370,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.19,
   "critical_multiplier": 2.0,
   "damage": {
@@ -6984,6 +7434,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.37,
   "critical_multiplier": 1.9,
   "damage": {
@@ -7066,6 +7521,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "INFCERNOS",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.15000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -7129,6 +7588,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.18000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -7210,6 +7672,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "BATTERY",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.27000001,
   "critical_multiplier": 2.3,
   "damage": {
@@ -7256,6 +7723,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.3,
   "damage": {
@@ -7323,6 +7794,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.050000001,
   "critical_multiplier": 3.0,
   "damage": {
@@ -7366,6 +7842,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BEAM"
+  ],
   "critical_chance": 0.40000001,
   "critical_multiplier": 2.7,
   "damage": {
@@ -7408,6 +7888,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.25,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -7518,6 +7999,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BEAM",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.11,
   "critical_multiplier": 2.9000001,
   "damage": {
@@ -7577,6 +8062,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.2,
   "damage": {
@@ -7635,6 +8124,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.13,
   "critical_multiplier": 2.0,
   "damage": {
@@ -7718,6 +8211,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "BATTERY",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.3,
   "damage": {
@@ -7800,6 +8298,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.025,
   "critical_multiplier": 1.5,
   "damage": {
@@ -7868,6 +8370,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.0099999998,
   "critical_multiplier": 3.0,
   "damage": {
@@ -7911,6 +8418,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.11,
   "critical_multiplier": 2.0,
   "damage": {
@@ -7952,6 +8463,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BEAM"
+  ],
   "critical_chance": 0.38999999,
   "critical_multiplier": 2.7,
   "damage": {
@@ -8019,6 +8534,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -8060,6 +8579,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.19,
   "critical_multiplier": 2.0,
   "damage": {
@@ -8169,6 +8691,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BEAM",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.11,
   "critical_multiplier": 2.9000001,
   "damage": {
@@ -8228,6 +8754,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.0099999998,
   "critical_multiplier": 2.0,
   "damage": {
@@ -8340,6 +8871,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.050000001,
   "critical_multiplier": 2.3,
   "damage": {
@@ -8402,6 +8936,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.050000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -8462,6 +8997,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.029999999,
   "critical_multiplier": 1.5,
   "damage": {
@@ -8504,6 +9043,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "BEAM"
+  ],
   "critical_chance": 0.029999999,
   "critical_multiplier": 1.5,
   "damage": {
@@ -8545,6 +9088,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.25999999,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -8609,6 +9155,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.20999999,
   "critical_multiplier": 2.3,
   "damage": {
@@ -8686,6 +9235,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.27000001,
   "critical_multiplier": 2.0999999,
   "damage": {
@@ -8730,6 +9280,13 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "IMPACTEXPLODE",
+   "PROJECTILE",
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.31,
   "critical_multiplier": 2.3,
   "damage": {
@@ -8771,6 +9328,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.5999999,
   "damage": {
@@ -8834,6 +9394,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.050000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -8895,6 +9456,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.050000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -8972,6 +9537,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -9055,6 +9623,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.075000003,
   "critical_multiplier": 2.0,
   "damage": {
@@ -9108,6 +9679,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.5,
   "damage": {
@@ -9182,6 +9757,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "BATTERY",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.15000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -9242,6 +9823,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "BATTERY",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.0999999,
   "damage": {
@@ -9302,6 +9889,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -9346,6 +9937,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.13,
   "critical_multiplier": 2.0,
   "damage": {
@@ -9441,6 +10036,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.14,
   "critical_multiplier": 2.0,
   "damage": {
@@ -9516,6 +10116,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 1.8,
   "damage": {
@@ -9589,6 +10192,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -9637,6 +10243,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.15000001,
   "critical_multiplier": 1.5,
   "damage": {
@@ -9704,6 +10313,12 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "DEPLOYABLE",
+   "PROJECTILE",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -9765,6 +10380,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.25999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -9810,6 +10431,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 1.6,
   "damage": {
@@ -9871,6 +10495,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.34999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -9948,6 +10575,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.050000001,
   "critical_multiplier": 1.5,
   "damage": {
@@ -9998,6 +10628,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SYNDICATEMODBLOCKED"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.0,
   "damage": {
@@ -10044,6 +10678,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 1.5,
   "damage": {
@@ -10090,6 +10727,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -10133,6 +10773,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.0,
   "damage": {
@@ -10176,6 +10819,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.050000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -10220,6 +10864,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -10264,6 +10912,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 1.8,
   "damage": {
@@ -10311,6 +10962,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SECONDARYSHOTGUN",
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -10356,6 +11012,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.15000001,
   "critical_multiplier": 1.5,
   "damage": {
@@ -10401,6 +11058,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.22,
   "critical_multiplier": 2.0,
   "damage": {
@@ -10444,6 +11104,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.28,
   "critical_multiplier": 2.8,
   "damage": {
@@ -10490,6 +11153,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 1.8,
   "damage": {
@@ -10537,6 +11203,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SECONDARYSHOTGUN",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -10582,6 +11252,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.40000001,
   "critical_multiplier": 3.2,
   "damage": {
@@ -10643,6 +11317,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.36000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -10688,6 +11365,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "DAIKYU",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.34,
   "critical_multiplier": 2.0,
   "damage": {
@@ -10761,6 +11442,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -10820,6 +11504,7 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": null,
   "critical_chance": 0.31999999,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -10896,6 +11581,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -10970,6 +11658,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "BATTERY",
+   "OMICRUS",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 1.8,
   "damage": {
@@ -11033,6 +11726,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.34999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -11095,6 +11791,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "DAIKYU",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.40000001,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -11178,6 +11878,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "INFBOW",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.07,
   "critical_multiplier": 1.9,
   "damage": {
@@ -11255,6 +11959,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.44999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -11333,6 +12040,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.5,
   "critical_multiplier": 2.0,
   "damage": {
@@ -11412,6 +12122,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.2,
   "damage": {
@@ -11505,6 +12218,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 1.6,
   "damage": {
@@ -11598,6 +12315,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -11658,6 +12379,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.34999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -11705,6 +12429,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -11748,6 +12475,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.25999999,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -11797,6 +12527,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 3.0,
   "damage": {
@@ -11856,6 +12590,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "CROSSBOW",
+   "PROJECTILE",
+   "ZHUGE"
+  ],
   "critical_chance": 0.15000001,
   "critical_multiplier": 2.3,
   "damage": {
@@ -11914,6 +12653,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -12008,6 +12751,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.14,
   "critical_multiplier": 2.2,
   "damage": {
@@ -12067,6 +12815,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -12129,6 +12880,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BEAM",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.12,
   "critical_multiplier": 2.0,
   "damage": {
@@ -12178,6 +12934,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -12240,6 +13000,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.34,
   "critical_multiplier": 3.0,
   "damage": {
@@ -12321,6 +13086,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "IMPACTEXPLODE",
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.25999999,
   "critical_multiplier": 2.5999999,
   "damage": {
@@ -12418,6 +13188,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.2,
   "damage": {
@@ -12482,6 +13257,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.20999999,
   "critical_multiplier": 1.9,
   "damage": {
@@ -12533,6 +13311,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.28,
   "critical_multiplier": 3.0,
   "damage": {
@@ -12594,6 +13375,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.12,
   "critical_multiplier": 2.0,
   "damage": {
@@ -12671,6 +13456,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.18000001,
   "critical_multiplier": 1.8,
   "damage": {
@@ -12750,6 +13538,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -12831,6 +13622,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.8,
   "damage": {
@@ -12896,6 +13691,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BATTERY",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -12938,6 +13738,7 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [],
   "critical_chance": 0.40000001,
   "critical_multiplier": 2.8,
   "damage": {
@@ -12998,6 +13799,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "CROSSBOW",
+   "PROJECTILE",
+   "ZHUGE"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.3,
   "damage": {
@@ -13075,6 +13881,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BEAM",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.18000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -13125,6 +13936,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.31999999,
   "critical_multiplier": 2.5999999,
   "damage": {
@@ -13231,6 +14045,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.11,
   "critical_multiplier": 1.9,
   "damage": {
@@ -13327,6 +14144,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "IMPACTEXPLODE",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -13393,6 +14214,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 3.0,
   "damage": {
@@ -13442,6 +14266,7 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": null,
   "critical_chance": 0.18000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -13503,6 +14328,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.5999999,
   "damage": {
@@ -13588,6 +14416,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.2,
   "damage": {
@@ -13651,6 +14482,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -13714,6 +14548,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -13792,6 +14629,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.28,
   "critical_multiplier": 3.0,
   "damage": {
@@ -13843,6 +14683,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -13938,6 +14781,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -14037,6 +14885,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -14103,6 +14956,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "CROSSBOW",
+   "PROJECTILE",
+   "ZHUGE"
+  ],
   "critical_chance": 0.25999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -14150,6 +15008,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "CROSSBOW",
+   "PROJECTILE",
+   "ZHUGE"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -14254,6 +15117,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.029999999,
   "critical_multiplier": 1.5,
   "damage": {
@@ -14303,6 +15169,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.38,
   "critical_multiplier": 3.0,
   "damage": {
@@ -14366,6 +15236,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.31999999,
   "critical_multiplier": 2.8,
   "damage": {
@@ -14427,6 +15302,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -14507,6 +15385,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -14567,6 +15448,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.28,
   "critical_multiplier": 2.0,
   "damage": {
@@ -14609,6 +15493,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.28,
   "critical_multiplier": 2.8,
   "damage": {
@@ -14675,6 +15562,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.17,
   "critical_multiplier": 1.9,
   "damage": {
@@ -14757,6 +15647,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.8,
   "damage": {
@@ -14837,6 +15731,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "IMPACTEXPLODE",
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.25999999,
   "critical_multiplier": 2.2,
   "damage": {
@@ -14917,6 +15816,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 1.8,
   "damage": {
@@ -14961,6 +15863,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 1.4,
   "damage": {
@@ -15056,6 +15961,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "IMPACTEXPLODE",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.02,
   "critical_multiplier": 1.5,
   "damage": {
@@ -15104,6 +16013,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.28,
   "critical_multiplier": 2.5999999,
   "damage": {
@@ -15170,6 +16082,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.12,
   "critical_multiplier": 1.6,
   "damage": {
@@ -15217,6 +16133,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.22,
   "critical_multiplier": 2.2,
   "damage": {
@@ -15297,6 +16218,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.20999999,
   "critical_multiplier": 2.3,
   "damage": {
@@ -15348,6 +16274,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.25999999,
   "critical_multiplier": 3.0,
   "damage": {
@@ -15411,6 +16340,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "BATTERY",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -15469,6 +16403,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.0,
   "damage": {
@@ -15515,6 +16452,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.14,
   "critical_multiplier": 2.2,
   "damage": {
@@ -15559,6 +16501,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ATTICA",
+   "CROSSBOW",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 3.0,
   "damage": {
@@ -15637,6 +16584,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.25999999,
   "critical_multiplier": 2.8,
   "damage": {
@@ -15700,6 +16651,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.050000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -15769,6 +16721,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SECONDARYSHOTGUN",
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -15828,6 +16785,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.16,
   "critical_multiplier": 2.0,
   "damage": {
@@ -15872,6 +16830,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -15940,6 +16902,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SECONDARYSHOTGUN",
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -15998,6 +16965,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -16059,6 +17029,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.5999999,
   "damage": {
@@ -16121,6 +17094,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.25999999,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -16182,6 +17158,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 1.8,
   "damage": {
@@ -16245,6 +17224,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.2,
   "critical_multiplier": 1.8,
   "damage": {
@@ -16306,6 +17286,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.25999999,
   "critical_multiplier": 2.2,
   "damage": {
@@ -16370,6 +17351,12 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SECONDARYSHOTGUN",
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.5,
   "damage": {
@@ -16447,6 +17434,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.025,
   "critical_multiplier": 1.5,
   "damage": {
@@ -16525,6 +17515,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.079999998,
   "critical_multiplier": 2.0,
   "damage": {
@@ -16568,6 +17559,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.14,
   "critical_multiplier": 2.0,
   "damage": {
@@ -16612,6 +17604,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": null,
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.5999999,
   "damage": {
@@ -16656,6 +17649,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.14,
   "critical_multiplier": 2.0,
   "damage": {
@@ -16701,6 +17695,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.22,
   "critical_multiplier": 2.0,
   "damage": {
@@ -16746,6 +17743,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.16,
   "critical_multiplier": 2.0,
   "damage": {
@@ -16809,6 +17807,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE"
+  ],
   "critical_chance": 0.18000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -16855,6 +17856,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.36000001,
   "critical_multiplier": 2.8,
   "damage": {
@@ -16903,6 +17908,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.18000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -16949,6 +17955,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.23999999,
   "critical_multiplier": 3.0,
   "damage": {
@@ -16996,6 +18003,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.15000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -17055,6 +18063,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "TNJETTURBINEPISTOL"
+  ],
   "critical_chance": 0.40000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -17131,6 +18142,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -17212,6 +18226,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.039999999,
   "critical_multiplier": 1.8,
   "damage": {
@@ -17306,6 +18325,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.28,
   "critical_multiplier": 2.2,
   "damage": {
@@ -17352,6 +18372,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.40000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -17414,6 +18437,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 1.8,
   "damage": {
@@ -17477,6 +18504,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.0,
   "damage": {
@@ -17522,6 +18552,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.28,
   "critical_multiplier": 2.8,
   "damage": {
@@ -17583,6 +18616,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.8,
   "damage": {
@@ -17632,6 +18666,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SECONDARYSHOTGUN"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.2,
   "damage": {
@@ -17694,6 +18731,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.25,
   "critical_multiplier": 2.0,
   "damage": {
@@ -17739,6 +18777,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.22,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -17805,6 +18846,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.22,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -17851,6 +18893,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.14,
   "critical_multiplier": 2.0,
   "damage": {
@@ -17915,6 +18958,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 1.8,
   "damage": {
@@ -17994,6 +19042,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.12,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -18088,6 +19137,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.2,
   "damage": {
@@ -18149,6 +19199,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 1.8,
   "damage": {
@@ -18198,6 +19251,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SECONDARYSHOTGUN"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -18241,6 +19297,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.23999999,
   "critical_multiplier": 3.0,
   "damage": {
@@ -18300,6 +19357,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.16,
   "critical_multiplier": 2.0,
   "damage": {
@@ -18346,6 +19404,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.18000001,
   "critical_multiplier": 1.8,
   "damage": {
@@ -18391,6 +19450,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.059999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -18452,6 +19512,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.8,
   "damage": {
@@ -18512,6 +19573,12 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.02,
   "critical_multiplier": 1.5,
   "damage": {
@@ -18570,6 +19637,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "TNJETTURBINEPISTOL"
+  ],
   "critical_chance": 0.31999999,
   "critical_multiplier": 2.0,
   "damage": {
@@ -18614,6 +19684,7 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [],
   "critical_chance": 0.14,
   "critical_multiplier": 1.8,
   "damage": {
@@ -18660,6 +19731,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 1.5,
   "damage": {
@@ -18737,6 +19811,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.02,
   "critical_multiplier": 1.2,
   "damage": {
@@ -18799,6 +19878,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 1.8,
   "damage": {
@@ -18858,6 +19941,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 1.8,
   "damage": {
@@ -18937,6 +20024,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.12,
   "critical_multiplier": 2.0,
   "damage": {
@@ -19012,6 +20102,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 1.6,
   "damage": {
@@ -19091,6 +20184,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.17,
   "critical_multiplier": 1.5,
   "damage": {
@@ -19167,6 +20263,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.22,
   "critical_multiplier": 2.8,
   "damage": {
@@ -19247,6 +20347,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.12,
   "critical_multiplier": 1.6,
   "damage": {
@@ -19323,6 +20426,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.12,
   "critical_multiplier": 2.0,
   "damage": {
@@ -19372,6 +20479,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 1.5,
   "damage": {
@@ -19451,6 +20562,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 1.5,
   "damage": {
@@ -19514,6 +20628,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 3.0,
   "damage": {
@@ -19614,6 +20731,12 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SINGLESHOT",
+   "SNIPER_AMMO",
+   "Vectis"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.0,
   "damage": {
@@ -19693,6 +20816,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 2.0,
   "damage": {
@@ -19742,6 +20868,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
   "critical_chance": 0.28,
   "critical_multiplier": 2.0,
   "damage": {
@@ -19791,6 +20921,7 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [],
   "critical_chance": 0.11,
   "critical_multiplier": 2.0,
   "damage": {
@@ -19852,6 +20983,7 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [],
   "critical_chance": 0.1,
   "critical_multiplier": 1.5,
   "damage": {
@@ -19913,6 +21045,7 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [],
   "critical_chance": 0.15000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -19960,6 +21093,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.1,
   "critical_multiplier": 2.0,
   "damage": {
@@ -20041,6 +21178,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.075000003,
   "critical_multiplier": 1.5,
   "damage": {
@@ -20124,6 +21264,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.18000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -20183,6 +21326,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.23,
   "critical_multiplier": 1.7,
   "damage": {
@@ -20243,6 +21390,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 1.6,
   "damage": {
@@ -20289,6 +21440,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -20335,6 +21490,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 3.0,
   "damage": {
@@ -20381,6 +21540,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.059999999,
   "critical_multiplier": 1.8,
   "damage": {
@@ -20461,6 +21624,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.16,
   "critical_multiplier": 1.6,
   "damage": {
@@ -20527,6 +21694,12 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "DEPLOYABLE",
+   "PROJECTILE",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 1.5,
   "damage": {
@@ -20571,6 +21744,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.039999999,
   "critical_multiplier": 1.6,
   "damage": {
@@ -20616,6 +21793,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
   "critical_chance": 0.18000001,
   "critical_multiplier": 2.0,
   "damage": {
@@ -20674,6 +21855,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -20738,6 +21922,12 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "DEPLOYABLE",
+   "PROJECTILE",
+   "SINGLESHOT"
+  ],
   "critical_chance": 0.22,
   "critical_multiplier": 2.0,
   "damage": {
@@ -20801,6 +21991,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -20860,6 +22053,10 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.2,
   "critical_multiplier": 2.0,
   "damage": {
@@ -20936,6 +22133,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.22,
   "critical_multiplier": 2.2,
   "damage": {
@@ -21024,6 +22225,10 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "BEAM",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.25999999,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -21119,6 +22324,9 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "AOE"
+  ],
   "critical_chance": 0.30000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -21212,6 +22420,11 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.2,
   "damage": {
@@ -21254,6 +22467,9 @@
    }
   ],
   "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
   "critical_chance": 0.25,
   "critical_multiplier": 2.5,
   "damage": {
@@ -21299,6 +22515,11 @@
    }
   ],
   "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SECONDARYSHOTGUN",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.079999998,
   "critical_multiplier": 1.5,
   "damage": {

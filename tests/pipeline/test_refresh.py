@@ -8,7 +8,13 @@ from app.gamedata import store
 from app.pipeline import fixtures
 from app.pipeline.publish import StoreError
 from app.pipeline.refresh import Paths, run
-from app.pipeline.sources import Fetched, read_sources, saved_until_failure, wiki_local
+from app.pipeline.sources import (
+    Fetched,
+    export_plus,
+    read_sources,
+    saved_until_failure,
+    wiki_local,
+)
 
 
 def test_offline_refresh_writes_loadable_gamedata(paths: Paths) -> None:
@@ -17,7 +23,9 @@ def test_offline_refresh_writes_loadable_gamedata(paths: Paths) -> None:
     assert data.meta.dataset_hash == report.meta.dataset_hash
     assert data.meta.game_update
     assert len(data.weapons) == data.meta.counts["weapons"]
-    assert "wiki/Status_Effect.wikitext" in read_sources(paths.raw)
+    sources = read_sources(paths.raw)
+    assert "wiki/Status_Effect.wikitext" in sources
+    assert sources["export-plus/ExportUpgrades.json"].url.endswith("/senpai/ExportUpgrades.json")
 
 
 def test_refresh_is_deterministic(paths: Paths) -> None:
@@ -42,6 +50,23 @@ def test_missing_wiki_page_fails_before_anything_runs(paths: Paths) -> None:
     with pytest.raises(wiki_local.MissingWikiPages, match="Armor"):
         run(paths, offline=True, fetch_images=False)
     assert not paths.gamedata.exists()
+
+
+def test_missing_export_plus_file_fails_before_anything_runs(paths: Paths) -> None:
+    (paths.raw / "export-plus/ExportWeapons.json").unlink()
+    with pytest.raises(export_plus.MissingExportPlus, match=r"senpai/ExportWeapons\.json"):
+        run(paths, offline=True, fetch_images=False)
+    assert not paths.gamedata.exists()
+
+
+def test_report_lists_entries_missing_in_export_plus(paths: Paths) -> None:
+    path = paths.raw / "export-plus/ExportWeapons.json"
+    data = json.loads(path.read_text())
+    del data["/Lotus/Weapons/Tenno/Rifle/BratonPrime"]
+    path.write_text(json.dumps(data))
+    text = "\n".join(run(paths, offline=True, fetch_images=False).lines())
+    assert "not in the saved export-plus" in text
+    assert "  weapons (1): Braton Prime" in text
 
 
 def test_bad_reference_date_fails_before_publishing(paths: Paths) -> None:

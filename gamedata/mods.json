@@ -4,6 +4,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Tome",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -17,6 +18,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -42,6 +44,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Tome",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -55,6 +58,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -80,6 +84,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Tome",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -93,6 +98,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -118,6 +124,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Tome",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -131,6 +138,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -156,6 +164,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Tome",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -170,6 +179,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -195,6 +205,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Tome",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -209,6 +220,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -234,6 +246,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Tome",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -248,6 +261,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -273,6 +287,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Tome",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -287,6 +302,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -312,6 +328,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Dread",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -326,6 +343,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -357,6 +375,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -383,6 +402,9 @@
    "exilus": false,
    "family": "WeaponFireIterationsMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "SENTINEL_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -420,6 +442,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Argonak",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -434,6 +457,10 @@
    "exilus": false,
    "family": "WeaponPunctureDepthMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON",
+    "SENTINEL_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -471,6 +498,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Daikyu",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -500,6 +528,10 @@
    "exilus": false,
    "family": "SniperHeadshotMultiplierMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON",
+    "SENTINEL_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -543,6 +575,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Javlok",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -571,6 +604,10 @@
    "exilus": false,
    "family": "WeaponClipMaxMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON",
+    "SENTINEL_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -608,6 +645,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -634,6 +672,9 @@
    "exilus": false,
    "family": "WeaponDamageAmountMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [
+    "SENTINEL_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -691,6 +732,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -717,6 +759,9 @@
    "exilus": false,
    "family": "WeaponFireRateMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "SENTINEL_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -754,6 +799,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Bronco",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -782,6 +828,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -807,6 +856,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Glaxion",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -835,6 +885,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -872,6 +923,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Magnus",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -885,6 +937,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -910,6 +965,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Simulor",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -924,6 +980,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -955,6 +1012,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Vesper 77",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -995,6 +1053,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1026,6 +1085,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "AX-52",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1080,6 +1140,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1111,6 +1172,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Athodai",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -1124,6 +1186,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1155,6 +1218,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Sobek",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -1169,6 +1233,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1200,6 +1265,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1240,6 +1306,7 @@
    "exilus": false,
    "family": "WeaponCritChanceMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1277,6 +1344,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1317,6 +1385,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1354,6 +1423,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1380,6 +1450,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1437,6 +1508,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1477,6 +1549,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1514,6 +1587,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1554,6 +1628,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1591,6 +1666,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1617,6 +1693,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1654,6 +1731,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1694,6 +1772,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1723,6 +1802,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1763,6 +1843,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1792,6 +1873,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1832,6 +1914,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1869,6 +1952,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1909,6 +1993,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -1938,6 +2023,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -1978,6 +2064,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2007,6 +2094,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -2047,6 +2135,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2076,6 +2165,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -2116,6 +2206,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2145,6 +2236,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -2185,6 +2277,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2214,6 +2307,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -2254,6 +2348,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2283,6 +2378,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -2294,6 +2390,9 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "NO_AIM"
+   ],
    "is_utility": true,
    "level_stats": [
     [
@@ -2325,6 +2424,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Akbronco Prime",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -2351,6 +2451,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2382,6 +2483,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Akstiletto Prime",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -2395,6 +2497,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2426,6 +2529,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "effects": {
     "effects": [],
@@ -2437,6 +2541,7 @@
    "exilus": false,
    "family": "SecondaryExplosionRadiusMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2483,6 +2588,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "effects": {
     "effects": [],
@@ -2494,6 +2600,7 @@
    "exilus": false,
    "family": "SecondaryExplosionRadiusMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2519,6 +2626,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -2545,6 +2653,9 @@
    "exilus": false,
    "family": "CritChanceWhileAimingPistolMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "NO_AIM"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -2576,6 +2687,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -2616,6 +2728,9 @@
    "exilus": false,
    "family": "CritChanceWhileAimingPistolMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [
+    "NO_AIM"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -2662,6 +2777,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -2688,6 +2804,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "NO_AIM"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -2719,6 +2838,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -2745,6 +2865,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "NO_AIM"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -2776,6 +2899,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Catabolyst",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -2790,6 +2914,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2821,6 +2946,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "EFV-8 Mars",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -2834,6 +2960,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2865,6 +2992,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Ocucor",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -2879,6 +3007,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2910,6 +3039,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Velox",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -2924,6 +3054,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -2955,6 +3086,7 @@
    "base_drain": 0,
    "category": "secondary",
    "compat_name": "Pistol (No Aoe)",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -2968,6 +3100,9 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 10,
+   "incompatibility_tags": [
+    "AOE"
+   ],
    "is_utility": true,
    "level_stats": [
     [
@@ -3014,6 +3149,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3040,6 +3176,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "NO_AIM"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -3071,6 +3210,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3097,6 +3237,7 @@
    "exilus": false,
    "family": "WeaponCritDamageMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -3143,6 +3284,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3169,6 +3311,7 @@
    "exilus": false,
    "family": "WeaponElectricityDamageMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -3215,6 +3358,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3241,6 +3385,7 @@
    "exilus": false,
    "family": "WeaponClipMaxMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -3287,6 +3432,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3313,6 +3459,7 @@
    "exilus": false,
    "family": "WeaponCritChanceMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -3359,6 +3506,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3385,6 +3533,7 @@
    "exilus": false,
    "family": "WeaponFireDamageMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -3431,6 +3580,7 @@
    "base_drain": 0,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -3442,6 +3592,7 @@
    "exilus": true,
    "family": "WeaponPistolConvertAmmoMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -3488,6 +3639,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3514,6 +3666,7 @@
    "exilus": false,
    "family": "WeaponPistolFactionDamageCorpus",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -3560,6 +3713,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3586,6 +3740,7 @@
    "exilus": false,
    "family": "WeaponPistolFactionDamageCorrupted",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -3632,6 +3787,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3658,6 +3814,7 @@
    "exilus": false,
    "family": "WeaponPistolFactionDamageGrineer",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -3704,6 +3861,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3730,6 +3888,7 @@
    "exilus": false,
    "family": "WeaponPistolFactionDamageInfested",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -3776,6 +3935,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3802,6 +3962,7 @@
    "exilus": false,
    "family": "WeaponPistolFactionDamageMurmurs",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -3848,6 +4009,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -3859,6 +4021,7 @@
    "exilus": true,
    "family": "WeaponRecoilReductionMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -3905,6 +4068,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -3931,6 +4095,7 @@
    "exilus": false,
    "family": "WeaponReloadSpeedMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -3977,6 +4142,9 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [
+    "SEMI_AUTO"
+   ],
    "description": "Only compatible with Semi-Auto Trigger. Fire Rate cannot be modified.",
    "effects": {
     "effects": [
@@ -4017,6 +4185,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4054,6 +4223,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4094,6 +4264,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4131,6 +4302,9 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [
+    "PROJECTILE"
+   ],
    "description": "",
    "effects": {
     "effects": [],
@@ -4144,6 +4318,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [
+    "RIFLE"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -4169,6 +4346,9 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Thrown",
+   "compatibility_tags": [
+    "THROWN"
+   ],
    "description": "",
    "effects": {
     "effects": [],
@@ -4182,6 +4362,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4207,6 +4388,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -4218,6 +4400,7 @@
    "exilus": true,
    "family": "WeaponAmmoMaxMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -4249,6 +4432,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4275,6 +4459,7 @@
    "exilus": false,
    "family": "WeaponArmorPiercingDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4306,6 +4491,9 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [
+    "BEAM"
+   ],
    "description": "",
    "effects": {
     "effects": [],
@@ -4317,6 +4505,7 @@
    "exilus": true,
    "family": "WeaponBeamDistanceMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -4342,6 +4531,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -4355,6 +4545,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4386,6 +4577,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4412,6 +4604,7 @@
    "exilus": false,
    "family": "WeaponClipMaxMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4443,6 +4636,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4469,6 +4663,7 @@
    "exilus": false,
    "family": "WeaponCritChanceMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4500,6 +4695,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4526,6 +4722,7 @@
    "exilus": false,
    "family": "WeaponCritDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4557,6 +4754,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4583,6 +4781,7 @@
    "exilus": false,
    "family": "WeaponDamageAmountMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4629,6 +4828,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4655,6 +4855,7 @@
    "exilus": false,
    "family": "WeaponElectricityDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4686,6 +4887,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4712,6 +4914,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4743,6 +4946,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4769,6 +4973,7 @@
    "exilus": false,
    "family": "WeaponEventPunctureDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4800,6 +5005,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4826,6 +5032,7 @@
    "exilus": false,
    "family": "WeaponEventSlashDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4857,6 +5064,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4883,6 +5091,7 @@
    "exilus": false,
    "family": "WeaponFireDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4914,6 +5123,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -4940,6 +5150,7 @@
    "exilus": false,
    "family": "WeaponFireIterationsMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -4971,6 +5182,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5011,6 +5223,7 @@
    "exilus": false,
    "family": "WeaponFireIterationsMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5068,6 +5281,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5094,6 +5308,7 @@
    "exilus": false,
    "family": "WeaponFireRateMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5125,6 +5340,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5151,6 +5367,7 @@
    "exilus": false,
    "family": "WeaponFreezeDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5182,6 +5399,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5208,6 +5426,7 @@
    "exilus": false,
    "family": "WeaponImpactDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5239,6 +5458,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -5250,6 +5470,7 @@
    "exilus": true,
    "family": "WeaponNoiseReductionMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -5275,6 +5496,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -5286,6 +5508,7 @@
    "exilus": true,
    "family": "WeaponPistolConvertAmmoMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -5317,6 +5540,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5343,6 +5567,7 @@
    "exilus": false,
    "family": "WeaponPistolFactionDamageCorpus",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5374,6 +5599,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5400,6 +5626,7 @@
    "exilus": false,
    "family": "WeaponPistolFactionDamageCorrupted",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5431,6 +5658,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5457,6 +5685,7 @@
    "exilus": false,
    "family": "WeaponPistolFactionDamageGrineer",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5488,6 +5717,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5514,6 +5744,7 @@
    "exilus": false,
    "family": "WeaponPistolFactionDamageInfested",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5545,6 +5776,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5571,6 +5803,7 @@
    "exilus": false,
    "family": "WeaponPistolFactionDamageMurmurs",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5602,6 +5835,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -5613,6 +5847,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -5638,6 +5873,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5664,6 +5900,7 @@
    "exilus": false,
    "family": "WeaponProcTimeMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5695,6 +5932,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -5706,6 +5944,7 @@
    "exilus": true,
    "family": "WeaponProjectileSpeedMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -5731,6 +5970,7 @@
    "base_drain": 10,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -5742,6 +5982,7 @@
    "exilus": false,
    "family": "WeaponPunctureDepthMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5773,6 +6014,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -5784,6 +6026,7 @@
    "exilus": true,
    "family": "WeaponRecoilReductionMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -5809,6 +6052,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5835,6 +6079,7 @@
    "exilus": false,
    "family": "WeaponReloadSpeedMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5866,6 +6111,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5892,6 +6138,7 @@
    "exilus": false,
    "family": "WeaponSlashDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -5923,6 +6170,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -5951,6 +6199,7 @@
    "exilus": false,
    "family": "WeaponStatusChanceMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -6008,6 +6257,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6034,6 +6284,7 @@
    "exilus": false,
    "family": "WeaponStatusChanceMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -6065,6 +6316,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6091,6 +6343,7 @@
    "exilus": false,
    "family": "WeaponToxinDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -6122,6 +6375,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6176,6 +6430,7 @@
    "exilus": false,
    "family": "WeaponWeakpointCriticalChanceMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -6233,6 +6488,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Latron",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -6247,6 +6503,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [
+    "SINGLESHOT"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -6272,6 +6531,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Bow",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -6285,6 +6545,9 @@
    "exilus": false,
    "family": "BowExplosionChanceMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [
+    "CRPBOW"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -6310,6 +6573,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Bow",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6338,6 +6602,14 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "CROSSBOW",
+    "CRPBOW",
+    "GRNBOW",
+    "INFBOW",
+    "OMICRUS",
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -6369,6 +6641,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6411,6 +6684,7 @@
    "exilus": false,
    "family": "WeaponCritChanceMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -6448,6 +6722,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6474,6 +6749,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -6531,6 +6807,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6573,6 +6850,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -6610,6 +6888,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Assault Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6650,6 +6929,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -6707,6 +6987,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6735,6 +7016,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -6772,6 +7054,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Sniper",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6812,6 +7095,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -6849,6 +7133,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6889,6 +7174,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -6918,6 +7204,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -6958,6 +7245,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -6987,6 +7275,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -7027,6 +7316,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -7056,6 +7346,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -7096,6 +7387,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -7125,6 +7417,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -7165,6 +7458,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -7194,6 +7488,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -7234,6 +7529,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -7263,6 +7559,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -7291,6 +7588,7 @@
    "exilus": false,
    "family": "ShredMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -7348,6 +7646,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -7388,6 +7687,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -7417,6 +7717,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -7445,6 +7746,7 @@
    "exilus": false,
    "family": "ShredMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -7482,6 +7784,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -7522,6 +7825,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -7551,6 +7855,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Sniper",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -7562,6 +7867,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -7608,6 +7914,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Assault Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -7619,6 +7926,9 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": true,
    "level_stats": [
     [
@@ -7650,6 +7960,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Grakata",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -7664,6 +7975,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -7695,6 +8009,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Tonkor",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -7708,6 +8023,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -7733,6 +8051,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Harpak",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -7746,6 +8065,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -7777,6 +8099,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Vulkar",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -7791,6 +8114,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -7828,6 +8154,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Mutalist Quanta",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -7842,6 +8169,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -7873,6 +8203,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -7886,6 +8217,9 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": true,
    "level_stats": [
     [
@@ -7917,6 +8251,7 @@
    "base_drain": 0,
    "category": "primary",
    "compat_name": "Rifle (No Aoe)",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -7930,6 +8265,10 @@
    "exilus": true,
    "family": "BowExplosionChanceMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [
+    "AOE",
+    "POWER_WEAPON"
+   ],
    "is_utility": true,
    "level_stats": [
     [
@@ -7976,6 +8315,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Flux Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -7989,6 +8329,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -8020,6 +8363,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Penta",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8033,6 +8377,9 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": true,
    "level_stats": [
     [
@@ -8064,6 +8411,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Detron",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8077,6 +8425,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -8102,6 +8453,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Tetra",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8115,6 +8467,9 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": true,
    "level_stats": [
     [
@@ -8146,6 +8501,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -8172,6 +8528,7 @@
    "exilus": false,
    "family": "CritChanceWhileAimingRifleMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8203,6 +8560,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -8243,6 +8601,7 @@
    "exilus": false,
    "family": "CritChanceWhileAimingRifleMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8289,6 +8648,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -8315,6 +8675,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8346,6 +8707,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Assault Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -8372,6 +8734,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -8403,6 +8768,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Akjagara",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8416,6 +8782,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -8447,6 +8816,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Basmu",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8461,6 +8831,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8492,6 +8863,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Battacor",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8506,6 +8878,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8537,6 +8910,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Embolist",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8551,6 +8925,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8582,6 +8957,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Gorgon",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -8610,6 +8986,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8653,6 +9030,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Hema",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8667,6 +9045,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8698,6 +9077,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "EFV-5 Jupiter",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8712,6 +9092,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8743,6 +9124,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Sporothrix",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8757,6 +9139,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8788,6 +9171,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Tiberon",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8802,6 +9186,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8833,6 +9218,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Tigris",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8846,6 +9232,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -8877,6 +9266,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Zylok",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8890,6 +9280,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -8921,6 +9312,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Paris Prime",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -8949,6 +9341,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -8986,6 +9379,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Ogris",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -8999,6 +9393,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -9030,6 +9427,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Sniper",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -9041,6 +9439,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9072,6 +9471,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Soma Prime",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -9086,6 +9486,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9117,6 +9518,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -9143,6 +9545,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9174,6 +9577,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Sniper",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -9200,6 +9604,7 @@
    "exilus": false,
    "family": "SniperReloadDamageMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9225,6 +9630,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -9251,6 +9657,7 @@
    "exilus": false,
    "family": "WeaponFactionDamageCorpus",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9297,6 +9704,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -9323,6 +9731,7 @@
    "exilus": false,
    "family": "WeaponFactionDamageCorrupted",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9369,6 +9778,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -9395,6 +9805,7 @@
    "exilus": false,
    "family": "WeaponFactionDamageGrineer",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9441,6 +9852,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -9467,6 +9879,7 @@
    "exilus": false,
    "family": "WeaponFactionDamageInfested",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9513,6 +9926,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -9539,6 +9953,7 @@
    "exilus": false,
    "family": "WeaponFactionDamageMurmurs",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9585,6 +10000,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Sniper",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -9611,6 +10027,7 @@
    "exilus": false,
    "family": "SniperReloadDamageMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9657,6 +10074,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -9683,6 +10101,7 @@
    "exilus": false,
    "family": "WeaponClipMaxMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9729,6 +10148,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -9755,6 +10175,7 @@
    "exilus": false,
    "family": "WeaponFreezeDamageMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9801,6 +10222,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "effects": {
     "effects": [],
@@ -9812,6 +10234,7 @@
    "exilus": false,
    "family": "WeaponIncreaseRadialExplosionMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9858,6 +10281,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -9869,6 +10293,7 @@
    "exilus": true,
    "family": "WeaponRecoilReductionMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -9915,6 +10340,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -9941,6 +10367,7 @@
    "exilus": false,
    "family": "WeaponReloadSpeedMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -9987,6 +10414,9 @@
    "base_drain": 0,
    "category": "primary",
    "compat_name": "Assault Rifle",
+   "compatibility_tags": [
+    "ASSAULT_AMMO"
+   ],
    "description": "",
    "effects": {
     "effects": [],
@@ -9998,6 +10428,7 @@
    "exilus": true,
    "family": "WeaponRifleConvertAmmoMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -10044,6 +10475,10 @@
    "base_drain": 0,
    "category": "primary",
    "compat_name": "Sniper",
+   "compatibility_tags": [
+    "LAUNCHER_AMMO",
+    "SNIPER_AMMO"
+   ],
    "description": "",
    "effects": {
     "effects": [],
@@ -10055,6 +10490,7 @@
    "exilus": true,
    "family": "WeaponSnipersConvertAmmoMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -10101,6 +10537,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Penta",
+   "compatibility_tags": [],
    "description": "Grenades leave a burning patch on impact.",
    "effects": {
     "effects": [],
@@ -10115,6 +10552,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -10146,6 +10586,9 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [
+    "SEMI_AUTO"
+   ],
    "description": "Only compatible with Semi-Auto Trigger. Fire Rate cannot be modified.",
    "effects": {
     "effects": [
@@ -10186,6 +10629,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "MODULAR_GUN"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -10223,6 +10669,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -10249,6 +10696,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -10286,6 +10734,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Sniper",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -10312,6 +10761,7 @@
    "exilus": false,
    "family": "SniperHeadshotMultiplierMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -10343,6 +10793,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Sniper",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -10369,6 +10820,7 @@
    "exilus": false,
    "family": "SniperReloadDamageMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -10394,6 +10846,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -10405,6 +10858,7 @@
    "exilus": true,
    "family": "WeaponAmmoMaxMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -10436,6 +10890,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -10462,6 +10917,7 @@
    "exilus": false,
    "family": "WeaponArmorPiercingDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -10493,6 +10949,9 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "compatibility_tags": [
+    "BEAM"
+   ],
    "description": "",
    "effects": {
     "effects": [],
@@ -10504,6 +10963,7 @@
    "exilus": true,
    "family": "WeaponBeamDistanceMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -10529,6 +10989,9 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "compatibility_tags": [
+    "BEAM"
+   ],
    "description": "",
    "effects": {
     "effects": [],
@@ -10542,6 +11005,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -10573,6 +11037,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -10586,6 +11051,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -10617,6 +11083,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Bow",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -10628,6 +11095,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -10659,6 +11127,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -10685,6 +11154,7 @@
    "exilus": false,
    "family": "WeaponClipMaxMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -10716,6 +11186,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -10742,6 +11213,7 @@
    "exilus": false,
    "family": "WeaponCritChanceMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -10773,6 +11245,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -10799,6 +11272,7 @@
    "exilus": false,
    "family": "WeaponCritDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -10830,6 +11304,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -10843,6 +11318,7 @@
    "exilus": false,
    "family": "WeaponDamageAmountMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -10889,6 +11365,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -10915,6 +11392,7 @@
    "exilus": false,
    "family": "WeaponDamageAmountMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -10961,6 +11439,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -10987,6 +11466,7 @@
    "exilus": false,
    "family": "WeaponElectricityDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11018,6 +11498,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11044,6 +11525,7 @@
    "exilus": false,
    "family": "WeaponEventPunctureDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11075,6 +11557,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11101,6 +11584,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11132,6 +11616,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11158,6 +11643,7 @@
    "exilus": false,
    "family": "WeaponEventSlashDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11189,6 +11675,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11215,6 +11702,7 @@
    "exilus": false,
    "family": "WeaponFactionDamageCorpus",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11246,6 +11734,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11272,6 +11761,7 @@
    "exilus": false,
    "family": "WeaponFactionDamageCorrupted",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11303,6 +11793,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11329,6 +11820,7 @@
    "exilus": false,
    "family": "WeaponFactionDamageGrineer",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11360,6 +11852,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11386,6 +11879,7 @@
    "exilus": false,
    "family": "WeaponFactionDamageInfested",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11417,6 +11911,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11443,6 +11938,7 @@
    "exilus": false,
    "family": "WeaponFactionDamageMurmurs",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11474,6 +11970,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11500,6 +11997,7 @@
    "exilus": false,
    "family": "WeaponFireDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11531,6 +12029,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11557,6 +12056,7 @@
    "exilus": false,
    "family": "WeaponFireIterationsMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11588,6 +12088,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11628,6 +12129,7 @@
    "exilus": false,
    "family": "WeaponFireIterationsMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11685,6 +12187,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11713,6 +12216,7 @@
    "exilus": false,
    "family": "WeaponFireRateMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11744,6 +12248,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11770,6 +12275,7 @@
    "exilus": false,
    "family": "WeaponFreezeDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11801,6 +12307,9 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Unique",
+   "compatibility_tags": [
+    "PROJECTILE"
+   ],
    "description": "",
    "effects": {
     "effects": [],
@@ -11814,6 +12323,9 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "IMPACTEXPLODE"
+   ],
    "is_utility": true,
    "level_stats": [
     [
@@ -11845,6 +12357,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -11871,6 +12384,7 @@
    "exilus": false,
    "family": "WeaponImpactDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11902,6 +12416,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "effects": {
     "effects": [],
@@ -11913,6 +12428,7 @@
    "exilus": false,
    "family": "WeaponIncreaseRadialExplosionMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -11938,6 +12454,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -11949,6 +12466,7 @@
    "exilus": true,
    "family": "WeaponNoiseReductionMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -11974,6 +12492,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -12000,6 +12519,7 @@
    "exilus": false,
    "family": "WeaponProcTimeMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12025,6 +12545,9 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [
+    "PROJECTILE"
+   ],
    "description": "",
    "effects": {
     "effects": [],
@@ -12036,6 +12559,7 @@
    "exilus": true,
    "family": "WeaponProjectileSpeedMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -12061,6 +12585,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -12072,6 +12597,7 @@
    "exilus": false,
    "family": "WeaponPunctureDepthMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12103,6 +12629,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -12114,6 +12641,7 @@
    "exilus": true,
    "family": "WeaponRecoilReductionMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -12139,6 +12667,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -12165,6 +12694,7 @@
    "exilus": false,
    "family": "WeaponReloadSpeedMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12196,6 +12726,7 @@
    "base_drain": 0,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -12209,6 +12740,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -12255,6 +12787,9 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Assault Rifle",
+   "compatibility_tags": [
+    "ASSAULT_AMMO"
+   ],
    "description": "",
    "effects": {
     "effects": [],
@@ -12266,6 +12801,7 @@
    "exilus": true,
    "family": "WeaponRifleConvertAmmoMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -12297,6 +12833,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -12323,6 +12860,7 @@
    "exilus": false,
    "family": "WeaponSlashDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12354,6 +12892,10 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Sniper",
+   "compatibility_tags": [
+    "LAUNCHER_AMMO",
+    "SNIPER_AMMO"
+   ],
    "description": "",
    "effects": {
     "effects": [],
@@ -12365,6 +12907,7 @@
    "exilus": true,
    "family": "WeaponSnipersConvertAmmoMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -12396,6 +12939,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -12409,6 +12953,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12440,6 +12985,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -12468,6 +13014,7 @@
    "exilus": false,
    "family": "WeaponStatusChanceMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12525,6 +13072,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -12551,6 +13099,7 @@
    "exilus": false,
    "family": "WeaponStatusChanceMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12582,6 +13131,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -12608,6 +13158,7 @@
    "exilus": false,
    "family": "WeaponToxinDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12639,6 +13190,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -12693,6 +13245,7 @@
    "exilus": false,
    "family": "WeaponWeakpointCriticalChanceMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12750,6 +13303,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -12761,6 +13315,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -12786,6 +13341,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -12826,6 +13382,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12863,6 +13420,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -12889,6 +13447,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12920,6 +13479,7 @@
    "base_drain": 2,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -12946,6 +13506,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -12977,6 +13538,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -13017,6 +13579,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13054,6 +13617,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -13094,6 +13658,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13131,6 +13696,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Sniper",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -13144,6 +13710,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13169,6 +13736,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -13180,6 +13748,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -13205,6 +13774,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -13231,6 +13801,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13262,6 +13833,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -13288,6 +13860,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13319,6 +13892,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -13332,6 +13906,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13357,6 +13932,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Rifle",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -13370,6 +13946,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13395,6 +13972,7 @@
    "base_drain": 6,
    "category": "secondary",
    "compat_name": "Pistol",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -13409,6 +13987,11 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [
+    "POWER_WEAPON",
+    "SENTINEL_MOD",
+    "SINGLESHOT"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -13434,6 +14017,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -13460,6 +14044,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13491,6 +14076,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -13519,6 +14105,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13550,6 +14137,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -13561,6 +14149,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13592,6 +14181,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "PRIMARY",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -13603,6 +14193,7 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -13634,6 +14225,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -13674,6 +14266,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13703,6 +14296,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -13743,6 +14337,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13772,6 +14367,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -13812,6 +14408,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13841,6 +14438,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -13867,6 +14465,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -13924,6 +14523,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -13964,6 +14564,7 @@
    "exilus": false,
    "family": "WeaponCritChanceMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -14001,6 +14602,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14027,6 +14629,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -14064,6 +14667,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14104,6 +14708,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -14141,6 +14746,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14181,6 +14787,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -14218,6 +14825,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14258,6 +14866,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -14287,6 +14896,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14327,6 +14937,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -14356,6 +14967,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14396,6 +15008,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -14425,6 +15038,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14465,6 +15079,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -14494,6 +15109,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14534,6 +15150,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -14563,6 +15180,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14603,6 +15221,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -14632,6 +15251,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14658,6 +15278,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -14695,6 +15316,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -14706,6 +15328,9 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": true,
    "level_stats": [
     [
@@ -14737,6 +15362,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Convectrix",
+   "compatibility_tags": [],
    "description": "Only consume ammo when dealing damage.",
    "effects": {
     "effects": [
@@ -14765,6 +15391,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -14796,6 +15425,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14822,6 +15452,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -14853,6 +15486,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14879,6 +15513,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -14910,6 +15547,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -14936,6 +15574,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -14967,6 +15608,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Drakgoon",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -14980,6 +15622,9 @@
    "exilus": true,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": true,
    "level_stats": [
     [
@@ -15005,6 +15650,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Sobek",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -15018,6 +15664,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -15049,6 +15698,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -15060,6 +15710,7 @@
    "exilus": true,
    "family": "WeaponNoiseReductionMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -15085,6 +15736,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -15111,6 +15763,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -15142,6 +15797,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -15168,6 +15824,7 @@
    "exilus": false,
    "family": "WeaponClipMaxMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -15214,6 +15871,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -15240,6 +15898,7 @@
    "exilus": false,
    "family": "WeaponCritChanceMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -15286,6 +15945,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -15312,6 +15972,7 @@
    "exilus": false,
    "family": "WeaponCritDamageMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -15358,6 +16019,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -15384,6 +16046,7 @@
    "exilus": false,
    "family": "WeaponDamageAmountMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -15430,6 +16093,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -15456,6 +16120,7 @@
    "exilus": false,
    "family": "WeaponElectricityDamageMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -15502,6 +16167,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -15528,6 +16194,7 @@
    "exilus": false,
    "family": "WeaponFreezeDamageMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -15574,6 +16241,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -15585,6 +16253,7 @@
    "exilus": true,
    "family": "WeaponRecoilReductionMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -15631,6 +16300,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -15657,6 +16327,7 @@
    "exilus": false,
    "family": "WeaponReloadSpeedMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -15703,6 +16374,7 @@
    "base_drain": 0,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -15714,6 +16386,7 @@
    "exilus": true,
    "family": "WeaponShotgunConvertAmmoMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -15760,6 +16433,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -15786,6 +16460,7 @@
    "exilus": false,
    "family": "WeaponShotgunFactionDamageCorpus",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -15832,6 +16507,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -15858,6 +16534,7 @@
    "exilus": false,
    "family": "WeaponShotgunFactionDamageCorrupted",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -15904,6 +16581,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -15930,6 +16608,7 @@
    "exilus": false,
    "family": "WeaponShotgunFactionDamageGrineer",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -15976,6 +16655,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16002,6 +16682,7 @@
    "exilus": false,
    "family": "WeaponShotgunFactionDamageInfested",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16048,6 +16729,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16074,6 +16756,7 @@
    "exilus": false,
    "family": "WeaponShotgunFactionDamageMurmurs",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16120,6 +16803,9 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [
+    "SEMI_AUTO"
+   ],
    "description": "Only compatible with Semi-Auto Trigger. Fire Rate cannot be modified.",
    "effects": {
     "effects": [
@@ -16160,6 +16846,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [
+    "MODULAR_GUN"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -16197,6 +16886,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16237,6 +16927,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16274,6 +16965,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -16285,6 +16977,7 @@
    "exilus": true,
    "family": "WeaponAmmoMaxMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -16316,6 +17009,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16342,6 +17036,7 @@
    "exilus": false,
    "family": "WeaponArmorPiercingDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16373,6 +17068,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16399,6 +17095,7 @@
    "exilus": false,
    "family": "WeaponClipMaxMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16430,6 +17127,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16456,6 +17154,7 @@
    "exilus": false,
    "family": "WeaponCritChanceMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16487,6 +17186,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16513,6 +17213,7 @@
    "exilus": false,
    "family": "WeaponCritDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16544,6 +17245,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16570,6 +17272,7 @@
    "exilus": false,
    "family": "WeaponDamageAmountMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16601,6 +17304,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16627,6 +17331,7 @@
    "exilus": false,
    "family": "WeaponElectricityDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16658,6 +17363,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16684,6 +17390,7 @@
    "exilus": false,
    "family": "WeaponEventPunctureDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16715,6 +17422,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16741,6 +17449,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16772,6 +17481,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16798,6 +17508,7 @@
    "exilus": false,
    "family": "WeaponEventSlashDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16829,6 +17540,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16855,6 +17567,7 @@
    "exilus": false,
    "family": "WeaponFireDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16886,6 +17599,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16912,6 +17626,7 @@
    "exilus": false,
    "family": "WeaponFireIterationsMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -16943,6 +17658,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -16983,6 +17699,7 @@
    "exilus": false,
    "family": "WeaponFireIterationsMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17040,6 +17757,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17066,6 +17784,7 @@
    "exilus": false,
    "family": "WeaponFireRateMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17097,6 +17816,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17123,6 +17843,7 @@
    "exilus": false,
    "family": "WeaponFreezeDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17154,6 +17875,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17180,6 +17902,7 @@
    "exilus": false,
    "family": "WeaponImpactDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17211,6 +17934,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -17224,6 +17948,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17255,6 +17980,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17281,6 +18007,7 @@
    "exilus": false,
    "family": "WeaponProcTimeMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17312,6 +18039,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -17323,6 +18051,7 @@
    "exilus": true,
    "family": "WeaponProjectileSpeedMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -17348,6 +18077,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -17359,6 +18089,7 @@
    "exilus": true,
    "family": "WeaponProjectileSpeedMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -17416,6 +18147,7 @@
    "base_drain": 10,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -17427,6 +18159,7 @@
    "exilus": false,
    "family": "WeaponPunctureDepthMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17458,6 +18191,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -17469,6 +18203,7 @@
    "exilus": true,
    "family": "WeaponRecoilReductionMod",
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -17494,6 +18229,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17520,6 +18256,7 @@
    "exilus": false,
    "family": "WeaponReloadSpeedMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17551,6 +18288,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -17562,6 +18300,7 @@
    "exilus": true,
    "family": "WeaponShotgunConvertAmmoMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": true,
    "level_stats": [
     [
@@ -17593,6 +18332,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17619,6 +18359,7 @@
    "exilus": false,
    "family": "WeaponShotgunFactionDamageCorpus",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17650,6 +18391,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17676,6 +18418,7 @@
    "exilus": false,
    "family": "WeaponShotgunFactionDamageCorrupted",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17707,6 +18450,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17733,6 +18477,7 @@
    "exilus": false,
    "family": "WeaponShotgunFactionDamageGrineer",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17764,6 +18509,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17790,6 +18536,7 @@
    "exilus": false,
    "family": "WeaponShotgunFactionDamageInfested",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17821,6 +18568,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17847,6 +18595,7 @@
    "exilus": false,
    "family": "WeaponShotgunFactionDamageMurmurs",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17878,6 +18627,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17904,6 +18654,7 @@
    "exilus": false,
    "family": "WeaponSlashDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -17935,6 +18686,7 @@
    "base_drain": 2,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -17963,6 +18715,7 @@
    "exilus": false,
    "family": "WeaponStatusChanceMod",
    "fusion_limit": 10,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18020,6 +18773,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -18046,6 +18800,7 @@
    "exilus": false,
    "family": "WeaponStatusChanceMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18077,6 +18832,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Shotgun",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -18103,6 +18859,7 @@
    "exilus": false,
    "family": "WeaponToxinDamageMod",
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18134,6 +18891,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Acrid",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -18162,6 +18920,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18191,6 +18950,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Ballistica",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -18219,6 +18979,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18248,6 +19009,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Bolto",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -18262,6 +19024,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18291,6 +19054,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Burston Prime",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -18319,6 +19083,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18348,6 +19113,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Embolist",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -18376,6 +19142,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18405,6 +19172,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Furis",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -18418,6 +19186,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18447,6 +19216,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Grinlok",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -18475,6 +19245,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18504,6 +19275,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Hek",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -18532,6 +19304,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [
+    "SYNDICATEMODBLOCKED"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -18561,6 +19336,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Kunai",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -18589,6 +19365,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18618,6 +19395,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Lanka",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -18632,6 +19410,9 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [
+    "POWER_WEAPON"
+   ],
    "is_utility": false,
    "level_stats": [
     [
@@ -18661,6 +19442,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Miter",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -18675,6 +19457,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18704,6 +19487,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Panthera",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -18718,6 +19502,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18747,6 +19532,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Sobek",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -18775,6 +19561,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18804,6 +19591,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Spectra",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -18817,6 +19605,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18846,6 +19635,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Supra",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -18860,6 +19650,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18889,6 +19680,7 @@
    "base_drain": 4,
    "category": "secondary",
    "compat_name": "Viper",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [],
@@ -18903,6 +19695,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18932,6 +19725,7 @@
    "base_drain": 4,
    "category": "primary",
    "compat_name": "Vulkar",
+   "compatibility_tags": [],
    "description": "",
    "effects": {
     "effects": [
@@ -18960,6 +19754,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 3,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [
@@ -18989,6 +19784,7 @@
    "base_drain": 6,
    "category": "primary",
    "compat_name": "Higasa",
+   "compatibility_tags": [],
    "description": "Alternate Fire applies a random Status Effect to enemies hit.",
    "effects": {
     "effects": [
@@ -19017,6 +19813,7 @@
    "exilus": false,
    "family": null,
    "fusion_limit": 5,
+   "incompatibility_tags": [],
    "is_utility": false,
    "level_stats": [
     [

@@ -1,0 +1,1054 @@
+{
+ "/Lotus/Weapons/ClanTech/Energy/Railgun": {
+  "accuracy": 100,
+  "behaviours": [
+   {
+    "chargedProjectile": {
+     "attack": {
+      "DT_ELECTRICITY": 525,
+      "procChance": 0.25
+     }
+    },
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 10,
+     "procChance": 0.1
+    },
+    "projectile": {
+     "attack": {
+      "DT_ELECTRICITY": 200,
+      "procChance": 0.25
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerCharge"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "PROJECTILE",
+   "SNIPER_AMMO"
+  ],
+  "criticalChance": 0.2,
+  "criticalMultiplier": 2,
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   525,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/ClanTech/RailgunDesc",
+  "excludeFromMarket": true,
+  "fireRate": 0,
+  "holsterCategory": "SNIPER",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Lanka.png",
+  "introducedAt": 1369347222,
+  "magazineSize": 10,
+  "masteryReq": 10,
+  "multishot": 1,
+  "name": "/Lotus/Language/ClanTech/Railgun",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1.05,
+  "parentName": "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+  "procChance": 0.25,
+  "productCategory": "LongGuns",
+  "reloadTime": 2,
+  "slot": 1,
+  "totalDamage": 525,
+  "tradable": false,
+  "trigger": "CHARGE",
+  "variantType": "VT_NORMAL"
+ },
+ "/Lotus/Weapons/Corpus/Pistols/CrpAirPistol/CrpAirPistolArray": {
+  "accuracy": 100,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 150,
+     "procChance": 0
+    },
+    "projectile": {
+     "embedDeathAttack": {
+      "DT_IMPACT": 100
+     },
+     "explosiveAttack": {
+      "DT_IMPACT": 50,
+      "procChance": 0.25
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
+  "criticalChance": 0.1,
+  "criticalMultiplier": 2,
+  "damagePerShot": [
+   50,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Items/CrpAirPistolArrayDesc",
+  "fireRate": 1.25,
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Sonicor.png",
+  "introducedAt": 1443751533,
+  "magazineSize": 15,
+  "masteryReq": 2,
+  "multishot": 1,
+  "name": "/Lotus/Language/Items/CrpAirPistolArrayName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1.15,
+  "parentName": "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+  "platinumCost": 200,
+  "procChance": 0,
+  "productCategory": "Pistols",
+  "reloadTime": 3,
+  "slot": 0,
+  "totalDamage": 50,
+  "tradable": false,
+  "trigger": "SEMI",
+  "variantType": "VT_NORMAL"
+ },
+ "/Lotus/Weapons/Corpus/Pistols/CrpSentAmalgPistol/CrpSentAmalgPistol": {
+  "accuracy": 1.818182,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "projectile": {
+     "attack": {
+      "DT_IMPACT": 50,
+      "procChance": 0.32
+     },
+     "embedDeathAttack": {
+      "DT_GAS": 100,
+      "procChance": 0.32
+     },
+     "explosiveAttack": {
+      "DT_GAS": 41,
+      "procChance": 0.32
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerAuto"
+   },
+   {
+    "burst": {
+     "count": 3,
+     "delay": 0.08
+    },
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 3.33333,
+     "DT_PUNCTURE": 3.33333,
+     "DT_SLASH": 3.33334,
+     "procChance": 0.1
+    },
+    "projectile": {
+     "attack": {
+      "DT_IMPACT": 2.88,
+      "DT_PUNCTURE": 30.239999,
+      "DT_SLASH": 38.880001,
+      "procChance": 0.32
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerBurst"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "PROJECTILE"
+  ],
+  "criticalChance": 0.08,
+  "criticalMultiplier": 1.4,
+  "damagePerShot": [
+   50,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   41,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Weapons/CrpSentAmlgPistolDesc",
+  "fireRate": 4.666667,
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/CrpSentAmalgPistol.png",
+  "introducedAt": 1558560685,
+  "magazineSize": 11,
+  "masteryReq": 8,
+  "multishot": 1,
+  "name": "/Lotus/Language/Weapons/CrpSentAmlgPistolName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1,
+  "parentName": "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistol",
+  "platinumCost": 175,
+  "procChance": 0.32,
+  "productCategory": "Pistols",
+  "reloadTime": 2.2,
+  "slot": 0,
+  "totalDamage": 91,
+  "tradable": false,
+  "trigger": "AUTO",
+  "variantType": "VT_NORMAL"
+ },
+ "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hind/KuvaHind": {
+  "accuracy": 33.333332,
+  "behaviours": [
+   {
+    "burst": {
+     "count": 5,
+     "delay": 0.07
+    },
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 7.5,
+     "DT_PUNCTURE": 7.5,
+     "DT_SLASH": 15.0,
+     "procChance": 0.33
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerBurst"
+   },
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 18.0,
+     "DT_PUNCTURE": 18.0,
+     "DT_SLASH": 54.000002,
+     "procChance": 0.21
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   },
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 6.0,
+     "DT_PUNCTURE": 6.0,
+     "DT_SLASH": 18.000001,
+     "procChance": 0.33
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerAuto"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "ASSAULT_AMMO"
+  ],
+  "criticalChance": 0.25,
+  "criticalMultiplier": 2.1,
+  "damagePerShot": [
+   7.5,
+   7.5,
+   15,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Weapons/KuvaHindDesc",
+  "excludeFromMarket": true,
+  "fireRate": 9.09091,
+  "holsterCategory": "RIFLE",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/KuvaHind.png",
+  "introducedAt": 1580842710,
+  "magazineSize": 90,
+  "masteryReq": 15,
+  "maxLevelCap": 40,
+  "multishot": 1,
+  "name": "/Lotus/Language/Weapons/KuvaHindName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1.1,
+  "parentName": "/Lotus/Weapons/Grineer/LongGuns/BurstRifle/GrnBurstRifle",
+  "platinumCost": 225,
+  "procChance": 0.33,
+  "productCategory": "LongGuns",
+  "reloadTime": 2.3,
+  "slot": 1,
+  "totalDamage": 30,
+  "tradable": false,
+  "trigger": "BURST",
+  "variantType": "VT_KUVA"
+ },
+ "/Lotus/Weapons/Operator/Pistols/DrifterPistol/DrifterPistolPlayerWeapon": {
+  "accuracy": 16,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 7.5,
+     "DT_PUNCTURE": 7.5,
+     "DT_SLASH": 15.0,
+     "procChance": 0
+    },
+    "projectile": {
+     "attack": {
+      "DT_RADIANT": 2000,
+      "procChance": 0.2
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   },
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 7.5,
+     "DT_PUNCTURE": 7.5,
+     "DT_SLASH": 15.0,
+     "procChance": 0
+    },
+    "projectile": {
+     "attack": {
+      "DT_RADIANT": 3600,
+      "procChance": 0.5
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
+  "creditsCost": 4000,
+  "criticalChance": 0.4,
+  "criticalMultiplier": 2,
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2000,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Weapons/DrifterPistolDesc",
+  "excludeFromMarket": true,
+  "fireRate": 3.0,
+  "holsterCategory": "PISTOL",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/DrifterPistol.png",
+  "magazineSize": 10,
+  "masteryReq": 0,
+  "multishot": 1,
+  "name": "/Lotus/Language/Weapons/DrifterPistolName",
+  "noise": "SILENT",
+  "omegaAttenuation": 1,
+  "parentName": "/Lotus/Weapons/Sentients/OperatorAmplifiers/OperatorAmpWeapon",
+  "procChance": 0.2,
+  "productCategory": "OperatorAmps",
+  "reloadTime": 2,
+  "slot": 1,
+  "totalDamage": 2000,
+  "tradable": false,
+  "trigger": "SEMI",
+  "variantType": "VT_NORMAL"
+ },
+ "/Lotus/Weapons/Sentients/SentOctaMiniGun/SentOctaMiniGun": {
+  "accuracy": 100,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_SENTIENT": 33,
+     "procChance": 0.19
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerAuto"
+   },
+   {
+    "burst": {
+     "count": 2,
+     "delay": 0.05
+    },
+    "fireIterations": 1,
+    "impact": {
+     "DT_SENTIENT": 34,
+     "procChance": 0.26
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerBurst"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "PROJECTILE",
+   "ASSAULT_AMMO"
+  ],
+  "criticalChance": 0.25,
+  "criticalMultiplier": 2.5,
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   33,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Weapons/TnoOctaMiniGunDesc",
+  "excludeFromMarket": true,
+  "fireRate": 13.000001,
+  "holsterCategory": "RIFLE",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/TnoOctaMiniGun.png",
+  "introducedAt": 1783780320,
+  "magazineSize": 150,
+  "masteryReq": 14,
+  "multishot": 1,
+  "name": "/Lotus/Language/Weapons/TnoOctaMiniGunName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 0.5,
+  "parentName": "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+  "platinumCost": 240,
+  "procChance": 0.19,
+  "productCategory": "LongGuns",
+  "reloadTime": 1,
+  "slot": 1,
+  "totalDamage": 33,
+  "tradable": false,
+  "trigger": "AUTO",
+  "variantType": "VT_NORMAL"
+ },
+ "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire": {
+  "accuracy": 100,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 8.4,
+     "DT_PUNCTURE": 3.6,
+     "procChance": 0.1
+    },
+    "projectile": {
+     "attack": {
+      "DT_IMPACT": 17.5,
+      "DT_PUNCTURE": 7.5
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerAuto"
+   }
+  ],
+  "codexSecret": true,
+  "compatibilityTags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
+  "criticalChance": 0.08,
+  "criticalMultiplier": 1.6,
+  "damagePerShot": [
+   17.5,
+   7.5,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Weapons/GrimoireDesc",
+  "excludeFromMarket": true,
+  "fireRate": 1.5,
+  "holsterCategory": "SMG",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Grimoire.png",
+  "masteryReq": 10,
+  "multishot": 1,
+  "name": "/Lotus/Language/Weapons/GrimoireName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 0.6,
+  "parentName": "/Lotus/Weapons/Tenno/Grimoire/TnGrimoire",
+  "procChance": 0.1,
+  "productCategory": "Pistols",
+  "reloadTime": 2,
+  "slot": 5,
+  "totalDamage": 25,
+  "tradable": false,
+  "trigger": "AUTO",
+  "variantType": "VT_NORMAL"
+ },
+ "/Lotus/Weapons/Tenno/Grimoire/TnGrimoire": {
+  "accuracy": 100,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "projectile": {
+     "attack": {
+      "DT_ELECTRICITY": 100,
+      "procChance": 0.26
+     },
+     "explosiveAttack": {
+      "DT_ELECTRICITY": 50,
+      "procChance": 0.26
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerAuto"
+   },
+   {
+    "projectile": {
+     "attack": {
+      "DT_ELECTRICITY": 350,
+      "procChance": 0.26
+     },
+     "explosiveAttack": {
+      "DT_ELECTRICITY": 250,
+      "procChance": 0.26
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   }
+  ],
+  "codexSecret": true,
+  "compatibilityTags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
+  "criticalChance": 0.2,
+  "criticalMultiplier": 2,
+  "damagePerShot": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   150,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Weapons/GrimoireDesc",
+  "excludeFromMarket": true,
+  "fireRate": 1.5,
+  "holsterCategory": "SMG",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Grimoire.png",
+  "introducedAt": 1702483917,
+  "masteryReq": 10,
+  "multishot": 1,
+  "name": "/Lotus/Language/Weapons/GrimoireName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 0.6,
+  "parentName": "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire",
+  "procChance": 0.26,
+  "productCategory": "Pistols",
+  "reloadTime": 0.01,
+  "slot": 0,
+  "totalDamage": 150,
+  "tradable": false,
+  "trigger": "AUTO",
+  "variantType": "VT_NORMAL"
+ },
+ "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston": {
+  "accuracy": 25,
+  "behaviours": [
+   {
+    "burst": {
+     "count": 3,
+     "delay": 0.04
+    },
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 13.8,
+     "DT_PUNCTURE": 13.8,
+     "DT_SLASH": 18.399999,
+     "procChance": 0.3
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerBurst"
+   },
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_FIRE": 13,
+     "procChance": 0.3
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerAuto"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "ASSAULT_AMMO"
+  ],
+  "criticalChance": 0.18,
+  "criticalMultiplier": 1.8,
+  "damagePerShot": [
+   13.8,
+   13.8,
+   18.4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Items/PrimeBurstonDesc",
+  "excludeFromMarket": true,
+  "fireRate": 9.375,
+  "holsterCategory": "RIFLE",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/BurstonPrime.png",
+  "introducedAt": 1387429518,
+  "magazineSize": 45,
+  "masteryReq": 12,
+  "multishot": 1,
+  "name": "/Lotus/Language/Items/PrimeBurstonName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1.35,
+  "parentName": "/Lotus/Weapons/Tenno/Rifle/BurstRifle",
+  "procChance": 0.3,
+  "productCategory": "LongGuns",
+  "reloadTime": 2,
+  "slot": 1,
+  "totalDamage": 46,
+  "tradable": false,
+  "trigger": "BURST",
+  "variantType": "VT_PRIME"
+ },
+ "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex": {
+  "accuracy": 16,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 18.0,
+     "DT_PUNCTURE": 144.000002,
+     "DT_SLASH": 17.999994,
+     "procChance": 0.25
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   },
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 3.33333,
+     "DT_PUNCTURE": 3.33333,
+     "DT_SLASH": 3.33334,
+     "procChance": 0.1
+    },
+    "projectile": {
+     "attack": {
+      "DT_IMPACT": 400,
+      "DT_RADIATION": 800,
+      "procChance": 0.44
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "SEMI_AUTO"
+  ],
+  "creditsCost": 50000,
+  "criticalChance": 0.25,
+  "criticalMultiplier": 2,
+  "damagePerShot": [
+   18,
+   144,
+   17.999994,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Items/PrimeLexDesc",
+  "excludeFromMarket": true,
+  "fireRate": 2.083334,
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/LexPrime.png",
+  "introducedAt": 1397107694,
+  "magazineSize": 8,
+  "masteryReq": 8,
+  "multishot": 1,
+  "name": "/Lotus/Language/Items/PrimeLexName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1.2,
+  "parentName": "/Lotus/Weapons/Tenno/Pistol/HeavyPistol",
+  "procChance": 0.25,
+  "productCategory": "Pistols",
+  "reloadTime": 2.35,
+  "slot": 0,
+  "totalDamage": 180,
+  "tradable": false,
+  "trigger": "SEMI",
+  "variantType": "VT_PRIME"
+ },
+ "/Lotus/Weapons/Tenno/Rifle/BratonPrime": {
+  "accuracy": 28.571428,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 1.75,
+     "DT_PUNCTURE": 12.25,
+     "DT_SLASH": 21.000001,
+     "procChance": 0.26
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerAuto"
+   },
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 28.000001,
+     "DT_PUNCTURE": 2.8,
+     "DT_SLASH": 39.2,
+     "procChance": 0.3
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerAuto"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "ASSAULT_AMMO"
+  ],
+  "creditsCost": 25000,
+  "criticalChance": 0.12,
+  "criticalMultiplier": 2,
+  "damagePerShot": [
+   1.75,
+   12.25,
+   21,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Items/BratonPrimeDesc",
+  "excludeFromMarket": true,
+  "fireRate": 9.583334,
+  "holsterCategory": "RIFLE",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/BratonPrime.png",
+  "introducedAt": 1373680361,
+  "magazineSize": 75,
+  "masteryReq": 8,
+  "multishot": 1,
+  "name": "/Lotus/Language/Items/BratonPrimeName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1.25,
+  "parentName": "/Lotus/Weapons/Tenno/Rifle/Rifle",
+  "procChance": 0.26,
+  "productCategory": "LongGuns",
+  "reloadTime": 2.15,
+  "slot": 1,
+  "totalDamage": 35,
+  "tradable": false,
+  "trigger": "AUTO",
+  "variantType": "VT_PRIME"
+ },
+ "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal": {
+  "accuracy": 6.666666,
+  "behaviours": [
+   {
+    "fireIterations": 10,
+    "impact": {
+     "DT_IMPACT": 25.999999,
+     "DT_PUNCTURE": 6.0,
+     "DT_SLASH": 8.000002,
+     "procChance": 1.2
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   },
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 3.33333,
+     "DT_PUNCTURE": 3.33333,
+     "DT_SLASH": 3.33334,
+     "procChance": 0.1
+    },
+    "projectile": {
+     "attack": {
+      "DT_IMPACT": 100,
+      "procChance": 0.44
+     },
+     "explosiveAttack": {
+      "DT_EXPLOSION": 70,
+      "DT_PUNCTURE": 40,
+      "DT_SLASH": 90,
+      "procChance": 0.44
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   }
+  ],
+  "codexSecret": true,
+  "compatibilityTags": [
+   "SEMI_AUTO"
+  ],
+  "creditsCost": 25000,
+  "criticalChance": 0.18,
+  "criticalMultiplier": 2.2,
+  "damagePerShot": [
+   26,
+   6,
+   8.000002,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Items/StrunVandalDesc",
+  "excludeFromMarket": true,
+  "fireRate": 2.5,
+  "holsterCategory": "SHOTGUN",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/StrunWraith.png",
+  "introducedAt": 1378230578,
+  "magazineSize": 10,
+  "masteryReq": 10,
+  "multishot": 10,
+  "name": "/Lotus/Language/Items/StrunVandalName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 1.35,
+  "parentName": "/Lotus/Weapons/Tenno/Shotgun/Shotgun",
+  "procChance": 0.12,
+  "productCategory": "LongGuns",
+  "reloadTime": 5,
+  "slot": 1,
+  "totalDamage": 40,
+  "tradable": false,
+  "trigger": "SEMI",
+  "variantType": "VT_VARIANT"
+ },
+ "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol": {
+  "accuracy": 16,
+  "behaviours": [
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 15.0,
+     "DT_PUNCTURE": 120.000001,
+     "DT_SLASH": 14.999995,
+     "procChance": 0.25
+    },
+    "projectile": {
+     "attack": {
+      "DT_IMPACT": 64.000002,
+      "DT_SLASH": 96.000003,
+      "procChance": 0.22
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerSemiAuto"
+   },
+   {
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 3.33333,
+     "DT_PUNCTURE": 3.33333,
+     "DT_SLASH": 3.33334,
+     "procChance": 0.1
+    },
+    "projectile": {
+     "attack": {
+      "DT_IMPACT": 100,
+      "procChance": 0.22
+     },
+     "explosiveAttack": {
+      "DT_RADIATION": 300,
+      "procChance": 0.22
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerAuto"
+   }
+  ],
+  "codexSecret": false,
+  "compatibilityTags": [
+   "PROJECTILE",
+   "AOE"
+  ],
+  "creditsCost": 50000,
+  "criticalChance": 0.22,
+  "criticalMultiplier": 2.2,
+  "damagePerShot": [
+   64,
+   0,
+   96,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Weapons/ZarimanHeavyPistolDesc",
+  "excludeFromMarket": true,
+  "fireRate": 2.5,
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/ZarimanHeavyPistol.png",
+  "introducedAt": 1651071726,
+  "magazineSize": 12,
+  "masteryReq": 14,
+  "multishot": 1,
+  "name": "/Lotus/Language/Weapons/ZarimanHeavyPistolName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 0.5,
+  "parentName": "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+  "procChance": 0.22,
+  "productCategory": "Pistols",
+  "reloadTime": 2,
+  "slot": 0,
+  "totalDamage": 160,
+  "tradable": false,
+  "trigger": "SEMI",
+  "variantType": "VT_NORMAL"
+ }
+}
