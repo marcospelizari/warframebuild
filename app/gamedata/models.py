@@ -163,6 +163,8 @@ class Incarnon(Model):
     unique_name: str
     name: str
     attacks: list[str]  # Incarnon Form shot parts (reference/main_attack.json)
+    no_multishot: list[str] = []  # parts that ignore Multishot bonuses
+    note: str | None = None  # modelling limit shown in /calc assumptions
     perks: list[Perk]
 
 
@@ -180,7 +182,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[13] = 13
+    schema_version: Literal[14] = 14
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

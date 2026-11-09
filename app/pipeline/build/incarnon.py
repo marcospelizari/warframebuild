@@ -26,28 +26,44 @@ def build(
         parsed, form = parse_perk(r.lines, r.notes)
         effects = overrides.apply(f"{gun.unique_name}#{r.name}", parsed)
         perks[gun.unique_name].append(Perk(tier=r.tier, name=r.name, form=form, effects=effects))
-    attacks = _attacks(table, {w.unique_name: w for w in guns}, set(perks))
+    rows = _rows(table, {w.unique_name: w for w in guns}, set(perks))
     names = {w.unique_name: w.name for w in guns}
     return [
-        Incarnon(unique_name=u, name=names[u], attacks=attacks[u], perks=p)
+        Incarnon(
+            unique_name=u,
+            name=names[u],
+            attacks=rows[u]["incarnon"],
+            no_multishot=rows[u].get("no_multishot", []),
+            note=rows[u].get("note"),
+            perks=p,
+        )
         for u, p in sorted(perks.items())
     ]
 
 
-def _attacks(
+def _rows(
     table: dict[str, Any], guns: dict[str, Weapon], incarnon: set[str]
-) -> dict[str, list[str]]:
+) -> dict[str, dict[str, Any]]:
     rows: dict[str, dict[str, Any]] = table.get("weapons", {})
     missing = sorted(guns[u].name for u in incarnon - rows.keys())
     stray = sorted(rows.keys() - incarnon)
     if missing or stray:
         raise RefreshError(f"reference/{FILE}: no row for {missing}; rows without perks {stray}")
-    out = {}
     for uid, row in rows.items():
         require_verified(row, FILE, uid)
-        parts = row.get("incarnon")
+        parts, flat = row.get("incarnon"), row.get("no_multishot", [])
         known = {a.name for a in guns[uid].attacks}
-        if not parts or not isinstance(parts, list) or not set(parts) <= known:
-            raise RefreshError(f"reference/{FILE} {guns[uid].name}: unknown attacks {parts}")
-        out[uid] = [str(p) for p in parts]
-    return out
+        if not (
+            isinstance(parts, list)
+            and parts
+            and all(isinstance(p, str) for p in parts)
+            and len(set(parts)) == len(parts)
+            and set(parts) <= known
+            and isinstance(flat, list)
+            and all(isinstance(p, str) for p in flat)
+            and set(flat) <= set(parts)
+            and isinstance(row.get("source"), str)
+            and isinstance(row.get("note"), str | None)
+        ):
+            raise RefreshError(f"reference/{FILE} {guns[uid].name}: invalid row {row}")
+    return rows

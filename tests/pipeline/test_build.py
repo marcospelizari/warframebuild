@@ -546,3 +546,24 @@ def test_laetum_non_crit_perks_carry_their_conditions(paths: Paths) -> None:
         "Devouring Attrition": Trigger.ON_NONCRIT,
         "Overwhelming Attrition": Trigger.ON_NONCRIT_NO_STATUS,
     }
+
+
+@pytest.mark.parametrize(
+    "change",
+    [
+        {"incarnon": ["Incarnon Form", "Incarnon Form"]},
+        {"incarnon": [{"attack": "Incarnon Form"}]},
+        {"no_multishot": ["Normal Attack"]},
+        {"source": None},
+        {"no_multishot": [{"attack": "Incarnon Form"}]},
+        {"note": 5},
+    ],
+)
+def test_bad_main_attack_row_fails(paths: Paths, change: dict[str, Any]) -> None:
+    table = paths.reference / "main_attack.json"
+    data = json.loads(table.read_text())
+    row = next(r for r in data["weapons"].values() if r["name"] == "Lex Prime")
+    row.update(change)
+    table.write_text(json.dumps(data))
+    with pytest.raises(RefreshError, match=r"main_attack\.json"):
+        build(paths.raw, paths.reference)

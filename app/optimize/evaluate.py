@@ -1,4 +1,4 @@
-"""One build from loaded data: arsenal stats and direct DPS (step 4.6, no search)."""
+"""One build from loaded data: arsenal stats and hit DPS (no search)."""
 
 import math
 from collections.abc import Sequence
@@ -16,6 +16,7 @@ from app.gamedata.models import Attack, Effects, Incarnon, Mod, Perk, Weapon
 MAX_SLOTS = 8
 BOW = "Bow"  # WFCD weapon_type
 Form = Literal["normal", "incarnon"]
+AOE = "AoE"  # WFCD shot_type
 
 
 class BuildError(ValueError):
@@ -33,12 +34,14 @@ class Evaluation:
     magazine: float | None
     reload_time: float
     direct_burst_dps: float
-    direct_sustained_dps: float
+    direct_sustained_dps: float | None  # None: one shot costs more ammo than the magazine
     bonus_element: tuple[DamageType, float] | None
     ammo_cost_assumed: bool  # attack lists none -> 1
     not_modelled: list[str]  # mods with partial/unsupported effects (R6)
     sets_ignored: list[str]  # set bonuses not applied yet
     inactive_perks: list[str]  # chosen perks that do nothing in this form
+    aoe_parts: bool  # AoE parts counted at full damage on the target
+    note: str | None  # main_attack.json limit for this gun
 
 
 def check(weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None) -> None:
@@ -106,7 +109,7 @@ def _parts(
         )
         return [(stats, weapon.attacks[0] if weapon.attacks else None)]  # main attack: step 8
     if incarnon is None:
-        raise BuildError("no_incarnon_form", f"{weapon.name} has no Incarnon Form", "form")
+        raise ValueError(f"{weapon.name} has no Incarnon Form")
     attacks = {a.name: a for a in weapon.attacks}
     return [
         (
@@ -140,7 +143,11 @@ def evaluate(
     share = weapon.bonus_element.max_share if bonus and weapon.bonus_element else None
     bonus_element = (bonus, share) if bonus is not None and share is not None else None
     parts = _parts(weapon, incarnon, form)
-    hits = [modded_hit(stats, b, bonus_element) for stats, _ in parts]
+    flat = set(incarnon.no_multishot) if incarnon and form == "incarnon" else set()
+    no_ms = [x for x in b if x[0].stat != Stat.MULTISHOT]
+    hits = [
+        modded_hit(stats, no_ms if a and a.name in flat else b, bonus_element) for stats, a in parts
+    ]
     attack = parts[0][1]
     ammo_cost = attack.ammo_cost if attack and attack.ammo_cost is not None else None
     magazine = (
@@ -172,11 +179,15 @@ def evaluate(
         magazine=magazine,
         reload_time=reload,
         direct_burst_dps=burst,
-        direct_sustained_dps=burst * shooting_share(firing, rate),
+        direct_sustained_dps=None
+        if magazine is not None and firing.ammo_cost > magazine
+        else burst * shooting_share(firing, rate),
         bonus_element=bonus_element,
         ammo_cost_assumed=ammo_cost is None,
         not_modelled=[m.name for m in mods if m.effects.support != Support.FULL]
         + [p.name for p in active if p.effects.support != Support.FULL],
         sets_ignored=sorted({m.mod_set for m in mods if m.mod_set}),
         inactive_perks=[p.name for p in picked if p not in active],
+        aoe_parts=any(a is not None and a.shot_type == AOE for _, a in parts[1:]),
+        note=incarnon.note if incarnon and form == "incarnon" else None,
     )

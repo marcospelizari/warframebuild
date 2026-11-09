@@ -147,7 +147,7 @@ export interface components {
             /** Direct Burst */
             direct_burst: number;
             /** Direct Sustained */
-            direct_sustained: number;
+            direct_sustained: number | null;
         };
         /** Health */
         Health: {
