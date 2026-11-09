@@ -18,7 +18,7 @@ from app.domain.hit import AttackStats, Bonus, ModdedHit
 from app.domain.stats import value_for
 from app.gamedata.models import Attack, Effects, Headshot, Incarnon, Mod, Perk, Weapon
 from app.optimize.head import AOE, HEAD_TRIGGERS, head_burst
-from app.optimize.shot import Form, shot
+from app.optimize.shot import Form, Shot, shot
 
 MAX_SLOTS = 8
 ZOOM = "Zoom bonus"
@@ -146,6 +146,68 @@ def _parts(
     ]
 
 
+@dataclass(frozen=True)
+class Loadout:
+    """A checked build, ready to shoot: shared by `evaluate` and the combat timeline."""
+
+    weapon: Weapon
+    form: Form
+    picked: list[Perk]
+    active: list[Perk]
+    named: list[tuple[str, Effects]]  # mods + active perks, slot order
+    parts: list[tuple[AttackStats, Attack | None]]
+    no_multishot: set[str]
+    bonus_element: tuple[DamageType, float] | None
+    mark: Headshot | None  # this form is aimed at heads
+    sets_ignored: list[str]  # mod set bonuses not applied yet
+    note: str | None  # main_attack.json limit for this form
+
+    def body_bonuses(self) -> list[Bonus]:
+        return bonuses(self.weapon, [e for _, e in self.named])
+
+    def aimed(self) -> list[tuple[str, Effects]]:
+        """Entries counted on a form aimed at heads: + the sniper's highest zoom."""
+        zoom = self.weapon.zoom
+        return self.named + ([(ZOOM, zoom)] if zoom else [])
+
+    def head_bonuses(self, triggered: bool) -> list[Bonus]:
+        entries = [e for _, e in self.aimed()]
+        triggers = HEAD_TRIGGERS if triggered else frozenset()
+        return bonuses(self.weapon, entries, aiming=True, triggers=triggers)
+
+    def shot(self, b: list[Bonus]) -> Shot:
+        return shot(self.weapon, self.parts, self.no_multishot, b, self.bonus_element, self.form)
+
+
+def loadout(
+    weapon: Weapon,
+    mods: Sequence[Mod],
+    bonus: DamageType | None = None,
+    incarnon: Incarnon | None = None,
+    perks: Sequence[str] = (),
+    form: Form | None = None,
+) -> Loadout:
+    """`form` defaults to Incarnon Form for Incarnon guns (Q11)."""
+    check(weapon, mods, bonus)
+    picked = chosen_perks(incarnon, perks)
+    form = form or ("incarnon" if incarnon else "normal")
+    active = [p for p in picked if p.form in ("both", form)]
+    share = weapon.bonus_element.max_share if bonus and weapon.bonus_element else None
+    return Loadout(
+        weapon=weapon,
+        form=form,
+        picked=picked,
+        active=active,
+        named=[(m.name, m.effects) for m in mods] + [(p.name, p.effects) for p in active],
+        parts=_parts(weapon, incarnon, form),
+        no_multishot=set(incarnon.no_multishot) if incarnon and form == "incarnon" else set(),
+        bonus_element=(bonus, share) if bonus is not None and share is not None else None,
+        mark=next((h for h in weapon.headshot if h.form == form), None),
+        sets_ignored=sorted({m.mod_set for m in mods if m.mod_set}),
+        note=incarnon.note if incarnon and form == "incarnon" else None,
+    )
+
+
 def evaluate(
     weapon: Weapon,
     mods: Sequence[Mod],
@@ -155,38 +217,31 @@ def evaluate(
     form: Form | None = None,
     head: Head | None = None,
 ) -> Evaluation:
-    """`form` defaults to Incarnon Form for Incarnon guns (Q11). `head`: the head a form aimed
-    at heads is scored on (until enemies exist, the reference head)."""
-    check(weapon, mods, bonus)
-    picked = chosen_perks(incarnon, perks)
-    form = form or ("incarnon" if incarnon else "normal")
-    active = [p for p in picked if p.form in ("both", form)]
-    named = [(m.name, m.effects) for m in mods] + [(p.name, p.effects) for p in active]
-    b = bonuses(weapon, [e for _, e in named])
-    share = weapon.bonus_element.max_share if bonus and weapon.bonus_element else None
-    bonus_element = (bonus, share) if bonus is not None and share is not None else None
-    parts = _parts(weapon, incarnon, form)
-    no_ms = set(incarnon.no_multishot) if incarnon and form == "incarnon" else set()
-    body = shot(weapon, parts, no_ms, b, bonus_element, form)
+    """`head`: the head a form aimed at heads is scored on (the reference head in /calc)."""
+    return evaluate_loadout(loadout(weapon, mods, bonus, incarnon, perks, form), head)
+
+
+def evaluate_loadout(lo: Loadout, head: Head | None = None) -> Evaluation:
+    weapon = lo.weapon
+    body = lo.shot(lo.body_bonuses())
     burst = math.fsum(h.average_shot() for h in body.hits) * body.rate
-    mark = next((h for h in weapon.headshot if h.form == form), None)
     head_dps: tuple[float, float] | None = None
     triggered: tuple[str, ...] = ()
-    if mark and head:
-        aimed = named + ([(ZOOM, weapon.zoom)] if weapon.zoom else [])
-        entries = [e for _, e in aimed]
-        zero = bonuses(weapon, entries, aiming=True)
-        full = bonuses(weapon, entries, aiming=True, triggers=HEAD_TRIGGERS)
+    named = list(lo.named)
+    if lo.mark and head:
         head_dps = (
-            head_burst(shot(weapon, parts, no_ms, zero, bonus_element, form), parts, head, mark),
-            head_burst(shot(weapon, parts, no_ms, full, bonus_element, form), parts, head, mark),
+            head_burst(lo.shot(lo.head_bonuses(False)), lo.parts, head, lo.mark),
+            head_burst(lo.shot(lo.head_bonuses(True)), lo.parts, head, lo.mark),
         )
-        triggered = tuple(n for n, e in aimed if any(x.trigger in HEAD_TRIGGERS for x in e.effects))
-    if mark and weapon.zoom and weapon.zoom.support != Support.FULL:
+        triggered = tuple(
+            n for n, e in lo.aimed() if any(x.trigger in HEAD_TRIGGERS for x in e.effects)
+        )
+    if lo.mark and weapon.zoom and weapon.zoom.support != Support.FULL:
         named.append((ZOOM, weapon.zoom))  # the zoom belongs to every form aimed at heads
+    parts, mark, picked = lo.parts, lo.mark, lo.picked
     return Evaluation(
         hit=body.hits[0],
-        form=form,
+        form=lo.form,
         perks=[p.name for p in picked],
         fire_rate=body.rate,
         magazine=body.magazine,
@@ -195,13 +250,13 @@ def evaluate(
         direct_sustained_dps=None
         if body.magazine is not None and body.firing.ammo_cost > body.magazine
         else burst * shooting_share(body.firing, body.rate),
-        bonus_element=bonus_element,
+        bonus_element=lo.bonus_element,
         ammo_cost_assumed=body.ammo_cost_assumed,
         not_modelled=[n for n, e in named if e.support != Support.FULL],
-        sets_ignored=sorted({m.mod_set for m in mods if m.mod_set}),
-        inactive_perks=[p.name for p in picked if p not in active],
+        sets_ignored=lo.sets_ignored,
+        inactive_perks=[p.name for p in picked if p not in lo.active],
         aoe_parts=any(a is not None and a.shot_type == AOE for _, a in parts[1:]),
-        note=incarnon.note if incarnon and form == "incarnon" else None,
+        note=lo.note,
         headshot=mark,
         head_burst_dps=head_dps,
         head_triggered=triggered,

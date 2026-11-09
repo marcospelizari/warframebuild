@@ -29,6 +29,13 @@
         "representative Sentient enemy (enemies.json, step 8)"
       ]
     },
+    "Blast_Damage": {
+      "title": "Blast_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
     "Calculating_Bonuses": {
       "title": "Calculating_Bonuses",
       "impact": "high",
@@ -51,11 +58,25 @@
         "representative Infested enemy (enemies.json, step 8)"
       ]
     },
+    "Cinematic_Damage": {
+      "title": "Damage/Cinematic_Damage",
+      "impact": "medium",
+      "feeds": [
+        "bleed (Slash DoT) damage type: no armor, no faction damage type modifier (combat, step 8b)"
+      ]
+    },
     "Coda_Weapons": {
       "title": "Coda_Weapons",
       "impact": "medium",
       "feeds": [
         "Weapon.bonus_element: guns, element choices, max share (Q29)"
+      ]
+    },
+    "Cold_Damage": {
+      "title": "Cold_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
       ]
     },
     "Compatibility": {
@@ -101,6 +122,13 @@
         "representative Corpus enemy (enemies.json, step 8)"
       ]
     },
+    "Corrosive_Damage": {
+      "title": "Corrosive_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
     "Corrupted": {
       "title": "Corrupted",
       "impact": "medium",
@@ -143,11 +171,25 @@
         "damage types and status table"
       ]
     },
+    "Damage_Type_Modifier": {
+      "title": "Damage_Type_Modifier",
+      "impact": "low",
+      "feeds": [
+        "damage type modifier rules (modifiers stack multiplicatively, floor -100%)"
+      ]
+    },
     "Damage_over_Time": {
       "title": "Damage_over_Time",
       "impact": "high",
       "feeds": [
         "DoT tick count, element bonus per literal type, DoT scaling (step 4)"
+      ]
+    },
+    "Electricity_Damage": {
+      "title": "Electricity_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
       ]
     },
     "Enemy_Body_Parts": {
@@ -160,9 +202,9 @@
     },
     "Enemy_Level_Scaling": {
       "title": "Enemy_Level_Scaling",
-      "impact": "medium",
+      "impact": "high",
       "feeds": [
-        "enemy stats at Steel Path level (enemies.json)"
+        "enemy health, shield and armor scaling curves (enemy_scaling.json, step 8a)"
       ]
     },
     "Epitaph": {
@@ -228,6 +270,13 @@
         "per-status direct-damage bonus, not on AoE (step 4)"
       ]
     },
+    "Gas_Damage": {
+      "title": "Gas_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
     "Grineer": {
       "title": "Grineer",
       "impact": "medium",
@@ -239,7 +288,8 @@
       "title": "Heat_Damage",
       "impact": "high",
       "feeds": [
-        "Heat armor strip timing, Heat stacking (step 8)"
+        "Heat armor strip timing, Heat stacking (step 8)",
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
       ]
     },
     "Heavy_Gunner": {
@@ -254,6 +304,13 @@
       "impact": "high",
       "feeds": [
         "forced Slash on crit, combined with Internal Bleeding (step 4)"
+      ]
+    },
+    "Impact_Damage": {
+      "title": "Impact_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
       ]
     },
     "Incarnon": {
@@ -335,6 +392,109 @@
         "representative The Murmur enemy (enemies.json, step 8)"
       ]
     },
+    "Magnetic_Damage": {
+      "title": "Magnetic_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_anarchs": {
+      "title": "Module:Enemies/data/anarchs",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_corpus": {
+      "title": "Module:Enemies/data/corpus",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_grineer": {
+      "title": "Module:Enemies/data/grineer",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_infestation": {
+      "title": "Module:Enemies/data/infestation",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_narmer": {
+      "title": "Module:Enemies/data/narmer",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_orokin": {
+      "title": "Module:Enemies/data/orokin",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_scaldra": {
+      "title": "Module:Enemies/data/scaldra",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_sentient": {
+      "title": "Module:Enemies/data/sentient",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_stalker": {
+      "title": "Module:Enemies/data/stalker",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_techrot": {
+      "title": "Module:Enemies/data/techrot",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_themurmur": {
+      "title": "Module:Enemies/data/themurmur",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
+    "Module_Enemies_unaffiliated": {
+      "title": "Module:Enemies/data/unaffiliated",
+      "impact": "high",
+      "format": "lua",
+      "feeds": [
+        "enemy base health, shield, armor, base level, faction, Overguard (enemies.json, step 8a)"
+      ]
+    },
     "Module_Weapons_data_melee": {
       "title": "Module:Weapons/data/melee",
       "impact": "low",
@@ -377,7 +537,7 @@
       "title": "Damage/Overview_Table",
       "impact": "high",
       "feeds": [
-        "faction modifiers (factions.json)"
+        "faction modifier signs only (+/-); values from the <Type>_Damage pages"
       ]
     },
     "Phenmor": {
@@ -409,6 +569,20 @@
         "arcane damage bonus stacking group (step 4)"
       ]
     },
+    "Puncture_Damage": {
+      "title": "Puncture_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
+    "Radiation_Damage": {
+      "title": "Radiation_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
     "Riven_Mods": {
       "title": "Riven_Mods",
       "impact": "low",
@@ -434,7 +608,7 @@
       "title": "Scaldra_Dedicant",
       "impact": "medium",
       "feeds": [
-        "representative Scaldra enemy (enemies.json, step 8)"
+        "former representative Scaldra enemy, replaced by Scaldra Eradicator (innate Overguard; G74)"
       ]
     },
     "Scaldra_Jaeger": {
@@ -458,6 +632,13 @@
         "faction enemy list (enemies.json)"
       ]
     },
+    "Slash_Damage": {
+      "title": "Slash_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
     "Sniper_Rifle": {
       "title": "Sniper_Rifle",
       "impact": "medium",
@@ -472,6 +653,13 @@
       "feeds": [
         "status, DoT and Blast rules (step 4)",
         "mechanics checklist"
+      ]
+    },
+    "Tau_Damage": {
+      "title": "Tau_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
       ]
     },
     "Techrot": {
@@ -527,7 +715,28 @@
       "title": "The_Steel_Path",
       "impact": "medium",
       "feeds": [
-        "Steel Path modifiers (R1)"
+        "Steel Path health and shield multipliers, no armor bonus (enemy_scaling.json, R1)"
+      ]
+    },
+    "Toxin_Damage": {
+      "title": "Toxin_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
+    "Viral_Damage": {
+      "title": "Viral_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
+    "Void_Damage": {
+      "title": "Void_Damage",
+      "impact": "high",
+      "feeds": [
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
       ]
     }
   }

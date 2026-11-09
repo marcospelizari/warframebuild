@@ -5,7 +5,9 @@ from pathlib import Path
 
 from app.gamedata.models import (
     Arcane,
+    Enemy,
     Exclusion,
+    FactionModifiers,
     Incarnon,
     Join,
     Mod,
@@ -13,7 +15,7 @@ from app.gamedata.models import (
     ReferenceHead,
     Weapon,
 )
-from app.pipeline.build import arcanes, headshot, incarnon, mods, weapons
+from app.pipeline.build import arcanes, enemies, headshot, incarnon, mods, weapons
 from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.effects import Overrides
 from app.pipeline.build.fire import FireOverrides
@@ -22,6 +24,8 @@ from app.pipeline.errors import RefreshError
 from app.pipeline.sources import (
     export_plus,
     load_json,
+    wiki_damage_types,
+    wiki_enemies,
     wiki_incarnon,
     wiki_local,
     wiki_progenitor,
@@ -43,6 +47,8 @@ class Dataset:
     game_update: str | None
     incarnon: list[Incarnon]
     reference_head: ReferenceHead
+    enemies: list[Enemy]
+    factions: list[FactionModifiers]
 
 
 def build(raw_dir: Path, reference_dir: Path) -> Dataset:
@@ -84,11 +90,20 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         overrides,
         reference(reference_dir / "main_attack.json"),
     )
+    titles = {p.stem: p.title for p in wiki_local.pages(reference_dir)}
     gun_list, head = headshot.apply(
         reference(reference_dir / "headshot.json"),
         gun_list,
         {i.unique_name for i in perks},
-        {p.stem: p.title for p in wiki_local.pages(reference_dir)},
+        titles,
+    )
+    enemy_list, factions = enemies.build(
+        reference(reference_dir / "enemies.json"),
+        reference(reference_dir / "enemy_scaling.json"),
+        wiki_enemies.load(raw_dir / "wiki"),
+        wiki_damage_types.load(raw_dir / "wiki"),
+        (raw_dir / "wiki/Enemy_Body_Parts.wikitext").read_text(encoding="utf-8").splitlines(),
+        titles,
     )
     overrides.check_all_used()
     _check_arcane_classes(arcane_list, gun_list)
@@ -108,6 +123,8 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         weapons.game_update(wfcd),
         perks,
         head,
+        enemy_list,
+        factions,
     )
 
 

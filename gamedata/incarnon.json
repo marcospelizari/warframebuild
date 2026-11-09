@@ -6169,11 +6169,13 @@
  {
   "attacks": [
    "Incarnon Form",
+   "Incarnon Form Embed AoE",
+   "Incarnon Form Embed AoE",
    "Incarnon Form Embed AoE"
   ],
   "name": "Vectis Prime",
   "no_multishot": [],
-  "note": "Body hit: embed damage counted as one hit; headshot explosion not counted",
+  "note": "Body hit: direct hit + 3 embed hits, all counted when the shot lands; headshot explosion not counted",
   "perks": [
    {
     "effects": {
@@ -12472,11 +12474,13 @@
  {
   "attacks": [
    "Incarnon Form",
+   "Incarnon Form Embed AoE",
+   "Incarnon Form Embed AoE",
    "Incarnon Form Embed AoE"
   ],
   "name": "Vectis",
   "no_multishot": [],
-  "note": "Body hit: embed damage counted as one hit; headshot explosion not counted",
+  "note": "Body hit: direct hit + 3 embed hits, all counted when the shot lands; headshot explosion not counted",
   "perks": [
    {
     "effects": {

@@ -1,4 +1,4 @@
-"""POST /api/calc: evaluate one build (no search; hit damage, no DoT or Blast)."""
+"""POST /api/calc: evaluate one build (no search): hit DPS and the combat score."""
 
 import math
 
@@ -12,17 +12,22 @@ from app.api.schemas import (
     BonusElement,
     Build,
     CalcRequest,
+    Combat,
     Dps,
+    EnemyFight,
+    FactionScore,
     HeadDps,
     Headshot,
     Slot,
     Source,
     WeaponRef,
 )
+from app.domain.combat import CAP_S
 from app.domain.headshot import Head
 from app.gamedata.models import Mod, ReferenceHead, Weapon
 from app.gamedata.store import GameData
-from app.optimize.evaluate import MAX_SLOTS, BuildError, Evaluation, evaluate
+from app.optimize import combat
+from app.optimize.evaluate import MAX_SLOTS, BuildError, Evaluation, evaluate_loadout, loadout
 
 WIKI = "https://wiki.warframe.com/w/"
 ERRORS: dict[int | str, dict[str, object]] = {
@@ -51,22 +56,44 @@ def calc(body: CalcRequest, request: Request) -> Build:
         if mod is None:
             raise ApiFailure(422, "unknown_mod", "no such mod", f"mods[{i}]")
         mods.append(mod)
+    incarnon = data.incarnon_by_id.get(weapon.unique_name)
     try:
-        result = evaluate(
-            weapon,
-            mods,
-            body.bonus_element,
-            data.incarnon_by_id.get(weapon.unique_name),
-            body.perks,
-            head=Head(data.reference_head.multiplier, data.reference_head.critical),
-        )
+        lo = loadout(weapon, mods, body.bonus_element, incarnon, body.perks)
     except BuildError as error:
         raise ApiFailure(422, error.code, error.message, error.field) from error
-    return _build(data.meta.dataset_hash, weapon, mods, result, data.reference_head)
+    head = Head(data.reference_head.multiplier, data.reference_head.critical)
+    result = evaluate_loadout(lo, head)
+    fights = _combat(combat.combat(lo, data.enemies, data.factions), lo.mark is not None)
+    return _build(data.meta.dataset_hash, weapon, mods, result, data.reference_head, fights)
+
+
+def _combat(c: combat.Combat, aimed: bool) -> Combat:
+    return Combat(
+        level=c.enemies[0].enemy.level if c.enemies else 0,
+        cap_s=CAP_S,
+        enemies=[
+            EnemyFight(
+                name=r.enemy.name,
+                faction=r.enemy.faction,
+                target=r.enemy.head.part if aimed and r.enemy.head else "Body",
+                ttk=r.outcome.ttk,
+                removed=r.outcome.removed,
+                cost=r.outcome.cost,
+            )
+            for r in c.enemies
+        ],
+        factions=[FactionScore(faction=f, score=v) for f, v in c.factions.items()],
+        score=c.score,
+    )
 
 
 def _build(
-    dataset_hash: str, weapon: Weapon, mods: list[Mod], e: Evaluation, head: ReferenceHead
+    dataset_hash: str,
+    weapon: Weapon,
+    mods: list[Mod],
+    e: Evaluation,
+    head: ReferenceHead,
+    fights: Combat,
 ) -> Build:
     hit = e.hit
     slots = [
@@ -123,16 +150,53 @@ def _build(
         headshot=Headshot(reason=e.headshot.reason, source=_source(e.headshot.source))
         if e.headshot
         else None,
-        assumptions=_assumptions(weapon, e),
+        combat=fights,
+        assumptions=_assumptions(weapon, e, fights),
     )
 
 
-def _assumptions(weapon: Weapon, e: Evaluation) -> list[Assumption]:
+def _assumptions(weapon: Weapon, e: Evaluation, fights: Combat) -> list[Assumption]:
     out = [
         Assumption(id="max_rank", text="Mods at max rank"),
         Assumption(id="unconditional", text="Only unconditional mod effects (as in the arsenal)"),
         Assumption(id="main_attack", text=_MAIN_ATTACK[e.form]),
-        Assumption(id="direct_only", text="DPS from hits on the body; no DoT or Blast"),
+        Assumption(id="direct_only", text="DPS figures: direct hits on the body; no DoT or Blast"),
+        Assumption(
+            id="combat",
+            text=(
+                f"Combat: representative Steel Path enemies at level {fights.level}, expected "
+                f"values (average crits and procs), {fights.cap_s:g} s cap; DoT, Blast, armor "
+                "strip, Viral, Magnetic, Puncture and Cold count; Cold freeze, Magnetic "
+                "shield-break burst, Sentient adaptation and Overguard not modelled"
+            ),
+            value=fights.level,
+            source=Source(kind="wiki", url=WIKI + "Enemy_Level_Scaling"),
+        ),
+        Assumption(
+            id="combat_simplified",
+            text=(
+                "Combat simplifications: all parts of a shot land with it; Electricity and Gas "
+                "procs tick with their own +1; Heat keeps burning while procs come faster than "
+                "its duration; the sniper combo never decays (no misses, reload gaps ignored); "
+                "beams ramp from their start value to full over 0.6 s (linear)"
+            ),
+        ),
+        Assumption(
+            id="bane",
+            text=(
+                "Faction damage mods hit Corpus, Grineer, Infested, Orokin and The Murmur; "
+                "none for Sentient, Scaldra and Techrot (not listed)"
+            ),
+            source=Source(kind="wiki", url=WIKI + "Faction_Damage_Mods"),
+        ),
+        Assumption(
+            id="armor",
+            text=(
+                "Armor per the wiki formula; a Simulacrum check at level 1 saw less armor "
+                "than it predicts (open)"
+            ),
+            source=Source(kind="wiki", url=WIKI + "Armor"),
+        ),
     ]
     if e.headshot:
         text = (

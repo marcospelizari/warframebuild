@@ -7,7 +7,8 @@ from app.domain.elements import Part
 from app.domain.status import (
     CrowdControl,
     blast_detonation,
-    blast_expiry,
+    blast_hits,
+    blast_proc,
     boosted,
     chance_of_at_least_one,
     combined_chance,
@@ -15,6 +16,7 @@ from app.domain.status import (
     dot_tick,
     dot_ticks,
     expected_procs,
+    heat_ticks,
     proc_shares,
 )
 
@@ -96,8 +98,48 @@ def test_dot_element_bonus_is_per_literal_type() -> None:
     assert element_bonuses(mods) == {D.HEAT: 0.9, D.TOXIN: 0.9, D.GAS: 0.6}
 
 
-def test_blast() -> None:
-    """Saved Damage/Calculation: detonation 3 x sum of stack hits; expiry max(1, 0.3 H)."""
-    assert blast_detonation([100] * 10) == 3000
-    assert blast_expiry(100) == pytest.approx(30)
-    assert blast_expiry(2) == 1
+def test_blast_proc_per_the_blast_page() -> None:
+    """Blast_Damage:30-44: 0.3 x modded base (faction in it) x crit/body part x faction again
+    x (1 + status damage); at least 1 (Calculation:644)."""
+    assert blast_proc(100, 2.0 * 1.3, 1.3, 0.5) == pytest.approx(0.3 * 100 * 2.6 * 1.3 * 1.5)
+    assert blast_proc(2, 1.0) == 1.0
+    assert blast_detonation([100] * 10) == 3000  # on other enemies only (Blast_Damage:23)
+
+
+def test_blast_stacks_hit_after_their_fuse() -> None:
+    hits = blast_hits([(0.0, 1.0, 30.0), (1.0, 1.0, 30.0)], fuse=1.5)
+    assert hits == [(1.5, 30.0), (2.5, 30.0)]
+    longer = blast_hits([(0.0, 1.0, 30.0)], fuse=1.5 * 2)  # +100% status duration
+    assert longer == [(3.0, 30.0)]
+
+
+def test_ten_blast_stacks_hit_the_target_at_once_for_their_own_damage() -> None:
+    """Blast_Damage:21, :23, :59: 10 hits of 30% at once; the 3x burst is not on the target."""
+    stacks = [(0.1 * i, 1.0, 30.0) for i in range(10)]
+    [(at, damage)] = blast_hits(stacks, fuse=1.5)
+    assert at == pytest.approx(0.9) and damage == pytest.approx(300.0)  # not 3 x 300
+    [(at, damage)] = blast_hits([(0.0, 0.6, 30.0)], fuse=1.5)
+    assert at == 1.5 and damage == pytest.approx(18.0)  # expected stacks below one
+
+
+def test_heat_pools_into_one_tick_that_grows_with_refreshed_stacks() -> None:
+    """Heat_Damage:66: one tick per second from 1 s after the first proc; each proc adds its
+    seed and refreshes all; the +1 counts once (Damage/Calculation: Heat example)."""
+    procs = [(0.5, 40.0, 1.0), (1.6, 80.0, 1.0)]
+    ticks = heat_ticks(procs, 0.5 * 1.6, life=6.0, refreshed=True, until=10.0)
+    assert ticks[0] == pytest.approx((1.5, (40 + 1) * 0.8))  # the second proc lands later
+    assert ticks[1] == pytest.approx((2.5, (40 + 80 + 1) * 0.8))  # 96.8, the page's example
+    assert ticks[-1][0] == pytest.approx(7.5)  # the burn ends 6 s after the last proc
+
+
+def test_heat_without_refresh_drops_old_stacks() -> None:
+    procs = [(0.0, 10.0, 1.0), (5.0, 10.0, 1.0)]
+    ticks = dict(heat_ticks(procs, 1.0, life=2.0, refreshed=False, until=10.0))
+    assert ticks[1.0] == pytest.approx(11.0)
+    assert 3.0 not in ticks  # first burn over, second not yet
+    assert ticks[6.0] == pytest.approx(11.0)
+
+
+def test_heat_expected_procs_below_one_scale_the_plus_one() -> None:
+    ticks = heat_ticks([(0.0, 4.0, 0.25)], 1.0, life=6.0, refreshed=True, until=2.0)
+    assert ticks[0] == pytest.approx((1.0, 4.0 + 0.25))

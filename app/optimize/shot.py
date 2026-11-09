@@ -17,6 +17,7 @@ Form = Literal["normal", "incarnon"]
 class Shot:
     hits: list[ModdedHit]  # one per shot part
     rate: float  # effective shots/s
+    rate_factor: float  # fire-rate multiplier from mods (charge time divides by it)
     magazine: float | None
     firing: Firing
     ammo_cost_assumed: bool
@@ -56,5 +57,6 @@ def shot(
         no_reload=weapon.no_reload,
         reload_replaces_shot=weapon.reload_replaces_shot,
     )
-    rate = effective_fire_rate(firing, modded(1.0, Stat.FIRE_RATE, b))
-    return Shot(hits, rate, magazine, firing, ammo_cost is None)
+    factor = modded(1.0, Stat.FIRE_RATE, b)
+    rate = effective_fire_rate(firing, factor)
+    return Shot(hits, rate, factor, magazine, firing, ammo_cost is None)

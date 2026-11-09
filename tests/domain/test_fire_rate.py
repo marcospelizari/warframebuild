@@ -2,7 +2,7 @@ from dataclasses import replace
 
 import pytest
 
-from app.domain.fire_rate import Firing, effective_fire_rate, shooting_share
+from app.domain.fire_rate import Firing, effective_fire_rate, shooting_share, shot_times
 
 AUTO = Firing(
     fire_rate=10,
@@ -78,3 +78,40 @@ def test_no_magazine_never_reloads() -> None:
 
 def test_attack_without_ammo_cost_never_reloads() -> None:
     assert shooting_share(replace(AUTO, ammo_cost=0), 10) == 1.0
+
+
+def _firing(**kw: object) -> Firing:
+    base: dict[str, object] = dict(
+        fire_rate=2.0,
+        charge_time=None,
+        burst_count=None,
+        burst_delay=None,
+        bow=False,
+        magazine=3.0,
+        ammo_cost=1.0,
+        reload_time=1.0,
+        no_reload=False,
+        reload_replaces_shot=False,
+    )
+    return Firing(**(base | kw))  # type: ignore[arg-type]
+
+
+def test_shots_land_at_the_end_of_each_cycle_with_reloads() -> None:
+    """G72: the first shot at one interval; an empty magazine adds the reload."""
+    assert shot_times(_firing(), 1.0, 4.0) == pytest.approx([0.5, 1.0, 1.5, 3.0, 3.5, 4.0])
+
+
+def test_reload_in_place_of_an_interval_and_no_reload() -> None:
+    assert shot_times(_firing(reload_replaces_shot=True), 1.0, 3.0) == pytest.approx(
+        [0.5, 1.0, 1.5, 2.5, 3.0]
+    )
+    assert shot_times(_firing(no_reload=True), 1.0, 2.0) == pytest.approx([0.5, 1.0, 1.5, 2.0])
+
+
+def test_charge_weapons_and_bows_fire_first_at_the_charge_time() -> None:
+    """G72: the first shot lands when the charge completes; the next after a full cycle."""
+    bow = _firing(bow=True, charge_time=0.5, magazine=1.0, reload_time=0.5)  # 1 / (0.5 + 0.5)
+    assert shot_times(bow, 1.0, 2.5) == pytest.approx([0.5, 1.5, 2.5])
+    charge = _firing(charge_time=1.0, fire_rate=1.0, magazine=None)  # 1 / (1 + 1) = 0.5/s
+    assert shot_times(charge, 1.0, 5.0) == pytest.approx([1.0, 3.0, 5.0])
+    assert shot_times(charge, 2.0, 2.0) == pytest.approx([0.5, 1.5])  # +100% fire rate

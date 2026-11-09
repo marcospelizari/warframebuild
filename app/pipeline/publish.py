@@ -89,6 +89,8 @@ def write(
         "joins.json": _dump(dataset.joins),
         "incarnon.json": _dump(dataset.incarnon),
         "reference_head.json": _dump(dataset.reference_head),
+        "enemies.json": _dump(dataset.enemies),
+        "factions.json": _dump(dataset.factions),
     }
     digest = dataset_hash(payloads)
     fetched = max((s.retrieved for s in sources if not s.path.startswith("wiki/")), default="")
@@ -100,6 +102,8 @@ def write(
         "mod_sets": len(dataset.mod_sets),
         "arcanes": len(dataset.arcanes),
         "incarnon_weapons": len(dataset.incarnon),
+        "enemies": len(dataset.enemies),
+        "factions": len(dataset.factions),
     }
     counts |= {
         f"arcanes_{c.value}": sum(a.category == c for a in dataset.arcanes) for c in Category

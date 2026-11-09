@@ -1,0 +1,30 @@
+{
+  "about": "Enemy stat scaling with level (step 8a): curves f(q) = 1 + C·q^E as [C, E], f1 = lower and f2 = upper endpoint curve, blended over q = level - base level in [lower, upper] (saved Enemy_Level_Scaling). `factions` use the enemy modules' Faction names (Orokin = the page's Corrupted). `line` = line in the saved page. Steel Path multiplies health and shields only; armor gets no Steel Path bonus since an update (The_Steel_Path:411).",
+  "source": "Enemy_Level_Scaling",
+  "transition": {"lower": 70, "upper": 80, "line": 51},
+  "health": [
+    {"factions": ["Grineer", "Scaldra"], "f1": [0.015, 2.12], "f2": [10.7332, 0.72], "line": 111},
+    {"factions": ["Corpus"], "f1": [0.015, 2.12], "f2": [13.4165, 0.55], "line": 120},
+    {"factions": ["Infested"], "f1": [0.0225, 2.12], "f2": [16.0998, 0.72], "line": 129},
+    {"factions": ["Orokin"], "f1": [0.015, 2.1], "f2": [10.7332, 0.685], "line": 137},
+    {"factions": ["The Murmur", "Sentient"], "f1": [0.015, 2.0], "f2": [10.7332, 0.5], "line": 146},
+    {"factions": ["Techrot"], "f1": [0.02, 2.12], "f2": [15.0998, 0.7], "line": 154}
+  ],
+  "shield": [
+    {"factions": ["Corpus"], "f1": [0.02, 1.76], "f2": [2.0, 0.76], "line": 204},
+    {"factions": ["Orokin"], "f1": [0.02, 1.75], "f2": [2.0, 0.75], "line": 213},
+    {"factions": ["Grineer", "Sentient"], "f1": [0.02, 1.75], "f2": [1.6, 0.75], "line": 222},
+    {"factions": ["Techrot"], "f1": [0.02, 1.76], "f2": [3.5, 0.76], "line": 231}
+  ],
+  "armor": {
+    "f1": [0.005, 1.75],
+    "f2": [0.4, 0.75],
+    "line": 268,
+    "minimum": 200,
+    "minimum_line": 265,
+    "cap": 2700,
+    "cap_line": 263
+  },
+  "steel_path": {"health": 2.5, "shield": 2.5, "source": "The_Steel_Path", "line": 59},
+  "verified": "2026-11-09"
+}

@@ -1,0 +1,109 @@
+[
+ {
+  "faction": "Anarch",
+  "modifiers": {
+   "electricity": 1.5,
+   "impact": 1.5,
+   "radiation": 0.5
+  }
+ },
+ {
+  "faction": "Corpus",
+  "modifiers": {
+   "magnetic": 1.5,
+   "puncture": 1.5
+  }
+ },
+ {
+  "faction": "Corpus Amalgam",
+  "modifiers": {
+   "blast": 0.5,
+   "electricity": 1.5,
+   "magnetic": 1.5
+  }
+ },
+ {
+  "faction": "Grineer",
+  "modifiers": {
+   "corrosive": 1.5,
+   "impact": 1.5
+  }
+ },
+ {
+  "faction": "Infested",
+  "modifiers": {
+   "heat": 1.5,
+   "slash": 1.5
+  }
+ },
+ {
+  "faction": "Infested Deimos",
+  "modifiers": {
+   "blast": 1.5,
+   "gas": 1.5,
+   "viral": 0.5
+  }
+ },
+ {
+  "faction": "Kuva Grineer",
+  "modifiers": {
+   "corrosive": 1.5,
+   "heat": 0.5,
+   "impact": 1.5
+  }
+ },
+ {
+  "faction": "Narmer",
+  "modifiers": {
+   "magnetic": 0.5,
+   "slash": 1.5,
+   "toxin": 1.5
+  }
+ },
+ {
+  "faction": "Orokin",
+  "modifiers": {
+   "puncture": 1.5,
+   "radiation": 0.5,
+   "viral": 1.5
+  }
+ },
+ {
+  "faction": "Scaldra",
+  "modifiers": {
+   "corrosive": 1.5,
+   "gas": 0.5,
+   "impact": 1.5
+  }
+ },
+ {
+  "faction": "Sentient",
+  "modifiers": {
+   "cold": 1.5,
+   "corrosive": 0.5,
+   "radiation": 1.5
+  }
+ },
+ {
+  "faction": "Techrot",
+  "modifiers": {
+   "cold": 0.5,
+   "gas": 1.5,
+   "magnetic": 1.5
+  }
+ },
+ {
+  "faction": "The Murmur",
+  "modifiers": {
+   "electricity": 1.5,
+   "radiation": 1.5,
+   "viral": 0.5
+  }
+ },
+ {
+  "faction": "Zariman",
+  "modifiers": {
+   "void": 1.5
+  }
+ }
+]

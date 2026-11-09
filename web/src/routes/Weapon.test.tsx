@@ -32,6 +32,30 @@ const build: Build = {
   },
   dps: { direct_burst: 288, direct_sustained: 235.1 },
   headshot: null,
+  combat: {
+    level: 120,
+    cap_s: 10,
+    enemies: [
+      {
+        name: "Lancer",
+        faction: "Grineer",
+        target: "Body",
+        ttk: 1.5,
+        removed: 1,
+        cost: 1.5,
+      },
+      {
+        name: "Heavy Gunner",
+        faction: "Grineer",
+        target: "Body",
+        ttk: null,
+        removed: 0.25,
+        cost: 40,
+      },
+    ],
+    factions: [{ faction: "Grineer", score: 7.75 }],
+    score: 7.75,
+  },
   assumptions: [{ id: "max_rank", text: "Mods at max rank" }],
 };
 
@@ -61,6 +85,14 @@ test("posts the slug to /api/calc and lists the numbers", async () => {
     weapon: "soma-prime",
     mods: [],
   });
+});
+
+test("lists time to kill per enemy", async () => {
+  renderPage(new Response(JSON.stringify(build)));
+  expect(await screen.findByText("1.50 s")).toBeInTheDocument();
+  expect(screen.getByText("not killed")).toBeInTheDocument();
+  expect(screen.getByText("25%")).toBeInTheDocument();
+  expect(screen.getByText("Score: 7.75 (lower is better)")).toBeInTheDocument();
 });
 
 test("shows the API error message", async () => {

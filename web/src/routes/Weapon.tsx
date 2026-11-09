@@ -13,7 +13,7 @@ export function WeaponPage({ slug }: { slug: string }) {
   });
   if (build.isPending) return <p>Loading…</p>;
   if (build.isError) return <p role="alert">{build.error.message}</p>;
-  const { weapon, form, arsenal, dps, slots, assumptions } = build.data;
+  const { weapon, form, arsenal, dps, slots, combat, assumptions } = build.data;
   return (
     <main className="p-6">
       <h1>{weapon.name}</h1>
@@ -33,6 +33,30 @@ export function WeaponPage({ slug }: { slug: string }) {
           </>
         )}
       </dl>
+      <h2>Combat (level {combat.level}, {combat.cap_s} s cap)</h2>
+      <p>Score: {fmt(combat.score)} (lower is better)</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Enemy</th>
+            <th>Faction</th>
+            <th>Hit</th>
+            <th>Time to kill</th>
+            <th>Removed</th>
+          </tr>
+        </thead>
+        <tbody>
+          {combat.enemies.map((e) => (
+            <tr key={e.name}>
+              <td>{e.name}</td>
+              <td>{e.faction}</td>
+              <td>{e.target}</td>
+              <td>{e.ttk == null ? "not killed" : `${fmt(e.ttk)} s`}</td>
+              <td>{`${Math.round(e.removed * 100)}%`}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
       <h2>Arsenal</h2>
       <dl>
         {Object.entries(arsenal.damage).map(([type, value]) => (

@@ -1,5 +1,6 @@
 """Incarnon perks joined to guns by name (melee and unknown names drop out), plus the
-Incarnon Form shot parts from reference/main_attack.json."""
+Incarnon Form shot parts from reference/main_attack.json (`hits`: a part landing more than
+once per shot is listed that many times)."""
 
 from collections import defaultdict
 from typing import Any
@@ -32,7 +33,11 @@ def build(
         Incarnon(
             unique_name=u,
             name=names[u],
-            attacks=rows[u]["incarnon"],
+            attacks=[
+                part
+                for part in rows[u]["incarnon"]
+                for _ in range(rows[u].get("hits", {}).get(part, 1))
+            ],
             no_multishot=rows[u].get("no_multishot", []),
             note=rows[u].get("note"),
             perks=p,
@@ -52,6 +57,7 @@ def _rows(
     for uid, row in rows.items():
         require_verified(row, FILE, uid)
         parts, flat = row.get("incarnon"), row.get("no_multishot", [])
+        hits = row.get("hits", {})  # part -> hits per shot (Vectis embed, PLAN G75)
         known = {a.name for a in guns[uid].attacks}
         if not (
             isinstance(parts, list)
@@ -62,6 +68,11 @@ def _rows(
             and isinstance(flat, list)
             and all(isinstance(p, str) for p in flat)
             and set(flat) <= set(parts)
+            and isinstance(hits, dict)
+            and set(hits) <= set(parts)
+            and all(
+                isinstance(n, int) and not isinstance(n, bool) and n >= 2 for n in hits.values()
+            )
             and isinstance(row.get("source"), str)
             and isinstance(row.get("note"), str | None)
         ):

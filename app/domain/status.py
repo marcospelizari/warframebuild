@@ -7,6 +7,7 @@ Blast rules (sources in each section).
 """
 
 import math
+from collections import deque
 from collections.abc import Mapping, Sequence
 from enum import StrEnum
 
@@ -129,21 +130,73 @@ def dot_ticks(damage_type: DamageType, duration_bonus: float) -> int:
     return math.ceil(duration - 1e-9)
 
 
-# ---------- Blast (saved Damage/Calculation: stack-and-detonate) ----------
-# BLAST_CAP, BLAST_CAP_BOSS, BLAST_STACK_S: decided in G60, read by the step-8 combat
-# simulation (stack count over time); only the detonation is used so far.
+def heat_ticks(
+    procs: Sequence[tuple[float, float, float]],
+    tick_factor: float,
+    life: float,
+    refreshed: bool,
+    until: float,
+) -> list[tuple[float, float]]:
+    """Heat's one pooled tick per second (saved Heat_Damage:66; Damage/Calculation, DoT):
+    `(sum of live seeds + 1) x C x M`, from 1 s after the first proc. `procs`: (time,
+    expected seeds, expected procs) per hit; `tick_factor` = C x M. Each proc refreshes all
+    stacks, so with `refreshed` every earlier proc stays live; otherwise each lasts `life`.
+    Below one expected live proc the +1 scales with it."""
+    if not procs:
+        return []
+    out = []
+    tick = procs[0][0] + FIRST_TICK_S[DamageType.HEAT]
+    last = procs[-1][0] + life
+    while tick <= min(last, until):
+        live = [(s, p) for t, s, p in procs if t < tick and (refreshed or t > tick - life)]
+        if live:
+            seeds = math.fsum(s for s, _ in live)
+            count = math.fsum(p for _, p in live)
+            out.append((tick, (seeds + min(1.0, count)) * tick_factor))
+        tick += 1.0
+    return out
+
+
+# ---------- Blast (saved Blast_Damage; Damage/Calculation: stack-and-detonate) ----------
 
 BLAST_CAP = 10
 BLAST_CAP_BOSS = 4
-BLAST_STACK_S = 1.5
+BLAST_STACK_S = 1.5  # fuse, x (1 + status duration) (Blast_Damage:21, :64)
+BLAST_PROC = 0.3  # share of modded base damage per stack (Blast_Damage:21, :36-41)
 BLAST_DETONATION = 3.0
 
 
+def blast_proc(
+    modded_base: float, hit_multiplier: float, faction: float = 1.0, status_damage: float = 0.0
+) -> float:
+    """What one stack deals to its target: 0.3 x modded base damage (no element or physical
+    bonuses) x the hit's crit and body part (`hit_multiplier`, faction already in it) x
+    faction again x (1 + status damage) (Blast_Damage:30-44; at least 1, Calculation:644)."""
+    return max(1.0, BLAST_PROC * modded_base * hit_multiplier * faction * (1 + status_damage))
+
+
+def blast_hits(
+    stacks: Sequence[tuple[float, float, float]], fuse: float, cap: int = BLAST_CAP
+) -> list[tuple[float, float]]:
+    """Blast damage on the target: (time, expected stacks, one stack's damage) per hit ->
+    (time, damage). Each stack hits its target when its fuse runs out; at `cap` active stacks
+    they all hit at once. The 3x radial burst never hits the detonating target
+    (Blast_Damage:23, :59), so the target takes the same total, only sooner."""
+    out: list[tuple[float, float]] = []
+    active: deque[tuple[float, float, float]] = deque()
+    for t, n, damage in stacks:
+        while active and active[0][0] + fuse <= t:
+            at, sn, sd = active.popleft()
+            out.append((at + fuse, sn * sd))
+        active.append((t, n, damage))
+        if math.fsum(s[1] for s in active) >= cap:
+            out.append((t, math.fsum(sn * sd for _, sn, sd in active)))
+            active.clear()
+    out += [(at + fuse, sn * sd) for at, sn, sd in active]
+    return out
+
+
 def blast_detonation(stack_hits: Sequence[float]) -> float:
-    """At the cap, or when the enemy dies: 3 x the sum of the active stacks' hit damage."""
+    """The radial burst on *other* enemies in 5 m: 3 x the stacks' hit damage (not scored:
+    the detonating target never takes it, Blast_Damage:23)."""
     return BLAST_DETONATION * math.fsum(stack_hits)
-
-
-def blast_expiry(hit: float) -> float:
-    """A stack that runs out after 1.5 s without detonating: max(1, 0.3 x its hit)."""
-    return max(1.0, 0.3 * hit)
