@@ -144,6 +144,7 @@ def paths(tmp_path: Path) -> Paths:
     reference = tmp_path / "reference"
     shutil.copytree(ROOT / "reference", reference)
     _keep_fixture_guns(raw, reference / "galvanized_behaviour.json")
+    _keep_fixture_guns(raw, reference / "headshot.json")
     _keep_rows(reference / "main_attack.json", {"Lex Prime", "Laetum"})
     for page in wiki_local.pages(reference):
         if page.format == "lua":

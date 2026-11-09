@@ -11,7 +11,7 @@ from app.domain.elements import ELEMENTS
 from app.domain.fire_rate import Firing, effective_fire_rate, shooting_share
 from app.domain.hit import AttackStats, Bonus, ModdedHit, modded_hit
 from app.domain.stats import modded, modded_time, value_for
-from app.gamedata.models import Attack, Effects, Incarnon, Mod, Perk, Weapon
+from app.gamedata.models import Attack, Effects, Headshot, Incarnon, Mod, Perk, Weapon
 
 MAX_SLOTS = 8
 BOW = "Bow"  # WFCD weapon_type
@@ -42,6 +42,7 @@ class Evaluation:
     inactive_perks: list[str]  # chosen perks that do nothing in this form
     aoe_parts: bool  # AoE parts counted at full damage on the target
     note: str | None  # main_attack.json limit for this gun
+    headshot: Headshot | None  # this form is aimed at heads (R5); None = body
 
 
 def check(weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None) -> None:
@@ -190,4 +191,5 @@ def evaluate(
         inactive_perks=[p.name for p in picked if p not in active],
         aoe_parts=any(a is not None and a.shot_type == AOE for _, a in parts[1:]),
         note=incarnon.note if incarnon and form == "incarnon" else None,
+        headshot=next((h for h in weapon.headshot if h.form == form), None),
     )

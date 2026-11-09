@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from app.gamedata.models import Arcane, Exclusion, Incarnon, Join, Mod, ModSet, Weapon
-from app.pipeline.build import arcanes, incarnon, mods, weapons
+from app.pipeline.build import arcanes, headshot, incarnon, mods, weapons
 from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.effects import Overrides
 from app.pipeline.build.fire import FireOverrides
@@ -14,6 +14,7 @@ from app.pipeline.sources import (
     export_plus,
     load_json,
     wiki_incarnon,
+    wiki_local,
     wiki_progenitor,
     wiki_weapon_data,
 )
@@ -71,6 +72,12 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         gun_list,
         overrides,
         reference(reference_dir / "main_attack.json"),
+    )
+    gun_list = headshot.apply(
+        reference(reference_dir / "headshot.json"),
+        gun_list,
+        {i.unique_name for i in perks},
+        {p.stem: p.title for p in wiki_local.pages(reference_dir)},
     )
     overrides.check_all_used()
     _check_arcane_classes(arcane_list, gun_list)

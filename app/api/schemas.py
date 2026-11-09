@@ -77,6 +77,11 @@ class Dps(ApiModel):
     direct_sustained: float | None  # None when the modelled magazine cannot fire one shot
 
 
+class Headshot(ApiModel):
+    reason: str
+    source: Source | None  # None: a project decision, explained in `reason`
+
+
 class Build(ApiModel):
     dataset_hash: str
     weapon: WeaponRef
@@ -86,4 +91,5 @@ class Build(ApiModel):
     bonus_element: BonusElement | None
     arsenal: Arsenal
     dps: Dps
+    headshot: Headshot | None  # this form is aimed at heads; None = body shots
     assumptions: list[Assumption]

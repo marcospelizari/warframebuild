@@ -26,6 +26,7 @@ const build: Build = {
     beam_ramp_start: null,
   },
   dps: { direct_burst: 288, direct_sustained: 235.1 },
+  headshot: null,
   assumptions: [{ id: "max_rank", text: "Mods at max rank" }],
 };
 

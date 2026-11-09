@@ -106,6 +106,7 @@ export interface components {
              * @enum {string}
              */
             form: "normal" | "incarnon";
+            headshot: components["schemas"]["Headshot"] | null;
             /** Perks */
             perks: string[];
             /** Slots */
@@ -148,6 +149,12 @@ export interface components {
             direct_burst: number;
             /** Direct Sustained */
             direct_sustained: number | null;
+        };
+        /** Headshot */
+        Headshot: {
+            /** Reason */
+            reason: string;
+            source: components["schemas"]["Source"] | null;
         };
         /** Health */
         Health: {
