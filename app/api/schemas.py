@@ -74,7 +74,7 @@ class Arsenal(ApiModel):
 
 class Dps(ApiModel):
     direct_burst: float
-    direct_sustained: float
+    direct_sustained: float | None  # None when the modelled magazine cannot fire one shot
 
 
 class Build(ApiModel):

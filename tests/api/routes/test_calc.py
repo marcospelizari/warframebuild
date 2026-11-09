@@ -95,3 +95,12 @@ def test_perk_for_the_other_form_is_named(client: TestClient) -> None:
     body = {"weapon": "torid", "perks": ["Extended Volley"]}
     texts = [a["text"] for a in client.post("/api/calc", json=body).json()["assumptions"]]
     assert "No effect in incarnon form: Extended Volley" in texts
+
+
+def test_aoe_parts_and_row_notes_are_stated(client: TestClient) -> None:
+    def ids(slug: str) -> set[str]:
+        build = client.post("/api/calc", json={"weapon": slug}).json()
+        return {x["id"] for x in build["assumptions"]}
+
+    assert "aoe_full" in ids("atomos")
+    assert "incarnon_note" in ids("onos")

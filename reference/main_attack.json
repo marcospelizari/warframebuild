@@ -1,11 +1,12 @@
 {
-  "about": "Attacks that make up one shot of each Incarnon gun's Incarnon Form (G3/V6, Q11): their damage is summed, the first sets fire rate, charge and burst. Attack names as in WFCD. Other multi-attack guns follow in step 8.",
+  "about": "Incarnon Form shot parts per Incarnon gun (G3/V6, Q11): damage summed, the first part sets fire rate, charge and burst. `no_multishot`: parts that ignore Multishot bonuses. `note`: shown in /calc assumptions. Attack names as in WFCD; every row names its source. Other multi-attack guns follow in step 8.",
   "weapons": {
     "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher": {
       "name": "Angstrum",
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun": {
@@ -14,6 +15,7 @@
         "Incarnon Form",
         "Incarnon Form Radial Attack"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistols/AutomaticHandCrossbow/AutoCrossBow": {
@@ -21,6 +23,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistols/PrimeBallistica/PrimeBallistica": {
@@ -28,6 +31,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Shotgun/FullAutoShotgun": {
@@ -35,6 +39,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Shotgun/PrimeBoar": {
@@ -42,6 +47,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/BoltoRifle": {
@@ -49,6 +55,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/LongGuns/PrimeBoltor/PrimeBoltor": {
@@ -56,6 +63,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/Rifle": {
@@ -64,6 +72,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/BratonPrime": {
@@ -72,6 +81,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/VIPRifle": {
@@ -80,6 +90,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistol/HandShotGun": {
@@ -87,6 +98,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistol/BroncoPrime": {
@@ -94,6 +106,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/BurstRifle": {
@@ -102,6 +115,10 @@
         "Incarnon Form",
         "Incarnon Form Radial Attack"
       ],
+      "no_multishot": [
+        "Incarnon Form Radial Attack"
+      ],
+      "source": "Incarnon_Evolutions:935 (Radial Attack ignores Multishot bonuses)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston": {
@@ -110,6 +127,10 @@
         "Incarnon Form",
         "Incarnon Form Radial Attack"
       ],
+      "no_multishot": [
+        "Incarnon Form Radial Attack"
+      ],
+      "source": "Incarnon_Evolutions:935 (Radial Attack ignores Multishot bonuses)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/CorpusMinigun": {
@@ -117,6 +138,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/ClanTech/Energy/EnergyRifle": {
@@ -124,6 +146,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/ClanTech/Energy/DeraVandal": {
@@ -131,6 +154,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/ThrowingWeapons/StalkerKunai": {
@@ -139,6 +163,7 @@
         "Incarnon Form",
         "Incarnon Form Radial Attack"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/LongGuns/DexTheThird/DexTheThird": {
@@ -146,6 +171,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Bows/StalkerBow": {
@@ -153,6 +179,7 @@
       "incarnon": [
         "Incarnon Form Charged Shot"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep": {
@@ -160,6 +187,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun": {
@@ -167,6 +195,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistol/AutoPistol": {
@@ -174,6 +203,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSDroidArray": {
@@ -182,6 +212,7 @@
         "Incarnon Form",
         "Incarnon Form Radial Attack"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/HeavyRifle": {
@@ -190,6 +221,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Grineer/LongGuns/WraithGorgon/WraithGorgon": {
@@ -198,6 +230,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai": {
@@ -205,13 +238,16 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol": {
       "name": "Laetum",
       "incarnon": [
-        "Incarnon Form"
+        "Incarnon Form",
+        "Auto Radial Attack"
       ],
+      "source": "Laetum:12 (direct hit plus 2 m Radiation radius)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistol/Pistol": {
@@ -219,6 +255,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistol/LatoPrime": {
@@ -226,6 +263,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistol/LatoVandal": {
@@ -233,6 +271,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle": {
@@ -241,6 +280,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/LatronPrime": {
@@ -249,6 +289,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron": {
@@ -257,6 +298,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistol/HeavyPistol": {
@@ -264,6 +306,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex": {
@@ -271,6 +314,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/StartingRifle": {
@@ -279,6 +323,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/MK1Series/MK1Furis": {
@@ -286,6 +331,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/MK1Series/MK1Kunai": {
@@ -293,6 +339,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/MK1Series/MK1Paris": {
@@ -300,6 +347,7 @@
       "incarnon": [
         "Incarnon Form Charged Shot"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/MK1Series/MK1Strun": {
@@ -308,6 +356,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun": {
@@ -316,6 +365,7 @@
         "Incarnon Form",
         "Incarnon Form Radial Attack"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon": {
@@ -324,7 +374,8 @@
         "Incarnon Form Charge Attack",
         "Incarnon Form Charge Radial Attack"
       ],
-      "note": "charged mode; Held Damage is the other mode (to review)",
+      "source": "Onos:12 (full charge Heat beam and explosion), Onos:41 (own Incarnon magazine)",
+      "note": "Full charge shot; Incarnon magazine (30 rounds per charge) not modelled",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Bows/HuntingBow": {
@@ -332,6 +383,7 @@
       "incarnon": [
         "Incarnon Form Charged Shot"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow": {
@@ -339,6 +391,7 @@
       "incarnon": [
         "Incarnon Form Charged Shot"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle": {
@@ -346,6 +399,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/PrismaAngstrum": {
@@ -353,6 +407,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Grineer/LongGuns/VoidTraderGorgon/VTGorgon": {
@@ -361,6 +416,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Syndicates/RedVeil/Pistols/RVBallistica": {
@@ -368,6 +424,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistol/BurstPistol": {
@@ -375,6 +432,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistols/PrimeSicarus/PrimeSicarusPistol": {
@@ -382,6 +440,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/TennoAR": {
@@ -389,6 +448,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle": {
@@ -396,6 +456,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Shotgun/Shotgun": {
@@ -404,6 +465,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon": {
@@ -412,6 +474,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal": {
@@ -420,6 +483,7 @@
         "Incarnon Form",
         "Incarnon Form AoE"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun": {
@@ -428,7 +492,8 @@
         "Incarnon Form Blob Embed",
         "Incarnon Form Blob Explosion"
       ],
-      "note": "Bounce Explosion is the alternative when the blob does not embed",
+      "source": "Incarnon_Evolutions:3533 (embed DoT and explosion)",
+      "note": "Blob embed damage over time counted as one hit",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle": {
@@ -436,6 +501,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/LongGuns/PrimeSybaris/PrimeSybarisRifle": {
@@ -443,6 +509,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSSynoidGammacor": {
@@ -451,6 +518,7 @@
         "Incarnon Form",
         "Incarnon Form Radial Attack"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Syndicates/ArbitersOfHexis/LongGuns/AHBoltor": {
@@ -458,6 +526,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/ClanTech/Bio/BioWeapon": {
@@ -465,6 +534,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistol/RevolverPistol": {
@@ -472,6 +542,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol": {
@@ -479,6 +550,7 @@
       "incarnon": [
         "Incarnon Form"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle": {
@@ -487,7 +559,8 @@
         "Incarnon Form",
         "Incarnon Form Embed AoE"
       ],
-      "note": "body hit; Headshot AoE replaces Embed AoE on headshots (step 7)",
+      "source": "Incarnon_Evolutions:3887 (embed Cold damage; explosion only on headshots)",
+      "note": "Body hit: embed damage counted as one hit; headshot explosion not counted",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle": {
@@ -496,7 +569,8 @@
         "Incarnon Form",
         "Incarnon Form Embed AoE"
       ],
-      "note": "body hit; Headshot AoE replaces Embed AoE on headshots (step 7)",
+      "source": "Incarnon_Evolutions:3887 (embed Cold damage; explosion only on headshots)",
+      "note": "Body hit: embed damage counted as one hit; headshot explosion not counted",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol": {
@@ -505,6 +579,7 @@
         "Incarnon Form",
         "Incarnon Form Radial Attack"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Pistols/PrimeZylok/ZylokPrimePistol": {
@@ -513,6 +588,7 @@
         "Incarnon Form",
         "Incarnon Form Radial Attack"
       ],
+      "source": "WFCD attack list (attacks named Incarnon Form)",
       "verified": "2026-11-09"
     }
   }

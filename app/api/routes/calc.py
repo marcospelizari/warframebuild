@@ -1,4 +1,4 @@
-"""POST /api/calc: evaluate one build (no search, direct damage only)."""
+"""POST /api/calc: evaluate one build (no search; hit damage, no DoT or Blast)."""
 
 import math
 
@@ -109,11 +109,15 @@ def _assumptions(weapon: Weapon, e: Evaluation) -> list[Assumption]:
         Assumption(id="max_rank", text="Mods at max rank"),
         Assumption(id="unconditional", text="Only unconditional mod effects (as in the arsenal)"),
         Assumption(id="main_attack", text=_MAIN_ATTACK[e.form]),
-        Assumption(id="direct_only", text="DPS from direct hits on the body; no DoT or Blast"),
+        Assumption(id="direct_only", text="DPS from hits on the body; no DoT or Blast"),
     ]
     if e.not_modelled:
         text = "Effects not modelled yet: " + ", ".join(e.not_modelled)
         out.append(Assumption(id="not_modelled", text=text))
+    if e.aoe_parts:
+        out.append(Assumption(id="aoe_full", text="AoE parts at full damage, no falloff"))
+    if e.note:
+        out.append(Assumption(id="incarnon_note", text=e.note))
     if e.inactive_perks:
         text = f"No effect in {e.form} form: " + ", ".join(e.inactive_perks)
         out.append(Assumption(id="inactive_perks", text=text))

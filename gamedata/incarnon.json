@@ -4,6 +4,8 @@
    "Incarnon Form"
   ],
   "name": "Torid",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -234,6 +236,8 @@
    "Incarnon Form"
   ],
   "name": "Dera Vandal",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -476,6 +480,8 @@
    "Incarnon Form"
   ],
   "name": "Dera",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -718,6 +724,8 @@
    "Incarnon Form"
   ],
   "name": "Cestra",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -914,6 +922,8 @@
    "Incarnon Form"
   ],
   "name": "Angstrum",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -1083,6 +1093,8 @@
    "Incarnon Form"
   ],
   "name": "Prisma Angstrum",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -1253,6 +1265,8 @@
    "Incarnon Form Radial Attack"
   ],
   "name": "Miter",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -1453,6 +1467,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Prisma Gorgon",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -1683,6 +1699,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Gorgon Wraith",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -1913,6 +1931,8 @@
    "Incarnon Form Blob Explosion"
   ],
   "name": "Stug",
+  "no_multishot": [],
+  "note": "Blob embed damage over time counted as one hit",
   "perks": [
    {
     "effects": {
@@ -2146,6 +2166,8 @@
    "Incarnon Form Radial Attack"
   ],
   "name": "Atomos",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -2270,6 +2292,8 @@
    "Incarnon Form"
   ],
   "name": "Dual Toxocyst",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -2434,6 +2458,8 @@
    "Incarnon Form"
   ],
   "name": "MK1-Furis",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -2632,6 +2658,8 @@
    "Incarnon Form"
   ],
   "name": "MK1-Kunai",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -2862,6 +2890,8 @@
    "Incarnon Form Charged Shot"
   ],
   "name": "MK1-Paris",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -3045,6 +3075,8 @@
    "Incarnon Form AoE"
   ],
   "name": "MK1-Strun",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -3304,6 +3336,8 @@
    "Incarnon Form"
   ],
   "name": "Telos Boltor",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -3549,6 +3583,8 @@
    "Incarnon Form Radial Attack"
   ],
   "name": "Gammacor",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -3795,6 +3831,8 @@
    "Incarnon Form Radial Attack"
   ],
   "name": "Synoid Gammacor",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -4040,6 +4078,8 @@
    "Incarnon Form"
   ],
   "name": "Rakta Ballistica",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -4270,6 +4310,8 @@
    "Incarnon Form Charged Shot"
   ],
   "name": "Paris",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -4452,6 +4494,8 @@
    "Incarnon Form Charged Shot"
   ],
   "name": "Paris Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -4634,6 +4678,8 @@
    "Incarnon Form Charged Shot"
   ],
   "name": "Dread",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -4847,6 +4893,8 @@
    "Incarnon Form"
   ],
   "name": "Dex Sybaris",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -5017,6 +5065,8 @@
    "Incarnon Form"
   ],
   "name": "Boltor Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -5262,6 +5312,10 @@
    "Incarnon Form Radial Attack"
   ],
   "name": "Burston Prime",
+  "no_multishot": [
+   "Incarnon Form Radial Attack"
+  ],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -5459,6 +5513,8 @@
    "Incarnon Form"
   ],
   "name": "Soma Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -5654,6 +5710,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Strun Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -5913,6 +5971,8 @@
    "Incarnon Form"
   ],
   "name": "Sybaris Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -6084,6 +6144,8 @@
    "Incarnon Form Embed AoE"
   ],
   "name": "Vectis Prime",
+  "no_multishot": [],
+  "note": "Body hit: embed damage counted as one hit; headshot explosion not counted",
   "perks": [
    {
     "effects": {
@@ -6283,6 +6345,8 @@
    "Incarnon Form"
   ],
   "name": "Sybaris",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -6454,6 +6518,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Latron Wraith",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -6651,6 +6717,8 @@
    "Incarnon Form"
   ],
   "name": "Furis",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -6849,6 +6917,8 @@
    "Incarnon Form"
   ],
   "name": "Bronco Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -7028,6 +7098,8 @@
    "Incarnon Form"
   ],
   "name": "Sicarus",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -7230,6 +7302,8 @@
    "Incarnon Form"
   ],
   "name": "Bronco",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -7409,6 +7483,8 @@
    "Incarnon Form"
   ],
   "name": "Lex",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -7623,6 +7699,8 @@
    "Incarnon Form"
   ],
   "name": "Lato Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -7855,6 +7933,8 @@
    "Incarnon Form"
   ],
   "name": "Lato Vandal",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -8087,6 +8167,8 @@
    "Incarnon Form"
   ],
   "name": "Lato",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -8319,6 +8401,8 @@
    "Incarnon Form"
   ],
   "name": "Vasto",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -8608,6 +8692,8 @@
    "Incarnon Form"
   ],
   "name": "Ballistica",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -8839,6 +8925,8 @@
    "Incarnon Form Radial Attack"
   ],
   "name": "Zylok",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -9083,6 +9171,8 @@
    "Incarnon Form"
   ],
   "name": "Ballistica Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -9313,6 +9403,8 @@
    "Incarnon Form"
   ],
   "name": "Lex Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -9527,6 +9619,8 @@
    "Incarnon Form"
   ],
   "name": "Sicarus Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -9729,6 +9823,8 @@
    "Incarnon Form"
   ],
   "name": "Vasto Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -10019,6 +10115,8 @@
    "Incarnon Form Radial Attack"
   ],
   "name": "Zylok Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -10263,6 +10361,8 @@
    "Incarnon Form"
   ],
   "name": "Boltor",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -10508,6 +10608,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Braton Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -10742,6 +10844,10 @@
    "Incarnon Form Radial Attack"
   ],
   "name": "Burston",
+  "no_multishot": [
+   "Incarnon Form Radial Attack"
+  ],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -10940,6 +11046,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Gorgon",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -11170,6 +11278,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Latron Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -11368,6 +11478,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Braton",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -11602,6 +11714,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Latron",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -11800,6 +11914,8 @@
    "Incarnon Form AoE"
   ],
   "name": "MK1-Braton",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -12033,6 +12149,8 @@
    "Incarnon Form"
   ],
   "name": "Soma",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -12228,6 +12346,8 @@
    "Incarnon Form Embed AoE"
   ],
   "name": "Vectis",
+  "no_multishot": [],
+  "note": "Body hit: embed damage counted as one hit; headshot explosion not counted",
   "perks": [
    {
     "effects": {
@@ -12428,6 +12548,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Braton Vandal",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -12661,6 +12783,8 @@
    "Incarnon Form"
   ],
   "name": "Boar",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -12893,6 +13017,8 @@
    "Incarnon Form"
   ],
   "name": "Boar Prime",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -13126,6 +13252,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Strun",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -13386,6 +13514,8 @@
    "Incarnon Form AoE"
   ],
   "name": "Strun Wraith",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -13645,6 +13775,8 @@
    "Incarnon Form"
   ],
   "name": "Kunai",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -13876,6 +14008,8 @@
    "Incarnon Form Radial Attack"
   ],
   "name": "Despair",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -14030,6 +14164,8 @@
    "Incarnon Form"
   ],
   "name": "Felarx",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -14267,6 +14403,8 @@
    "Incarnon Form"
   ],
   "name": "Phenmor",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -14536,9 +14674,12 @@
  },
  {
   "attacks": [
-   "Incarnon Form"
+   "Incarnon Form",
+   "Auto Radial Attack"
   ],
   "name": "Laetum",
+  "no_multishot": [],
+  "note": null,
   "perks": [
    {
     "effects": {
@@ -14792,6 +14933,8 @@
    "Incarnon Form Charge Radial Attack"
   ],
   "name": "Onos",
+  "no_multishot": [],
+  "note": "Full charge shot; Incarnon magazine (30 rounds per charge) not modelled",
   "perks": [
    {
     "effects": {
