@@ -149,6 +149,26 @@ export interface components {
             direct_burst: number;
             /** Direct Sustained */
             direct_sustained: number | null;
+            head?: components["schemas"]["HeadDps"] | null;
+        };
+        /**
+         * HeadDps
+         * @description Burst DPS when every direct hit lands on `head` (aiming, highest zoom).
+         */
+        HeadDps: {
+            /** Critical */
+            critical: boolean;
+            /** Head */
+            head: string;
+            /** Max Stacks */
+            max_stacks: number;
+            /** Multiplier */
+            multiplier: number;
+            source: components["schemas"]["Source"];
+            /** Triggered */
+            triggered: string[];
+            /** Zero Stacks */
+            zero_stacks: number;
         };
         /** Headshot */
         Headshot: {

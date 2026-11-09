@@ -72,9 +72,22 @@ class Arsenal(ApiModel):
     beam_ramp_start: float | None
 
 
+class HeadDps(ApiModel):
+    """Burst DPS when every direct hit lands on `head` (aiming, highest zoom)."""
+
+    head: str  # e.g. "Grineer humanoid head"
+    multiplier: float
+    critical: bool  # critical-headshot flag
+    zero_stacks: float  # headshot-triggered effects off
+    max_stacks: float  # headshot-triggered effects at max stacks (ranked on, G70)
+    triggered: list[str]  # entries with headshot-triggered effects
+    source: Source
+
+
 class Dps(ApiModel):
     direct_burst: float
     direct_sustained: float | None  # None when the modelled magazine cannot fire one shot
+    head: HeadDps | None = None  # forms aimed at heads only
 
 
 class Headshot(ApiModel):

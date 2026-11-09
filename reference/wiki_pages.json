@@ -154,7 +154,8 @@
       "title": "Enemy_Body_Parts",
       "impact": "high",
       "feeds": [
-        "headshot multiplier and critical-headshot flag per enemy (enemies.json, step 8)"
+        "headshot multiplier and critical-headshot flag per enemy (enemies.json, step 8)",
+        "headshot maths and reference head (step 7b)"
       ]
     },
     "Enemy_Level_Scaling": {
@@ -316,7 +317,8 @@
       "title": "Lanka",
       "impact": "medium",
       "feeds": [
-        "Lanka charge time (reference/fire_overrides.json, G10)"
+        "Lanka charge time (reference/fire_overrides.json, G10)",
+        "Lanka zoom bonus override (step 7b)"
       ]
     },
     "Lumbering_Fragment": {
@@ -375,7 +377,8 @@
       "title": "Phenmor",
       "impact": "high",
       "feeds": [
-        "native Incarnon perks (step 6)"
+        "native Incarnon perks (step 6)",
+        "Lingering Judgement override (step 7b)"
       ]
     },
     "Polarity": {
@@ -452,7 +455,8 @@
       "title": "Sniper_Rifle",
       "impact": "medium",
       "feeds": [
-        "sniper shot combo and zoom buffs (step 4)"
+        "sniper shot combo and zoom buffs (step 4)",
+        "zoom bonuses, highest level (step 7b)"
       ]
     },
     "Status_Effect": {

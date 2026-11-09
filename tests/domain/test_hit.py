@@ -2,6 +2,7 @@ import pytest
 
 from app.domain.effects import DamageType as D
 from app.domain.effects import Effect, Faction, Operation, Stat
+from app.domain.headshot import Head
 from app.domain.hit import AttackStats, modded_hit
 
 BASE = AttackStats(
@@ -38,7 +39,7 @@ def test_average_shot_with_crit_faction_and_headshot() -> None:
     assert hit.average_shot(Faction.GRINEER) == pytest.approx(103.125 * crit_avg * 1.3)
     assert hit.average_shot(Faction.CORPUS) == pytest.approx(103.125 * crit_avg)
     headcrit_avg = 1 + 1.25 * (2 * 4.4 - 1)
-    assert hit.average_shot(headshot=3.0, headcrit=True) == pytest.approx(
+    assert hit.average_shot(head=Head(3.0, critical=True)) == pytest.approx(
         103.125 * 3.0 * headcrit_avg
     )
 
@@ -70,3 +71,35 @@ def test_base_damage_bonus_scales_the_base_not_the_multiplier() -> None:
     assert hit.base_total == pytest.approx(22)
     assert hit.damage_multiplier == 1.0
     assert hit.projectile_damage == pytest.approx(22, abs=22 / 32)
+
+
+def test_weak_point_crit_chance_adds_to_crit_bonuses() -> None:
+    """Saved Enemy_Body_Parts: weak-point crit chance is additive with Point Strike."""
+    acuity = [
+        b(Stat.CRITICAL_CHANCE, 1.5),
+        b(Stat.WEAK_POINT_CRITICAL_CHANCE, 3.5),
+        b(Stat.WEAK_POINT_DAMAGE, 3.5),
+    ]
+    hit = modded_hit(BASE, acuity)
+    assert hit.critical_chance == pytest.approx(0.5 * 2.5)
+    assert hit.head_critical_chance == pytest.approx(0.5 * 6.0)
+    assert hit.weak_point_damage == pytest.approx(3.5)
+    head = Head(3.0, critical=True)
+    crit_avg = 1 + 3.0 * (2 * 2.0 - 1)
+    assert hit.average_shot(head=head) == pytest.approx(103.125 * (3 + 1.5 * 3.5) * crit_avg)
+    flat_avg = 1 + 1.25 * (2 * 2.0 - 1)  # 1x head: body crit chance, no weak-point bonus
+    assert hit.average_shot(head=head, flat=True) == pytest.approx(103.125 * flat_avg)
+
+
+def test_flat_crit_chance_after_mods() -> None:
+    """Saved Lanka: zoom adds a flat +50 crit chance after mods: 25 x (1 + 1.5) + 50."""
+    base = AttackStats(
+        damage={D.ELECTRICITY: 100},
+        critical_chance=0.25,
+        critical_multiplier=2.0,
+        status_chance=0.1,
+        multishot=1,
+    )
+    zoom = b(Stat.CRITICAL_CHANCE, 0.5, operation=Operation.ADD)
+    hit = modded_hit(base, [b(Stat.CRITICAL_CHANCE, 1.5), zoom])
+    assert hit.critical_chance == pytest.approx(1.125)

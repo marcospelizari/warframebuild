@@ -3,7 +3,16 @@
 from dataclasses import dataclass
 from pathlib import Path
 
-from app.gamedata.models import Arcane, Exclusion, Incarnon, Join, Mod, ModSet, Weapon
+from app.gamedata.models import (
+    Arcane,
+    Exclusion,
+    Incarnon,
+    Join,
+    Mod,
+    ModSet,
+    ReferenceHead,
+    Weapon,
+)
 from app.pipeline.build import arcanes, headshot, incarnon, mods, weapons
 from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.effects import Overrides
@@ -33,6 +42,7 @@ class Dataset:
     joins: list[Join]
     game_update: str | None
     incarnon: list[Incarnon]
+    reference_head: ReferenceHead
 
 
 def build(raw_dir: Path, reference_dir: Path) -> Dataset:
@@ -43,6 +53,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
     ]
     wfcd_arcanes = as_list(load_json(raw_dir / "wfcd/Arcanes.json"))
     plus = export_plus.load(raw_dir)
+    overrides = Overrides(reference(reference_dir / "overrides.json"))
     gun_list, excluded, joins = weapons.build(
         records(load_json(de / "ExportWeapons_en.json"), "ExportWeapons"),
         wfcd,
@@ -52,8 +63,8 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         wiki_weapon_data.load(raw_dir / "wiki"),
         DirectBonusTable.load(reference(reference_dir / "galvanized_behaviour.json")),
         wiki_progenitor.load(raw_dir / "wiki"),
+        overrides,
     )
-    overrides = Overrides(reference(reference_dir / "overrides.json"))
     mod_list, sets, denied = mods.build(
         load_json(de / "ExportUpgrades_en.json"),
         reference(reference_dir / "mod_filter.json"),
@@ -73,7 +84,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         overrides,
         reference(reference_dir / "main_attack.json"),
     )
-    gun_list = headshot.apply(
+    gun_list, head = headshot.apply(
         reference(reference_dir / "headshot.json"),
         gun_list,
         {i.unique_name for i in perks},
@@ -96,6 +107,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         joins,
         weapons.game_update(wfcd),
         perks,
+        head,
     )
 
 

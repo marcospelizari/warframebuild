@@ -8376,12 +8376,28 @@
    "compatibility_tags": [],
    "description": "",
    "effects": {
-    "effects": [],
+    "effects": [
+     {
+      "chance": 1.0,
+      "class_values": {},
+      "damage_type": null,
+      "duration_s": null,
+      "faction": null,
+      "fire_rate_boost": null,
+      "max_stacks": 1,
+      "operation": "stacking_multiply",
+      "per_status_type": false,
+      "stat": "headshot_multiplier",
+      "trigger": "always",
+      "trigger_damage_type": null,
+      "value": 1.05,
+      "while_aiming": false
+     }
+    ],
     "note": null,
     "requires_trigger": null,
-    "support": "unsupported",
+    "support": "partial",
     "unparsed": [
-     "+105% Headshot Damage",
      "-45% Bodyshot Damage"
     ]
    },

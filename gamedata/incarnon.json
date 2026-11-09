@@ -4914,14 +4914,28 @@
        "trigger_damage_type": null,
        "value": 15.0,
        "while_aiming": false
+      },
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 3,
+       "operation": "base",
+       "per_status_type": false,
+       "stat": "damage",
+       "trigger": "on_weak_point_hit",
+       "trigger_damage_type": null,
+       "value": 5.0,
+       "while_aiming": false
       }
      ],
      "note": null,
      "requires_trigger": null,
-     "support": "partial",
-     "unparsed": [
-      "On Consecutive Weakpoint Hits: Increase Base Damage by +5. Stacks up to 3x."
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Well Rehearsed",
@@ -5992,14 +6006,28 @@
        "trigger_damage_type": null,
        "value": 15.0,
        "while_aiming": false
+      },
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 3,
+       "operation": "base",
+       "per_status_type": false,
+       "stat": "damage",
+       "trigger": "on_weak_point_hit",
+       "trigger_damage_type": null,
+       "value": 5.0,
+       "while_aiming": false
       }
      ],
      "note": null,
      "requires_trigger": null,
-     "support": "partial",
-     "unparsed": [
-      "On Consecutive Weakpoint Hits: Increase Base Damage by +5. Stacks up to 3x."
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Well Rehearsed",
@@ -6265,14 +6293,28 @@
    },
    {
     "effects": {
-     "effects": [],
-     "note": null,
+     "effects": [
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 1,
+       "operation": "stacking_multiply",
+       "per_status_type": false,
+       "stat": "headshot_multiplier",
+       "trigger": "always",
+       "trigger_damage_type": null,
+       "value": 0.25,
+       "while_aiming": false
+      }
+     ],
+     "note": "Incarnon_Evolutions, Vectis Deadhead: '+25% Headshot Damage'; the notes line (additive with Target Acquired and the scope bonus) is how it stacks, not another stat",
      "requires_trigger": null,
-     "support": "unsupported",
-     "unparsed": [
-      "+25% Headshot Damage.",
-      "Bonus is additive with Target Acquired, Vectis's Scope bonus, and similar bonuses."
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Deadhead",
@@ -6366,14 +6408,28 @@
        "trigger_damage_type": null,
        "value": 20.0,
        "while_aiming": false
+      },
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 3,
+       "operation": "base",
+       "per_status_type": false,
+       "stat": "damage",
+       "trigger": "on_weak_point_hit",
+       "trigger_damage_type": null,
+       "value": 5.0,
+       "while_aiming": false
       }
      ],
      "note": null,
      "requires_trigger": null,
-     "support": "partial",
-     "unparsed": [
-      "On Consecutive Weakpoint Hits: Increase Base Damage by +5. Stacks up to 3x."
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Well Rehearsed",
@@ -6666,13 +6722,28 @@
    },
    {
     "effects": {
-     "effects": [],
+     "effects": [
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 1,
+       "operation": "stacking_multiply",
+       "per_status_type": false,
+       "stat": "headshot_multiplier",
+       "trigger": "always",
+       "trigger_damage_type": null,
+       "value": 1.0,
+       "while_aiming": false
+      }
+     ],
      "note": null,
      "requires_trigger": null,
-     "support": "unsupported",
-     "unparsed": [
-      "+100% Headshot Damage."
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Deadhead",
@@ -8946,14 +9017,28 @@
        "trigger_damage_type": null,
        "value": 76.0,
        "while_aiming": false
+      },
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 3,
+       "operation": "base",
+       "per_status_type": false,
+       "stat": "damage",
+       "trigger": "on_headshot",
+       "trigger_damage_type": null,
+       "value": 20.0,
+       "while_aiming": false
       }
      ],
      "note": null,
      "requires_trigger": null,
-     "support": "partial",
-     "unparsed": [
-      "On Burst Headshots: Increase Base Damage by +20. Stacks up to 3x."
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Precision's Payoff",
@@ -10136,14 +10221,28 @@
        "trigger_damage_type": null,
        "value": 30.0,
        "while_aiming": false
+      },
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 3,
+       "operation": "base",
+       "per_status_type": false,
+       "stat": "damage",
+       "trigger": "on_headshot",
+       "trigger_damage_type": null,
+       "value": 20.0,
+       "while_aiming": false
       }
      ],
      "note": null,
      "requires_trigger": null,
-     "support": "partial",
-     "unparsed": [
-      "On Burst Headshots: Increase Base Damage by +20. Stacks up to 3x."
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Precision's Payoff",
@@ -11426,13 +11525,28 @@
    },
    {
     "effects": {
-     "effects": [],
+     "effects": [
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 1,
+       "operation": "stacking_multiply",
+       "per_status_type": false,
+       "stat": "headshot_multiplier",
+       "trigger": "always",
+       "trigger_damage_type": null,
+       "value": 1.0,
+       "while_aiming": false
+      }
+     ],
      "note": null,
      "requires_trigger": null,
-     "support": "unsupported",
-     "unparsed": [
-      "+100% Headshot Damage."
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Deadhead",
@@ -11862,13 +11976,28 @@
    },
    {
     "effects": {
-     "effects": [],
+     "effects": [
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 1,
+       "operation": "stacking_multiply",
+       "per_status_type": false,
+       "stat": "headshot_multiplier",
+       "trigger": "always",
+       "trigger_damage_type": null,
+       "value": 1.0,
+       "while_aiming": false
+      }
+     ],
      "note": null,
      "requires_trigger": null,
-     "support": "unsupported",
-     "unparsed": [
-      "+100% Headshot Damage."
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Deadhead",
@@ -12467,14 +12596,28 @@
    },
    {
     "effects": {
-     "effects": [],
-     "note": null,
+     "effects": [
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 1,
+       "operation": "stacking_multiply",
+       "per_status_type": false,
+       "stat": "headshot_multiplier",
+       "trigger": "always",
+       "trigger_damage_type": null,
+       "value": 0.25,
+       "while_aiming": false
+      }
+     ],
+     "note": "Incarnon_Evolutions, Vectis Deadhead: '+25% Headshot Damage'; the notes line (additive with Target Acquired and the scope bonus) is how it stacks, not another stat",
      "requires_trigger": null,
-     "support": "unsupported",
-     "unparsed": [
-      "+25% Headshot Damage.",
-      "Bonus is additive with Target Acquired, Vectis's Scope bonus, and similar bonuses."
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Deadhead",
@@ -14657,13 +14800,28 @@
    },
    {
     "effects": {
-     "effects": [],
-     "note": null,
+     "effects": [
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": 8.0,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 1,
+       "operation": "stacking_multiply",
+       "per_status_type": false,
+       "stat": "headshot_multiplier",
+       "trigger": "on_headshot",
+       "trigger_damage_type": null,
+       "value": 0.5,
+       "while_aiming": false
+      }
+     ],
+     "note": "Phenmor page, EVO5: 'On 2 headshots within 2 seconds: +50% Headshot damage for 8 seconds'; notes: additive with Primary Deadhead's headshot bonus",
      "requires_trigger": null,
-     "support": "unsupported",
-     "unparsed": [
-      "On 2 headshots within 2 seconds: +50% Headshot damage for 8 seconds."
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Lingering Judgement",
@@ -14779,13 +14937,28 @@
    },
    {
     "effects": {
-     "effects": [],
+     "effects": [
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 1,
+       "operation": "stacking_multiply",
+       "per_status_type": false,
+       "stat": "headshot_multiplier",
+       "trigger": "always",
+       "trigger_damage_type": null,
+       "value": 0.5,
+       "while_aiming": false
+      }
+     ],
      "note": null,
      "requires_trigger": null,
-     "support": "unsupported",
-     "unparsed": [
-      "+50% Headshot damage"
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Caput Mortuum",
@@ -15121,13 +15294,28 @@
    },
    {
     "effects": {
-     "effects": [],
+     "effects": [
+      {
+       "chance": 1.0,
+       "class_values": {},
+       "damage_type": null,
+       "duration_s": null,
+       "faction": null,
+       "fire_rate_boost": null,
+       "max_stacks": 4,
+       "operation": "stacking_multiply",
+       "per_status_type": false,
+       "stat": "headshot_multiplier",
+       "trigger": "on_weak_point_hit",
+       "trigger_damage_type": null,
+       "value": 0.3,
+       "while_aiming": false
+      }
+     ],
      "note": null,
      "requires_trigger": null,
-     "support": "unsupported",
-     "unparsed": [
-      "On Consecutive Weakpoint Hits: +30% Headshot Damage. Stacks up to 4x"
-     ]
+     "support": "full",
+     "unparsed": []
     },
     "form": "both",
     "name": "Sequential Skullbuster",

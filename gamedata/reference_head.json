@@ -1,0 +1,6 @@
+{
+ "critical": true,
+ "multiplier": 3.0,
+ "name": "Grineer humanoid head",
+ "source": "Enemy_Body_Parts"
+}

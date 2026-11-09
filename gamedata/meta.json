@@ -12,16 +12,16 @@
   "mod_sets": 10,
   "mods": 328,
   "mods_full": 243,
-  "mods_partial": 18,
-  "mods_unsupported": 67,
-  "perks_full": 303,
-  "perks_partial": 111,
-  "perks_unsupported": 154,
+  "mods_partial": 19,
+  "mods_unsupported": 66,
+  "perks_full": 316,
+  "perks_partial": 106,
+  "perks_unsupported": 146,
   "primary": 196,
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "aeb880a34bf050af",
+ "dataset_hash": "173074c5fa6106dc",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -43,7 +43,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 15,
+ "schema_version": 16,
  "sources": [
   {
    "path": "de/ExportManifest.json",

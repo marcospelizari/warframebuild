@@ -24,6 +24,7 @@ _STATS: dict[str, tuple[Stat, DamageType | None]] = {
     "fire rate": (Stat.FIRE_RATE, None),
     "critical chance": (Stat.CRITICAL_CHANCE, None),
     "critical damage": (Stat.CRITICAL_DAMAGE, None),
+    "critical multiplier": (Stat.CRITICAL_DAMAGE, None),  # wiki module zoom text
     "status chance": (Stat.STATUS_CHANCE, None),
     "status duration": (Stat.STATUS_DURATION, None),
     "status damage": (Stat.STATUS_DAMAGE, None),
@@ -31,6 +32,9 @@ _STATS: dict[str, tuple[Stat, DamageType | None]] = {
     "weak point damage": (Stat.WEAK_POINT_DAMAGE, None),
     "weak point critical chance": (Stat.WEAK_POINT_CRITICAL_CHANCE, None),
     "to headshot multiplier": (Stat.HEADSHOT_MULTIPLIER, None),
+    # "+100% Headshot Damage" (Deadhead perks) adds to the same pool (saved Incarnon_Evolutions,
+    # Vectis Deadhead note: additive with Target Acquired and the scope bonus).
+    "headshot damage": (Stat.HEADSHOT_MULTIPLIER, None),
     "magazine capacity": (Stat.MAGAZINE_CAPACITY, None),
     "reload speed": (Stat.RELOAD_SPEED, None),
     "ammo efficiency": (Stat.AMMO_EFFICIENCY, None),
