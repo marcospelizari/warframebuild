@@ -52,6 +52,7 @@ class Attack(Model):
     burst_count: Annotated[int, Field(ge=1)] | None = None
     burst_delay: NonNegative | None = None
     ammo_cost: NonNegative | None = None  # ammo per shot, 0 = none; None = not in the module
+    multishot: Positive | None = None  # wiki module; None = not listed
     # How a Galvanized-style bonus joins this attack's damage (G56): default from the shot
     # type, exceptions from reference/galvanized_behaviour.json.
     direct_bonus: DirectBonus = DirectBonus.ADDING
@@ -161,6 +162,7 @@ class Incarnon(Model):
 
     unique_name: str
     name: str
+    attacks: list[str]  # Incarnon Form shot parts (reference/main_attack.json)
     perks: list[Perk]
 
 
@@ -178,7 +180,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[12] = 12
+    schema_version: Literal[13] = 13
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

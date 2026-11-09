@@ -24,6 +24,7 @@ class CalcRequest(ApiModel):
         default_factory=list, max_length=8, description="mod uniqueNames in slot order"
     )
     bonus_element: DamageType | None = None
+    perks: list[str] = Field(default_factory=list, max_length=4, description="perk names")
 
 
 class Source(ApiModel):
@@ -59,7 +60,7 @@ class BonusElement(ApiModel):
 
 
 class Arsenal(ApiModel):
-    damage: dict[DamageType, float]  # per projectile
+    damage: dict[DamageType, float]  # per projectile, not quantized (as in the arsenal)
     total_damage: float
     critical_chance: float
     critical_multiplier: float
@@ -79,6 +80,8 @@ class Dps(ApiModel):
 class Build(ApiModel):
     dataset_hash: str
     weapon: WeaponRef
+    form: Literal["normal", "incarnon"]
+    perks: list[str]
     slots: list[Slot]
     bonus_element: BonusElement | None
     arsenal: Arsenal

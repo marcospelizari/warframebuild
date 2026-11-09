@@ -101,6 +101,13 @@ export interface components {
             /** Dataset Hash */
             dataset_hash: string;
             dps: components["schemas"]["Dps"];
+            /**
+             * Form
+             * @enum {string}
+             */
+            form: "normal" | "incarnon";
+            /** Perks */
+            perks: string[];
             /** Slots */
             slots: components["schemas"]["Slot"][];
             weapon: components["schemas"]["WeaponRef"];
@@ -113,6 +120,11 @@ export interface components {
              * @description mod uniqueNames in slot order
              */
             mods?: string[];
+            /**
+             * Perks
+             * @description perk names
+             */
+            perks?: string[];
             /**
              * Weapon
              * @description weapon slug

@@ -1,7 +1,9 @@
 """One build from loaded data: arsenal stats and direct DPS (step 4.6, no search)."""
 
+import math
 from collections.abc import Sequence
 from dataclasses import dataclass
+from typing import Literal
 
 from app.domain import families
 from app.domain.effects import DamageType, Stat, Support, Trigger
@@ -9,10 +11,11 @@ from app.domain.elements import ELEMENTS
 from app.domain.fire_rate import Firing, effective_fire_rate, shooting_share
 from app.domain.hit import AttackStats, Bonus, ModdedHit, modded_hit
 from app.domain.stats import modded, modded_time, value_for
-from app.gamedata.models import Mod, Weapon
+from app.gamedata.models import Attack, Effects, Incarnon, Mod, Perk, Weapon
 
 MAX_SLOTS = 8
 BOW = "Bow"  # WFCD weapon_type
+Form = Literal["normal", "incarnon"]
 
 
 class BuildError(ValueError):
@@ -23,7 +26,9 @@ class BuildError(ValueError):
 
 @dataclass(frozen=True)
 class Evaluation:
-    hit: ModdedHit
+    hit: ModdedHit  # first part of the shot
+    form: Form
+    perks: list[str]
     fire_rate: float  # effective, shots/s
     magazine: float | None
     reload_time: float
@@ -33,6 +38,7 @@ class Evaluation:
     ammo_cost_assumed: bool  # attack lists none -> 1
     not_modelled: list[str]  # mods with partial/unsupported effects (R6)
     sets_ignored: list[str]  # set bonuses not applied yet
+    inactive_perks: list[str]  # chosen perks that do nothing in this form
 
 
 def check(weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None) -> None:
@@ -61,33 +67,81 @@ def check(weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None) -> None
             raise BuildError("not_supported", f"{bonus} bonus not modelled yet", "bonus_element")
 
 
-def bonuses(weapon: Weapon, mods: Sequence[Mod]) -> list[Bonus]:
+def bonuses(weapon: Weapon, entries: Sequence[Effects]) -> list[Bonus]:
     """Unconditional effects in slot order, max rank (Q33): what the arsenal shows."""
     return [
         (e, value_for(e, weapon.weapon_type))
-        for m in mods
-        for e in m.effects.effects
+        for entry in entries
+        for e in entry.effects
         if e.trigger == Trigger.ALWAYS and not e.while_aiming
     ]
 
 
-def evaluate(weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None = None) -> Evaluation:
-    check(weapon, mods, bonus)
-    b = bonuses(weapon, mods)
-    share = weapon.bonus_element.max_share if bonus and weapon.bonus_element else None
-    bonus_element = (bonus, share) if bonus is not None and share is not None else None
-    hit = modded_hit(
-        AttackStats(
+def chosen_perks(incarnon: Incarnon | None, names: Sequence[str]) -> list[Perk]:
+    if names and incarnon is None:
+        raise BuildError("no_perks", "not an Incarnon weapon", "perks")
+    by_name = {p.name: p for p in incarnon.perks} if incarnon else {}
+    out: list[Perk] = []
+    for i, name in enumerate(names):
+        perk = by_name.get(name)
+        if perk is None:
+            raise BuildError("unknown_perk", f"no perk {name!r}", f"perks[{i}]")
+        if any(p.tier == perk.tier for p in out):
+            raise BuildError("perk_tier_clash", f"two perks in EVO{perk.tier}", f"perks[{i}]")
+        out.append(perk)
+    return out
+
+
+def _parts(
+    weapon: Weapon, incarnon: Incarnon | None, form: Form
+) -> list[tuple[AttackStats, Attack | None]]:
+    """(stats, attack) per part of one shot; normal form = the DE summary + first attack."""
+    if form == "normal":
+        stats = AttackStats(
             damage=weapon.damage,
             critical_chance=weapon.critical_chance,
             critical_multiplier=weapon.critical_multiplier,
             status_chance=weapon.status_chance,
             multishot=weapon.multishot,
-        ),
-        b,
-        bonus_element,
-    )
-    attack = weapon.attacks[0] if weapon.attacks else None  # main attack: step 6 (V6)
+        )
+        return [(stats, weapon.attacks[0] if weapon.attacks else None)]  # main attack: step 8
+    if incarnon is None:
+        raise BuildError("no_incarnon_form", f"{weapon.name} has no Incarnon Form", "form")
+    attacks = {a.name: a for a in weapon.attacks}
+    return [
+        (
+            AttackStats(
+                damage=a.damage,
+                critical_chance=a.critical_chance,
+                critical_multiplier=a.critical_multiplier,
+                status_chance=a.status_chance,
+                multishot=a.multishot or weapon.multishot,
+            ),
+            a,
+        )
+        for a in (attacks[n] for n in incarnon.attacks)
+    ]
+
+
+def evaluate(
+    weapon: Weapon,
+    mods: Sequence[Mod],
+    bonus: DamageType | None = None,
+    incarnon: Incarnon | None = None,
+    perks: Sequence[str] = (),
+    form: Form | None = None,
+) -> Evaluation:
+    """`form` defaults to Incarnon Form for Incarnon guns (Q11)."""
+    check(weapon, mods, bonus)
+    picked = chosen_perks(incarnon, perks)
+    form = form or ("incarnon" if incarnon else "normal")
+    active = [p for p in picked if p.form in ("both", form)]
+    b = bonuses(weapon, [m.effects for m in mods] + [p.effects for p in active])
+    share = weapon.bonus_element.max_share if bonus and weapon.bonus_element else None
+    bonus_element = (bonus, share) if bonus is not None and share is not None else None
+    parts = _parts(weapon, incarnon, form)
+    hits = [modded_hit(stats, b, bonus_element) for stats, _ in parts]
+    attack = parts[0][1]
     ammo_cost = attack.ammo_cost if attack and attack.ammo_cost is not None else None
     magazine = (
         None
@@ -95,8 +149,9 @@ def evaluate(weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None = Non
         else modded(weapon.magazine_size, Stat.MAGAZINE_CAPACITY, b)
     )
     reload = modded_time(weapon.reload_time, modded(1.0, Stat.RELOAD_SPEED, b) - 1)
+    base_rate = attack.fire_rate if form == "incarnon" and attack else None
     firing = Firing(
-        fire_rate=weapon.fire_rate,
+        fire_rate=base_rate or weapon.fire_rate,
         charge_time=attack.charge_time if attack else None,
         burst_count=attack.burst_count if attack else None,
         burst_delay=attack.burst_delay if attack else None,
@@ -108,9 +163,11 @@ def evaluate(weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None = Non
         reload_replaces_shot=weapon.reload_replaces_shot,
     )
     rate = effective_fire_rate(firing, modded(1.0, Stat.FIRE_RATE, b))
-    burst = hit.average_shot() * rate
+    burst = math.fsum(h.average_shot() for h in hits) * rate
     return Evaluation(
-        hit=hit,
+        hit=hits[0],
+        form=form,
+        perks=[p.name for p in picked],
         fire_rate=rate,
         magazine=magazine,
         reload_time=reload,
@@ -118,6 +175,8 @@ def evaluate(weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None = Non
         direct_sustained_dps=burst * shooting_share(firing, rate),
         bonus_element=bonus_element,
         ammo_cost_assumed=ammo_cost is None,
-        not_modelled=[m.name for m in mods if m.effects.support != Support.FULL],
+        not_modelled=[m.name for m in mods if m.effects.support != Support.FULL]
+        + [p.name for p in active if p.effects.support != Support.FULL],
         sets_ignored=sorted({m.mod_set for m in mods if m.mod_set}),
+        inactive_perks=[p.name for p in picked if p not in active],
     )

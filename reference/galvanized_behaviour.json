@@ -1,5 +1,5 @@
 {
-  "about": "Galvanized (Condition Overload-style) bonus per attack where it differs from the default (Marcos 2026-11-08, PLAN G56 option b). Default: `adding` (joins the Serration group) on direct hits, `none` on AoE parts (WFCD shot_type AoE). Rows: `multiplying` (separate factor) or `none`, from the Attack Catalog of the saved page Condition_Overload_(Mechanic) (community-sourced); `catalog_rows` names the page line and the catalog attack name when it differs from ours (matched by name or by unmodded damage). Catalog rows marked Adding with a different base are not used (option c would add them).",
+  "about": "Galvanized (Condition Overload-style) bonus per attack where it differs from the default (project decision 2026-11-08). Default: `adding` (joins the Serration group) on direct hits, `none` on AoE parts (WFCD shot_type AoE). Rows: `multiplying` (separate factor) or `none`, from the Attack Catalog of the saved page Condition_Overload_(Mechanic) (community-sourced); `catalog_rows` names the page line and the catalog attack name when it differs from ours (matched by name or by unmodded damage). Catalog rows marked Adding with a different base are not used (option c would add them).",
   "source": "Condition_Overload_(Mechanic), Attack Catalog",
   "weapons": {
     "/Lotus/Weapons/Grineer/ThrowingWeapons/GrnVorStickyBomb/GrnVorStickyBomb": {

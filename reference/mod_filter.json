@@ -17,7 +17,7 @@
       "id": "expert",
       "path_contains": "/Expert/",
       "unless_name_starts": "Primed",
-      "reason": "non-Primed /Expert/ copy with higher values; not in the game or on the wiki (Marcos, 2026-11-07)",
+      "reason": "non-Primed /Expert/ copy with higher values; not in the game or on the wiki (in-game check, 2026-11-07)",
       "verified": "2026-11-08"
     },
     {
@@ -31,7 +31,7 @@
     {
       "id": "/Lotus/Upgrades/Mods/PvPMods/Rifle/MoreDamageonTripleTapRifleMod",
       "name": "Double Tap",
-      "reason": "Conclave mod that also works outside Conclave (DE text: \"Stacks up to 20x outside of Conclave\"); Marcos, 2026-11-08",
+      "reason": "Conclave mod that also works outside Conclave (DE text: \"Stacks up to 20x outside of Conclave\"); in-game check, 2026-11-08",
       "verified": "2026-11-08"
     }
   ]

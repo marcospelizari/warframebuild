@@ -9,6 +9,8 @@ afterEach(() => vi.unstubAllGlobals());
 const build: Build = {
   dataset_hash: "h",
   weapon: { slug: "soma-prime", name: "Soma Prime", category: "primary", weapon_type: "Rifle" },
+  form: "incarnon",
+  perks: [],
   slots: [{ index: 0, mod: null, name: null, rank: null, polarity: null }],
   bonus_element: null,
   arsenal: {
@@ -42,6 +44,7 @@ test("posts the slug to /api/calc and lists the numbers", async () => {
   const fetch = renderPage(new Response(JSON.stringify(build)));
   expect(await screen.findByText("Soma Prime")).toBeInTheDocument();
   expect(screen.getByText("288.00")).toBeInTheDocument();
+  expect(screen.getByText("Form: incarnon")).toBeInTheDocument();
   expect(screen.getByText("Mods at max rank")).toBeInTheDocument();
   const [, init] = fetch.mock.calls[0] as unknown as [string, RequestInit];
   expect(JSON.parse(init.body as string)).toEqual({ weapon: "soma-prime", mods: [] });

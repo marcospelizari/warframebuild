@@ -66,7 +66,12 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         wfcd_arcanes,
         overrides,
     )
-    perks = incarnon.build(wiki_incarnon.load(raw_dir / "wiki"), gun_list, overrides)
+    perks = incarnon.build(
+        wiki_incarnon.load(raw_dir / "wiki"),
+        gun_list,
+        overrides,
+        reference(reference_dir / "main_attack.json"),
+    )
     overrides.check_all_used()
     _check_arcane_classes(arcane_list, gun_list)
     if not gun_list or not mod_list or not arcane_list:

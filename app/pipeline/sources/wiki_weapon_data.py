@@ -55,6 +55,7 @@ class AttackData:
     burst_delay: float | None
     no_shot_delay: bool  # FireRate = math.huge
     ammo_cost: float | None  # ammo per shot (0.5 per beam tick, 0 = none); None = not listed
+    multishot: float | None = None  # projectiles per shot; None = not listed
 
 
 @dataclass(frozen=True)
@@ -137,7 +138,17 @@ def _attack(where: str, a: dict[str, Any]) -> AttackData:
         burst_delay=float(delay) if delay is not None else None,
         no_shot_delay=a.get("FireRate") == math.inf,
         ammo_cost=_ammo_cost(where, a),
+        multishot=_multishot(where, a),
     )
+
+
+def _multishot(where: str, a: dict[str, Any]) -> float | None:
+    value = a.get("Multishot")
+    if value is None:
+        return None
+    if not isinstance(value, int | float) or not 0 < value < math.inf:
+        raise RefreshError(f"{where}: Multishot must be a finite number > 0")
+    return float(value)
 
 
 def _ammo_cost(where: str, a: dict[str, Any]) -> float | None:

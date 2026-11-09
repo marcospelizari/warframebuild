@@ -144,6 +144,7 @@ def paths(tmp_path: Path) -> Paths:
     reference = tmp_path / "reference"
     shutil.copytree(ROOT / "reference", reference)
     _keep_fixture_guns(raw, reference / "galvanized_behaviour.json")
+    _keep_rows(reference / "main_attack.json", {"Lex Prime", "Laetum"})
     for page in wiki_local.pages(reference):
         if page.format == "lua":
             stub = MODULE_STUBS.get(page.stem, "return {}")
@@ -154,6 +155,13 @@ def paths(tmp_path: Path) -> Paths:
     return Paths(
         raw=raw, reference=reference, gamedata=tmp_path / "gamedata", img=tmp_path / "cache/img"
     )
+
+
+def _keep_rows(table: Path, names: set[str]) -> None:
+    """Rows only for the guns the stub pages give perks."""
+    data = json.loads(table.read_text())
+    data["weapons"] = {u: r for u, r in data["weapons"].items() if r["name"] in names}
+    table.write_text(json.dumps(data))
 
 
 def _keep_fixture_guns(raw: Path, table: Path) -> None:

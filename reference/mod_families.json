@@ -12,7 +12,7 @@
         "Galvanized Aptitude"
       ],
       "reason": "cannot be equipped together (also joins their pistol/shotgun counterparts, which never meet across classes)",
-      "source": "Marcos, arsenal",
+      "source": "in-game arsenal check",
       "verified": "2026-11-08"
     },
     {
@@ -26,7 +26,7 @@
         "Primed Chamber"
       ],
       "reason": "cannot be equipped together",
-      "source": "Marcos, arsenal",
+      "source": "in-game arsenal check",
       "verified": "2026-11-08"
     },
     {
@@ -40,7 +40,7 @@
         "Critical Delay"
       ],
       "reason": "cannot be equipped together (rifle); data does not link the dual-stat crit mod to the base crit mod",
-      "source": "Marcos, arsenal",
+      "source": "in-game arsenal check",
       "verified": "2026-11-08"
     },
     {
@@ -54,7 +54,7 @@
         "Critical Deceleration"
       ],
       "reason": "cannot be equipped together (shotgun); data does not link the dual-stat crit mod to the base crit mod",
-      "source": "Marcos, arsenal; saved Mod/Compatibility (Mod Incompatibility): inherits Shotgun/WeaponCritChanceMod",
+      "source": "in-game arsenal check; saved Mod/Compatibility (Mod Incompatibility): inherits Shotgun/WeaponCritChanceMod",
       "verified": "2026-11-08"
     },
     {
@@ -68,7 +68,7 @@
         "Creeping Bullseye"
       ],
       "reason": "cannot be equipped together (pistol); data does not link the dual-stat crit mod to the base crit mod",
-      "source": "Marcos, arsenal",
+      "source": "in-game arsenal check",
       "verified": "2026-11-08"
     },
     {

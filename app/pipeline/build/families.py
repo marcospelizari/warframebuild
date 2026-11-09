@@ -8,7 +8,7 @@ from uniqueNames and names, corrected by checked entries in reference/mod_famili
   Galvanized Chamber, and the pistol/shotgun equivalents, which never meet on one gun);
 - a name starting with Primed / Amalgam / Spectral that ends with another mod's full
   name is a variant of it (Primed Bane of Grineer, Amalgam Argonak Metal Auger,
-  Spectral Serration; in-game rule checked by Marcos 2026-11-08). Other shared
+  Spectral Serration; in-game rule checked 2026-11-08). Other shared
   endings are not variants (Augur Seeker / Seeker, Sweeping Serration / Serration;
   the page: Sinister Reach is not a Reach variant);
 - `join` entries merge families the data does not link, `split` entries take a mod out.

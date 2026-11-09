@@ -39,6 +39,7 @@ class ModdedHit:
     faction_multiplier: dict[Faction, float]  # Bane-style factor per faction (1 if none)
     crit_upgrade_chance: float  # Vigilante set (crit_tier_upgrade)
     unscaled: dict[DamageType, float]  # quantized composition before damage multipliers
+    arsenal_damage: dict[DamageType, float]  # not quantized: what the arsenal shows
     base_total: float  # the attack's unmodded base damage total
     modded_base: float  # base damage total x damage bonuses: the DoT seed before crit
     damage_multiplier: float  # Serration group x separate damage factors
@@ -105,6 +106,10 @@ def modded_hit(
             1.0, math.fsum(v for e, v in bonuses if e.stat == Stat.CRIT_TIER_UPGRADE)
         ),
         unscaled=quantized,
+        arsenal_damage=scaled(
+            composition(damage, elements, physical, bonus_element, quantized=False),
+            damage_multiplier,
+        ),
         base_total=math.fsum(damage.values()),
         modded_base=math.fsum(damage.values()) * damage_multiplier,
         damage_multiplier=damage_multiplier,

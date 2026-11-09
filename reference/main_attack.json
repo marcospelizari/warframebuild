@@ -1,0 +1,519 @@
+{
+  "about": "Attacks that make up one shot of each Incarnon gun's Incarnon Form (G3/V6, Q11): their damage is summed, the first sets fire rate, charge and burst. Attack names as in WFCD. Other multi-attack guns follow in step 8.",
+  "weapons": {
+    "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher": {
+      "name": "Angstrum",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun": {
+      "name": "Atomos",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form Radial Attack"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/AutomaticHandCrossbow/AutoCrossBow": {
+      "name": "Ballistica",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeBallistica/PrimeBallistica": {
+      "name": "Ballistica Prime",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Shotgun/FullAutoShotgun": {
+      "name": "Boar",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Shotgun/PrimeBoar": {
+      "name": "Boar Prime",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/BoltoRifle": {
+      "name": "Boltor",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeBoltor/PrimeBoltor": {
+      "name": "Boltor Prime",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/Rifle": {
+      "name": "Braton",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/BratonPrime": {
+      "name": "Braton Prime",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/VIPRifle": {
+      "name": "Braton Vandal",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/HandShotGun": {
+      "name": "Bronco",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/BroncoPrime": {
+      "name": "Bronco Prime",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/BurstRifle": {
+      "name": "Burston",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form Radial Attack"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston": {
+      "name": "Burston Prime",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form Radial Attack"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/CorpusMinigun": {
+      "name": "Cestra",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/ClanTech/Energy/EnergyRifle": {
+      "name": "Dera",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/ClanTech/Energy/DeraVandal": {
+      "name": "Dera Vandal",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/ThrowingWeapons/StalkerKunai": {
+      "name": "Despair",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form Radial Attack"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/DexTheThird/DexTheThird": {
+      "name": "Dex Sybaris",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Bows/StalkerBow": {
+      "name": "Dread",
+      "incarnon": [
+        "Incarnon Form Charged Shot"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep": {
+      "name": "Dual Toxocyst",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun": {
+      "name": "Felarx",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/AutoPistol": {
+      "name": "Furis",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSDroidArray": {
+      "name": "Gammacor",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form Radial Attack"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/HeavyRifle": {
+      "name": "Gorgon",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Grineer/LongGuns/WraithGorgon/WraithGorgon": {
+      "name": "Gorgon Wraith",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai": {
+      "name": "Kunai",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol": {
+      "name": "Laetum",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/Pistol": {
+      "name": "Lato",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/LatoPrime": {
+      "name": "Lato Prime",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/LatoVandal": {
+      "name": "Lato Vandal",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle": {
+      "name": "Latron",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/LatronPrime": {
+      "name": "Latron Prime",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron": {
+      "name": "Latron Wraith",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/HeavyPistol": {
+      "name": "Lex",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex": {
+      "name": "Lex Prime",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/StartingRifle": {
+      "name": "MK1-Braton",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/MK1Series/MK1Furis": {
+      "name": "MK1-Furis",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/MK1Series/MK1Kunai": {
+      "name": "MK1-Kunai",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/MK1Series/MK1Paris": {
+      "name": "MK1-Paris",
+      "incarnon": [
+        "Incarnon Form Charged Shot"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/MK1Series/MK1Strun": {
+      "name": "MK1-Strun",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun": {
+      "name": "Miter",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form Radial Attack"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon": {
+      "name": "Onos",
+      "incarnon": [
+        "Incarnon Form Charge Attack",
+        "Incarnon Form Charge Radial Attack"
+      ],
+      "note": "charged mode; Held Damage is the other mode (to review)",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Bows/HuntingBow": {
+      "name": "Paris",
+      "incarnon": [
+        "Incarnon Form Charged Shot"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow": {
+      "name": "Paris Prime",
+      "incarnon": [
+        "Incarnon Form Charged Shot"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle": {
+      "name": "Phenmor",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/PrismaAngstrum": {
+      "name": "Prisma Angstrum",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Grineer/LongGuns/VoidTraderGorgon/VTGorgon": {
+      "name": "Prisma Gorgon",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Syndicates/RedVeil/Pistols/RVBallistica": {
+      "name": "Rakta Ballistica",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/BurstPistol": {
+      "name": "Sicarus",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeSicarus/PrimeSicarusPistol": {
+      "name": "Sicarus Prime",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/TennoAR": {
+      "name": "Soma",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle": {
+      "name": "Soma Prime",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Shotgun/Shotgun": {
+      "name": "Strun",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon": {
+      "name": "Strun Prime",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal": {
+      "name": "Strun Wraith",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form AoE"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun": {
+      "name": "Stug",
+      "incarnon": [
+        "Incarnon Form Blob Embed",
+        "Incarnon Form Blob Explosion"
+      ],
+      "note": "Bounce Explosion is the alternative when the blob does not embed",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle": {
+      "name": "Sybaris",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeSybaris/PrimeSybarisRifle": {
+      "name": "Sybaris Prime",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSSynoidGammacor": {
+      "name": "Synoid Gammacor",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form Radial Attack"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Syndicates/ArbitersOfHexis/LongGuns/AHBoltor": {
+      "name": "Telos Boltor",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/ClanTech/Bio/BioWeapon": {
+      "name": "Torid",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/RevolverPistol": {
+      "name": "Vasto",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol": {
+      "name": "Vasto Prime",
+      "incarnon": [
+        "Incarnon Form"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle": {
+      "name": "Vectis",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form Embed AoE"
+      ],
+      "note": "body hit; Headshot AoE replaces Embed AoE on headshots (step 7)",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle": {
+      "name": "Vectis Prime",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form Embed AoE"
+      ],
+      "note": "body hit; Headshot AoE replaces Embed AoE on headshots (step 7)",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol": {
+      "name": "Zylok",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form Radial Attack"
+      ],
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeZylok/ZylokPrimePistol": {
+      "name": "Zylok Prime",
+      "incarnon": [
+        "Incarnon Form",
+        "Incarnon Form Radial Attack"
+      ],
+      "verified": "2026-11-09"
+    }
+  }
+}

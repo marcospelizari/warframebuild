@@ -90,7 +90,7 @@ def test_real_fixture_mods_get_families(paths) -> None:  # type: ignore[no-untyp
 
 
 def test_prefixed_name_ending_with_a_mod_name_is_its_variant() -> None:
-    """Marcos 2026-11-08: a mod carrying the normal version's name cannot be equipped with it."""
+    """In-game check 2026-11-08: a variant cannot be equipped with its base mod."""
     p = "/Lotus/Upgrades/Mods/Pistol/"
     mods = [
         *MODS,
