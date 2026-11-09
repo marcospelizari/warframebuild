@@ -6,7 +6,7 @@ import pytest
 
 from app.gamedata.store import GameData, load
 from app.pipeline.refresh import Paths
-from app.pipeline.sources import wiki_local
+from app.pipeline.sources import wiki_incarnon, wiki_local
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_RAW = ROOT / "tests/fixtures/raw"
@@ -80,8 +80,55 @@ def _family_page(gun: str) -> str:
     )
 
 
+# Incarnon tables in the shape of the saved pages (values from them).
+NATIVE_STUB = "===Evolutions===\n{|\n|}\n"
+LAETUM_STUB = """===Evolutions===
+{| class="wikitable"
+! rowspan="3" | EVO5
+| '''Devouring Attrition'''
+|
+* '''50%''' chance to deal '''+2000%''' damage on non-critical hits
+|
+* Damage bonus is '''multiplicative''' to base damage bonuses such as {{M|Hornet Strike}}.
+|-
+| '''Overwhelming Attrition'''
+|
+* On Hit that is neither Critical nor applies a Status Effect: '''+400%''' damage for 10 seconds.
+|
+* Damage bonus is '''additive''' to base damage bonuses such as {{M|Hornet Strike}}.
+|-
+|}
+"""
+GENESIS_STUB = """{{CustomCollapsible|Lex|Lex|expand=false|notlist=true}}
+{| class="wikitable sortable stickyHeader"
+! colspan="3" | Evolution
+! class=unsortable | {{Weapon|Lex}}
+! class=unsortable | {{Weapon|Lex Prime}}
+! class=unsortable | Notes
+|-
+! rowspan="3" | EVO4
+| style="text-align:center" | '''Critical Parallel'''
+|
+*Increase Base Critical Chance by '''+X'''.
+*Increase Base Critical Damage Multiplier by '''+0.4x'''.
+| style="text-align:center" | X = 20%
+| style="text-align:center" | X = 19%
+|
+|-
+| style="text-align:center" | '''Executioner's Dawn'''
+|
+*On Equip: '''+100%''' Headshot Damage for '''4s'''.
+| colspan="2" style="text-align:center" | -
+|
+*The bonus does not apply to the Incarnon form.
+|}
+{{CustomCollapsible/End}}
+"""
+
 # Family pages in the shape of the saved Kuva/Tenet/Coda_Weapons pages.
 PAGE_STUBS = {
+    "Incarnon_Evolutions": GENESIS_STUB,
+    "Laetum": LAETUM_STUB,
     "Kuva_Weapons": _family_page("Kuva Hind"),
     "Tenet_Weapons": _family_page("Tenet Example"),
     "Coda_Weapons": _family_page("Coda Example"),
@@ -101,7 +148,8 @@ def paths(tmp_path: Path) -> Paths:
         if page.format == "lua":
             stub = MODULE_STUBS.get(page.stem, "return {}")
         else:
-            stub = PAGE_STUBS.get(page.stem, "stub")
+            native = page.stem in wiki_incarnon.NATIVE
+            stub = PAGE_STUBS.get(page.stem, NATIVE_STUB if native else "stub")
         (raw / "wiki" / page.filename).write_text(stub, encoding="utf-8")
     return Paths(
         raw=raw, reference=reference, gamedata=tmp_path / "gamedata", img=tmp_path / "cache/img"

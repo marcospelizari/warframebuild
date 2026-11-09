@@ -3,14 +3,20 @@
 from dataclasses import dataclass
 from pathlib import Path
 
-from app.gamedata.models import Arcane, Exclusion, Join, Mod, ModSet, Weapon
-from app.pipeline.build import arcanes, mods, weapons
+from app.gamedata.models import Arcane, Exclusion, Incarnon, Join, Mod, ModSet, Weapon
+from app.pipeline.build import arcanes, incarnon, mods, weapons
 from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.effects import Overrides
 from app.pipeline.build.fire import FireOverrides
 from app.pipeline.build.inputs import as_list, records, reference
 from app.pipeline.errors import RefreshError
-from app.pipeline.sources import export_plus, load_json, wiki_progenitor, wiki_weapon_data
+from app.pipeline.sources import (
+    export_plus,
+    load_json,
+    wiki_incarnon,
+    wiki_progenitor,
+    wiki_weapon_data,
+)
 
 __all__ = ["Dataset", "build"]
 
@@ -25,6 +31,7 @@ class Dataset:
     arcanes: list[Arcane]
     joins: list[Join]
     game_update: str | None
+    incarnon: list[Incarnon]
 
 
 def build(raw_dir: Path, reference_dir: Path) -> Dataset:
@@ -59,6 +66,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         wfcd_arcanes,
         overrides,
     )
+    perks = incarnon.build(wiki_incarnon.load(raw_dir / "wiki"), gun_list, overrides)
     overrides.check_all_used()
     _check_arcane_classes(arcane_list, gun_list)
     if not gun_list or not mod_list or not arcane_list:
@@ -67,7 +75,15 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
             f"{len(arcane_list)} arcanes"
         )
     return Dataset(
-        gun_list, excluded, mod_list, sets, denied, arcane_list, joins, weapons.game_update(wfcd)
+        gun_list,
+        excluded,
+        mod_list,
+        sets,
+        denied,
+        arcane_list,
+        joins,
+        weapons.game_update(wfcd),
+        perks,
     )
 
 

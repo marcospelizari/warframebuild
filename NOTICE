@@ -96,10 +96,13 @@ the wiki itself. This applies to these files:
 
   gamedata/incarnon.json        (Incarnon evolution perks)
   gamedata/weapons.json         (only the fields forced_procs, burst_count,
-                                 burst_delay, sniper_combo_min, beam_ramp_start
-                                 and no_reload, and a null fire_rate, taken from
-                                 the wiki weapon data modules and pages)
-  reference/fire_overrides.json (beam ramp-up starts, no-reload weapons)
+                                 burst_delay, sniper_combo_min, beam_ramp_start,
+                                 no_reload and bonus_element, a null fire_rate,
+                                 and magazine or reload values taken from the
+                                 wiki weapon data modules and pages)
+  reference/fire_overrides.json (beam ramp-up starts, no-reload weapons, reload
+                                 values)
+  reference/overrides.json      (Incarnon perk entries)
   reference/galvanized_behaviour.json (Galvanized bonus behaviour per attack,
                                  from the Condition Overload attack catalog)
   gamedata/factions.json        (faction damage-type modifiers)

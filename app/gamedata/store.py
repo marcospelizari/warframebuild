@@ -12,9 +12,9 @@ from pathlib import Path
 
 from pydantic import TypeAdapter
 
-from app.gamedata.models import Arcane, Join, Meta, Mod, ModsFile, Weapon
+from app.gamedata.models import Arcane, Incarnon, Join, Meta, Mod, ModsFile, Weapon
 
-DATA_FILES = ("weapons.json", "mods.json", "arcanes.json", "joins.json")
+DATA_FILES = ("weapons.json", "mods.json", "arcanes.json", "joins.json", "incarnon.json")
 
 
 @dataclass(frozen=True)
@@ -24,6 +24,7 @@ class GameData:
     mods: ModsFile
     arcanes: list[Arcane]
     joins: list[Join]
+    incarnon: list[Incarnon]
 
     @cached_property
     def weapon_by_slug(self) -> dict[str, Weapon]:
@@ -60,4 +61,5 @@ def load(gamedata_dir: Path) -> GameData:
         mods=ModsFile.model_validate_json(payloads["mods.json"]),
         arcanes=TypeAdapter(list[Arcane]).validate_json(payloads["arcanes.json"]),
         joins=TypeAdapter(list[Join]).validate_json(payloads["joins.json"]),
+        incarnon=TypeAdapter(list[Incarnon]).validate_json(payloads["incarnon.json"]),
     )

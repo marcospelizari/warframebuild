@@ -525,3 +525,24 @@ def test_reload_override_must_be_a_number(paths: Paths) -> None:
     table.write_text(json.dumps(data))
     with pytest.raises(RefreshError, match="reload_time"):
         build(paths.raw, paths.reference)
+
+
+def test_incarnon_perks_join_guns(paths: Paths) -> None:
+    data = build(paths.raw, paths.reference)
+    perks = {(i.name, p.name): p for i in data.incarnon for p in i.perks}
+    parallel = perks[("Lex Prime", "Critical Parallel")]
+    assert [(e.stat, e.value) for e in parallel.effects.effects] == [
+        (Stat.CRITICAL_CHANCE, 0.19),
+        (Stat.CRITICAL_DAMAGE, 0.4),
+    ]
+    assert perks[("Lex Prime", "Executioner's Dawn")].form == "normal"
+
+
+def test_laetum_non_crit_perks_carry_their_conditions(paths: Paths) -> None:
+    data = build(paths.raw, paths.reference)
+    laetum = next(i for i in data.incarnon if i.name == "Laetum")
+    triggers = {p.name: p.effects.effects[0].trigger for p in laetum.perks}
+    assert triggers == {
+        "Devouring Attrition": Trigger.ON_NONCRIT,
+        "Overwhelming Attrition": Trigger.ON_NONCRIT_NO_STATUS,
+    }

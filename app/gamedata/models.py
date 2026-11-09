@@ -149,6 +149,21 @@ class Arcane(Model):
     effects: Effects  # max rank
 
 
+class Perk(Model):
+    tier: Annotated[int, Field(ge=2, le=5)]
+    name: str
+    form: Literal["both", "normal", "incarnon"]
+    effects: Effects
+
+
+class Incarnon(Model):
+    """Evolution perks of one gun (saved Incarnon_Evolutions / native weapon pages)."""
+
+    unique_name: str
+    name: str
+    perks: list[Perk]
+
+
 class Exclusion(Model):
     unique_name: str
     name: str
@@ -163,7 +178,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[11] = 11
+    schema_version: Literal[12] = 12
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

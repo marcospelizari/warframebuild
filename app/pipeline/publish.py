@@ -87,6 +87,7 @@ def write(
         "mods.json": _dump(ModsFile(mods=dataset.mods, sets=dataset.mod_sets)),
         "arcanes.json": _dump(dataset.arcanes),
         "joins.json": _dump(dataset.joins),
+        "incarnon.json": _dump(dataset.incarnon),
     }
     digest = dataset_hash(payloads)
     fetched = max((s.retrieved for s in sources if not s.path.startswith("wiki/")), default="")
@@ -97,6 +98,7 @@ def write(
         "mods": len(dataset.mods),
         "mod_sets": len(dataset.mod_sets),
         "arcanes": len(dataset.arcanes),
+        "incarnon_weapons": len(dataset.incarnon),
     }
     counts |= {
         f"arcanes_{c.value}": sum(a.category == c for a in dataset.arcanes) for c in Category
@@ -106,6 +108,8 @@ def write(
             f"{kind}_{level.value}": sum(e.effects.support == level for e in entries)
             for level in Support
         }
+    perks = [p for i in dataset.incarnon for p in i.perks]
+    counts |= {f"perks_{s.value}": sum(p.effects.support == s for p in perks) for s in Support}
     meta = Meta(
         dataset_hash=digest,
         game_update=dataset.game_update,

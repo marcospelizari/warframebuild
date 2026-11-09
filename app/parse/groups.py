@@ -45,18 +45,18 @@ def groups(stats: list[str]) -> list[Context]:
             line = raw.strip()
             if not line:
                 continue
-            header = _header(line)
-            if header is None:
+            found = header(line)
+            if found is None:
                 current.lines.extend(sentences(line))
                 continue
-            current = Context(trigger=header[0], trigger_damage_type=header[1], head=header[2])
+            current = Context(trigger=found[0], trigger_damage_type=found[1], head=found[2])
             groups.append(current)
-            if header[3]:
-                current.lines.extend(sentences(header[3]))
+            if found[3]:
+                current.lines.extend(sentences(found[3]))
     return [g for g in groups if g.lines]
 
 
-def _header(line: str) -> tuple[Trigger | None, DamageType | None, str, str] | None:
+def header(line: str) -> tuple[Trigger | None, DamageType | None, str, str] | None:
     """(trigger or None when unknown, status type, header text, text after the colon)."""
     match = _HEADER.fullmatch(line)
     if not match:

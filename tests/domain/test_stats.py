@@ -49,3 +49,10 @@ def test_class_value_and_stacks() -> None:
 def test_modded_time() -> None:
     """Saved Calculation, Modded Stats: time / (1 + speed bonus)."""
     assert modded_time(2.0, 1.0) == 1.0
+
+
+def test_base_bonus_adds_before_percent_bonuses() -> None:
+    base = Effect(stat=Stat.CRITICAL_CHANCE, value=0.19, operation=Operation.BASE)
+    gambit = Effect(stat=Stat.CRITICAL_CHANCE, value=1.2)
+    # Lex Prime 25% + Critical Parallel 19%, then Pistol Gambit +120%: 96.8% in the arsenal.
+    assert modded(0.25, Stat.CRITICAL_CHANCE, [(base, 0.19), (gambit, 1.2)]) == pytest.approx(0.968)

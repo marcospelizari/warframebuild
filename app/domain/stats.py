@@ -7,7 +7,7 @@ for the weapon class (`value_for`) and its stack count.
 """
 
 import math
-from collections.abc import Iterable
+from collections.abc import Sequence
 
 from app.domain.effects import Effect, Operation, Stat
 
@@ -19,12 +19,13 @@ def value_for(effect: Effect, weapon_type: str, stacks: int = 1) -> float:
     return effect.class_values.get(weapon_type, effect.value) * stacks
 
 
-def modded(base: float, stat: Stat, bonuses: Iterable[tuple[Effect, float]]) -> float:
+def modded(base: float, stat: Stat, bonuses: Sequence[tuple[Effect, float]]) -> float:
     """`bonuses`: (effect, resolved value) pairs; only those for `stat` count.
 
     A `lock` effect keeps the base value ("cannot be modified", e.g. Acuity multishot).
     The result never goes below 0.
     """
+    base += math.fsum(v for e, v in bonuses if e.stat == stat and e.operation == Operation.BASE)
     additive: list[float] = []
     factor = 1.0
     flat: list[float] = []
@@ -35,6 +36,8 @@ def modded(base: float, stat: Stat, bonuses: Iterable[tuple[Effect, float]]) -> 
             return base
         if effect.operation == Operation.STACKING_MULTIPLY:
             additive.append(value)
+        elif effect.operation == Operation.BASE:
+            continue
         elif effect.operation == Operation.MULTIPLY:
             factor *= value
         else:

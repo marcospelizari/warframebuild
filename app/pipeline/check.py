@@ -211,6 +211,22 @@ def module_gap_lines(dataset: Dataset) -> list[str]:
     ]
 
 
+def incarnon_gap_lines(dataset: Dataset) -> list[str]:
+    """Guns with an Incarnon attack but no perks from the saved pages."""
+    have = {i.unique_name for i in dataset.incarnon}
+    names = sorted(
+        w.name
+        for w in dataset.weapons
+        if w.unique_name not in have and any("incarnon" in a.name.lower() for a in w.attacks)
+    )
+    if not names:
+        return []
+    return [
+        "Incarnon attack but no saved perks (save the weapon's page or check the name):",
+        f"  weapons ({len(names)}): {_names(names)}",
+    ]
+
+
 def source_lines(changes: list[str] | None) -> list[str]:
     if changes is None:
         return ["sources: not checked (offline)"]

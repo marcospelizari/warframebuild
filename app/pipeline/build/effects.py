@@ -20,7 +20,10 @@ class Overrides:
         self._used: set[str] = set()
 
     def effects(self, unique_name: str, stats: list[str], description: str = "") -> Effects:
-        parsed = parse(stats, description)
+        return self.apply(unique_name, parse(stats, description))
+
+    def apply(self, unique_name: str, parsed: Parsed) -> Effects:
+        """Parsed effects, replaced or adjusted by the entry for `unique_name` if any."""
         entry = self._entries.get(unique_name)
         if entry is None:
             return _stored(parsed)
@@ -49,7 +52,7 @@ class Overrides:
         unused = sorted(self._entries.keys() - self._used)
         if unused:
             raise RefreshError(
-                f"reference/overrides.json entries match no mod, arcane or set: {unused}"
+                f"reference/overrides.json entries match no mod, arcane or perk: {unused}"
             )
 
 

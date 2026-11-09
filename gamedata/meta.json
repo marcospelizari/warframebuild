@@ -8,16 +8,20 @@
   "arcanes_secondary": 18,
   "arcanes_unsupported": 21,
   "excluded_weapons": 2,
+  "incarnon_weapons": 69,
   "mod_sets": 10,
   "mods": 328,
   "mods_full": 243,
   "mods_partial": 18,
   "mods_unsupported": 67,
+  "perks_full": 303,
+  "perks_partial": 111,
+  "perks_unsupported": 154,
   "primary": 196,
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "0ffa28b0c0a0f060",
+ "dataset_hash": "4892c32d15d1ef53",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -39,7 +43,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 11,
+ "schema_version": 12,
  "sources": [
   {
    "path": "de/ExportManifest.json",
