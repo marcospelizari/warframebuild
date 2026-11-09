@@ -104,3 +104,12 @@ def test_aoe_parts_and_row_notes_are_stated(client: TestClient) -> None:
 
     assert "aoe_full" in ids("atomos")
     assert "incarnon_note" in ids("onos")
+
+
+def test_headshot_assumption_and_source(client: TestClient) -> None:
+    build = client.post("/api/calc", json={"weapon": "latron-prime"}).json()
+    assert build["headshot"]["source"]["url"].endswith("/Incarnon_Evolutions")
+    assert "headshot" in {a["id"] for a in build["assumptions"]}
+    rubico = client.post("/api/calc", json={"weapon": "rubico-prime"}).json()
+    assert rubico["headshot"] == {"reason": "Sniper rifles are aimed at heads", "source": None}
+    assert client.post("/api/calc", json={"weapon": "braton-prime"}).json()["headshot"] is None

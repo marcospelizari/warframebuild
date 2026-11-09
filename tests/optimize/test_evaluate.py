@@ -158,3 +158,11 @@ def test_no_sustained_dps_when_magazine_cannot_fire(gamedata: GameData) -> None:
     onos = _weapon(gamedata, "Onos")
     e = evaluate(onos, [], incarnon=gamedata.incarnon_by_id[onos.unique_name])
     assert e.direct_sustained_dps is None
+
+
+def test_headshot_form_from_the_table(gamedata: GameData) -> None:
+    latron = _weapon(gamedata, "Latron Prime")
+    incarnon = gamedata.incarnon_by_id[latron.unique_name]
+    e = evaluate(latron, [], incarnon=incarnon)
+    assert e.headshot is not None and "Deadhead" in e.headshot.reason
+    assert evaluate(_weapon(gamedata, "Braton Prime"), []).headshot is None

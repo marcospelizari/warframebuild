@@ -13,6 +13,7 @@ from app.api.schemas import (
     Build,
     CalcRequest,
     Dps,
+    Headshot,
     Slot,
     Source,
     WeaponRef,
@@ -100,6 +101,9 @@ def _build(dataset_hash: str, weapon: Weapon, mods: list[Mod], e: Evaluation) ->
             beam_ramp_start=weapon.beam_ramp_start,
         ),
         dps=Dps(direct_burst=e.direct_burst_dps, direct_sustained=e.direct_sustained_dps),
+        headshot=Headshot(reason=e.headshot.reason, source=_source(e.headshot.source))
+        if e.headshot
+        else None,
         assumptions=_assumptions(weapon, e),
     )
 
@@ -111,6 +115,9 @@ def _assumptions(weapon: Weapon, e: Evaluation) -> list[Assumption]:
         Assumption(id="main_attack", text=_MAIN_ATTACK[e.form]),
         Assumption(id="direct_only", text="DPS from hits on the body; no DoT or Blast"),
     ]
+    if e.headshot:
+        text = f"Aimed at heads ({e.headshot.reason}); headshot damage not modelled yet"
+        out.append(Assumption(id="headshot", text=text, source=_source(e.headshot.source)))
     if e.not_modelled:
         text = "Effects not modelled yet: " + ", ".join(e.not_modelled)
         out.append(Assumption(id="not_modelled", text=text))
@@ -135,3 +142,7 @@ def _assumptions(weapon: Weapon, e: Evaluation) -> list[Assumption]:
             )
         )
     return out
+
+
+def _source(title: str | None) -> Source | None:
+    return Source(kind="wiki", url=WIKI + title) if title else None

@@ -1,0 +1,257 @@
+{
+  "about": "Guns aimed at heads (R5, PLAN G69): every gun of a listed class, plus listed guns per form. Unlisted guns and forms are scored on the body. A row says how the player shoots; which perks and mods pay off is the optimizer's choice. A gun listed under `weapons` must not also belong to a listed class.",
+  "classes": {
+    "Bow": {
+      "reason": "Bows are aimed at heads",
+      "source": "project decision",
+      "verified": "2026-11-09"
+    },
+    "Sniper": {
+      "reason": "Sniper rifles are aimed at heads",
+      "source": "project decision",
+      "verified": "2026-11-09"
+    }
+  },
+  "weapons": {
+    "/Lotus/Weapons/Tenno/Pistols/AutomaticHandCrossbow/AutoCrossBow": {
+      "name": "Ballistica",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Headcracker (EVO 2): On Headshot: +7.5% Fire Rate for 4s, stacks 10x",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeBallistica/PrimeBallistica": {
+      "name": "Ballistica Prime",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Headcracker (EVO 2): On Headshot: +7.5% Fire Rate for 4s, stacks 10x",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/DexTheThird/DexTheThird": {
+      "name": "Dex Sybaris",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Well Rehearsed (EVO 2): On Consecutive Weakpoint Hits: +5 Base Damage, stacks 3x",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep": {
+      "name": "Dual Toxocyst",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Neurotoxin (EVO 4): On Headshot: +70% Toxin for 3s",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun": {
+      "name": "Felarx",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Incarnon Catalyst (EVO 4): Headshots build +50% more Incarnon charge",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/AutoPistol": {
+      "name": "Furis",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Headcracker (EVO 4): On Headshot: +5% Fire Rate for 2s, stacks 10x",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol": {
+      "name": "Laetum",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Caput Mortuum (EVO 4): +50% Headshot Damage",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle": {
+      "name": "Latron",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Deadhead (EVO 4): +100% Headshot Damage",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/LatronPrime": {
+      "name": "Latron Prime",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Deadhead (EVO 4): +100% Headshot Damage",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron": {
+      "name": "Latron Wraith",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Deadhead (EVO 4): +100% Headshot Damage",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/HeavyPistol": {
+      "name": "Lex",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Executioner's Dawn (EVO 4): On Equip: +100% Headshot Damage for 4s",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex": {
+      "name": "Lex Prime",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Executioner's Dawn (EVO 4): On Equip: +100% Headshot Damage for 4s",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/MK1Series/MK1Furis": {
+      "name": "MK1-Furis",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Headcracker (EVO 4): On Headshot: +5% Fire Rate for 2s, stacks 10x",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon": {
+      "name": "Onos",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Sequential Skullbuster (EVO 5): On Consecutive Weakpoint Hits: +30% Headshot Damage, stacks 4x",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle": {
+      "name": "Phenmor",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Lingering Judgement (EVO 5): On 2 headshots within 2s: +50% Headshot Damage for 8s",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Syndicates/RedVeil/Pistols/RVBallistica": {
+      "name": "Rakta Ballistica",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Headcracker (EVO 2): On Headshot: +7.5% Fire Rate for 4s, stacks 10x",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/BurstPistol": {
+      "name": "Sicarus",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk King's Gambit (EVO 2): x0 Critical Chance on bodyshots, +150% Critical Chance on weakpoints",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeSicarus/PrimeSicarusPistol": {
+      "name": "Sicarus Prime",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk King's Gambit (EVO 2): x0 Critical Chance on bodyshots, +150% Critical Chance on weakpoints",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle": {
+      "name": "Sybaris",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Well Rehearsed (EVO 2): On Consecutive Weakpoint Hits: +5 Base Damage, stacks 3x",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeSybaris/PrimeSybarisRifle": {
+      "name": "Sybaris Prime",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Well Rehearsed (EVO 2): On Consecutive Weakpoint Hits: +5 Base Damage, stacks 3x",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/RevolverPistol": {
+      "name": "Vasto",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Reaper's Plenty (EVO 4): On Headshot: +100% Ammo Efficiency for 2s (normal form perk)",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol": {
+      "name": "Vasto Prime",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Reaper's Plenty (EVO 4): On Headshot: +100% Ammo Efficiency for 2s (normal form perk)",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol": {
+      "name": "Zylok",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Precision's Payoff (EVO 2): On Burst Headshots: +20 Base Damage, stacks 3x",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeZylok/ZylokPrimePistol": {
+      "name": "Zylok Prime",
+      "forms": [
+        "normal",
+        "incarnon"
+      ],
+      "reason": "Incarnon perk Precision's Payoff (EVO 2): On Burst Headshots: +20 Base Damage, stacks 3x",
+      "source": "Incarnon_Evolutions",
+      "verified": "2026-11-09"
+    }
+  }
+}

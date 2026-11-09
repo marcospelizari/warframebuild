@@ -201,6 +201,7 @@ def test_entry_diff_and_touched_rows(paths: Paths) -> None:
     touched = check.touched_rows(check.reference_rows(paths.reference), diff)
     assert sorted((r.file, r.label) for r in touched) == [
         ("fire_overrides.json", "Lex Prime"),
+        ("headshot.json", "Lex Prime"),
         ("main_attack.json", "Lex Prime"),
     ]
     assert "changed weapons (1): Lex Prime" in "\n".join(check.diff_lines(diff, touched, "x"))

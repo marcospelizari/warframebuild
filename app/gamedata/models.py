@@ -66,6 +66,14 @@ class BonusElement(Model):
     page: str  # saved wiki page title
 
 
+class Headshot(Model):
+    """One form aimed at heads (reference/headshot.json, R5); other forms hit the body."""
+
+    form: Literal["normal", "incarnon"]
+    reason: str
+    source: str | None  # canonical wiki page title; None = project decision, see `reason`
+
+
 class Weapon(Model):
     unique_name: str
     slug: str
@@ -99,6 +107,7 @@ class Weapon(Model):
     # Beam damage at the start of the ramp-up (saved Continuous_Weapon); HELD trigger only.
     beam_ramp_start: Fraction | None
     bonus_element: BonusElement | None  # saved <Family>_Weapons pages
+    headshot: list[Headshot] = []  # forms aimed at heads (reference/headshot.json)
 
 
 class Effects(Model):
@@ -182,7 +191,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[14] = 14
+    schema_version: Literal[15] = 15
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.
