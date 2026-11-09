@@ -67,22 +67,30 @@ class ModdedHit:
         head: Head | None = None,
         *,
         flat: bool = False,
-        extra: float = 0.0,
+        extra_bonus: float = 0.0,
+        extra_factor: float = 0.0,
     ) -> float:
         """Expected damage of one shot when every projectile hits (direct damage only).
 
         `head`: the shot lands on this head (None = body); `flat`: the attack hits heads at
-        1x without weak-point bonuses; `extra`: the weapon's own headshot factor
-        (`headshot.factor`). Weak-point crit chance counts only on a weak point.
+        1x: no weak-point bonuses and no critical-headshot bonus (saved Critical_Hit:425);
+        `extra_bonus` / `extra_factor`: the weapon's own headshot bonus, added to the
+        headshot bonuses or multiplied on top (`headshot.factor`). Weak-point crit chance
+        counts only on a weak point.
         """
         faction_factor = self.faction_multiplier.get(faction, 1.0) if faction else 1.0
         chance = self.head_critical_chance if head and not flat else self.critical_chance
+        headcrit = bool(head and head.critical and not flat)
         crit_avg = crit.average_multiplier(
-            chance, self.critical_multiplier, self.crit_upgrade_chance, bool(head and head.critical)
+            chance, self.critical_multiplier, self.crit_upgrade_chance, headcrit
         )
         part = (
             headshot.factor(
-                head, self.weak_point_damage, self.headshot_bonus, flat=flat, extra=extra
+                head,
+                self.weak_point_damage,
+                self.headshot_bonus + extra_bonus,
+                flat=flat,
+                extra=extra_factor,
             )
             if head
             else 1.0

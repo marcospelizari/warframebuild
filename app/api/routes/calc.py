@@ -141,7 +141,10 @@ def _assumptions(weapon: Weapon, e: Evaluation) -> list[Assumption]:
         )
         out.append(Assumption(id="headshot", text=text, source=_source(e.headshot.source)))
         if e.head_triggered:
-            text = "Needs headshots, shown at 0 and max stacks: " + ", ".join(e.head_triggered)
+            text = (
+                "Needs headshots, shown at 0 and max hit stacks (kill stacks not counted): "
+                + ", ".join(e.head_triggered)
+            )
             out.append(Assumption(id="head_stacks", text=text))
     if e.not_modelled:
         text = "Effects not modelled yet: " + ", ".join(e.not_modelled)

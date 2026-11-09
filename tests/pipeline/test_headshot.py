@@ -96,6 +96,8 @@ def test_committed_rows_match_gamedata() -> None:
         assert [h.form for h in w.headshot] == expected, w.name
         flat = table["flat_heads"].get(w.unique_name, {}).get("forms", [])
         assert [h.form for h in w.headshot if h.flat] == flat, w.name
+        separate = w.unique_name in table["separate_extra"]
+        assert all(h.separate_extra == separate for h in w.headshot), w.name
     assert set(table["weapons"]) <= {w.unique_name for w in data.weapons}
 
 
@@ -128,4 +130,25 @@ def test_flat_head_on_a_body_form_fails(paths: Paths) -> None:
 def test_reference_head_is_required(paths: Paths) -> None:
     _edit(paths, lambda d: d.pop("reference_head"))
     with pytest.raises(RefreshError, match="reference_head"):
+        build(paths.raw, paths.reference)
+
+
+def test_row_without_name_inside_a_class_fails_cleanly(paths: Paths) -> None:
+    vectis = next(w for w in build(paths.raw, paths.reference).weapons if w.name == "Vectis")
+    row = {
+        "forms": ["normal"],
+        "reason": "r",
+        "source": "project decision",
+        "verified": "2026-11-09",
+    }
+    _edit(paths, lambda d: d["weapons"].update({vectis.unique_name: row}))
+    with pytest.raises(RefreshError, match="covered by class"):
+        build(paths.raw, paths.reference)
+
+
+def test_separate_extra_needs_a_positive_module_value(paths: Paths) -> None:
+    row = {"name": "Lanka", "reason": "r", "source": "project decision", "verified": "2026-11-09"}
+    lanka = next(w for w in build(paths.raw, paths.reference).weapons if w.name == "Lanka")
+    _edit(paths, lambda d: d.setdefault("separate_extra", {}).update({lanka.unique_name: row}))
+    with pytest.raises(RefreshError, match="separate_extra"):
         build(paths.raw, paths.reference)

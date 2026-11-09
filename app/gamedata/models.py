@@ -86,6 +86,8 @@ class Headshot(Model):
     reason: str
     source: str | None  # canonical wiki page title; None = project decision, see `reason`
     flat: bool = False  # heads at 1x, no weak-point bonuses (reference/headshot.json)
+    # The weapon's ExtraHeadshotDmg multiplies on top instead of joining the headshot bonuses.
+    separate_extra: bool = False
 
 
 class ReferenceHead(Model):
@@ -206,7 +208,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[16] = 16
+    schema_version: Literal[17] = 17
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

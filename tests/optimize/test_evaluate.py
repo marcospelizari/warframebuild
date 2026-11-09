@@ -212,14 +212,12 @@ def test_deadhead_perk_doubles_the_head_factor(gamedata: GameData) -> None:
 
 
 def test_lex_incarnon_head_is_flat(gamedata: GameData) -> None:
-    """Saved Enemy_Body_Parts, Notes: Lex Incarnon Genesis heads at 1x, no Acuity."""
+    """Saved Enemy_Body_Parts, Notes: Lex Incarnon Genesis heads at 1x, no Acuity; saved
+    Critical_Hit:425: no critical-headshot bonus either, so unmodded = body damage."""
     lex = _weapon(gamedata, "Lex Prime")
     e = evaluate(lex, [], incarnon=gamedata.incarnon_by_id[lex.unique_name], head=GRINEER)
     assert e.headshot is not None and e.headshot.flat
-    cc, cd = e.hit.critical_chance, e.hit.critical_multiplier
-    ratio = crit.average_multiplier(cc, cd, headcrit=True) / crit.average_multiplier(cc, cd)
-    assert e.head_burst_dps is not None
-    assert e.head_burst_dps[0] == pytest.approx(e.direct_burst_dps * ratio)
+    assert e.head_burst_dps == pytest.approx((e.direct_burst_dps, e.direct_burst_dps))
 
 
 def test_headshot_fire_rate_perk_at_max_stacks(gamedata: GameData) -> None:
@@ -247,3 +245,20 @@ def test_aoe_part_never_headshots(gamedata: GameData) -> None:
     direct_on_head = without.hit.average_shot(head=GRINEER) * without.fire_rate
     gain = deadhead.head_burst_dps[0] - without.head_burst_dps[0]
     assert gain == pytest.approx(direct_on_head)
+
+
+def test_zoom_not_modelled_reported_without_a_head(gamedata: GameData) -> None:
+    komorex = _weapon(gamedata, "Komorex")
+    assert "Zoom bonus" in evaluate(komorex, []).not_modelled
+    assert "Zoom bonus" in evaluate(komorex, [], head=GRINEER).not_modelled
+
+
+def test_cernos_prime_bonus_multiplies_on_top(gamedata: GameData) -> None:
+    cernos = _weapon(gamedata, "Cernos Prime")
+    assert all(h.separate_extra for h in cernos.headshot)
+    e = evaluate(cernos, [], head=GRINEER)
+    crit_avg = crit.average_multiplier(
+        e.hit.critical_chance, e.hit.critical_multiplier, headcrit=True
+    )
+    expected = e.hit.arsenal_total * 3 * 1.5 * crit_avg * e.fire_rate
+    assert e.head_burst_dps == pytest.approx((expected, expected))

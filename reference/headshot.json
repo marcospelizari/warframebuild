@@ -1,5 +1,5 @@
 {
-  "about": "Guns aimed at heads (R5, PLAN G69): every gun of a listed class, plus listed guns per form. Unlisted guns and forms are scored on the body. A row says how the player shoots; which perks and mods pay off is the optimizer's choice. A gun listed under `weapons` must not also belong to a listed class. `flat_heads`: Incarnon forms whose heads take 1x without weak-point bonuses (headshot bonuses still apply); per attack the wiki module's ExtraHeadshotDmg -2 says the same. `reference_head`: the head /calc scores until enemies exist (step 8).",
+  "about": "Guns aimed at heads (R5, PLAN G69): every gun of a listed class, plus listed guns per form. Unlisted guns and forms are scored on the body. A row says how the player shoots; which perks and mods pay off is the optimizer's choice. A gun listed under `weapons` must not also belong to a listed class. `flat_heads`: Incarnon forms whose heads take 1x without weak-point bonuses (headshot bonuses still apply); per attack the wiki module's ExtraHeadshotDmg -2 says the same. `reference_head`: the head /calc scores until enemies exist (step 8). A positive ExtraHeadshotDmg joins the headshot bonuses (Enemy_Body_Parts, Headshot Multiplier Bonuses: Kuva Chakkhurr, Synapse); `separate_extra` lists guns whose bonus multiplies on top instead.",
   "classes": {
     "Bow": {
       "reason": "Bows are aimed at heads",
@@ -316,5 +316,13 @@
     "critical": true,
     "source": "Enemy_Body_Parts",
     "verified": "2026-11-09"
+  },
+  "separate_extra": {
+    "/Lotus/Weapons/Tenno/Bows/PrimeCernos/PrimeCernos": {
+      "name": "Cernos Prime",
+      "reason": "Unique 50% damage bonus on headshot, multiplicative with weak-point and headshot multipliers",
+      "source": "Enemy_Body_Parts",
+      "verified": "2026-11-09"
+    }
   }
 }

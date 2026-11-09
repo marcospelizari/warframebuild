@@ -87,8 +87,23 @@ def test_weak_point_crit_chance_adds_to_crit_bonuses() -> None:
     head = Head(3.0, critical=True)
     crit_avg = 1 + 3.0 * (2 * 2.0 - 1)
     assert hit.average_shot(head=head) == pytest.approx(103.125 * (3 + 1.5 * 3.5) * crit_avg)
-    flat_avg = 1 + 1.25 * (2 * 2.0 - 1)  # 1x head: body crit chance, no weak-point bonus
+    # 1x head: body crit chance, no weak-point bonus and no critical-headshot bonus (saved
+    # Critical_Hit:425: "will not benefit from the critical bonus").
+    flat_avg = 1 + 1.25 * (2.0 - 1)
     assert hit.average_shot(head=head, flat=True) == pytest.approx(103.125 * flat_avg)
+
+
+def test_own_headshot_bonus_adds_or_multiplies() -> None:
+    """Saved Enemy_Body_Parts: Kuva Chakkhurr's +50% joins the headshot bonuses (Headshot
+    Multiplier Bonuses); Cernos Prime's 50% multiplies on top (Notes)."""
+    hit = modded_hit(BASE, [b(Stat.HEADSHOT_MULTIPLIER, 0.3)])
+    head = Head(3.0, critical=False)
+    assert hit.average_shot(head=head, extra_bonus=0.5) == pytest.approx(
+        hit.average_shot() * 3 * 1.8
+    )
+    assert hit.average_shot(head=head, extra_factor=0.5) == pytest.approx(
+        hit.average_shot() * 3 * 1.3 * 1.5
+    )
 
 
 def test_flat_crit_chance_after_mods() -> None:

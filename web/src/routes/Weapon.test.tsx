@@ -90,7 +90,7 @@ test("lists head DPS at 0 and max stacks for a headshot form", async () => {
     new Response(JSON.stringify({ ...build, dps: { ...build.dps, head } })),
   );
   expect(
-    await screen.findByText("Burst on Grineer humanoid head, max stacks"),
+    await screen.findByText("Burst on Grineer humanoid head, max hit stacks"),
   ).toBeInTheDocument();
   expect(screen.getByText("1500.00")).toBeInTheDocument();
 });
