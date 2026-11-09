@@ -51,6 +51,13 @@
         "representative Infested enemy (enemies.json, step 8)"
       ]
     },
+    "Coda_Weapons": {
+      "title": "Coda_Weapons",
+      "impact": "medium",
+      "feeds": [
+        "Weapon.bonus_element: guns, element choices, max share (Q29)"
+      ]
+    },
     "Compatibility": {
       "title": "Mod/Compatibility",
       "impact": "high",
@@ -283,6 +290,13 @@
         "forced Slash on Impact proc, fire-rate threshold (step 4)"
       ]
     },
+    "Kuva_Weapons": {
+      "title": "Kuva_Weapons",
+      "impact": "medium",
+      "feeds": [
+        "Weapon.bonus_element: guns, element choices, max share (Q29)"
+      ]
+    },
     "Laetum": {
       "title": "Laetum",
       "impact": "high",
@@ -467,6 +481,13 @@
       "impact": "medium",
       "feeds": [
         "representative Techrot enemy (enemies.json, step 8)"
+      ]
+    },
+    "Tenet_Weapons": {
+      "title": "Tenet_Weapons",
+      "impact": "medium",
+      "feeds": [
+        "Weapon.bonus_element: guns, element choices, max share (Q29)"
       ]
     },
     "Thalys": {

@@ -24,6 +24,7 @@ WEAPONS = (
     "Laetum",  # native Incarnon
     "Lanka",  # fire rate 0: no delay between shots (wiki module)
     "Lex Prime",  # secondary
+    "Nataruk",  # bow; reload from the wiki module (fire_overrides.json)
     "Phage",  # beam with its own ramp-up start
     "Sirocco",  # Drifter weapon -> excluded by category
     "Sonicor",  # attacks differ from DE summary

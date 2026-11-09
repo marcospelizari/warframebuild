@@ -8,11 +8,12 @@ from pydantic import ValidationError
 
 from app.domain.direct_bonus import DirectBonus
 from app.domain.effects import DamageType
-from app.gamedata.models import Attack, Exclusion, Falloff, Join, Weapon
+from app.gamedata.models import Attack, BonusElement, Exclusion, Falloff, Join, Weapon
 from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.fire import FireOverrides, attack_data, fire_rate
 from app.pipeline.errors import RefreshError
 from app.pipeline.sources.de_export import DAMAGE_SLOT_COUNT, DAMAGE_SLOTS, WEAPON_CATEGORY
+from app.pipeline.sources.wiki_progenitor import Progenitor
 from app.pipeline.sources.wiki_weapon_data import AttackData, WeaponData
 
 
@@ -24,6 +25,7 @@ def build(
     tags: dict[str, list[str]],
     module: dict[str, WeaponData],
     direct: DirectBonusTable,
+    progenitor: dict[str, Progenitor],
 ) -> tuple[list[Weapon], list[Exclusion], list[Join]]:
     de = {w["uniqueName"]: w for w in de_weapons}
     textures = {m["uniqueName"]: m.get("textureLocation") for m in manifest}
@@ -65,6 +67,7 @@ def build(
         )
         for d, w in kept
     ]
+    weapons = [_with_bonus(x, progenitor.get(x.name)) for x in weapons]
     joins = [
         Join(unique_name=d["uniqueName"], de_name=d["name"], wfcd_name=w["name"]) for d, w in kept
     ]
@@ -109,7 +112,7 @@ def _weapon(
             fire_rate=fire_rate(d, data),
             multishot=d["multishot"],
             magazine_size=_magazine(d, data),
-            reload_time=d["reloadTime"],
+            reload_time=fire.reload_time(d["uniqueName"], d["reloadTime"]),
             mastery_req=d["masteryReq"],
             riven_disposition=d["omegaAttenuation"],
             polarities=list(w.get("polarities") or []),
@@ -132,9 +135,17 @@ def _weapon(
             no_reload=fire.no_reload(d["uniqueName"]),
             reload_replaces_shot=fire.reload_replaces_shot(d["uniqueName"]),
             beam_ramp_start=fire.beam_start(d["uniqueName"], d["name"], d["trigger"]),
+            bonus_element=None,
         )
     except ValidationError as error:
         raise RefreshError(f"{d['name']}: invalid values: {error}") from error
+
+
+def _with_bonus(weapon: Weapon, p: Progenitor | None) -> Weapon:
+    if p is None:
+        return weapon
+    bonus = BonusElement(elements=list(p.elements), max_share=p.max_share, page=p.page)
+    return weapon.model_copy(update={"bonus_element": bonus})
 
 
 def _attack(

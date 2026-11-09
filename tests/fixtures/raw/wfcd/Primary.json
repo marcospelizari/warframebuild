@@ -897,6 +897,157 @@
   "wikiaUrl": "https://wiki.warframe.com/w/Lanka"
  },
  {
+  "accuracy": 16.666666,
+  "attacks": [
+   {
+    "crit_chance": 20,
+    "crit_mult": 1.8,
+    "damage": {
+     "puncture": 405,
+     "slash": 45
+    },
+    "flight": 140,
+    "name": "Quick Shot",
+    "shot_speed": 140,
+    "shot_type": "Projectile",
+    "speed": 0.667,
+    "status_chance": 30
+   },
+   {
+    "charge_time": 1,
+    "crit_chance": 50,
+    "crit_mult": 2.2,
+    "damage": {
+     "puncture": 648,
+     "slash": 252
+    },
+    "flight": 70,
+    "name": "Charged Shot",
+    "shot_speed": 70,
+    "shot_type": "Projectile",
+    "speed": 0.667,
+    "status_chance": 50
+   },
+   {
+    "charge_time": 0.7,
+    "crit_chance": 60,
+    "crit_mult": 2.4,
+    "damage": {
+     "puncture": 648,
+     "slash": 252
+    },
+    "flight": 70,
+    "name": "Perfect Shot",
+    "shot_speed": 70,
+    "shot_type": "Projectile",
+    "speed": 0.667,
+    "status_chance": 50
+   }
+  ],
+  "category": "Primary",
+  "codexSecret": true,
+  "criticalChance": 0.2,
+  "criticalMultiplier": 1.8,
+  "damage": {
+   "blast": 0,
+   "cinematic": 0,
+   "cold": 0,
+   "corrosive": 0,
+   "electricity": 0,
+   "energyDrain": 0,
+   "gas": 0,
+   "healthDrain": 0,
+   "heat": 0,
+   "impact": 0,
+   "magnetic": 0,
+   "puncture": 648,
+   "radiation": 0,
+   "shieldDrain": 0,
+   "slash": 251.99997,
+   "tau": 0,
+   "total": 900,
+   "toxin": 0,
+   "true": 0,
+   "viral": 0,
+   "void": 0
+  },
+  "damagePerShot": [
+   0,
+   648,
+   251.99997,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "Hunhow’s gift, carved from the bones of his kin. Shots can be charged and held; release them just before full charge for maximum effect.",
+  "disposition": 4,
+  "drops": [
+   {
+    "chance": 100,
+    "location": "Cephalon Simaris, Complete The New War",
+    "rarity": "Common",
+    "type": "Nataruk"
+   }
+  ],
+  "exilusPolarity": "naramon",
+  "fireRate": 0.66666669,
+  "imageName": "OmicrusBow.png",
+  "introduced": {
+   "aliases": [
+    "31",
+    "31.0",
+    "The New War"
+   ],
+   "date": "2021-12-15",
+   "name": "Update 31.0",
+   "parent": "31.0",
+   "url": "https://wiki.warframe.com/w/Update_31%23Update_31.0"
+  },
+  "isPrime": false,
+  "masterable": true,
+  "masteryReq": 0,
+  "multishot": 1,
+  "name": "Nataruk",
+  "noise": "Alarming",
+  "omegaAttenuation": 1.2,
+  "polarities": [
+   "madurai",
+   "madurai",
+   "madurai",
+   "madurai"
+  ],
+  "procChance": 0.5,
+  "productCategory": "LongGuns",
+  "releaseDate": "2021-12-15",
+  "reloadTime": 0.050000001,
+  "slot": 1,
+  "tags": [
+   "Sentient"
+  ],
+  "totalDamage": 900,
+  "tradable": false,
+  "trigger": "Charge",
+  "type": "Bow",
+  "uniqueName": "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep",
+  "wikiAvailable": true,
+  "wikiaThumbnail": "https://wiki.warframe.com/images/Nataruk.png?4b210",
+  "wikiaUrl": "https://wiki.warframe.com/w/Nataruk"
+ },
+ {
   "accuracy": 50,
   "attacks": [
    {

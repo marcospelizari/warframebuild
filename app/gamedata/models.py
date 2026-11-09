@@ -57,6 +57,14 @@ class Attack(Model):
     direct_bonus: DirectBonus = DirectBonus.ADDING
 
 
+class BonusElement(Model):
+    """Kuva/Tenet/Coda progenitor bonus: one of `elements`, up to `max_share` of base damage."""
+
+    elements: list[DamageType]
+    max_share: Fraction
+    page: str  # saved wiki page title
+
+
 class Weapon(Model):
     unique_name: str
     slug: str
@@ -89,6 +97,7 @@ class Weapon(Model):
     reload_replaces_shot: bool
     # Beam damage at the start of the ramp-up (saved Continuous_Weapon); HELD trigger only.
     beam_ramp_start: Fraction | None
+    bonus_element: BonusElement | None  # saved <Family>_Weapons pages
 
 
 class Effects(Model):
@@ -154,7 +163,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[10] = 10
+    schema_version: Literal[11] = 11
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

@@ -4,6 +4,23 @@
  */
 
 export interface paths {
+    "/api/calc": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /** Calc */
+        post: operations["calc_api_calc_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/health": {
         parameters: {
             query?: never;
@@ -25,12 +42,140 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        /** ApiError */
+        ApiError: {
+            /** Code */
+            code: string;
+            /** Field */
+            field?: string | null;
+            /** Message */
+            message: string;
+        };
+        /** Arsenal */
+        Arsenal: {
+            /** Beam Ramp Start */
+            beam_ramp_start: number | null;
+            /** Critical Chance */
+            critical_chance: number;
+            /** Critical Multiplier */
+            critical_multiplier: number;
+            /** Damage */
+            damage: {
+                [key: string]: number;
+            };
+            /** Fire Rate */
+            fire_rate: number;
+            /** Magazine */
+            magazine: number | null;
+            /** Multishot */
+            multishot: number;
+            /** Reload Time */
+            reload_time: number;
+            /** Status Chance */
+            status_chance: number;
+            /** Total Damage */
+            total_damage: number;
+        };
+        /** Assumption */
+        Assumption: {
+            /** Id */
+            id: string;
+            source?: components["schemas"]["Source"] | null;
+            /** Text */
+            text: string;
+            /** Value */
+            value?: number | null;
+        };
+        /** BonusElement */
+        BonusElement: {
+            damage_type: components["schemas"]["DamageType"];
+            /** Share */
+            share: number;
+        };
+        /** Build */
+        Build: {
+            arsenal: components["schemas"]["Arsenal"];
+            /** Assumptions */
+            assumptions: components["schemas"]["Assumption"][];
+            bonus_element: components["schemas"]["BonusElement"] | null;
+            /** Dataset Hash */
+            dataset_hash: string;
+            dps: components["schemas"]["Dps"];
+            /** Slots */
+            slots: components["schemas"]["Slot"][];
+            weapon: components["schemas"]["WeaponRef"];
+        };
+        /** CalcRequest */
+        CalcRequest: {
+            bonus_element?: components["schemas"]["DamageType"] | null;
+            /**
+             * Mods
+             * @description mod uniqueNames in slot order
+             */
+            mods?: string[];
+            /**
+             * Weapon
+             * @description weapon slug
+             */
+            weapon: string;
+        };
+        /**
+         * Category
+         * @enum {string}
+         */
+        Category: "primary" | "secondary";
+        /**
+         * DamageType
+         * @description Damage types. Source encodings (DE slots, tags) live in the data adapters.
+         * @enum {string}
+         */
+        DamageType: "impact" | "puncture" | "slash" | "heat" | "cold" | "electricity" | "toxin" | "blast" | "radiation" | "gas" | "magnetic" | "viral" | "corrosive" | "void" | "tau";
+        /** Dps */
+        Dps: {
+            /** Direct Burst */
+            direct_burst: number;
+            /** Direct Sustained */
+            direct_sustained: number;
+        };
         /** Health */
         Health: {
             /** Status */
             status: string;
             /** Version */
             version: string;
+        };
+        /** Slot */
+        Slot: {
+            /** Index */
+            index: number;
+            /** Mod */
+            mod: string | null;
+            /** Name */
+            name: string | null;
+            /** Polarity */
+            polarity: string | null;
+            /** Rank */
+            rank: number | null;
+        };
+        /** Source */
+        Source: {
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "wiki" | "reference" | "de" | "wfcd";
+            /** Url */
+            url: string;
+        };
+        /** WeaponRef */
+        WeaponRef: {
+            category: components["schemas"]["Category"];
+            /** Name */
+            name: string;
+            /** Slug */
+            slug: string;
+            /** Weapon Type */
+            weapon_type: string;
         };
     };
     responses: never;
@@ -41,6 +186,57 @@ export interface components {
 }
 export type $defs = Record<string, never>;
 export interface operations {
+    calc_api_calc_post: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["CalcRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["Build"];
+                };
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
+            /** @description Request Entity Too Large */
+            413: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
+            /** @description Unprocessable Entity */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
+        };
+    };
     health_api_health_get: {
         parameters: {
             query?: never;

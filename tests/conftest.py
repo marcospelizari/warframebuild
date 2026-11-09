@@ -4,6 +4,7 @@ from pathlib import Path
 
 import pytest
 
+from app.gamedata.store import GameData, load
 from app.pipeline.refresh import Paths
 from app.pipeline.sources import wiki_local
 
@@ -30,6 +31,17 @@ MODULE_STUBS = {
 \t\tInternalName = "/Lotus/Weapons/Corpus/LongGuns/CrpSplitLaser/CrpSplitLaser",
 \t\tMagazine = 70,
 \t\tName = "Convectrix",
+\t},
+\t["Nataruk"] = {
+\t\tAttacks = {
+\t\t\t{ AttackName = "Quick Shot" },
+\t\t\t{ AttackName = "Charged Shot", ChargeTime = 1 },
+\t\t\t{ AttackName = "Perfect Shot", ChargeTime = 0.7 },
+\t\t},
+\t\tInternalName = "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep",
+\t\tMagazine = 1,
+\t\tName = "Nataruk",
+\t\tReload = 0.6,
 \t},
 }
 """,
@@ -60,6 +72,22 @@ MODULE_STUBS = {
 }
 
 
+def _family_page(gun: str) -> str:
+    return (
+        "=== Obtained ===\n{{Checklist|\n*{{Weapon|" + gun + "}}\n}}\n"
+        "===Elemental Bonus===\nbonus damage of one damage type which can either be "
+        "{{D|Impact}}, {{D|Heat}} or {{D|Radiation}}, ranging from 25-60% of base damage.\n=="
+    )
+
+
+# Family pages in the shape of the saved Kuva/Tenet/Coda_Weapons pages.
+PAGE_STUBS = {
+    "Kuva_Weapons": _family_page("Kuva Hind"),
+    "Tenet_Weapons": _family_page("Tenet Example"),
+    "Coda_Weapons": _family_page("Coda Example"),
+}
+
+
 @pytest.fixture
 def paths(tmp_path: Path) -> Paths:
     """Fixture raw data + stub wiki pages + the real reference/ files, in a temp project."""
@@ -70,7 +98,10 @@ def paths(tmp_path: Path) -> Paths:
     shutil.copytree(ROOT / "reference", reference)
     _keep_fixture_guns(raw, reference / "galvanized_behaviour.json")
     for page in wiki_local.pages(reference):
-        stub = MODULE_STUBS.get(page.stem, "return {}") if page.format == "lua" else "stub"
+        if page.format == "lua":
+            stub = MODULE_STUBS.get(page.stem, "return {}")
+        else:
+            stub = PAGE_STUBS.get(page.stem, "stub")
         (raw / "wiki" / page.filename).write_text(stub, encoding="utf-8")
     return Paths(
         raw=raw, reference=reference, gamedata=tmp_path / "gamedata", img=tmp_path / "cache/img"
@@ -88,3 +119,9 @@ def _keep_fixture_guns(raw: Path, table: Path) -> None:
     data = json.loads(table.read_text())
     data["weapons"] = {u: row for u, row in data["weapons"].items() if u in guns}
     table.write_text(json.dumps(data))
+
+
+@pytest.fixture(scope="session")
+def gamedata() -> GameData:
+    """The committed gamedata/ (Q26: domain, optimizer and API tests read it)."""
+    return load(ROOT / "gamedata")

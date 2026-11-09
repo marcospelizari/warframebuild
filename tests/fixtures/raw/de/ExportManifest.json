@@ -37,6 +37,10 @@
    "uniqueName": "/Lotus/Weapons/Sentients/SentOctaMiniGun/SentOctaMiniGun"
   },
   {
+   "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/OmicrusBow.png!00_I2+VO91uI6PPa9uonf1+rA",
+   "uniqueName": "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep"
+  },
+  {
    "textureLocation": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Grimoire.png!00_i9NOgyYNWmCnMXXnhQixow",
    "uniqueName": "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire"
   },

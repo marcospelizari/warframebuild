@@ -10,7 +10,7 @@ from app.pipeline.build.effects import Overrides
 from app.pipeline.build.fire import FireOverrides
 from app.pipeline.build.inputs import as_list, records, reference
 from app.pipeline.errors import RefreshError
-from app.pipeline.sources import export_plus, load_json, wiki_weapon_data
+from app.pipeline.sources import export_plus, load_json, wiki_progenitor, wiki_weapon_data
 
 __all__ = ["Dataset", "build"]
 
@@ -43,6 +43,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         plus.weapon_tags,
         wiki_weapon_data.load(raw_dir / "wiki"),
         DirectBonusTable.load(reference(reference_dir / "galvanized_behaviour.json")),
+        wiki_progenitor.load(raw_dir / "wiki"),
     )
     overrides = Overrides(reference(reference_dir / "overrides.json"))
     mod_list, sets, denied = mods.build(
