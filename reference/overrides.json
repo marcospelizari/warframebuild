@@ -63,12 +63,36 @@
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Corpus/LongGuns/CrpSentAmlgSniper/CrpSentAmlgSniper#zoom": {
-      "effects": [],
-      "support": "unsupported",
-      "unparsed": [
-        "+100% Damage, +3.5m Explosion Radius, -75% Fire Rate (3.5x zoom)"
+      "effects": [
+        {
+          "stat": "physical",
+          "damage_type": "impact",
+          "value": 1.0,
+          "operation": "stacking_multiply"
+        },
+        {
+          "stat": "physical",
+          "damage_type": "puncture",
+          "value": 1.0,
+          "operation": "stacking_multiply"
+        },
+        {
+          "stat": "physical",
+          "damage_type": "slash",
+          "value": 1.0,
+          "operation": "stacking_multiply"
+        },
+        {
+          "stat": "fire_rate",
+          "value": -0.75,
+          "operation": "stacking_multiply"
+        }
       ],
-      "note": "Sniper_Rifle: Komorex zoom bonuses are an exception to the additive rule; not applied until the Komorex page is saved",
+      "support": "partial",
+      "unparsed": [
+        "3.5x zoom Viral explosion (3.5x Zoom Radial Attack) not counted until the step-8 main-attack rows"
+      ],
+      "note": "Komorex page, Notes: 3.5x zoom +100% Impact/Puncture/Slash, additive with physical and elemental mods; -75% fire rate, additive with mods",
       "verified": "2026-11-09"
     }
   }

@@ -3,6 +3,7 @@ import pytest
 from app.domain import crit
 from app.domain.effects import DamageType
 from app.domain.headshot import Head
+from app.domain.hit import AttackStats, modded_hit
 from app.gamedata.models import Mod, Weapon
 from app.gamedata.store import GameData
 from app.optimize.evaluate import BuildError, Evaluation, evaluate
@@ -262,3 +263,22 @@ def test_cernos_prime_bonus_multiplies_on_top(gamedata: GameData) -> None:
     )
     expected = e.hit.arsenal_total * 3 * 1.5 * crit_avg * e.fire_rate
     assert e.head_burst_dps == pytest.approx((expected, expected))
+
+
+def test_komorex_max_zoom(gamedata: GameData) -> None:
+    """Saved Komorex, Notes: 3.5x zoom +100% Impact/Puncture/Slash (quantized like physical
+    mods), -75% fire rate additive with mods."""
+    komorex = _weapon(gamedata, "Komorex")
+    assert komorex.zoom is not None
+    zoom = [(x, x.value) for x in komorex.zoom.effects]
+    base = AttackStats(
+        damage=komorex.damage,
+        critical_chance=komorex.critical_chance,
+        critical_multiplier=komorex.critical_multiplier,
+        status_chance=komorex.status_chance,
+        multishot=komorex.multishot,
+    )
+    e = evaluate(komorex, [], head=GRINEER)
+    expected = modded_hit(base, zoom).average_shot(head=GRINEER) * e.fire_rate * 0.25
+    assert e.head_burst_dps is not None
+    assert e.head_burst_dps[0] == pytest.approx(expected)
