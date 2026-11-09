@@ -28,7 +28,7 @@ export function WeaponPage({ slug }: { slug: string }) {
           <>
             <dt>Burst on {dps.head.head}, 0 stacks</dt>
             <dd>{fmt(dps.head.zero_stacks)}</dd>
-            <dt>Burst on {dps.head.head}, max stacks</dt>
+            <dt>Burst on {dps.head.head}, max hit stacks</dt>
             <dd>{fmt(dps.head.max_stacks)}</dd>
           </>
         )}

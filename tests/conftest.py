@@ -197,7 +197,7 @@ def _keep_fixture_guns(raw: Path, table: Path) -> None:
         for w in json.loads((raw / "wfcd" / name).read_text())
     }
     data = json.loads(table.read_text())
-    for key in ("weapons", "flat_heads"):
+    for key in ("weapons", "flat_heads", "separate_extra"):
         if key in data:
             data[key] = {u: row for u, row in data[key].items() if u in guns}
     table.write_text(json.dumps(data))

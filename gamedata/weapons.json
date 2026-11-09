@@ -887,6 +887,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -1958,6 +1959,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -2083,6 +2085,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -3064,6 +3067,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -5419,6 +5423,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -7872,6 +7877,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -7967,6 +7973,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -8441,6 +8448,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -11030,6 +11038,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -11885,6 +11894,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -12679,12 +12689,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Neurotoxin (EVO 4): On Headshot: +70% Toxin for 3s",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Neurotoxin (EVO 4): On Headshot: +70% Toxin for 3s",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -13301,12 +13313,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Headcracker (EVO 4): On Headshot: +5% Fire Rate for 2s, stacks 10x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Headcracker (EVO 4): On Headshot: +5% Fire Rate for 2s, stacks 10x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -13508,12 +13522,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    },
    {
     "flat": true,
     "form": "incarnon",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -14810,6 +14826,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -14925,12 +14942,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Headcracker (EVO 2): On Headshot: +7.5% Fire Rate for 4s, stacks 10x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Headcracker (EVO 2): On Headshot: +7.5% Fire Rate for 4s, stacks 10x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -15897,6 +15916,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -15969,6 +15989,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -16079,6 +16100,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -16167,6 +16189,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -16282,12 +16305,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    },
    {
     "flat": true,
     "form": "incarnon",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -16403,6 +16428,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -16498,6 +16524,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": true,
     "source": null
    }
   ],
@@ -16596,6 +16623,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -16720,6 +16748,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -16835,12 +16864,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    },
    {
     "flat": true,
     "form": "incarnon",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -16957,12 +16988,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    },
    {
     "flat": true,
     "form": "incarnon",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -17079,6 +17112,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Bows are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -17309,12 +17343,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Well Rehearsed (EVO 2): On Consecutive Weakpoint Hits: +5 Base Damage, stacks 3x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Well Rehearsed (EVO 2): On Consecutive Weakpoint Hits: +5 Base Damage, stacks 3x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -17513,6 +17549,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -19161,6 +19198,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -20206,12 +20244,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Well Rehearsed (EVO 2): On Consecutive Weakpoint Hits: +5 Base Damage, stacks 3x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Well Rehearsed (EVO 2): On Consecutive Weakpoint Hits: +5 Base Damage, stacks 3x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -20765,12 +20805,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -21183,6 +21225,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -22345,6 +22388,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -22892,12 +22936,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Well Rehearsed (EVO 2): On Consecutive Weakpoint Hits: +5 Base Damage, stacks 3x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Well Rehearsed (EVO 2): On Consecutive Weakpoint Hits: +5 Base Damage, stacks 3x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -23143,12 +23189,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Deadhead (EVO 4): +100% Headshot Damage",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Deadhead (EVO 4): +100% Headshot Damage",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -23241,12 +23289,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Headcracker (EVO 4): On Headshot: +5% Fire Rate for 2s, stacks 10x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Headcracker (EVO 4): On Headshot: +5% Fire Rate for 2s, stacks 10x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -23430,12 +23480,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk King's Gambit (EVO 2): x0 Critical Chance on bodyshots, +150% Critical Chance on weakpoints",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk King's Gambit (EVO 2): x0 Critical Chance on bodyshots, +150% Critical Chance on weakpoints",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -23681,12 +23733,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Executioner's Dawn (EVO 4): On Equip: +100% Headshot Damage for 4s",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": true,
     "form": "incarnon",
     "reason": "Incarnon perk Executioner's Dawn (EVO 4): On Equip: +100% Headshot Damage for 4s",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -24035,12 +24089,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Reaper's Plenty (EVO 4): On Headshot: +100% Ammo Efficiency for 2s (normal form perk)",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Reaper's Plenty (EVO 4): On Headshot: +100% Ammo Efficiency for 2s (normal form perk)",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -24330,12 +24386,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Headcracker (EVO 2): On Headshot: +7.5% Fire Rate for 4s, stacks 10x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Headcracker (EVO 2): On Headshot: +7.5% Fire Rate for 4s, stacks 10x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -24450,12 +24508,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Precision's Payoff (EVO 2): On Burst Headshots: +20 Base Damage, stacks 3x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Precision's Payoff (EVO 2): On Burst Headshots: +20 Base Damage, stacks 3x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -25288,12 +25348,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Headcracker (EVO 2): On Headshot: +7.5% Fire Rate for 4s, stacks 10x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Headcracker (EVO 2): On Headshot: +7.5% Fire Rate for 4s, stacks 10x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -25799,12 +25861,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Executioner's Dawn (EVO 4): On Equip: +100% Headshot Damage for 4s",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": true,
     "form": "incarnon",
     "reason": "Incarnon perk Executioner's Dawn (EVO 4): On Equip: +100% Headshot Damage for 4s",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -26107,12 +26171,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk King's Gambit (EVO 2): x0 Critical Chance on bodyshots, +150% Critical Chance on weakpoints",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk King's Gambit (EVO 2): x0 Critical Chance on bodyshots, +150% Critical Chance on weakpoints",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -26270,12 +26336,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Reaper's Plenty (EVO 4): On Headshot: +100% Ammo Efficiency for 2s (normal form perk)",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Reaper's Plenty (EVO 4): On Headshot: +100% Ammo Efficiency for 2s (normal form perk)",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -26544,12 +26612,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Precision's Payoff (EVO 2): On Burst Headshots: +20 Base Damage, stacks 3x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Precision's Payoff (EVO 2): On Burst Headshots: +20 Base Damage, stacks 3x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -28207,12 +28277,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Deadhead (EVO 4): +100% Headshot Damage",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Deadhead (EVO 4): +100% Headshot Damage",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -28439,12 +28511,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Deadhead (EVO 4): +100% Headshot Damage",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Deadhead (EVO 4): +100% Headshot Damage",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -28519,6 +28593,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -28893,12 +28968,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -29106,6 +29183,7 @@
     "flat": false,
     "form": "normal",
     "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
     "source": null
    }
   ],
@@ -30625,12 +30703,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Incarnon Catalyst (EVO 4): Headshots build +50% more Incarnon charge",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Incarnon Catalyst (EVO 4): Headshots build +50% more Incarnon charge",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -30721,12 +30801,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Lingering Judgement (EVO 5): On 2 headshots within 2s: +50% Headshot Damage for 8s",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Lingering Judgement (EVO 5): On 2 headshots within 2s: +50% Headshot Damage for 8s",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -30842,12 +30924,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Caput Mortuum (EVO 4): +50% Headshot Damage",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Caput Mortuum (EVO 4): +50% Headshot Damage",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],
@@ -30983,12 +31067,14 @@
     "flat": false,
     "form": "normal",
     "reason": "Incarnon perk Sequential Skullbuster (EVO 5): On Consecutive Weakpoint Hits: +30% Headshot Damage, stacks 4x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    },
    {
     "flat": false,
     "form": "incarnon",
     "reason": "Incarnon perk Sequential Skullbuster (EVO 5): On Consecutive Weakpoint Hits: +30% Headshot Damage, stacks 4x",
+    "separate_extra": false,
     "source": "Incarnon_Evolutions"
    }
   ],

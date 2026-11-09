@@ -8,23 +8,19 @@ zoom bonus, and headshot-triggered effects at 0 and at max stacks (PLAN G70).
 import math
 from collections.abc import Sequence
 from dataclasses import dataclass
-from typing import Literal
 
 from app.domain import families
-from app.domain.effects import DamageType, Stat, Support, Trigger
+from app.domain.effects import DamageType, Support, Trigger
 from app.domain.elements import ELEMENTS
-from app.domain.fire_rate import Firing, effective_fire_rate, shooting_share
+from app.domain.fire_rate import shooting_share
 from app.domain.headshot import Head
-from app.domain.hit import AttackStats, Bonus, ModdedHit, modded_hit
-from app.domain.stats import modded, modded_time, value_for
+from app.domain.hit import AttackStats, Bonus, ModdedHit
+from app.domain.stats import value_for
 from app.gamedata.models import Attack, Effects, Headshot, Incarnon, Mod, Perk, Weapon
+from app.optimize.head import AOE, HEAD_TRIGGERS, head_burst
+from app.optimize.shot import Form, shot
 
 MAX_SLOTS = 8
-BOW = "Bow"  # WFCD weapon_type
-Form = Literal["normal", "incarnon"]
-AOE = "AoE"  # WFCD shot_type
-FLAT_HEAD = -2.0  # wiki module ExtraHeadshotDmg: heads at 1x (saved Enemy_Body_Parts, Notes)
-HEAD_TRIGGERS = frozenset({Trigger.ON_HEADSHOT, Trigger.ON_WEAK_POINT_HIT})
 ZOOM = "Zoom bonus"
 
 
@@ -171,24 +167,23 @@ def evaluate(
     bonus_element = (bonus, share) if bonus is not None and share is not None else None
     parts = _parts(weapon, incarnon, form)
     no_ms = set(incarnon.no_multishot) if incarnon and form == "incarnon" else set()
-    body = _shot(weapon, parts, no_ms, b, bonus_element, form)
+    body = shot(weapon, parts, no_ms, b, bonus_element, form)
     burst = math.fsum(h.average_shot() for h in body.hits) * body.rate
     mark = next((h for h in weapon.headshot if h.form == form), None)
     head_dps: tuple[float, float] | None = None
     triggered: tuple[str, ...] = ()
     if mark and head:
-        if weapon.zoom:
-            named.append((ZOOM, weapon.zoom))
-        entries = [e for _, e in named]
-        zero = _shot(
-            weapon, parts, no_ms, bonuses(weapon, entries, aiming=True), bonus_element, form
-        )
+        aimed = named + ([(ZOOM, weapon.zoom)] if weapon.zoom else [])
+        entries = [e for _, e in aimed]
+        zero = bonuses(weapon, entries, aiming=True)
         full = bonuses(weapon, entries, aiming=True, triggers=HEAD_TRIGGERS)
         head_dps = (
-            _head_burst(zero, parts, head, mark),
-            _head_burst(_shot(weapon, parts, no_ms, full, bonus_element, form), parts, head, mark),
+            head_burst(shot(weapon, parts, no_ms, zero, bonus_element, form), parts, head, mark),
+            head_burst(shot(weapon, parts, no_ms, full, bonus_element, form), parts, head, mark),
         )
-        triggered = tuple(n for n, e in named if any(x.trigger in HEAD_TRIGGERS for x in e.effects))
+        triggered = tuple(n for n, e in aimed if any(x.trigger in HEAD_TRIGGERS for x in e.effects))
+    if mark and weapon.zoom and weapon.zoom.support != Support.FULL:
+        named.append((ZOOM, weapon.zoom))  # the zoom belongs to every form aimed at heads
     return Evaluation(
         hit=body.hits[0],
         form=form,
@@ -211,66 +206,3 @@ def evaluate(
         head_burst_dps=head_dps,
         head_triggered=triggered,
     )
-
-
-@dataclass(frozen=True)
-class _Shot:
-    hits: list[ModdedHit]  # one per shot part
-    rate: float  # effective shots/s
-    magazine: float | None
-    firing: Firing
-    ammo_cost_assumed: bool
-
-
-def _shot(
-    weapon: Weapon,
-    parts: list[tuple[AttackStats, Attack | None]],
-    no_multishot: set[str],
-    b: list[Bonus],
-    bonus_element: tuple[DamageType, float] | None,
-    form: Form,
-) -> _Shot:
-    no_ms = [x for x in b if x[0].stat != Stat.MULTISHOT]
-    hits = [
-        modded_hit(stats, no_ms if a and a.name in no_multishot else b, bonus_element)
-        for stats, a in parts
-    ]
-    attack = parts[0][1]
-    ammo_cost = attack.ammo_cost if attack and attack.ammo_cost is not None else None
-    magazine = (
-        None
-        if weapon.magazine_size is None
-        else modded(weapon.magazine_size, Stat.MAGAZINE_CAPACITY, b)
-    )
-    reload = modded_time(weapon.reload_time, modded(1.0, Stat.RELOAD_SPEED, b) - 1)
-    base_rate = attack.fire_rate if form == "incarnon" and attack else None
-    firing = Firing(
-        fire_rate=base_rate or weapon.fire_rate,
-        charge_time=attack.charge_time if attack else None,
-        burst_count=attack.burst_count if attack else None,
-        burst_delay=attack.burst_delay if attack else None,
-        bow=weapon.weapon_type == BOW,
-        magazine=magazine,
-        ammo_cost=1.0 if ammo_cost is None else ammo_cost,
-        reload_time=reload,  # battery guns: recharge = reload (G59)
-        no_reload=weapon.no_reload,
-        reload_replaces_shot=weapon.reload_replaces_shot,
-    )
-    rate = effective_fire_rate(firing, modded(1.0, Stat.FIRE_RATE, b))
-    return _Shot(hits, rate, magazine, firing, ammo_cost is None)
-
-
-def _head_burst(
-    shot: _Shot, parts: list[tuple[AttackStats, Attack | None]], head: Head, mark: Headshot
-) -> float:
-    """Burst DPS when every direct part lands on `head`; AoE parts never headshot."""
-    total = []
-    for hit, (_, a) in zip(shot.hits, parts, strict=True):
-        if a is not None and a.shot_type == AOE:
-            total.append(hit.average_shot())
-            continue
-        extra = a.extra_headshot if a is not None else None
-        flat = mark.flat or extra == FLAT_HEAD
-        bonus = extra if extra is not None and extra > 0 else 0.0
-        total.append(hit.average_shot(head=head, flat=flat, extra=bonus))
-    return math.fsum(total) * shot.rate

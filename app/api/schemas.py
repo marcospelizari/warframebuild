@@ -79,7 +79,9 @@ class HeadDps(ApiModel):
     multiplier: float
     critical: bool  # critical-headshot flag
     zero_stacks: float  # headshot-triggered effects off
-    max_stacks: float  # headshot-triggered effects at max stacks (ranked on, G70)
+    # Hit-triggered effects (on headshot, on weak-point hit) at max stacks (ranked on, G70);
+    # kill-triggered stacks are not counted yet.
+    max_stacks: float
     triggered: list[str]  # entries with headshot-triggered effects
     source: Source
 
