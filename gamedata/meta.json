@@ -21,7 +21,7 @@
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "4892c32d15d1ef53",
+ "dataset_hash": "5a0aac8c25b8527c",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -43,7 +43,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 12,
+ "schema_version": 13,
  "sources": [
   {
    "path": "de/ExportManifest.json",

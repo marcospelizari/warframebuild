@@ -1,5 +1,8 @@
 [
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Torid",
   "perks": [
    {
@@ -227,6 +230,9 @@
   "unique_name": "/Lotus/Weapons/ClanTech/Bio/BioWeapon"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Dera Vandal",
   "perks": [
    {
@@ -466,6 +472,9 @@
   "unique_name": "/Lotus/Weapons/ClanTech/Energy/DeraVandal"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Dera",
   "perks": [
    {
@@ -705,6 +714,9 @@
   "unique_name": "/Lotus/Weapons/ClanTech/Energy/EnergyRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Cestra",
   "perks": [
    {
@@ -898,6 +910,9 @@
   "unique_name": "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/CorpusMinigun"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Angstrum",
   "perks": [
    {
@@ -1064,6 +1079,9 @@
   "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Prisma Angstrum",
   "perks": [
    {
@@ -1230,6 +1248,10 @@
   "unique_name": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/PrismaAngstrum"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form Radial Attack"
+  ],
   "name": "Miter",
   "perks": [
    {
@@ -1426,6 +1448,10 @@
   "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Prisma Gorgon",
   "perks": [
    {
@@ -1652,6 +1678,10 @@
   "unique_name": "/Lotus/Weapons/Grineer/LongGuns/VoidTraderGorgon/VTGorgon"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Gorgon Wraith",
   "perks": [
    {
@@ -1878,6 +1908,10 @@
   "unique_name": "/Lotus/Weapons/Grineer/LongGuns/WraithGorgon/WraithGorgon"
  },
  {
+  "attacks": [
+   "Incarnon Form Blob Embed",
+   "Incarnon Form Blob Explosion"
+  ],
   "name": "Stug",
   "perks": [
    {
@@ -2107,6 +2141,10 @@
   "unique_name": "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form Radial Attack"
+  ],
   "name": "Atomos",
   "perks": [
    {
@@ -2228,6 +2266,9 @@
   "unique_name": "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Dual Toxocyst",
   "perks": [
    {
@@ -2389,6 +2430,9 @@
   "unique_name": "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "MK1-Furis",
   "perks": [
    {
@@ -2584,6 +2628,9 @@
   "unique_name": "/Lotus/Weapons/MK1Series/MK1Furis"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "MK1-Kunai",
   "perks": [
    {
@@ -2811,6 +2858,9 @@
   "unique_name": "/Lotus/Weapons/MK1Series/MK1Kunai"
  },
  {
+  "attacks": [
+   "Incarnon Form Charged Shot"
+  ],
   "name": "MK1-Paris",
   "perks": [
    {
@@ -2990,6 +3040,10 @@
   "unique_name": "/Lotus/Weapons/MK1Series/MK1Paris"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "MK1-Strun",
   "perks": [
    {
@@ -3246,6 +3300,9 @@
   "unique_name": "/Lotus/Weapons/MK1Series/MK1Strun"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Telos Boltor",
   "perks": [
    {
@@ -3487,6 +3544,10 @@
   "unique_name": "/Lotus/Weapons/Syndicates/ArbitersOfHexis/LongGuns/AHBoltor"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form Radial Attack"
+  ],
   "name": "Gammacor",
   "perks": [
    {
@@ -3729,6 +3790,10 @@
   "unique_name": "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSDroidArray"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form Radial Attack"
+  ],
   "name": "Synoid Gammacor",
   "perks": [
    {
@@ -3971,6 +4036,9 @@
   "unique_name": "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSSynoidGammacor"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Rakta Ballistica",
   "perks": [
    {
@@ -4198,6 +4266,9 @@
   "unique_name": "/Lotus/Weapons/Syndicates/RedVeil/Pistols/RVBallistica"
  },
  {
+  "attacks": [
+   "Incarnon Form Charged Shot"
+  ],
   "name": "Paris",
   "perks": [
    {
@@ -4377,6 +4448,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Bows/HuntingBow"
  },
  {
+  "attacks": [
+   "Incarnon Form Charged Shot"
+  ],
   "name": "Paris Prime",
   "perks": [
    {
@@ -4556,6 +4630,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow"
  },
  {
+  "attacks": [
+   "Incarnon Form Charged Shot"
+  ],
   "name": "Dread",
   "perks": [
    {
@@ -4766,6 +4843,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Bows/StalkerBow"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Dex Sybaris",
   "perks": [
    {
@@ -4933,6 +5013,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/LongGuns/DexTheThird/DexTheThird"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Boltor Prime",
   "perks": [
    {
@@ -5174,6 +5257,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeBoltor/PrimeBoltor"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form Radial Attack"
+  ],
   "name": "Burston Prime",
   "perks": [
    {
@@ -5368,6 +5455,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Soma Prime",
   "perks": [
    {
@@ -5559,6 +5649,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Strun Prime",
   "perks": [
    {
@@ -5815,6 +5909,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Sybaris Prime",
   "perks": [
    {
@@ -5982,6 +6079,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeSybaris/PrimeSybarisRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form Embed AoE"
+  ],
   "name": "Vectis Prime",
   "perks": [
    {
@@ -6178,6 +6279,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Sybaris",
   "perks": [
    {
@@ -6345,6 +6449,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Latron Wraith",
   "perks": [
    {
@@ -6539,6 +6647,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Furis",
   "perks": [
    {
@@ -6734,6 +6845,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistol/AutoPistol"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Bronco Prime",
   "perks": [
    {
@@ -6910,6 +7024,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistol/BroncoPrime"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Sicarus",
   "perks": [
    {
@@ -7109,6 +7226,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistol/BurstPistol"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Bronco",
   "perks": [
    {
@@ -7285,6 +7405,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistol/HandShotGun"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Lex",
   "perks": [
    {
@@ -7496,6 +7619,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistol/HeavyPistol"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Lato Prime",
   "perks": [
    {
@@ -7725,6 +7851,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistol/LatoPrime"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Lato Vandal",
   "perks": [
    {
@@ -7954,6 +8083,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistol/LatoVandal"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Lato",
   "perks": [
    {
@@ -8183,6 +8315,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistol/Pistol"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Vasto",
   "perks": [
    {
@@ -8469,6 +8604,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistol/RevolverPistol"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Ballistica",
   "perks": [
    {
@@ -8696,6 +8834,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistols/AutomaticHandCrossbow/AutoCrossBow"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form Radial Attack"
+  ],
   "name": "Zylok",
   "perks": [
    {
@@ -8937,6 +9079,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Ballistica Prime",
   "perks": [
    {
@@ -9164,6 +9309,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeBallistica/PrimeBallistica"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Lex Prime",
   "perks": [
    {
@@ -9375,6 +9523,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Sicarus Prime",
   "perks": [
    {
@@ -9574,6 +9725,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeSicarus/PrimeSicarusPistol"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Vasto Prime",
   "perks": [
    {
@@ -9860,6 +10014,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form Radial Attack"
+  ],
   "name": "Zylok Prime",
   "perks": [
    {
@@ -10101,6 +10259,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeZylok/ZylokPrimePistol"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Boltor",
   "perks": [
    {
@@ -10342,6 +10503,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Rifle/BoltoRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Braton Prime",
   "perks": [
    {
@@ -10572,6 +10737,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Rifle/BratonPrime"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form Radial Attack"
+  ],
   "name": "Burston",
   "perks": [
    {
@@ -10766,6 +10935,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Rifle/BurstRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Gorgon",
   "perks": [
    {
@@ -10992,6 +11165,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Rifle/HeavyRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Latron Prime",
   "perks": [
    {
@@ -11186,6 +11363,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Rifle/LatronPrime"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Braton",
   "perks": [
    {
@@ -11416,6 +11597,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Rifle/Rifle"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Latron",
   "perks": [
    {
@@ -11610,6 +11795,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "MK1-Braton",
   "perks": [
    {
@@ -11840,6 +12029,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Rifle/StartingRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Soma",
   "perks": [
    {
@@ -12031,6 +12223,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Rifle/TennoAR"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form Embed AoE"
+  ],
   "name": "Vectis",
   "perks": [
    {
@@ -12227,6 +12423,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Braton Vandal",
   "perks": [
    {
@@ -12457,6 +12657,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Rifle/VIPRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Boar",
   "perks": [
    {
@@ -12686,6 +12889,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Shotgun/FullAutoShotgun"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Boar Prime",
   "perks": [
    {
@@ -12915,6 +13121,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Shotgun/PrimeBoar"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Strun",
   "perks": [
    {
@@ -13171,6 +13381,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Shotgun/Shotgun"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form AoE"
+  ],
   "name": "Strun Wraith",
   "perks": [
    {
@@ -13427,6 +13641,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Kunai",
   "perks": [
    {
@@ -13654,6 +13871,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai"
  },
  {
+  "attacks": [
+   "Incarnon Form",
+   "Incarnon Form Radial Attack"
+  ],
   "name": "Despair",
   "perks": [
    {
@@ -13805,6 +14026,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/StalkerKunai"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Felarx",
   "perks": [
    {
@@ -14039,6 +14263,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Phenmor",
   "perks": [
    {
@@ -14308,6 +14535,9 @@
   "unique_name": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle"
  },
  {
+  "attacks": [
+   "Incarnon Form"
+  ],
   "name": "Laetum",
   "perks": [
    {
@@ -14557,6 +14787,10 @@
   "unique_name": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol"
  },
  {
+  "attacks": [
+   "Incarnon Form Charge Attack",
+   "Incarnon Form Charge Radial Attack"
+  ],
   "name": "Onos",
   "perks": [
    {

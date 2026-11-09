@@ -27,6 +27,7 @@ def composition(
     element_mods: Sequence[Part],
     physical_bonus: Mapping[DamageType, float],
     bonus_element: tuple[DamageType, float] | None = None,
+    quantized: bool = True,
 ) -> dict[DamageType, float]:
     """Quantized damage per type of one hit before damage multipliers.
 
@@ -57,7 +58,7 @@ def composition(
         innate.append(Part(element, innate=share * total))
     for element, parts in combine(element_mods, innate).items():
         raw[element] = math.fsum(p.mod_fraction * total + p.innate for p in parts)
-    out = {t: quantize(v, total) for t, v in raw.items()}
+    out = {t: quantize(v, total) for t, v in raw.items()} if quantized else dict(raw)
     return {t: v for t, v in sorted(out.items()) if v}
 
 

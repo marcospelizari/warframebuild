@@ -13,10 +13,11 @@ export function WeaponPage({ slug }: { slug: string }) {
   });
   if (build.isPending) return <p>Loading…</p>;
   if (build.isError) return <p role="alert">{build.error.message}</p>;
-  const { weapon, arsenal, dps, slots, assumptions } = build.data;
+  const { weapon, form, arsenal, dps, slots, assumptions } = build.data;
   return (
     <main className="p-6">
       <h1>{weapon.name}</h1>
+      <p>Form: {form}</p>
       <h2>DPS</h2>
       <dl>
         <dt>Direct burst</dt>

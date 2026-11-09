@@ -81,3 +81,17 @@ def test_invalid_json_has_no_field(client: TestClient) -> None:
     )
     assert response.status_code == 422
     assert response.json()["field"] is None
+
+
+def test_incarnon_build_with_perks(client: TestClient) -> None:
+    body = {"weapon": "soma-prime", "perks": ["Fortifying Bloodshed"]}
+    build = client.post("/api/calc", json=body).json()
+    assert build["form"] == "incarnon"
+    assert build["perks"] == ["Fortifying Bloodshed"]
+    assert build["arsenal"]["multishot"] == 8
+
+
+def test_perk_for_the_other_form_is_named(client: TestClient) -> None:
+    body = {"weapon": "torid", "perks": ["Extended Volley"]}
+    texts = [a["text"] for a in client.post("/api/calc", json=body).json()["assumptions"]]
+    assert "No effect in incarnon form: Extended Volley" in texts

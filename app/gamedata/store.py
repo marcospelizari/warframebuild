@@ -31,6 +31,10 @@ class GameData:
         return {w.slug: w for w in self.weapons}
 
     @cached_property
+    def incarnon_by_id(self) -> dict[str, Incarnon]:
+        return {i.unique_name: i for i in self.incarnon}
+
+    @cached_property
     def mod_by_id(self) -> dict[str, Mod]:
         return {m.unique_name: m for m in self.mods.mods}
 

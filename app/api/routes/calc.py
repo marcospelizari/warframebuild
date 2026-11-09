@@ -1,4 +1,6 @@
-"""POST /api/calc: evaluate one build (step 4.6: no search, direct damage only)."""
+"""POST /api/calc: evaluate one build (no search, direct damage only)."""
+
+import math
 
 from fastapi import APIRouter, Request
 
@@ -26,6 +28,11 @@ ERRORS: dict[int | str, dict[str, object]] = {
     422: {"model": ApiError},
 }
 
+_MAIN_ATTACK = {
+    "normal": "Charge and burst from the first listed attack",
+    "incarnon": "Incarnon Form; magazine and reload of the normal form",
+}
+
 router = APIRouter()
 
 
@@ -42,7 +49,13 @@ def calc(body: CalcRequest, request: Request) -> Build:
             raise ApiFailure(422, "unknown_mod", "no such mod", f"mods[{i}]")
         mods.append(mod)
     try:
-        result = evaluate(weapon, mods, body.bonus_element)
+        result = evaluate(
+            weapon,
+            mods,
+            body.bonus_element,
+            data.incarnon_by_id.get(weapon.unique_name),
+            body.perks,
+        )
     except BuildError as error:
         raise ApiFailure(422, error.code, error.message, error.field) from error
     return _build(data.meta.dataset_hash, weapon, mods, result)
@@ -68,13 +81,15 @@ def _build(dataset_hash: str, weapon: Weapon, mods: list[Mod], e: Evaluation) ->
             category=weapon.category,
             weapon_type=weapon.weapon_type,
         ),
+        form=e.form,
+        perks=e.perks,
         slots=slots,
         bonus_element=BonusElement(damage_type=e.bonus_element[0], share=e.bonus_element[1])
         if e.bonus_element
         else None,
         arsenal=Arsenal(
-            damage=hit.damage,
-            total_damage=hit.projectile_damage,
+            damage=hit.arsenal_damage,
+            total_damage=math.fsum(hit.arsenal_damage.values()),
             critical_chance=hit.critical_chance,
             critical_multiplier=hit.critical_multiplier,
             status_chance=hit.status_chance,
@@ -93,12 +108,15 @@ def _assumptions(weapon: Weapon, e: Evaluation) -> list[Assumption]:
     out = [
         Assumption(id="max_rank", text="Mods at max rank"),
         Assumption(id="unconditional", text="Only unconditional mod effects (as in the arsenal)"),
-        Assumption(id="main_attack", text="Charge and burst from the first listed attack"),
+        Assumption(id="main_attack", text=_MAIN_ATTACK[e.form]),
         Assumption(id="direct_only", text="DPS from direct hits on the body; no DoT or Blast"),
     ]
     if e.not_modelled:
         text = "Effects not modelled yet: " + ", ".join(e.not_modelled)
         out.append(Assumption(id="not_modelled", text=text))
+    if e.inactive_perks:
+        text = f"No effect in {e.form} form: " + ", ".join(e.inactive_perks)
+        out.append(Assumption(id="inactive_perks", text=text))
     if e.sets_ignored:
         out.append(Assumption(id="sets_ignored", text="Mod set bonuses not applied"))
     if e.ammo_cost_assumed:

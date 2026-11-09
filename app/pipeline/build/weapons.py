@@ -187,6 +187,7 @@ def _attack_model(
         burst_count=extra.burst_count if extra else None,
         burst_delay=extra.burst_delay if extra else None,
         ammo_cost=extra.ammo_cost if extra else None,
+        multishot=extra.multishot if extra else None,
         direct_bonus=direct,
     )
 

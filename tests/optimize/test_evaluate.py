@@ -62,3 +62,32 @@ def test_at_most_eight_mods(gamedata: GameData) -> None:
     rifle = [m for m in gamedata.mods.mods if m.category == "primary" and m.family is None]
     with pytest.raises(BuildError, match="at most 8"):
         evaluate(_weapon(gamedata, "Soma Prime"), rifle[:9])
+
+
+def test_incarnon_form_by_default(gamedata: GameData) -> None:
+    soma = _weapon(gamedata, "Soma Prime")
+    incarnon = gamedata.incarnon_by_id[soma.unique_name]
+    e = evaluate(soma, [], incarnon=incarnon, perks=["Fortifying Bloodshed"])
+    assert e.form == "incarnon"
+    assert e.hit.multishot == 8
+    assert e.fire_rate == pytest.approx(7)
+    assert e.hit.base_total == pytest.approx(18 + 10)  # +10 per pellet (saved page note)
+
+
+@pytest.mark.parametrize(
+    ("perks", "code"),
+    [
+        (["Nope"], "unknown_perk"),
+        (["Fortifying Bloodshed", "Fortress Salvo"], "perk_tier_clash"),
+    ],
+)
+def test_rejected_perks(gamedata: GameData, perks: list[str], code: str) -> None:
+    soma = _weapon(gamedata, "Soma Prime")
+    with pytest.raises(BuildError) as error:
+        evaluate(soma, [], incarnon=gamedata.incarnon_by_id[soma.unique_name], perks=perks)
+    assert error.value.code == code
+
+
+def test_perks_need_an_incarnon_weapon(gamedata: GameData) -> None:
+    with pytest.raises(BuildError, match="not an Incarnon"):
+        evaluate(_weapon(gamedata, "Kuva Hind"), [], perks=["Fortifying Bloodshed"])
