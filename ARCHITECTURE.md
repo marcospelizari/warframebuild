@@ -49,6 +49,10 @@ deterministic evaluation budget finds them. A build is labelled "optimal" only w
 proves it within the stated search scope (for example: the two best bonus elements); otherwise it
 is "best found". The same data produces the same builds on any machine.
 
+The budget is 20,000 evaluations per combat build, sized so a full `build-all` stays within
+one overnight run on a 6-core laptop; the combat evaluator uses numpy. Measurements and the
+workload are in `bench/README.md` (step 4.5 spike; step 8 re-measures with the real search).
+
 ## Data
 
 | Source | Used for |
@@ -106,6 +110,9 @@ Rules for placing code:
    subpackage of modules per entity. Names say the job: `common`, `utils`, `helpers` and
    `misc` fail CI. Shared code stays inside its layer (e.g. `pipeline/errors.py`).
 5. **Tests mirror `app/`**: `tests/domain/test_damage.py` tests `app/domain/damage.py`.
+
+`bench/` holds performance measurements outside `app/`: nothing in `app/` imports it, and its
+stand-in mechanics are not game rules.
 
 The old `app/data/` package was split into these layers in step 3d (models and loader →
 `gamedata`, everything offline → `pipeline`, the command → `app/cli.py`); CI fails if it
