@@ -13,7 +13,7 @@ from dataclasses import dataclass, replace
 from app.domain import crit
 from app.domain.damage import composition, element_bonuses, scaled
 from app.domain.direct_bonus import DirectBonus, damage_factor
-from app.domain.effects import DamageType, Effect, Faction, Stat
+from app.domain.effects import DamageType, Effect, Faction, Operation, Stat
 from app.domain.elements import Part
 from app.domain.stats import modded
 
@@ -85,8 +85,11 @@ def modded_hit(
             elements.append(Part(e.damage_type, v))
         elif e.stat == Stat.PHYSICAL:
             physical[e.damage_type] = physical.get(e.damage_type, 0.0) + v
-    quantized = composition(base.damage, elements, physical, bonus_element)
-    damage_multiplier = modded(1.0, Stat.DAMAGE, bonuses)
+    damage = _with_base_damage(base.damage, bonuses)
+    quantized = composition(damage, elements, physical, bonus_element)
+    damage_multiplier = modded(
+        1.0, Stat.DAMAGE, [(e, v) for e, v in bonuses if e.operation != Operation.BASE]
+    )
     factions = {e.faction for e, _ in bonuses if e.stat == Stat.FACTION_DAMAGE and e.faction}
     return ModdedHit(
         damage=scaled(quantized, damage_multiplier),
@@ -102,13 +105,26 @@ def modded_hit(
             1.0, math.fsum(v for e, v in bonuses if e.stat == Stat.CRIT_TIER_UPGRADE)
         ),
         unscaled=quantized,
-        base_total=math.fsum(base.damage.values()),
-        modded_base=math.fsum(base.damage.values()) * damage_multiplier,
+        base_total=math.fsum(damage.values()),
+        modded_base=math.fsum(damage.values()) * damage_multiplier,
         damage_multiplier=damage_multiplier,
         element_bonus=element_bonuses(elements),
         status_damage=modded(1.0, Stat.STATUS_DAMAGE, bonuses) - 1,
         status_duration=modded(1.0, Stat.STATUS_DURATION, bonuses) - 1,
     )
+
+
+def _with_base_damage(
+    damage: Mapping[DamageType, float], bonuses: Sequence[Bonus]
+) -> Mapping[DamageType, float]:
+    """Incarnon "+N base damage": the total grows, the type split stays."""
+    add = math.fsum(
+        v for e, v in bonuses if e.stat == Stat.DAMAGE and e.operation == Operation.BASE
+    )
+    total = math.fsum(damage.values())
+    if not add or total <= 0:
+        return damage
+    return {t: v * (total + add) / total for t, v in damage.items()}
 
 
 def with_direct_bonus(hit: ModdedHit, behaviour: DirectBonus, direct: float) -> ModdedHit:

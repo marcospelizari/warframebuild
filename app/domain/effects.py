@@ -77,12 +77,15 @@ class Operation(StrEnum):
     MULTIPLY = "multiply"  # separate factor
     ADD = "add"  # flat, after % bonuses
     LOCK = "lock"  # "cannot be modified": the stat keeps its base value
+    BASE = "base"  # added to the base value before % bonuses (Incarnon "Increase Base X")
 
 
 class Trigger(StrEnum):
     ALWAYS = "always"
     ON_HIT = "on_hit"
     ON_CRIT = "on_crit"
+    ON_NONCRIT = "on_noncrit"
+    ON_NONCRIT_NO_STATUS = "on_noncrit_no_status"  # neither crit nor status proc
     ON_KILL = "on_kill"
     ON_HEADSHOT = "on_headshot"
     ON_HEADSHOT_KILL = "on_headshot_kill"

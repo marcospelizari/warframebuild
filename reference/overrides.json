@@ -1,4 +1,32 @@
 {
   "about": "Effects for stat text the parser cannot model (R6), keyed by uniqueName. `effects` (domain Effect fields) replace the parsed ones and set support to full unless `support` is given; `support` + `note` alone only adjust the status. Values come from the entry's own DE text or a saved wiki page named in `note`; never guessed. Refresh fails on an entry that matches nothing.",
-  "entries": {}
+  "entries": {
+    "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Devouring Attrition": {
+      "effects": [
+        {
+          "stat": "damage",
+          "value": 21.0,
+          "operation": "multiply",
+          "trigger": "on_noncrit",
+          "chance": 0.5
+        }
+      ],
+      "note": "Laetum page, EVO5: '50% chance to deal +2000% damage on non-critical hits'; notes: multiplicative to base damage bonuses",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Overwhelming Attrition": {
+      "effects": [
+        {
+          "stat": "damage",
+          "value": 4.0,
+          "operation": "stacking_multiply",
+          "trigger": "on_noncrit_no_status",
+          "duration_s": 10.0,
+          "max_stacks": 3
+        }
+      ],
+      "note": "Laetum page, EVO5: 'On Hit that is neither Critical nor applies a Status Effect: +400% damage for 10 seconds. Stacks up to 3 times'; notes: additive to base damage bonuses",
+      "verified": "2026-11-09"
+    }
+  }
 }

@@ -54,3 +54,19 @@ def test_elements_follow_slot_order() -> None:
 def test_vigilante_upgrade_chance_capped_at_one() -> None:
     hit = modded_hit(BASE, [b(Stat.CRIT_TIER_UPGRADE, 0.6), b(Stat.CRIT_TIER_UPGRADE, 0.6)])
     assert hit.crit_upgrade_chance == 1.0
+
+
+def test_base_damage_bonus_scales_the_base_not_the_multiplier() -> None:
+    # Soma Prime 12 base + Fortifying Bloodshed +10 = 22: Impact 2.2 in the arsenal.
+    soma = AttackStats(
+        damage={D.IMPACT: 1.2, D.PUNCTURE: 4.8, D.SLASH: 6.0},
+        critical_chance=0.3,
+        critical_multiplier=3.0,
+        status_chance=0.1,
+        multishot=1.0,
+    )
+    perk = Effect(stat=Stat.DAMAGE, value=10, operation=Operation.BASE)
+    hit = modded_hit(soma, [(perk, 10.0)])
+    assert hit.base_total == pytest.approx(22)
+    assert hit.damage_multiplier == 1.0
+    assert hit.projectile_damage == pytest.approx(22, abs=22 / 32)
