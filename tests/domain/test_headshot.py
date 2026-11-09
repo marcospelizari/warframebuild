@@ -29,3 +29,12 @@ def test_flat_head_keeps_only_headshot_bonuses() -> None:
 def test_extra_headshot_factor_multiplies() -> None:
     """Same page, Notes: Cernos Prime's 50% headshot bonus is multiplicative."""
     assert factor(GRINEER, 0.0, 0.0, extra=0.5) == pytest.approx(4.5)
+
+
+def test_simulacrum_target_acquired_and_deadhead_add_up() -> None:
+    """PLAN G73: Rubico Prime, Elite Lancer lvl 1. Body 381; head with Target Acquired 1.8k,
+    + Primary Deadhead 2.2k on screen (one decimal). Multiplying the bonuses would show 2.4k."""
+    head = Head(multiplier=3.0, critical=True)
+    shown = [round(381 * factor(head, 0.0, bonus) / 100) / 10 for bonus in (0.6, 0.6 + 0.3)]
+    assert shown == [1.8, 2.2]
+    assert round(381 * factor(head, 0.0, 0.6) * 1.3 / 100) / 10 == 2.4

@@ -2,6 +2,7 @@
 AoE parts never headshot (saved Enemy_Body_Parts, Notes)."""
 
 import math
+from dataclasses import dataclass
 
 from app.domain.effects import Trigger
 from app.domain.headshot import Head
@@ -15,6 +16,26 @@ FLAT_HEAD = -2.0  # wiki module ExtraHeadshotDmg: heads at 1x (saved Enemy_Body_
 HEAD_TRIGGERS = frozenset({Trigger.ON_HEADSHOT, Trigger.ON_WEAK_POINT_HIT})
 
 
+@dataclass(frozen=True)
+class HeadArgs:
+    flat: bool
+    extra_bonus: float
+    extra_factor: float
+
+
+def head_args(attack: Attack | None, mark: Headshot) -> HeadArgs | None:
+    """How one part lands on a head; None for AoE parts, which never headshot."""
+    if attack is not None and attack.shot_type == AOE:
+        return None
+    extra = attack.extra_headshot if attack is not None else None
+    own = extra if extra is not None and extra > 0 else 0.0
+    return HeadArgs(
+        flat=mark.flat or extra == FLAT_HEAD,
+        extra_bonus=0.0 if mark.separate_extra else own,
+        extra_factor=own if mark.separate_extra else 0.0,
+    )
+
+
 def head_burst(
     shot: Shot, parts: list[tuple[AttackStats, Attack | None]], head: Head, mark: Headshot
 ) -> float:
@@ -23,17 +44,16 @@ def head_burst(
     it as a separate factor (Cernos Prime)."""
     total = []
     for hit, (_, a) in zip(shot.hits, parts, strict=True):
-        if a is not None and a.shot_type == AOE:
+        args = head_args(a, mark)
+        if args is None:
             total.append(hit.average_shot())
             continue
-        extra = a.extra_headshot if a is not None else None
-        own = extra if extra is not None and extra > 0 else 0.0
         total.append(
             hit.average_shot(
                 head=head,
-                flat=mark.flat or extra == FLAT_HEAD,
-                extra_bonus=0.0 if mark.separate_extra else own,
-                extra_factor=own if mark.separate_extra else 0.0,
+                flat=args.flat,
+                extra_bonus=args.extra_bonus,
+                extra_factor=args.extra_factor,
             )
         )
     return math.fsum(total) * shot.rate

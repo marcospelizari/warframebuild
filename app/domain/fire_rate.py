@@ -9,6 +9,7 @@ time (at most 10x the base charge, Fire_Rate) and the burst delay (only when it 
 "Burst Delay is not affected by net negative Fire Rate bonuses").
 """
 
+import math
 from dataclasses import dataclass
 
 CHARGE_CAP = 10  # charge time never exceeds 10x its base (Fire_Rate)
@@ -28,12 +29,19 @@ class Firing:
     reload_replaces_shot: bool  # Vectis
 
 
+def charge_time(f: Firing, rate_factor: float) -> float | None:
+    """Modded charge time: base / fire-rate factor, at most 10x the base (Fire_Rate)."""
+    if not f.charge_time or rate_factor <= 0:
+        return None
+    return min(f.charge_time / rate_factor, CHARGE_CAP * f.charge_time)
+
+
 def effective_fire_rate(f: Firing, rate_factor: float) -> float:
     if rate_factor <= 0:
         return 0.0
     rate = f.fire_rate * rate_factor if f.fire_rate is not None else None
-    if f.charge_time:
-        charge = min(f.charge_time / rate_factor, CHARGE_CAP * f.charge_time)
+    charge = charge_time(f, rate_factor)
+    if charge is not None:
         if f.bow:
             return 1 / (charge + f.reload_time)
         return 1 / (charge + (1 / rate if rate else 0.0))
@@ -56,3 +64,31 @@ def shooting_share(f: Firing, effective_rate: float) -> float:
     if f.reload_replaces_shot:
         denominator -= 1
     return min(1.0, shots / denominator) if denominator > 0 else 1.0
+
+
+def shot_times(f: Firing, rate_factor: float, until: float) -> list[float]:
+    """When each shot lands (PLAN G72): at the end of its own cycle, the first at one
+    interval, or at the charge time for charge weapons and bows; an empty magazine adds the
+    reload (Vectis: in place of one interval)."""
+    effective_rate = effective_fire_rate(f, rate_factor)
+    if effective_rate <= 0:
+        return []
+    interval = 1 / effective_rate
+    first = charge_time(f, rate_factor) or interval
+    reloads = not (
+        f.no_reload or f.magazine is None or f.ammo_cost <= 0 or (f.bow and f.charge_time)
+    )
+    per_mag = max(1, math.floor(f.magazine / f.ammo_cost + 1e-9)) if reloads and f.magazine else 0
+    out: list[float] = []
+    t = 0.0
+    while True:
+        refill = per_mag and out and len(out) % per_mag == 0
+        if not out:
+            t += first
+        elif refill:
+            t += f.reload_time if f.reload_replaces_shot else f.reload_time + interval
+        else:
+            t += interval
+        if t > until:
+            return out
+        out.append(t)

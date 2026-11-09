@@ -124,3 +124,17 @@ def test_head_dps_and_stacks(client: TestClient, gamedata: GameData) -> None:
     assert head["triggered"] == ["Galvanized Scope"]
     assert "head_stacks" in {a["id"] for a in build["assumptions"]}
     assert client.post("/api/calc", json={"weapon": "braton-prime"}).json()["dps"]["head"] is None
+
+
+def test_combat_against_every_representative_enemy(client: TestClient, gamedata: GameData) -> None:
+    build = client.post("/api/calc", json={"weapon": "rubico-prime"}).json()
+    combat = build["combat"]
+    assert combat["level"] == 120 and combat["cap_s"] == 10
+    assert len(combat["enemies"]) == len(gamedata.enemies)
+    by_name = {e["name"]: e for e in combat["enemies"]}
+    assert by_name["Lancer"]["target"] == "Head"  # sniper: aimed at heads
+    assert by_name["Lumbering Fragment"]["target"] == "Body"  # no headshot spot
+    assert {f["faction"] for f in combat["factions"]} == {e.faction for e in gamedata.enemies}
+    assert {"combat", "armor"} <= {a["id"] for a in build["assumptions"]}
+    body = client.post("/api/calc", json={"weapon": "soma-prime"}).json()["combat"]
+    assert {e["target"] for e in body["enemies"]} == {"Body"}

@@ -14,6 +14,8 @@ from pydantic import TypeAdapter
 
 from app.gamedata.models import (
     Arcane,
+    Enemy,
+    FactionModifiers,
     Incarnon,
     Join,
     Meta,
@@ -30,6 +32,8 @@ DATA_FILES = (
     "joins.json",
     "incarnon.json",
     "reference_head.json",
+    "enemies.json",
+    "factions.json",
 )
 
 
@@ -42,6 +46,8 @@ class GameData:
     joins: list[Join]
     incarnon: list[Incarnon]
     reference_head: ReferenceHead
+    enemies: list[Enemy]
+    factions: list[FactionModifiers]
 
     @cached_property
     def weapon_by_slug(self) -> dict[str, Weapon]:
@@ -84,4 +90,6 @@ def load(gamedata_dir: Path) -> GameData:
         joins=TypeAdapter(list[Join]).validate_json(payloads["joins.json"]),
         incarnon=TypeAdapter(list[Incarnon]).validate_json(payloads["incarnon.json"]),
         reference_head=ReferenceHead.model_validate_json(payloads["reference_head.json"]),
+        enemies=TypeAdapter(list[Enemy]).validate_json(payloads["enemies.json"]),
+        factions=TypeAdapter(list[FactionModifiers]).validate_json(payloads["factions.json"]),
     )

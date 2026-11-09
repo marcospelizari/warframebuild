@@ -33,8 +33,8 @@ def test_reads_the_module_subset() -> None:
         ("{ a = 1 }", "return"),
         ("return { a = f(1) }", "unsupported syntax"),
         ("return { a = f }", "unexpected"),
-        ('return { a = "x\\"y" }', "unsupported syntax"),
-        ("return { a = 'x' }", "unsupported syntax"),
+        ('return { a = "x\\ty" }', "unsupported escape"),
+        ('return { a = "x\ny" }', "unsupported syntax"),
         ("return { a = 1, a = 2 }", "duplicate key"),
         ("return { a = 1, 2 }", "mixes named"),
         ("return { [1] = 2 }", "unsupported table key"),
@@ -46,6 +46,16 @@ def test_reads_the_module_subset() -> None:
 def test_rejects_anything_else(text: str, message: str) -> None:
     with pytest.raises(LuaError, match=message):
         parse_module(text)
+
+
+def test_reads_quoted_strings_with_escapes() -> None:
+    text = """return { a = "say \\"hi\\"\\n", b = 'don\\'t', ['c\\\\d'] = 1 }"""
+    assert parse_module(text) == {"a": 'say "hi"\n', "b": "don't", "c\\d": 1}
+
+
+def test_lua_rules_keep_the_last_duplicate_and_index_positional_entries() -> None:
+    assert parse_module("return { a = 1, a = 2 }", lua_rules=True) == {"a": 2}
+    assert parse_module('return { a = 1, "x" }', lua_rules=True) == {1: "x", "a": 1}
 
 
 def test_depth_and_size_are_capped(monkeypatch: pytest.MonkeyPatch) -> None:

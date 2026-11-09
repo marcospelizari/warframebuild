@@ -1,0 +1,175 @@
+{
+  "about": "Representative enemies (G1/R1, step 8a): two per main faction, Steel Path, non-Eximus, no Overguard, keyed by InternalName in the saved Module_Enemies_<faction> modules (base health, shield, armor, base level, faction). `head` = the headshot spot headshot forms aim at, from the saved Enemy_Body_Parts line `body_parts_line` (`body_parts_name` when the page lists the base unit: Corrupted variants, Enemy_Body_Parts:268); `critical` = headcrit (no * mark); null = no headshot spot (the body is hit). `toxin_bypasses_shield` defaults to true (Calculation; Treasurer and Hounds are false). Scaldra Dedicant replaced by Scaldra Eradicator (innate Overguard; Marcos 2026-11-09). `bane` = which faction damage mods (Bane/Cleanse/Expel of X) hit each module faction (saved Faction_Damage_Mods:13: Corpus, Grineer, Infested, Orokin, The Murmur; Sentient only Railjack); null = none, Scaldra and Techrot unlisted (assumption).",
+  "level": 120,
+  "source": "Enemy_Body_Parts",
+  "bane": {
+    "Grineer": "grineer",
+    "Corpus": "corpus",
+    "Infested": "infested",
+    "Orokin": "orokin",
+    "The Murmur": "murmur",
+    "Sentient": null,
+    "Scaldra": null,
+    "Techrot": null
+  },
+  "enemies": {
+    "/Lotus/Types/Enemies/Grineer/AIWeek/RifleLancer": {
+      "name": "Lancer",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": true
+      },
+      "body_parts_line": 322,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/Grineer/AIWeek/MinigunBombard": {
+      "name": "Heavy Gunner",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": true
+      },
+      "body_parts_line": 310,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/Corpus/Spaceman/AIWeek/RifleSpacemanAgent": {
+      "name": "Crewman",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": false
+      },
+      "body_parts_line": 470,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/Corpus/Spaceman/AIWeek/DeployableSpacemanAgent": {
+      "name": "Corpus Tech",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": false
+      },
+      "body_parts_line": 468,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/Infested/AiWeek/Quadrupeds/Quadruped": {
+      "name": "Charger",
+      "head": {
+        "part": "Mouth",
+        "multiplier": 1,
+        "critical": true
+      },
+      "body_parts_line": 603,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/Infested/AiWeek/Ancients/HealingAncient": {
+      "name": "Ancient Healer",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": true
+      },
+      "body_parts_line": 653,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/Orokin/RifleSpacemanAgent": {
+      "name": "Corrupted Crewman",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": false
+      },
+      "body_parts_line": 470,
+      "body_parts_name": "Crewman",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/Orokin/OrokinMinigunBombard": {
+      "name": "Corrupted Heavy Gunner",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": true
+      },
+      "body_parts_line": 310,
+      "body_parts_name": "Heavy Gunner",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/Sentients/Troopers/SentientBaseTrooperAgent": {
+      "name": "Battalyst",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": true
+      },
+      "body_parts_line": 744,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/Sentients/Troopers/SentientMeleeTrooperAgent": {
+      "name": "Conculyst",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": true
+      },
+      "body_parts_line": 750,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/ManInTheWall/Octopede/Leg/BipedalLegs/MITWOctopedeBipedalLegsAgent": {
+      "name": "Lumbering Fragment",
+      "head": null,
+      "body_parts_line": 840,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/ManInTheWall/Slinky/MITWSlinkyAgent": {
+      "name": "The Hollow Vein",
+      "head": {
+        "part": "Head",
+        "multiplier": 1.5,
+        "critical": false
+      },
+      "body_parts_line": 868,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/WF1999Lasrian/LasrianRifleLancer/LasrianLancer1999Agent": {
+      "name": "Scaldra Jaeger",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": true
+      },
+      "body_parts_line": 911,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/WF1999Lasrian/LasrianGoonadier/LasrianGoonadier1999Agent": {
+      "name": "Scaldra Eradicator",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": true
+      },
+      "body_parts_line": 917,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/WF1999Infested/InfestedAncient/InfestedAncient1999Agent": {
+      "name": "Techrot Obsolyte",
+      "head": {
+        "part": "Head",
+        "multiplier": 3,
+        "critical": true
+      },
+      "body_parts_line": 960,
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Types/Enemies/WF1999Infested/InfestedVolatileRunner/InfestedVolatileRunner1999Agent": {
+      "name": "Techrot Volatile Galliflex",
+      "head": {
+        "part": "Propane Tank",
+        "multiplier": 1.5,
+        "critical": false
+      },
+      "body_parts_line": 952,
+      "verified": "2026-11-09"
+    }
+  }
+}

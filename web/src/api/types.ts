@@ -98,6 +98,7 @@ export interface components {
             /** Assumptions */
             assumptions: components["schemas"]["Assumption"][];
             bonus_element: components["schemas"]["BonusElement"] | null;
+            combat: components["schemas"]["Combat"];
             /** Dataset Hash */
             dataset_hash: string;
             dps: components["schemas"]["Dps"];
@@ -137,6 +138,19 @@ export interface components {
          * @enum {string}
          */
         Category: "primary" | "secondary";
+        /** Combat */
+        Combat: {
+            /** Cap S */
+            cap_s: number;
+            /** Enemies */
+            enemies: components["schemas"]["EnemyFight"][];
+            /** Factions */
+            factions: components["schemas"]["FactionScore"][];
+            /** Level */
+            level: number;
+            /** Score */
+            score: number;
+        };
         /**
          * DamageType
          * @description Damage types. Source encodings (DE slots, tags) live in the data adapters.
@@ -150,6 +164,28 @@ export interface components {
             /** Direct Sustained */
             direct_sustained: number | null;
             head?: components["schemas"]["HeadDps"] | null;
+        };
+        /** EnemyFight */
+        EnemyFight: {
+            /** Cost */
+            cost: number;
+            /** Faction */
+            faction: string;
+            /** Name */
+            name: string;
+            /** Removed */
+            removed: number;
+            /** Target */
+            target: string;
+            /** Ttk */
+            ttk: number | null;
+        };
+        /** FactionScore */
+        FactionScore: {
+            /** Faction */
+            faction: string;
+            /** Score */
+            score: number;
         };
         /**
          * HeadDps

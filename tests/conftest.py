@@ -70,7 +70,41 @@ MODULE_STUBS = {
 \t},
 }
 """,
+    # Module:Enemies/data/<faction>: saved values for two representative enemies.
+    "Module_Enemies_grineer": """return {
+\t["Lancer"] = {
+\t\tGeneral = {
+\t\t\tFaction = "Grineer",
+\t\t\tInternalName = "/Lotus/Types/Enemies/Grineer/AIWeek/RifleLancer",
+\t\t},
+\t\tStats = { Health = 100, Armor = 100, BaseLevel = 1 },
+\t},
 }
+""",
+    "Module_Enemies_corpus": """return {
+\t["Crewman"] = {
+\t\tGeneral = {
+\t\t\tFaction = "Corpus",
+\t\t\tInternalName = "/Lotus/Types/Enemies/Corpus/Spaceman/AIWeek/RifleSpacemanAgent",
+\t\t},
+\t\tStats = { Health = 90, Shield = 120, BaseLevel = 1 },
+\t},
+}
+""",
+}
+FIXTURE_ENEMIES = {"Lancer", "Crewman"}
+
+
+def _body_parts_page() -> str:
+    """Enemy_Body_Parts rows of the fixture enemies at their saved line numbers."""
+    lines = [""] * 470
+    lines[321] = "| {{E|Lancer}} || Body (1x) || Head (3x) ||"
+    lines[469] = "| {{E|Crewman}} || Body (1x) || Head (3x)* ||"
+    return "\n".join(lines) + "\n"
+
+
+def _efficacy(faction: str) -> str:
+    return "{{Quote|'''DAMAGE EFFICACY'''<br/>\n'''{{text|green|x1.5}}''' damage to " + faction
 
 
 def _family_page(gun: str) -> str:
@@ -133,6 +167,9 @@ PAGE_STUBS = {
     "Kuva_Weapons": _family_page("Kuva Hind"),
     "Tenet_Weapons": _family_page("Tenet Example"),
     "Coda_Weapons": _family_page("Coda Example"),
+    "Enemy_Body_Parts": _body_parts_page(),
+    "Impact_Damage": _efficacy("Grineer"),
+    "Puncture_Damage": _efficacy("Corpus"),
 }
 
 
@@ -148,6 +185,7 @@ def paths(tmp_path: Path) -> Paths:
     _keep_fixture_guns(raw, reference / "headshot.json")
     _keep_rows(reference / "main_attack.json", {"Lex Prime", "Laetum"})
     _keep_overrides(raw, reference / "overrides.json", {"ZarimanHeavyPistol", "PrimeLex"})
+    _keep_enemies(reference / "enemies.json")
     for page in wiki_local.pages(reference):
         if page.format == "lua":
             stub = MODULE_STUBS.get(page.stem, "return {}")
@@ -185,6 +223,14 @@ def _keep_overrides(raw: Path, table: Path, perk_guns: set[str]) -> None:
         return uid.rsplit("/", 1)[-1] in perk_guns
 
     data["entries"] = {k: v for k, v in data["entries"].items() if keep(k)}
+    table.write_text(json.dumps(data))
+
+
+def _keep_enemies(table: Path) -> None:
+    """Rows only for the enemies the stub modules hold; the rest are checked against the
+    committed gamedata/ by tests/pipeline/test_enemies.py."""
+    data = json.loads(table.read_text())
+    data["enemies"] = {u: r for u, r in data["enemies"].items() if r["name"] in FIXTURE_ENEMIES}
     table.write_text(json.dumps(data))
 
 

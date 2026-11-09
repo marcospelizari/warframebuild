@@ -97,6 +97,28 @@ class Headshot(ApiModel):
     source: Source | None  # None: a project decision, explained in `reason`
 
 
+class EnemyFight(ApiModel):
+    name: str
+    faction: str
+    target: str  # body part hit: the head spot on forms aimed at heads, else "Body"
+    ttk: float | None  # seconds; None = alive at the cap
+    removed: float  # share of shield + health removed
+    cost: float  # TTK, or cap / removed when alive (C3)
+
+
+class FactionScore(ApiModel):
+    faction: str
+    score: float  # geometric mean cost of its enemies; lower is better
+
+
+class Combat(ApiModel):
+    level: int
+    cap_s: float
+    enemies: list[EnemyFight]
+    factions: list[FactionScore]
+    score: float  # geometric mean over the factions
+
+
 class Build(ApiModel):
     dataset_hash: str
     weapon: WeaponRef
@@ -107,4 +129,5 @@ class Build(ApiModel):
     arsenal: Arsenal
     dps: Dps
     headshot: Headshot | None  # this form is aimed at heads; None = body shots
+    combat: Combat
     assumptions: list[Assumption]

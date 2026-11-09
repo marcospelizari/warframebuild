@@ -106,14 +106,17 @@ the wiki itself. This applies to these files:
   reference/galvanized_behaviour.json (Galvanized bonus behaviour per attack,
                                  from the Condition Overload attack catalog)
   gamedata/factions.json        (faction damage-type modifiers)
-  reference/enemies.json        (representative enemies and level scaling)
+  gamedata/enemies.json         (enemy health, shields, armor and heads)
+  reference/enemies.json        (representative enemies and their heads)
+  reference/enemy_scaling.json  (enemy level scaling curves)
   reference/archon_shards.json  (Archon Shard bonuses)
   reference/riven_factors.json  (Riven stat factors)
 
 These files contain names and numeric values only, extracted from wiki pages
 by the WARFRAME Wiki contributors. Each file records its source pages and
 retrieval date. Damage formulas implemented in the code follow the wiki pages
-"Damage/Calculation", "Calculating Bonuses" and "Status Effect".
+"Damage/Calculation", "Calculating Bonuses", "Status Effect" and
+"Enemy Level Scaling".
 
 Builds computed and served by this project use these wiki-derived values, so
 the computed build data is also shared under CC BY-NC-SA 3.0.

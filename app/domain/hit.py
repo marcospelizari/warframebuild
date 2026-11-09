@@ -69,6 +69,8 @@ class ModdedHit:
         flat: bool = False,
         extra_bonus: float = 0.0,
         extra_factor: float = 0.0,
+        chance_add: float = 0.0,
+        damage_add: float = 0.0,
     ) -> float:
         """Expected damage of one shot when every projectile hits (direct damage only).
 
@@ -76,13 +78,40 @@ class ModdedHit:
         1x: no weak-point bonuses and no critical-headshot bonus (saved Critical_Hit:425);
         `extra_bonus` / `extra_factor`: the weapon's own headshot bonus, added to the
         headshot bonuses or multiplied on top (`headshot.factor`). Weak-point crit chance
-        counts only on a weak point.
+        counts only on a weak point. `chance_add` / `damage_add`: flat crit chance and crit
+        damage added after mods (Puncture and Cold on the target, saved Critical_Hit).
         """
+        return self.arsenal_total * self.hit_factor(
+            faction,
+            head,
+            flat=flat,
+            extra_bonus=extra_bonus,
+            extra_factor=extra_factor,
+            chance_add=chance_add,
+            damage_add=damage_add,
+        )
+
+    def hit_factor(
+        self,
+        faction: Faction | None = None,
+        head: Head | None = None,
+        *,
+        flat: bool = False,
+        extra_bonus: float = 0.0,
+        extra_factor: float = 0.0,
+        chance_add: float = 0.0,
+        damage_add: float = 0.0,
+    ) -> float:
+        """Multiplier of one projectile's damage: faction x body part x crit average; also
+        the DoT seed's hit multiplier (saved Damage_over_Time)."""
         faction_factor = self.faction_multiplier.get(faction, 1.0) if faction else 1.0
         chance = self.head_critical_chance if head and not flat else self.critical_chance
         headcrit = bool(head and head.critical and not flat)
         crit_avg = crit.average_multiplier(
-            chance, self.critical_multiplier, self.crit_upgrade_chance, headcrit
+            chance + chance_add,
+            self.critical_multiplier + damage_add,
+            self.crit_upgrade_chance,
+            headcrit,
         )
         part = (
             headshot.factor(
@@ -95,7 +124,7 @@ class ModdedHit:
             if head
             else 1.0
         )
-        return self.arsenal_total * faction_factor * part * crit_avg
+        return faction_factor * part * crit_avg
 
 
 def modded_hit(
