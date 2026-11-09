@@ -3088,12 +3088,77 @@
   "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpSentAmlgSniper/CrpSentAmlgSniper",
   "weapon_type": "Sniper",
   "zoom": {
-   "effects": [],
-   "note": "Sniper_Rifle: Komorex zoom bonuses are an exception to the additive rule; not applied until the Komorex page is saved",
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": "impact",
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "physical",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 1.0,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": "puncture",
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "physical",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 1.0,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": "slash",
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "physical",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 1.0,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "fire_rate",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": -0.75,
+     "while_aiming": false
+    }
+   ],
+   "note": "Komorex page, Notes: 3.5x zoom +100% Impact/Puncture/Slash, additive with physical and elemental mods; -75% fire rate, additive with mods",
    "requires_trigger": null,
-   "support": "unsupported",
+   "support": "partial",
    "unparsed": [
-    "+100% Damage, +3.5m Explosion Radius, -75% Fire Rate (3.5x zoom)"
+    "3.5x zoom Viral explosion (3.5x Zoom Radial Attack) not counted until the step-8 main-attack rows"
    ]
   }
  },

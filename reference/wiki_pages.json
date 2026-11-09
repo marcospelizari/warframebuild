@@ -292,6 +292,13 @@
         "forced Slash on Impact proc, fire-rate threshold (step 4)"
       ]
     },
+    "Komorex": {
+      "title": "Komorex",
+      "impact": "low",
+      "feeds": [
+        "Komorex zoom bonus override (step 7b)"
+      ]
+    },
     "Kuva_Weapons": {
       "title": "Kuva_Weapons",
       "impact": "medium",

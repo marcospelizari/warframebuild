@@ -21,7 +21,7 @@
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "19997244bc00981a",
+ "dataset_hash": "69744b3e2d630fcb",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -368,6 +368,12 @@
    "retrieved": "2026-11-08",
    "sha256_16": "2e53f5002763e1a9",
    "url": "https://wiki.warframe.com/w/Internal_Bleeding"
+  },
+  {
+   "path": "wiki/Komorex.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "cdc2be7e3617b153",
+   "url": "https://wiki.warframe.com/w/Komorex"
   },
   {
    "path": "wiki/Kuva_Weapons.wikitext",
