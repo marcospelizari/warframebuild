@@ -7,11 +7,12 @@ schema version is the one this code reads.
 import hashlib
 import json
 from dataclasses import dataclass
+from functools import cached_property
 from pathlib import Path
 
 from pydantic import TypeAdapter
 
-from app.gamedata.models import Arcane, Join, Meta, ModsFile, Weapon
+from app.gamedata.models import Arcane, Join, Meta, Mod, ModsFile, Weapon
 
 DATA_FILES = ("weapons.json", "mods.json", "arcanes.json", "joins.json")
 
@@ -23,6 +24,14 @@ class GameData:
     mods: ModsFile
     arcanes: list[Arcane]
     joins: list[Join]
+
+    @cached_property
+    def weapon_by_slug(self) -> dict[str, Weapon]:
+        return {w.slug: w for w in self.weapons}
+
+    @cached_property
+    def mod_by_id(self) -> dict[str, Mod]:
+        return {m.unique_name: m for m in self.mods.mods}
 
 
 def dataset_hash(payloads: dict[str, bytes]) -> str:

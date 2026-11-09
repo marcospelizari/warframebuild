@@ -1,5 +1,5 @@
 {
- "changed_on": "2026-11-08",
+ "changed_on": "2026-11-09",
  "counts": {
   "arcanes": 34,
   "arcanes_full": 13,
@@ -17,7 +17,7 @@
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "e74e109d0a625d1a",
+ "dataset_hash": "0ffa28b0c0a0f060",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -39,7 +39,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 10,
+ "schema_version": 11,
  "sources": [
   {
    "path": "de/ExportManifest.json",
@@ -148,6 +148,12 @@
    "retrieved": "2026-11-08",
    "sha256_16": "b8cce0736bd2a182",
    "url": "https://wiki.warframe.com/w/Charger"
+  },
+  {
+   "path": "wiki/Coda_Weapons.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "7ad6535e5f624a20",
+   "url": "https://wiki.warframe.com/w/Coda_Weapons"
   },
   {
    "path": "wiki/Compatibility.wikitext",
@@ -360,6 +366,12 @@
    "url": "https://wiki.warframe.com/w/Internal_Bleeding"
   },
   {
+   "path": "wiki/Kuva_Weapons.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "5a49eb998bbb6e87",
+   "url": "https://wiki.warframe.com/w/Kuva_Weapons"
+  },
+  {
    "path": "wiki/Laetum.wikitext",
    "retrieved": "2026-11-08",
    "sha256_16": "2ccbf0c0b7db83b0",
@@ -514,6 +526,12 @@
    "retrieved": "2026-11-08",
    "sha256_16": "dea40a21e5692650",
    "url": "https://wiki.warframe.com/w/Techrot_Volatile_Galliflex"
+  },
+  {
+   "path": "wiki/Tenet_Weapons.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "61b176208299a5d2",
+   "url": "https://wiki.warframe.com/w/Tenet_Weapons"
   },
   {
    "path": "wiki/Thalys.wikitext",

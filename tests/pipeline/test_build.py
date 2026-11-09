@@ -502,3 +502,26 @@ def test_direct_bonus_row_for_unknown_attack_fails(paths: Paths) -> None:
     path.write_text(json.dumps(data))
     with pytest.raises(RefreshError, match="unknown attacks"):
         build(paths.raw, paths.reference)
+
+
+def test_progenitor_bonus_from_family_page(paths: Paths) -> None:
+    weapons = {w.name: w for w in build(paths.raw, paths.reference).weapons}
+    bonus = weapons["Kuva Hind"].bonus_element
+    assert bonus is not None
+    assert bonus.max_share == 0.6
+    assert DamageType.RADIATION in bonus.elements
+    assert weapons["Braton Prime"].bonus_element is None
+
+
+def test_reload_override_replaces_de_value(paths: Paths) -> None:
+    weapons = {w.name: w for w in build(paths.raw, paths.reference).weapons}
+    assert weapons["Nataruk"].reload_time == 0.6
+
+
+def test_reload_override_must_be_a_number(paths: Paths) -> None:
+    table = paths.reference / "fire_overrides.json"
+    data = json.loads(table.read_text())
+    data["weapons"]["/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep"]["reload_time"] = True
+    table.write_text(json.dumps(data))
+    with pytest.raises(RefreshError, match="reload_time"):
+        build(paths.raw, paths.reference)

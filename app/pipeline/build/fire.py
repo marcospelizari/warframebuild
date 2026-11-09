@@ -15,6 +15,7 @@ WEAPON_KEYS = {
     "no_reload",
     "reload_replaces_shot",
     "beam_ramp_start",
+    "reload_time",
     "source",
     "verified",
 }
@@ -59,6 +60,12 @@ class FireOverrides:
 
     def reload_replaces_shot(self, uid: str) -> bool:
         return self.weapons.get(uid, {}).get("reload_replaces_shot", False) is True
+
+    def reload_time(self, uid: str, de_value: float) -> float:
+        value = self.weapons.get(uid, {}).get("reload_time", de_value)
+        if isinstance(value, bool) or not isinstance(value, int | float) or value < 0:
+            raise RefreshError(f"reference/{FILE} {uid}: reload_time must be a number >= 0")
+        return float(value)
 
     def beam_start(self, uid: str, name: str, trigger: str) -> float | None:
         value = self.weapons.get(uid, {}).get("beam_ramp_start")

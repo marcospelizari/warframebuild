@@ -701,6 +701,86 @@
   "trigger": "AUTO",
   "variantType": "VT_NORMAL"
  },
+ "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep": {
+  "accuracy": 16.666666,
+  "behaviours": [
+   {
+    "chargedProjectile": {
+     "attack": {
+      "DT_PUNCTURE": 648.000027,
+      "DT_SLASH": 251.999973,
+      "procChance": 0.5
+     }
+    },
+    "fireIterations": 1,
+    "impact": {
+     "DT_IMPACT": 3.33333,
+     "DT_PUNCTURE": 3.33333,
+     "DT_SLASH": 3.33334,
+     "procChance": 0
+    },
+    "projectile": {
+     "attack": {
+      "DT_PUNCTURE": 404.999991,
+      "DT_SLASH": 45.000009,
+      "procChance": 0.3
+     }
+    },
+    "stateName": "/Lotus/Language/Menu/Loadout_TriggerCharge"
+   }
+  ],
+  "codexSecret": true,
+  "compatibilityTags": [
+   "PROJECTILE",
+   "OMICRUS",
+   "BATTERY"
+  ],
+  "criticalChance": 0.2,
+  "criticalMultiplier": 1.8,
+  "damagePerShot": [
+   0,
+   648,
+   251.99997,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "description": "/Lotus/Language/Weapons/OmicrusDesc",
+  "excludeFromMarket": true,
+  "fireRate": 0.666667,
+  "holsterCategory": "BOW",
+  "icon": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/OmicrusBow.png",
+  "introducedAt": 1639578194,
+  "masteryReq": 0,
+  "multishot": 1,
+  "name": "/Lotus/Language/Weapons/OmicrusName",
+  "noise": "ALARMING",
+  "omegaAttenuation": 0.65,
+  "parentName": "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusWep",
+  "platinumCost": 225,
+  "procChance": 0.5,
+  "productCategory": "LongGuns",
+  "reloadTime": 0.05,
+  "slot": 1,
+  "totalDamage": 900,
+  "tradable": false,
+  "trigger": "CHARGE",
+  "variantType": "VT_NORMAL"
+ },
  "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire": {
   "accuracy": 100,
   "behaviours": [

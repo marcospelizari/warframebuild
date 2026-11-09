@@ -1,5 +1,5 @@
 {
-  "about": "Fire data DE and WFCD lack (G10), each row from a saved wiki page. `exclude` keeps a gun out with a reason until real values are known. `no_reload`: shots come straight from the ammo pool, no reload between shots. `reload_replaces_shot`: the reload takes the place of one shot interval (sustained DPS). `beam_ramp_start`: beam damage at the start of the 0.6 s ramp-up (HELD guns only); `defaults` applies to every beam without its own row. Forced procs, burst count/delay and Lanka's no-delay rule come from the wiki weapon data modules, not from here.",
+  "about": "Fire data DE and WFCD lack (G10), each row from a saved wiki page. `exclude` keeps a gun out with a reason until real values are known. `no_reload`: shots come straight from the ammo pool, no reload between shots. `reload_replaces_shot`: the reload takes the place of one shot interval (sustained DPS). `reload_time`: replaces DE reloadTime. `beam_ramp_start`: beam damage at the start of the 0.6 s ramp-up (HELD guns only); `defaults` applies to every beam without its own row. Forced procs, burst count/delay and Lanka's no-delay rule come from the wiki weapon data modules, not from here.",
   "defaults": {
     "beam_ramp_start": {
       "value": 0.2,
@@ -55,6 +55,12 @@
       "exclude": "second Grimoire entry with no row in the wiki weapon module: magazine size unknown",
       "source": "Module_Weapons_data_secondary lists only /Lotus/Weapons/Tenno/Grimoire/TnGrimoire",
       "verified": "2026-11-08"
+    },
+    "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep": {
+      "name": "Nataruk",
+      "reload_time": 0.6,
+      "source": "Module_Weapons_data_primary: Nataruk Reload = 0.6 (DE reloadTime 0.05)",
+      "verified": "2026-11-09"
     }
   }
 }
