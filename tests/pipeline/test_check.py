@@ -201,7 +201,8 @@ def test_entry_diff_and_touched_rows(paths: Paths) -> None:
     touched = check.touched_rows(check.reference_rows(paths.reference), diff)
     assert sorted((r.file, r.label) for r in touched) == [
         ("fire_overrides.json", "Lex Prime"),
-        ("headshot.json", "Lex Prime"),
+        ("headshot.json", "Lex Prime"),  # headshot row
+        ("headshot.json", "Lex Prime"),  # flat_heads row
         ("main_attack.json", "Lex Prime"),
     ]
     assert "changed weapons (1): Lex Prime" in "\n".join(check.diff_lines(diff, touched, "x"))
@@ -262,3 +263,8 @@ def test_family_correction_listed_when_a_member_changes(paths: Paths) -> None:
     join = next(r for r in rows if r.key == "galvanized-aptitude-rifle-aptitude")
     diff = check.EntryDiff(ids={join.depends_on[0]})
     assert join in check.touched_rows(rows, diff)
+
+
+def test_single_reference_row_is_listed(paths: Paths) -> None:
+    rows = check.reference_rows(paths.reference)
+    assert ("headshot.json", "Grineer humanoid head") in {(r.file, r.label) for r in rows}

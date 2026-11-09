@@ -88,6 +88,7 @@ def write(
         "arcanes.json": _dump(dataset.arcanes),
         "joins.json": _dump(dataset.joins),
         "incarnon.json": _dump(dataset.incarnon),
+        "reference_head.json": _dump(dataset.reference_head),
     }
     digest = dataset_hash(payloads)
     fetched = max((s.retrieved for s in sources if not s.path.startswith("wiki/")), default="")

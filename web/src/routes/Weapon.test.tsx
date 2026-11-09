@@ -8,7 +8,12 @@ afterEach(() => vi.unstubAllGlobals());
 
 const build: Build = {
   dataset_hash: "h",
-  weapon: { slug: "soma-prime", name: "Soma Prime", category: "primary", weapon_type: "Rifle" },
+  weapon: {
+    slug: "soma-prime",
+    name: "Soma Prime",
+    category: "primary",
+    weapon_type: "Rifle",
+  },
   form: "incarnon",
   perks: [],
   slots: [{ index: 0, mod: null, name: null, rank: null, polarity: null }],
@@ -34,7 +39,11 @@ function renderPage(response: Response) {
   const fetch = vi.fn(async () => response);
   vi.stubGlobal("fetch", fetch);
   render(
-    <QueryClientProvider client={new QueryClient({ defaultOptions: { queries: { retry: false } } })}>
+    <QueryClientProvider
+      client={
+        new QueryClient({ defaultOptions: { queries: { retry: false } } })
+      }
+    >
       <WeaponPage slug="soma-prime" />
     </QueryClientProvider>,
   );
@@ -48,11 +57,40 @@ test("posts the slug to /api/calc and lists the numbers", async () => {
   expect(screen.getByText("Form: incarnon")).toBeInTheDocument();
   expect(screen.getByText("Mods at max rank")).toBeInTheDocument();
   const [, init] = fetch.mock.calls[0] as unknown as [string, RequestInit];
-  expect(JSON.parse(init.body as string)).toEqual({ weapon: "soma-prime", mods: [] });
+  expect(JSON.parse(init.body as string)).toEqual({
+    weapon: "soma-prime",
+    mods: [],
+  });
 });
 
 test("shows the API error message", async () => {
-  const error = { code: "unknown_weapon", message: "no such weapon", field: "weapon" };
+  const error = {
+    code: "unknown_weapon",
+    message: "no such weapon",
+    field: "weapon",
+  };
   renderPage(new Response(JSON.stringify(error), { status: 404 }));
   expect(await screen.findByRole("alert")).toHaveTextContent("no such weapon");
+});
+
+test("lists head DPS at 0 and max stacks for a headshot form", async () => {
+  const head = {
+    head: "Grineer humanoid head",
+    multiplier: 3,
+    critical: true,
+    zero_stacks: 900,
+    max_stacks: 1500,
+    triggered: ["Galvanized Scope"],
+    source: {
+      kind: "wiki" as const,
+      url: "https://wiki.warframe.com/w/Enemy_Body_Parts",
+    },
+  };
+  renderPage(
+    new Response(JSON.stringify({ ...build, dps: { ...build.dps, head } })),
+  );
+  expect(
+    await screen.findByText("Burst on Grineer humanoid head, max stacks"),
+  ).toBeInTheDocument();
+  expect(screen.getByText("1500.00")).toBeInTheDocument();
 });

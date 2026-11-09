@@ -75,13 +75,16 @@ class RefRow:
 
 
 def reference_rows(reference_dir: Path) -> list[RefRow]:
-    """Every row carrying `verified` in reference/*.json (dicts keyed by ID, or lists with `id`)."""
+    """Every row carrying `verified` in reference/*.json: dicts keyed by ID, lists with `id`,
+    or a single row under its own key (headshot.json `reference_head`)."""
     rows = []
     for path in sorted(reference_dir.glob("*.json")):
         data = json.loads(path.read_text(encoding="utf-8"))
-        for container in data.values() if isinstance(data, dict) else []:
+        for name, container in data.items() if isinstance(data, dict) else []:
             items: list[tuple[str, Any]]
-            if isinstance(container, dict):
+            if isinstance(container, dict) and "verified" in container:
+                items = [(name, container)]
+            elif isinstance(container, dict):
                 items = list(container.items())
             elif isinstance(container, list):
                 items = [

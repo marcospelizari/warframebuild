@@ -113,3 +113,14 @@ def test_headshot_assumption_and_source(client: TestClient) -> None:
     rubico = client.post("/api/calc", json={"weapon": "rubico-prime"}).json()
     assert rubico["headshot"] == {"reason": "Sniper rifles are aimed at heads", "source": None}
     assert client.post("/api/calc", json={"weapon": "braton-prime"}).json()["headshot"] is None
+
+
+def test_head_dps_and_stacks(client: TestClient, gamedata: GameData) -> None:
+    body = {"weapon": "rubico-prime", "mods": [_id(gamedata, "Galvanized Scope")]}
+    build = client.post("/api/calc", json=body).json()
+    head = build["dps"]["head"]
+    assert head["head"] == "Grineer humanoid head" and head["critical"] is True
+    assert head["max_stacks"] > head["zero_stacks"] > build["dps"]["direct_burst"]
+    assert head["triggered"] == ["Galvanized Scope"]
+    assert "head_stacks" in {a["id"] for a in build["assumptions"]}
+    assert client.post("/api/calc", json={"weapon": "braton-prime"}).json()["dps"]["head"] is None

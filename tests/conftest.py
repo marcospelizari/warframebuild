@@ -22,6 +22,7 @@ MODULE_STUBS = {
 \t\tInternalName = "/Lotus/Weapons/ClanTech/Energy/Railgun",
 \t\tName = "Lanka",
 \t\tSniperComboMin = 2,
+\t\tZoom = { "3x (+20% Critical Chance)", "8x (+50% Critical Chance)" },
 \t},
 \t["Convectrix"] = {
 \t\tAttacks = {
@@ -36,7 +37,7 @@ MODULE_STUBS = {
 \t\tAttacks = {
 \t\t\t{ AttackName = "Quick Shot" },
 \t\t\t{ AttackName = "Charged Shot", ChargeTime = 1 },
-\t\t\t{ AttackName = "Perfect Shot", ChargeTime = 0.7 },
+\t\t\t{ AttackName = "Perfect Shot", ChargeTime = 0.7, ExtraHeadshotDmg = -2 },
 \t\t},
 \t\tInternalName = "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep",
 \t\tMagazine = 1,
@@ -146,6 +147,7 @@ def paths(tmp_path: Path) -> Paths:
     _keep_fixture_guns(raw, reference / "galvanized_behaviour.json")
     _keep_fixture_guns(raw, reference / "headshot.json")
     _keep_rows(reference / "main_attack.json", {"Lex Prime", "Laetum"})
+    _keep_overrides(raw, reference / "overrides.json", {"ZarimanHeavyPistol", "PrimeLex"})
     for page in wiki_local.pages(reference):
         if page.format == "lua":
             stub = MODULE_STUBS.get(page.stem, "return {}")
@@ -165,6 +167,27 @@ def _keep_rows(table: Path, names: set[str]) -> None:
     table.write_text(json.dumps(data))
 
 
+def _keep_overrides(raw: Path, table: Path, perk_guns: set[str]) -> None:
+    """Zoom entries for fixture guns; perk entries only for the guns the stub pages cover."""
+    guns = {
+        w["uniqueName"]
+        for name in ("Primary.json", "Secondary.json")
+        for w in json.loads((raw / "wfcd" / name).read_text())
+    }
+    data = json.loads(table.read_text())
+
+    def keep(key: str) -> bool:
+        uid, _, part = key.partition("#")
+        if not part:
+            return True
+        if part == "zoom":
+            return uid in guns
+        return uid.rsplit("/", 1)[-1] in perk_guns
+
+    data["entries"] = {k: v for k, v in data["entries"].items() if keep(k)}
+    table.write_text(json.dumps(data))
+
+
 def _keep_fixture_guns(raw: Path, table: Path) -> None:
     """The real table names ~70 guns; the fixtures hold a few. Rows for other guns are
     checked against the committed gamedata/ by tests/pipeline/test_direct_bonus.py."""
@@ -174,7 +197,9 @@ def _keep_fixture_guns(raw: Path, table: Path) -> None:
         for w in json.loads((raw / "wfcd" / name).read_text())
     }
     data = json.loads(table.read_text())
-    data["weapons"] = {u: row for u, row in data["weapons"].items() if u in guns}
+    for key in ("weapons", "flat_heads"):
+        if key in data:
+            data[key] = {u: row for u, row in data[key].items() if u in guns}
     table.write_text(json.dumps(data))
 
 

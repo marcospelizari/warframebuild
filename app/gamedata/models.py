@@ -53,6 +53,9 @@ class Attack(Model):
     burst_delay: NonNegative | None = None
     ammo_cost: NonNegative | None = None  # ammo per shot, 0 = none; None = not in the module
     multishot: Positive | None = None  # wiki module; None = not listed
+    # Wiki module ExtraHeadshotDmg: -2 = heads hit at 1x, no weak-point bonuses; > 0 = extra
+    # headshot factor (Cernos Prime 0.5 -> x1.5; saved Enemy_Body_Parts, Notes).
+    extra_headshot: float | None = None
     # How a Galvanized-style bonus joins this attack's damage (G56): default from the shot
     # type, exceptions from reference/galvanized_behaviour.json.
     direct_bonus: DirectBonus = DirectBonus.ADDING
@@ -66,12 +69,32 @@ class BonusElement(Model):
     page: str  # saved wiki page title
 
 
+class Effects(Model):
+    """Parsed max-rank effects (step 3) and how far the calculator supports them (R6)."""
+
+    support: Support
+    effects: list[Effect]
+    unparsed: list[str]  # damage-related text not modelled; empty when support is full
+    requires_trigger: str | None = None  # DE trigger the entry is limited to (SEMI)
+    note: str | None = None  # from reference/overrides.json
+
+
 class Headshot(Model):
     """One form aimed at heads (reference/headshot.json, R5); other forms hit the body."""
 
     form: Literal["normal", "incarnon"]
     reason: str
     source: str | None  # canonical wiki page title; None = project decision, see `reason`
+    flat: bool = False  # heads at 1x, no weak-point bonuses (reference/headshot.json)
+
+
+class ReferenceHead(Model):
+    """The head /calc scores headshot forms on until enemies exist (step 8)."""
+
+    name: str
+    multiplier: Positive
+    critical: bool  # critical-headshot flag
+    source: str  # canonical wiki page title
 
 
 class Weapon(Model):
@@ -108,16 +131,8 @@ class Weapon(Model):
     beam_ramp_start: Fraction | None
     bonus_element: BonusElement | None  # saved <Family>_Weapons pages
     headshot: list[Headshot] = []  # forms aimed at heads (reference/headshot.json)
-
-
-class Effects(Model):
-    """Parsed max-rank effects (step 3) and how far the calculator supports them (R6)."""
-
-    support: Support
-    effects: list[Effect]
-    unparsed: list[str]  # damage-related text not modelled; empty when support is full
-    requires_trigger: str | None = None  # DE trigger the entry is limited to (SEMI)
-    note: str | None = None  # from reference/overrides.json
+    # Highest zoom level's bonus (wiki module Zoom, saved Sniper_Rifle); applies while aiming.
+    zoom: Effects | None = None
 
 
 class ModSet(Model):
@@ -191,7 +206,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[15] = 15
+    schema_version: Literal[16] = 16
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

@@ -1,5 +1,5 @@
 {
-  "about": "Guns aimed at heads (R5, PLAN G69): every gun of a listed class, plus listed guns per form. Unlisted guns and forms are scored on the body. A row says how the player shoots; which perks and mods pay off is the optimizer's choice. A gun listed under `weapons` must not also belong to a listed class.",
+  "about": "Guns aimed at heads (R5, PLAN G69): every gun of a listed class, plus listed guns per form. Unlisted guns and forms are scored on the body. A row says how the player shoots; which perks and mods pay off is the optimizer's choice. A gun listed under `weapons` must not also belong to a listed class. `flat_heads`: Incarnon forms whose heads take 1x without weak-point bonuses (headshot bonuses still apply); per attack the wiki module's ExtraHeadshotDmg -2 says the same. `reference_head`: the head /calc scores until enemies exist (step 8).",
   "classes": {
     "Bow": {
       "reason": "Bows are aimed at heads",
@@ -253,5 +253,68 @@
       "source": "Incarnon_Evolutions",
       "verified": "2026-11-09"
     }
+  },
+  "flat_heads": {
+    "/Lotus/Weapons/Tenno/Bows/StalkerBow": {
+      "name": "Dread",
+      "forms": [
+        "incarnon"
+      ],
+      "reason": "Dread Incarnon Genesis: heads at 1x, unaffected by Acuity-like bonuses, affected by Deadhead-like bonuses",
+      "source": "Enemy_Body_Parts",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/HeavyPistol": {
+      "name": "Lex",
+      "forms": [
+        "incarnon"
+      ],
+      "reason": "Lex Incarnon Genesis: heads at 1x, unaffected by Acuity-like bonuses, affected by Deadhead-like bonuses",
+      "source": "Enemy_Body_Parts",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex": {
+      "name": "Lex Prime",
+      "forms": [
+        "incarnon"
+      ],
+      "reason": "Lex Incarnon Genesis: heads at 1x, unaffected by Acuity-like bonuses, affected by Deadhead-like bonuses",
+      "source": "Enemy_Body_Parts",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/MK1Series/MK1Paris": {
+      "name": "MK1-Paris",
+      "forms": [
+        "incarnon"
+      ],
+      "reason": "Paris Incarnon Genesis: heads at 1x, unaffected by Acuity-like bonuses, affected by Deadhead-like bonuses",
+      "source": "Enemy_Body_Parts",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Bows/HuntingBow": {
+      "name": "Paris",
+      "forms": [
+        "incarnon"
+      ],
+      "reason": "Paris Incarnon Genesis: heads at 1x, unaffected by Acuity-like bonuses, affected by Deadhead-like bonuses",
+      "source": "Enemy_Body_Parts",
+      "verified": "2026-11-09"
+    },
+    "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow": {
+      "name": "Paris Prime",
+      "forms": [
+        "incarnon"
+      ],
+      "reason": "Paris Incarnon Genesis: heads at 1x, unaffected by Acuity-like bonuses, affected by Deadhead-like bonuses",
+      "source": "Enemy_Body_Parts",
+      "verified": "2026-11-09"
+    }
+  },
+  "reference_head": {
+    "name": "Grineer humanoid head",
+    "multiplier": 3.0,
+    "critical": true,
+    "source": "Enemy_Body_Parts",
+    "verified": "2026-11-09"
   }
 }

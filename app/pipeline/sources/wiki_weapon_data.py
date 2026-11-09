@@ -2,13 +2,15 @@
 
 Read only for data DE and WFCD lack, per attack: forced procs (saved Status_Effect,
 Forced Procs), burst count and delay (saved Fire_Rate), and per weapon: sniper minimum
-combo (saved Sniper_Rifle), magazine size where DE gives none (0 = no magazine) and
-attacks with no delay between shots (`FireRate = math.huge`: Lanka, saved Fire_Rate).
+combo and the highest zoom level's bonus (saved Sniper_Rifle), magazine size where DE gives
+none (0 = no magazine), attacks with no delay between shots (`FireRate = math.huge`: Lanka,
+saved Fire_Rate) and `ExtraHeadshotDmg` per attack (saved Enemy_Body_Parts, Notes).
 Keyed by `InternalName` = DE uniqueName; attack names equal WFCD's. Wiki-derived:
 CC BY-NC-SA 3.0 (NOTICE).
 """
 
 import math
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -56,6 +58,7 @@ class AttackData:
     no_shot_delay: bool  # FireRate = math.huge
     ammo_cost: float | None  # ammo per shot (0.5 per beam tick, 0 = none); None = not listed
     multishot: float | None = None  # projectiles per shot; None = not listed
+    extra_headshot: float | None = None  # -2 = 1x heads; > 0 = extra headshot factor
 
 
 @dataclass(frozen=True)
@@ -64,6 +67,7 @@ class WeaponData:
     attacks: dict[str, AttackData]  # by attack name
     sniper_combo_min: int | None
     magazine: int | None = None  # `Magazine`, 0 = no magazine; None = not listed
+    zoom: list[str] | None = None  # highest zoom level's bonus lines ("+60% Headshot Damage")
 
     @property
     def no_shot_delay(self) -> bool:
@@ -116,7 +120,22 @@ def _weapon(where: str, entry: Any) -> tuple[str, WeaponData] | None:
     magazine = entry.get("Magazine")
     if magazine is not None and (not isinstance(magazine, int) or magazine < 0):
         raise RefreshError(f"{where}: Magazine must be an integer >= 0")
-    return unique_name, WeaponData(str(entry.get("Name", "")), attacks, combo, magazine)
+    return unique_name, WeaponData(
+        str(entry.get("Name", "")), attacks, combo, magazine, _zoom(where, entry.get("Zoom"))
+    )
+
+
+_ZOOM_BONUS = re.compile(r"\((?P<bonus>[^()]{1,120})\)\s*$")
+
+
+def _zoom(where: str, zoom: Any) -> list[str] | None:
+    """Bonus lines of the last (highest) zoom level: "6x (+60% Headshot Damage)"."""
+    if zoom is None:
+        return None
+    if not isinstance(zoom, list) or not all(isinstance(z, str) for z in zoom):
+        raise RefreshError(f"{where}: Zoom must be a list of strings")
+    match = _ZOOM_BONUS.search(zoom[-1]) if zoom else None
+    return [b.strip() for b in match["bonus"].split(",")] if match else None
 
 
 def _attack(where: str, a: dict[str, Any]) -> AttackData:
@@ -139,7 +158,17 @@ def _attack(where: str, a: dict[str, Any]) -> AttackData:
         no_shot_delay=a.get("FireRate") == math.inf,
         ammo_cost=_ammo_cost(where, a),
         multishot=_multishot(where, a),
+        extra_headshot=_extra_headshot(where, a),
     )
+
+
+def _extra_headshot(where: str, a: dict[str, Any]) -> float | None:
+    value = a.get("ExtraHeadshotDmg")
+    if value is None:
+        return None
+    if not isinstance(value, int | float) or not (value == -2 or 0 < value < math.inf):
+        raise RefreshError(f"{where}: ExtraHeadshotDmg must be -2 or a number > 0")
+    return float(value)
 
 
 def _multishot(where: str, a: dict[str, Any]) -> float | None:

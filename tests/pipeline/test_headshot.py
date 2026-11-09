@@ -94,4 +94,38 @@ def test_committed_rows_match_gamedata() -> None:
         else:
             expected = []
         assert [h.form for h in w.headshot] == expected, w.name
+        flat = table["flat_heads"].get(w.unique_name, {}).get("forms", [])
+        assert [h.form for h in w.headshot if h.flat] == flat, w.name
     assert set(table["weapons"]) <= {w.unique_name for w in data.weapons}
+
+
+def test_zoom_and_extra_headshot_from_the_module(paths: Paths) -> None:
+    weapons = {w.name: w for w in build(paths.raw, paths.reference).weapons}
+    lanka = weapons["Lanka"].zoom
+    assert lanka is not None and lanka.effects[0].operation == "add"  # overrides.json #zoom
+    assert lanka.effects[0].value == 0.5  # highest zoom (8x)
+    perfect = next(a for a in weapons["Nataruk"].attacks if a.name == "Perfect Shot")
+    assert perfect.extra_headshot == -2
+    assert weapons["Braton Prime"].zoom is None
+
+
+def test_flat_head_and_reference_head(paths: Paths) -> None:
+    data = build(paths.raw, paths.reference)
+    lex = next(w for w in data.weapons if w.name == "Lex Prime")
+    assert [(h.form, h.flat) for h in lex.headshot] == [("normal", False), ("incarnon", True)]
+    assert (data.reference_head.multiplier, data.reference_head.critical) == (3.0, True)
+
+
+def test_flat_head_on_a_body_form_fails(paths: Paths) -> None:
+    def change(d: dict[str, Any]) -> None:
+        d["weapons"][LEX_PRIME]["forms"] = ["normal"]
+
+    _edit(paths, change)
+    with pytest.raises(RefreshError, match="flat head on a body form"):
+        build(paths.raw, paths.reference)
+
+
+def test_reference_head_is_required(paths: Paths) -> None:
+    _edit(paths, lambda d: d.pop("reference_head"))
+    with pytest.raises(RefreshError, match="reference_head"):
+        build(paths.raw, paths.reference)

@@ -13,12 +13,14 @@ from app.api.schemas import (
     Build,
     CalcRequest,
     Dps,
+    HeadDps,
     Headshot,
     Slot,
     Source,
     WeaponRef,
 )
-from app.gamedata.models import Mod, Weapon
+from app.domain.headshot import Head
+from app.gamedata.models import Mod, ReferenceHead, Weapon
 from app.gamedata.store import GameData
 from app.optimize.evaluate import MAX_SLOTS, BuildError, Evaluation, evaluate
 
@@ -56,13 +58,16 @@ def calc(body: CalcRequest, request: Request) -> Build:
             body.bonus_element,
             data.incarnon_by_id.get(weapon.unique_name),
             body.perks,
+            head=Head(data.reference_head.multiplier, data.reference_head.critical),
         )
     except BuildError as error:
         raise ApiFailure(422, error.code, error.message, error.field) from error
-    return _build(data.meta.dataset_hash, weapon, mods, result)
+    return _build(data.meta.dataset_hash, weapon, mods, result, data.reference_head)
 
 
-def _build(dataset_hash: str, weapon: Weapon, mods: list[Mod], e: Evaluation) -> Build:
+def _build(
+    dataset_hash: str, weapon: Weapon, mods: list[Mod], e: Evaluation, head: ReferenceHead
+) -> Build:
     hit = e.hit
     slots = [
         Slot(
@@ -100,7 +105,21 @@ def _build(dataset_hash: str, weapon: Weapon, mods: list[Mod], e: Evaluation) ->
             reload_time=e.reload_time,
             beam_ramp_start=weapon.beam_ramp_start,
         ),
-        dps=Dps(direct_burst=e.direct_burst_dps, direct_sustained=e.direct_sustained_dps),
+        dps=Dps(
+            direct_burst=e.direct_burst_dps,
+            direct_sustained=e.direct_sustained_dps,
+            head=HeadDps(
+                head=head.name,
+                multiplier=head.multiplier,
+                critical=head.critical,
+                zero_stacks=e.head_burst_dps[0],
+                max_stacks=e.head_burst_dps[1],
+                triggered=list(e.head_triggered),
+                source=Source(kind="wiki", url=WIKI + head.source),
+            )
+            if e.head_burst_dps
+            else None,
+        ),
         headshot=Headshot(reason=e.headshot.reason, source=_source(e.headshot.source))
         if e.headshot
         else None,
@@ -116,8 +135,14 @@ def _assumptions(weapon: Weapon, e: Evaluation) -> list[Assumption]:
         Assumption(id="direct_only", text="DPS from hits on the body; no DoT or Blast"),
     ]
     if e.headshot:
-        text = f"Aimed at heads ({e.headshot.reason}); headshot damage not modelled yet"
+        text = (
+            f"Aimed at heads ({e.headshot.reason}): head DPS while aiming, at the highest zoom, "
+            "on the reference head; body DPS is hip-fire"
+        )
         out.append(Assumption(id="headshot", text=text, source=_source(e.headshot.source)))
+        if e.head_triggered:
+            text = "Needs headshots, shown at 0 and max stacks: " + ", ".join(e.head_triggered)
+            out.append(Assumption(id="head_stacks", text=text))
     if e.not_modelled:
         text = "Effects not modelled yet: " + ", ".join(e.not_modelled)
         out.append(Assumption(id="not_modelled", text=text))

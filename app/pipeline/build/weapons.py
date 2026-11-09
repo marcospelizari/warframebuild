@@ -10,6 +10,7 @@ from app.domain.direct_bonus import DirectBonus
 from app.domain.effects import DamageType
 from app.gamedata.models import Attack, BonusElement, Exclusion, Falloff, Join, Weapon
 from app.pipeline.build.direct_bonus import DirectBonusTable
+from app.pipeline.build.effects import Overrides
 from app.pipeline.build.fire import FireOverrides, attack_data, fire_rate
 from app.pipeline.errors import RefreshError
 from app.pipeline.sources.de_export import DAMAGE_SLOT_COUNT, DAMAGE_SLOTS, WEAPON_CATEGORY
@@ -26,6 +27,7 @@ def build(
     module: dict[str, WeaponData],
     direct: DirectBonusTable,
     progenitor: dict[str, Progenitor],
+    overrides: Overrides,
 ) -> tuple[list[Weapon], list[Exclusion], list[Join]]:
     de = {w["uniqueName"]: w for w in de_weapons}
     textures = {m["uniqueName"]: m.get("textureLocation") for m in manifest}
@@ -68,6 +70,7 @@ def build(
         for d, w in kept
     ]
     weapons = [_with_bonus(x, progenitor.get(x.name)) for x in weapons]
+    weapons = [_with_zoom(x, module.get(x.unique_name), overrides) for x in weapons]
     joins = [
         Join(unique_name=d["uniqueName"], de_name=d["name"], wfcd_name=w["name"]) for d, w in kept
     ]
@@ -148,6 +151,14 @@ def _with_bonus(weapon: Weapon, p: Progenitor | None) -> Weapon:
     return weapon.model_copy(update={"bonus_element": bonus})
 
 
+def _with_zoom(weapon: Weapon, data: WeaponData | None, overrides: Overrides) -> Weapon:
+    """Zoom bonus lines parsed like mod text; exceptions (Lanka) in overrides.json `#zoom`."""
+    if data is None or not data.zoom:
+        return weapon
+    effects = overrides.effects(f"{weapon.unique_name}#zoom", data.zoom)
+    return weapon.model_copy(update={"zoom": effects})
+
+
 def _attack(
     a: dict[str, Any],
     weapon: str,
@@ -188,6 +199,7 @@ def _attack_model(
         burst_delay=extra.burst_delay if extra else None,
         ammo_cost=extra.ammo_cost if extra else None,
         multishot=extra.multishot if extra else None,
+        extra_headshot=extra.extra_headshot if extra else None,
         direct_bonus=direct,
     )
 

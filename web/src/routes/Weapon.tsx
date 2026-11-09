@@ -24,6 +24,14 @@ export function WeaponPage({ slug }: { slug: string }) {
         <dd>{fmt(dps.direct_burst)}</dd>
         <dt>Direct sustained</dt>
         <dd>{fmt(dps.direct_sustained)}</dd>
+        {dps.head && (
+          <>
+            <dt>Burst on {dps.head.head}, 0 stacks</dt>
+            <dd>{fmt(dps.head.zero_stacks)}</dd>
+            <dt>Burst on {dps.head.head}, max stacks</dt>
+            <dd>{fmt(dps.head.max_stacks)}</dd>
+          </>
+        )}
       </dl>
       <h2>Arsenal</h2>
       <dl>

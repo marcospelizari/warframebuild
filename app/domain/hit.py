@@ -10,11 +10,12 @@ import math
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, replace
 
-from app.domain import crit
+from app.domain import crit, headshot
 from app.domain.damage import composition, element_bonuses, scaled
 from app.domain.direct_bonus import DirectBonus, damage_factor
 from app.domain.effects import DamageType, Effect, Faction, Operation, Stat
 from app.domain.elements import Part
+from app.domain.headshot import Head
 from app.domain.stats import modded
 
 Bonus = tuple[Effect, float]  # effect and its resolved value
@@ -46,6 +47,9 @@ class ModdedHit:
     element_bonus: dict[DamageType, float]  # summed bonus of the mods of each element (DoT)
     status_damage: float  # bonus (Elementalist), additive group, separate factor on DoT
     status_duration: float  # bonus (Hunter Track +0.9)
+    head_critical_chance: float = 0.0  # with weak-point crit chance (Acuity)
+    weak_point_damage: float = 0.0  # summed bonus (Acuity +3.5)
+    headshot_bonus: float = 0.0  # summed headshot-multiplier bonus (Deadhead, Target Acquired)
     direct_bonus: float | None = None  # Galvanized-style bonus once applied
 
     @property
@@ -58,18 +62,32 @@ class ModdedHit:
         return self.projectile_damage * self.multishot
 
     def average_shot(
-        self, faction: Faction | None = None, headshot: float = 1.0, headcrit: bool = False
+        self,
+        faction: Faction | None = None,
+        head: Head | None = None,
+        *,
+        flat: bool = False,
+        extra: float = 0.0,
     ) -> float:
         """Expected damage of one shot when every projectile hits (direct damage only).
 
-        `headshot`: the body part's multiplier (1 = body); `headcrit`: the part has the
-        critical-headshot flag (saved Critical_Hit).
+        `head`: the shot lands on this head (None = body); `flat`: the attack hits heads at
+        1x without weak-point bonuses; `extra`: the weapon's own headshot factor
+        (`headshot.factor`). Weak-point crit chance counts only on a weak point.
         """
-        factor = self.faction_multiplier.get(faction, 1.0) if faction else 1.0
+        faction_factor = self.faction_multiplier.get(faction, 1.0) if faction else 1.0
+        chance = self.head_critical_chance if head and not flat else self.critical_chance
         crit_avg = crit.average_multiplier(
-            self.critical_chance, self.critical_multiplier, self.crit_upgrade_chance, headcrit
+            chance, self.critical_multiplier, self.crit_upgrade_chance, bool(head and head.critical)
         )
-        return self.arsenal_total * factor * headshot * crit_avg
+        part = (
+            headshot.factor(
+                head, self.weak_point_damage, self.headshot_bonus, flat=flat, extra=extra
+            )
+            if head
+            else 1.0
+        )
+        return self.arsenal_total * faction_factor * part * crit_avg
 
 
 def modded_hit(
@@ -105,6 +123,19 @@ def modded_hit(
         crit_upgrade_chance=min(
             1.0, math.fsum(v for e, v in bonuses if e.stat == Stat.CRIT_TIER_UPGRADE)
         ),
+        # Weak-point crit chance adds to Point Strike-like bonuses (Enemy_Body_Parts).
+        head_critical_chance=modded(
+            base.critical_chance,
+            Stat.CRITICAL_CHANCE,
+            [
+                (e.model_copy(update={"stat": Stat.CRITICAL_CHANCE}), v)
+                if e.stat == Stat.WEAK_POINT_CRITICAL_CHANCE
+                else (e, v)
+                for e, v in bonuses
+            ],
+        ),
+        weak_point_damage=modded(1.0, Stat.WEAK_POINT_DAMAGE, bonuses) - 1,
+        headshot_bonus=modded(1.0, Stat.HEADSHOT_MULTIPLIER, bonuses) - 1,
         unscaled=quantized,
         arsenal_damage=scaled(
             composition(damage, elements, physical, bonus_element, quantized=False),
