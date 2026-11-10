@@ -12,7 +12,7 @@ from app.domain.status import dot_seed, dot_tick
 from app.gamedata.models import Mod, Weapon
 from app.gamedata.store import GameData
 from app.optimize.conditions import resolve
-from app.optimize.evaluate import Loadout, loadout
+from app.optimize.loadout import Loadout, loadout
 from app.optimize.shot import own_procs
 from app.optimize.timeline import Timeline
 
@@ -22,7 +22,7 @@ SLASH = DamageType.SLASH
 def _lo(data: GameData, gun: str, *mods: str) -> Loadout:
     weapon: Weapon = next(w for w in data.weapons if w.name == gun)
     by_name: dict[str, Mod] = {m.name: m for m in data.mods.mods}
-    return loadout(weapon, [by_name[n] for n in mods], form="normal")
+    return loadout(weapon, [by_name[n] for n in mods], form="normal", sets=data.set_by_id)
 
 
 def test_galvanized_bonus_follows_the_status_types_on_the_target(gamedata: GameData) -> None:

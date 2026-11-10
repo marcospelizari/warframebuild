@@ -70,7 +70,7 @@ def test_startup_loads_committed_gamedata(tmp_path: Path) -> None:
 
 
 def test_unmodelled_effects_are_listed(client: TestClient, gamedata: GameData) -> None:
-    body = {"weapon": "soma-prime", "mods": [_id(gamedata, "Lasting Purity")]}
+    body = {"weapon": "vulkar-wraith", "mods": [_id(gamedata, "Lasting Purity")]}
     ids = {a["id"] for a in client.post("/api/calc", json=body).json()["assumptions"]}
     assert "not_modelled" in ids
 
@@ -138,3 +138,12 @@ def test_combat_against_every_representative_enemy(client: TestClient, gamedata:
     assert {"combat", "armor"} <= {a["id"] for a in build["assumptions"]}
     body = client.post("/api/calc", json={"weapon": "soma-prime"}).json()["combat"]
     assert {e["target"] for e in body["enemies"]} == {"Body"}
+
+
+def test_set_bonus_and_compatibility(client: TestClient, gamedata: GameData) -> None:
+    body = {"weapon": "soma-prime", "mods": [_id(gamedata, "Vigilante Armaments")]}
+    texts = [a["text"] for a in client.post("/api/calc", json=body).json()["assumptions"]]
+    assert any("Vigilante set (1/6)" in t for t in texts)
+    body = {"weapon": "lenz", "mods": [_id(gamedata, "Split Flights")]}
+    error = client.post("/api/calc", json=body).json()
+    assert (error["code"], error["field"]) == ("incompatible_mod", "mods[0]")

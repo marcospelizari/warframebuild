@@ -26,8 +26,8 @@ from app.domain.fire_rate import reload_cycle, shooting_share, shots_per_magazin
 from app.domain.hit import Bonus
 from app.domain.stats import value_for
 from app.gamedata.models import Effects
-from app.optimize.evaluate import Loadout
 from app.optimize.head import head_args
+from app.optimize.loadout import Loadout
 from app.optimize.shot import Shot, own_procs
 
 

@@ -15,7 +15,16 @@ from app.gamedata.models import (
     ReferenceHead,
     Weapon,
 )
-from app.pipeline.build import arcanes, enemies, headshot, incarnon, mods, weapons
+from app.pipeline.build import (
+    arcanes,
+    enemies,
+    headshot,
+    incarnon,
+    mods,
+    weapon_classes,
+    weapon_tags,
+    weapons,
+)
 from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.effects import Overrides
 from app.pipeline.build.fire import FireOverrides
@@ -60,16 +69,24 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
     wfcd_arcanes = as_list(load_json(raw_dir / "wfcd/Arcanes.json"))
     plus = export_plus.load(raw_dir)
     overrides = Overrides(reference(reference_dir / "overrides.json"))
+    tag_rows = reference(reference_dir / weapon_tags.FILE)
+    weapon_tags_all, weapon_parents = weapon_tags.fill(tag_rows, plus)
     gun_list, excluded, joins = weapons.build(
         records(load_json(de / "ExportWeapons_en.json"), "ExportWeapons"),
         wfcd,
         records(load_json(de / "ExportManifest.json"), "Manifest"),
         FireOverrides.load(reference(reference_dir / "fire_overrides.json")),
-        plus.weapon_tags,
+        weapon_tags_all,
         wiki_weapon_data.load(raw_dir / "wiki"),
         DirectBonusTable.load(reference(reference_dir / "galvanized_behaviour.json")),
         wiki_progenitor.load(raw_dir / "wiki"),
         overrides,
+    )
+    gun_list = weapon_classes.apply(
+        reference(reference_dir / weapon_classes.FILE), gun_list, weapon_parents
+    )
+    weapon_tags.check_known(
+        tag_rows, {w.unique_name for w in gun_list} | {e.unique_name for e in excluded}
     )
     mod_list, sets, denied = mods.build(
         load_json(de / "ExportUpgrades_en.json"),

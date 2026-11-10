@@ -4,6 +4,7 @@ import lzma
 import re
 
 from app.domain.effects import DamageType
+from app.domain.polarity import Polarity
 from app.gamedata.models import Category
 from app.pipeline.sources import Fetched
 from app.pipeline.sources.http import PoliteClient
@@ -72,6 +73,14 @@ DAMAGE_TAGS: dict[str, DamageType] = {
     "DT_SENTIENT": DamageType.TAU,
 }
 # Other words DE writes after a tag for the same type ("<DT_ELECTRICITY_COLOR>Electric").
+# DE mod polarity codes (ExportUpgrades `polarity`); an unknown code fails the refresh.
+MOD_POLARITIES: dict[str, Polarity] = {
+    "AP_ATTACK": Polarity.MADURAI,
+    "AP_TACTIC": Polarity.NARAMON,
+    "AP_DEFENSE": Polarity.VAZARIN,
+}
+DEFAULT_MAX_RANK = 30  # items without `maxLevelCap` (Mod:156: "normally 30")
+
 DAMAGE_WORDS: dict[DamageType, tuple[str, ...]] = {
     DamageType.ELECTRICITY: ("Electric",),
     DamageType.COLD: ("Freeze",),

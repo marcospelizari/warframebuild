@@ -1,11 +1,25 @@
 {
   "about": "Hand-saved WARFRAME Wiki pages (T2/G41/G48): file stem in cache/raw/wiki/, canonical title, what each page feeds, and how much a change matters (high > medium > low). Refresh fails when a listed page is missing. `wfb check` prints this list with save dates and history links after each game update.",
   "pages": {
+    "Aksondol": {
+      "title": "Aksondol",
+      "impact": "low",
+      "feeds": [
+        "compatibility tags missing in export-plus (weapon_tags.json, step 8d)"
+      ]
+    },
     "Ancient_Healer": {
       "title": "Ancient_Healer",
       "impact": "medium",
       "feeds": [
         "representative Infested enemy (enemies.json, step 8)"
+      ]
+    },
+    "Arcane_Enhancement": {
+      "title": "Arcane_Enhancement",
+      "impact": "medium",
+      "feeds": [
+        "conditional buff stack expiry for Frostbite, Blight, Conjunction Voltage (stack rule, step 8c)"
       ]
     },
     "Archon_Shard": {
@@ -36,6 +50,13 @@
         "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
       ]
     },
+    "Bow": {
+      "title": "Bow",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
+      ]
+    },
     "Calculating_Bonuses": {
       "title": "Calculating_Bonuses",
       "impact": "high",
@@ -49,6 +70,13 @@
       "feeds": [
         "damage pipeline (step 4)",
         "Toxin shield-bypass exceptions"
+      ]
+    },
+    "Cascadia_Flare": {
+      "title": "Cascadia_Flare",
+      "impact": "low",
+      "feeds": [
+        "conditional buff stack expiry (stack rule, step 8c)"
       ]
     },
     "Charger": {
@@ -399,6 +427,13 @@
         "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
       ]
     },
+    "Mod": {
+      "title": "Mod",
+      "impact": "high",
+      "feeds": [
+        "mod drain and capacity (Installation: polarity match/mismatch, catalyst; domain/polarity.py, G84)"
+      ]
+    },
     "Module_Enemies_anarchs": {
       "title": "Module:Enemies/data/anarchs",
       "impact": "high",
@@ -526,6 +561,13 @@
         "multishot and per-pellet status (step 4)"
       ]
     },
+    "Nunchasa": {
+      "title": "Nunchasa",
+      "impact": "low",
+      "feeds": [
+        "compatibility tags missing in export-plus (weapon_tags.json, step 8d)"
+      ]
+    },
     "Onos": {
       "title": "Onos",
       "impact": "high",
@@ -546,6 +588,13 @@
       "feeds": [
         "native Incarnon perks (step 6)",
         "Lingering Judgement override (step 7b)"
+      ]
+    },
+    "Pistol_Mods": {
+      "title": "Pistol_Mods",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
       ]
     },
     "Polarity": {
@@ -569,6 +618,13 @@
         "arcane damage bonus stacking group (step 4)"
       ]
     },
+    "Primary_Mods": {
+      "title": "Primary_Mods",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
+      ]
+    },
     "Puncture_Damage": {
       "title": "Puncture_Damage",
       "impact": "high",
@@ -581,6 +637,13 @@
       "impact": "high",
       "feeds": [
         "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
+    "Rifle_Mods": {
+      "title": "Rifle_Mods",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
       ]
     },
     "Riven_Mods": {
@@ -632,6 +695,13 @@
         "faction enemy list (enemies.json)"
       ]
     },
+    "Shotgun_Mods": {
+      "title": "Shotgun_Mods",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
+      ]
+    },
     "Slash_Damage": {
       "title": "Slash_Damage",
       "impact": "high",
@@ -647,12 +717,33 @@
         "zoom bonuses, highest level (step 7b)"
       ]
     },
+    "Speargun": {
+      "title": "Speargun",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
+      ]
+    },
+    "Split_Flights": {
+      "title": "Split_Flights",
+      "impact": "medium",
+      "feeds": [
+        "stack expiry (step 8c); 'cannot be equipped on' list, compatibility tag test (step 8d)"
+      ]
+    },
     "Status_Effect": {
       "title": "Status_Effect",
       "impact": "high",
       "feeds": [
         "status, DoT and Blast rules (step 4)",
         "mechanics checklist"
+      ]
+    },
+    "Steflos_Prime": {
+      "title": "Steflos_Prime",
+      "impact": "low",
+      "feeds": [
+        "compatibility tags missing in export-plus (weapon_tags.json, step 8d)"
       ]
     },
     "Tau_Damage": {

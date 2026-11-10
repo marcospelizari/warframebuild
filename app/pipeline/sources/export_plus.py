@@ -1,9 +1,9 @@
 """warframe-public-export-plus (MIT; Calamity, Inc. and AMelonInsideLemon), Q41/T1.
 
 Saved by hand into cache/raw/export-plus/, like wiki pages: never fetched by script.
-Read only for fields the DE Public Export lacks: mod and weapon compatibility tags
-(stored as given; what they mean for mod eligibility is decided in step 8) and the
-starter-mod flag (a guard on reference/mod_filter.json). Keyed by DE uniqueName.
+Read only for fields the DE Public Export lacks: mod and weapon compatibility tags, each
+gun's parent class chain and each mod's `compat` class (which mods fit which gun, G56/G82)
+and the starter-mod flag (a guard on reference/mod_filter.json). Keyed by DE uniqueName.
 """
 
 from dataclasses import dataclass
@@ -21,6 +21,47 @@ WEAPONS = "ExportWeapons.json"
 FILES = (UPGRADES, WEAPONS)
 
 
+# Tags on kept guns and gun mods (G56). A new tag fails the refresh until its meaning is
+# checked. Tags only mods carry (POWER_WEAPON = exalted weapons, SENTINEL_WEAPON,
+# MODULAR_GUN = kitguns, NO_AIM, RIFLE, SENTINEL_MOD) match none of our guns.
+TAGS = frozenset(
+    {
+        "AOE",
+        "ASSAULT_AMMO",
+        "ATTICA",
+        "BATTERY",
+        "BEAM",
+        "CROSSBOW",
+        "CRPBOW",
+        "DAIKYU",
+        "DEPLOYABLE",
+        "GRNBOW",
+        "IMPACTEXPLODE",
+        "INFBOW",
+        "INFCERNOS",
+        "LAUNCHER_AMMO",
+        "MITER",
+        "MODULAR_GUN",
+        "NO_AIM",
+        "OMICRUS",
+        "POWER_WEAPON",
+        "PROJECTILE",
+        "RIFLE",
+        "SECONDARYSHOTGUN",
+        "SEMI_AUTO",
+        "SENTINEL_MOD",
+        "SENTINEL_WEAPON",
+        "SINGLESHOT",
+        "SNIPER_AMMO",
+        "SYNDICATEMODBLOCKED",
+        "THROWN",
+        "TNJETTURBINEPISTOL",
+        "Vectis",
+        "ZHUGE",
+    }
+)
+
+
 class MissingExportPlus(RuntimeError):
     pass
 
@@ -34,7 +75,9 @@ class ModTags:
 @dataclass(frozen=True)
 class ExportPlus:
     weapon_tags: dict[str, list[str]]  # uniqueName -> compatibilityTags
+    weapon_parents: dict[str, str]  # uniqueName -> parentName (weapon class chain)
     mod_tags: dict[str, ModTags]
+    mod_compat: dict[str, str]  # uniqueName -> compat: the weapon class or gun it fits
     starter_mods: frozenset[str]  # isStarter: low-rank starter copies
 
 
@@ -55,10 +98,12 @@ def load(raw_dir: Path) -> ExportPlus:
     weapons = _entries(load_json(raw_dir / DIR / WEAPONS), WEAPONS)
     return ExportPlus(
         weapon_tags={u: _tags(w, "compatibilityTags", u) for u, w in weapons.items()},
+        weapon_parents=_paths(weapons, "parentName"),
         mod_tags={
             u: ModTags(_tags(m, "compatibilityTags", u), _tags(m, "incompatibilityTags", u))
             for u, m in upgrades.items()
         },
+        mod_compat=_paths(upgrades, "compat"),
         starter_mods=frozenset(u for u, m in upgrades.items() if m.get("isStarter") is True),
     )
 
@@ -69,9 +114,29 @@ def _entries(data: Any, name: str) -> dict[str, dict[str, Any]]:
     return data
 
 
+def _paths(entries: dict[str, dict[str, Any]], key: str) -> dict[str, str]:
+    out = {}
+    for u, e in entries.items():
+        value = e.get(key)
+        if value is None:
+            continue
+        if not isinstance(value, str):
+            raise RefreshError(f"export-plus {u}: `{key}` is not a string")
+        out[u] = value
+    return out
+
+
 def _tags(entry: dict[str, Any], key: str, unique_name: str) -> list[str]:
     """A missing key means no tags; anything but a list of strings fails the refresh."""
     tags = entry.get(key, [])
     if not isinstance(tags, list) or not all(isinstance(t, str) for t in tags):
         raise RefreshError(f"export-plus {unique_name}: `{key}` is not a list of strings")
     return sorted(tags)
+
+
+def known(tags: list[str], name: str) -> list[str]:
+    """Tags of a kept gun or mod; an unknown one fails the refresh."""
+    unknown = sorted(set(tags) - TAGS)
+    if unknown:
+        raise RefreshError(f"{name}: unknown export-plus tags {unknown} (check, then add to TAGS)")
+    return tags

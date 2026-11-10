@@ -6,14 +6,15 @@ from typing import Any
 
 from pydantic import ValidationError
 
+from app.domain.polarity import Polarity
 from app.gamedata.models import Category, Mod, ModSet
 from app.pipeline.build.effects import Overrides, set_bonuses
 from app.pipeline.build.families import derive as derive_families
 from app.pipeline.build.inputs import records, require_verified
 from app.pipeline.errors import RefreshError
-from app.pipeline.sources.de_export import MOD_CATEGORY
+from app.pipeline.sources.de_export import MOD_CATEGORY, MOD_POLARITIES
 from app.pipeline.sources.de_text import clean_levels, clean_text
-from app.pipeline.sources.export_plus import ExportPlus
+from app.pipeline.sources.export_plus import ExportPlus, known
 
 
 def build(
@@ -112,7 +113,7 @@ def _mod(
         name=m["name"],
         category=m["_category"],
         compat_name=m.get("compatName") or "",
-        polarity=m["polarity"],
+        polarity=_polarity(m),
         rarity=m["rarity"],
         base_drain=m["baseDrain"],
         fusion_limit=m["fusionLimit"],
@@ -123,8 +124,9 @@ def _mod(
         description=description,
         level_stats=levels,
         effects=overrides.effects(m["uniqueName"], levels[-1], description),
-        compatibility_tags=tags.compatibility if tags else None,
-        incompatibility_tags=tags.incompatibility if tags else None,
+        compatibility_tags=known(tags.compatibility, m["name"]) if tags else None,
+        incompatibility_tags=known(tags.incompatibility, m["name"]) if tags else None,
+        compat_class=plus.mod_compat.get(m["uniqueName"]),
     )
 
 
@@ -152,3 +154,10 @@ def _deny_rule(m: dict[str, Any], rules: list[dict[str, Any]]) -> str | None:
                 continue
             return str(rule["id"])
     return None
+
+
+def _polarity(m: dict[str, Any]) -> Polarity:
+    code = m.get("polarity")
+    if code not in MOD_POLARITIES:
+        raise RefreshError(f"{m['name']}: unknown DE polarity {code!r} (add it to MOD_POLARITIES)")
+    return MOD_POLARITIES[code]

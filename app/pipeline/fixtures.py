@@ -133,7 +133,20 @@ def _write(raw_dir: Path, out_dir: Path) -> None:
     for name, keep in ((export_plus.WEAPONS, ids), (export_plus.UPGRADES, mod_ids)):
         data = load_json(raw_dir / export_plus.DIR / name)
         assert isinstance(data, dict)
+        if name == export_plus.WEAPONS:
+            keep = _with_parents(keep, data)
         _save(out_dir / export_plus.DIR / name, {u: e for u, e in data.items() if u in keep})
+
+
+def _with_parents(ids: set[str], weapons: dict[str, Any]) -> set[str]:
+    """The guns plus the export-plus entries of their parent chains (mod classes, G82)."""
+    out = set(ids)
+    for uid in ids:
+        parent = weapons.get(uid, {}).get("parentName")
+        while parent in weapons and parent not in out:
+            out.add(parent)
+            parent = weapons[parent].get("parentName")
+    return out
 
 
 def _pick(items: list[dict[str, Any]], names: tuple[str, ...]) -> list[dict[str, Any]]:

@@ -97,20 +97,26 @@ def test_export_plus_tags_are_stored(paths: Paths) -> None:
     assert mods["Serration"].incompatibility_tags == []
 
 
-def test_entry_missing_in_export_plus_has_unknown_tags(paths: Paths) -> None:
-    """export-plus can lag DE after an update: the entry is kept, its tags are None."""
-    for name, uid in (
-        ("ExportWeapons.json", "/Lotus/Weapons/Tenno/Rifle/BratonPrime"),
-        ("ExportUpgrades.json", "/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod"),
-    ):
-        path = paths.raw / "export-plus" / name
-        data = json.loads(path.read_text())
-        del data[uid]
-        path.write_text(json.dumps(data))
-    data = build(paths.raw, paths.reference)
-    assert next(w for w in data.weapons if w.name == "Braton Prime").compatibility_tags is None
-    serration = next(m for m in data.mods if m.name == "Serration")
+def test_mod_missing_in_export_plus_has_unknown_tags(paths: Paths) -> None:
+    """export-plus can lag DE after an update: the mod is kept, its tags and class are None
+    (it fits no gun until export-plus lists it)."""
+    path = paths.raw / "export-plus" / "ExportUpgrades.json"
+    data = json.loads(path.read_text())
+    del data["/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod"]
+    path.write_text(json.dumps(data))
+    serration = next(m for m in build(paths.raw, paths.reference).mods if m.name == "Serration")
     assert serration.compatibility_tags is None and serration.incompatibility_tags is None
+    assert serration.compat_class is None
+
+
+def test_gun_missing_in_export_plus_needs_a_reference_row(paths: Paths) -> None:
+    """Its mod classes are unknown: refresh fails until reference/weapon_tags.json has it."""
+    path = paths.raw / "export-plus" / "ExportWeapons.json"
+    data = json.loads(path.read_text())
+    del data["/Lotus/Weapons/Tenno/Rifle/BratonPrime"]
+    path.write_text(json.dumps(data))
+    with pytest.raises(RefreshError, match="Braton Prime: class root"):
+        build(paths.raw, paths.reference)
 
 
 def test_export_plus_tags_must_be_strings(paths: Paths) -> None:

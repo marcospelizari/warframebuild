@@ -12,7 +12,7 @@ from app.domain.status import blast_proc, expected_procs, proc_shares
 from app.gamedata.models import Enemy, Mod, Weapon
 from app.gamedata.store import GameData
 from app.optimize.combat import combat, timeline
-from app.optimize.evaluate import Loadout, loadout
+from app.optimize.loadout import Loadout, loadout
 
 
 def _weapon(data: GameData, name: str) -> Weapon:

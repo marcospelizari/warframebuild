@@ -60,13 +60,13 @@ def test_missing_export_plus_file_fails_before_anything_runs(paths: Paths) -> No
 
 
 def test_report_lists_entries_missing_in_export_plus(paths: Paths) -> None:
-    path = paths.raw / "export-plus/ExportWeapons.json"
+    path = paths.raw / "export-plus/ExportUpgrades.json"
     data = json.loads(path.read_text())
-    del data["/Lotus/Weapons/Tenno/Rifle/BratonPrime"]
+    del data["/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod"]
     path.write_text(json.dumps(data))
     text = "\n".join(run(paths, offline=True, fetch_images=False).lines())
     assert "not in the saved export-plus" in text
-    assert "  weapons (1): Braton Prime" in text
+    assert "  mods (1): Serration" in text
 
 
 def test_report_lists_guns_missing_in_the_wiki_modules(paths: Paths) -> None:

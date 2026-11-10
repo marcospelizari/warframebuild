@@ -9,6 +9,7 @@ from app.domain.combat import (
     armor_reduction,
     fight,
     geometric_mean,
+    neutral_dps,
 )
 from app.domain.effects import DamageType
 
@@ -114,3 +115,15 @@ def test_bleed_is_cinematic_no_armor_and_no_faction_modifier() -> None:
     assert direct.removed == pytest.approx(0.15)
     shielded = fight([_event(1, unarmored=_vec(slash=100))], _target(1000, shield=1000))
     assert shielded.removed == pytest.approx(100 / 2000)
+
+
+def test_neutral_dps_counts_viral_and_the_cap() -> None:
+    """G80: health only; Viral raises the damage; events after the cap do not count."""
+    zero = [0.0] * len(TYPES)
+    hit = [100.0, *zero[1:]]
+    events = [
+        Event(time=1.0, armored=hit, unarmored=zero, armor_kept=1.0, viral=2.0, magnetic=1.0),
+        Event(time=2.0, armored=zero, unarmored=hit, armor_kept=1.0, viral=1.0, magnetic=1.0),
+        Event(time=CAP_S + 1, armored=hit, unarmored=zero, armor_kept=1.0, viral=1.0, magnetic=1.0),
+    ]
+    assert neutral_dps(events) == pytest.approx(300 / CAP_S)

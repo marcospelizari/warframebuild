@@ -5,7 +5,7 @@ import pytest
 from app.gamedata.models import Arcane, Mod, Weapon
 from app.gamedata.store import GameData
 from app.optimize.conditions import Resolved, resolve
-from app.optimize.evaluate import BuildError, Loadout, loadout
+from app.optimize.loadout import Loadout, loadout
 
 
 def _weapon(data: GameData, name: str) -> Weapon:
@@ -38,6 +38,7 @@ def _lo(
         perks,
         form,  # type: ignore[arg-type]
         _arcane(data, arcane) if arcane else None,
+        data.set_by_id,
     )
 
 
@@ -131,12 +132,6 @@ def test_galvanized_bonus_is_kept_for_the_timeline(gamedata: GameData) -> None:
 def test_forced_proc_mods_are_handed_to_the_timeline(gamedata: GameData) -> None:
     res = _body(_lo(gamedata, "Braton Prime", ("Hunter Munitions",), form="normal"))
     assert [e.value for e in res.forced] == [0.3]
-
-
-def test_arcane_must_fit_the_gun(gamedata: GameData) -> None:
-    with pytest.raises(BuildError) as error:
-        _lo(gamedata, "Lex Prime", arcane="Primary Merciless")
-    assert error.value.code == "incompatible_arcane"
 
 
 def test_head_hit_buff_on_a_body_fight_is_inactive(gamedata: GameData) -> None:

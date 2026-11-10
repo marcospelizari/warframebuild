@@ -20,6 +20,7 @@ from app.gamedata.models import (
     Join,
     Meta,
     Mod,
+    ModSet,
     ModsFile,
     ReferenceHead,
     Weapon,
@@ -56,6 +57,10 @@ class GameData:
     @cached_property
     def incarnon_by_id(self) -> dict[str, Incarnon]:
         return {i.unique_name: i for i in self.incarnon}
+
+    @cached_property
+    def set_by_id(self) -> dict[str, ModSet]:
+        return {s.unique_name: s for s in self.mods.sets}
 
     @cached_property
     def mod_by_id(self) -> dict[str, Mod]:

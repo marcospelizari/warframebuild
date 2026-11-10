@@ -7,6 +7,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from app.domain.direct_bonus import DirectBonus
 from app.domain.effects import DamageType, Effect, Faction, Support
+from app.domain.polarity import Polarity
 from app.domain.status import ForcedProc
 
 
@@ -152,13 +153,17 @@ class Weapon(Model):
     reload_time: NonNegative
     mastery_req: Annotated[int, Field(ge=0)]
     riven_disposition: NonNegative  # DE omegaAttenuation
-    polarities: list[str]
-    exilus_polarity: str | None
+    polarities: list[Polarity]  # built-in regular slots, positions unknown
+    exilus_polarity: Polarity | None
+    max_rank: int  # DE maxLevelCap or 30; capacity = 2 x max rank with a catalyst
     attacks: list[Attack]
     texture_location: str | None
     # export-plus compatibilityTags (e.g. PROJECTILE, AOE), stored as given; their meaning
     # for mod eligibility is decided in step 8. None = weapon not in the saved export-plus.
     compatibility_tags: list[str] | None
+    # Weapon class paths a mod's `compat` may name: the gun, its export-plus parent chain,
+    # the classes reference/weapon_classes.json gives its root (G82).
+    mod_classes: list[str] = Field(default_factory=list)
     sniper_combo_min: Annotated[int, Field(ge=1)] | None  # saved Sniper_Rifle, wiki module
     no_reload: bool  # shots come straight from the ammo pool (Epitaph), fire_overrides.json
     # Reload replaces one shot interval (Vectis; saved Calculation, Average Sustained DPS).
@@ -183,7 +188,7 @@ class Mod(Model):
     name: str
     category: Category
     compat_name: str
-    polarity: str
+    polarity: Polarity
     rarity: str
     base_drain: int  # negative for some mods that add capacity
     fusion_limit: Annotated[int, Field(ge=0)]
@@ -198,6 +203,7 @@ class Mod(Model):
     # given for step 8. None = mod not in the saved export-plus.
     compatibility_tags: list[str] | None
     incompatibility_tags: list[str] | None
+    compat_class: str | None  # export-plus `compat`; None = missing in export-plus
 
 
 class Arcane(Model):
@@ -242,7 +248,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[19] = 19
+    schema_version: Literal[21] = 21
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.
