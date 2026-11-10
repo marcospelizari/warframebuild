@@ -128,6 +128,9 @@ def _weapon(
                     d["name"],
                     extra[a["name"]],
                     direct.behaviour(d["uniqueName"], a["name"], a.get("shot_type")),
+                    fire.attack_beam_start(
+                        d["uniqueName"], d["name"], d["trigger"], extra[a["name"]]
+                    ),
                 )
                 for a in w.get("attacks") or []
             ],
@@ -164,6 +167,7 @@ def _attack(
     weapon: str,
     extra: AttackData | None,
     direct: DirectBonus = DirectBonus.ADDING,
+    beam_start: float | None = None,
 ) -> Attack:
     known = {t.value for t in DamageType}
     unknown = set(a.get("damage", {})) - known
@@ -171,7 +175,7 @@ def _attack(
         raise RefreshError(f"{weapon} / {a.get('name')}: unknown damage types {sorted(unknown)}")
     falloff = a.get("falloff")
     try:
-        return _attack_model(a, falloff, extra, direct)
+        return _attack_model(a, falloff, extra, direct, beam_start)
     except ValidationError as error:
         raise RefreshError(f"{weapon} / {a.get('name')}: invalid values: {error}") from error
 
@@ -181,6 +185,7 @@ def _attack_model(
     falloff: dict[str, Any] | None,
     extra: AttackData | None,
     direct: DirectBonus,
+    beam_start: float | None,
 ) -> Attack:
     return Attack(
         name=a["name"],
@@ -200,6 +205,7 @@ def _attack_model(
         ammo_cost=extra.ammo_cost if extra else None,
         multishot=extra.multishot if extra else None,
         extra_headshot=extra.extra_headshot if extra else None,
+        beam_ramp_start=beam_start,
         direct_bonus=direct,
     )
 

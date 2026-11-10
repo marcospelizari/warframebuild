@@ -152,3 +152,11 @@ def test_separate_extra_needs_a_positive_module_value(paths: Paths) -> None:
     _edit(paths, lambda d: d.setdefault("separate_extra", {}).update({lanka.unique_name: row}))
     with pytest.raises(RefreshError, match="separate_extra"):
         build(paths.raw, paths.reference)
+
+
+def test_committed_beam_ramp_per_attack() -> None:
+    """An attack's own module Trigger decides the beam ramp (Continuous_Weapon:47-71)."""
+    weapons = {w.name: w for w in store.load(ROOT / "gamedata").weapons}
+    ramp = {n: {a.name: a.beam_ramp_start for a in weapons[n].attacks} for n in weapons}
+    assert ramp["Torid"]["Incarnon Form"] == 0.2 and ramp["Torid"]["Grenade Impact"] is None
+    assert ramp["Atomos"]["Normal Attack"] == 0.2 and ramp["Atomos"]["Incarnon Form"] is None

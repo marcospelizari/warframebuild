@@ -7,6 +7,7 @@ from app.domain.effects import DamageType, Stat
 from app.domain.fire_rate import Firing, effective_fire_rate
 from app.domain.hit import AttackStats, Bonus, ModdedHit, modded_hit
 from app.domain.stats import modded, modded_time
+from app.domain.status import expected_procs, proc_shares
 from app.gamedata.models import Attack, Weapon
 
 BOW = "Bow"  # WFCD weapon_type
@@ -60,3 +61,11 @@ def shot(
     factor = modded(1.0, Stat.FIRE_RATE, b)
     rate = effective_fire_rate(firing, factor)
     return Shot(hits, rate, factor, magazine, firing, ammo_cost is None)
+
+
+def own_procs(hit: ModdedHit, attack: Attack | None) -> dict[DamageType, float]:
+    """Expected damage-type procs of one shot part per shot: status chance by damage share
+    plus the attack's forced procs, x multishot."""
+    forced = (attack.forced_procs or []) if attack is not None else []
+    each = expected_procs(hit.status_chance, proc_shares(hit.damage), forced)
+    return {t: p * hit.multishot for t, p in each.items() if isinstance(t, DamageType)}

@@ -53,6 +53,26 @@ def effective_fire_rate(f: Firing, rate_factor: float) -> float:
     return rate
 
 
+def shots_per_magazine(f: Firing) -> int | None:
+    """Whole shots between reloads; None = the gun never reloads. Bows reload every shot."""
+    if f.no_reload or f.magazine is None or f.ammo_cost <= 0:
+        return None
+    if f.bow and f.charge_time:
+        return 1
+    return max(1, math.floor(f.magazine / f.ammo_cost + 1e-9))
+
+
+def reload_cycle(f: Firing, effective_rate: float) -> float | None:
+    """Seconds from one reload to the next; None = never reloads."""
+    shots = shots_per_magazine(f)
+    if shots is None or effective_rate <= 0:
+        return None
+    if f.bow and f.charge_time:
+        return 1 / effective_rate  # the bow formula already holds the reload
+    fired = shots - 1 if f.reload_replaces_shot else shots
+    return fired / effective_rate + f.reload_time
+
+
 def shooting_share(f: Firing, effective_rate: float) -> float:
     """Share of time spent shooting: sustained DPS = burst DPS x this."""
     if f.no_reload or f.magazine is None or f.ammo_cost <= 0 or (f.bow and f.charge_time):
@@ -75,10 +95,7 @@ def shot_times(f: Firing, rate_factor: float, until: float) -> list[float]:
         return []
     interval = 1 / effective_rate
     first = charge_time(f, rate_factor) or interval
-    reloads = not (
-        f.no_reload or f.magazine is None or f.ammo_cost <= 0 or (f.bow and f.charge_time)
-    )
-    per_mag = max(1, math.floor(f.magazine / f.ammo_cost + 1e-9)) if reloads and f.magazine else 0
+    per_mag = 0 if f.bow and f.charge_time else shots_per_magazine(f) or 0
     out: list[float] = []
     t = 0.0
     while True:

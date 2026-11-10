@@ -75,6 +75,19 @@ class FireOverrides:
             return None
         return self.beam_ramp_start if value is None else _fraction(value, name)
 
+    def attack_beam_start(
+        self, uid: str, name: str, trigger: str, attack: AttackData | None
+    ) -> float | None:
+        """An attack's own Held trigger makes it a beam (Torid Incarnon); an own non-Held
+        trigger makes it not one (Atomos Incarnon); without one it follows the gun."""
+        held = attack.held if attack is not None else None
+        if held is None:
+            return self.beam_start(uid, name, trigger)
+        if not held:
+            return None
+        value = self.weapons.get(uid, {}).get("beam_ramp_start")
+        return self.beam_ramp_start if value is None else _fraction(value, name)
+
 
 def fire_rate(d: dict[str, Any], data: WeaponData | None) -> float | None:
     """DE fire rate, or None when the wiki module says the charge alone sets the rate."""

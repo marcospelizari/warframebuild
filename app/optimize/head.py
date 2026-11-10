@@ -4,7 +4,7 @@ AoE parts never headshot (saved Enemy_Body_Parts, Notes)."""
 import math
 from dataclasses import dataclass
 
-from app.domain.effects import Trigger
+from app.domain.conditions import HEAD_HIT
 from app.domain.headshot import Head
 from app.domain.hit import AttackStats
 from app.gamedata.models import Attack, Headshot
@@ -12,8 +12,8 @@ from app.optimize.shot import Shot
 
 AOE = "AoE"  # WFCD shot_type
 FLAT_HEAD = -2.0  # wiki module ExtraHeadshotDmg: heads at 1x (saved Enemy_Body_Parts, Notes)
-# Hit triggers counted at max stacks; kill triggers wait for the step-8 kill model (G70).
-HEAD_TRIGGERS = frozenset({Trigger.ON_HEADSHOT, Trigger.ON_WEAK_POINT_HIT})
+# Hit triggers at max stacks (G70); kill stacks count in the combat score only (G78).
+HEAD_TRIGGERS = HEAD_HIT
 
 
 @dataclass(frozen=True)
