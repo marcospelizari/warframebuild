@@ -4,7 +4,9 @@ A fight starts mid-mission, in steady state: kill stacks at max, hit-triggered b
 stacks the build's own trigger rate holds. "When the buff times out, one stack is lost and
 the buff duration resets" (saved Primary_Merciless:36, Galvanized_Aptitude:45): triggers
 arriving faster than the duration never lose a stack, slower ones hold a share of one.
-That rule is assumed for every stacking buff.
+Stacks "removed all at once" when they time out give the same expected value (saved
+Arcane_Enhancement:1392, 1452, 1731; Cascadia_Flare:55; Split_Flights:61-62). Incarnon
+perks: the rule is assumed.
 """
 
 from app.domain.effects import Operation, Trigger
