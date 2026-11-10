@@ -37,7 +37,6 @@ class Rates:
 
     hits: float
     crits: float
-    noncrits: float
     plain: float  # hits that neither crit nor proc a status
     procs: dict[DamageType, float]
     reload_cycle: float | None
@@ -147,7 +146,11 @@ class _Pass:
             return
         if t in KILL and stacks > 0:
             _once(self.needs_kills, name)
-        elif t in NEVER or (t in KILL | HEAD_HIT and self.lo.mark is None):
+        elif (
+            t in NEVER
+            or (t in HEAD_HIT and not self.on_head)
+            or (t in KILL and self.lo.mark is None)
+        ):
             _once(self.inactive, name)
         elif t not in KILL | HEAD_HIT | {Trigger.ON_NONCRIT} and all(
             n != name for n, _, _ in self.held
@@ -162,7 +165,7 @@ def _once(names: list[str], name: str) -> None:
 
 def _rates(lo: Loadout, shot: Shot, on_head: bool) -> Rates:
     shots = shot.rate * shooting_share(shot.firing, shot.rate)
-    hits, crits, noncrits, plain = [], [], [], []
+    hits, crits, plain = [], [], []
     procs: dict[DamageType, float] = {}
     for hit, (_, attack) in zip(shot.hits, lo.parts, strict=True):
         args = head_args(attack, lo.mark) if lo.mark and on_head else None
@@ -171,7 +174,6 @@ def _rates(lo: Loadout, shot: Shot, on_head: bool) -> Rates:
         n = shots * hit.multishot
         hits.append(n)
         crits.append(n * (1 - miss))
-        noncrits.append(n * miss)
         if not (attack and attack.forced_procs):
             plain.append(n * miss * max(0.0, 1 - hit.status_chance))
         for dt, p in own_procs(hit, attack).items():
@@ -179,7 +181,6 @@ def _rates(lo: Loadout, shot: Shot, on_head: bool) -> Rates:
     return Rates(
         hits=math.fsum(hits),
         crits=math.fsum(crits),
-        noncrits=math.fsum(noncrits),
         plain=math.fsum(plain),
         procs=procs,
         reload_cycle=reload_cycle(shot.firing, shot.rate),

@@ -77,7 +77,7 @@ def boosted(value: float, boost: FireRateBoost | None, fire_rate: float) -> floa
 # status types too (same page) but it gives them no duration: not listed.
 STATUS_S: dict[DamageType, float] = {
     DamageType.IMPACT: 6.0,
-    DamageType.PUNCTURE: 10.0,
+    DamageType.PUNCTURE: 10.0,  # table (Status_Effect:256); a patch note there says 6 s (:1048)
     DamageType.SLASH: 6.0,
     DamageType.COLD: 6.0,
     DamageType.ELECTRICITY: 6.0,

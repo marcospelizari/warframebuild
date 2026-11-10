@@ -98,6 +98,10 @@ class Trigger(StrEnum):
     FIRST_SHOT = "first_shot"  # first shot in the magazine
 
 
+# Forced procs the combat timeline models; any other trigger would be dropped there.
+_PROC_TRIGGERS = frozenset({Trigger.ALWAYS, Trigger.ON_CRIT, Trigger.ON_STATUS})
+
+
 class Support(StrEnum):
     FULL = "full"
     PARTIAL = "partial"
@@ -148,6 +152,8 @@ class Effect(BaseModel):
             raise ValueError("faction only (and always) on faction_damage")
         if (self.trigger_damage_type is not None) and self.trigger != Trigger.ON_STATUS:
             raise ValueError("trigger_damage_type only on on_status")
+        if self.stat == Stat.FORCED_PROC and self.trigger not in _PROC_TRIGGERS:
+            raise ValueError("forced_proc: trigger must be always, on_crit or on_status")
         if self.fire_rate_boost is not None and self.stat != Stat.FORCED_PROC:
             raise ValueError("fire_rate_boost only on forced_proc")
         if self.per_status_type and self.stat != Stat.DIRECT_DAMAGE:

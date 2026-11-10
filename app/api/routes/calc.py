@@ -161,7 +161,7 @@ def _build(
 
 
 def _assumptions(
-    weapon: Weapon, e: Evaluation, fights: Combat, fights_conditions: Resolved
+    weapon: Weapon, e: Evaluation, fights: Combat, conditions: Resolved
 ) -> list[Assumption]:
     out = [
         Assumption(id="max_rank", text="Mods at max rank"),
@@ -232,7 +232,7 @@ def _assumptions(
                 + ", ".join(e.head_triggered)
             )
             out.append(Assumption(id="head_stacks", text=text))
-    c = fights_conditions
+    c = conditions
     if c.needs_kills:
         text = "Needs kills, at max stacks in combat: " + ", ".join(c.needs_kills)
         out.append(Assumption(id="needs_kills", text=text))

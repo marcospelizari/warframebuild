@@ -49,6 +49,19 @@ def test_physical_and_element_types_cannot_be_swapped() -> None:
         Effect(stat=Stat.PHYSICAL, value=1, damage_type=DamageType.HEAT)
 
 
+def test_forced_proc_only_on_triggers_the_timeline_models() -> None:
+    import pytest
+    from pydantic import ValidationError
+
+    with pytest.raises(ValidationError, match="forced_proc: trigger"):
+        Effect(
+            stat=Stat.FORCED_PROC,
+            value=0.3,
+            damage_type=DamageType.SLASH,
+            trigger=Trigger.ON_KILL,
+        )
+
+
 def test_unknown_faction_is_unparsed() -> None:
     """Review: a new faction name never passes as full support."""
     parsed = parse(["x1.55 Damage to Scaldra"])

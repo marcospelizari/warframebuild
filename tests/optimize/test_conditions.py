@@ -137,3 +137,10 @@ def test_arcane_must_fit_the_gun(gamedata: GameData) -> None:
     with pytest.raises(BuildError) as error:
         _lo(gamedata, "Lex Prime", arcane="Primary Merciless")
     assert error.value.code == "incompatible_arcane"
+
+
+def test_head_hit_buff_on_a_body_fight_is_inactive(gamedata: GameData) -> None:
+    """Rubico Prime is aimed at heads; a fight scored on the body never meets the trigger."""
+    res = _body(_lo(gamedata, "Rubico Prime", ("Galvanized Scope",)))
+    assert res.inactive == ("Galvanized Scope",)
+    assert res.held == ()
