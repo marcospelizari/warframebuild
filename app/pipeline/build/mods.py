@@ -13,7 +13,7 @@ from app.pipeline.build.inputs import records, require_verified
 from app.pipeline.errors import RefreshError
 from app.pipeline.sources.de_export import MOD_CATEGORY
 from app.pipeline.sources.de_text import clean_levels, clean_text
-from app.pipeline.sources.export_plus import ExportPlus
+from app.pipeline.sources.export_plus import ExportPlus, known
 
 
 def build(
@@ -123,8 +123,8 @@ def _mod(
         description=description,
         level_stats=levels,
         effects=overrides.effects(m["uniqueName"], levels[-1], description),
-        compatibility_tags=tags.compatibility if tags else None,
-        incompatibility_tags=tags.incompatibility if tags else None,
+        compatibility_tags=known(tags.compatibility, m["name"]) if tags else None,
+        incompatibility_tags=known(tags.incompatibility, m["name"]) if tags else None,
     )
 
 

@@ -66,3 +66,36 @@ def test_arcane_must_fit_the_gun(gamedata: GameData) -> None:
     with pytest.raises(BuildError) as error:
         loadout(_weapon(gamedata, "Lex Prime"), [], arcane=_arcane(gamedata, "Primary Merciless"))
     assert error.value.code == "incompatible_arcane"
+
+
+@pytest.mark.parametrize(
+    ("gun", "mod", "ok"),
+    [
+        ("Lenz", "Split Flights", False),  # CRPBOW (Split_Flights:47-56)
+        ("Nunchasa", "Split Flights", False),  # reference/weapon_tags.json (Nunchasa:28)
+        ("Paris Prime", "Split Flights", True),
+        ("Aksondol", "Semi-Pistol Cannonade", True),  # SEMI_AUTO from reference/weapon_tags.json
+        ("Braton Prime", "Semi-Rifle Cannonade", False),  # needs SEMI_AUTO
+    ],
+)
+def test_compatibility_tags(gamedata: GameData, gun: str, mod: str, ok: bool) -> None:
+    w, mods = _weapon(gamedata, gun), _mods(gamedata, mod)
+    if ok:
+        loadout(w, mods)
+        return
+    with pytest.raises(BuildError) as error:
+        loadout(w, mods)
+    assert error.value.code == "incompatible_mod"
+
+
+def test_vigilante_set_bonus_counts_the_pieces_on_the_gun(gamedata: GameData) -> None:
+    """DE set stats: +5% crit tier upgrade per equipped piece (saved Critical_Hit:415)."""
+    names = ("Vigilante Armaments", "Vigilante Fervor", "Vigilante Offense")
+    lo = loadout(_weapon(gamedata, "Soma Prime"), _mods(gamedata, *names), sets=gamedata.set_by_id)
+    assert lo.sets == ["Vigilante set (3/6)"]
+    assert lo.shot(lo.body_bonuses()).hits[0].crit_upgrade_chance == pytest.approx(0.15)
+
+
+def test_set_mod_needs_its_set(gamedata: GameData) -> None:
+    with pytest.raises(ValueError, match="mod set"):
+        loadout(_weapon(gamedata, "Soma Prime"), _mods(gamedata, "Vigilante Armaments"))

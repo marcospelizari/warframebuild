@@ -21,6 +21,47 @@ WEAPONS = "ExportWeapons.json"
 FILES = (UPGRADES, WEAPONS)
 
 
+# Tags on kept guns and gun mods (G56). A new tag fails the refresh until its meaning is
+# checked. Tags only mods carry (POWER_WEAPON = exalted weapons, SENTINEL_WEAPON,
+# MODULAR_GUN = kitguns, NO_AIM, RIFLE, SENTINEL_MOD) match none of our guns.
+TAGS = frozenset(
+    {
+        "AOE",
+        "ASSAULT_AMMO",
+        "ATTICA",
+        "BATTERY",
+        "BEAM",
+        "CROSSBOW",
+        "CRPBOW",
+        "DAIKYU",
+        "DEPLOYABLE",
+        "GRNBOW",
+        "IMPACTEXPLODE",
+        "INFBOW",
+        "INFCERNOS",
+        "LAUNCHER_AMMO",
+        "MITER",
+        "MODULAR_GUN",
+        "NO_AIM",
+        "OMICRUS",
+        "POWER_WEAPON",
+        "PROJECTILE",
+        "RIFLE",
+        "SECONDARYSHOTGUN",
+        "SEMI_AUTO",
+        "SENTINEL_MOD",
+        "SENTINEL_WEAPON",
+        "SINGLESHOT",
+        "SNIPER_AMMO",
+        "SYNDICATEMODBLOCKED",
+        "THROWN",
+        "TNJETTURBINEPISTOL",
+        "Vectis",
+        "ZHUGE",
+    }
+)
+
+
 class MissingExportPlus(RuntimeError):
     pass
 
@@ -75,3 +116,11 @@ def _tags(entry: dict[str, Any], key: str, unique_name: str) -> list[str]:
     if not isinstance(tags, list) or not all(isinstance(t, str) for t in tags):
         raise RefreshError(f"export-plus {unique_name}: `{key}` is not a list of strings")
     return sorted(tags)
+
+
+def known(tags: list[str], name: str) -> list[str]:
+    """Tags of a kept gun or mod; an unknown one fails the refresh."""
+    unknown = sorted(set(tags) - TAGS)
+    if unknown:
+        raise RefreshError(f"{name}: unknown export-plus tags {unknown} (check, then add to TAGS)")
+    return tags

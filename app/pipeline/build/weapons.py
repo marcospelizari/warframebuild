@@ -14,6 +14,7 @@ from app.pipeline.build.effects import Overrides
 from app.pipeline.build.fire import FireOverrides, attack_data, fire_rate
 from app.pipeline.errors import RefreshError
 from app.pipeline.sources.de_export import DAMAGE_SLOT_COUNT, DAMAGE_SLOTS, WEAPON_CATEGORY
+from app.pipeline.sources.export_plus import known
 from app.pipeline.sources.wiki_progenitor import Progenitor
 from app.pipeline.sources.wiki_weapon_data import AttackData, WeaponData
 
@@ -136,7 +137,9 @@ def _weapon(
             ],
             texture_location=texture,
             # export-plus can lag DE after an update: unknown tags stay None (report lists them).
-            compatibility_tags=tags.get(d["uniqueName"]),
+            compatibility_tags=known(tags[d["uniqueName"]], d["name"])
+            if d["uniqueName"] in tags
+            else None,
             sniper_combo_min=data.sniper_combo_min if data else None,
             no_reload=fire.no_reload(d["uniqueName"]),
             reload_replaces_shot=fire.reload_replaces_shot(d["uniqueName"]),

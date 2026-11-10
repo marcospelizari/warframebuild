@@ -54,7 +54,7 @@ def calc(body: CalcRequest, request: Request) -> Build:
         mods.append(mod)
     incarnon = data.incarnon_by_id.get(weapon.unique_name)
     try:
-        lo = loadout(weapon, mods, body.bonus_element, incarnon, body.perks)
+        lo = loadout(weapon, mods, body.bonus_element, incarnon, body.perks, sets=data.set_by_id)
     except BuildError as error:
         raise ApiFailure(422, error.code, error.message, error.field) from error
     head = Head(data.reference_head.multiplier, data.reference_head.critical)

@@ -32,7 +32,7 @@ class Evaluation:
     bonus_element: tuple[DamageType, float] | None
     ammo_cost_assumed: bool  # attack lists none -> 1
     not_modelled: list[str]  # mods with partial/unsupported effects (R6)
-    sets_ignored: list[str]  # set bonuses not applied yet
+    sets: list[str]  # mod set bonuses applied (gun pieces only)
     inactive_perks: list[str]  # chosen perks that do nothing in this form
     aoe_parts: bool  # AoE parts counted at full damage on the target
     note: str | None  # main_attack.json limit for this gun
@@ -87,7 +87,7 @@ def evaluate_loadout(lo: Loadout, head: Head | None = None) -> Evaluation:
         bonus_element=lo.bonus_element,
         ammo_cost_assumed=body.ammo_cost_assumed,
         not_modelled=[n for n, e in named if e.support != Support.FULL],
-        sets_ignored=lo.sets_ignored,
+        sets=lo.sets,
         inactive_perks=[p.name for p in picked if p not in lo.active],
         aoe_parts=any(a is not None and a.shot_type == AOE for _, a in parts[1:]),
         note=lo.note,

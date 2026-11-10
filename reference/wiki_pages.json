@@ -1,11 +1,25 @@
 {
   "about": "Hand-saved WARFRAME Wiki pages (T2/G41/G48): file stem in cache/raw/wiki/, canonical title, what each page feeds, and how much a change matters (high > medium > low). Refresh fails when a listed page is missing. `wfb check` prints this list with save dates and history links after each game update.",
   "pages": {
+    "Aksondol": {
+      "title": "Aksondol",
+      "impact": "low",
+      "feeds": [
+        "compatibility tags missing in export-plus (weapon_tags.json, step 8d)"
+      ]
+    },
     "Ancient_Healer": {
       "title": "Ancient_Healer",
       "impact": "medium",
       "feeds": [
         "representative Infested enemy (enemies.json, step 8)"
+      ]
+    },
+    "Arcane_Enhancement": {
+      "title": "Arcane_Enhancement",
+      "impact": "medium",
+      "feeds": [
+        "conditional buff stack expiry for Frostbite, Blight, Conjunction Voltage (stack rule, step 8c)"
       ]
     },
     "Archon_Shard": {
@@ -49,6 +63,13 @@
       "feeds": [
         "damage pipeline (step 4)",
         "Toxin shield-bypass exceptions"
+      ]
+    },
+    "Cascadia_Flare": {
+      "title": "Cascadia_Flare",
+      "impact": "low",
+      "feeds": [
+        "conditional buff stack expiry (stack rule, step 8c)"
       ]
     },
     "Charger": {
@@ -526,6 +547,13 @@
         "multishot and per-pellet status (step 4)"
       ]
     },
+    "Nunchasa": {
+      "title": "Nunchasa",
+      "impact": "low",
+      "feeds": [
+        "compatibility tags missing in export-plus (weapon_tags.json, step 8d)"
+      ]
+    },
     "Onos": {
       "title": "Onos",
       "impact": "high",
@@ -647,12 +675,26 @@
         "zoom bonuses, highest level (step 7b)"
       ]
     },
+    "Split_Flights": {
+      "title": "Split_Flights",
+      "impact": "medium",
+      "feeds": [
+        "stack expiry (step 8c); 'cannot be equipped on' list, compatibility tag test (step 8d)"
+      ]
+    },
     "Status_Effect": {
       "title": "Status_Effect",
       "impact": "high",
       "feeds": [
         "status, DoT and Blast rules (step 4)",
         "mechanics checklist"
+      ]
+    },
+    "Steflos_Prime": {
+      "title": "Steflos_Prime",
+      "impact": "low",
+      "feeds": [
+        "compatibility tags missing in export-plus (weapon_tags.json, step 8d)"
       ]
     },
     "Tau_Damage": {

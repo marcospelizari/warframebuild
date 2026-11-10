@@ -3,15 +3,26 @@
 Shared by `evaluate` (arsenal and hit DPS), the conditions and the combat timeline.
 """
 
-from collections.abc import Sequence
+from collections import Counter
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 
-from app.domain import families
+from app.domain import compatibility, families
 from app.domain.effects import DamageType, Trigger
 from app.domain.elements import ELEMENTS
 from app.domain.hit import AttackStats, Bonus
 from app.domain.stats import value_for
-from app.gamedata.models import Arcane, Attack, Effects, Headshot, Incarnon, Mod, Perk, Weapon
+from app.gamedata.models import (
+    Arcane,
+    Attack,
+    Effects,
+    Headshot,
+    Incarnon,
+    Mod,
+    ModSet,
+    Perk,
+    Weapon,
+)
 from app.optimize.head import HEAD_TRIGGERS
 from app.optimize.shot import Form, Shot, shot
 
@@ -28,7 +39,8 @@ class BuildError(ValueError):
 def check(
     weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None, arcane: Arcane | None = None
 ) -> None:
-    """Build rules /calc enforces now; mod compatibility tags follow in step 8 (G56)."""
+    """Build rules: arcane class, slots, duplicates, category, compatibility tags (G56),
+    families, bonus element."""
     if arcane and (
         arcane.category != weapon.category or arcane.weapon_type not in (None, weapon.weapon_type)
     ):
@@ -42,6 +54,12 @@ def check(
         seen.add(m.unique_name)
         if m.category != weapon.category:
             raise BuildError("incompatible_mod", f"{m.name} is a {m.category} mod", f"mods[{i}]")
+        if not compatibility.fits(
+            weapon.compatibility_tags, m.compatibility_tags, m.incompatibility_tags
+        ):
+            raise BuildError(
+                "incompatible_mod", f"{m.name} does not fit {weapon.name}", f"mods[{i}]"
+            )
     clash = families.clashes((m.unique_name, m.family) for m in mods)
     if clash:
         names = {m.unique_name: m.name for m in mods}
@@ -124,6 +142,19 @@ def _parts(
     ]
 
 
+def set_entries(mods: Sequence[Mod], sets: Mapping[str, ModSet]) -> list[tuple[str, Effects]]:
+    """One entry per mod set on the gun: the bonus for the pieces equipped on it (DE set
+    stats, index = pieces - 1; Vigilante +5% crit tier per piece, saved Critical_Hit:415)."""
+    out = []
+    for uid, n in sorted(Counter(m.mod_set for m in mods if m.mod_set).items()):
+        s = sets.get(uid)
+        if s is None:
+            raise ValueError(f"mod set {uid} not given")
+        name = uid.rsplit("/", 1)[-1].removesuffix("SetMod")
+        out.append((f"{name} set ({n}/{s.num_upgrades})", s.bonuses[min(n, len(s.bonuses)) - 1]))
+    return out
+
+
 @dataclass(frozen=True)
 class Loadout:
     """A checked build, ready to shoot: shared by `evaluate` and the combat timeline."""
@@ -132,12 +163,12 @@ class Loadout:
     form: Form
     picked: list[Perk]
     active: list[Perk]
-    named: list[tuple[str, Effects]]  # mods + active perks + arcane, slot order
+    named: list[tuple[str, Effects]]  # mods + active perks + arcane + set bonuses
     parts: list[tuple[AttackStats, Attack | None]]
     no_multishot: set[str]
     bonus_element: tuple[DamageType, float] | None
     mark: Headshot | None  # this form is aimed at heads
-    sets_ignored: list[str]  # mod set bonuses not applied yet
+    sets: list[str]  # mod set entries in `named`
     note: str | None  # main_attack.json limit for this form
 
     def body_bonuses(self) -> list[Bonus]:
@@ -165,13 +196,16 @@ def loadout(
     perks: Sequence[str] = (),
     form: Form | None = None,
     arcane: Arcane | None = None,
+    sets: Mapping[str, ModSet] | None = None,
 ) -> Loadout:
-    """`form` defaults to Incarnon Form for Incarnon guns (Q11)."""
+    """`form` defaults to Incarnon Form for Incarnon guns (Q11); `sets`: every mod set of
+    `mods` by uniqueName."""
     check(weapon, mods, bonus, arcane)
     picked = chosen_perks(incarnon, perks)
     form = form or ("incarnon" if incarnon else "normal")
     active = [p for p in picked if p.form in ("both", form)]
     share = weapon.bonus_element.max_share if bonus and weapon.bonus_element else None
+    set_named = set_entries(mods, sets or {})
     return Loadout(
         weapon=weapon,
         form=form,
@@ -179,11 +213,12 @@ def loadout(
         active=active,
         named=[(m.name, m.effects) for m in mods]
         + [(p.name, p.effects) for p in active]
-        + ([(arcane.name, arcane.effects)] if arcane else []),
+        + ([(arcane.name, arcane.effects)] if arcane else [])
+        + set_named,
         parts=_parts(weapon, incarnon, form),
         no_multishot=set(incarnon.no_multishot) if incarnon and form == "incarnon" else set(),
         bonus_element=(bonus, share) if bonus is not None and share is not None else None,
         mark=next((h for h in weapon.headshot if h.form == form), None),
-        sets_ignored=sorted({m.mod_set for m in mods if m.mod_set}),
+        sets=[n for n, _ in set_named],
         note=incarnon.note if incarnon and form == "incarnon" else None,
     )

@@ -107,8 +107,9 @@ def assumptions(
     if e.inactive_perks:
         text = f"No effect in {e.form} form: " + ", ".join(e.inactive_perks)
         out.append(Assumption(id="inactive_perks", text=text))
-    if e.sets_ignored:
-        out.append(Assumption(id="sets_ignored", text="Mod set bonuses not applied"))
+    if e.sets:
+        text = "Mod set bonuses count only the set mods on this gun: " + ", ".join(e.sets)
+        out.append(Assumption(id="set_pieces", text=text))
     if e.ammo_cost_assumed:
         out.append(Assumption(id="ammo_cost", text="1 ammo per shot", value=1))
     if e.bonus_element and weapon.bonus_element:

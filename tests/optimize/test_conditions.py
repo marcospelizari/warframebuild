@@ -38,6 +38,7 @@ def _lo(
         perks,
         form,  # type: ignore[arg-type]
         _arcane(data, arcane) if arcane else None,
+        data.set_by_id,
     )
 
 

@@ -138,3 +138,12 @@ def test_combat_against_every_representative_enemy(client: TestClient, gamedata:
     assert {"combat", "armor"} <= {a["id"] for a in build["assumptions"]}
     body = client.post("/api/calc", json={"weapon": "soma-prime"}).json()["combat"]
     assert {e["target"] for e in body["enemies"]} == {"Body"}
+
+
+def test_set_bonus_and_compatibility(client: TestClient, gamedata: GameData) -> None:
+    body = {"weapon": "soma-prime", "mods": [_id(gamedata, "Vigilante Armaments")]}
+    texts = [a["text"] for a in client.post("/api/calc", json=body).json()["assumptions"]]
+    assert any("Vigilante set (1/6)" in t for t in texts)
+    body = {"weapon": "lenz", "mods": [_id(gamedata, "Split Flights")]}
+    error = client.post("/api/calc", json=body).json()
+    assert (error["code"], error["field"]) == ("incompatible_mod", "mods[0]")

@@ -16596,7 +16596,10 @@
   "beam_ramp_start": null,
   "bonus_element": null,
   "category": "primary",
-  "compatibility_tags": null,
+  "compatibility_tags": [
+   "OMICRUS",
+   "PROJECTILE"
+  ],
   "critical_chance": 0.31999999,
   "critical_multiplier": 2.4000001,
   "damage": {
@@ -20444,7 +20447,11 @@
   "beam_ramp_start": null,
   "bonus_element": null,
   "category": "primary",
-  "compatibility_tags": null,
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.18000001,
   "critical_multiplier": 2.2,
   "damage": {
@@ -25238,7 +25245,10 @@
   "beam_ramp_start": null,
   "bonus_element": null,
   "category": "secondary",
-  "compatibility_tags": null,
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
   "critical_chance": 0.23999999,
   "critical_multiplier": 2.5999999,
   "damage": {
