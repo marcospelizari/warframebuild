@@ -56,6 +56,9 @@ class Attack(Model):
     # Wiki module ExtraHeadshotDmg: -2 = heads hit at 1x, no weak-point bonuses; > 0 = extra
     # headshot factor (Cernos Prime 0.5 -> x1.5; saved Enemy_Body_Parts, Notes).
     extra_headshot: float | None = None
+    # Beam damage at the start of the ramp-up (saved Continuous_Weapon) when this attack is a
+    # beam: its own Held trigger, or the gun's when the attack has none; None = not a beam.
+    beam_ramp_start: Fraction | None = None
     # How a Galvanized-style bonus joins this attack's damage (G56): default from the shot
     # type, exceptions from reference/galvanized_behaviour.json.
     direct_bonus: DirectBonus = DirectBonus.ADDING
@@ -239,7 +242,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[18] = 18
+    schema_version: Literal[19] = 19
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

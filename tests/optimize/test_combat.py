@@ -174,3 +174,19 @@ def test_bane_multiplies_hits_against_its_faction_only(gamedata: GameData) -> No
     assert banned == pytest.approx(plain * factor)
     other = math.fsum(timeline(loadout(soma, bane), crewman)[0].armored)
     assert other == pytest.approx(math.fsum(timeline(loadout(soma, []), crewman)[0].armored))
+
+
+@pytest.mark.parametrize(("name", "beam"), [("Torid", True), ("Atomos", False)])
+def test_beam_ramp_follows_the_scored_form(gamedata: GameData, name: str, beam: bool) -> None:
+    """Continuous_Weapon:47-71: Torid is a beam only in Incarnon Form, Atomos only in its
+    normal form (its Incarnon Form is Semi-Auto in the saved module)."""
+    weapon = _weapon(gamedata, name)
+    lo = loadout(weapon, [], None, gamedata.incarnon_by_id[weapon.unique_name])
+    assert lo.form == "incarnon"
+    events = timeline(lo, _enemy(gamedata, "Charger"))
+    full = math.fsum(h.average_shot() for h in lo.shot(lo.body_bonuses()).hits)
+    first = math.fsum(events[0].armored)
+    if beam:
+        assert first == pytest.approx(full * beam_ramp(0.2, events[0].time))
+    else:
+        assert first == pytest.approx(full)

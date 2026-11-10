@@ -2,7 +2,14 @@ from dataclasses import replace
 
 import pytest
 
-from app.domain.fire_rate import Firing, effective_fire_rate, shooting_share, shot_times
+from app.domain.fire_rate import (
+    Firing,
+    effective_fire_rate,
+    reload_cycle,
+    shooting_share,
+    shot_times,
+    shots_per_magazine,
+)
 
 AUTO = Firing(
     fire_rate=10,
@@ -115,3 +122,15 @@ def test_charge_weapons_and_bows_fire_first_at_the_charge_time() -> None:
     charge = _firing(charge_time=1.0, fire_rate=1.0, magazine=None)  # 1 / (1 + 1) = 0.5/s
     assert shot_times(charge, 1.0, 5.0) == pytest.approx([1.0, 3.0, 5.0])
     assert shot_times(charge, 2.0, 2.0) == pytest.approx([0.5, 1.5])  # +100% fire rate
+
+
+def test_reload_cycle_and_shots_per_magazine() -> None:
+    f = _firing()  # 3 shots at 2/s, 1 s reload
+    assert shots_per_magazine(f) == 3
+    assert reload_cycle(f, 2.0) == pytest.approx(2.5)
+    assert reload_cycle(_firing(reload_replaces_shot=True), 2.0) == pytest.approx(2.0)
+    assert shots_per_magazine(_firing(no_reload=True)) is None
+    assert reload_cycle(_firing(magazine=None), 2.0) is None
+    bow = _firing(bow=True, charge_time=0.5, magazine=1.0)
+    assert shots_per_magazine(bow) == 1
+    assert reload_cycle(bow, 0.8) == pytest.approx(1.25)

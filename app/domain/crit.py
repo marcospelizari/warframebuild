@@ -34,13 +34,33 @@ def tier_multiplier(tier: int, crit_damage: float, headcrit: bool = False) -> fl
 
 
 def average_multiplier(
-    crit_chance: float, crit_damage: float, upgrade_chance: float = 0.0, headcrit: bool = False
+    crit_chance: float,
+    crit_damage: float,
+    upgrade_chance: float = 0.0,
+    headcrit: bool = False,
+    noncrit: float = 1.0,
 ) -> float:
-    """Expected crit multiplier of one hit."""
+    """Expected crit multiplier of one hit; `noncrit`: factor only non-crits get (R2)."""
     return math.fsum(
-        p * tier_multiplier(t, crit_damage, headcrit)
+        p * (tier_multiplier(t, crit_damage, headcrit) if t else noncrit)
         for t, p in tiers(crit_chance, upgrade_chance).items()
     )
+
+
+def crit_only_ratio(
+    crit_chance: float,
+    crit_damage: float,
+    upgrade_chance: float = 0.0,
+    headcrit: bool = False,
+    noncrit: float = 1.0,
+) -> float:
+    """Average multiplier of the hits that crit over the average of all hits: a proc only
+    crits apply (Hunter Munitions) carries the crit's own multiplier."""
+    p0 = tiers(crit_chance, upgrade_chance).get(0, 0.0)
+    mean = average_multiplier(crit_chance, crit_damage, upgrade_chance, headcrit, noncrit)
+    if p0 >= 1 or mean <= 0:
+        return 1.0
+    return (mean - p0 * noncrit) / (1 - p0) / mean
 
 
 def non_crit_chance(crit_chance: float) -> float:

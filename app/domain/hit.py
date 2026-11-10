@@ -13,7 +13,7 @@ from dataclasses import dataclass, replace
 from app.domain import crit, headshot
 from app.domain.damage import composition, element_bonuses, scaled
 from app.domain.direct_bonus import DirectBonus, damage_factor
-from app.domain.effects import DamageType, Effect, Faction, Operation, Stat
+from app.domain.effects import DamageType, Effect, Faction, Operation, Stat, Trigger
 from app.domain.elements import Part
 from app.domain.headshot import Head
 from app.domain.stats import modded
@@ -51,6 +51,7 @@ class ModdedHit:
     weak_point_damage: float = 0.0  # summed bonus (Acuity +3.5)
     headshot_bonus: float = 0.0  # summed headshot-multiplier bonus (Deadhead, Target Acquired)
     direct_bonus: float | None = None  # Galvanized-style bonus once applied
+    noncrit_factor: float = 1.0  # damage factor only non-crits get (Devouring Attrition)
 
     @property
     def projectile_damage(self) -> float:
@@ -91,6 +92,19 @@ class ModdedHit:
             damage_add=damage_add,
         )
 
+    def crit_chance(self, head: Head | None = None, *, flat: bool = False) -> float:
+        """Weak-point crit chance counts only on a weak point hit above 1x."""
+        return self.head_critical_chance if head and not flat else self.critical_chance
+
+    def crit_only_ratio(self, head: Head | None = None, *, flat: bool = False) -> float:
+        return crit.crit_only_ratio(
+            self.crit_chance(head, flat=flat),
+            self.critical_multiplier,
+            self.crit_upgrade_chance,
+            bool(head and head.critical and not flat),
+            self.noncrit_factor,
+        )
+
     def hit_factor(
         self,
         faction: Faction | None = None,
@@ -105,13 +119,12 @@ class ModdedHit:
         """Multiplier of one projectile's damage: faction x body part x crit average; also
         the DoT seed's hit multiplier (saved Damage_over_Time)."""
         faction_factor = self.faction_multiplier.get(faction, 1.0) if faction else 1.0
-        chance = self.head_critical_chance if head and not flat else self.critical_chance
-        headcrit = bool(head and head.critical and not flat)
         crit_avg = crit.average_multiplier(
-            chance + chance_add,
+            self.crit_chance(head, flat=flat) + chance_add,
             self.critical_multiplier + damage_add,
             self.crit_upgrade_chance,
-            headcrit,
+            bool(head and head.critical and not flat),
+            self.noncrit_factor,
         )
         part = (
             headshot.factor(
@@ -132,6 +145,9 @@ def modded_hit(
     bonuses: Sequence[Bonus],
     bonus_element: tuple[DamageType, float] | None = None,
 ) -> ModdedHit:
+    """An `on_noncrit` damage bonus (value = its expected factor) scales non-crits only."""
+    noncrit = [v for e, v in bonuses if e.trigger == Trigger.ON_NONCRIT and e.stat == Stat.DAMAGE]
+    bonuses = [(e, v) for e, v in bonuses if e.trigger != Trigger.ON_NONCRIT]
     elements: list[Part] = []
     physical: dict[DamageType, float] = {}
     for e, v in bonuses:
@@ -184,6 +200,7 @@ def modded_hit(
         element_bonus=element_bonuses(elements),
         status_damage=modded(1.0, Stat.STATUS_DAMAGE, bonuses) - 1,
         status_duration=modded(1.0, Stat.STATUS_DURATION, bonuses) - 1,
+        noncrit_factor=math.prod(noncrit),
     )
 
 

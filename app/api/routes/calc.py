@@ -27,6 +27,7 @@ from app.domain.headshot import Head
 from app.gamedata.models import Mod, ReferenceHead, Weapon
 from app.gamedata.store import GameData
 from app.optimize import combat
+from app.optimize.conditions import Resolved
 from app.optimize.evaluate import MAX_SLOTS, BuildError, Evaluation, evaluate_loadout, loadout
 
 WIKI = "https://wiki.warframe.com/w/"
@@ -63,8 +64,11 @@ def calc(body: CalcRequest, request: Request) -> Build:
         raise ApiFailure(422, error.code, error.message, error.field) from error
     head = Head(data.reference_head.multiplier, data.reference_head.critical)
     result = evaluate_loadout(lo, head)
-    fights = _combat(combat.combat(lo, data.enemies, data.factions), lo.mark is not None)
-    return _build(data.meta.dataset_hash, weapon, mods, result, data.reference_head, fights)
+    scored = combat.combat(lo, data.enemies, data.factions)
+    fights = _combat(scored, lo.mark is not None)
+    return _build(
+        data.meta.dataset_hash, weapon, mods, result, data.reference_head, fights, scored.conditions
+    )
 
 
 def _combat(c: combat.Combat, aimed: bool) -> Combat:
@@ -94,6 +98,7 @@ def _build(
     e: Evaluation,
     head: ReferenceHead,
     fights: Combat,
+    conditions: Resolved,
 ) -> Build:
     hit = e.hit
     slots = [
@@ -151,14 +156,30 @@ def _build(
         if e.headshot
         else None,
         combat=fights,
-        assumptions=_assumptions(weapon, e, fights),
+        assumptions=_assumptions(weapon, e, fights, conditions),
     )
 
 
-def _assumptions(weapon: Weapon, e: Evaluation, fights: Combat) -> list[Assumption]:
+def _assumptions(
+    weapon: Weapon, e: Evaluation, fights: Combat, fights_conditions: Resolved
+) -> list[Assumption]:
     out = [
         Assumption(id="max_rank", text="Mods at max rank"),
-        Assumption(id="unconditional", text="Only unconditional mod effects (as in the arsenal)"),
+        Assumption(
+            id="unconditional",
+            text="Arsenal and DPS figures: only unconditional mod effects (as in the arsenal)",
+        ),
+        Assumption(
+            id="conditions",
+            text=(
+                "Combat counts conditional effects as mid-mission: kill stacks at max; buffs "
+                "from hits, crits, status procs and reloads at the stacks the build's own "
+                "trigger rate holds (a stack is lost when the buff times out), rates taken "
+                "before those buffs; first-shot bonuses by their share of the magazine; "
+                "Galvanized bonuses per status type on the target (not Knockdown or Lifted)"
+            ),
+            source=Source(kind="wiki", url=WIKI + "Galvanized_Aptitude"),
+        ),
         Assumption(id="main_attack", text=_MAIN_ATTACK[e.form]),
         Assumption(id="direct_only", text="DPS figures: direct hits on the body; no DoT or Blast"),
         Assumption(
@@ -178,7 +199,8 @@ def _assumptions(weapon: Weapon, e: Evaluation, fights: Combat) -> list[Assumpti
                 "Combat simplifications: all parts of a shot land with it; Electricity and Gas "
                 "procs tick with their own +1; Heat keeps burning while procs come faster than "
                 "its duration; the sniper combo never decays (no misses, reload gaps ignored); "
-                "beams ramp from their start value to full over 0.6 s (linear)"
+                "beams ramp from their start value to full over 0.6 s and decay 0.8 s after a "
+                "stop over 2 s (linear)"
             ),
         ),
         Assumption(
@@ -210,6 +232,18 @@ def _assumptions(weapon: Weapon, e: Evaluation, fights: Combat) -> list[Assumpti
                 + ", ".join(e.head_triggered)
             )
             out.append(Assumption(id="head_stacks", text=text))
+    c = fights_conditions
+    if c.needs_kills:
+        text = "Needs kills, at max stacks in combat: " + ", ".join(c.needs_kills)
+        out.append(Assumption(id="needs_kills", text=text))
+    if c.held:
+        text = "Conditional buffs in combat (stacks held, or share of shots or time): " + ", ".join(
+            f"{name} {stacks:.3g}/{top}" for name, stacks, top in c.held
+        )
+        out.append(Assumption(id="held_stacks", text=text))
+    if c.inactive:
+        text = "Never active in combat (needs melee kills, ability casts or headshots): "
+        out.append(Assumption(id="inactive_conditions", text=text + ", ".join(c.inactive)))
     if e.not_modelled:
         text = "Effects not modelled yet: " + ", ".join(e.not_modelled)
         out.append(Assumption(id="not_modelled", text=text))

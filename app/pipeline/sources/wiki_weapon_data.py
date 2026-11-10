@@ -4,7 +4,8 @@ Read only for data DE and WFCD lack, per attack: forced procs (saved Status_Effe
 Forced Procs), burst count and delay (saved Fire_Rate), and per weapon: sniper minimum
 combo and the highest zoom level's bonus (saved Sniper_Rifle), magazine size where DE gives
 none (0 = no magazine), attacks with no delay between shots (`FireRate = math.huge`: Lanka,
-saved Fire_Rate) and `ExtraHeadshotDmg` per attack (saved Enemy_Body_Parts, Notes).
+saved Fire_Rate), `ExtraHeadshotDmg` per attack (saved Enemy_Body_Parts, Notes) and an
+attack's own `Trigger` (beams in Incarnon Form only, saved Continuous_Weapon:47-71).
 Keyed by `InternalName` = DE uniqueName; attack names equal WFCD's. Wiki-derived:
 CC BY-NC-SA 3.0 (NOTICE).
 """
@@ -59,6 +60,7 @@ class AttackData:
     ammo_cost: float | None  # ammo per shot (0.5 per beam tick, 0 = none); None = not listed
     multishot: float | None = None  # projectiles per shot; None = not listed
     extra_headshot: float | None = None  # -2 = 1x heads; > 0 = extra headshot factor
+    held: bool | None = None  # own Trigger is Held (a beam); None = no own Trigger
 
 
 @dataclass(frozen=True)
@@ -159,7 +161,18 @@ def _attack(where: str, a: dict[str, Any]) -> AttackData:
         ammo_cost=_ammo_cost(where, a),
         multishot=_multishot(where, a),
         extra_headshot=_extra_headshot(where, a),
+        held=_held(where, a),
     )
+
+
+def _held(where: str, a: dict[str, Any]) -> bool | None:
+    """Incarnon Forms carry their own Trigger (Torid's is Held; Atomos's is Semi-Auto)."""
+    trigger = a.get("Trigger")
+    if trigger is None:
+        return None
+    if not isinstance(trigger, str) or not trigger:
+        raise RefreshError(f"{where}: Trigger must be a string")
+    return trigger == "Held"
 
 
 def _extra_headshot(where: str, a: dict[str, Any]) -> float | None:

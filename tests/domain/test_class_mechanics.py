@@ -1,6 +1,11 @@
 import pytest
 
-from app.domain.class_mechanics import beam_ramp, beam_ramp_average, sniper_combo_multiplier
+from app.domain.class_mechanics import (
+    beam_level,
+    beam_ramp,
+    beam_ramp_average,
+    sniper_combo_multiplier,
+)
 
 
 @pytest.mark.parametrize(
@@ -18,3 +23,13 @@ def test_beam_ramp() -> None:
     assert beam_ramp(0.2, 5) == 1.0
     assert beam_ramp_average(0.2, 0.6) == pytest.approx(0.6)
     assert beam_ramp_average(0.2, 1.2) == pytest.approx((0.6 * 0.6 + 0.6) / 1.2)
+
+
+def test_beam_level_ramps_up_and_decays_after_a_stop() -> None:
+    """Continuous_Weapon:19: 0.6 s to full; 0.8 s after it stops hitting, back to the start
+    value over 2 s."""
+    assert beam_level(0.2, 0.2, 0.3) == pytest.approx(0.6)
+    assert beam_level(0.2, 0.2, 1.0) == 1.0
+    assert beam_level(0.2, 1.0, 0.0, off_target=0.8) == 1.0  # still inside the delay
+    assert beam_level(0.2, 1.0, 0.0, off_target=1.8) == pytest.approx(0.6)  # half decayed
+    assert beam_level(0.2, 1.0, 0.0, off_target=5.0) == pytest.approx(0.2)

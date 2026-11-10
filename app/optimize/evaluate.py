@@ -16,7 +16,7 @@ from app.domain.fire_rate import shooting_share
 from app.domain.headshot import Head
 from app.domain.hit import AttackStats, Bonus, ModdedHit
 from app.domain.stats import value_for
-from app.gamedata.models import Attack, Effects, Headshot, Incarnon, Mod, Perk, Weapon
+from app.gamedata.models import Arcane, Attack, Effects, Headshot, Incarnon, Mod, Perk, Weapon
 from app.optimize.head import AOE, HEAD_TRIGGERS, head_burst
 from app.optimize.shot import Form, Shot, shot
 
@@ -53,8 +53,14 @@ class Evaluation:
     head_triggered: tuple[str, ...] = ()  # entries whose headshot-triggered effects count
 
 
-def check(weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None) -> None:
+def check(
+    weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None, arcane: Arcane | None = None
+) -> None:
     """Build rules /calc enforces now; mod compatibility tags follow in step 8 (G56)."""
+    if arcane and (
+        arcane.category != weapon.category or arcane.weapon_type not in (None, weapon.weapon_type)
+    ):
+        raise BuildError("incompatible_arcane", f"{arcane.name} does not fit", "arcane")
     if len(mods) > MAX_SLOTS:
         raise BuildError("too_many_mods", f"at most {MAX_SLOTS} mods", "mods")
     seen: set[str] = set()
@@ -154,7 +160,7 @@ class Loadout:
     form: Form
     picked: list[Perk]
     active: list[Perk]
-    named: list[tuple[str, Effects]]  # mods + active perks, slot order
+    named: list[tuple[str, Effects]]  # mods + active perks + arcane, slot order
     parts: list[tuple[AttackStats, Attack | None]]
     no_multishot: set[str]
     bonus_element: tuple[DamageType, float] | None
@@ -186,9 +192,10 @@ def loadout(
     incarnon: Incarnon | None = None,
     perks: Sequence[str] = (),
     form: Form | None = None,
+    arcane: Arcane | None = None,
 ) -> Loadout:
     """`form` defaults to Incarnon Form for Incarnon guns (Q11)."""
-    check(weapon, mods, bonus)
+    check(weapon, mods, bonus, arcane)
     picked = chosen_perks(incarnon, perks)
     form = form or ("incarnon" if incarnon else "normal")
     active = [p for p in picked if p.form in ("both", form)]
@@ -198,7 +205,9 @@ def loadout(
         form=form,
         picked=picked,
         active=active,
-        named=[(m.name, m.effects) for m in mods] + [(p.name, p.effects) for p in active],
+        named=[(m.name, m.effects) for m in mods]
+        + [(p.name, p.effects) for p in active]
+        + ([(arcane.name, arcane.effects)] if arcane else []),
         parts=_parts(weapon, incarnon, form),
         no_multishot=set(incarnon.no_multishot) if incarnon and form == "incarnon" else set(),
         bonus_element=(bonus, share) if bonus is not None and share is not None else None,

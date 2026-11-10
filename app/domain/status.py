@@ -72,6 +72,28 @@ def boosted(value: float, boost: FireRateBoost | None, fire_rate: float) -> floa
     return value * boost.factor if boost and fire_rate < boost.below else value
 
 
+# How long one proc stays on the target (saved Status_Effect: Status Duration table; Void and
+# Tau from the damage-type table); x (1 + status duration). Knockdown and Lifted count as
+# status types too (same page) but it gives them no duration: not listed.
+STATUS_S: dict[DamageType, float] = {
+    DamageType.IMPACT: 6.0,
+    DamageType.PUNCTURE: 10.0,
+    DamageType.SLASH: 6.0,
+    DamageType.COLD: 6.0,
+    DamageType.ELECTRICITY: 6.0,
+    DamageType.HEAT: 6.0,
+    DamageType.TOXIN: 6.0,
+    DamageType.BLAST: 1.5,
+    DamageType.CORROSIVE: 8.0,
+    DamageType.GAS: 6.0,
+    DamageType.MAGNETIC: 6.0,
+    DamageType.RADIATION: 12.0,
+    DamageType.VIRAL: 6.0,
+    DamageType.VOID: 3.0,
+    DamageType.TAU: 8.0,
+}
+
+
 # ---------- damage over time (saved Damage/Calculation, Damage Over Time) ----------
 
 DOT_COEFFICIENT: dict[DamageType, float] = {
