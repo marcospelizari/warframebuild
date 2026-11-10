@@ -73,7 +73,7 @@
         "/Lotus/Weapons/Tenno/Bows/LotusBow",
         "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
       ],
-      "source": "Bow:7 (Cinta)",
+      "source": "Bow:7 (Cinta); not an Assault Rifle: Tainted Mag does not fit Rubico Prime or Paris Prime (in-game arsenal check 2026-11-10)",
       "verified": "2026-11-10"
     },
     "/Lotus/Weapons/Tenno/Bows/LotusCrossBow": {
@@ -81,7 +81,7 @@
         "/Lotus/Weapons/Tenno/Bows/LotusBow",
         "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
       ],
-      "source": "Bow:7; crossbows are bows (Split_Flights:47-56 names Zhuge, Nagantaka, Attica among bows it cannot fit)",
+      "source": "Bow:7; crossbows are bows (Split_Flights:47-56 names Zhuge, Nagantaka, Attica among bows it cannot fit); not an Assault Rifle: Tainted Mag does not fit Rubico Prime or Paris Prime (in-game arsenal check 2026-11-10)",
       "verified": "2026-11-10"
     },
     "/Lotus/Weapons/Tenno/Bows/LotusLongBow": {
@@ -89,7 +89,7 @@
         "/Lotus/Weapons/Tenno/Bows/LotusBow",
         "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
       ],
-      "source": "Bow:7: 'All bows can equip Rifle Mods'",
+      "source": "Bow:7: 'All bows can equip Rifle Mods'; not an Assault Rifle: Tainted Mag does not fit Rubico Prime or Paris Prime (in-game arsenal check 2026-11-10)",
       "verified": "2026-11-10"
     },
     "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusWep": {
@@ -97,7 +97,7 @@
         "/Lotus/Weapons/Tenno/Bows/LotusBow",
         "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
       ],
-      "source": "Bow:7 (Nataruk)",
+      "source": "Bow:7 (Nataruk); not an Assault Rifle: Tainted Mag does not fit Rubico Prime or Paris Prime (in-game arsenal check 2026-11-10)",
       "verified": "2026-11-10"
     },
     "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire": {
@@ -135,7 +135,7 @@
         "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
         "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
       ],
-      "source": "Sniper_Rifle:165 (Vectis)",
+      "source": "Sniper_Rifle:165 (Vectis); not an Assault Rifle: Tainted Mag does not fit Rubico Prime or Paris Prime (in-game arsenal check 2026-11-10)",
       "verified": "2026-11-10"
     },
     "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle": {
@@ -158,7 +158,7 @@
         "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
         "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
       ],
-      "source": "Sniper_Rifle:165: 'In addition to being able to equip Rifle Mods, Primary Mods ... Sniper Mods'",
+      "source": "Sniper_Rifle:165: 'In addition to being able to equip Rifle Mods, Primary Mods ... Sniper Mods'; not an Assault Rifle: Tainted Mag does not fit Rubico Prime or Paris Prime (in-game arsenal check 2026-11-10)",
       "verified": "2026-11-10"
     },
     "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun": {

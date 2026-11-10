@@ -6,7 +6,7 @@ from app.gamedata.models import Effects, Mod
 from app.gamedata.store import GameData
 from app.optimize.loadout import loadout
 from app.optimize.scoring import max_score
-from app.optimize.search import Result, rounded, search
+from app.optimize.search import Option, Result, rounded, search
 
 NONE = Effects(support=Support.FULL, effects=[], unparsed=[])
 LEX = (
@@ -28,7 +28,7 @@ def _run(data: GameData, names: tuple[str, ...], budget: int) -> Result:
     lex = next(w for w in data.weapons if w.name == "Lex Prime")
     head = Head(data.reference_head.multiplier, critical=data.reference_head.critical)
 
-    def score(mods: list[Mod], exilus: Mod | None) -> float:
+    def score(mods: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]) -> float:
         lo = loadout(lex, mods, form="normal", sets=data.set_by_id, exilus=exilus)
         return max_score(lo, head)
 
@@ -75,7 +75,7 @@ def test_ninth_mod_goes_to_the_exilus_slot() -> None:
         return Mod.model_construct(unique_name=f"m{i}", family=None, exilus=exilus, effects=NONE)
 
     pool = [mod(i, exilus=i == 0) for i in range(10)]
-    result = search(pool, lambda mods, ex: len(mods) + (ex is not None), 5_000)
+    result = search(pool, lambda mods, ex, picks: len(mods) + (ex is not None), 5_000)
     assert result.status == "optimal"
     assert result.score == 9
     assert result.exilus is not None and result.exilus.unique_name == "m0"
@@ -85,6 +85,25 @@ def test_without_exilus_capable_mods_eight_slots(gamedata: GameData) -> None:
     def mod(i: int) -> Mod:
         return Mod.model_construct(unique_name=f"m{i}", family=None, exilus=False, effects=NONE)
 
-    result = search([mod(i) for i in range(10)], lambda mods, ex: float(len(mods)), 5_000)
+    result = search([mod(i) for i in range(10)], lambda mods, ex, picks: float(len(mods)), 5_000)
     assert result.score == pytest.approx(8)
     assert result.exilus is None
+
+
+def test_choice_slots_are_searched() -> None:
+    """Synthetic: two slots, the score adds the option values."""
+
+    class Pick:
+        def __init__(self, name: str, value: float) -> None:
+            self.name, self.value = name, value
+
+    a, b, c = Pick("a", 1), Pick("b", 3), Pick("c", 2)
+
+    def score(mods: list[Mod], ex: Mod | None, picks: tuple[Option, ...]) -> float:
+        return sum(p.value for p in picks if isinstance(p, Pick))
+
+    result = search([], score, 5_000, [[None, a, b], [None, c]])
+    assert result.status == "optimal"
+    assert result.picks == (b, c)
+    heuristic = search([], score, 3, [[None, a, b], [None, c]])
+    assert heuristic.status == "best_found"
