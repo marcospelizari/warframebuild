@@ -37,7 +37,7 @@
    ],
    "mod_set": null,
    "name": "Fass Canticle",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Grimoire/FassAuraMod"
   },
@@ -78,7 +78,7 @@
    ],
    "mod_set": null,
    "name": "Jahu Canticle",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Grimoire/JahuAuraMod"
   },
@@ -119,7 +119,7 @@
    ],
    "mod_set": null,
    "name": "Khra Canticle",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Grimoire/KhraAuraMod"
   },
@@ -160,7 +160,7 @@
    ],
    "mod_set": null,
    "name": "Lohk Canticle",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Grimoire/LohkAuraMod"
   },
@@ -202,7 +202,7 @@
    ],
    "mod_set": null,
    "name": "Netra Invocation",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Grimoire/NetraStrikeMod"
   },
@@ -244,7 +244,7 @@
    ],
    "mod_set": null,
    "name": "Ris Invocation",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Grimoire/RisStrikeMod"
   },
@@ -286,7 +286,7 @@
    ],
    "mod_set": null,
    "name": "Vome Invocation",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Grimoire/VomeStrikeMod"
   },
@@ -328,7 +328,7 @@
    ],
    "mod_set": null,
    "name": "Xata Invocation",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Grimoire/XataStrikeMod"
   },
@@ -376,7 +376,7 @@
    ],
    "mod_set": null,
    "name": "Unseen Dread",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Bows/Event/Nightwave/NightwaveStalkerBowAugmentMod"
   },
@@ -446,7 +446,7 @@
    ],
    "mod_set": null,
    "name": "Amalgam Barrel Diffusion",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Pistol/MultishotDodgeMod"
   },
@@ -503,7 +503,7 @@
    ],
    "mod_set": null,
    "name": "Amalgam Argonak Metal Auger",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Rifle/ArgonakDaggerMod"
   },
@@ -583,7 +583,7 @@
    ],
    "mod_set": null,
    "name": "Amalgam Daikyu Target Acquired",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Rifle/DaikyuKatanaMod"
   },
@@ -656,7 +656,7 @@
    ],
    "mod_set": null,
    "name": "Amalgam Javlok Magazine Warp",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Rifle/JavlokSwordShieldMod"
   },
@@ -746,7 +746,7 @@
    ],
    "mod_set": null,
    "name": "Amalgam Serration",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Rifle/SerratedRushMod"
   },
@@ -816,7 +816,7 @@
    ],
    "mod_set": null,
    "name": "Amalgam Shotgun Barrage",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Shotgun/ShotgunMedicMod"
   },
@@ -876,7 +876,7 @@
    ],
    "mod_set": null,
    "name": "Dizzying Rounds",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/BroncoNightwaveMod"
   },
@@ -946,7 +946,7 @@
    ],
    "mod_set": null,
    "name": "Photon Overcharge",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/GlaxionNightwaveMod"
   },
@@ -989,7 +989,7 @@
    ],
    "mod_set": null,
    "name": "Deadly Maneuvers",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/MagnusNightwaveMod"
   },
@@ -1037,7 +1037,7 @@
    ],
    "mod_set": null,
    "name": "Spontaneous Singularity",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/NightwaveCephPrimaryAugmentMod"
   },
@@ -1115,7 +1115,7 @@
    ],
    "mod_set": null,
    "name": "Leaded Gas",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/NightwaveLasSilencedPistolAugmentMod"
   },
@@ -1209,7 +1209,7 @@
    ],
    "mod_set": null,
    "name": "Biotic Rounds",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/NightwaveTC2024AK47AugmentMod"
   },
@@ -1256,7 +1256,7 @@
    ],
    "mod_set": null,
    "name": "Pain Points",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/NightwaveTnJetTurbinePistolAugmentMod"
   },
@@ -1304,7 +1304,7 @@
    ],
    "mod_set": null,
    "name": "Clip Delegation",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/SobekNightwaveMod"
   },
@@ -1388,7 +1388,7 @@
    ],
    "mod_set": null,
    "name": "Creeping Bullseye",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedCritChanceFireRatePistol"
   },
@@ -1472,7 +1472,7 @@
    ],
    "mod_set": null,
    "name": "Hollow Point",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedCritDamagePistol"
   },
@@ -1560,7 +1560,7 @@
    ],
    "mod_set": null,
    "name": "Magnum Force",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedDamageRecoilPistol"
   },
@@ -1644,7 +1644,7 @@
    ],
    "mod_set": null,
    "name": "Anemic Agility",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedFireRateDamagePistol"
   },
@@ -1728,7 +1728,7 @@
    ],
    "mod_set": null,
    "name": "Tainted Clip",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedMaxClipReloadSpeedPistol"
   },
@@ -1796,7 +1796,7 @@
    ],
    "mod_set": null,
    "name": "Merciless Gunfight",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CriticalDamagePunchThroughMod"
   },
@@ -1872,7 +1872,7 @@
    ],
    "mod_set": null,
    "name": "Jolt",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/ElectEventPistolMod"
   },
@@ -1948,7 +1948,7 @@
    ],
    "mod_set": null,
    "name": "Scorch",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/FireEventPistolMod"
   },
@@ -2032,7 +2032,7 @@
    ],
    "mod_set": null,
    "name": "Lethal Torrent",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/GrinderMod"
   },
@@ -2108,7 +2108,7 @@
    ],
    "mod_set": null,
    "name": "Frostbite",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/IceEventPistolMod"
   },
@@ -2184,7 +2184,7 @@
    ],
    "mod_set": null,
    "name": "Ice Storm",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/IceStormMod"
   },
@@ -2260,7 +2260,7 @@
    ],
    "mod_set": null,
    "name": "Magnetic Might",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/MagneticCritDamagePistolMod"
   },
@@ -2336,7 +2336,7 @@
    ],
    "mod_set": null,
    "name": "Pistol Pestilence",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/PoisonEventPistolMod"
   },
@@ -2412,7 +2412,7 @@
    ],
    "mod_set": null,
    "name": "Accelerated Isotope",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/RadiationFireratePistolMod"
   },
@@ -2488,7 +2488,7 @@
    ],
    "mod_set": null,
    "name": "Stunning Speed",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/StunningSpeedMod"
   },
@@ -2535,7 +2535,7 @@
    ],
    "mod_set": null,
    "name": "Targeting Subsystem",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/AccuracyWhileAimingPistolMod"
   },
@@ -2597,7 +2597,7 @@
    ],
    "mod_set": null,
    "name": "Damzav-Vati",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/AkbroncoViralDamageMod"
   },
@@ -2644,7 +2644,7 @@
    ],
    "mod_set": null,
    "name": "Zazvat-Kar",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/AkstilettoEfficiencyWhileAirborneMod"
   },
@@ -2704,7 +2704,7 @@
    ],
    "mod_set": null,
    "name": "Primed Fulmination",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/AmbulasEvent/Expert/SecondaryExplosionRadiusModExpert"
   },
@@ -2743,7 +2743,7 @@
    ],
    "mod_set": null,
    "name": "Fulmination",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/AmbulasEvent/SecondaryExplosionRadiusMod"
   },
@@ -2807,7 +2807,7 @@
    ],
    "mod_set": null,
    "name": "Hydraulic Crosshairs",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/CritChanceWhileAimingPistolMod"
   },
@@ -2902,7 +2902,7 @@
    ],
    "mod_set": null,
    "name": "Galvanized Crosshairs",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/CritChanceWhileAimingPistolSPMod"
   },
@@ -2966,7 +2966,7 @@
    ],
    "mod_set": null,
    "name": "Sharpened Bullets",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/CritDamageWhileAimingPistolMod"
   },
@@ -3030,7 +3030,7 @@
    ],
    "mod_set": null,
    "name": "Pressurized Magazine",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/FireRateWhileAimingPistolMod"
   },
@@ -3078,7 +3078,7 @@
    ],
    "mod_set": null,
    "name": "Critical Mutation",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/Nightwave/NightwaveCatabolystAugmentMod"
   },
@@ -3125,7 +3125,7 @@
    ],
    "mod_set": null,
    "name": "Prototype Shock Coils",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/Nightwave/NightwaveLasGooPistolAugmentMod"
   },
@@ -3173,7 +3173,7 @@
    ],
    "mod_set": null,
    "name": "Sentient Surge",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/Nightwave/NightwaveOcucorAugmentMod"
   },
@@ -3221,7 +3221,7 @@
    ],
    "mod_set": null,
    "name": "Velox Conclusion",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/Nightwave/NightwaveVeloxAugmentMod"
   },
@@ -3285,7 +3285,7 @@
    ],
    "mod_set": null,
    "name": "Energizing Shot",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/ShootPickUpPistolMod"
   },
@@ -3349,7 +3349,7 @@
    ],
    "mod_set": null,
    "name": "Embedded Catalyzer",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/StatusProcWhileAimingPistolMod"
   },
@@ -3426,7 +3426,7 @@
    ],
    "mod_set": null,
    "name": "Primed Target Cracker",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/PrimedWeaponCritDamageMod"
   },
@@ -3503,7 +3503,7 @@
    ],
    "mod_set": null,
    "name": "Primed Convulsion",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/PrimedWeaponElectricityDamageMod"
   },
@@ -3580,7 +3580,7 @@
    ],
    "mod_set": null,
    "name": "Primed Slip Magazine",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponClipMaxModExpert"
   },
@@ -3657,7 +3657,7 @@
    ],
    "mod_set": null,
    "name": "Primed Pistol Gambit",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponCritChanceModBeginnerExpert"
   },
@@ -3734,7 +3734,7 @@
    ],
    "mod_set": null,
    "name": "Primed Heated Charge",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponFireDamageModExpert"
   },
@@ -3794,7 +3794,7 @@
    ],
    "mod_set": null,
    "name": "Primed Pistol Ammo Mutation",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolConvertAmmoModExpert"
   },
@@ -3871,7 +3871,7 @@
    ],
    "mod_set": null,
    "name": "Primed Expel Corpus",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageCorpusExpert"
   },
@@ -3948,7 +3948,7 @@
    ],
    "mod_set": null,
    "name": "Primed Expel Orokin",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageCorruptedExpert"
   },
@@ -4025,7 +4025,7 @@
    ],
    "mod_set": null,
    "name": "Primed Expel Grineer",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageGrineerExpert"
   },
@@ -4102,7 +4102,7 @@
    ],
    "mod_set": null,
    "name": "Primed Expel Infested",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageInfestedExpert"
   },
@@ -4179,7 +4179,7 @@
    ],
    "mod_set": null,
    "name": "Primed Expel The Murmur",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageMurmursExpert"
   },
@@ -4239,7 +4239,7 @@
    ],
    "mod_set": null,
    "name": "Primed Steady Hands",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponRecoilReductionModExpert"
   },
@@ -4316,7 +4316,7 @@
    ],
    "mod_set": null,
    "name": "Primed Quickdraw",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponReloadSpeedModExpert"
   },
@@ -4402,7 +4402,7 @@
    ],
    "mod_set": null,
    "name": "Semi-Pistol Cannonade",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/PistolSemiAutoFantasyMod"
   },
@@ -4486,7 +4486,7 @@
    ],
    "mod_set": null,
    "name": "Pistol Elementalist",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/PistolStatusDamageDuoMod"
   },
@@ -4531,7 +4531,7 @@
    ],
    "mod_set": null,
    "name": "Cannonade",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/ProjectileExplosionChanceMod"
   },
@@ -4574,7 +4574,7 @@
    ],
    "mod_set": null,
    "name": "Concealed Explosives",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/ThrowingExplosionChanceMod"
   },
@@ -4619,7 +4619,7 @@
    ],
    "mod_set": null,
    "name": "Trick Mag",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponAmmoMaxMod"
   },
@@ -4681,7 +4681,7 @@
    ],
    "mod_set": null,
    "name": "No Return",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponArmorPiercingDamageMod"
   },
@@ -4722,7 +4722,7 @@
    ],
    "mod_set": null,
    "name": "Ruinous Extension",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponBeamDistanceMod"
   },
@@ -4787,7 +4787,7 @@
    ],
    "mod_set": null,
    "name": "Hemorrhage",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponBleedOnImpactPistolMod"
   },
@@ -4849,7 +4849,7 @@
    ],
    "mod_set": null,
    "name": "Slip Magazine",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponClipMaxMod"
   },
@@ -4911,7 +4911,7 @@
    ],
    "mod_set": null,
    "name": "Pistol Gambit",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponCritChanceMod"
   },
@@ -4973,7 +4973,7 @@
    ],
    "mod_set": null,
    "name": "Target Cracker",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponCritDamageMod"
   },
@@ -5050,7 +5050,7 @@
    ],
    "mod_set": null,
    "name": "Hornet Strike",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponDamageAmountMod"
   },
@@ -5112,7 +5112,7 @@
    ],
    "mod_set": null,
    "name": "Convulsion",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponElectricityDamageMod"
   },
@@ -5174,7 +5174,7 @@
    ],
    "mod_set": null,
    "name": "Pummel",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponEventPistolImpactDamageMod"
   },
@@ -5236,7 +5236,7 @@
    ],
    "mod_set": null,
    "name": "Bore",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponEventPunctureDamageMod"
   },
@@ -5298,7 +5298,7 @@
    ],
    "mod_set": null,
    "name": "Maim",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponEventSlashDamageMod"
   },
@@ -5360,7 +5360,7 @@
    ],
    "mod_set": null,
    "name": "Heated Charge",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponFireDamageMod"
   },
@@ -5422,7 +5422,7 @@
    ],
    "mod_set": null,
    "name": "Barrel Diffusion",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponFireIterationsMod"
   },
@@ -5526,7 +5526,7 @@
    ],
    "mod_set": null,
    "name": "Galvanized Diffusion",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponFireIterationsSPMod"
   },
@@ -5588,7 +5588,7 @@
    ],
    "mod_set": null,
    "name": "Gunslinger",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponFireRateMod"
   },
@@ -5650,7 +5650,7 @@
    ],
    "mod_set": null,
    "name": "Deep Freeze",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponFreezeDamageMod"
   },
@@ -5712,7 +5712,7 @@
    ],
    "mod_set": null,
    "name": "Concussion Rounds",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponImpactDamageMod"
   },
@@ -5751,7 +5751,7 @@
    ],
    "mod_set": null,
    "name": "Suppress",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponNoiseReductionMod"
   },
@@ -5796,7 +5796,7 @@
    ],
    "mod_set": null,
    "name": "Pistol Ammo Mutation",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolConvertAmmoMod"
   },
@@ -5858,7 +5858,7 @@
    ],
    "mod_set": null,
    "name": "Expel Corpus",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolFactionDamageCorpus"
   },
@@ -5920,7 +5920,7 @@
    ],
    "mod_set": null,
    "name": "Expel Orokin",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolFactionDamageCorrupted"
   },
@@ -5982,7 +5982,7 @@
    ],
    "mod_set": null,
    "name": "Expel Grineer",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolFactionDamageGrineer"
   },
@@ -6044,7 +6044,7 @@
    ],
    "mod_set": null,
    "name": "Expel Infested",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolFactionDamageInfested"
   },
@@ -6106,7 +6106,7 @@
    ],
    "mod_set": null,
    "name": "Expel The Murmur",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolFactionDamageMurmurs"
   },
@@ -6145,7 +6145,7 @@
    ],
    "mod_set": null,
    "name": "Hawk Eye",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolZoomFovMod"
   },
@@ -6207,7 +6207,7 @@
    ],
    "mod_set": null,
    "name": "Perpetual Agony",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponProcTimeMod"
   },
@@ -6246,7 +6246,7 @@
    ],
    "mod_set": null,
    "name": "Lethal Momentum",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponProjectileSpeedMod"
   },
@@ -6291,7 +6291,7 @@
    ],
    "mod_set": null,
    "name": "Seeker",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPunctureDepthMod"
   },
@@ -6330,7 +6330,7 @@
    ],
    "mod_set": null,
    "name": "Steady Hands",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponRecoilReductionMod"
   },
@@ -6392,7 +6392,7 @@
    ],
    "mod_set": null,
    "name": "Quickdraw",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponReloadSpeedMod"
   },
@@ -6454,7 +6454,7 @@
    ],
    "mod_set": null,
    "name": "Razor Shot",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponSlashDamageMod"
   },
@@ -6558,7 +6558,7 @@
    ],
    "mod_set": null,
    "name": "Galvanized Shot",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponStatusChanceSPMod"
   },
@@ -6620,7 +6620,7 @@
    ],
    "mod_set": null,
    "name": "Sure Shot",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponStunChanceMod"
   },
@@ -6682,7 +6682,7 @@
    ],
    "mod_set": null,
    "name": "Pathogen Rounds",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponToxinDamageMod"
   },
@@ -6802,7 +6802,7 @@
    ],
    "mod_set": null,
    "name": "Pistol Acuity",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponWeakpointCriticalChanceMod"
   },
@@ -6846,7 +6846,7 @@
    ],
    "mod_set": null,
    "name": "Double Tap",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/MoreDamageonTripleTapRifleMod"
   },
@@ -6889,7 +6889,7 @@
    ],
    "mod_set": null,
    "name": "Thunderbolt",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/BowExplosionChanceMod"
   },
@@ -6960,7 +6960,7 @@
    ],
    "mod_set": null,
    "name": "Split Flights",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/BowMultiShotOnHitMod"
   },
@@ -7046,7 +7046,7 @@
    ],
    "mod_set": null,
    "name": "Critical Delay",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedCritRateFireRateRifle"
   },
@@ -7134,7 +7134,7 @@
    ],
    "mod_set": null,
    "name": "Heavy Caliber",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedDamageRecoilRifle"
   },
@@ -7220,7 +7220,7 @@
    ],
    "mod_set": null,
    "name": "Vile Acceleration",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedFireRateDamageRifle"
   },
@@ -7324,7 +7324,7 @@
    ],
    "mod_set": null,
    "name": "Tainted Mag",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedMaxClipReloadSpeedRifle"
   },
@@ -7394,7 +7394,7 @@
    ],
    "mod_set": null,
    "name": "Vile Precision",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedRecoilFireRateRifle"
   },
@@ -7478,7 +7478,7 @@
    ],
    "mod_set": null,
    "name": "Depleted Reload",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedReloadSpeedMaxClipRifle"
   },
@@ -7554,7 +7554,7 @@
    ],
    "mod_set": null,
    "name": "High Voltage",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/ElectEventRifleMod"
   },
@@ -7630,7 +7630,7 @@
    ],
    "mod_set": null,
    "name": "Thermite Rounds",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/FireEventRifleMod"
   },
@@ -7706,7 +7706,7 @@
    ],
    "mod_set": null,
    "name": "Hammer Shot",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/HammerShotMod"
   },
@@ -7782,7 +7782,7 @@
    ],
    "mod_set": null,
    "name": "Rime Rounds",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/IceEventRifleMod"
   },
@@ -7858,7 +7858,7 @@
    ],
    "mod_set": null,
    "name": "Magnetic Capacity",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/MagneticClipRifleMod"
   },
@@ -7934,7 +7934,7 @@
    ],
    "mod_set": null,
    "name": "Malignant Force",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/PoisonEventRifleMod"
   },
@@ -8024,7 +8024,7 @@
    ],
    "mod_set": null,
    "name": "Primed Shred",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/PrimedShredMod"
   },
@@ -8100,7 +8100,7 @@
    ],
    "mod_set": null,
    "name": "Radiated Reload",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/RadiationReloadRifleMod"
   },
@@ -8170,7 +8170,7 @@
    ],
    "mod_set": null,
    "name": "Shred",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/ShredMod"
   },
@@ -8246,7 +8246,7 @@
    ],
    "mod_set": null,
    "name": "Wildfire",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/WildfireMod"
   },
@@ -8306,7 +8306,7 @@
    ],
    "mod_set": null,
    "name": "Sharpshooter",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/EnergyOnHeadshotRifle"
   },
@@ -8353,7 +8353,7 @@
    ],
    "mod_set": null,
    "name": "Guided Ordnance",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/AccuracyWhileAimingRifleMod"
   },
@@ -8403,7 +8403,7 @@
    ],
    "mod_set": null,
    "name": "Wild Frenzy",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/GrnAssaultRifleArbitrationMod"
   },
@@ -8446,7 +8446,7 @@
    ],
    "mod_set": null,
    "name": "Precision Strike",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/GrnGrenadeLauncherArbitrationMod"
   },
@@ -8495,7 +8495,7 @@
    ],
    "mod_set": null,
    "name": "Exposing Harpoon",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/GrnHarpoonGunArbitrationMod"
   },
@@ -8567,7 +8567,7 @@
    ],
    "mod_set": null,
    "name": "Meticulous Aim",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/GrnSniperRifleArbitrationMod"
   },
@@ -8617,7 +8617,7 @@
    ],
    "mod_set": null,
    "name": "Bursting Mass",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/InfCrpShockSwarmRifleArbitrationMod"
   },
@@ -8666,7 +8666,7 @@
    ],
    "mod_set": null,
    "name": "Aerial Ace",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/JumpRefreshOnKillRifleMod"
   },
@@ -8731,7 +8731,7 @@
    ],
    "mod_set": null,
    "name": "Mending Shot",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/ShootPickUpRifleMod"
   },
@@ -8780,7 +8780,7 @@
    ],
    "mod_set": null,
    "name": "Flux Overdrive",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CorpusArena/FluxRifleCorpusArenaMod"
   },
@@ -8829,7 +8829,7 @@
    ],
    "mod_set": null,
    "name": "Tether Grenades",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CorpusArena/PentaCorpusArenaMod"
   },
@@ -8872,7 +8872,7 @@
    ],
    "mod_set": null,
    "name": "Thermagnetic Shells",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CorpusArena/SupraCorpusArenaMod"
   },
@@ -8921,7 +8921,7 @@
    ],
    "mod_set": null,
    "name": "Kinetic Ricochet",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CorpusArena/TetraCorpusArenaMod"
   },
@@ -8983,7 +8983,7 @@
    ],
    "mod_set": null,
    "name": "Argon Scope",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CritChanceWhileAimingRifleMod"
   },
@@ -9076,7 +9076,7 @@
    ],
    "mod_set": null,
    "name": "Galvanized Scope",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CritChanceWhileAimingRifleSPMod"
   },
@@ -9138,7 +9138,7 @@
    ],
    "mod_set": null,
    "name": "Bladed Rounds",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CritDamageWhileAimingRifleMod"
   },
@@ -9202,7 +9202,7 @@
    ],
    "mod_set": null,
    "name": "Spring-Loaded Chamber",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/FireRateWhileAimingRifleMod"
   },
@@ -9251,7 +9251,7 @@
    ],
    "mod_set": null,
    "name": "Range Advantage",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveAkjagaraAugmentMod"
   },
@@ -9299,7 +9299,7 @@
    ],
    "mod_set": null,
    "name": "Dreadful Killshot",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveBasmuAugmentMod"
   },
@@ -9347,7 +9347,7 @@
    ],
    "mod_set": null,
    "name": "Sentient Barrage",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveBattacorAugmentMod"
   },
@@ -9395,7 +9395,7 @@
    ],
    "mod_set": null,
    "name": "Vile Discharge",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveEmbolistAugmentMod"
   },
@@ -9471,7 +9471,7 @@
    ],
    "mod_set": null,
    "name": "Metamorphic Magazine",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveGorgonAugmentMod"
   },
@@ -9519,7 +9519,7 @@
    ],
    "mod_set": null,
    "name": "Necrophagic Vigor",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveHemaAugmentMod"
   },
@@ -9567,7 +9567,7 @@
    ],
    "mod_set": null,
    "name": "Overpressured Rounds",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveLasGooAKAugmentMod"
   },
@@ -9615,7 +9615,7 @@
    ],
    "mod_set": null,
    "name": "Volatile Variant",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveSporothrixAugmentMod"
   },
@@ -9663,7 +9663,7 @@
    ],
    "mod_set": null,
    "name": "Critical Precision",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveTiberonAugmentMod"
   },
@@ -9712,7 +9712,7 @@
    ],
    "mod_set": null,
    "name": "Combat Reload",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveTigrisAugmentMod"
   },
@@ -9759,7 +9759,7 @@
    ],
    "mod_set": null,
    "name": "Eximus Advantage",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveZylokAugmentMod"
   },
@@ -9829,7 +9829,7 @@
    ],
    "mod_set": null,
    "name": "Bhisaj-Bal",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/ParisHealOnStatusMod"
   },
@@ -9878,7 +9878,7 @@
    ],
    "mod_set": null,
    "name": "Nightwatch Napalm",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/ProjectNightwatch/OgrisNightwatchMod"
   },
@@ -9923,7 +9923,7 @@
    ],
    "mod_set": null,
    "name": "Harkonar Scope",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/ProjectNightwatch/VulkarNightwatchMod"
   },
@@ -9971,7 +9971,7 @@
    ],
    "mod_set": null,
    "name": "Hata-Satya",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/SomaCritChanceOnHitMod"
   },
@@ -10033,7 +10033,7 @@
    ],
    "mod_set": null,
    "name": "Catalyzer Link",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/StatusProcWhileAimingRifleMod"
   },
@@ -10089,7 +10089,7 @@
    ],
    "mod_set": null,
    "name": "Primed Chamber",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/EventSniperReloadDamageMod"
   },
@@ -10166,7 +10166,7 @@
    ],
    "mod_set": null,
    "name": "Primed Bane of Corpus",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/PrimedWeaponFactionDamageCorpus"
   },
@@ -10243,7 +10243,7 @@
    ],
    "mod_set": null,
    "name": "Primed Bane of Orokin",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/PrimedWeaponFactionDamageCorrupted"
   },
@@ -10320,7 +10320,7 @@
    ],
    "mod_set": null,
    "name": "Primed Bane of Grineer",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/PrimedWeaponFactionDamageGrineer"
   },
@@ -10397,7 +10397,7 @@
    ],
    "mod_set": null,
    "name": "Primed Bane of Infested",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/PrimedWeaponFactionDamageInfested"
   },
@@ -10474,7 +10474,7 @@
    ],
    "mod_set": null,
    "name": "Primed Bane of The Murmur",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/PrimedWeaponFactionDamageMurmurs"
   },
@@ -10551,7 +10551,7 @@
    ],
    "mod_set": null,
    "name": "Primed Charged Chamber",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/SniperReloadDamageModExpert"
   },
@@ -10628,7 +10628,7 @@
    ],
    "mod_set": null,
    "name": "Primed Magazine Warp",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponClipMaxModExpert"
   },
@@ -10705,7 +10705,7 @@
    ],
    "mod_set": null,
    "name": "Primed Cryo Rounds",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponFreezeDamageModExpert"
   },
@@ -10765,7 +10765,7 @@
    ],
    "mod_set": null,
    "name": "Primed Firestorm",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponIncreaseRadialExplosionModExpert"
   },
@@ -10825,7 +10825,7 @@
    ],
    "mod_set": null,
    "name": "Primed Stabilizer",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponRecoilReductionModExpert"
   },
@@ -10902,7 +10902,7 @@
    ],
    "mod_set": null,
    "name": "Primed Fast Hands",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponReloadSpeedModExpert"
   },
@@ -10964,7 +10964,7 @@
    ],
    "mod_set": null,
    "name": "Primed Rifle Ammo Mutation",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponRifleConvertAmmoModExpert"
   },
@@ -11027,7 +11027,7 @@
    ],
    "mod_set": null,
    "name": "Primed Sniper Ammo Mutation",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponSnipersConvertAmmoModExpert"
   },
@@ -11077,7 +11077,7 @@
    ],
    "mod_set": null,
    "name": "Napalm Grenades",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/GrenadeLauncherProjectileMod"
   },
@@ -11165,7 +11165,7 @@
    ],
    "mod_set": null,
    "name": "Semi-Rifle Cannonade",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/RifleSemiAutoFantasyMod"
   },
@@ -11233,7 +11233,7 @@
    ],
    "mod_set": null,
    "name": "Rifle Elementalist",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/RifleStatusDamageDuoMod"
   },
@@ -11295,7 +11295,7 @@
    ],
    "mod_set": null,
    "name": "Target Acquired",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/SniperHeadshotMultiplierMod"
   },
@@ -11351,7 +11351,7 @@
    ],
    "mod_set": null,
    "name": "Charged Chamber",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/SniperReloadDamageMod"
   },
@@ -11396,7 +11396,7 @@
    ],
    "mod_set": null,
    "name": "Ammo Drum",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponAmmoMaxMod"
   },
@@ -11458,7 +11458,7 @@
    ],
    "mod_set": null,
    "name": "Piercing Hit",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponArmorPiercingDamageMod"
   },
@@ -11499,7 +11499,7 @@
    ],
    "mod_set": null,
    "name": "Sinister Reach",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponBeamDistanceMod"
   },
@@ -11548,7 +11548,7 @@
    ],
    "mod_set": null,
    "name": "Combustion Beam",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponBeamExplodeOnDeath"
   },
@@ -11613,7 +11613,7 @@
    ],
    "mod_set": null,
    "name": "Internal Bleeding",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponBleedOnImpactProcRifleMod"
   },
@@ -11658,7 +11658,7 @@
    ],
    "mod_set": null,
    "name": "Arrow Mutation",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponBowConvertAmmoMod"
   },
@@ -11720,7 +11720,7 @@
    ],
    "mod_set": null,
    "name": "Magazine Warp",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponClipMaxMod"
   },
@@ -11782,7 +11782,7 @@
    ],
    "mod_set": null,
    "name": "Point Strike",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponCritChanceMod"
   },
@@ -11844,7 +11844,7 @@
    ],
    "mod_set": null,
    "name": "Vital Sense",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponCritDamageMod"
   },
@@ -11906,7 +11906,7 @@
    ],
    "mod_set": null,
    "name": "Spectral Serration",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountInvisibleMod"
   },
@@ -11983,7 +11983,7 @@
    ],
    "mod_set": null,
    "name": "Serration",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod"
   },
@@ -12045,7 +12045,7 @@
    ],
    "mod_set": null,
    "name": "Stormbringer",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponElectricityDamageMod"
   },
@@ -12107,7 +12107,7 @@
    ],
    "mod_set": null,
    "name": "Piercing Caliber",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponEventPunctureDamageMod"
   },
@@ -12169,7 +12169,7 @@
    ],
    "mod_set": null,
    "name": "Crash Course",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponEventRifleImpactDamageMod"
   },
@@ -12231,7 +12231,7 @@
    ],
    "mod_set": null,
    "name": "Fanged Fusillade",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponEventSlashDamageMod"
   },
@@ -12293,7 +12293,7 @@
    ],
    "mod_set": null,
    "name": "Bane of Corpus",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFactionDamageCorpus"
   },
@@ -12355,7 +12355,7 @@
    ],
    "mod_set": null,
    "name": "Bane of Orokin",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFactionDamageCorrupted"
   },
@@ -12417,7 +12417,7 @@
    ],
    "mod_set": null,
    "name": "Bane of Grineer",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFactionDamageGrineer"
   },
@@ -12479,7 +12479,7 @@
    ],
    "mod_set": null,
    "name": "Bane of Infested",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFactionDamageInfested"
   },
@@ -12541,7 +12541,7 @@
    ],
    "mod_set": null,
    "name": "Bane of The Murmur",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFactionDamageMurmurs"
   },
@@ -12603,7 +12603,7 @@
    ],
    "mod_set": null,
    "name": "Hellfire",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFireDamageMod"
   },
@@ -12665,7 +12665,7 @@
    ],
    "mod_set": null,
    "name": "Split Chamber",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFireIterationsMod"
   },
@@ -12769,7 +12769,7 @@
    ],
    "mod_set": null,
    "name": "Galvanized Chamber",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFireIterationsSPMod"
   },
@@ -12833,7 +12833,7 @@
    ],
    "mod_set": null,
    "name": "Speed Trigger",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFireRateMod"
   },
@@ -12895,7 +12895,7 @@
    ],
    "mod_set": null,
    "name": "Cryo Rounds",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFreezeDamageMod"
   },
@@ -12946,7 +12946,7 @@
    ],
    "mod_set": null,
    "name": "Adhesive Blast",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponGrenadeStickyMod"
   },
@@ -13008,7 +13008,7 @@
    ],
    "mod_set": null,
    "name": "Rupture",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponImpactDamageMod"
   },
@@ -13047,7 +13047,7 @@
    ],
    "mod_set": null,
    "name": "Firestorm",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponIncreaseRadialExplosionMod"
   },
@@ -13086,7 +13086,7 @@
    ],
    "mod_set": null,
    "name": "Hush",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponNoiseReductionMod"
   },
@@ -13142,7 +13142,7 @@
    ],
    "mod_set": null,
    "name": "Continuous Misery",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponProcTimeMod"
   },
@@ -13183,7 +13183,7 @@
    ],
    "mod_set": null,
    "name": "Terminal Velocity",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponProjectileSpeedMod"
   },
@@ -13228,7 +13228,7 @@
    ],
    "mod_set": null,
    "name": "Metal Auger",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponPunctureDepthMod"
   },
@@ -13267,7 +13267,7 @@
    ],
    "mod_set": null,
    "name": "Stabilizer",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponRecoilReductionMod"
   },
@@ -13329,7 +13329,7 @@
    ],
    "mod_set": null,
    "name": "Fast Hands",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponReloadSpeedMod"
   },
@@ -13391,7 +13391,7 @@
    ],
    "mod_set": null,
    "name": "Cautious Shot",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponResistSelfDamageMod"
   },
@@ -13438,7 +13438,7 @@
    ],
    "mod_set": null,
    "name": "Rifle Ammo Mutation",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponRifleConvertAmmoMod"
   },
@@ -13500,7 +13500,7 @@
    ],
    "mod_set": null,
    "name": "Sawtooth Clip",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponSlashDamageMod"
   },
@@ -13548,7 +13548,7 @@
    ],
    "mod_set": null,
    "name": "Sniper Ammo Mutation",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponSnipersConvertAmmoMod"
   },
@@ -13595,7 +13595,7 @@
    ],
    "mod_set": null,
    "name": "Shivering Contagion",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponSpreadFreezeProcsMod"
   },
@@ -13699,7 +13699,7 @@
    ],
    "mod_set": null,
    "name": "Galvanized Aptitude",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponStatusChanceSPMod"
   },
@@ -13761,7 +13761,7 @@
    ],
    "mod_set": null,
    "name": "Rifle Aptitude",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponStunChanceMod"
   },
@@ -13823,7 +13823,7 @@
    ],
    "mod_set": null,
    "name": "Infected Clip",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponToxinDamageMod"
   },
@@ -13943,7 +13943,7 @@
    ],
    "mod_set": null,
    "name": "Primary Acuity",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponWeakpointCriticalChanceMod"
   },
@@ -13982,7 +13982,7 @@
    ],
    "mod_set": null,
    "name": "Eagle Eye",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponZoomFovMod"
   },
@@ -14066,7 +14066,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Ashen/AshenSetMod",
    "name": "Carnis Stinger",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Ashen/AshenStingerMod"
   },
@@ -14128,7 +14128,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Augur/AugurSetMod",
    "name": "Augur Pact",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Augur/SecondaryAugurPactMod"
   },
@@ -14190,7 +14190,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Augur/AugurSetMod",
    "name": "Augur Seeker",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Augur/SecondaryAugurSeekerMod"
   },
@@ -14274,7 +14274,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Boneblade/BonebladeSetMod",
    "name": "Jugulus Spines",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Boneblade/BonebladeSpinesMod"
   },
@@ -14358,7 +14358,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Femur/FemurSetMod",
    "name": "Saxum Spittle",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Femur/FemurSpittleMod"
   },
@@ -14399,7 +14399,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Hawk/HawkSetMod",
    "name": "Aero Agility",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Hawk/HawkModB"
   },
@@ -14438,7 +14438,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Hawk/HawkSetMod",
    "name": "Aero Periphery",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Hawk/HawkModC"
   },
@@ -14500,7 +14500,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Hunter/HunterSetMod",
    "name": "Hunter Munitions",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Hunter/PrimaryHunterMunitionsMod"
   },
@@ -14562,7 +14562,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Hunter/HunterSetMod",
    "name": "Hunter Track",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Hunter/PrimaryHunterTrackMod"
   },
@@ -14603,7 +14603,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Raptor/RaptorSetMod",
    "name": "Motus Setup",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Raptor/RaptorModB"
   },
@@ -14644,7 +14644,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Spider/SpiderSetMod",
    "name": "Proton Jet",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Spider/SpiderModB"
   },
@@ -14690,7 +14690,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Synth/SynthSetMod",
    "name": "Synth Charge",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Synth/PistolSynthChargeMod"
   },
@@ -14752,7 +14752,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Vigilante/VigilanteSetMod",
    "name": "Vigilante Armaments",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Vigilante/PrimaryVigilanteArmamentsMod"
   },
@@ -14816,7 +14816,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Vigilante/VigilanteSetMod",
    "name": "Vigilante Fervor",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Vigilante/PrimaryVigilanteFervorMod"
   },
@@ -14861,7 +14861,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Vigilante/VigilanteSetMod",
    "name": "Vigilante Offense",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Vigilante/PrimaryVigilanteOffenseMod"
   },
@@ -14906,7 +14906,7 @@
    ],
    "mod_set": "/Lotus/Upgrades/Mods/Sets/Vigilante/VigilanteSetMod",
    "name": "Vigilante Supplies",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Vigilante/PrimaryVigilanteSuppliesMod"
   },
@@ -14982,7 +14982,7 @@
    ],
    "mod_set": null,
    "name": "Accelerated Blast",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/AcceleratedBlastMod"
   },
@@ -15058,7 +15058,7 @@
    ],
    "mod_set": null,
    "name": "Blaze",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/BlazeMod"
   },
@@ -15134,7 +15134,7 @@
    ],
    "mod_set": null,
    "name": "Chilling Reload",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/ColdDmgReloadSpeedMod"
   },
@@ -15222,7 +15222,7 @@
    ],
    "mod_set": null,
    "name": "Tainted Shell",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedAccuracyFireRateShotgun"
   },
@@ -15306,7 +15306,7 @@
    ],
    "mod_set": null,
    "name": "Critical Deceleration",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedCritChanceFireRateShotgun"
   },
@@ -15374,7 +15374,7 @@
    ],
    "mod_set": null,
    "name": "Vicious Spread",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedDamageAccuracyShotgun"
   },
@@ -15458,7 +15458,7 @@
    ],
    "mod_set": null,
    "name": "Frail Momentum",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedFireRateDamageShotgun"
   },
@@ -15542,7 +15542,7 @@
    ],
    "mod_set": null,
    "name": "Burdened Magazine",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedMaxClipReloadSpeedShotgun"
   },
@@ -15618,7 +15618,7 @@
    ],
    "mod_set": null,
    "name": "Shell Shock",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/ElectEventShotgunMod"
   },
@@ -15694,7 +15694,7 @@
    ],
    "mod_set": null,
    "name": "Scattering Inferno",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/FireEventShotgunMod"
   },
@@ -15770,7 +15770,7 @@
    ],
    "mod_set": null,
    "name": "Frigid Blast",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/IceEventShotgunMod"
   },
@@ -15846,7 +15846,7 @@
    ],
    "mod_set": null,
    "name": "Magnetic Strafe",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/MagneticFireRateShotgunMod"
   },
@@ -15922,7 +15922,7 @@
    ],
    "mod_set": null,
    "name": "Toxic Barrage",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/PoisonEventShotgunMod"
   },
@@ -15998,7 +15998,7 @@
    ],
    "mod_set": null,
    "name": "Atomic Fallout",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/RadiationClipShotgunMod"
   },
@@ -16066,7 +16066,7 @@
    ],
    "mod_set": null,
    "name": "Seeking Fury",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/ReloadSpeedPunchThroughMod"
   },
@@ -16113,7 +16113,7 @@
    ],
    "mod_set": null,
    "name": "Narrow Barrel",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/AccuracyWhileAimingShotgunMod"
   },
@@ -16179,7 +16179,7 @@
    ],
    "mod_set": null,
    "name": "Efficient Beams",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/Arbitration/CrpSplitLaserArbitrationMod"
   },
@@ -16243,7 +16243,7 @@
    ],
    "mod_set": null,
    "name": "Laser Sight",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/CritChanceWhileAimingShotgunMod"
   },
@@ -16307,7 +16307,7 @@
    ],
    "mod_set": null,
    "name": "Shrapnel Shot",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/CritDamageWhileAimingShotgunMod"
   },
@@ -16371,7 +16371,7 @@
    ],
    "mod_set": null,
    "name": "Repeater Clip",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/FireRateWhileAimingShotgunMod"
   },
@@ -16414,7 +16414,7 @@
    ],
    "mod_set": null,
    "name": "Fomorian Accelerant",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/ProjectNightwatch/DrakgoonNightwatchMod"
   },
@@ -16463,7 +16463,7 @@
    ],
    "mod_set": null,
    "name": "Acid Shells",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/ProjectNightwatch/SobekNightwatchMod"
   },
@@ -16502,7 +16502,7 @@
    ],
    "mod_set": null,
    "name": "Silent Battery",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/ProjectNightwatch/WeaponNoiseReductionMod"
   },
@@ -16566,7 +16566,7 @@
    ],
    "mod_set": null,
    "name": "Nano-Applicator",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/StatusProcWhileAimingShotgunMod"
   },
@@ -16643,7 +16643,7 @@
    ],
    "mod_set": null,
    "name": "Primed Ammo Stock",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponClipMaxModExpert"
   },
@@ -16720,7 +16720,7 @@
    ],
    "mod_set": null,
    "name": "Primed Blunderbuss",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponCritChanceModExpert"
   },
@@ -16797,7 +16797,7 @@
    ],
    "mod_set": null,
    "name": "Primed Ravage",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponCritDamageModExpert"
   },
@@ -16874,7 +16874,7 @@
    ],
    "mod_set": null,
    "name": "Primed Point Blank",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponDamageAmountModExpert"
   },
@@ -16951,7 +16951,7 @@
    ],
    "mod_set": null,
    "name": "Primed Charged Shell",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponElectricityDamageModExpert"
   },
@@ -17028,7 +17028,7 @@
    ],
    "mod_set": null,
    "name": "Primed Chilling Grasp",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponFreezeDamageModExpert"
   },
@@ -17088,7 +17088,7 @@
    ],
    "mod_set": null,
    "name": "Primed Counterbalance",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponRecoilReductionModExpert"
   },
@@ -17165,7 +17165,7 @@
    ],
    "mod_set": null,
    "name": "Primed Tactical Pump",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponReloadSpeedModExpert"
   },
@@ -17225,7 +17225,7 @@
    ],
    "mod_set": null,
    "name": "Primed Shotgun Ammo Mutation",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunConvertAmmoModExpert"
   },
@@ -17302,7 +17302,7 @@
    ],
    "mod_set": null,
    "name": "Primed Cleanse Corpus",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageCorpusExpert"
   },
@@ -17379,7 +17379,7 @@
    ],
    "mod_set": null,
    "name": "Primed Cleanse Orokin",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageCorruptedExpert"
   },
@@ -17456,7 +17456,7 @@
    ],
    "mod_set": null,
    "name": "Primed Cleanse Grineer",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageGrineerExpert"
   },
@@ -17533,7 +17533,7 @@
    ],
    "mod_set": null,
    "name": "Primed Cleanse Infested",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageInfestedExpert"
   },
@@ -17610,7 +17610,7 @@
    ],
    "mod_set": null,
    "name": "Primed Cleanse The Murmur",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "LEGENDARY",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageMurmursExpert"
   },
@@ -17698,7 +17698,7 @@
    ],
    "mod_set": null,
    "name": "Semi-Shotgun Cannonade",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/ShotgunSemiAutoFantasyMod"
   },
@@ -17782,7 +17782,7 @@
    ],
    "mod_set": null,
    "name": "Shotgun Elementalist",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/ShotgunStatusDamageDuoMod"
   },
@@ -17827,7 +17827,7 @@
    ],
    "mod_set": null,
    "name": "Shell Compression",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponAmmoMaxMod"
   },
@@ -17889,7 +17889,7 @@
    ],
    "mod_set": null,
    "name": "Flechette",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponArmorPiercingDamageMod"
   },
@@ -17951,7 +17951,7 @@
    ],
    "mod_set": null,
    "name": "Ammo Stock",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponClipMaxMod"
   },
@@ -18013,7 +18013,7 @@
    ],
    "mod_set": null,
    "name": "Blunderbuss",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponCritChanceMod"
   },
@@ -18075,7 +18075,7 @@
    ],
    "mod_set": null,
    "name": "Ravage",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponCritDamageMod"
   },
@@ -18137,7 +18137,7 @@
    ],
    "mod_set": null,
    "name": "Point Blank",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponDamageAmountMod"
   },
@@ -18199,7 +18199,7 @@
    ],
    "mod_set": null,
    "name": "Charged Shell",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponElectricityDamageMod"
   },
@@ -18261,7 +18261,7 @@
    ],
    "mod_set": null,
    "name": "Breach Loader",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponEventPunctureDamageMod"
   },
@@ -18323,7 +18323,7 @@
    ],
    "mod_set": null,
    "name": "Full Contact",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponEventShotgunImpactDamageMod"
   },
@@ -18385,7 +18385,7 @@
    ],
    "mod_set": null,
    "name": "Sweeping Serration",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponEventSlashDamageMod"
   },
@@ -18447,7 +18447,7 @@
    ],
    "mod_set": null,
    "name": "Incendiary Coat",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponFireDamageMod"
   },
@@ -18509,7 +18509,7 @@
    ],
    "mod_set": null,
    "name": "Hell's Chamber",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponFireIterationsMod"
   },
@@ -18613,7 +18613,7 @@
    ],
    "mod_set": null,
    "name": "Galvanized Hell",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponFireIterationsSPMod"
   },
@@ -18675,7 +18675,7 @@
    ],
    "mod_set": null,
    "name": "Shotgun Barrage",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponFireRateMod"
   },
@@ -18737,7 +18737,7 @@
    ],
    "mod_set": null,
    "name": "Chilling Grasp",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponFreezeDamageMod"
   },
@@ -18799,7 +18799,7 @@
    ],
    "mod_set": null,
    "name": "Disruptor",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponImpactDamageMod"
   },
@@ -18864,7 +18864,7 @@
    ],
    "mod_set": null,
    "name": "Magnetic Welt",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponMagneticOnImpactShotgunMod"
   },
@@ -18926,7 +18926,7 @@
    ],
    "mod_set": null,
    "name": "Lingering Torment",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponProcTimeMod"
   },
@@ -18965,7 +18965,7 @@
    ],
    "mod_set": null,
    "name": "Fatal Acceleration",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponProjectileSpeedMod"
   },
@@ -19036,7 +19036,7 @@
    ],
    "mod_set": null,
    "name": "Galvanized Acceleration",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponProjectileSpeedSPMod"
   },
@@ -19081,7 +19081,7 @@
    ],
    "mod_set": null,
    "name": "Seeking Force",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponPunctureDepthMod"
   },
@@ -19120,7 +19120,7 @@
    ],
    "mod_set": null,
    "name": "Counterbalance",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponRecoilReductionMod"
   },
@@ -19182,7 +19182,7 @@
    ],
    "mod_set": null,
    "name": "Tactical Pump",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponReloadSpeedMod"
   },
@@ -19227,7 +19227,7 @@
    ],
    "mod_set": null,
    "name": "Shotgun Ammo Mutation",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunConvertAmmoMod"
   },
@@ -19289,7 +19289,7 @@
    ],
    "mod_set": null,
    "name": "Cleanse Corpus",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunFactionDamageCorpus"
   },
@@ -19351,7 +19351,7 @@
    ],
    "mod_set": null,
    "name": "Cleanse Orokin",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunFactionDamageCorrupted"
   },
@@ -19413,7 +19413,7 @@
    ],
    "mod_set": null,
    "name": "Cleanse Grineer",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunFactionDamageGrineer"
   },
@@ -19475,7 +19475,7 @@
    ],
    "mod_set": null,
    "name": "Cleanse Infested",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunFactionDamageInfested"
   },
@@ -19537,7 +19537,7 @@
    ],
    "mod_set": null,
    "name": "Cleanse The Murmur",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunFactionDamageMurmurs"
   },
@@ -19599,7 +19599,7 @@
    ],
    "mod_set": null,
    "name": "Shredder",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "COMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponSlashDamageMod"
   },
@@ -19703,7 +19703,7 @@
    ],
    "mod_set": null,
    "name": "Galvanized Savvy",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponStatusChanceSPMod"
   },
@@ -19765,7 +19765,7 @@
    ],
    "mod_set": null,
    "name": "Shotgun Savvy",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponStunChanceMod"
   },
@@ -19827,7 +19827,7 @@
    ],
    "mod_set": null,
    "name": "Contagious Spread",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "UNCOMMON",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponToxinDamageMod"
   },
@@ -19889,7 +19889,7 @@
    ],
    "mod_set": null,
    "name": "Toxic Sequence",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/AcridMod"
   },
@@ -19951,7 +19951,7 @@
    ],
    "mod_set": null,
    "name": "Soaring Truth",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/BallisticaMod"
   },
@@ -19997,7 +19997,7 @@
    ],
    "mod_set": null,
    "name": "Entropy Spike",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/BoltoMod"
   },
@@ -20059,7 +20059,7 @@
    ],
    "mod_set": null,
    "name": "Gilded Truth",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/BurstonPrimeMod"
   },
@@ -20121,7 +20121,7 @@
    ],
    "mod_set": null,
    "name": "Eroding Blight",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/EmbolistMod"
   },
@@ -20166,7 +20166,7 @@
    ],
    "mod_set": null,
    "name": "Winds of Purity",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/FurisMod"
   },
@@ -20228,7 +20228,7 @@
    ],
    "mod_set": null,
    "name": "Deadly Sequence",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/GrinlokMod"
   },
@@ -20292,7 +20292,7 @@
    ],
    "mod_set": null,
    "name": "Scattered Justice",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/HekMod"
   },
@@ -20354,7 +20354,7 @@
    ],
    "mod_set": null,
    "name": "Stockpiled Blight",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/KunaiMod"
   },
@@ -20402,7 +20402,7 @@
    ],
    "mod_set": null,
    "name": "Voltage Sequence",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/LankaMod"
   },
@@ -20448,7 +20448,7 @@
    ],
    "mod_set": null,
    "name": "Neutralizing Justice",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/MiterMod"
   },
@@ -20494,7 +20494,7 @@
    ],
    "mod_set": null,
    "name": "Disarming Purity",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/PantheraMod"
   },
@@ -20556,7 +20556,7 @@
    ],
    "mod_set": null,
    "name": "Shattering Justice",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/SobekMod"
   },
@@ -20601,7 +20601,7 @@
    ],
    "mod_set": null,
    "name": "Sequence Burn",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/SpectraMod"
   },
@@ -20647,7 +20647,7 @@
    ],
    "mod_set": null,
    "name": "Entropy Burst",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/SupraMod"
   },
@@ -20693,7 +20693,7 @@
    ],
    "mod_set": null,
    "name": "Stinging Truth",
-   "polarity": "AP_DEFENSE",
+   "polarity": "vazarin",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/ViperMod"
   },
@@ -20755,7 +20755,7 @@
    ],
    "mod_set": null,
    "name": "Lasting Purity",
-   "polarity": "AP_TACTIC",
+   "polarity": "naramon",
    "rarity": "RARE",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/VulkarMod"
   },
@@ -20819,7 +20819,7 @@
    ],
    "mod_set": null,
    "name": "Higasa Serration",
-   "polarity": "AP_ATTACK",
+   "polarity": "madurai",
    "rarity": "RARE",
    "unique_name": "/Lotus/Weapons/Tenno/LongGuns/Gunbrella/ShrineMaidenGunbrellaAugment"
   }

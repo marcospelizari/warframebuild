@@ -8,13 +8,20 @@ from pydantic import ValidationError
 
 from app.domain.direct_bonus import DirectBonus
 from app.domain.effects import DamageType
+from app.domain.polarity import Polarity
 from app.gamedata.models import Attack, BonusElement, Exclusion, Falloff, Join, Weapon
 from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.effects import Overrides
 from app.pipeline.build.fire import FireOverrides, attack_data, fire_rate
 from app.pipeline.errors import RefreshError
-from app.pipeline.sources.de_export import DAMAGE_SLOT_COUNT, DAMAGE_SLOTS, WEAPON_CATEGORY
+from app.pipeline.sources.de_export import (
+    DAMAGE_SLOT_COUNT,
+    DAMAGE_SLOTS,
+    DEFAULT_MAX_RANK,
+    WEAPON_CATEGORY,
+)
 from app.pipeline.sources.export_plus import known
+from app.pipeline.sources.wfcd import POLARITIES
 from app.pipeline.sources.wiki_progenitor import Progenitor
 from app.pipeline.sources.wiki_weapon_data import AttackData, WeaponData
 
@@ -119,8 +126,11 @@ def _weapon(
             reload_time=fire.reload_time(d["uniqueName"], d["reloadTime"]),
             mastery_req=d["masteryReq"],
             riven_disposition=d["omegaAttenuation"],
-            polarities=list(w.get("polarities") or []),
-            exilus_polarity=w.get("exilusPolarity"),
+            polarities=[_polarity(x, d["name"]) for x in w.get("polarities") or []],
+            exilus_polarity=_polarity(w["exilusPolarity"], d["name"])
+            if w.get("exilusPolarity")
+            else None,
+            max_rank=d.get("maxLevelCap", DEFAULT_MAX_RANK),
             # WFCD lists each attack (charged, per pellet, AoE part); DE gives one summary,
             # so values legitimately differ. The main attack is chosen later (main_attack.json).
             attacks=[
@@ -252,3 +262,9 @@ def _magazine(d: dict[str, Any], data: WeaponData | None) -> int | None:
             "(exclude it in reference/fire_overrides.json until known)"
         )
     return data.magazine or None
+
+
+def _polarity(name: str, gun: str) -> Polarity:
+    if name not in POLARITIES:
+        raise RefreshError(f"{gun}: unknown WFCD polarity {name!r} (add it to wfcd.POLARITIES)")
+    return POLARITIES[name]

@@ -90,6 +90,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Cephalon/Primary/CephPrimary/CephPrimary",
@@ -160,6 +161,7 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Bio/AcidDartPistol",
@@ -274,6 +276,7 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Bio/BioWeapon",
@@ -341,6 +344,7 @@
   "headshot": [],
   "magazine_size": 150,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Chemical/FlameThrower",
@@ -408,6 +412,7 @@
   "headshot": [],
   "magazine_size": 200,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Chemical/FlameThrower",
@@ -503,6 +508,7 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Chemical/RocketLauncher",
@@ -573,6 +579,7 @@
   "headshot": [],
   "magazine_size": 180,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Energy/CrpHeavyRifle",
@@ -640,6 +647,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Energy/CrpLaserPistol",
@@ -707,6 +715,7 @@
   "headshot": [],
   "magazine_size": 50,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Energy/CrpLaserRifle",
@@ -801,6 +810,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Energy/DeraVandal",
@@ -897,6 +907,7 @@
   "headshot": [],
   "magazine_size": 45,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Energy/EnergyRifle",
@@ -997,6 +1008,7 @@
   ],
   "magazine_size": 10,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Energy/Railgun",
@@ -1103,6 +1115,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 16,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEArcaPlasmor/CrpBEArcaPlasmor",
@@ -1264,6 +1277,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 16,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
@@ -1349,6 +1363,7 @@
   "headshot": [],
   "magazine_size": 120,
   "mastery_req": 16,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Energy/CrpLaserRifle",
@@ -1427,6 +1442,7 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 16,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEGlaxion/CrpBEGlaxion",
@@ -1580,6 +1596,7 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 16,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEQuanta/CrpBEQuanta",
@@ -1714,6 +1731,7 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 16,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBETetra/CrpBETetra",
@@ -1793,6 +1811,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 14,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBECycron/CrpBECycron",
@@ -1903,6 +1922,7 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 16,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBEDetron/CrpBEDetron",
@@ -2035,6 +2055,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 6,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBEPlinx/CrpBEPlinxWeapon",
@@ -2171,6 +2192,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Bow/Longbow/CrpBow",
@@ -2308,6 +2330,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Bow/Longbow/CrpBow",
@@ -2380,6 +2403,7 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/ChainLightningGun/ChainLightningRifle",
@@ -2447,6 +2471,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 3,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/CorpusUMP",
@@ -2515,6 +2540,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/CorpusUMP",
@@ -2629,6 +2655,7 @@
   "headshot": [],
   "magazine_size": 96,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CrpArSniper/CrpArSniperRifle",
@@ -2778,6 +2805,7 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
@@ -2929,6 +2957,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
@@ -3038,6 +3067,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 16,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
@@ -3104,6 +3134,7 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/CrpFreezeRayRifle",
@@ -3169,6 +3200,7 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/CrpFreezeRayRifle",
@@ -3292,6 +3324,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CrpRubanRifle/CrpRubanRifle",
@@ -3401,6 +3434,7 @@
   ],
   "magazine_size": 20,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CrpSentAmlgSniper/CrpSentAmlgSniper",
@@ -3590,6 +3624,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CrpSentExperimentRifle/CrpSentExperimentRifle",
@@ -3666,6 +3701,7 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CrpShapeBlast/CrpShapeBlastShotgun",
@@ -3808,6 +3844,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CrpShockRifle/CrpShockRifle",
@@ -3950,6 +3987,7 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CrpShockRifle/CrpShockRifle",
@@ -4023,6 +4061,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CrpShotgun/CrpShotgun",
@@ -4118,6 +4157,7 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/LongGuns/CrpSplitLaser/CrpSplitLaser",
@@ -4214,6 +4254,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
@@ -4310,6 +4351,7 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
@@ -4380,6 +4422,7 @@
   "headshot": [],
   "magazine_size": 300,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Energy/CrpHeavyRifle",
@@ -4528,6 +4571,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
@@ -4603,6 +4647,7 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CorpusHandShotgun/CorpusHandCannon",
@@ -4691,6 +4736,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/CorpusMinigun",
@@ -4756,6 +4802,7 @@
   "headshot": [],
   "magazine_size": 120,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/DualCorpusMinigun",
@@ -4823,6 +4870,7 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Energy/CrpLaserPistol",
@@ -4919,6 +4967,7 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 2,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CrpAirPistol/CrpAirPistolArray",
@@ -5022,6 +5071,7 @@
   "headshot": [],
   "magazine_size": 92,
   "mastery_req": 16,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CrpBriefcaseAkimbo/CrpBriefcaseAkimboPistol",
@@ -5092,6 +5142,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CrpChargeGun/CrpChargeGun",
@@ -5233,6 +5284,7 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CrpElectroMag/CrpElectroMag",
@@ -5348,6 +5400,7 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher",
@@ -5463,6 +5516,7 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher",
@@ -5575,6 +5629,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CrpIgniterPistol/CrpIgniterPistol",
@@ -5692,6 +5747,7 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CrpSentAmalgPistol/CrpSentAmalgPistol",
@@ -5758,6 +5814,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CrpSentExperimentPistol/CrpSentExperimentPistol",
@@ -5825,6 +5882,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CrpSonificBlastor/CrpBlastorWeapon",
@@ -5890,6 +5948,7 @@
   "headshot": [],
   "magazine_size": 36,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/SniperPistol/CrpScopeGun",
@@ -6055,6 +6114,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 15,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Bows/GrnBow/GrnBowWeapon",
@@ -6126,6 +6186,7 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/GrineerPistol/GrineerAkimboPistol",
@@ -6193,6 +6254,7 @@
   "headshot": [],
   "magazine_size": 14,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/GrineerPistol/GrineerLightPistol",
@@ -6260,6 +6322,7 @@
   "headshot": [],
   "magazine_size": 14,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/GrineerPistol/GrnHeavyPistol",
@@ -6328,6 +6391,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/GrineerPistol/GrnScopedPistol",
@@ -6431,6 +6495,7 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 13,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Drakgoon/KuvaDrakgoon",
@@ -6545,6 +6610,7 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 15,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hek/KuvaHekWeapon",
@@ -6673,6 +6739,7 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 15,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hind/KuvaHind",
@@ -6756,6 +6823,7 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 13,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Karak/KuvaKarak",
@@ -6870,6 +6938,7 @@
   "headshot": [],
   "magazine_size": 209,
   "mastery_req": 13,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Kohm/KuvaKohm",
@@ -6987,6 +7056,7 @@
   "headshot": [],
   "magazine_size": 3,
   "mastery_req": 15,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/Chemical/RocketLauncher",
@@ -7093,6 +7163,7 @@
   "headshot": [],
   "magazine_size": 88,
   "mastery_req": 13,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Quartakk/KuvaQuartakk",
@@ -7180,6 +7251,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 15,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Sobek/KuvaSobek",
@@ -7292,6 +7364,7 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 13,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
@@ -7477,6 +7550,7 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 15,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
@@ -7568,6 +7642,7 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 13,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Brakk/KuvaBrakk",
@@ -7673,6 +7748,7 @@
   "headshot": [],
   "magazine_size": 21,
   "mastery_req": 15,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/GrineerPistol/GrnHeavyPistol",
@@ -7749,6 +7825,7 @@
   "headshot": [],
   "magazine_size": 77,
   "mastery_req": 13,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Nukor/KuvaNukor",
@@ -7857,6 +7934,7 @@
   "headshot": [],
   "magazine_size": 9,
   "mastery_req": 15,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/GrineerPistol/GrnScopedPistol",
@@ -7935,6 +8013,7 @@
   "headshot": [],
   "magazine_size": 114,
   "mastery_req": 13,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Stubba/KuvaStubba",
@@ -8028,6 +8107,7 @@
   "headshot": [],
   "magazine_size": 65,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/BurstRifle/GrnBurstRifle",
@@ -8098,6 +8178,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/GrnAssaultRifle",
@@ -8165,6 +8246,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/TwinGrakatas",
@@ -8258,6 +8340,7 @@
   "headshot": [],
   "magazine_size": 7,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrineerFlakCannon/FlakCannon",
@@ -8327,6 +8410,7 @@
   "headshot": [],
   "magazine_size": 9,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/GLARifle",
@@ -8399,6 +8483,7 @@
   "headshot": [],
   "magazine_size": 21,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/GLARifle",
@@ -8471,6 +8556,7 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 1,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrineerM16Homage/GrineerM16Rifle",
@@ -8542,6 +8628,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrineerM16Homage/GrineerM16Rifle",
@@ -8691,6 +8778,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun",
@@ -8776,6 +8864,7 @@
   ],
   "magazine_size": 6,
   "mastery_req": 3,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/GrnSniperRifle",
@@ -8881,6 +8970,7 @@
   ],
   "magazine_size": 8,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/GrnSniperRifle",
@@ -9075,6 +9165,7 @@
   "headshot": [],
   "magazine_size": 3,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
@@ -9226,6 +9317,7 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
@@ -9298,6 +9390,7 @@
   "headshot": [],
   "magazine_size": 84,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrnFourBarrelRifle/GrnFourBarrelRifleWeapon",
@@ -9401,6 +9494,7 @@
   ],
   "magazine_size": 50,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrnGorgSniperRifle/GrnGorgSniperRifle",
@@ -9498,6 +9592,7 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
@@ -9594,6 +9689,7 @@
   "headshot": [],
   "magazine_size": 45,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrnHarpoonGun/GrnHarpoonGun",
@@ -9710,6 +9806,7 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 15,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrnKuvaLichRifle/GrnKuvaLichRifleWeapon",
@@ -9778,6 +9875,7 @@
   "headshot": [],
   "magazine_size": 84,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrnOrokinRifle/GrnOrokinRifleWeapon",
@@ -9880,6 +9978,7 @@
   "headshot": [],
   "magazine_size": 245,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrnSpark/GrnSparkRifle",
@@ -9974,6 +10073,7 @@
   "headshot": [],
   "magazine_size": 43,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/LaserAimRifle/LaserAimRifle",
@@ -10097,6 +10197,7 @@
   "headshot": [],
   "magazine_size": 120,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/VoidTraderGorgon/VTGorgon",
@@ -10219,6 +10320,7 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/WraithGorgon/WraithGorgon",
@@ -10289,6 +10391,7 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/GrineerPistol/GrineerAkimboPistol",
@@ -10464,6 +10567,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 2,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun",
@@ -10539,6 +10643,7 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrineerHandShotgun/GrineerHandCannon",
@@ -10609,6 +10714,7 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrineerLeverActionPistol/GLAPistol",
@@ -10674,6 +10780,7 @@
   "headshot": [],
   "magazine_size": 50,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrineerMicrowavegun/GrnMicrowavePistol",
@@ -10769,6 +10876,7 @@
   "headshot": [],
   "magazine_size": 72,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrnAmphisPistol/GrnAmphisPistol",
@@ -10868,6 +10976,7 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrnDWUniques/GrnTwinKohmaks",
@@ -10970,6 +11079,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrnKohmPistol/GrnKohmPistol",
@@ -11037,6 +11147,7 @@
   "headshot": [],
   "magazine_size": 75,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrnOrokinPistol/GrnOrokinPistol",
@@ -11112,6 +11223,7 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrnQueenGuardDualPistol/GrnQueenGuardDualPistols",
@@ -11256,6 +11368,7 @@
   "headshot": [],
   "magazine_size": 3,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrnTorpedoPistol/GrnTorpedoPistol",
@@ -11323,6 +11436,7 @@
   "headshot": [],
   "magazine_size": 57,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrnUzi/GrnUziWeapon",
@@ -11434,6 +11548,7 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun",
@@ -11501,6 +11616,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/GrineerPistol/GrineerLightPistol",
@@ -11569,6 +11685,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/WraithTwinVipers/WraithTwinVipers",
@@ -11668,6 +11785,7 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/ThrowingWeapons/GrnVorStickyBomb/GrnVorStickyBomb",
@@ -11793,6 +11911,7 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/Bow/InfCernosBow/InfCernos",
@@ -11903,6 +12022,7 @@
   "headshot": [],
   "magazine_size": 24,
   "mastery_req": 17,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/InfestedLich/LongGuns/1999InfShotgun/1999InfShotgunWeapon",
@@ -12041,6 +12161,7 @@
   "headshot": [],
   "magazine_size": 36,
   "mastery_req": 17,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaBubonico/CodaBubonicoCannon",
@@ -12122,6 +12243,7 @@
   "headshot": [],
   "magazine_size": 72,
   "mastery_req": 17,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaHema",
@@ -12248,6 +12370,7 @@
   ],
   "magazine_size": 11,
   "mastery_req": 17,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaSporothrix",
@@ -12352,6 +12475,7 @@
   "headshot": [],
   "magazine_size": 76,
   "mastery_req": 17,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaSynapse",
@@ -12431,6 +12555,7 @@
   "headshot": [],
   "magazine_size": 160,
   "mastery_req": 17,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/InfestedLich/Pistols/1999InfSporePistol/1999InfSporePistolWeapon",
@@ -12609,6 +12734,7 @@
   "headshot": [],
   "magazine_size": 37,
   "mastery_req": 17,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaCatabolyst",
@@ -12714,6 +12840,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 17,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaPox",
@@ -12821,6 +12948,7 @@
   "headshot": [],
   "magazine_size": 18,
   "mastery_req": 17,
+  "max_rank": 40,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaTysis",
@@ -12947,6 +13075,7 @@
   "headshot": [],
   "magazine_size": 27,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/LongGuns/InfArmCannon/InfArmCannon",
@@ -13069,6 +13198,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 2,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/LongGuns/InfCrpShockSwarm/InfCrpShockSwarmRifle",
@@ -13181,6 +13311,7 @@
   ],
   "magazine_size": 9,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/LongGuns/InfSniperRifle/InfSniperRifle",
@@ -13272,6 +13403,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/LongGuns/InfWFAccompanyingPri/InfestedBurstRifle",
@@ -13340,6 +13472,7 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/LongGuns/InfestedRifle",
@@ -13449,6 +13582,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/LongGuns/QuantaFullyInfested/InfQuantaRifle",
@@ -13516,6 +13650,7 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/LongGuns/Tentacluster/InfestedShotgun",
@@ -13683,6 +13818,7 @@
   "headshot": [],
   "magazine_size": 31,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/Pistols/InfBeamPistol/InfBeamPistol",
@@ -13776,6 +13912,7 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/Pistols/InfProximityStars/InfProximityStars",
@@ -13952,6 +14089,7 @@
   "headshot": [],
   "magazine_size": 17,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/Pistols/InfUzi/InfUziWeapon",
@@ -14059,6 +14197,7 @@
   ],
   "magazine_size": 12,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep",
@@ -14153,6 +14292,7 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/Pistols/InfestedDartPistol/InfestedDartPistol",
@@ -14217,6 +14357,7 @@
   "headshot": [],
   "magazine_size": 33,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Infested/Pistols/InfestedPistol",
@@ -14282,6 +14423,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Lasria/AK47/TC2024AK47Weapon",
@@ -14384,6 +14526,7 @@
   "headshot": [],
   "magazine_size": 65,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Lasria/LasGooAK/LasGooAKPlayerWeapon",
@@ -14500,6 +14643,7 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Lasria/LasGooPistol/LasGooPistolPlayerWeapon",
@@ -14574,6 +14718,7 @@
   "headshot": [],
   "magazine_size": 9,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
@@ -14641,6 +14786,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Lasria/LasSilencedPistol/LasSilencedPistolWeapon",
@@ -14750,6 +14896,7 @@
   ],
   "magazine_size": 35,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/MK1Series/MK1Furis",
@@ -14845,6 +14992,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/MK1Series/MK1Kunai",
@@ -14978,6 +15126,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/MK1Series/MK1Paris",
@@ -15108,6 +15257,7 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/MK1Series/MK1Strun",
@@ -15189,11 +15339,12 @@
   "damage": {
    "tau": 33.0
   },
-  "exilus_polarity": "universal",
+  "exilus_polarity": "any",
   "fire_rate": 13.000001,
   "headshot": [],
   "magazine_size": 150,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Sentients/SentOctaMiniGun/SentOctaMiniGun",
@@ -15313,6 +15464,7 @@
   "headshot": [],
   "magazine_size": 21,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Sentients/SentRifleNewWar/SentRifleNewWarGun",
@@ -15409,6 +15561,7 @@
   "headshot": [],
   "magazine_size": 7,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Sentients/Shedu/SheduHeavyWeapon",
@@ -15503,6 +15656,7 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Syndicates/ArbitersOfHexis/LongGuns/AHBoltor",
@@ -15575,6 +15729,7 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Syndicates/ArbitersOfHexis/Pistols/AHAkbolto",
@@ -15722,6 +15877,7 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Cephalon/Primary/CephPrimary/CephPrimary",
@@ -15843,6 +15999,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 2,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSDroidArray",
@@ -15960,6 +16117,7 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSDroidArray",
@@ -16035,6 +16193,7 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Syndicates/NewLoka/LongGuns/NLTigris",
@@ -16139,6 +16298,7 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Syndicates/NewLoka/Pistols/NLCastanas",
@@ -16237,6 +16397,7 @@
   "headshot": [],
   "magazine_size": 7,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
@@ -16309,6 +16470,7 @@
   "headshot": [],
   "magazine_size": 120,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/DualCorpusMinigun",
@@ -16412,6 +16574,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Syndicates/RedVeil/Bows/RVCernos",
@@ -16547,6 +16710,7 @@
   ],
   "magazine_size": 20,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Syndicates/RedVeil/Pistols/RVBallistica",
@@ -16623,6 +16787,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Syndicates/SteelMeridian/LongGuns/SMHek",
@@ -16694,6 +16859,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/Pistols/GrineerLeverActionPistol/GLAPistol",
@@ -16765,6 +16931,7 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/AkLexPistols",
@@ -16832,6 +16999,7 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 15,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/AkLexPistols",
@@ -16898,6 +17066,7 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/AkimboAutoPistols",
@@ -16966,6 +17135,7 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/AkimboBolto",
@@ -17035,6 +17205,7 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 3,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/AkimboPistol",
@@ -17108,6 +17279,7 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 2,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/AkimboShotGun",
@@ -17175,6 +17347,7 @@
   "headshot": [],
   "magazine_size": 28,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/AkimboViperPistols",
@@ -17244,6 +17417,7 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/DualMagnus",
@@ -17311,6 +17485,7 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 15,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/DualMagnus",
@@ -17382,6 +17557,7 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/DualVastos",
@@ -17454,6 +17630,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/AkimboShotGun",
@@ -17524,6 +17701,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bayonet/TnBayonetRifleWeapon",
@@ -17536,7 +17714,7 @@
   "no_reload": false,
   "polarities": [
    "madurai",
-   "aura"
+   "any"
   ],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
@@ -17627,6 +17805,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/AntlerBow/AntlerBow",
@@ -17709,6 +17888,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/AsymetricalBow/AsymetricalBow",
@@ -17831,6 +18011,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/DaxDuviriAsymetricalBow/DaxDuviriAsymmetricalLongBow",
@@ -17933,6 +18114,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/DuelistBow/DuelistBow",
@@ -18067,6 +18249,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/HuntingBow",
@@ -18194,6 +18377,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/LotusBow",
@@ -18300,6 +18484,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/AntlerBow/AntlerBow",
@@ -18410,6 +18595,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 15,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/AsymetricalBow/AsymetricalBow",
@@ -18547,6 +18733,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 15,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/LotusBow",
@@ -18681,6 +18868,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/HuntingBow",
@@ -18817,6 +19005,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/LotusBow",
@@ -18945,6 +19134,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/LotusBow",
@@ -19092,6 +19282,7 @@
   "headshot": [],
   "magazine_size": null,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Grimoire/TnGrimoire",
@@ -19203,6 +19394,7 @@
   ],
   "magazine_size": 14,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/DexTheThird/DexTheThird",
@@ -19277,6 +19469,7 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/DoubleBarrelShotgun/TennoDoubleBarrelShotgun",
@@ -19345,6 +19538,7 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/DrakeRifle/DrakeRifle",
@@ -19429,6 +19623,7 @@
   ],
   "magazine_size": 5,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/FiveShotSniper/FiveShotSniper",
@@ -19551,6 +19746,7 @@
   "headshot": [],
   "magazine_size": 9,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/LotusBow",
@@ -19643,6 +19839,7 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 2,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/Gunbrella/ShrineMaidenGunbrellaWeapon",
@@ -19787,6 +19984,7 @@
   "headshot": [],
   "magazine_size": 28,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/GyreRifle/GyreRifleWeapon",
@@ -19881,6 +20079,7 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/LoginPrimary/SundialRifle",
@@ -19980,6 +20179,7 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/Miter/TnoMiter",
@@ -20056,6 +20256,7 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PaxDuviricusShotgun/PaxDuviricusShotgun",
@@ -20155,6 +20356,7 @@
   "headshot": [],
   "magazine_size": 48,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeAcceltra/PrimeAcceltraWeapon",
@@ -20286,6 +20488,7 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
@@ -20434,6 +20637,7 @@
   "headshot": [],
   "magazine_size": 42,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/GyreRifle/GyreRifleWeapon",
@@ -20536,6 +20740,7 @@
   "headshot": [],
   "magazine_size": 24,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeAstilla/AstillaPrimeWeapon",
@@ -20613,6 +20818,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeBaza/PrimeBazaGun",
@@ -20709,6 +20915,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeBoltor/PrimeBoltor",
@@ -20830,6 +21037,7 @@
   "headshot": [],
   "magazine_size": 45,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston",
@@ -20950,6 +21158,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 15,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeCedo/PrimeCedoWeapon",
@@ -21078,6 +21287,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeCorinth/PrimeCorinth",
@@ -21180,6 +21390,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeFulmin/PrimeFulmin",
@@ -21253,6 +21464,7 @@
   ],
   "magazine_size": 16,
   "mastery_req": 15,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeLightningGun/PrimeLightningGun",
@@ -21355,6 +21567,7 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/LotusBow",
@@ -21479,6 +21692,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/Miter/TnoMiter",
@@ -21556,6 +21770,7 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimePerigale/PrimePerigaleSniper",
@@ -21751,6 +21966,7 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimePhantasma/PhantasmaPrimeShotgun",
@@ -21899,6 +22115,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
@@ -22002,6 +22219,7 @@
   "headshot": [],
   "magazine_size": 200,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle",
@@ -22079,6 +22297,7 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 15,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeSteflos/PrimeSteflosShotgun",
@@ -22175,6 +22394,7 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeStradavar/PrimeStradavarGun",
@@ -22306,6 +22526,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon",
@@ -22420,6 +22641,7 @@
   ],
   "magazine_size": 20,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeSybaris/PrimeSybarisRifle",
@@ -22518,6 +22740,7 @@
   "headshot": [],
   "magazine_size": 200,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeTenora/TenoraPrimeWeapon",
@@ -22638,6 +22861,7 @@
   "headshot": [],
   "magazine_size": 42,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/DrakeRifle/DrakeRifle",
@@ -22716,6 +22940,7 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/DoubleBarrelShotgun/TennoDoubleBarrelShotgun",
@@ -22862,6 +23087,7 @@
   "headshot": [],
   "magazine_size": 250,
   "mastery_req": 15,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeTrumna/PrimeTrumnaWeapon",
@@ -23037,6 +23263,7 @@
   ],
   "magazine_size": 2,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle",
@@ -23163,6 +23390,7 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/LotusBow",
@@ -23239,6 +23467,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/LotusBow",
@@ -23408,6 +23637,7 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/RevenantShotgun/RevenantShotgun",
@@ -23492,6 +23722,7 @@
   ],
   "magazine_size": 5,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/FiveShotSniper/FiveShotSniper",
@@ -23617,6 +23848,7 @@
   "headshot": [],
   "magazine_size": 48,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon",
@@ -23711,6 +23943,7 @@
   "headshot": [],
   "magazine_size": 65,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TennoTommyGun/TennoTommyGunRifle",
@@ -23830,6 +24063,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnAlchemistShotgun/TnAlchemistShotgun",
@@ -23925,6 +24159,7 @@
   "headshot": [],
   "magazine_size": 150,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnBardRifle/TnBardRifle",
@@ -23991,6 +24226,7 @@
   "headshot": [],
   "magazine_size": 200,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnBeltFedRifle/TnBeltFedRifleWeapon",
@@ -24094,6 +24330,7 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnGlassShotgun/TnGlassShotgunGun",
@@ -24222,6 +24459,7 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnHeavyShotgun/TnHeavyShotgunGun",
@@ -24351,6 +24589,7 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
@@ -24472,6 +24711,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnInkRifle/TnInkRifleWeapon",
@@ -24542,6 +24782,7 @@
   "headshot": [],
   "magazine_size": 52,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnModQuestRifle/TnModQuestRifleWeapon",
@@ -24688,6 +24929,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
@@ -24772,6 +25014,7 @@
   ],
   "magazine_size": 12,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnQuadSniper/TnQuadSniper",
@@ -24899,6 +25142,7 @@
   "headshot": [],
   "magazine_size": 300,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnRailjackRifle/RailjackRifleGun",
@@ -24972,6 +25216,7 @@
   "headshot": [],
   "magazine_size": 26,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnRevolverRifle/TnRevolverRifleGun",
@@ -25099,6 +25344,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnRifleErsatz/TnRifleErsatzWeapon",
@@ -25174,6 +25420,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnSMG/TnSMGWeapon",
@@ -25274,6 +25521,7 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnWispRifle/TnWispRifle",
@@ -25383,6 +25631,7 @@
   ],
   "magazine_size": 10,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle",
@@ -25456,6 +25705,7 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/TnoLotusPodShotgun/TnoLotusPodShotgun",
@@ -25528,6 +25778,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Bows/LotusBow",
@@ -25664,6 +25915,7 @@
   ],
   "magazine_size": 15,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron",
@@ -25775,6 +26027,7 @@
   ],
   "magazine_size": 35,
   "mastery_req": 1,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/AutoPistol",
@@ -25878,6 +26131,7 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/BroncoPrime",
@@ -25983,6 +26237,7 @@
   ],
   "magazine_size": 15,
   "mastery_req": 3,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/BurstPistol",
@@ -26051,6 +26306,7 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/CrossBow",
@@ -26154,6 +26410,7 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/HandShotGun",
@@ -26259,6 +26516,7 @@
   ],
   "magazine_size": 6,
   "mastery_req": 3,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/HeavyPistol",
@@ -26352,6 +26610,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LatoPrime",
@@ -26447,6 +26706,7 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LatoVandal",
@@ -26541,6 +26801,7 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -26649,6 +26910,7 @@
   ],
   "magazine_size": 6,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -26739,6 +27001,7 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -26839,6 +27102,7 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -26971,6 +27235,7 @@
   ],
   "magazine_size": 16,
   "mastery_req": 2,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -27102,6 +27367,7 @@
   ],
   "magazine_size": 8,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -27167,6 +27433,7 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/AkimboAutoPistols",
@@ -27236,6 +27503,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
@@ -27303,6 +27571,7 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
@@ -27372,6 +27641,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -27439,6 +27709,7 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/AkimboAutoPistols",
@@ -27534,6 +27805,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
@@ -27607,6 +27879,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/AkimboBolto",
@@ -27678,6 +27951,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
@@ -27747,6 +28021,7 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
@@ -27817,6 +28092,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
@@ -27908,6 +28184,7 @@
   "headshot": [],
   "magazine_size": 24,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -28041,6 +28318,7 @@
   ],
   "magazine_size": 8,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -28172,6 +28450,7 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -28321,6 +28600,7 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -28392,6 +28672,7 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -28486,6 +28767,7 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -28601,6 +28883,7 @@
   ],
   "magazine_size": 8,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/HeavyPistol",
@@ -28671,6 +28954,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -28763,6 +29047,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -28837,6 +29122,7 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -28945,6 +29231,7 @@
   ],
   "magazine_size": 24,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/BurstPistol",
@@ -29015,6 +29302,7 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/DualVastos",
@@ -29127,6 +29415,7 @@
   ],
   "magazine_size": 6,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -29196,6 +29485,7 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -29296,6 +29586,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -29430,6 +29721,7 @@
   ],
   "magazine_size": 12,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -29579,6 +29871,7 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -29671,6 +29964,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
@@ -29745,6 +30039,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -29810,6 +30105,7 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
@@ -29899,6 +30195,7 @@
   "headshot": [],
   "magazine_size": 75,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -29967,6 +30264,7 @@
   "headshot": [],
   "magazine_size": 28,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
@@ -30034,6 +30332,7 @@
   "headshot": [],
   "magazine_size": 36,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
@@ -30125,6 +30424,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -30221,6 +30521,7 @@
   "headshot": [],
   "magazine_size": 3,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -30311,6 +30612,7 @@
   "headshot": [],
   "magazine_size": 24,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -30378,6 +30680,7 @@
   "headshot": [],
   "magazine_size": 62,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -30448,6 +30751,7 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -30573,6 +30877,7 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -30666,6 +30971,7 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -30760,6 +31066,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 2,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -30881,6 +31188,7 @@
   "headshot": [],
   "magazine_size": 75,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -30999,6 +31307,7 @@
   "headshot": [],
   "magazine_size": 45,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -31122,6 +31431,7 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 3,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -31258,6 +31568,7 @@
   ],
   "magazine_size": 15,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -31381,6 +31692,7 @@
   "headshot": [],
   "magazine_size": 45,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -31515,6 +31827,7 @@
   ],
   "magazine_size": 15,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -31599,6 +31912,7 @@
   ],
   "magazine_size": 4,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -31743,6 +32057,7 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -31841,6 +32156,7 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 6,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -32015,6 +32331,7 @@
   ],
   "magazine_size": 1,
   "mastery_req": 2,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -32159,6 +32476,7 @@
   "headshot": [],
   "magazine_size": 50,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -32244,6 +32562,7 @@
   ],
   "magazine_size": 6,
   "mastery_req": 5,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -32341,6 +32660,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -32433,6 +32753,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 2,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -32525,6 +32846,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -32599,6 +32921,7 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -32725,6 +33048,7 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 1,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -32855,6 +33179,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -32948,6 +33273,7 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 7,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
@@ -33042,6 +33368,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 0,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
@@ -33113,6 +33440,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
@@ -33184,6 +33512,7 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
@@ -33256,6 +33585,7 @@
   "headshot": [],
   "magazine_size": 26,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
@@ -33378,6 +33708,7 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 4,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
@@ -33479,6 +33810,7 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 3,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
@@ -33550,6 +33882,7 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 2,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
@@ -33619,6 +33952,7 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 10,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
@@ -33709,6 +34043,7 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 12,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimboOther",
@@ -33810,6 +34145,7 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 8,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
@@ -33924,6 +34260,7 @@
   ],
   "magazine_size": 6,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -34031,6 +34368,7 @@
   ],
   "magazine_size": 30,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -34165,6 +34503,7 @@
   ],
   "magazine_size": 12,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -34318,6 +34657,7 @@
   ],
   "magazine_size": 20,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -34466,6 +34806,7 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 14,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
@@ -34607,6 +34948,7 @@
   "headshot": [],
   "magazine_size": 200,
   "mastery_req": 13,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Tenno/LotusLongGun",
@@ -34675,6 +35017,7 @@
   "headshot": [],
   "magazine_size": 120,
   "mastery_req": 11,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/GrnAssaultRifle",
@@ -34747,6 +35090,7 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 9,
+  "max_rank": 30,
   "mod_classes": [
    "/Lotus/Types/Game/LotusWeapon",
    "/Lotus/Weapons/Corpus/Pistols/CorpusHandShotgun/CorpusHandCannon",

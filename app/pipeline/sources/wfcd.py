@@ -1,6 +1,7 @@
 """WFCD warframe-items JSON (MIT): polarities, class, attacks, falloff, images, arcane slots."""
 
 from app.domain.direct_bonus import DirectBonus
+from app.domain.polarity import Polarity
 from app.gamedata.models import Category
 from app.pipeline.sources import Fetched
 from app.pipeline.sources.http import PoliteClient
@@ -9,6 +10,16 @@ BASE_URL = "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/js
 FILES = ("Primary.json", "Secondary.json", "Arcanes.json")
 
 # WFCD arcane `type` -> the gun slot it fits: (category, weapon_type it is limited to).
+# WFCD polarity names; "aura" and "universal" are the Any polarity (the wiki's icon for Any is
+# "Aura", saved Polarity:17). An unknown name fails the refresh.
+POLARITIES: dict[str, Polarity] = {
+    "madurai": Polarity.MADURAI,
+    "naramon": Polarity.NARAMON,
+    "vazarin": Polarity.VAZARIN,
+    "aura": Polarity.ANY,
+    "universal": Polarity.ANY,
+}
+
 GUN_ARCANE_TYPES: dict[str, tuple[Category, str | None]] = {
     "Primary Arcane": (Category.PRIMARY, None),
     "Shotgun Arcane": (Category.PRIMARY, "Shotgun"),

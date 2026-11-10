@@ -7,6 +7,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from app.domain.direct_bonus import DirectBonus
 from app.domain.effects import DamageType, Effect, Faction, Support
+from app.domain.polarity import Polarity
 from app.domain.status import ForcedProc
 
 
@@ -152,8 +153,9 @@ class Weapon(Model):
     reload_time: NonNegative
     mastery_req: Annotated[int, Field(ge=0)]
     riven_disposition: NonNegative  # DE omegaAttenuation
-    polarities: list[str]
-    exilus_polarity: str | None
+    polarities: list[Polarity]  # built-in regular slots, positions unknown
+    exilus_polarity: Polarity | None
+    max_rank: int  # DE maxLevelCap or 30; capacity = 2 x max rank with a catalyst
     attacks: list[Attack]
     texture_location: str | None
     # export-plus compatibilityTags (e.g. PROJECTILE, AOE), stored as given; their meaning
@@ -186,7 +188,7 @@ class Mod(Model):
     name: str
     category: Category
     compat_name: str
-    polarity: str
+    polarity: Polarity
     rarity: str
     base_drain: int  # negative for some mods that add capacity
     fusion_limit: Annotated[int, Field(ge=0)]
@@ -246,7 +248,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[20] = 20
+    schema_version: Literal[21] = 21
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

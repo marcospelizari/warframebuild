@@ -427,6 +427,13 @@
         "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
       ]
     },
+    "Mod": {
+      "title": "Mod",
+      "impact": "high",
+      "feeds": [
+        "mod drain and capacity (Installation: polarity match/mismatch, catalyst; domain/polarity.py, G84)"
+      ]
+    },
     "Module_Enemies_anarchs": {
       "title": "Module:Enemies/data/anarchs",
       "impact": "high",
