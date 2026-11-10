@@ -159,6 +159,9 @@ class Weapon(Model):
     # export-plus compatibilityTags (e.g. PROJECTILE, AOE), stored as given; their meaning
     # for mod eligibility is decided in step 8. None = weapon not in the saved export-plus.
     compatibility_tags: list[str] | None
+    # Weapon class paths a mod's `compat` may name: the gun, its export-plus parent chain,
+    # the classes reference/weapon_classes.json gives its root (G82).
+    mod_classes: list[str] = Field(default_factory=list)
     sniper_combo_min: Annotated[int, Field(ge=1)] | None  # saved Sniper_Rifle, wiki module
     no_reload: bool  # shots come straight from the ammo pool (Epitaph), fire_overrides.json
     # Reload replaces one shot interval (Vectis; saved Calculation, Average Sustained DPS).
@@ -198,6 +201,7 @@ class Mod(Model):
     # given for step 8. None = mod not in the saved export-plus.
     compatibility_tags: list[str] | None
     incompatibility_tags: list[str] | None
+    compat_class: str | None  # export-plus `compat`; None = missing in export-plus
 
 
 class Arcane(Model):
@@ -242,7 +246,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[19] = 19
+    schema_version: Literal[20] = 20
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

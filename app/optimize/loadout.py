@@ -37,32 +37,42 @@ class BuildError(ValueError):
 
 
 def check(
-    weapon: Weapon, mods: Sequence[Mod], bonus: DamageType | None, arcane: Arcane | None = None
+    weapon: Weapon,
+    mods: Sequence[Mod],
+    bonus: DamageType | None,
+    arcane: Arcane | None = None,
+    exilus: Mod | None = None,
 ) -> None:
-    """Build rules: arcane class, slots, duplicates, category, compatibility tags (G56),
-    families, bonus element."""
+    """Build rules: arcane class, slots, exilus slot (Q30), duplicates, category,
+    compatibility tags (G56), families, bonus element."""
     if arcane and (
         arcane.category != weapon.category or arcane.weapon_type not in (None, weapon.weapon_type)
     ):
         raise BuildError("incompatible_arcane", f"{arcane.name} does not fit", "arcane")
     if len(mods) > MAX_SLOTS:
         raise BuildError("too_many_mods", f"at most {MAX_SLOTS} mods", "mods")
+    if exilus is not None and not exilus.exilus:
+        raise BuildError("not_exilus", f"{exilus.name} does not fit the exilus slot", "exilus")
+    equipped = [*mods, *([exilus] if exilus else [])]
+    fields = [f"mods[{i}]" for i in range(len(mods))] + (["exilus"] if exilus else [])
     seen: set[str] = set()
-    for i, m in enumerate(mods):
+    for m, field in zip(equipped, fields, strict=True):
         if m.unique_name in seen:
-            raise BuildError("duplicate_mod", f"{m.name} equipped twice", f"mods[{i}]")
+            raise BuildError("duplicate_mod", f"{m.name} equipped twice", field)
         seen.add(m.unique_name)
         if m.category != weapon.category:
-            raise BuildError("incompatible_mod", f"{m.name} is a {m.category} mod", f"mods[{i}]")
+            raise BuildError("incompatible_mod", f"{m.name} is a {m.category} mod", field)
         if not compatibility.fits(
-            weapon.compatibility_tags, m.compatibility_tags, m.incompatibility_tags
+            weapon.mod_classes,
+            weapon.compatibility_tags,
+            m.compat_class,
+            m.compatibility_tags,
+            m.incompatibility_tags,
         ):
-            raise BuildError(
-                "incompatible_mod", f"{m.name} does not fit {weapon.name}", f"mods[{i}]"
-            )
-    clash = families.clashes((m.unique_name, m.family) for m in mods)
+            raise BuildError("incompatible_mod", f"{m.name} does not fit {weapon.name}", field)
+    clash = families.clashes((m.unique_name, m.family) for m in equipped)
     if clash:
-        names = {m.unique_name: m.name for m in mods}
+        names = {m.unique_name: m.name for m in equipped}
         a, b = clash[0]
         raise BuildError("family_clash", f"{names[a]} and {names[b]} clash", "mods")
     if bonus is not None:
@@ -197,10 +207,12 @@ def loadout(
     form: Form | None = None,
     arcane: Arcane | None = None,
     sets: Mapping[str, ModSet] | None = None,
+    exilus: Mod | None = None,
 ) -> Loadout:
     """`form` defaults to Incarnon Form for Incarnon guns (Q11); `sets`: every mod set of
-    `mods` by uniqueName."""
-    check(weapon, mods, bonus, arcane)
+    `mods` by uniqueName; `exilus`: the mod in the exilus slot."""
+    check(weapon, mods, bonus, arcane, exilus)
+    mods = [*mods, *([exilus] if exilus else [])]
     picked = chosen_perks(incarnon, perks)
     form = form or ("incarnon" if incarnon else "normal")
     active = [p for p in picked if p.form in ("both", form)]

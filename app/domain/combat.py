@@ -92,3 +92,12 @@ def fight(events: Sequence[Event], target: Target) -> Outcome:
 
 def geometric_mean(costs: Sequence[float]) -> float:
     return math.exp(math.fsum(math.log(c) for c in costs) / len(costs))
+
+
+def neutral_dps(events: Sequence[Event]) -> float:
+    """Damage per second over the cap on a neutral target: health only, no armor, shields or
+    faction modifiers; Viral still raises health damage (PLAN G80)."""
+    total = math.fsum(
+        (math.fsum(e.armored) + math.fsum(e.unarmored)) * e.viral for e in events if e.time <= CAP_S
+    )
+    return total / CAP_S

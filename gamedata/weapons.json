@@ -90,6 +90,13 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Cephalon/Primary/CephPrimary/CephPrimary",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Simulor",
   "no_reload": false,
@@ -153,6 +160,12 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Bio/AcidDartPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Acrid",
   "no_reload": false,
@@ -261,6 +274,14 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Bio/BioWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Torid",
   "no_reload": false,
@@ -320,6 +341,14 @@
   "headshot": [],
   "magazine_size": 150,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Chemical/FlameThrower",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Ignis",
   "no_reload": false,
@@ -379,6 +408,15 @@
   "headshot": [],
   "magazine_size": 200,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Chemical/FlameThrower",
+   "/Lotus/Weapons/ClanTech/Chemical/FlameThrowerWraith",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Ignis Wraith",
   "no_reload": false,
@@ -465,6 +503,14 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Chemical/RocketLauncher",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Ogris",
   "no_reload": false,
@@ -527,6 +573,14 @@
   "headshot": [],
   "magazine_size": 180,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Energy/CrpHeavyRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Supra",
   "no_reload": false,
@@ -586,6 +640,12 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Energy/CrpLaserPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
   "multishot": 1.0,
   "name": "Spectra",
   "no_reload": false,
@@ -647,6 +707,13 @@
   "headshot": [],
   "magazine_size": 50,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Energy/CrpLaserRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Flux Rifle",
   "no_reload": false,
@@ -734,6 +801,15 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Energy/DeraVandal",
+   "/Lotus/Weapons/ClanTech/Energy/EnergyRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Dera Vandal",
   "no_reload": false,
@@ -821,6 +897,14 @@
   "headshot": [],
   "magazine_size": 45,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Energy/EnergyRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Dera",
   "no_reload": false,
@@ -913,6 +997,14 @@
   ],
   "magazine_size": 10,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Energy/Railgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Lanka",
   "no_reload": false,
@@ -1011,6 +1103,14 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 16,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEArcaPlasmor/CrpBEArcaPlasmor",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpShotgun/CrpShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 1.0,
   "name": "Tenet Arca Plasmor",
   "no_reload": false,
@@ -1164,6 +1264,15 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 16,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
+   "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEFerrox/CrpBEFerrox",
+   "/Lotus/Weapons/Corpus/LongGuns/Spears/Railgun/CorpusRailgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Tenet Ferrox",
   "no_reload": false,
@@ -1240,6 +1349,14 @@
   "headshot": [],
   "magazine_size": 120,
   "mastery_req": 16,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Energy/CrpLaserRifle",
+   "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEFluxRifle/CrpBEFluxRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Tenet Flux Rifle",
   "no_reload": false,
@@ -1310,6 +1427,14 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 16,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEGlaxion/CrpBEGlaxion",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/CrpFreezeRayRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Tenet Glaxion",
   "no_reload": false,
@@ -1455,6 +1580,14 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 16,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEQuanta/CrpBEQuanta",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpShockRifle/CrpShockRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 2.0,
   "name": "Tenet Quanta",
   "no_reload": false,
@@ -1581,6 +1714,15 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 16,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBETetra/CrpBETetra",
+   "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/CorpusUMP",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Tenet Tetra",
   "no_reload": false,
@@ -1651,6 +1793,13 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBECycron/CrpBECycron",
+   "/Lotus/Weapons/Corpus/Pistols/CrpChargeGun/CrpChargeGun",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
   "multishot": 1.0,
   "name": "Tenet Cycron",
   "no_reload": false,
@@ -1754,6 +1903,13 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 16,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBEDetron/CrpBEDetron",
+   "/Lotus/Weapons/Corpus/Pistols/CorpusHandShotgun/CorpusHandCannon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun"
+  ],
   "multishot": 10.0,
   "name": "Tenet Detron",
   "no_reload": false,
@@ -1879,6 +2035,13 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/BoardExec/Secondary/CrpBEPlinx/CrpBEPlinxWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CrpSonificBlastor/CrpBlastorWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Tenet Plinx",
   "no_reload": false,
@@ -2008,6 +2171,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Bow/Longbow/CrpBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Lenz",
   "no_reload": false,
@@ -2137,6 +2308,15 @@
   ],
   "magazine_size": 1,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Bow/Longbow/CrpBow",
+   "/Lotus/Weapons/Corpus/Bow/Longbow/PrismaLenz/PrismaLenzWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Prisma Lenz",
   "no_reload": false,
@@ -2200,6 +2380,13 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/ChainLightningGun/ChainLightningRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Amprex",
   "no_reload": false,
@@ -2260,6 +2447,14 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 3,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/CorpusUMP",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Tetra",
   "no_reload": false,
@@ -2320,6 +2515,15 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/CorpusUMP",
+   "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/PrismaCorpusUMP",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Prisma Tetra",
   "no_reload": false,
@@ -2425,6 +2629,14 @@
   "headshot": [],
   "magazine_size": 96,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpArSniper/CrpArSniperRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Ambassador",
   "no_reload": false,
@@ -2566,6 +2778,14 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/CrpBFG",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Opticor",
   "no_reload": false,
@@ -2709,6 +2929,15 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/CrpBFG",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/Vandal/VandalCrpBFG",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Opticor Vandal",
   "no_reload": false,
@@ -2809,6 +3038,14 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 16,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpBriefcaseLauncher/CrpBriefcaseLauncher",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Tenet Envoy",
   "no_reload": false,
@@ -2867,6 +3104,13 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/CrpFreezeRayRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Glaxion",
   "no_reload": false,
@@ -2925,6 +3169,14 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/CrpFreezeRayRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/Vandal/CrpFreezeRayVandalRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Glaxion Vandal",
   "no_reload": false,
@@ -3040,6 +3292,13 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpRubanRifle/CrpRubanRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Stahlta",
   "no_reload": false,
@@ -3142,6 +3401,14 @@
   ],
   "magazine_size": 20,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpSentAmlgSniper/CrpSentAmlgSniper",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Komorex",
   "no_reload": false,
@@ -3323,6 +3590,13 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpSentExperimentRifle/CrpSentExperimentRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Battacor",
   "no_reload": false,
@@ -3392,6 +3666,13 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpShapeBlast/CrpShapeBlastShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 3.0,
   "name": "Exergis",
   "no_reload": false,
@@ -3527,6 +3808,13 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpShockRifle/CrpShockRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 2.0,
   "name": "Quanta",
   "no_reload": false,
@@ -3662,6 +3950,14 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpShockRifle/CrpShockRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpShockRifle/QuantaVandal",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 2.0,
   "name": "Quanta Vandal",
   "no_reload": false,
@@ -3727,6 +4023,13 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpShotgun/CrpShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 1.0,
   "name": "Arca Plasmor",
   "no_reload": false,
@@ -3815,6 +4118,13 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpSplitLaser/CrpSplitLaser",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 2.0,
   "name": "Convectrix",
   "no_reload": false,
@@ -3904,6 +4214,15 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/GrenadeLauncher/CarminePenta",
+   "/Lotus/Weapons/Corpus/LongGuns/GrenadeLauncher/GrenadeLauncher",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Carmine Penta",
   "no_reload": false,
@@ -3991,6 +4310,14 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/GrenadeLauncher/GrenadeLauncher",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Penta",
   "no_reload": false,
@@ -4053,6 +4380,15 @@
   "headshot": [],
   "magazine_size": 300,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Energy/CrpHeavyRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/Machinegun/SupraVandal",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Supra Vandal",
   "no_reload": false,
@@ -4192,6 +4528,14 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/Spears/Railgun/CorpusRailgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Ferrox",
   "no_reload": false,
@@ -4259,6 +4603,12 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CorpusHandShotgun/CorpusHandCannon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun"
+  ],
   "multishot": 7.0,
   "name": "Detron",
   "no_reload": false,
@@ -4341,6 +4691,12 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/CorpusMinigun",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Cestra",
   "no_reload": false,
@@ -4400,6 +4756,12 @@
   "headshot": [],
   "magazine_size": 120,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/DualCorpusMinigun",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Dual Cestra",
   "no_reload": false,
@@ -4461,6 +4823,13 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Energy/CrpLaserPistol",
+   "/Lotus/Weapons/Corpus/Pistols/CorpusModularPistol/Vandal/CrpLaserPistolVandal",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
   "multishot": 1.0,
   "name": "Spectra Vandal",
   "no_reload": false,
@@ -4550,6 +4919,12 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 2,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CrpAirPistol/CrpAirPistolArray",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther"
+  ],
   "multishot": 1.0,
   "name": "Sonicor",
   "no_reload": false,
@@ -4647,6 +5022,12 @@
   "headshot": [],
   "magazine_size": 92,
   "mastery_req": 16,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CrpBriefcaseAkimbo/CrpBriefcaseAkimboPistol",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Tenet Diplos",
   "no_reload": false,
@@ -4711,6 +5092,12 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CrpChargeGun/CrpChargeGun",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
   "multishot": 1.0,
   "name": "Cycron",
   "no_reload": false,
@@ -4846,6 +5233,12 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CrpElectroMag/CrpElectroMag",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimboOther",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Staticor",
   "no_reload": false,
@@ -4955,6 +5348,12 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther"
+  ],
   "multishot": 1.0,
   "name": "Angstrum",
   "no_reload": false,
@@ -5064,6 +5463,13 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher",
+   "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/PrismaAngstrum",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther"
+  ],
   "multishot": 1.0,
   "name": "Prisma Angstrum",
   "no_reload": false,
@@ -5169,6 +5575,12 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CrpIgniterPistol/CrpIgniterPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
   "multishot": 1.0,
   "name": "Tenet Spirex",
   "no_reload": false,
@@ -5280,6 +5692,12 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CrpSentAmalgPistol/CrpSentAmalgPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistol"
+  ],
   "multishot": 1.0,
   "name": "Cyanex",
   "no_reload": false,
@@ -5340,6 +5758,12 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CrpSentExperimentPistol/CrpSentExperimentPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistol"
+  ],
   "multishot": 1.0,
   "name": "Ocucor",
   "no_reload": false,
@@ -5401,6 +5825,12 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CrpSonificBlastor/CrpBlastorWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Plinx",
   "no_reload": false,
@@ -5460,6 +5890,12 @@
   "headshot": [],
   "magazine_size": 36,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/SniperPistol/CrpScopeGun",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Arca Scisco",
   "no_reload": false,
@@ -5619,6 +6055,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Bows/GrnBow/GrnBowWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Kuva Bramma",
   "no_reload": false,
@@ -5682,6 +6126,12 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/GrineerPistol/GrineerAkimboPistol",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Twin Gremlins",
   "no_reload": false,
@@ -5743,6 +6193,12 @@
   "headshot": [],
   "magazine_size": 14,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/GrineerPistol/GrineerLightPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Viper",
   "no_reload": false,
@@ -5804,6 +6260,12 @@
   "headshot": [],
   "magazine_size": 14,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/GrineerPistol/GrnHeavyPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Kraken",
   "no_reload": false,
@@ -5866,6 +6328,12 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/GrineerPistol/GrnScopedPistol",
+   "/Lotus/Weapons/Grineer/GrineerPistol/GrnScopedPistolPlayer",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Seer",
   "no_reload": false,
@@ -5963,6 +6431,14 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Drakgoon/KuvaDrakgoon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerFlakCannon/FlakCannon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 10.0,
   "name": "Kuva Drakgoon",
   "no_reload": false,
@@ -6069,6 +6545,13 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hek/KuvaHekWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/QuadShotgunBase"
+  ],
   "multishot": 7.0,
   "name": "Kuva Hek",
   "no_reload": false,
@@ -6190,6 +6673,14 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hind/KuvaHind",
+   "/Lotus/Weapons/Grineer/LongGuns/BurstRifle/GrnBurstRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Kuva Hind",
   "no_reload": false,
@@ -6265,6 +6756,15 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Karak/KuvaKarak",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerM16Homage/GrineerM16Rifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Kuva Karak",
   "no_reload": false,
@@ -6370,6 +6870,14 @@
   "headshot": [],
   "magazine_size": 209,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Kohm/KuvaKohm",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnSpark/GrnSparkRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 9.0,
   "name": "Kuva Kohm",
   "no_reload": false,
@@ -6479,6 +6987,15 @@
   "headshot": [],
   "magazine_size": 3,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Chemical/RocketLauncher",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Ogris/KuvaOgris",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Kuva Ogris",
   "no_reload": false,
@@ -6576,6 +7093,15 @@
   "headshot": [],
   "magazine_size": 88,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Quartakk/KuvaQuartakk",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnFourBarrelRifle/GrnFourBarrelRifleWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Kuva Quartakk",
   "no_reload": false,
@@ -6654,6 +7180,14 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Sobek/KuvaSobek",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/DoubleBarrelShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 5.0,
   "name": "Kuva Sobek",
   "no_reload": false,
@@ -6758,6 +7292,15 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Tonkor/KuvaTonkor",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnGrenadeLauncher/GrnGrenadeLauncher",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Kuva Tonkor",
   "no_reload": false,
@@ -6934,6 +7477,15 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Zarr/KuvaZarr",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnCannon/GrnCannonWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Kuva Zarr",
   "no_reload": false,
@@ -7016,6 +7568,13 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Brakk/KuvaBrakk",
+   "/Lotus/Weapons/Grineer/Pistols/GrineerHandShotgun/GrineerHandCannon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun"
+  ],
   "multishot": 10.0,
   "name": "Kuva Brakk",
   "no_reload": false,
@@ -7114,6 +7673,13 @@
   "headshot": [],
   "magazine_size": 21,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/GrineerPistol/GrnHeavyPistol",
+   "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Kraken/KuvaKraken",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Kuva Kraken",
   "no_reload": false,
@@ -7183,6 +7749,13 @@
   "headshot": [],
   "magazine_size": 77,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Nukor/KuvaNukor",
+   "/Lotus/Weapons/Grineer/Pistols/GrineerMicrowavegun/GrnMicrowavePistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
   "multishot": 1.0,
   "name": "Kuva Nukor",
   "no_reload": false,
@@ -7284,6 +7857,13 @@
   "headshot": [],
   "magazine_size": 9,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/GrineerPistol/GrnScopedPistol",
+   "/Lotus/Weapons/Grineer/GrineerPistol/GrnScopedPistolPlayer",
+   "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Seer/KuvaSeer",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Kuva Seer",
   "no_reload": false,
@@ -7355,6 +7935,12 @@
   "headshot": [],
   "magazine_size": 114,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/KuvaLich/Secondaries/Stubba/KuvaStubba",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Kuva Twin Stubbas",
   "no_reload": false,
@@ -7442,6 +8028,13 @@
   "headshot": [],
   "magazine_size": 65,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/BurstRifle/GrnBurstRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Hind",
   "no_reload": false,
@@ -7505,6 +8098,14 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/GrnAssaultRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Grakata",
   "no_reload": false,
@@ -7564,6 +8165,12 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/TwinGrakatas",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 2.0,
   "name": "Twin Grakatas",
   "no_reload": false,
@@ -7651,6 +8258,13 @@
   "headshot": [],
   "magazine_size": 7,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerFlakCannon/FlakCannon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 10.0,
   "name": "Drakgoon",
   "no_reload": false,
@@ -7713,6 +8327,14 @@
   "headshot": [],
   "magazine_size": 9,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/GLARifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Grinlok",
   "no_reload": false,
@@ -7777,6 +8399,15 @@
   "headshot": [],
   "magazine_size": 21,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/GLARifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/PrismaGrinlokWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Prisma Grinlok",
   "no_reload": false,
@@ -7840,6 +8471,14 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 1,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerM16Homage/GrineerM16Rifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Karak",
   "no_reload": false,
@@ -7903,6 +8542,15 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerM16Homage/GrineerM16Rifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerM16Homage/KarakWraith",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Karak Wraith",
   "no_reload": false,
@@ -8043,6 +8691,13 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Miter",
   "no_reload": false,
@@ -8121,6 +8776,14 @@
   ],
   "magazine_size": 6,
   "mastery_req": 3,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/GrnSniperRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Vulkar",
   "no_reload": false,
@@ -8218,6 +8881,15 @@
   ],
   "magazine_size": 8,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/GrnSniperRifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/VulkarWraith",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Vulkar Wraith",
   "no_reload": false,
@@ -8403,6 +9075,14 @@
   "headshot": [],
   "magazine_size": 3,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnCannon/GrnCannonWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Zarr",
   "no_reload": false,
@@ -8546,6 +9226,14 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnFlameSpear/GrnFlameSpear",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Javlok",
   "no_reload": false,
@@ -8610,6 +9298,14 @@
   "headshot": [],
   "magazine_size": 84,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnFourBarrelRifle/GrnFourBarrelRifleWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Quartakk",
   "no_reload": false,
@@ -8705,6 +9401,14 @@
   ],
   "magazine_size": 50,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnGorgSniperRifle/GrnGorgSniperRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Buzlok",
   "no_reload": false,
@@ -8794,6 +9498,14 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnGrenadeLauncher/GrnGrenadeLauncher",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Tonkor",
   "no_reload": false,
@@ -8882,6 +9594,13 @@
   "headshot": [],
   "magazine_size": 45,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnHarpoonGun/GrnHarpoonGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Harpak",
   "no_reload": false,
@@ -8991,6 +9710,14 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnKuvaLichRifle/GrnKuvaLichRifleWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Kuva Chakkhurr",
   "no_reload": false,
@@ -9051,6 +9778,13 @@
   "headshot": [],
   "magazine_size": 84,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnOrokinRifle/GrnOrokinRifleWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Gotva Prime",
   "no_reload": false,
@@ -9146,6 +9880,13 @@
   "headshot": [],
   "magazine_size": 245,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrnSpark/GrnSparkRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 9.0,
   "name": "Kohm",
   "no_reload": false,
@@ -9233,6 +9974,13 @@
   "headshot": [],
   "magazine_size": 43,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/LaserAimRifle/LaserAimRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Argonak",
   "no_reload": false,
@@ -9349,6 +10097,15 @@
   "headshot": [],
   "magazine_size": 120,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/VoidTraderGorgon/VTGorgon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/HeavyRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Prisma Gorgon",
   "no_reload": false,
@@ -9462,6 +10219,15 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/WraithGorgon/WraithGorgon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/HeavyRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Gorgon Wraith",
   "no_reload": false,
@@ -9523,6 +10289,13 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/GrineerPistol/GrineerAkimboPistol",
+   "/Lotus/Weapons/Grineer/Pistols/GrineerBulbousSMG/Prisma/PrismaTwinGremlinsWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Prisma Twin Gremlins",
   "no_reload": false,
@@ -9691,6 +10464,12 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 2,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther"
+  ],
   "multishot": 1.0,
   "name": "Stug",
   "no_reload": false,
@@ -9760,6 +10539,12 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrineerHandShotgun/GrineerHandCannon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun"
+  ],
   "multishot": 10.0,
   "name": "Brakk",
   "no_reload": false,
@@ -9824,6 +10609,12 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrineerLeverActionPistol/GLAPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Marelok",
   "no_reload": false,
@@ -9883,6 +10674,12 @@
   "headshot": [],
   "magazine_size": 50,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrineerMicrowavegun/GrnMicrowavePistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
   "multishot": 1.0,
   "name": "Nukor",
   "no_reload": false,
@@ -9972,6 +10769,12 @@
   "headshot": [],
   "magazine_size": 72,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrnAmphisPistol/GrnAmphisPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun"
+  ],
   "multishot": 1.0,
   "name": "Quatz",
   "no_reload": false,
@@ -10065,6 +10868,12 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrnDWUniques/GrnTwinKohmaks",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 5.0,
   "name": "Twin Kohmak",
   "no_reload": false,
@@ -10161,6 +10970,12 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrnKohmPistol/GrnKohmPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun"
+  ],
   "multishot": 5.0,
   "name": "Kohmak",
   "no_reload": false,
@@ -10222,6 +11037,12 @@
   "headshot": [],
   "magazine_size": 75,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrnOrokinPistol/GrnOrokinPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun"
+  ],
   "multishot": 1.0,
   "name": "Sagek Prime",
   "no_reload": false,
@@ -10291,6 +11112,12 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrnQueenGuardDualPistol/GrnQueenGuardDualPistols",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 15.0,
   "name": "Twin Rogga",
   "no_reload": false,
@@ -10429,6 +11256,12 @@
   "headshot": [],
   "magazine_size": 3,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrnTorpedoPistol/GrnTorpedoPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther"
+  ],
   "multishot": 1.0,
   "name": "Kulstar",
   "no_reload": false,
@@ -10490,6 +11323,12 @@
   "headshot": [],
   "magazine_size": 57,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrnUzi/GrnUziWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Stubba",
   "no_reload": false,
@@ -10595,6 +11434,12 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
   "multishot": 1.0,
   "name": "Atomos",
   "no_reload": false,
@@ -10656,6 +11501,13 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/GrineerPistol/GrineerLightPistol",
+   "/Lotus/Weapons/Grineer/Pistols/WraithSingleViper/WraithSingleViper",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Viper Wraith",
   "no_reload": false,
@@ -10717,6 +11569,13 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/WraithTwinVipers/WraithTwinVipers",
+   "/Lotus/Weapons/Tenno/Akimbo/AkimboViperPistols",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Twin Vipers Wraith",
   "no_reload": false,
@@ -10809,6 +11668,12 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/ThrowingWeapons/GrnVorStickyBomb/GrnVorStickyBomb",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Aegrit",
   "no_reload": false,
@@ -10928,6 +11793,14 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/Bow/InfCernosBow/InfCernos",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Mutalist Cernos",
   "no_reload": false,
@@ -11030,6 +11903,13 @@
   "headshot": [],
   "magazine_size": 24,
   "mastery_req": 17,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/InfestedLich/LongGuns/1999InfShotgun/1999InfShotgunWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 1.0,
   "name": "Coda Bassocyst",
   "no_reload": false,
@@ -11161,6 +12041,13 @@
   "headshot": [],
   "magazine_size": 36,
   "mastery_req": 17,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaBubonico/CodaBubonicoCannon",
+   "/Lotus/Weapons/Infested/LongGuns/InfArmCannon/InfArmCannon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun"
+  ],
   "multishot": 7.0,
   "name": "Coda Bubonico",
   "no_reload": false,
@@ -11235,6 +12122,15 @@
   "headshot": [],
   "magazine_size": 72,
   "mastery_req": 17,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaHema",
+   "/Lotus/Weapons/Infested/LongGuns/InfWFAccompanyingPri/InfestedBurstRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Coda Hema",
   "no_reload": false,
@@ -11352,6 +12248,15 @@
   ],
   "magazine_size": 11,
   "mastery_req": 17,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaSporothrix",
+   "/Lotus/Weapons/Infested/LongGuns/InfSniperRifle/InfSniperRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Coda Sporothrix",
   "no_reload": false,
@@ -11447,6 +12352,14 @@
   "headshot": [],
   "magazine_size": 76,
   "mastery_req": 17,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/InfestedLich/LongGuns/CodaSynapse",
+   "/Lotus/Weapons/Infested/LongGuns/InfestedRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Coda Synapse",
   "no_reload": false,
@@ -11518,6 +12431,12 @@
   "headshot": [],
   "magazine_size": 160,
   "mastery_req": 17,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/InfestedLich/Pistols/1999InfSporePistol/1999InfSporePistolWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Dual Coda Torxica",
   "no_reload": false,
@@ -11690,6 +12609,13 @@
   "headshot": [],
   "magazine_size": 37,
   "mastery_req": 17,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaCatabolyst",
+   "/Lotus/Weapons/Infested/Pistols/InfBeamPistol/InfBeamPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther"
+  ],
   "multishot": 1.0,
   "name": "Coda Catabolyst",
   "no_reload": false,
@@ -11788,6 +12714,13 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 17,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaPox",
+   "/Lotus/Weapons/Infested/Pistols/InfProximityStars/InfProximityStars",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Coda Pox",
   "no_reload": false,
@@ -11888,6 +12821,13 @@
   "headshot": [],
   "magazine_size": 18,
   "mastery_req": 17,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/InfestedLich/Pistols/CodaTysis",
+   "/Lotus/Weapons/Infested/Pistols/InfestedDartPistol/InfestedDartPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther"
+  ],
   "multishot": 1.0,
   "name": "Coda Tysis",
   "no_reload": false,
@@ -12007,6 +12947,12 @@
   "headshot": [],
   "magazine_size": 27,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/LongGuns/InfArmCannon/InfArmCannon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun"
+  ],
   "multishot": 7.0,
   "name": "Bubonico",
   "no_reload": false,
@@ -12123,6 +13069,14 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 2,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/LongGuns/InfCrpShockSwarm/InfCrpShockSwarmRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Mutalist Quanta",
   "no_reload": false,
@@ -12227,6 +13181,14 @@
   ],
   "magazine_size": 9,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/LongGuns/InfSniperRifle/InfSniperRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Sporothrix",
   "no_reload": false,
@@ -12310,6 +13272,14 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/LongGuns/InfWFAccompanyingPri/InfestedBurstRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Hema",
   "no_reload": false,
@@ -12370,6 +13340,13 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/LongGuns/InfestedRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Synapse",
   "no_reload": false,
@@ -12472,6 +13449,14 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/LongGuns/QuantaFullyInfested/InfQuantaRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Paracyst",
   "no_reload": false,
@@ -12531,6 +13516,13 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/LongGuns/Tentacluster/InfestedShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 7.0,
   "name": "Phage",
   "no_reload": false,
@@ -12691,6 +13683,12 @@
   "headshot": [],
   "magazine_size": 31,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/Pistols/InfBeamPistol/InfBeamPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther"
+  ],
   "multishot": 1.0,
   "name": "Catabolyst",
   "no_reload": false,
@@ -12778,6 +13776,12 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/Pistols/InfProximityStars/InfProximityStars",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Pox",
   "no_reload": false,
@@ -12948,6 +13952,12 @@
   "headshot": [],
   "magazine_size": 17,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/Pistols/InfUzi/InfUziWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Zymos",
   "no_reload": false,
@@ -13049,6 +14059,12 @@
   ],
   "magazine_size": 12,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Dual Toxocyst",
   "no_reload": false,
@@ -13137,6 +14153,12 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/Pistols/InfestedDartPistol/InfestedDartPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther"
+  ],
   "multishot": 1.0,
   "name": "Tysis",
   "no_reload": false,
@@ -13195,6 +14217,12 @@
   "headshot": [],
   "magazine_size": 33,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Infested/Pistols/InfestedPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
   "multishot": 1.0,
   "name": "Embolist",
   "no_reload": false,
@@ -13254,6 +14282,14 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Lasria/AK47/TC2024AK47Weapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "AX-52",
   "no_reload": false,
@@ -13348,6 +14384,14 @@
   "headshot": [],
   "magazine_size": 65,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Lasria/LasGooAK/LasGooAKPlayerWeapon",
+   "/Lotus/Weapons/Lasria/LasGooAK/LasGooAKWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "EFV-5 Jupiter",
   "no_reload": false,
@@ -13456,6 +14500,12 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Lasria/LasGooPistol/LasGooPistolPlayerWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistol"
+  ],
   "multishot": 1.0,
   "name": "EFV-8 Mars",
   "no_reload": false,
@@ -13524,6 +14574,14 @@
   "headshot": [],
   "magazine_size": 9,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Lasria/LasGrenadeLauncher/LasrianNoxPlayerWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Purgator 1",
   "no_reload": false,
@@ -13583,6 +14641,12 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Lasria/LasSilencedPistol/LasSilencedPistolWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Vesper 77",
   "no_reload": false,
@@ -13686,6 +14750,13 @@
   ],
   "magazine_size": 35,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/MK1Series/MK1Furis",
+   "/Lotus/Weapons/Tenno/Pistol/AutoPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "MK1-Furis",
   "no_reload": false,
@@ -13774,6 +14845,13 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/MK1Series/MK1Kunai",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai"
+  ],
   "multishot": 1.0,
   "name": "MK1-Kunai",
   "no_reload": false,
@@ -13900,6 +14978,15 @@
   ],
   "magazine_size": 1,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/MK1Series/MK1Paris",
+   "/Lotus/Weapons/Tenno/Bows/HuntingBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "MK1-Paris",
   "no_reload": false,
@@ -14021,6 +15108,14 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/MK1Series/MK1Strun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/Shotgun"
+  ],
   "multishot": 10.0,
   "name": "MK1-Strun",
   "no_reload": false,
@@ -14099,6 +15194,13 @@
   "headshot": [],
   "magazine_size": 150,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Sentients/SentOctaMiniGun/SentOctaMiniGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Haalvu",
   "no_reload": false,
@@ -14211,6 +15313,13 @@
   "headshot": [],
   "magazine_size": 21,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Sentients/SentRifleNewWar/SentRifleNewWarGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Basmu",
   "no_reload": false,
@@ -14300,6 +15409,13 @@
   "headshot": [],
   "magazine_size": 7,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Sentients/Shedu/SheduHeavyWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Shedu",
   "no_reload": false,
@@ -14387,6 +15503,15 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Syndicates/ArbitersOfHexis/LongGuns/AHBoltor",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/BoltoRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Telos Boltor",
   "no_reload": false,
@@ -14450,6 +15575,13 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Syndicates/ArbitersOfHexis/Pistols/AHAkbolto",
+   "/Lotus/Weapons/Tenno/Akimbo/AkimboBolto",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Telos Akbolto",
   "no_reload": false,
@@ -14590,6 +15722,14 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Cephalon/Primary/CephPrimary/CephPrimary",
+   "/Lotus/Weapons/Syndicates/CephalonSuda/LongGuns/CSSimulor",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Synoid Simulor",
   "no_reload": false,
@@ -14703,6 +15843,12 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 2,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSDroidArray",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
   "multishot": 1.0,
   "name": "Gammacor",
   "no_reload": false,
@@ -14814,6 +15960,13 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSDroidArray",
+   "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSSynoidGammacor",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
   "multishot": 1.0,
   "name": "Synoid Gammacor",
   "no_reload": false,
@@ -14882,6 +16035,14 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Syndicates/NewLoka/LongGuns/NLTigris",
+   "/Lotus/Weapons/Tenno/LongGuns/DoubleBarrelShotgun/TennoDoubleBarrelShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 6.0,
   "name": "Sancti Tigris",
   "no_reload": false,
@@ -14978,6 +16139,13 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Syndicates/NewLoka/Pistols/NLCastanas",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/StickyBomb/StickyBombs"
+  ],
   "multishot": 1.0,
   "name": "Sancti Castanas",
   "no_reload": false,
@@ -15069,6 +16237,15 @@
   "headshot": [],
   "magazine_size": 7,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/GrenadeLauncher/GrenadeLauncher",
+   "/Lotus/Weapons/Syndicates/PerrinSequence/LongGuns/PSPenta",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Secura Penta",
   "no_reload": false,
@@ -15132,6 +16309,13 @@
   "headshot": [],
   "magazine_size": 120,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/DualCorpusMinigun",
+   "/Lotus/Weapons/Syndicates/PerrinSequence/Pistols/PSDualCestra",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Secura Dual Cestra",
   "no_reload": false,
@@ -15228,6 +16412,15 @@
   ],
   "magazine_size": 1,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Syndicates/RedVeil/Bows/RVCernos",
+   "/Lotus/Weapons/Tenno/Bows/AntlerBow/AntlerBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Rakta Cernos",
   "no_reload": false,
@@ -15354,6 +16547,13 @@
   ],
   "magazine_size": 20,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Syndicates/RedVeil/Pistols/RVBallistica",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Tenno/Pistols/AutomaticHandCrossbow/AutoCrossBow"
+  ],
   "multishot": 1.0,
   "name": "Rakta Ballistica",
   "no_reload": false,
@@ -15423,6 +16623,13 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Syndicates/SteelMeridian/LongGuns/SMHek",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/QuadShotgunBase"
+  ],
   "multishot": 7.0,
   "name": "Vaykor Hek",
   "no_reload": false,
@@ -15487,6 +16694,13 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/GrineerLeverActionPistol/GLAPistol",
+   "/Lotus/Weapons/Syndicates/SteelMeridian/Pistols/SMMarelok",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Vaykor Marelok",
   "no_reload": false,
@@ -15551,6 +16765,12 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/AkLexPistols",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Aklex",
   "no_reload": false,
@@ -15612,6 +16832,13 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/AkLexPistols",
+   "/Lotus/Weapons/Tenno/Akimbo/AkLexPrimePistols",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Aklex Prime",
   "no_reload": false,
@@ -15671,6 +16898,12 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/AkimboAutoPistols",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Afuris",
   "no_reload": false,
@@ -15733,6 +16966,12 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/AkimboBolto",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Akbolto",
   "no_reload": false,
@@ -15796,6 +17035,12 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 3,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/AkimboPistol",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Aklato",
   "no_reload": false,
@@ -15863,6 +17108,12 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 2,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/AkimboShotGun",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 7.0,
   "name": "Akbronco",
   "no_reload": false,
@@ -15924,6 +17175,12 @@
   "headshot": [],
   "magazine_size": 28,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/AkimboViperPistols",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Twin Vipers",
   "no_reload": false,
@@ -15987,6 +17244,12 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/DualMagnus",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Akmagnus",
   "no_reload": false,
@@ -16048,6 +17311,13 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/DualMagnus",
+   "/Lotus/Weapons/Tenno/Akimbo/DualMagnusPrime",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Akmagnus Prime",
   "no_reload": false,
@@ -16112,6 +17382,12 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/DualVastos",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Akvasto",
   "no_reload": false,
@@ -16178,6 +17454,13 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/AkimboShotGun",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Akimbo/PrimeAkimboShotGun",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 7.0,
   "name": "Akbronco Prime",
   "no_reload": false,
@@ -16241,6 +17524,13 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bayonet/TnBayonetRifleWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Vinquibus",
   "no_reload": false,
@@ -16337,6 +17627,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/AntlerBow/AntlerBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Cernos",
   "no_reload": false,
@@ -16411,6 +17709,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/AsymetricalBow/AsymetricalBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Daikyu",
   "no_reload": false,
@@ -16525,6 +17831,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/DaxDuviriAsymetricalBow/DaxDuviriAsymmetricalLongBow",
+   "/Lotus/Weapons/Tenno/Bows/DaxDuviriAsymetricalBow/DaxDuviriAsymmetricalLongBowPlayerWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Cinta",
   "no_reload": false,
@@ -16619,6 +17933,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/DuelistBow/DuelistBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusWep",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Nunchasa",
   "no_reload": false,
@@ -16745,6 +18067,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/HuntingBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Paris",
   "no_reload": false,
@@ -16864,6 +18194,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep",
+   "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusWep",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Nataruk",
   "no_reload": false,
@@ -16962,6 +18300,15 @@
   ],
   "magazine_size": 1,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/AntlerBow/AntlerBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/Bows/PrimeCernos/PrimeCernos",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 3.0,
   "name": "Cernos Prime",
   "no_reload": false,
@@ -17063,6 +18410,15 @@
   ],
   "magazine_size": 1,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/AsymetricalBow/AsymetricalBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/Bows/PrimeDaikyu/PrimeDaikyuBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Daikyu Prime",
   "no_reload": false,
@@ -17191,6 +18547,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/Bows/PrimeDerelictCernos/DerelictCernos",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Proboscis Cernos",
   "no_reload": false,
@@ -17317,6 +18681,15 @@
   ],
   "magazine_size": 1,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/HuntingBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Paris Prime",
   "no_reload": false,
@@ -17444,6 +18817,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/Bows/StalkerBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Dread",
   "no_reload": false,
@@ -17564,6 +18945,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/Bows/TnChoirBow/TnChoirBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Evensong",
   "no_reload": false,
@@ -17703,6 +19092,12 @@
   "headshot": [],
   "magazine_size": null,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Grimoire/TnGrimoire",
+   "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+  ],
   "multishot": 1.0,
   "name": "Grimoire",
   "no_reload": false,
@@ -17808,6 +19203,15 @@
   ],
   "magazine_size": 14,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/DexTheThird/DexTheThird",
+   "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Dex Sybaris",
   "no_reload": false,
@@ -17873,6 +19277,13 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/DoubleBarrelShotgun/TennoDoubleBarrelShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 5.0,
   "name": "Tigris",
   "no_reload": false,
@@ -17934,6 +19345,14 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/DrakeRifle/DrakeRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Tiberon",
   "no_reload": false,
@@ -18010,6 +19429,14 @@
   ],
   "magazine_size": 5,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/FiveShotSniper/FiveShotSniper",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Rubico",
   "no_reload": false,
@@ -18124,6 +19551,14 @@
   "headshot": [],
   "magazine_size": 9,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusCrossBow",
+   "/Lotus/Weapons/Tenno/LongGuns/GarudaCrossbow/GarudaCrossbow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Nagantaka",
   "no_reload": false,
@@ -18208,6 +19643,13 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 2,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/Gunbrella/ShrineMaidenGunbrellaWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Higasa",
   "no_reload": false,
@@ -18345,6 +19787,13 @@
   "headshot": [],
   "magazine_size": 28,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/GyreRifle/GyreRifleWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Alternox",
   "no_reload": false,
@@ -18432,6 +19881,13 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/LoginPrimary/SundialRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Zenith",
   "no_reload": false,
@@ -18524,6 +19980,14 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/Miter/TnoMiter",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Panthera",
   "no_reload": false,
@@ -18592,6 +20056,13 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PaxDuviricusShotgun/PaxDuviricusShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 8.0,
   "name": "Rauta",
   "no_reload": false,
@@ -18684,6 +20155,14 @@
   "headshot": [],
   "magazine_size": 48,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeAcceltra/PrimeAcceltraWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Acceltra Prime",
   "no_reload": false,
@@ -18807,6 +20286,15 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeAfentis/PrimeAfentisWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnHopliteSpear/TnHopliteSpearGunWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Afentis Prime",
   "no_reload": false,
@@ -18946,6 +20434,14 @@
   "headshot": [],
   "magazine_size": 42,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/GyreRifle/GyreRifleWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeAlternox/PrimeAlternoxWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Alternox Prime",
   "no_reload": false,
@@ -19040,6 +20536,14 @@
   "headshot": [],
   "magazine_size": 24,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeAstilla/AstillaPrimeWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnGlassShotgun/TnGlassShotgunGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 1.0,
   "name": "Astilla Prime",
   "no_reload": false,
@@ -19109,6 +20613,15 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeBaza/PrimeBazaGun",
+   "/Lotus/Weapons/Tenno/LongGuns/TnSMG/TnSMGWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Baza Prime",
   "no_reload": false,
@@ -19196,6 +20709,15 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeBoltor/PrimeBoltor",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/BoltoRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Boltor Prime",
   "no_reload": false,
@@ -19308,6 +20830,15 @@
   "headshot": [],
   "magazine_size": 45,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/BurstRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Burston Prime",
   "no_reload": false,
@@ -19419,6 +20950,14 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeCedo/PrimeCedoWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnAlchemistShotgun/TnAlchemistShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 7.0,
   "name": "Cedo Prime",
   "no_reload": false,
@@ -19539,6 +21078,14 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeCorinth/PrimeCorinth",
+   "/Lotus/Weapons/Tenno/LongGuns/TnHeavyShotgun/TnHeavyShotgunGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 6.0,
   "name": "Corinth Prime",
   "no_reload": false,
@@ -19633,6 +21180,14 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeFulmin/PrimeFulmin",
+   "/Lotus/Weapons/Tenno/LongGuns/TnWispRifle/TnWispRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Fulmin Prime",
   "no_reload": false,
@@ -19698,6 +21253,14 @@
   ],
   "magazine_size": 16,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeLightningGun/PrimeLightningGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Vadarya Prime",
   "no_reload": false,
@@ -19792,6 +21355,15 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusCrossBow",
+   "/Lotus/Weapons/Tenno/LongGuns/GarudaCrossbow/GarudaCrossbow",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeNagantaka/PrimeNagantakaWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Nagantaka Prime",
   "no_reload": false,
@@ -19907,6 +21479,15 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/Miter/TnoMiter",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimePanthera/PrimePanthera",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Panthera Prime",
   "no_reload": false,
@@ -19975,6 +21556,15 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimePerigale/PrimePerigaleSniper",
+   "/Lotus/Weapons/Tenno/LongGuns/TnQuadSniper/TnQuadSniper",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Perigale Prime",
   "no_reload": false,
@@ -20161,6 +21751,14 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimePhantasma/PhantasmaPrimeShotgun",
+   "/Lotus/Weapons/Tenno/LongGuns/RevenantShotgun/RevenantShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 6.0,
   "name": "Phantasma Prime",
   "no_reload": false,
@@ -20301,6 +21899,15 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeScourge/PrimeScourgeWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnPriestSpear/TnPriestSpearGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Scourge Prime",
   "no_reload": false,
@@ -20395,6 +22002,15 @@
   "headshot": [],
   "magazine_size": 200,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/TennoAR"
+  ],
   "multishot": 1.0,
   "name": "Soma Prime",
   "no_reload": false,
@@ -20463,6 +22079,14 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeSteflos/PrimeSteflosShotgun",
+   "/Lotus/Weapons/Tenno/LongGuns/TnoLotusPodShotgun/TnoLotusPodShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 1.0,
   "name": "Steflos Prime",
   "no_reload": false,
@@ -20551,6 +22175,14 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeStradavar/PrimeStradavarGun",
+   "/Lotus/Weapons/Tenno/LongGuns/TennoTommyGun/TennoTommyGunRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Stradavar Prime",
   "no_reload": false,
@@ -20674,6 +22306,14 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/Shotgun"
+  ],
   "multishot": 12.0,
   "name": "Strun Prime",
   "no_reload": false,
@@ -20780,6 +22420,15 @@
   ],
   "magazine_size": 20,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeSybaris/PrimeSybarisRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Sybaris Prime",
   "no_reload": false,
@@ -20869,6 +22518,14 @@
   "headshot": [],
   "magazine_size": 200,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeTenora/TenoraPrimeWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnBardRifle/TnBardRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Tenora Prime",
   "no_reload": false,
@@ -20981,6 +22638,15 @@
   "headshot": [],
   "magazine_size": 42,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/DrakeRifle/DrakeRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeTiberon/PrimeTiberonRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Tiberon Prime",
   "no_reload": false,
@@ -21050,6 +22716,14 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/DoubleBarrelShotgun/TennoDoubleBarrelShotgun",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeTigris/PrimeTigris",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 8.0,
   "name": "Tigris Prime",
   "no_reload": false,
@@ -21188,6 +22862,14 @@
   "headshot": [],
   "magazine_size": 250,
   "mastery_req": 15,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeTrumna/PrimeTrumnaWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Thanotech/ThanoRifle/ThanotechRifle"
+  ],
   "multishot": 1.0,
   "name": "Trumna Prime",
   "no_reload": false,
@@ -21355,6 +23037,15 @@
   ],
   "magazine_size": 2,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/BaseTennoSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Vectis Prime",
   "no_reload": false,
@@ -21472,6 +23163,15 @@
   "headshot": [],
   "magazine_size": 30,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusCrossBow",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeZhuge/PrimeZhugeCrossbow",
+   "/Lotus/Weapons/Tenno/LongGuns/RepeatingCrossbow/RepeatingCrossbow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Zhuge Prime",
   "no_reload": false,
@@ -21539,6 +23239,14 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusCrossBow",
+   "/Lotus/Weapons/Tenno/LongGuns/RepeatingCrossbow/RepeatingCrossbow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Zhuge",
   "no_reload": false,
@@ -21700,6 +23408,13 @@
   "headshot": [],
   "magazine_size": 11,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/RevenantShotgun/RevenantShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 6.0,
   "name": "Phantasma",
   "no_reload": false,
@@ -21777,6 +23492,15 @@
   ],
   "magazine_size": 5,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/FiveShotSniper/FiveShotSniper",
+   "/Lotus/Weapons/Tenno/LongGuns/RubicoPrime/RubicoPrimeWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Rubico Prime",
   "no_reload": false,
@@ -21893,6 +23617,13 @@
   "headshot": [],
   "magazine_size": 48,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/SapientPrimary/SapientPrimaryWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Acceltra",
   "no_reload": false,
@@ -21980,6 +23711,13 @@
   "headshot": [],
   "magazine_size": 65,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TennoTommyGun/TennoTommyGunRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Stradavar",
   "no_reload": false,
@@ -22092,6 +23830,13 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnAlchemistShotgun/TnAlchemistShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 6.0,
   "name": "Cedo",
   "no_reload": false,
@@ -22180,6 +23925,13 @@
   "headshot": [],
   "magazine_size": 150,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnBardRifle/TnBardRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Tenora",
   "no_reload": false,
@@ -22239,6 +23991,14 @@
   "headshot": [],
   "magazine_size": 200,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnBeltFedRifle/TnBeltFedRifleWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Reconifex",
   "no_reload": false,
@@ -22334,6 +24094,13 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnGlassShotgun/TnGlassShotgunGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 1.0,
   "name": "Astilla",
   "no_reload": false,
@@ -22455,6 +24222,13 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnHeavyShotgun/TnHeavyShotgunGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 6.0,
   "name": "Corinth",
   "no_reload": false,
@@ -22577,6 +24351,14 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/TnHopliteSpear/TnHopliteSpearGunWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Afentis",
   "no_reload": false,
@@ -22690,6 +24472,13 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnInkRifle/TnInkRifleWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Enkaus",
   "no_reload": false,
@@ -22753,6 +24542,14 @@
   "headshot": [],
   "magazine_size": 52,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnModQuestRifle/TnModQuestRifleWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Thornbak",
   "no_reload": false,
@@ -22891,6 +24688,14 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpeargunRifle",
+   "/Lotus/Weapons/Tenno/LongGuns/TnPriestSpear/TnPriestSpearGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Scourge",
   "no_reload": false,
@@ -22967,6 +24772,14 @@
   ],
   "magazine_size": 12,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnQuadSniper/TnQuadSniper",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Perigale",
   "no_reload": false,
@@ -23086,6 +24899,13 @@
   "headshot": [],
   "magazine_size": 300,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnRailjackRifle/RailjackRifleGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Quellor",
   "no_reload": false,
@@ -23152,6 +24972,14 @@
   "headshot": [],
   "magazine_size": 26,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnRevolverRifle/TnRevolverRifleGun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Veldt",
   "no_reload": false,
@@ -23271,6 +25099,13 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnRifleErsatz/TnRifleErsatzWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Aeolak",
   "no_reload": false,
@@ -23339,6 +25174,14 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnSMG/TnSMGWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Baza",
   "no_reload": false,
@@ -23431,6 +25274,13 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnWispRifle/TnWispRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Fulmin",
   "no_reload": false,
@@ -23533,6 +25383,14 @@
   ],
   "magazine_size": 10,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Sybaris",
   "no_reload": false,
@@ -23598,6 +25456,13 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnoLotusPodShotgun/TnoLotusPodShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 1.0,
   "name": "Steflos",
   "no_reload": false,
@@ -23663,6 +25528,14 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusCrossBow",
+   "/Lotus/Weapons/Tenno/LongGuns/TnoPrmryXbow/TnoPrmryXbowWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Attica",
   "no_reload": false,
@@ -23791,6 +25664,15 @@
   ],
   "magazine_size": 15,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle"
+  ],
   "multishot": 1.0,
   "name": "Latron Wraith",
   "no_reload": false,
@@ -23893,6 +25775,12 @@
   ],
   "magazine_size": 35,
   "mastery_req": 1,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/AutoPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Furis",
   "no_reload": false,
@@ -23990,6 +25878,13 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/BroncoPrime",
+   "/Lotus/Weapons/Tenno/Pistol/HandShotGun",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun"
+  ],
   "multishot": 7.0,
   "name": "Bronco Prime",
   "no_reload": false,
@@ -24088,6 +25983,12 @@
   ],
   "magazine_size": 15,
   "mastery_req": 3,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/BurstPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Sicarus",
   "no_reload": false,
@@ -24150,6 +26051,12 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/CrossBow",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Bolto",
   "no_reload": false,
@@ -24247,6 +26154,12 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/HandShotGun",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun"
+  ],
   "multishot": 7.0,
   "name": "Bronco",
   "no_reload": false,
@@ -24346,6 +26259,12 @@
   ],
   "magazine_size": 6,
   "mastery_req": 3,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/HeavyPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
   "multishot": 1.0,
   "name": "Lex",
   "no_reload": false,
@@ -24433,6 +26352,13 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LatoPrime",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistol/Pistol"
+  ],
   "multishot": 1.0,
   "name": "Lato Prime",
   "no_reload": false,
@@ -24521,6 +26447,13 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LatoVandal",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistol/Pistol"
+  ],
   "multishot": 1.0,
   "name": "Lato Vandal",
   "no_reload": false,
@@ -24608,6 +26541,12 @@
   "headshot": [],
   "magazine_size": 15,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistol/Pistol"
+  ],
   "multishot": 1.0,
   "name": "Lato",
   "no_reload": false,
@@ -24710,6 +26649,12 @@
   ],
   "magazine_size": 6,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistol/RevolverPistol"
+  ],
   "multishot": 1.0,
   "name": "Vasto",
   "no_reload": false,
@@ -24794,6 +26739,12 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/1999EntHybridPistolWeapon/1999EntHybridPistolWeapon"
+  ],
   "multishot": 1.0,
   "name": "Riot-848",
   "no_reload": false,
@@ -24888,6 +26839,12 @@
   "headshot": [],
   "magazine_size": 5,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun",
+   "/Lotus/Weapons/Tenno/Pistols/AllNew1hSG/AllNew1hSG"
+  ],
   "multishot": 1.0,
   "name": "Euphona Prime",
   "no_reload": false,
@@ -25014,6 +26971,12 @@
   ],
   "magazine_size": 16,
   "mastery_req": 2,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Tenno/Pistols/AutomaticHandCrossbow/AutoCrossBow"
+  ],
   "multishot": 1.0,
   "name": "Ballistica",
   "no_reload": false,
@@ -25139,6 +27102,12 @@
   ],
   "magazine_size": 8,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol"
+  ],
   "multishot": 1.0,
   "name": "Zylok",
   "no_reload": false,
@@ -25198,6 +27167,13 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/AkimboAutoPistols",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/DexFuris/DexFuris"
+  ],
   "multishot": 1.0,
   "name": "Dex Furis",
   "no_reload": false,
@@ -25260,6 +27236,12 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/DuelistPistols/DuelistPistols"
+  ],
   "multishot": 1.0,
   "name": "Aksondol",
   "no_reload": false,
@@ -25321,6 +27303,12 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/HarlequinGun/HarlequinPistols"
+  ],
   "multishot": 1.0,
   "name": "Akzani",
   "no_reload": false,
@@ -25384,6 +27372,12 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/Magnum/Magnum"
+  ],
   "multishot": 1.0,
   "name": "Magnus",
   "no_reload": false,
@@ -25445,6 +27439,13 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/AkimboAutoPistols",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeAfuris/PrimeAFurisWeapon"
+  ],
   "multishot": 1.0,
   "name": "Afuris Prime",
   "no_reload": false,
@@ -25533,6 +27534,13 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeAkarius/PrimeAkariusWeapon",
+   "/Lotus/Weapons/Tenno/Pistols/SapientPistol/SapientPistol"
+  ],
   "multishot": 1.0,
   "name": "Akarius Prime",
   "no_reload": false,
@@ -25599,6 +27607,13 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/AkimboBolto",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeAkbolto/PrimeAkBoltoWeapon"
+  ],
   "multishot": 1.0,
   "name": "Akbolto Prime",
   "no_reload": false,
@@ -25663,6 +27678,13 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeAkjagara/AkJagaraPrime",
+   "/Lotus/Weapons/Tenno/Pistols/TigrisRedeemerSetPistol/TnoBladedPistols"
+  ],
   "multishot": 1.0,
   "name": "Akjagara Prime",
   "no_reload": false,
@@ -25725,6 +27747,13 @@
   "headshot": [],
   "magazine_size": 80,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeAksomati/PrimeAksomati",
+   "/Lotus/Weapons/Tenno/Pistols/SomaSidearm/AkimboSomaPistols"
+  ],
   "multishot": 1.0,
   "name": "Aksomati Prime",
   "no_reload": false,
@@ -25788,6 +27817,13 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeAkstiletto/PrimeAkstiletto",
+   "/Lotus/Weapons/Tenno/Pistols/TennoUzi/TennoUzi"
+  ],
   "multishot": 1.0,
   "name": "Akstiletto Prime",
   "no_reload": false,
@@ -25872,6 +27908,13 @@
   "headshot": [],
   "magazine_size": 24,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeAthodai/PrimeAthodaiPistolWeapon",
+   "/Lotus/Weapons/Tenno/Pistols/TnJetTurbine/TnJetTurbinePistolWeapon"
+  ],
   "multishot": 1.0,
   "name": "Athodai Prime",
   "no_reload": false,
@@ -25998,6 +28041,13 @@
   ],
   "magazine_size": 8,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Tenno/Pistols/AutomaticHandCrossbow/AutoCrossBow",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeBallistica/PrimeBallistica"
+  ],
   "multishot": 4.0,
   "name": "Ballistica Prime",
   "no_reload": false,
@@ -26122,6 +28172,13 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeEpitaph/PrimeEpitaphSidearmWeapon",
+   "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon"
+  ],
   "multishot": 1.0,
   "name": "Epitaph Prime",
   "no_reload": true,
@@ -26264,6 +28321,13 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeHystrix/PrimeHystrixWeapon",
+   "/Lotus/Weapons/Tenno/Pistols/QuillDartgun/QuillDartGunWeapon"
+  ],
   "multishot": 1.0,
   "name": "Hystrix Prime",
   "no_reload": false,
@@ -26328,6 +28392,13 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeKnell/PrimeKnellWeapon",
+   "/Lotus/Weapons/Tenno/Pistols/TnPriestPistolScope/TnPriestPistolWeapon"
+  ],
   "multishot": 1.0,
   "name": "Knell Prime",
   "no_reload": false,
@@ -26415,6 +28486,13 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeKompressa/PrimeKompressa",
+   "/Lotus/Weapons/Tenno/Pistols/TnYareliPistol/TnYareliPistolWeapon"
+  ],
   "multishot": 4.0,
   "name": "Kompressa Prime",
   "no_reload": false,
@@ -26523,6 +28601,13 @@
   ],
   "magazine_size": 8,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/HeavyPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex"
+  ],
   "multishot": 1.0,
   "name": "Lex Prime",
   "no_reload": false,
@@ -26586,6 +28671,13 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/Magnum/Magnum",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeMagnus/PrimeMagnusWeapon"
+  ],
   "multishot": 1.0,
   "name": "Magnus Prime",
   "no_reload": false,
@@ -26671,6 +28763,13 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/PrimePandero/PanderoPrimeWeapon",
+   "/Lotus/Weapons/Tenno/Pistols/TnBardPistol/TnBardPistolGun"
+  ],
   "multishot": 1.0,
   "name": "Pandero Prime",
   "no_reload": false,
@@ -26738,6 +28837,13 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun",
+   "/Lotus/Weapons/Tenno/Pistols/PrimePyrana/PrimePyranaPistol",
+   "/Lotus/Weapons/Tenno/Pistols/SawnOffShotgun/TennoHandShotgun"
+  ],
   "multishot": 10.0,
   "name": "Pyrana Prime",
   "no_reload": false,
@@ -26839,6 +28945,13 @@
   ],
   "magazine_size": 24,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/BurstPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeSicarus/PrimeSicarusPistol"
+  ],
   "multishot": 1.0,
   "name": "Sicarus Prime",
   "no_reload": false,
@@ -26902,6 +29015,13 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/DualVastos",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/AkPrimeVasto/AkPrimeVastoPistol"
+  ],
   "multishot": 1.0,
   "name": "Akvasto Prime",
   "no_reload": false,
@@ -27007,6 +29127,13 @@
   ],
   "magazine_size": 6,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistol/RevolverPistol",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol"
+  ],
   "multishot": 1.0,
   "name": "Vasto Prime",
   "no_reload": false,
@@ -27069,6 +29196,13 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeVelox/PrimeVeloxPistol",
+   "/Lotus/Weapons/Tenno/Pistols/TnOdaliskSmg/TnOdaliskSmgPistol"
+  ],
   "multishot": 1.0,
   "name": "Velox Prime",
   "no_reload": false,
@@ -27162,6 +29296,13 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeZakti/PrimeZaktiPistol",
+   "/Lotus/Weapons/Tenno/Pistols/TnGuandoPistol/TnGuandoPistolGun"
+  ],
   "multishot": 1.0,
   "name": "Zakti Prime",
   "no_reload": false,
@@ -27289,6 +29430,13 @@
   ],
   "magazine_size": 12,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeZylok/ZylokPrimePistol"
+  ],
   "multishot": 1.0,
   "name": "Zylok Prime",
   "no_reload": false,
@@ -27431,6 +29579,12 @@
   "headshot": [],
   "magazine_size": 16,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/QuillDartgun/QuillDartGunWeapon"
+  ],
   "multishot": 1.0,
   "name": "Hystrix",
   "no_reload": false,
@@ -27517,6 +29671,12 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/SapientPistol/SapientPistol"
+  ],
   "multishot": 1.0,
   "name": "Akarius",
   "no_reload": false,
@@ -27585,6 +29745,12 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun",
+   "/Lotus/Weapons/Tenno/Pistols/SawnOffShotgun/TennoHandShotgun"
+  ],
   "multishot": 12.0,
   "name": "Pyrana",
   "no_reload": false,
@@ -27644,6 +29810,12 @@
   "headshot": [],
   "magazine_size": 70,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/SomaSidearm/AkimboSomaPistols"
+  ],
   "multishot": 1.0,
   "name": "Aksomati",
   "no_reload": false,
@@ -27727,6 +29899,12 @@
   "headshot": [],
   "magazine_size": 75,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Tenno/Pistols/SundialGun/SundialPistol"
+  ],
   "multishot": 1.0,
   "name": "Azima",
   "no_reload": false,
@@ -27789,6 +29967,12 @@
   "headshot": [],
   "magazine_size": 28,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/TennoUzi/TennoUzi"
+  ],
   "multishot": 1.0,
   "name": "Akstiletto",
   "no_reload": false,
@@ -27850,6 +30034,12 @@
   "headshot": [],
   "magazine_size": 36,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/TigrisRedeemerSetPistol/TnoBladedPistols"
+  ],
   "multishot": 1.0,
   "name": "Akjagara",
   "no_reload": false,
@@ -27935,6 +30125,12 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/TnBardPistol/TnBardPistolGun"
+  ],
   "multishot": 1.0,
   "name": "Pandero",
   "no_reload": false,
@@ -28025,6 +30221,12 @@
   "headshot": [],
   "magazine_size": 3,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/TnGuandoPistol/TnGuandoPistolGun"
+  ],
   "multishot": 1.0,
   "name": "Zakti",
   "no_reload": false,
@@ -28109,6 +30311,12 @@
   "headshot": [],
   "magazine_size": 24,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/TnJetTurbine/TnJetTurbinePistolWeapon"
+  ],
   "multishot": 1.0,
   "name": "Athodai",
   "no_reload": false,
@@ -28170,6 +30378,12 @@
   "headshot": [],
   "magazine_size": 62,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Tenno/Pistols/TnOdaliskSmg/TnOdaliskSmgPistol"
+  ],
   "multishot": 1.0,
   "name": "Velox",
   "no_reload": false,
@@ -28234,6 +30448,12 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/TnPriestPistolScope/TnPriestPistolWeapon"
+  ],
   "multishot": 1.0,
   "name": "Knell",
   "no_reload": false,
@@ -28353,6 +30573,12 @@
   "headshot": [],
   "magazine_size": 1,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon"
+  ],
   "multishot": 1.0,
   "name": "Epitaph",
   "no_reload": true,
@@ -28440,6 +30666,12 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Tenno/Pistols/TnYareliPistol/TnYareliPistolWeapon"
+  ],
   "multishot": 4.0,
   "name": "Kompressa",
   "no_reload": false,
@@ -28528,6 +30760,14 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 2,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/BoltoRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Boltor",
   "no_reload": false,
@@ -28641,6 +30881,15 @@
   "headshot": [],
   "magazine_size": 75,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/BratonPrime",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/Rifle"
+  ],
   "multishot": 1.0,
   "name": "Braton Prime",
   "no_reload": false,
@@ -28750,6 +30999,14 @@
   "headshot": [],
   "magazine_size": 45,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/BurstRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Burston",
   "no_reload": false,
@@ -28865,6 +31122,14 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 3,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/HeavyRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
   "multishot": 1.0,
   "name": "Gorgon",
   "no_reload": false,
@@ -28993,6 +31258,15 @@
   ],
   "magazine_size": 15,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LatronPrime",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle"
+  ],
   "multishot": 1.0,
   "name": "Latron Prime",
   "no_reload": false,
@@ -29107,6 +31381,14 @@
   "headshot": [],
   "magazine_size": 45,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/Rifle"
+  ],
   "multishot": 1.0,
   "name": "Braton",
   "no_reload": false,
@@ -29233,6 +31515,14 @@
   ],
   "magazine_size": 15,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle"
+  ],
   "multishot": 1.0,
   "name": "Latron",
   "no_reload": false,
@@ -29309,6 +31599,14 @@
   ],
   "magazine_size": 4,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/SniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Snipetron",
   "no_reload": false,
@@ -29445,6 +31743,15 @@
   "headshot": [],
   "magazine_size": 60,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/Rifle",
+   "/Lotus/Weapons/Tenno/Rifle/StartingRifle"
+  ],
   "multishot": 1.0,
   "name": "MK1-Braton",
   "no_reload": false,
@@ -29534,6 +31841,14 @@
   "headshot": [],
   "magazine_size": 100,
   "mastery_req": 6,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/TennoAR"
+  ],
   "multishot": 1.0,
   "name": "Soma",
   "no_reload": false,
@@ -29700,6 +32015,14 @@
   ],
   "magazine_size": 1,
   "mastery_req": 2,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/BaseTennoSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Vectis",
   "no_reload": false,
@@ -29836,6 +32159,15 @@
   "headshot": [],
   "magazine_size": 50,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/Rifle",
+   "/Lotus/Weapons/Tenno/Rifle/VIPRifle"
+  ],
   "multishot": 1.0,
   "name": "Braton Vandal",
   "no_reload": false,
@@ -29912,6 +32244,15 @@
   ],
   "magazine_size": 6,
   "mastery_req": 5,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/SniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/VandalSniperRifle"
+  ],
   "multishot": 1.0,
   "name": "Snipetron Vandal",
   "no_reload": false,
@@ -30000,6 +32341,13 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/DoubleBarrelShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 5.0,
   "name": "Sobek",
   "no_reload": false,
@@ -30085,6 +32433,13 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 2,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/FullAutoShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
   "multishot": 8.0,
   "name": "Boar",
   "no_reload": false,
@@ -30170,6 +32525,14 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/FullAutoShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/PrimeBoar"
+  ],
   "multishot": 8.0,
   "name": "Boar Prime",
   "no_reload": false,
@@ -30236,6 +32599,13 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/QuadShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/QuadShotgunBase"
+  ],
   "multishot": 7.0,
   "name": "Hek",
   "no_reload": false,
@@ -30355,6 +32725,13 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 1,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/Shotgun"
+  ],
   "multishot": 12.0,
   "name": "Strun",
   "no_reload": false,
@@ -30478,6 +32855,14 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/Shotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal"
+  ],
   "multishot": 10.0,
   "name": "Strun Wraith",
   "no_reload": false,
@@ -30563,6 +32948,12 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 7,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/GlassKunai/GlassKunaiWeapon"
+  ],
   "multishot": 1.0,
   "name": "Fusilai",
   "no_reload": false,
@@ -30651,6 +33042,12 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 0,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai"
+  ],
   "multishot": 1.0,
   "name": "Kunai",
   "no_reload": false,
@@ -30716,6 +33113,12 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/LiDagger/LiDagger"
+  ],
   "multishot": 1.0,
   "name": "Spira",
   "no_reload": false,
@@ -30781,6 +33184,13 @@
   "headshot": [],
   "magazine_size": 12,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/LiDagger/LiDagger",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/PrimeLiDagger/PrimeLiDagger"
+  ],
   "multishot": 1.0,
   "name": "Spira Prime",
   "no_reload": false,
@@ -30846,6 +33256,13 @@
   "headshot": [],
   "magazine_size": 26,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/PrimeThrowingStar/PrimeHikou",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/TennoStars"
+  ],
   "multishot": 1.0,
   "name": "Hikou Prime",
   "no_reload": false,
@@ -30961,6 +33378,12 @@
   "headshot": [],
   "magazine_size": 10,
   "mastery_req": 4,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/StalkerKunai"
+  ],
   "multishot": 1.0,
   "name": "Despair",
   "no_reload": false,
@@ -31056,6 +33479,12 @@
   "headshot": [],
   "magazine_size": 2,
   "mastery_req": 3,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/StickyBomb/StickyBombs"
+  ],
   "multishot": 1.0,
   "name": "Castanas",
   "no_reload": false,
@@ -31121,6 +33550,12 @@
   "headshot": [],
   "magazine_size": 20,
   "mastery_req": 2,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/TennoStars"
+  ],
   "multishot": 1.0,
   "name": "Hikou",
   "no_reload": false,
@@ -31184,6 +33619,12 @@
   "headshot": [],
   "magazine_size": 6,
   "mastery_req": 10,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/TnChoirframeKunai/TnChoirframeKunai"
+  ],
   "multishot": 1.0,
   "name": "Cantare",
   "no_reload": false,
@@ -31268,6 +33709,12 @@
   "headshot": [],
   "magazine_size": 40,
   "mastery_req": 12,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimboOther",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/TnOraxiaFlechette/TnOraxiaFlechette"
+  ],
   "multishot": 4.0,
   "name": "Scyotid",
   "no_reload": false,
@@ -31363,6 +33810,12 @@
   "headshot": [],
   "magazine_size": 4,
   "mastery_req": 8,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/U18ThrowingKnives/U18throwingknives"
+  ],
   "multishot": 1.0,
   "name": "Talons",
   "no_reload": false,
@@ -31471,6 +33924,13 @@
   ],
   "magazine_size": 6,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun",
+   "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun"
+  ],
   "multishot": 4.0,
   "name": "Felarx",
   "no_reload": false,
@@ -31571,6 +34031,14 @@
   ],
   "magazine_size": 30,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle"
+  ],
   "multishot": 1.0,
   "name": "Phenmor",
   "no_reload": false,
@@ -31697,6 +34165,12 @@
   ],
   "magazine_size": 12,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol"
+  ],
   "multishot": 1.0,
   "name": "Laetum",
   "no_reload": false,
@@ -31844,6 +34318,12 @@
   ],
   "magazine_size": 20,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon"
+  ],
   "multishot": 1.0,
   "name": "Onos",
   "no_reload": false,
@@ -31986,6 +34466,12 @@
   "headshot": [],
   "magazine_size": 90,
   "mastery_req": 14,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Thanotech/ThanoPistol/ThanotechPistol"
+  ],
   "multishot": 1.0,
   "name": "Sepulcrum",
   "no_reload": false,
@@ -32121,6 +34607,13 @@
   "headshot": [],
   "magazine_size": 200,
   "mastery_req": 13,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Thanotech/ThanoRifle/ThanotechRifle"
+  ],
   "multishot": 1.0,
   "name": "Trumna",
   "no_reload": false,
@@ -32182,6 +34675,15 @@
   "headshot": [],
   "magazine_size": 120,
   "mastery_req": 11,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/GrnAssaultRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/VoidTrader/PrismaGrakata"
+  ],
   "multishot": 1.0,
   "name": "Prisma Grakata",
   "no_reload": false,
@@ -32245,6 +34747,13 @@
   "headshot": [],
   "magazine_size": 8,
   "mastery_req": 9,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Pistols/CorpusHandShotgun/CorpusHandCannon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun",
+   "/Lotus/Weapons/VoidTrader/VTDetron"
+  ],
   "multishot": 7.0,
   "name": "Mara Detron",
   "no_reload": false,

@@ -50,6 +50,13 @@
         "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
       ]
     },
+    "Bow": {
+      "title": "Bow",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
+      ]
+    },
     "Calculating_Bonuses": {
       "title": "Calculating_Bonuses",
       "impact": "high",
@@ -576,6 +583,13 @@
         "Lingering Judgement override (step 7b)"
       ]
     },
+    "Pistol_Mods": {
+      "title": "Pistol_Mods",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
+      ]
+    },
     "Polarity": {
       "title": "Polarity",
       "impact": "medium",
@@ -597,6 +611,13 @@
         "arcane damage bonus stacking group (step 4)"
       ]
     },
+    "Primary_Mods": {
+      "title": "Primary_Mods",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
+      ]
+    },
     "Puncture_Damage": {
       "title": "Puncture_Damage",
       "impact": "high",
@@ -609,6 +630,13 @@
       "impact": "high",
       "feeds": [
         "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
+    "Rifle_Mods": {
+      "title": "Rifle_Mods",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
       ]
     },
     "Riven_Mods": {
@@ -660,6 +688,13 @@
         "faction enemy list (enemies.json)"
       ]
     },
+    "Shotgun_Mods": {
+      "title": "Shotgun_Mods",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
+      ]
+    },
     "Slash_Damage": {
       "title": "Slash_Damage",
       "impact": "high",
@@ -673,6 +708,13 @@
       "feeds": [
         "sniper shot combo and zoom buffs (step 4)",
         "zoom bonuses, highest level (step 7b)"
+      ]
+    },
+    "Speargun": {
+      "title": "Speargun",
+      "impact": "high",
+      "feeds": [
+        "which mod classes a gun accepts (weapon_classes.json, G82)"
       ]
     },
     "Split_Flights": {

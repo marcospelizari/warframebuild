@@ -3,6 +3,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire",
    "compat_name": "Tome",
    "compatibility_tags": [],
    "description": "",
@@ -43,6 +44,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire",
    "compat_name": "Tome",
    "compatibility_tags": [],
    "description": "",
@@ -83,6 +85,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire",
    "compat_name": "Tome",
    "compatibility_tags": [],
    "description": "",
@@ -123,6 +126,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire",
    "compat_name": "Tome",
    "compatibility_tags": [],
    "description": "",
@@ -163,6 +167,7 @@
   {
    "base_drain": 10,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire",
    "compat_name": "Tome",
    "compatibility_tags": [],
    "description": "",
@@ -204,6 +209,7 @@
   {
    "base_drain": 10,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire",
    "compat_name": "Tome",
    "compatibility_tags": [],
    "description": "",
@@ -245,6 +251,7 @@
   {
    "base_drain": 10,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire",
    "compat_name": "Tome",
    "compatibility_tags": [],
    "description": "",
@@ -286,6 +293,7 @@
   {
    "base_drain": 10,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire",
    "compat_name": "Tome",
    "compatibility_tags": [],
    "description": "",
@@ -327,6 +335,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Bows/StalkerBow",
    "compat_name": "Dread",
    "compatibility_tags": [],
    "description": "",
@@ -374,6 +383,7 @@
   {
    "base_drain": 10,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -443,6 +453,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Grineer/LongGuns/LaserAimRifle/LaserAimRifle",
    "compat_name": "Argonak",
    "compatibility_tags": [],
    "description": "",
@@ -499,6 +510,7 @@
   {
    "base_drain": 10,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Bows/AsymetricalBow/AsymetricalBow",
    "compat_name": "Daikyu",
    "compatibility_tags": [],
    "description": "",
@@ -578,6 +590,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Grineer/LongGuns/GrnFlameSpear/GrnFlameSpear",
    "compat_name": "Javlok",
    "compatibility_tags": [],
    "description": "",
@@ -650,6 +663,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -739,6 +753,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -808,6 +823,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/HandShotGun",
    "compat_name": "Bronco",
    "compatibility_tags": [],
    "description": "",
@@ -867,6 +883,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Corpus/LongGuns/CrpFreezeRay/CrpFreezeRayRifle",
    "compat_name": "Glaxion",
    "compatibility_tags": [],
    "description": "",
@@ -936,6 +953,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistols/Magnum/Magnum",
    "compat_name": "Magnus",
    "compatibility_tags": [],
    "description": "",
@@ -978,6 +996,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Cephalon/Primary/CephPrimary/CephPrimary",
    "compat_name": "Simulor",
    "compatibility_tags": [],
    "description": "",
@@ -1025,6 +1044,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Lasria/LasSilencedPistol/LasSilencedPistolWeapon",
    "compat_name": "Vesper 77",
    "compatibility_tags": [],
    "description": "",
@@ -1102,6 +1122,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Lasria/AK47/TC2024AK47Weapon",
    "compat_name": "AX-52",
    "compatibility_tags": [],
    "description": "",
@@ -1195,6 +1216,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistols/TnJetTurbine/TnJetTurbinePistolWeapon",
    "compat_name": "Athodai",
    "compatibility_tags": [],
    "description": "",
@@ -1241,6 +1263,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/DoubleBarrelShotgun",
    "compat_name": "Sobek",
    "compatibility_tags": [],
    "description": "",
@@ -1288,6 +1311,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -1371,6 +1395,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -1454,6 +1479,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -1541,6 +1567,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -1624,6 +1651,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -1707,6 +1735,7 @@
   {
    "base_drain": 10,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -1774,6 +1803,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -1849,6 +1879,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -1924,6 +1955,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2007,6 +2039,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2082,6 +2115,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2157,6 +2191,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2232,6 +2267,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2307,6 +2343,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2382,6 +2419,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2457,6 +2495,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2503,6 +2542,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Akimbo/PrimeAkimboShotGun",
    "compat_name": "Akbronco Prime",
    "compatibility_tags": [],
    "description": "",
@@ -2564,6 +2604,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistols/PrimeAkstiletto/PrimeAkstiletto",
    "compat_name": "Akstiletto Prime",
    "compatibility_tags": [],
    "description": "",
@@ -2610,6 +2651,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
@@ -2669,6 +2711,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
@@ -2707,6 +2750,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2770,6 +2814,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2864,6 +2909,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2927,6 +2973,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -2990,6 +3037,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Infested/Pistols/InfBeamPistol/InfBeamPistol",
    "compat_name": "Catabolyst",
    "compatibility_tags": [],
    "description": "",
@@ -3037,6 +3085,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Lasria/LasGooPistol/LasGooPistolPlayerWeapon",
    "compat_name": "EFV-8 Mars",
    "compatibility_tags": [],
    "description": "",
@@ -3083,6 +3132,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Corpus/Pistols/CrpSentExperimentPistol/CrpSentExperimentPistol",
    "compat_name": "Ocucor",
    "compatibility_tags": [],
    "description": "",
@@ -3130,6 +3180,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistols/TnOdaliskSmg/TnOdaliskSmgPistol",
    "compat_name": "Velox",
    "compatibility_tags": [],
    "description": "",
@@ -3177,6 +3228,7 @@
   {
    "base_drain": 0,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol (No Aoe)",
    "compatibility_tags": [],
    "description": "",
@@ -3240,6 +3292,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -3303,6 +3356,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -3379,6 +3433,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -3455,6 +3510,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -3531,6 +3587,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -3607,6 +3664,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -3683,6 +3741,7 @@
   {
    "base_drain": 0,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -3742,6 +3801,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -3818,6 +3878,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -3894,6 +3955,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -3970,6 +4032,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4046,6 +4109,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4122,6 +4186,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4181,6 +4246,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4257,6 +4323,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [
     "SEMI_AUTO"
@@ -4342,6 +4409,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4425,6 +4493,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [
     "PROJECTILE"
@@ -4469,6 +4538,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
    "compat_name": "Thrown",
    "compatibility_tags": [
     "THROWN"
@@ -4511,6 +4581,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4555,6 +4626,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4616,6 +4688,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [
     "BEAM"
@@ -4656,6 +4729,7 @@
   {
    "base_drain": 10,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4720,6 +4794,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4781,6 +4856,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4842,6 +4918,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4903,6 +4980,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -4979,6 +5057,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5040,6 +5119,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5101,6 +5181,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5162,6 +5243,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5223,6 +5305,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5284,6 +5367,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5345,6 +5429,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5448,6 +5533,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5509,6 +5595,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5570,6 +5657,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5631,6 +5719,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5669,6 +5758,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5713,6 +5803,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5774,6 +5865,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5835,6 +5927,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5896,6 +5989,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -5957,6 +6051,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6018,6 +6113,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6056,6 +6152,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6117,6 +6214,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6155,6 +6253,7 @@
   {
    "base_drain": 10,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6199,6 +6298,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6237,6 +6337,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6298,6 +6399,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6359,6 +6461,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6462,6 +6565,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6523,6 +6627,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6584,6 +6689,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -6703,6 +6809,7 @@
   {
    "base_drain": 10,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle",
    "compat_name": "Latron",
    "compatibility_tags": [],
    "description": "",
@@ -6746,6 +6853,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Bows/LotusBow",
    "compat_name": "Bow",
    "compatibility_tags": [],
    "description": "",
@@ -6788,6 +6896,7 @@
   {
    "base_drain": 10,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Bows/LotusBow",
    "compat_name": "Bow",
    "compatibility_tags": [],
    "description": "",
@@ -6858,6 +6967,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -6943,6 +7053,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7030,6 +7141,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7115,6 +7227,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
    "compat_name": "Assault Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7218,6 +7331,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7287,6 +7401,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
    "compat_name": "Sniper",
    "compatibility_tags": [],
    "description": "",
@@ -7370,6 +7485,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7445,6 +7561,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7520,6 +7637,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7595,6 +7713,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7670,6 +7789,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7745,6 +7865,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7820,6 +7941,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7909,6 +8031,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -7984,6 +8107,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -8053,6 +8177,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -8128,6 +8253,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
    "compat_name": "Sniper",
    "compatibility_tags": [],
    "description": "",
@@ -8187,6 +8313,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
    "compat_name": "Assault Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -8233,6 +8360,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Grineer/LongGuns/GrineerAssaultRifle/GrnAssaultRifle",
    "compat_name": "Grakata",
    "compatibility_tags": [],
    "description": "",
@@ -8282,6 +8410,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Grineer/LongGuns/GrnGrenadeLauncher/GrnGrenadeLauncher",
    "compat_name": "Tonkor",
    "compatibility_tags": [],
    "description": "",
@@ -8324,6 +8453,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Grineer/LongGuns/GrnHarpoonGun/GrnHarpoonGun",
    "compat_name": "Harpak",
    "compatibility_tags": [],
    "description": "",
@@ -8372,6 +8502,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/GrnSniperRifle",
    "compat_name": "Vulkar",
    "compatibility_tags": [],
    "description": "",
@@ -8443,6 +8574,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Infested/LongGuns/InfCrpShockSwarm/InfCrpShockSwarmRifle",
    "compat_name": "Mutalist Quanta",
    "compatibility_tags": [],
    "description": "",
@@ -8492,6 +8624,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -8540,6 +8673,7 @@
   {
    "base_drain": 0,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle (No Aoe)",
    "compatibility_tags": [],
    "description": "",
@@ -8604,6 +8738,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/ClanTech/Energy/CrpLaserRifle",
    "compat_name": "Flux Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -8652,6 +8787,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Corpus/LongGuns/GrenadeLauncher/GrenadeLauncher",
    "compat_name": "Penta",
    "compatibility_tags": [],
    "description": "",
@@ -8700,6 +8836,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Corpus/Pistols/CorpusHandShotgun/CorpusHandCannon",
    "compat_name": "Detron",
    "compatibility_tags": [],
    "description": "",
@@ -8742,6 +8879,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Corpus/LongGuns/CorpusUMP/CorpusUMP",
    "compat_name": "Tetra",
    "compatibility_tags": [],
    "description": "",
@@ -8790,6 +8928,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -8851,6 +8990,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -8943,6 +9083,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -9004,6 +9145,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
    "compat_name": "Assault Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -9067,6 +9209,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistols/TigrisRedeemerSetPistol/TnoBladedPistols",
    "compat_name": "Akjagara",
    "compatibility_tags": [],
    "description": "",
@@ -9115,6 +9258,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Sentients/SentRifleNewWar/SentRifleNewWarGun",
    "compat_name": "Basmu",
    "compatibility_tags": [],
    "description": "",
@@ -9162,6 +9306,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Corpus/LongGuns/CrpSentExperimentRifle/CrpSentExperimentRifle",
    "compat_name": "Battacor",
    "compatibility_tags": [],
    "description": "",
@@ -9209,6 +9354,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Infested/Pistols/InfestedPistol",
    "compat_name": "Embolist",
    "compatibility_tags": [],
    "description": "",
@@ -9256,6 +9402,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/HeavyRifle",
    "compat_name": "Gorgon",
    "compatibility_tags": [],
    "description": "",
@@ -9331,6 +9478,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Infested/LongGuns/InfWFAccompanyingPri/InfestedBurstRifle",
    "compat_name": "Hema",
    "compatibility_tags": [],
    "description": "",
@@ -9378,6 +9526,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Lasria/LasGooAK/LasGooAKPlayerWeapon",
    "compat_name": "EFV-5 Jupiter",
    "compatibility_tags": [],
    "description": "",
@@ -9425,6 +9574,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Infested/LongGuns/InfSniperRifle/InfSniperRifle",
    "compat_name": "Sporothrix",
    "compatibility_tags": [],
    "description": "",
@@ -9472,6 +9622,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LongGuns/DrakeRifle/DrakeRifle",
    "compat_name": "Tiberon",
    "compatibility_tags": [],
    "description": "",
@@ -9519,6 +9670,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LongGuns/DoubleBarrelShotgun/TennoDoubleBarrelShotgun",
    "compat_name": "Tigris",
    "compatibility_tags": [],
    "description": "",
@@ -9567,6 +9719,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol",
    "compat_name": "Zylok",
    "compatibility_tags": [],
    "description": "",
@@ -9613,6 +9766,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow",
    "compat_name": "Paris Prime",
    "compatibility_tags": [],
    "description": "",
@@ -9682,6 +9836,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/ClanTech/Chemical/RocketLauncher",
    "compat_name": "Ogris",
    "compatibility_tags": [],
    "description": "",
@@ -9730,6 +9885,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
    "compat_name": "Sniper",
    "compatibility_tags": [],
    "description": "",
@@ -9774,6 +9930,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle",
    "compat_name": "Soma Prime",
    "compatibility_tags": [],
    "description": "",
@@ -9821,6 +9978,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -9882,6 +10040,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
    "compat_name": "Sniper",
    "compatibility_tags": [],
    "description": "",
@@ -9937,6 +10096,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -10013,6 +10173,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -10089,6 +10250,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -10165,6 +10327,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -10241,6 +10404,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -10317,6 +10481,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
    "compat_name": "Sniper",
    "compatibility_tags": [],
    "description": "",
@@ -10393,6 +10558,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -10469,6 +10635,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -10545,6 +10712,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
@@ -10604,6 +10772,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -10663,6 +10832,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -10739,6 +10909,7 @@
   {
    "base_drain": 0,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
    "compat_name": "Assault Rifle",
    "compatibility_tags": [
     "ASSAULT_AMMO"
@@ -10800,6 +10971,7 @@
   {
    "base_drain": 0,
    "category": "primary",
+   "compat_class": "/Lotus/Types/Game/LotusWeapon",
    "compat_name": "Sniper",
    "compatibility_tags": [
     "LAUNCHER_AMMO",
@@ -10862,6 +11034,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Corpus/LongGuns/GrenadeLauncher/GrenadeLauncher",
    "compat_name": "Penta",
    "compatibility_tags": [],
    "description": "Grenades leave a burning patch on impact.",
@@ -10911,6 +11084,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [
     "SEMI_AUTO"
@@ -10998,6 +11172,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11065,6 +11240,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
    "compat_name": "Sniper",
    "compatibility_tags": [],
    "description": "",
@@ -11126,6 +11302,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
    "compat_name": "Sniper",
    "compatibility_tags": [],
    "description": "",
@@ -11181,6 +11358,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11225,6 +11403,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11286,6 +11465,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LotusLongGun",
    "compat_name": "PRIMARY",
    "compatibility_tags": [
     "BEAM"
@@ -11326,6 +11506,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LotusLongGun",
    "compat_name": "PRIMARY",
    "compatibility_tags": [
     "BEAM"
@@ -11374,6 +11555,7 @@
   {
    "base_drain": 10,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11438,6 +11620,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Bows/LotusBow",
    "compat_name": "Bow",
    "compatibility_tags": [],
    "description": "",
@@ -11482,6 +11665,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11543,6 +11727,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11604,6 +11789,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11665,6 +11851,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11726,6 +11913,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11802,6 +11990,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11863,6 +12052,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11924,6 +12114,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -11985,6 +12176,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12046,6 +12238,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12107,6 +12300,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12168,6 +12362,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12229,6 +12424,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12290,6 +12486,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12351,6 +12548,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12412,6 +12610,7 @@
   {
    "base_drain": 10,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12473,6 +12672,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12576,6 +12776,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12639,6 +12840,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12700,6 +12902,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
    "compat_name": "Unique",
    "compatibility_tags": [
     "PROJECTILE"
@@ -12750,6 +12953,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12811,6 +13015,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
@@ -12849,6 +13054,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12887,6 +13093,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -12942,6 +13149,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [
     "PROJECTILE"
@@ -12982,6 +13190,7 @@
   {
    "base_drain": 10,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -13026,6 +13235,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -13064,6 +13274,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -13125,6 +13336,7 @@
   {
    "base_drain": 0,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -13186,6 +13398,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
    "compat_name": "Assault Rifle",
    "compatibility_tags": [
     "ASSAULT_AMMO"
@@ -13232,6 +13445,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -13293,6 +13507,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Types/Game/LotusWeapon",
    "compat_name": "Sniper",
    "compatibility_tags": [
     "LAUNCHER_AMMO",
@@ -13340,6 +13555,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LotusLongGun",
    "compat_name": "PRIMARY",
    "compatibility_tags": [],
    "description": "",
@@ -13386,6 +13602,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -13489,6 +13706,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -13550,6 +13768,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -13611,6 +13830,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -13730,6 +13950,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -13768,6 +13989,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -13851,6 +14073,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -13912,6 +14135,7 @@
   {
    "base_drain": 2,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -13973,6 +14197,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -14056,6 +14281,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -14139,6 +14365,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
    "compat_name": "Sniper",
    "compatibility_tags": [],
    "description": "",
@@ -14179,6 +14406,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LotusLongGun",
    "compat_name": "PRIMARY",
    "compatibility_tags": [],
    "description": "",
@@ -14217,6 +14445,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LotusLongGun",
    "compat_name": "PRIMARY",
    "compatibility_tags": [],
    "description": "",
@@ -14278,6 +14507,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LotusLongGun",
    "compat_name": "PRIMARY",
    "compatibility_tags": [],
    "description": "",
@@ -14339,6 +14569,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -14379,6 +14610,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
    "compat_name": "Rifle",
    "compatibility_tags": [],
    "description": "",
@@ -14419,6 +14651,7 @@
   {
    "base_drain": 6,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
    "compat_name": "Pistol",
    "compatibility_tags": [],
    "description": "",
@@ -14464,6 +14697,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LotusLongGun",
    "compat_name": "PRIMARY",
    "compatibility_tags": [],
    "description": "",
@@ -14525,6 +14759,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LotusLongGun",
    "compat_name": "PRIMARY",
    "compatibility_tags": [],
    "description": "",
@@ -14588,6 +14823,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LotusLongGun",
    "compat_name": "PRIMARY",
    "compatibility_tags": [],
    "description": "",
@@ -14632,6 +14868,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LotusLongGun",
    "compat_name": "PRIMARY",
    "compatibility_tags": [],
    "description": "",
@@ -14676,6 +14913,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -14751,6 +14989,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -14826,6 +15065,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -14901,6 +15141,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -14988,6 +15229,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15071,6 +15313,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15138,6 +15381,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15221,6 +15465,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15304,6 +15549,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15379,6 +15625,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15454,6 +15701,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15529,6 +15777,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15604,6 +15853,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15679,6 +15929,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15754,6 +16005,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15821,6 +16073,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15867,6 +16120,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Corpus/LongGuns/CrpSplitLaser/CrpSplitLaser",
    "compat_name": "Convectrix",
    "compatibility_tags": [],
    "description": "Only consume ammo when dealing damage.",
@@ -15932,6 +16186,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -15995,6 +16250,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16058,6 +16314,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16121,6 +16378,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Grineer/LongGuns/GrineerFlakCannon/FlakCannon",
    "compat_name": "Drakgoon",
    "compatibility_tags": [],
    "description": "",
@@ -16163,6 +16421,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/DoubleBarrelShotgun",
    "compat_name": "Sobek",
    "compatibility_tags": [],
    "description": "",
@@ -16211,6 +16470,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16249,6 +16509,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16312,6 +16573,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16388,6 +16650,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16464,6 +16727,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16540,6 +16804,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16616,6 +16881,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16692,6 +16958,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16768,6 +17035,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16827,6 +17095,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16903,6 +17172,7 @@
   {
    "base_drain": 0,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -16962,6 +17232,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17038,6 +17309,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17114,6 +17386,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17190,6 +17463,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17266,6 +17540,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17342,6 +17617,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [
     "SEMI_AUTO"
@@ -17429,6 +17705,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17512,6 +17789,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17556,6 +17834,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17617,6 +17896,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17678,6 +17958,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17739,6 +18020,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17800,6 +18082,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17861,6 +18144,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17922,6 +18206,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -17983,6 +18268,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18044,6 +18330,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18105,6 +18392,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18166,6 +18454,7 @@
   {
    "base_drain": 10,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18227,6 +18516,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18330,6 +18620,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18391,6 +18682,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18452,6 +18744,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18513,6 +18806,7 @@
   {
    "base_drain": 10,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18577,6 +18871,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18638,6 +18933,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18676,6 +18972,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18746,6 +19043,7 @@
   {
    "base_drain": 10,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18790,6 +19088,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18828,6 +19127,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18889,6 +19189,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18933,6 +19234,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -18994,6 +19296,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -19055,6 +19358,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -19116,6 +19420,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -19177,6 +19482,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -19238,6 +19544,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -19299,6 +19606,7 @@
   {
    "base_drain": 2,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -19402,6 +19710,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -19463,6 +19772,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
    "compat_name": "Shotgun",
    "compatibility_tags": [],
    "description": "",
@@ -19524,6 +19834,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/ClanTech/Bio/AcidDartPistol",
    "compat_name": "Acrid",
    "compatibility_tags": [],
    "description": "",
@@ -19585,6 +19896,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistols/AutomaticHandCrossbow/AutoCrossBow",
    "compat_name": "Ballistica",
    "compatibility_tags": [],
    "description": "",
@@ -19646,6 +19958,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/CrossBow",
    "compat_name": "Bolto",
    "compatibility_tags": [],
    "description": "",
@@ -19691,6 +20004,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston",
    "compat_name": "Burston Prime",
    "compatibility_tags": [],
    "description": "",
@@ -19752,6 +20066,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Infested/Pistols/InfestedPistol",
    "compat_name": "Embolist",
    "compatibility_tags": [],
    "description": "",
@@ -19813,6 +20128,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/Pistol/AutoPistol",
    "compat_name": "Furis",
    "compatibility_tags": [],
    "description": "",
@@ -19857,6 +20173,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/GLARifle",
    "compat_name": "Grinlok",
    "compatibility_tags": [],
    "description": "",
@@ -19918,6 +20235,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/QuadShotgunBase",
    "compat_name": "Hek",
    "compatibility_tags": [],
    "description": "",
@@ -19981,6 +20299,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai",
    "compat_name": "Kunai",
    "compatibility_tags": [],
    "description": "",
@@ -20042,6 +20361,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/ClanTech/Energy/Railgun",
    "compat_name": "Lanka",
    "compatibility_tags": [],
    "description": "",
@@ -20089,6 +20409,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun",
    "compat_name": "Miter",
    "compatibility_tags": [],
    "description": "",
@@ -20134,6 +20455,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LongGuns/Miter/TnoMiter",
    "compat_name": "Panthera",
    "compatibility_tags": [],
    "description": "",
@@ -20179,6 +20501,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/Shotgun/DoubleBarrelShotgun",
    "compat_name": "Sobek",
    "compatibility_tags": [],
    "description": "",
@@ -20240,6 +20563,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/ClanTech/Energy/CrpLaserPistol",
    "compat_name": "Spectra",
    "compatibility_tags": [],
    "description": "",
@@ -20284,6 +20608,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/ClanTech/Energy/CrpHeavyRifle",
    "compat_name": "Supra",
    "compatibility_tags": [],
    "description": "",
@@ -20329,6 +20654,7 @@
   {
    "base_drain": 4,
    "category": "secondary",
+   "compat_class": "/Lotus/Weapons/Grineer/GrineerPistol/GrineerLightPistol",
    "compat_name": "Viper",
    "compatibility_tags": [],
    "description": "",
@@ -20374,6 +20700,7 @@
   {
    "base_drain": 4,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/GrnSniperRifle",
    "compat_name": "Vulkar",
    "compatibility_tags": [],
    "description": "",
@@ -20435,6 +20762,7 @@
   {
    "base_drain": 6,
    "category": "primary",
+   "compat_class": "/Lotus/Weapons/Tenno/LongGuns/Gunbrella/ShrineMaidenGunbrellaWeapon",
    "compat_name": "Higasa",
    "compatibility_tags": [],
    "description": "Alternate Fire applies a random Status Effect to enemies hit.",

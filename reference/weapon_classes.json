@@ -1,0 +1,184 @@
+{
+  "about": "Which mod classes each gun accepts (G82). A mod fits a gun when its export-plus `compat` is the gun, a gun in its export-plus parentName chain, a class listed here for the chain's root, its category class or the all-weapons class. A gun whose chain root has no row fails the refresh.",
+  "all": {
+    "classes": [
+      "/Lotus/Types/Game/LotusWeapon"
+    ],
+    "source": "export-plus: mods with this compat are for every weapon",
+    "verified": "2026-11-10"
+  },
+  "category": {
+    "primary": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/LotusLongGun"
+      ],
+      "source": "Primary_Mods:3: 'Primary Mods are mods that can be equipped on Primary Weapons'",
+      "verified": "2026-11-10"
+    },
+    "secondary": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Pistol/LotusPistol"
+      ],
+      "source": "Pistol_Mods:1: 'Pistol Mods can be equipped by secondary Pistols, Dual Pistols, Shotgun Sidearms, Crossbows, and Tomes'; :79 a Pistol mod for thrown weapons",
+      "verified": "2026-11-10"
+    }
+  },
+  "roots": {
+    "/Lotus/Weapons/ClanTech/LotusSpeargunRifle": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+        "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+      ],
+      "source": "Speargun:6: 'Spearguns can equip Rifle Mods'; in-game arsenal check 2026-11-10: Tainted Mag (Assault Rifle mod) fits Ignis Wraith, Javlok, EFV-5 Jupiter",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/ClanTech/LotusSpecialRifle": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+        "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+      ],
+      "source": "Rifle_Mods:2: 'Rifle Mods can be equipped by primary Assault Rifles, Bows, Sniper Rifles, Spearguns, Launchers, and Arm-Cannons' (launchers); in-game arsenal check 2026-11-10: Tainted Mag (Assault Rifle mod) fits Ignis Wraith, Javlok, EFV-5 Jupiter",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Grineer/GrineerPistol/GrnScopedPistol": {
+      "classes": [],
+      "source": "secondary: Pistol class from `category`",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Lasria/LasGooAK/LasGooAKWeapon": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+        "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+      ],
+      "source": "Rifle_Mods:2: 'Rifle Mods can be equipped by primary Assault Rifles, Bows, Sniper Rifles, Spearguns, Launchers, and Arm-Cannons'; in-game arsenal check 2026-11-10: Tainted Mag (Assault Rifle mod) fits Ignis Wraith, Javlok, EFV-5 Jupiter",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo": {
+      "classes": [],
+      "source": "secondary: Pistol class from `category`",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Akimbo/LotusAkimboOther": {
+      "classes": [],
+      "source": "secondary: Pistol class from `category`",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Akimbo/LotusThrown": {
+      "classes": [],
+      "source": "secondary: Pistol class from `category`",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Bows/DaxDuviriAsymetricalBow/DaxDuviriAsymmetricalLongBow": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Bows/LotusBow",
+        "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+      ],
+      "source": "Bow:7 (Cinta)",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Bows/LotusCrossBow": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Bows/LotusBow",
+        "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+      ],
+      "source": "Bow:7; crossbows are bows (Split_Flights:47-56 names Zhuge, Nagantaka, Attica among bows it cannot fit)",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Bows/LotusLongBow": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Bows/LotusBow",
+        "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+      ],
+      "source": "Bow:7: 'All bows can equip Rifle Mods'",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusWep": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Bows/LotusBow",
+        "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+      ],
+      "source": "Bow:7 (Nataruk)",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/LotusGrimoire": {
+      "classes": [],
+      "source": "secondary: Pistol class from `category`",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistol": {
+      "classes": [],
+      "source": "secondary: Pistol class from `category`",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam": {
+      "classes": [],
+      "source": "secondary: Pistol class from `category`",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun": {
+      "classes": [],
+      "source": "secondary: Pistol class from `category`",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther": {
+      "classes": [],
+      "source": "secondary: Pistol class from `category`",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolShotgun": {
+      "classes": [],
+      "source": "secondary: Pistol class from `category`",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/BaseTennoSniperRifle": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
+        "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+      ],
+      "source": "Sniper_Rifle:165 (Vectis)",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+      ],
+      "source": "Rifle_Mods:2: 'Rifle Mods can be equipped by primary Assault Rifles, Bows, Sniper Rifles, Spearguns, Launchers, and Arm-Cannons'",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+        "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+      ],
+      "source": "Rifle_Mods:2: 'Rifle Mods can be equipped by primary Assault Rifles, Bows, Sniper Rifles, Spearguns, Launchers, and Arm-Cannons'; an assault rifle by its class name",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
+        "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+      ],
+      "source": "Sniper_Rifle:165: 'In addition to being able to equip Rifle Mods, Primary Mods ... Sniper Mods'",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun": {
+      "classes": [],
+      "source": "Shotgun_Mods:1: 'Shotgun Mods are mods that can be equipped on Primary Shotguns'",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun"
+      ],
+      "source": "Shotgun_Mods:1",
+      "verified": "2026-11-10"
+    },
+    "/Lotus/Weapons/Tenno/Shotgun/QuadShotgunBase": {
+      "classes": [
+        "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun"
+      ],
+      "source": "Shotgun_Mods:1 (Hek)",
+      "verified": "2026-11-10"
+    }
+  }
+}

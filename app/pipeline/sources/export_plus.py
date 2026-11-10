@@ -1,9 +1,9 @@
 """warframe-public-export-plus (MIT; Calamity, Inc. and AMelonInsideLemon), Q41/T1.
 
 Saved by hand into cache/raw/export-plus/, like wiki pages: never fetched by script.
-Read only for fields the DE Public Export lacks: mod and weapon compatibility tags
-(stored as given; what they mean for mod eligibility is decided in step 8) and the
-starter-mod flag (a guard on reference/mod_filter.json). Keyed by DE uniqueName.
+Read only for fields the DE Public Export lacks: mod and weapon compatibility tags, each
+gun's parent class chain and each mod's `compat` class (which mods fit which gun, G56/G82)
+and the starter-mod flag (a guard on reference/mod_filter.json). Keyed by DE uniqueName.
 """
 
 from dataclasses import dataclass
@@ -75,7 +75,9 @@ class ModTags:
 @dataclass(frozen=True)
 class ExportPlus:
     weapon_tags: dict[str, list[str]]  # uniqueName -> compatibilityTags
+    weapon_parents: dict[str, str]  # uniqueName -> parentName (weapon class chain)
     mod_tags: dict[str, ModTags]
+    mod_compat: dict[str, str]  # uniqueName -> compat: the weapon class or gun it fits
     starter_mods: frozenset[str]  # isStarter: low-rank starter copies
 
 
@@ -96,10 +98,12 @@ def load(raw_dir: Path) -> ExportPlus:
     weapons = _entries(load_json(raw_dir / DIR / WEAPONS), WEAPONS)
     return ExportPlus(
         weapon_tags={u: _tags(w, "compatibilityTags", u) for u, w in weapons.items()},
+        weapon_parents=_paths(weapons, "parentName"),
         mod_tags={
             u: ModTags(_tags(m, "compatibilityTags", u), _tags(m, "incompatibilityTags", u))
             for u, m in upgrades.items()
         },
+        mod_compat=_paths(upgrades, "compat"),
         starter_mods=frozenset(u for u, m in upgrades.items() if m.get("isStarter") is True),
     )
 
@@ -108,6 +112,18 @@ def _entries(data: Any, name: str) -> dict[str, dict[str, Any]]:
     if not isinstance(data, dict) or not all(isinstance(v, dict) for v in data.values()):
         raise RefreshError(f"export-plus {name}: format changed (expected uniqueName -> object)")
     return data
+
+
+def _paths(entries: dict[str, dict[str, Any]], key: str) -> dict[str, str]:
+    out = {}
+    for u, e in entries.items():
+        value = e.get(key)
+        if value is None:
+            continue
+        if not isinstance(value, str):
+            raise RefreshError(f"export-plus {u}: `{key}` is not a string")
+        out[u] = value
+    return out
 
 
 def _tags(entry: dict[str, Any], key: str, unique_name: str) -> list[str]:

@@ -14,7 +14,13 @@ def _row(paths: Paths, tags: list[str]) -> None:
     table = paths.reference / "weapon_tags.json"
     data = json.loads(table.read_text())
     data["weapons"] = {
-        BRATON: {"name": "Braton Prime", "tags": tags, "source": "test", "verified": "2026-11-10"}
+        BRATON: {
+            "name": "Braton Prime",
+            "tags": tags,
+            "parent": "/Lotus/Weapons/Tenno/Rifle/Rifle",
+            "source": "test",
+            "verified": "2026-11-10",
+        }
     }
     table.write_text(json.dumps(data))
 
@@ -31,6 +37,7 @@ def test_row_fills_a_gun_export_plus_lacks(paths: Paths) -> None:
     _row(paths, ["SEMI_AUTO", "ASSAULT_AMMO"])
     braton = next(w for w in build(paths.raw, paths.reference).weapons if w.name == "Braton Prime")
     assert braton.compatibility_tags == ["ASSAULT_AMMO", "SEMI_AUTO"]
+    assert "/Lotus/Weapons/Tenno/Rifle/LotusRifle" in braton.mod_classes
 
 
 def test_row_for_a_gun_export_plus_lists_fails(paths: Paths) -> None:

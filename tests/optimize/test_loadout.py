@@ -76,9 +76,17 @@ def test_arcane_must_fit_the_gun(gamedata: GameData) -> None:
         ("Paris Prime", "Split Flights", True),
         ("Aksondol", "Semi-Pistol Cannonade", True),  # SEMI_AUTO from reference/weapon_tags.json
         ("Braton Prime", "Semi-Rifle Cannonade", False),  # needs SEMI_AUTO
+        ("Soma Prime", "Shell Shock", False),  # Shotgun_Mods:1: primary shotguns only
+        ("Hek", "Shell Shock", True),
+        ("Vulkar Wraith", "Lasting Purity", True),  # Vulkar augment: every Vulkar
+        ("Vectis Prime", "Lasting Purity", False),
+        ("Ignis Wraith", "Tainted Mag", True),  # assault rifle (in-game check)
+        ("Rubico Prime", "Tainted Mag", False),  # snipers are not assault rifles
+        ("Paris Prime", "Serration", True),  # Bow:7: bows take Rifle mods
+        ("Kunai", "Hornet Strike", True),  # thrown: Pistol mods
     ],
 )
-def test_compatibility_tags(gamedata: GameData, gun: str, mod: str, ok: bool) -> None:
+def test_mod_fits_the_gun(gamedata: GameData, gun: str, mod: str, ok: bool) -> None:
     w, mods = _weapon(gamedata, gun), _mods(gamedata, mod)
     if ok:
         loadout(w, mods)

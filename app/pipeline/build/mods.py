@@ -125,6 +125,7 @@ def _mod(
         effects=overrides.effects(m["uniqueName"], levels[-1], description),
         compatibility_tags=known(tags.compatibility, m["name"]) if tags else None,
         incompatibility_tags=known(tags.incompatibility, m["name"]) if tags else None,
+        compat_class=plus.mod_compat.get(m["uniqueName"]),
     )
 
 

@@ -188,17 +188,15 @@ def support_lines(dataset: Dataset) -> list[str]:
 
 
 def untagged_lines(dataset: Dataset) -> list[str]:
-    """Weapons and mods the saved export-plus does not list yet: their tags are unknown."""
-    out = []
-    for kind, names in (
-        ("weapons", sorted(w.name for w in dataset.weapons if w.compatibility_tags is None)),
-        ("mods", sorted(m.name for m in dataset.mods if m.compatibility_tags is None)),
-    ):
-        if names:
-            out.append(f"  {kind} ({len(names)}): {_names(names)}")
-    if not out:
+    """Mods the saved export-plus does not list yet: tags and class unknown, they fit no gun
+    (a gun missing there fails the refresh until reference/weapon_tags.json has it)."""
+    names = sorted(m.name for m in dataset.mods if m.compatibility_tags is None)
+    if not names:
         return []
-    return ["not in the saved export-plus (tags unknown; re-save when it catches up):", *out]
+    return [
+        "not in the saved export-plus (fit no gun; re-save when it catches up):",
+        f"  mods ({len(names)}): {_names(names)}",
+    ]
 
 
 def module_gap_lines(dataset: Dataset) -> list[str]:

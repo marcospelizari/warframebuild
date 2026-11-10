@@ -23,7 +23,7 @@
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "4ec8daeb596e5530",
+ "dataset_hash": "b74d6c499e6472f9",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -45,7 +45,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 19,
+ "schema_version": 20,
  "sources": [
   {
    "path": "de/ExportManifest.json",
@@ -138,10 +138,22 @@
    "url": "https://wiki.warframe.com/w/Archon_Shard"
   },
   {
+   "path": "wiki/Arm-Cannon.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "0e9eb65d1a18a74a",
+   "url": "https://wiki.warframe.com/w/Arm-Cannon"
+  },
+  {
    "path": "wiki/Armor.wikitext",
    "retrieved": "2026-11-07",
    "sha256_16": "e2ba45eb98ee6ccc",
    "url": "https://wiki.warframe.com/w/Armor"
+  },
+  {
+   "path": "wiki/Assault_Rifle_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "9c12afd0eeb665d2",
+   "url": "https://wiki.warframe.com/w/Assault_Rifle_Mods"
   },
   {
    "path": "wiki/Battalyst.wikitext",
@@ -154,6 +166,18 @@
    "retrieved": "2026-11-09",
    "sha256_16": "845574f25c4dc4a5",
    "url": "https://wiki.warframe.com/w/Blast_Damage"
+  },
+  {
+   "path": "wiki/Bow.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "ea61a6fedfbf4751",
+   "url": "https://wiki.warframe.com/w/Bow"
+  },
+  {
+   "path": "wiki/Bow_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "ee532807f8787e6e",
+   "url": "https://wiki.warframe.com/w/Bow_Mods"
   },
   {
    "path": "wiki/Calculating_Bonuses.wikitext",
@@ -468,6 +492,12 @@
    "url": "https://wiki.warframe.com/w/Lanka"
   },
   {
+   "path": "wiki/Launcher.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "d9cb6a6cd70ef66f",
+   "url": "https://wiki.warframe.com/w/Launcher"
+  },
+  {
    "path": "wiki/List_of_Mods.wikitext",
    "retrieved": "2026-11-10",
    "sha256_16": "dbaebe065d4587c8",
@@ -484,6 +514,12 @@
    "retrieved": "2026-11-09",
    "sha256_16": "7d44d4c0e9b5e3ee",
    "url": "https://wiki.warframe.com/w/Magnetic_Damage"
+  },
+  {
+   "path": "wiki/Melee_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "b2dfe079320134e8",
+   "url": "https://wiki.warframe.com/w/Melee_Mods"
   },
   {
    "path": "wiki/Mod.wikitext",
@@ -618,6 +654,12 @@
    "url": "https://wiki.warframe.com/w/Phenmor"
   },
   {
+   "path": "wiki/Pistol_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "155096c127cf9597",
+   "url": "https://wiki.warframe.com/w/Pistol_Mods"
+  },
+  {
    "path": "wiki/Polarity.wikitext",
    "retrieved": "2026-11-07",
    "sha256_16": "a41ce9c7b152e3a5",
@@ -636,6 +678,12 @@
    "url": "https://wiki.warframe.com/w/Primary_Merciless"
   },
   {
+   "path": "wiki/Primary_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "617977ba87ae126e",
+   "url": "https://wiki.warframe.com/w/Primary_Mods"
+  },
+  {
    "path": "wiki/Puncture_Damage.wikitext",
    "retrieved": "2026-11-09",
    "sha256_16": "f397cff87e9b950a",
@@ -646,6 +694,18 @@
    "retrieved": "2026-11-09",
    "sha256_16": "0915247582329d8e",
    "url": "https://wiki.warframe.com/w/Radiation_Damage"
+  },
+  {
+   "path": "wiki/Rifle.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "1851fac062d5f811",
+   "url": "https://wiki.warframe.com/w/Rifle"
+  },
+  {
+   "path": "wiki/Rifle_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "fe6e8bba32aa3f2b",
+   "url": "https://wiki.warframe.com/w/Rifle_Mods"
   },
   {
    "path": "wiki/Riven_Mods.wikitext",
@@ -690,6 +750,12 @@
    "url": "https://wiki.warframe.com/w/Sentient"
   },
   {
+   "path": "wiki/Shotgun_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "daa21a02fa00b505",
+   "url": "https://wiki.warframe.com/w/Shotgun_Mods"
+  },
+  {
    "path": "wiki/Slash_Damage.wikitext",
    "retrieved": "2026-11-09",
    "sha256_16": "2df104ec04320613",
@@ -700,6 +766,12 @@
    "retrieved": "2026-11-08",
    "sha256_16": "93d486031c974f46",
    "url": "https://wiki.warframe.com/w/Sniper_Rifle"
+  },
+  {
+   "path": "wiki/Speargun.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "6af8d0f24272c26b",
+   "url": "https://wiki.warframe.com/w/Speargun"
   },
   {
    "path": "wiki/Split_Flights.wikitext",
@@ -718,6 +790,12 @@
    "retrieved": "2026-11-10",
    "sha256_16": "5804a44e2e7238ff",
    "url": "https://wiki.warframe.com/w/Steflos_Prime"
+  },
+  {
+   "path": "wiki/Tainted_Mag.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "64a81cb62f841fe7",
+   "url": "https://wiki.warframe.com/w/Tainted_Mag"
   },
   {
    "path": "wiki/Tau_Damage.wikitext",
@@ -790,6 +868,12 @@
    "retrieved": "2026-11-09",
    "sha256_16": "9acbd47e9bb10ffa",
    "url": "https://wiki.warframe.com/w/Void_Damage"
+  },
+  {
+   "path": "wiki/Weapons.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "c00ee339305fdfba",
+   "url": "https://wiki.warframe.com/w/Weapons"
   }
  ]
 }

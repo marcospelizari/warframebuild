@@ -70,7 +70,7 @@ def test_startup_loads_committed_gamedata(tmp_path: Path) -> None:
 
 
 def test_unmodelled_effects_are_listed(client: TestClient, gamedata: GameData) -> None:
-    body = {"weapon": "soma-prime", "mods": [_id(gamedata, "Lasting Purity")]}
+    body = {"weapon": "vulkar-wraith", "mods": [_id(gamedata, "Lasting Purity")]}
     ids = {a["id"] for a in client.post("/api/calc", json=body).json()["assumptions"]}
     assert "not_modelled" in ids
 

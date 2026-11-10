@@ -1,22 +1,35 @@
 {
-  "about": "Compatibility tags for guns the saved export-plus does not list yet (G56). Used only while export-plus lacks the gun: the refresh fails once it lists one, so the row is removed. Tags must be in the adapter's TAGS list.",
+  "about": "Data for guns the saved export-plus does not list yet (G56, G82): compatibility `tags` and the `parent` their class chain continues from. Used only while export-plus lacks the gun: the refresh fails once it lists one, so the row is removed. Tags must be in the adapter's TAGS list; the chain's root needs a row in weapon_classes.json.",
   "weapons": {
     "/Lotus/Weapons/Tenno/Bows/DuelistBow/DuelistBow": {
       "name": "Nunchasa",
-      "tags": ["OMICRUS", "PROJECTILE"],
-      "source": "Nunchasa:28: 'Similar to Nataruk, cannot equip Split Flights' (Nataruk's blocking tag is OMICRUS); projectile attacks in the data",
+      "tags": [
+        "OMICRUS",
+        "PROJECTILE"
+      ],
+      "parent": "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusWep",
+      "source": "Nunchasa:28: 'Similar to Nataruk, cannot equip Split Flights' (Nataruk's blocking tag is OMICRUS); projectile attacks in the data; parent: Nataruk's bow class (Nunchasa:3 'signature bow', :28 like Nataruk)",
       "verified": "2026-11-10"
     },
     "/Lotus/Weapons/Tenno/LongGuns/PrimeSteflos/PrimeSteflosShotgun": {
       "name": "Steflos Prime",
-      "tags": ["ASSAULT_AMMO", "PROJECTILE", "SEMI_AUTO"],
-      "source": "Steflos (base variant) tags in export-plus; Steflos_Prime names no mod restriction",
+      "tags": [
+        "ASSAULT_AMMO",
+        "PROJECTILE",
+        "SEMI_AUTO"
+      ],
+      "parent": "/Lotus/Weapons/Tenno/LongGuns/TnoLotusPodShotgun/TnoLotusPodShotgun",
+      "source": "Steflos (base variant) tags in export-plus; Steflos_Prime names no mod restriction; parent: base Steflos",
       "verified": "2026-11-10"
     },
     "/Lotus/Weapons/Tenno/Pistols/DuelistPistols/DuelistPistols": {
       "name": "Aksondol",
-      "tags": ["PROJECTILE", "SEMI_AUTO"],
-      "source": "Semi trigger and projectile attack in the data; Aksondol names no mod restriction",
+      "tags": [
+        "PROJECTILE",
+        "SEMI_AUTO"
+      ],
+      "parent": "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+      "source": "Semi trigger and projectile attack in the data; Aksondol names no mod restriction; parent: dual pistols class (Aksondol:3 'signature Dual Pistols')",
       "verified": "2026-11-10"
     }
   }
