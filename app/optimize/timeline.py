@@ -13,12 +13,11 @@ from dataclasses import dataclass, field
 from app.domain import debuffs
 from app.domain.class_mechanics import beam_level, sniper_combo_multiplier
 from app.domain.combat import CAP_S, INDEX, TYPES, Event
-from app.domain.crit import non_crit_chance
 from app.domain.direct_bonus import DirectBonus
-from app.domain.effects import DamageType, Faction, Trigger
+from app.domain.effects import DamageType, Faction
 from app.domain.fire_rate import shot_times
 from app.domain.headshot import Head
-from app.domain.hit import ModdedHit, with_direct_bonus
+from app.domain.hit import with_direct_bonus
 from app.domain.status import (
     BASE_DURATION_S,
     BLAST_STACK_S,
@@ -26,43 +25,19 @@ from app.domain.status import (
     STATUS_S,
     blast_hits,
     blast_proc,
-    boosted,
-    chance_of_at_least_one,
-    combined_chance,
     dot_seed,
     dot_tick,
     dot_ticks,
     heat_ticks,
-    proc_shares,
 )
-from app.gamedata.models import Attack
 from app.optimize.conditions import Resolved
-from app.optimize.evaluate import Loadout
 from app.optimize.head import AOE, head_args
-from app.optimize.shot import own_procs
+from app.optimize.loadout import Loadout
+from app.optimize.procs import part_procs
 
 HEAT = DamageType.HEAT
 TIME_EPS = 1e-6  # s
 POOLED = (HEAT,)  # Heat stacks share one tick and refresh each other (Heat_Damage:66)
-
-
-@dataclass(frozen=True)
-class _Procs:
-    """Expected procs of one shot part per shot."""
-
-    normal: dict[DamageType, float]  # seeded by the average hit
-    on_crit: dict[DamageType, float]  # applied by crits only: seeded by the average crit
-    crit_ratio: float  # average crit multiplier / average hit multiplier
-
-    @property
-    def total(self) -> dict[DamageType, float]:
-        keys = sorted(self.normal.keys() | self.on_crit.keys())
-        return {t: self.normal.get(t, 0.0) + self.on_crit.get(t, 0.0) for t in keys}
-
-    def seeded(self) -> list[tuple[DamageType, float, float]]:
-        """(type, procs, seed ratio) with procs > 0."""
-        out = [(t, p, 1.0) for t, p in self.normal.items() if p]
-        return out + [(t, p, self.crit_ratio) for t, p in self.on_crit.items() if p]
 
 
 @dataclass
@@ -79,7 +54,7 @@ class Timeline:
         self.shot = self.res.shot
         self.times = shot_times(self.shot.firing, self.shot.rate_factor, CAP_S)
         self.own = [
-            self._part_procs(hit, attack)
+            part_procs(hit, attack, self.lo.mark, self.head, self.shot, self.res.forced)
             for hit, (_, attack) in zip(self.shot.hits, self.lo.parts, strict=True)
         ]
 
@@ -149,43 +124,6 @@ class Timeline:
             for dt, p in own.total.items():
                 out[dt] = out.get(dt, 0.0) + p
         return out
-
-    def _part_procs(self, hit: ModdedHit, attack: Attack | None) -> "_Procs":
-        """Procs of one shot part: its own, plus the forced procs of mods (Hunter Munitions on
-        crits, Internal Bleeding on Impact procs): sources of one type apply it at most once
-        per projectile (checklist, Hunter Munitions + Internal Bleeding)."""
-        normal = own_procs(hit, attack)
-        args = head_args(attack, self.lo.mark) if self.lo.mark else None
-        head = self.head if args is not None else None
-        flat = bool(args and args.flat)
-        f = self.shot.firing
-        rate = f.fire_rate * self.shot.rate_factor if f.fire_rate else self.shot.rate
-        shares = proc_shares(hit.damage)
-        guaranteed = set((attack.forced_procs or []) if attack else [])
-        crit: dict[DamageType, list[float]] = {}
-        other: dict[DamageType, list[float]] = {}
-        for e in self.res.forced:
-            if e.damage_type is None:
-                continue
-            value = boosted(e.value, e.fire_rate_boost, rate)
-            if e.trigger == Trigger.ON_CRIT:
-                p = value * (1 - non_crit_chance(hit.crit_chance(head, flat=flat)))
-                crit.setdefault(e.damage_type, []).append(p)
-                continue
-            on = e.trigger_damage_type
-            if on in guaranteed:
-                met = 1.0
-            else:
-                share = shares.get(on, 0.0) if on else 1.0
-                met = chance_of_at_least_one(hit.status_chance, share)
-            other.setdefault(e.damage_type, []).append(value * met)
-        on_crit: dict[DamageType, float] = {}
-        for dt in sorted(crit.keys() | other.keys()):
-            first = combined_chance(crit.get(dt, []))
-            both = combined_chance(crit.get(dt, []) + other.get(dt, []))
-            on_crit[dt] = first * hit.multishot
-            normal[dt] = normal.get(dt, 0.0) + (both - first) * hit.multishot
-        return _Procs(normal, on_crit, hit.crit_only_ratio(head, flat=flat))
 
     def _combo(self, hits: float) -> float:
         minimum = self.lo.weapon.sniper_combo_min

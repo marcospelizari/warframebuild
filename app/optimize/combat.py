@@ -13,7 +13,7 @@ from app.domain.effects import Faction
 from app.domain.headshot import Head
 from app.gamedata.models import Enemy, FactionModifiers
 from app.optimize.conditions import Resolved, resolve
-from app.optimize.evaluate import Loadout
+from app.optimize.loadout import Loadout
 from app.optimize.timeline import Timeline
 
 

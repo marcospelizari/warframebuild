@@ -12,7 +12,7 @@ from app.domain.status import dot_seed, dot_tick
 from app.gamedata.models import Mod, Weapon
 from app.gamedata.store import GameData
 from app.optimize.conditions import resolve
-from app.optimize.evaluate import Loadout, loadout
+from app.optimize.loadout import Loadout, loadout
 from app.optimize.shot import own_procs
 from app.optimize.timeline import Timeline
 
