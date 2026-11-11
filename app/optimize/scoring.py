@@ -5,7 +5,7 @@ builds over one faction's (R1). Faction damage mods only in their own faction's 
 from collections.abc import Callable, Sequence
 
 from app.domain.combat import neutral_dps
-from app.domain.effects import Faction, Stat, Support
+from app.domain.effects import DamageType, Faction, Stat, Support
 from app.domain.headshot import Head
 from app.gamedata.models import Arcane, Mod, Perk, Weapon
 from app.gamedata.store import GameData
@@ -24,27 +24,44 @@ def max_score(lo: Loadout, head: Head) -> float:
     return neutral_dps(Timeline(lo, resolve(lo, on_head is not None), on_head, None).events())
 
 
-def best_max(data: GameData, weapon: Weapon, budget: int = MAX_EVALUATIONS) -> Result:
+Objective = Callable[[Loadout], float]
+
+
+def max_objective(data: GameData) -> Objective:
     ref = data.reference_head
     head = Head(ref.multiplier, critical=ref.critical)
-    mods = [m for m in pool(weapon, data.mods.mods).mods if not _bane(m)]  # no faction: no use
-    return _search(data, weapon, mods, lambda lo: max_score(lo, head), budget)
+    return lambda lo: max_score(lo, head)
 
 
-def best_combat(
-    data: GameData, weapon: Weapon, faction: str | None = None, budget: int = MAX_EVALUATIONS
-) -> Result:
-    """`faction`: that faction's build; None: Recommended (every faction, no faction mods).
-    The score is 1 / combat cost (higher is better)."""
+def combat_objective(data: GameData, faction: str | None = None) -> Objective:
+    """1 / combat cost (higher is better) over every representative enemy, or `faction`'s."""
     enemies = [e for e in data.enemies if faction is None or e.faction == faction]
     if not enemies:
         raise ValueError(f"no representative enemies for {faction!r}")
-    mods = combat_mods(data, weapon, faction)
+    return lambda lo: 1 / combat(lo, enemies, data.factions).score
 
-    def score(lo: Loadout) -> float:
-        return 1 / combat(lo, enemies, data.factions).score
 
-    return _search(data, weapon, mods, score, budget)
+def best_max(
+    data: GameData,
+    weapon: Weapon,
+    bonus: DamageType | None = None,
+    budget: int = MAX_EVALUATIONS,
+) -> Result:
+    """`bonus`: the progenitor bonus element (Kuva/Tenet/Coda, G15)."""
+    mods = [m for m in pool(weapon, data.mods.mods).mods if not _bane(m)]  # no faction: no use
+    return _search(data, weapon, mods, max_objective(data), bonus, budget)
+
+
+def best_combat(
+    data: GameData,
+    weapon: Weapon,
+    faction: str | None = None,
+    bonus: DamageType | None = None,
+    budget: int = MAX_EVALUATIONS,
+) -> Result:
+    """`faction`: that faction's build; None: Recommended (every faction, no faction mods)."""
+    objective = combat_objective(data, faction)
+    return _search(data, weapon, combat_mods(data, weapon, faction), objective, bonus, budget)
 
 
 def combat_mods(data: GameData, weapon: Weapon, faction: str | None) -> list[Mod]:
@@ -77,28 +94,38 @@ def choices(data: GameData, weapon: Weapon) -> list[list[Option]]:
     return out
 
 
+def build_loadout(
+    data: GameData,
+    weapon: Weapon,
+    mods: list[Mod],
+    exilus: Mod | None,
+    picks: Sequence[Option],
+    bonus: DamageType | None = None,
+) -> Loadout:
+    """The loadout of a searched build: choice slots = arcane, then one perk per EVO tier."""
+    arcane = picks[0] if picks else None
+    return loadout(
+        weapon,
+        mods,
+        bonus,
+        data.incarnon_by_id.get(weapon.unique_name),
+        [p.name for p in picks[1:] if isinstance(p, Perk)],
+        arcane=arcane if isinstance(arcane, Arcane) else None,
+        sets=data.set_by_id,
+        exilus=exilus,
+    )
+
+
 def _search(
     data: GameData,
     weapon: Weapon,
     mods: Sequence[Mod],
-    objective: Callable[[Loadout], float],
+    objective: Objective,
+    bonus: DamageType | None,
     budget: int,
 ) -> Result:
-    incarnon = data.incarnon_by_id.get(weapon.unique_name)
-
     def score(regular: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]) -> float:
-        arcane = picks[0]
-        perks = [p.name for p in picks[1:] if isinstance(p, Perk)]
-        lo = loadout(
-            weapon,
-            regular,
-            incarnon=incarnon,
-            perks=perks,
-            arcane=arcane if isinstance(arcane, Arcane) else None,
-            sets=data.set_by_id,
-            exilus=exilus,
-        )
-        return objective(lo)
+        return objective(build_loadout(data, weapon, regular, exilus, picks, bonus))
 
     return search(mods, score, budget, choices(data, weapon))
 
