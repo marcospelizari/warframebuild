@@ -1,5 +1,7 @@
 """FastAPI application: JSON API under /api, built frontend (web/dist) for everything else."""
 
+import logging
+import os
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from importlib.metadata import version
@@ -12,13 +14,24 @@ from pydantic import BaseModel
 from starlette.exceptions import HTTPException
 from starlette.types import Scope
 
-from app.api import errors
-from app.api.routes import calc
+from app.api import errors, jobs
+from app.api.rate_limit import RateLimit
+from app.api.routes import builds, calc, img, mods, weapons
+from app.api.runner import Runner
+from app.gamedata.release import open_current
 from app.gamedata.store import GameData, load
 
 ROOT = Path(__file__).resolve().parents[2]
 WEB_DIST = ROOT / "web" / "dist"
 GAMEDATA = ROOT / "gamedata"
+RELEASES = ROOT / "cache" / "releases"
+IMG = ROOT / "cache" / "img"
+# CPU work (E6/E7): runner size = concurrency cap; one uvicorn worker keeps it global.
+WORKERS = max(1, min(4, (os.cpu_count() or 2) // 2))
+QUEUE = 2 * WORKERS  # jobs waiting for a permit; more is 503
+TIMEOUT_S = 5.0  # a request stops waiting; a job at 2x restarts the pool
+
+log = logging.getLogger(__name__)
 
 
 class Health(BaseModel):
@@ -38,12 +51,40 @@ class SpaFiles(StaticFiles):
             return await super().get_response("index.html", scope)
 
 
-def create_app(web_dist: Path = WEB_DIST, data: GameData | None = None) -> FastAPI:
+def create_app(
+    web_dist: Path = WEB_DIST,
+    data: GameData | None = None,
+    releases: Path = RELEASES,
+    img_dir: Path = IMG,
+) -> FastAPI:
+    """Data and builds come from the current release (C4); before the first
+    `wfb build-all`, or when the release no longer loads (e.g. an older schema), data from
+    gamedata/ and /builds answers 503."""
+    try:
+        release = open_current(releases)
+    except (OSError, ValueError, KeyError) as error:
+        log.warning("current release unreadable (%s): serving gamedata/ without builds", error)
+        release = None
+
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
-        if getattr(app.state, "data", None) is None:
-            app.state.data = load(GAMEDATA)
-        yield
+        if app.state.data is None:
+            folder = GAMEDATA
+            if app.state.release is not None:
+                try:
+                    app.state.data = load(app.state.release.gamedata)
+                    folder = app.state.release.gamedata
+                except (OSError, ValueError) as error:
+                    log.warning("release unusable (%s): serving gamedata/ without builds", error)
+                    app.state.release = None
+            if app.state.data is None:
+                app.state.data = load(GAMEDATA)
+            # Workers load the same folder the app serves (C4).
+            app.state.runner = Runner(WORKERS, QUEUE, TIMEOUT_S, True, jobs.load_data, (folder,))
+        try:
+            yield
+        finally:
+            app.state.runner.shutdown()
 
     app = FastAPI(
         title="warframeBuild",
@@ -54,8 +95,20 @@ def create_app(web_dist: Path = WEB_DIST, data: GameData | None = None) -> FastA
         lifespan=lifespan,
     )
     app.state.data = data
+    app.state.release = release
+    app.state.img_dir = img_dir
+    app.state.builds_cache = {}
+    app.state.rate_limit = RateLimit()
+    # Injected data (tests) cannot reach a spawned process: threads share it instead.
+    app.state.runner = (
+        Runner(WORKERS, QUEUE, TIMEOUT_S, False, jobs.load_data, (data,)) if data else None
+    )
     errors.install(app)
     app.include_router(calc.router)
+    app.include_router(builds.router)
+    app.include_router(weapons.router)
+    app.include_router(mods.router)
+    app.include_router(img.router)
 
     @app.get("/api/health")
     def health() -> Health:

@@ -63,6 +63,10 @@ class GameData:
         return {s.unique_name: s for s in self.mods.sets}
 
     @cached_property
+    def arcane_by_id(self) -> dict[str, Arcane]:
+        return {a.unique_name: a for a in self.arcanes}
+
+    @cached_property
     def mod_by_id(self) -> dict[str, Mod]:
         return {m.unique_name: m for m in self.mods.mods}
 

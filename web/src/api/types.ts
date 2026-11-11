@@ -38,6 +38,57 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/mods": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Mods */
+        get: operations["mods_api_mods_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/weapons": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Weapons */
+        get: operations["weapons_api_weapons_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/weapons/{slug}/builds": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Builds */
+        get: operations["builds_api_weapons__slug__builds_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -50,6 +101,29 @@ export interface components {
             field?: string | null;
             /** Message */
             message: string;
+        };
+        /** ArcaneItem */
+        ArcaneItem: {
+            /** Compatible */
+            compatible: boolean;
+            /** Name */
+            name: string;
+            /** Rarity */
+            rarity: string | null;
+            /** Reason */
+            reason: string | null;
+            /** Stats */
+            stats: string[];
+            support: components["schemas"]["Support"];
+            /** Unique Name */
+            unique_name: string;
+        };
+        /** ArcaneRef */
+        ArcaneRef: {
+            /** Name */
+            name: string;
+            /** Unique Name */
+            unique_name: string;
         };
         /** Arsenal */
         Arsenal: {
@@ -94,6 +168,7 @@ export interface components {
         };
         /** Build */
         Build: {
+            arcane?: components["schemas"]["ArcaneRef"] | null;
             arsenal: components["schemas"]["Arsenal"];
             /** Assumptions */
             assumptions: components["schemas"]["Assumption"][];
@@ -102,6 +177,7 @@ export interface components {
             /** Dataset Hash */
             dataset_hash: string;
             dps: components["schemas"]["Dps"];
+            exilus?: components["schemas"]["Slot"] | null;
             /**
              * Form
              * @enum {string}
@@ -114,9 +190,31 @@ export interface components {
             slots: components["schemas"]["Slot"][];
             weapon: components["schemas"]["WeaponRef"];
         };
+        /** BuildsResponse */
+        BuildsResponse: {
+            /** Dataset Hash */
+            dataset_hash: string;
+            /** Elements */
+            elements: components["schemas"]["ElementChoice"][];
+            /** Release */
+            release: string;
+            /** Variants */
+            variants: components["schemas"]["VariantBuilds"][];
+            weapon: components["schemas"]["WeaponRef"];
+        };
         /** CalcRequest */
         CalcRequest: {
+            /**
+             * Arcane
+             * @description arcane uniqueName
+             */
+            arcane?: string | null;
             bonus_element?: components["schemas"]["DamageType"] | null;
+            /**
+             * Exilus
+             * @description exilus mod uniqueName
+             */
+            exilus?: string | null;
             /**
              * Mods
              * @description mod uniqueNames in slot order
@@ -164,6 +262,20 @@ export interface components {
             /** Direct Sustained */
             direct_sustained: number | null;
             head?: components["schemas"]["HeadDps"] | null;
+            /** Max Score */
+            max_score: number;
+        };
+        /** ElementChoice */
+        ElementChoice: {
+            element: components["schemas"]["DamageType"];
+            /** Optimized */
+            optimized: boolean;
+            /** Rank */
+            rank: number;
+            /** Searched */
+            searched: number;
+            /** What If */
+            what_if: number;
         };
         /** EnemyFight */
         EnemyFight: {
@@ -179,6 +291,15 @@ export interface components {
             target: string;
             /** Ttk */
             ttk: number | null;
+            /** Unique Name */
+            unique_name: string;
+        };
+        /** ExcludedWeapon */
+        ExcludedWeapon: {
+            /** Name */
+            name: string;
+            /** Reason */
+            reason: string;
         };
         /** FactionScore */
         FactionScore: {
@@ -186,6 +307,31 @@ export interface components {
             faction: string;
             /** Score */
             score: number;
+        };
+        /** Forma */
+        Forma: {
+            /** Capacity */
+            capacity: number;
+            exilus: components["schemas"]["FormaSlot"] | null;
+            /** Forma */
+            forma: number;
+            /** Regular */
+            regular: components["schemas"]["FormaSlot"][];
+            /** Used */
+            used: number;
+        };
+        /** FormaSlot */
+        FormaSlot: {
+            /** Drain */
+            drain: number;
+            /** Forma */
+            forma: boolean;
+            polarity: components["schemas"]["Polarity"] | null;
+        };
+        /** HTTPValidationError */
+        HTTPValidationError: {
+            /** Detail */
+            detail?: components["schemas"]["ValidationError"][];
         };
         /**
          * HeadDps
@@ -219,6 +365,74 @@ export interface components {
             /** Version */
             version: string;
         };
+        /** ModItem */
+        ModItem: {
+            /** Compatible */
+            compatible: boolean;
+            /** Description */
+            description: string;
+            /** Drain */
+            drain: number;
+            /** Exilus */
+            exilus: boolean;
+            /** Family */
+            family: string | null;
+            /** Mod Set */
+            mod_set: string | null;
+            /** Name */
+            name: string;
+            /** Polarity */
+            polarity: string;
+            /** Rank */
+            rank: number;
+            /** Rarity */
+            rarity: string;
+            /** Reason */
+            reason: string | null;
+            /** Stats */
+            stats: string[];
+            support: components["schemas"]["Support"];
+            /** Unique Name */
+            unique_name: string;
+        };
+        /**
+         * ModList
+         * @description Everything the editor's picker offers for one gun (F7, G20).
+         */
+        ModList: {
+            /** Arcanes */
+            arcanes: components["schemas"]["ArcaneItem"][];
+            /** Dataset Hash */
+            dataset_hash: string;
+            /** Mods */
+            mods: components["schemas"]["ModItem"][];
+            /** Perks */
+            perks: components["schemas"]["PerkTier"][];
+            weapon: components["schemas"]["WeaponRef"];
+        };
+        /** PerkItem */
+        PerkItem: {
+            /**
+             * Form
+             * @enum {string}
+             */
+            form: "both" | "normal" | "incarnon";
+            /** Name */
+            name: string;
+            support: components["schemas"]["Support"];
+        };
+        /** PerkTier */
+        PerkTier: {
+            /** Options */
+            options: components["schemas"]["PerkItem"][];
+            /** Tier */
+            tier: number;
+        };
+        /**
+         * Polarity
+         * @enum {string}
+         */
+        Polarity: "madurai" | "naramon" | "vazarin" | "any";
         /** Slot */
         Slot: {
             /** Index */
@@ -241,6 +455,82 @@ export interface components {
             kind: "wiki" | "reference" | "de" | "wfcd";
             /** Url */
             url: string;
+        };
+        /**
+         * StoredBuild
+         * @description A precomputed build: its search outcome and the build scored as /calc scores it.
+         */
+        StoredBuild: {
+            build: components["schemas"]["Build"];
+            /** Evaluations */
+            evaluations: number;
+            forma: components["schemas"]["Forma"] | null;
+            /** Score */
+            score: number;
+            /** Search Scope */
+            search_scope: string[];
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "optimal" | "best_found" | "what_if";
+        };
+        /**
+         * Support
+         * @enum {string}
+         */
+        Support: "full" | "partial" | "unsupported";
+        /** ValidationError */
+        ValidationError: {
+            /** Context */
+            ctx?: Record<string, never>;
+            /** Input */
+            input?: unknown;
+            /** Location */
+            loc: (string | number)[];
+            /** Message */
+            msg: string;
+            /** Error Type */
+            type: string;
+        };
+        /** VariantBuilds */
+        VariantBuilds: {
+            /** Denominators */
+            denominators: {
+                [key: string]: number;
+            };
+            element: components["schemas"]["DamageType"] | null;
+            /** Factions */
+            factions: {
+                [key: string]: components["schemas"]["StoredBuild"];
+            };
+            max: components["schemas"]["StoredBuild"];
+            recommended: components["schemas"]["StoredBuild"];
+        };
+        /** WeaponItem */
+        WeaponItem: {
+            category: components["schemas"]["Category"];
+            /** Image */
+            image: string | null;
+            /** Incarnon */
+            incarnon: boolean;
+            /** Name */
+            name: string;
+            /** Progenitor */
+            progenitor: boolean;
+            /** Slug */
+            slug: string;
+            /** Weapon Type */
+            weapon_type: string;
+        };
+        /** WeaponList */
+        WeaponList: {
+            /** Dataset Hash */
+            dataset_hash: string;
+            /** Excluded */
+            excluded: components["schemas"]["ExcludedWeapon"][];
+            /** Weapons */
+            weapons: components["schemas"]["WeaponItem"][];
         };
         /** WeaponRef */
         WeaponRef: {
@@ -310,6 +600,24 @@ export interface operations {
                     "application/json": components["schemas"]["ApiError"];
                 };
             };
+            /** @description Too Many Requests */
+            429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
+            /** @description Service Unavailable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
         };
     };
     health_api_health_get: {
@@ -328,6 +636,136 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["Health"];
+                };
+            };
+        };
+    };
+    mods_api_mods_get: {
+        parameters: {
+            query: {
+                weapon: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ModList"];
+                };
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    weapons_api_weapons_get: {
+        parameters: {
+            query?: {
+                category?: components["schemas"]["Category"] | null;
+                q?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["WeaponList"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    builds_api_weapons__slug__builds_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                slug: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BuildsResponse"];
+                };
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+            /** @description Too Many Requests */
+            429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
+            /** @description Service Unavailable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
                 };
             };
         };

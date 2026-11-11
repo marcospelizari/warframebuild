@@ -36,13 +36,13 @@ def _siblings(gamedata_dir: Path) -> tuple[Path, Path, Path]:
 
 
 @contextmanager
-def exclusive(path: Path) -> Iterator[None]:
+def exclusive(path: Path, job: str = "refresh") -> Iterator[None]:
     """Lock file created with O_EXCL; a second holder fails instead of waiting."""
     try:
         fd = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
     except FileExistsError:
         raise StoreError(
-            f"{path} exists: another refresh is running, or one crashed (then delete the file)"
+            f"{path} exists: another {job} is running, or one crashed (then delete the file)"
         ) from None
     try:
         os.write(fd, str(os.getpid()).encode())
@@ -66,7 +66,7 @@ def recover(gamedata_dir: Path) -> None:
             old.rename(gamedata_dir)  # crash between the renames: restore
 
 
-def _dump(value: object) -> bytes:
+def dump(value: object) -> bytes:
     if isinstance(value, BaseModel):
         value = value.model_dump(mode="json")
     elif isinstance(value, list):
@@ -83,14 +83,14 @@ def write(
 ) -> Meta:
     """Stage, re-load through the models, then swap in. On failure gamedata/ stays as it was."""
     payloads = {
-        "weapons.json": _dump(dataset.weapons),
-        "mods.json": _dump(ModsFile(mods=dataset.mods, sets=dataset.mod_sets)),
-        "arcanes.json": _dump(dataset.arcanes),
-        "joins.json": _dump(dataset.joins),
-        "incarnon.json": _dump(dataset.incarnon),
-        "reference_head.json": _dump(dataset.reference_head),
-        "enemies.json": _dump(dataset.enemies),
-        "factions.json": _dump(dataset.factions),
+        "weapons.json": dump(dataset.weapons),
+        "mods.json": dump(ModsFile(mods=dataset.mods, sets=dataset.mod_sets)),
+        "arcanes.json": dump(dataset.arcanes),
+        "joins.json": dump(dataset.joins),
+        "incarnon.json": dump(dataset.incarnon),
+        "reference_head.json": dump(dataset.reference_head),
+        "enemies.json": dump(dataset.enemies),
+        "factions.json": dump(dataset.factions),
     }
     digest = dataset_hash(payloads)
     fetched = max((s.retrieved for s in sources if not s.path.startswith("wiki/")), default="")
@@ -125,7 +125,7 @@ def write(
         excluded_weapons=dataset.excluded_weapons,
         denied_mods=dataset.denied_mods,
     )
-    payloads["meta.json"] = _dump(meta)
+    payloads["meta.json"] = dump(meta)
 
     staging, old, lock = _siblings(gamedata_dir)
     with exclusive(lock):

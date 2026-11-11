@@ -9,7 +9,7 @@ from app.domain.effects import DamageType, Faction, Stat, Support
 from app.domain.headshot import Head
 from app.gamedata.models import Arcane, Mod, Perk, Weapon
 from app.gamedata.store import GameData
-from app.optimize.candidates import pool
+from app.optimize.candidates import arcane_fits, pool
 from app.optimize.combat import combat
 from app.optimize.conditions import resolve
 from app.optimize.loadout import Loadout, loadout
@@ -77,9 +77,7 @@ def choices(data: GameData, weapon: Weapon) -> list[list[Option]]:
     arcanes += [
         a
         for a in sorted(data.arcanes, key=lambda a: a.unique_name)
-        if a.category == weapon.category
-        and a.weapon_type in (None, weapon.weapon_type)
-        and _modelled(a.effects.support, a.effects.effects)
+        if arcane_fits(weapon, a) and _modelled(a.effects.support, a.effects.effects)
     ]
     out = [arcanes]
     incarnon = data.incarnon_by_id.get(weapon.unique_name)

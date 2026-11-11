@@ -190,3 +190,13 @@ def test_beam_ramp_follows_the_scored_form(gamedata: GameData, name: str, beam: 
         assert first == pytest.approx(full * beam_ramp(0.2, events[0].time))
     else:
         assert first == pytest.approx(full)
+
+
+def test_bow_slowed_past_minus_100_percent_still_fires(gamedata: GameData) -> None:
+    """Review 2026-11-11: Lenz + Critical Delay + Vile Precision (x2 on bows) divided by
+    zero; it fires at the 10x charge (saved Fire_Rate:29)."""
+    lenz = _weapon(gamedata, "Lenz")
+    mods = _mods(gamedata, "Amalgam Serration", "Critical Delay", "Vile Precision")
+    result = combat(loadout(lenz, mods), gamedata.enemies, gamedata.factions)
+    assert math.isfinite(result.score) and result.score > 0
+    assert timeline(loadout(lenz, mods), gamedata.enemies[0]) == []  # 1st shot at 12 s > cap

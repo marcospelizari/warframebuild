@@ -9,7 +9,8 @@ from pathlib import Path
 import uvicorn
 
 from app.api.app import create_app
-from app.pipeline import check, fixtures, refresh
+from app.optimize.search import MAX_EVALUATIONS
+from app.pipeline import build_all, check, fixtures, refresh
 from app.pipeline.sources.http import PoliteClient
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,6 +29,11 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("fixtures", help="trim cache/raw/ into tests/fixtures/raw/")
     chk = sub.add_parser("check", help="after a game update: what changed, what to re-check")
     chk.add_argument("--offline", action="store_true", help="skip the DE/WFCD source check")
+    every = sub.add_parser("build-all", help="precompute every gun's builds into a new release")
+    every.add_argument("--workers", type=int, help="worker processes (default: all CPUs)")
+    every.add_argument(
+        "--budget", type=int, default=MAX_EVALUATIONS, help="evaluations per build (E3)"
+    )
     args = parser.parse_args(argv)
 
     if args.command == "serve":
@@ -44,6 +50,16 @@ def main(argv: list[str] | None = None) -> int:
         )
     elif args.command == "check":
         return _guarded(lambda: run_check(offline=args.offline), "check failed")
+    elif args.command == "build-all":
+        return _guarded(
+            lambda: build_all.run(
+                build_all.Paths.project(ROOT),
+                args.workers,
+                args.budget,
+                lambda line: print(line, file=sys.stderr, flush=True),
+            ),
+            "build-all failed, current release unchanged",
+        )
     elif args.command == "fixtures":
         fixtures.write(ROOT / "cache/raw", ROOT / "tests/fixtures/raw")
     return 0

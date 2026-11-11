@@ -4,7 +4,8 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from app.domain.effects import DamageType
+from app.domain.effects import DamageType, Support
+from app.gamedata.builds import Forma
 from app.gamedata.models import Category
 
 
@@ -25,6 +26,8 @@ class CalcRequest(ApiModel):
     )
     bonus_element: DamageType | None = None
     perks: list[str] = Field(default_factory=list, max_length=4, description="perk names")
+    exilus: str | None = Field(None, max_length=200, description="exilus mod uniqueName")
+    arcane: str | None = Field(None, max_length=200, description="arcane uniqueName")
 
 
 class Source(ApiModel):
@@ -52,6 +55,11 @@ class Slot(ApiModel):
     name: str | None
     rank: int | None
     polarity: str | None
+
+
+class ArcaneRef(ApiModel):
+    unique_name: str
+    name: str
 
 
 class BonusElement(ApiModel):
@@ -90,6 +98,9 @@ class Dps(ApiModel):
     direct_burst: float
     direct_sustained: float | None  # None when the modelled magazine cannot fire one shot
     head: HeadDps | None = None  # forms aimed at heads only
+    # The Max objective (G80): DPS over 10 s on a neutral target, conditions held; the
+    # reference head on forms aimed at heads. Equals a stored Max build's score (E8).
+    max_score: float
 
 
 class Headshot(ApiModel):
@@ -99,6 +110,7 @@ class Headshot(ApiModel):
 
 class EnemyFight(ApiModel):
     name: str
+    unique_name: str  # key of a variant's `denominators`
     faction: str
     target: str  # body part hit: the head spot on forms aimed at heads, else "Body"
     ttk: float | None  # seconds; None = alive at the cap
@@ -125,9 +137,116 @@ class Build(ApiModel):
     form: Literal["normal", "incarnon"]
     perks: list[str]
     slots: list[Slot]
+    exilus: Slot | None = None
+    arcane: ArcaneRef | None = None
     bonus_element: BonusElement | None
     arsenal: Arsenal
     dps: Dps
     headshot: Headshot | None  # this form is aimed at heads; None = body shots
     combat: Combat
     assumptions: list[Assumption]
+
+
+class StoredBuild(ApiModel):
+    """A precomputed build: its search outcome and the build scored as /calc scores it."""
+
+    status: Literal["optimal", "best_found", "what_if"]
+    search_scope: list[str]  # C6
+    evaluations: int
+    score: float  # Max: dps.max_score; others: 1 / the objective's combat cost
+    forma: Forma | None  # None: no layout fits (flagged, Q6)
+    build: Build
+
+
+class VariantBuilds(ApiModel):
+    element: DamageType | None  # progenitor bonus; None: the gun has none
+    max: StoredBuild
+    recommended: StoredBuild
+    factions: dict[str, StoredBuild]
+    denominators: dict[str, float]  # per enemy uniqueName: its faction build's cost (G35)
+
+
+class ElementChoice(ApiModel):
+    element: DamageType
+    rank: int  # 1 = best Recommended search
+    searched: float  # Recommended score of the full search with this element (G85)
+    what_if: float  # element 1's Recommended mods with this element (G15)
+    optimized: bool  # only optimized elements are selectable (C7)
+
+
+class BuildsResponse(ApiModel):
+    release: str  # release id; also the ETag
+    dataset_hash: str
+    weapon: WeaponRef
+    elements: list[ElementChoice]  # empty without a progenitor bonus
+    variants: list[VariantBuilds]  # element 1 first
+
+
+class WeaponItem(ApiModel):
+    slug: str
+    name: str
+    category: Category
+    weapon_type: str
+    incarnon: bool
+    progenitor: bool  # Kuva/Tenet/Coda bonus element
+    image: str | None  # /img URL; None when the icon is not cached
+
+
+class ExcludedWeapon(ApiModel):
+    name: str
+    reason: str
+
+
+class WeaponList(ApiModel):
+    dataset_hash: str
+    weapons: list[WeaponItem]
+    # Guns the tool does not build, with why (G19); filtered by `q` only (no category stored).
+    excluded: list[ExcludedWeapon]
+
+
+class ModItem(ApiModel):
+    unique_name: str
+    name: str
+    polarity: str
+    rarity: str
+    rank: int  # max rank (builds use max rank, Q33)
+    drain: int  # at max rank, before polarity
+    exilus: bool  # fits the exilus slot
+    family: str | None  # mods sharing a family clash (V4)
+    mod_set: str | None
+    support: Support  # R6: how fully its effects are modelled
+    stats: list[str]  # max-rank text
+    description: str
+    compatible: bool
+    reason: str | None  # why it does not fit this gun
+
+
+class ArcaneItem(ApiModel):
+    unique_name: str
+    name: str
+    rarity: str | None
+    support: Support
+    stats: list[str]  # max-rank text
+    compatible: bool
+    reason: str | None
+
+
+class PerkItem(ApiModel):
+    name: str
+    form: Literal["both", "normal", "incarnon"]
+    support: Support
+
+
+class PerkTier(ApiModel):
+    tier: int
+    options: list[PerkItem]  # one may be chosen per tier
+
+
+class ModList(ApiModel):
+    """Everything the editor's picker offers for one gun (F7, G20)."""
+
+    dataset_hash: str
+    weapon: WeaponRef
+    mods: list[ModItem]  # every mod of the gun's category
+    arcanes: list[ArcaneItem]  # every arcane of the gun's category
+    perks: list[PerkTier]  # empty for guns without Incarnon perks

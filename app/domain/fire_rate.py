@@ -30,20 +30,24 @@ class Firing:
 
 
 def charge_time(f: Firing, rate_factor: float) -> float | None:
-    """Modded charge time: base / fire-rate factor, at most 10x the base (Fire_Rate)."""
-    if not f.charge_time or rate_factor <= 0:
+    """Modded charge time: base / fire-rate factor, at most 10x the base, reached from -90%
+    on (Fire_Rate:29); so a factor at or below 0 (bows: fire-rate mods count x2) is 10x."""
+    if not f.charge_time:
         return None
+    if rate_factor <= 0:
+        return CHARGE_CAP * f.charge_time
     return min(f.charge_time / rate_factor, CHARGE_CAP * f.charge_time)
 
 
 def effective_fire_rate(f: Firing, rate_factor: float) -> float:
+    """0 when the fire-rate factor is at or below 0 and nothing caps it (no saved floor)."""
+    charge = charge_time(f, rate_factor)
+    if charge is not None and f.bow:
+        return 1 / (charge + f.reload_time)
     if rate_factor <= 0:
         return 0.0
     rate = f.fire_rate * rate_factor if f.fire_rate is not None else None
-    charge = charge_time(f, rate_factor)
     if charge is not None:
-        if f.bow:
-            return 1 / (charge + f.reload_time)
         return 1 / (charge + (1 / rate if rate else 0.0))
     if rate is None:
         raise ValueError("no fire rate and no charge time")
