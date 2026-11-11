@@ -1,5 +1,6 @@
 """Forma layout of a searched build (PLAN Q6/Q43, G84): mods at max rank (Q33), catalyst."""
 
+import math
 from collections.abc import Sequence
 
 from app.domain.polarity import Layout, Piece, capacity, solve
@@ -20,3 +21,10 @@ def forma_layout(weapon: Weapon, mods: Sequence[Mod], exilus: Mod | None) -> Lay
         weapon.exilus_polarity,
         capacity(weapon.max_rank),
     )
+
+
+def fits(weapon: Weapon, mods: Sequence[Mod], exilus: Mod | None) -> bool:
+    """Some forma layout fits: forma can match every slot (no gun mod is Umbra), so the
+    least drain is each mod at half, rounded up (G84)."""
+    equipped = [*mods, *([exilus] if exilus else [])]
+    return sum(math.ceil(piece(m).drain / 2) for m in equipped) <= capacity(weapon.max_rank)

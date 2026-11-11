@@ -9,6 +9,7 @@ from app.domain.effects import DamageType, Faction, Stat, Support
 from app.domain.headshot import Head
 from app.gamedata.models import Arcane, Mod, Perk, Weapon
 from app.gamedata.store import GameData
+from app.optimize import forma
 from app.optimize.candidates import arcane_fits, pool
 from app.optimize.combat import combat
 from app.optimize.conditions import resolve
@@ -125,6 +126,8 @@ def _search(
     budget: int,
 ) -> Result:
     def score(regular: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]) -> float:
+        if not forma.fits(weapon, regular, exilus):
+            return 0.0  # over capacity with any forma (Q6): never chosen
         return objective(build_loadout(data, weapon, regular, exilus, picks, bonus))
 
     return search(mods, score, budget, choices(data, weapon))
