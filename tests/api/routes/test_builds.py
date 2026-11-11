@@ -6,6 +6,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.api.app import create_app
+from app.api.rate_limit import RateLimit
 from app.gamedata.release import current
 from app.gamedata.store import GameData
 from app.optimize.builds import weapon_builds
@@ -30,7 +31,9 @@ def releases(tmp_path_factory: pytest.TempPathFactory, gamedata: GameData) -> Pa
 
 @pytest.fixture
 def client(tmp_path: Path, gamedata: GameData, releases: Path) -> TestClient:
-    return TestClient(create_app(web_dist=tmp_path / "missing", data=gamedata, releases=releases))
+    app = create_app(web_dist=tmp_path / "missing", data=gamedata, releases=releases)
+    app.state.rate_limit = RateLimit(rate=1e9, burst=10**9)
+    return TestClient(app)
 
 
 def test_plain_gun_builds_are_scored_like_calc(client: TestClient) -> None:

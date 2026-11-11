@@ -3,7 +3,10 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 
+from app.api import jobs
 from app.api.app import create_app
+from app.api.rate_limit import RateLimit
+from app.api.runner import Runner
 from app.gamedata.store import GameData
 from app.optimize.builds import weapon_builds
 from app.optimize.scoring import build_loadout, combat_objective, max_objective
@@ -12,7 +15,9 @@ from app.optimize.search import rounded
 
 @pytest.fixture
 def client(tmp_path: Path, gamedata: GameData) -> TestClient:
-    return TestClient(create_app(web_dist=tmp_path / "missing", data=gamedata, releases=tmp_path))
+    app = create_app(web_dist=tmp_path / "missing", data=gamedata, releases=tmp_path)
+    app.state.rate_limit = RateLimit(rate=1e9, burst=10**9)  # tests below send many requests
+    return TestClient(app)
 
 
 def _id(data: GameData, name: str) -> str:
@@ -235,3 +240,38 @@ def test_calc_matches_the_search_scorer_with_exilus_arcane_and_perk(
     assert out["exilus"]["index"] == 8
     assert rounded(out["dps"]["max_score"]) == rounded(max_objective(gamedata)(lo))
     assert rounded(1 / out["combat"]["score"]) == rounded(combat_objective(gamedata)(lo))
+
+
+def test_rate_limit_answers_429_with_retry_after(client: TestClient) -> None:
+    now = [0.0]
+    client.app.state.rate_limit = RateLimit(rate=0.5, burst=2, clock=lambda: now[0])  # type: ignore[attr-defined]
+    body = {"weapon": "soma-prime"}
+    assert [client.post("/api/calc", json=body).status_code for _ in range(2)] == [200, 200]
+    limited = client.post("/api/calc", json=body)
+    assert (limited.status_code, limited.json()["code"]) == (429, "rate_limited")
+    assert limited.headers["retry-after"] == "2"
+    now[0] = 2.0  # one token back
+    assert client.post("/api/calc", json=body).status_code == 200
+
+
+def test_no_free_worker_answers_503_busy(client: TestClient, gamedata: GameData) -> None:
+    client.app.state.runner = Runner(0, 0, 5, False, jobs.load_data, (gamedata,))  # type: ignore[attr-defined]
+    response = client.post("/api/calc", json={"weapon": "soma-prime"})
+    assert (response.status_code, response.json()["code"]) == (503, "busy")
+    assert response.headers["retry-after"] == "1"
+
+
+def test_slow_job_answers_503_timeout(client: TestClient, gamedata: GameData) -> None:
+    client.app.state.runner = Runner(1, 0, 1e-6, False, jobs.load_data, (gamedata,))  # type: ignore[attr-defined]
+    response = client.post("/api/calc", json={"weapon": "soma-prime"})
+    assert (response.status_code, response.json()["code"]) == (503, "timeout")
+
+
+def test_calc_runs_in_worker_processes(tmp_path: Path) -> None:
+    """Without injected data the app spawns workers that load gamedata/ themselves."""
+    with TestClient(create_app(web_dist=tmp_path, releases=tmp_path)) as client:
+        assert client.app.state.runner._processes  # type: ignore[attr-defined]
+        response = client.post("/api/calc", json={"weapon": "soma-prime"})
+        assert response.status_code == 200
+        bad = client.post("/api/calc", json={"weapon": "soma-prime", "mods": ["/x"]})
+        assert (bad.status_code, bad.json()["field"]) == (422, "mods[0]")

@@ -10,9 +10,17 @@ MAX_BODY = 4096  # bytes; /calc requests are a few hundred
 
 
 class ApiFailure(Exception):
-    def __init__(self, status: int, code: str, message: str, field: str | None = None) -> None:
+    def __init__(
+        self,
+        status: int,
+        code: str,
+        message: str,
+        field: str | None = None,
+        retry_after: int | None = None,  # seconds, sent as Retry-After (429/503)
+    ) -> None:
         super().__init__(message)
         self.status, self.error = status, ApiError(code=code, message=message, field=field)
+        self.headers = {"Retry-After": str(retry_after)} if retry_after is not None else None
 
 
 def response(status: int, code: str, message: str, field: str | None = None) -> JSONResponse:
@@ -23,7 +31,7 @@ def response(status: int, code: str, message: str, field: str | None = None) -> 
 def install(app: FastAPI) -> None:
     @app.exception_handler(ApiFailure)
     async def failure(_: Request, exc: ApiFailure) -> JSONResponse:
-        return JSONResponse(exc.error.model_dump(), status_code=exc.status)
+        return JSONResponse(exc.error.model_dump(), status_code=exc.status, headers=exc.headers)
 
     @app.exception_handler(RequestValidationError)
     async def invalid(_: Request, exc: RequestValidationError) -> JSONResponse:

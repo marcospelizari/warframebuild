@@ -1,25 +1,21 @@
 """GET /api/weapons/{slug}/builds: a gun's precomputed builds from the current release, each
-scored by the /calc code (PLAN Q28b, option A); never a search. ETag = release id."""
+scored by the /calc code (PLAN Q28b, option A); never a search. ETag = release id. A gun
+not in the in-memory cache is filled in on the runner (E6/E7); only those fills count
+against the per-address rate limit."""
 
 from fastapi import APIRouter, Request, Response
 
-from app.api.build_response import build_response, weapon_ref
+from app.api import jobs
 from app.api.errors import ApiFailure
-from app.api.schemas import (
-    ApiError,
-    BuildsResponse,
-    CalcRequest,
-    ElementChoice,
-    StoredBuild,
-    VariantBuilds,
-)
-from app.domain.effects import DamageType
-from app.gamedata.builds import Build as Stored
+from app.api.schemas import ApiError, BuildsResponse
 from app.gamedata.release import Release
 from app.gamedata.store import GameData
 
+CACHED_GUNS = 64  # filled-in responses kept in memory
+
 ERRORS: dict[int | str, dict[str, object]] = {
     404: {"model": ApiError},
+    429: {"model": ApiError},
     503: {"model": ApiError},
 }
 
@@ -27,7 +23,7 @@ router = APIRouter()
 
 
 @router.get("/api/weapons/{slug}/builds", response_model=BuildsResponse, responses=ERRORS)
-def builds(slug: str, request: Request) -> Response:
+async def builds(slug: str, request: Request) -> Response:
     data: GameData = request.app.state.data
     release: Release | None = request.app.state.release
     if release is None:
@@ -39,49 +35,12 @@ def builds(slug: str, request: Request) -> Response:
     headers = {"ETag": f'"{release.id}"', "Cache-Control": "no-cache"}
     if request.headers.get("if-none-match") == headers["ETag"]:
         return Response(status_code=304, headers=headers)
-    try:
-        body = request.app.state.expanded_builds(slug)
-    except FileNotFoundError as error:  # a later build-all pruned this server's release
-        raise ApiFailure(503, "release_gone", "builds were replaced: restart the app") from error
+    cache = request.app.state.builds_cache
+    body = cache.pop(slug, None)
+    if body is None:
+        request.app.state.rate_limit.check(request)
+        body = await jobs.run(request, jobs.builds, release, slug)
+    cache[slug] = body  # most recent last
+    while len(cache) > CACHED_GUNS:
+        cache.pop(next(iter(cache)))
     return Response(body, media_type="application/json", headers=headers)
-
-
-def expand(data: GameData, release: Release, slug: str) -> bytes:
-    """The stored builds of `slug` with every build scored by `build_response`."""
-    stored = release.builds(slug)
-
-    def scored(b: Stored, element: DamageType | None) -> StoredBuild:
-        choices = CalcRequest(
-            weapon=slug,
-            mods=b.mods,
-            exilus=b.exilus,
-            arcane=b.arcane,
-            perks=b.perks,
-            bonus_element=element,
-        )
-        return StoredBuild(
-            status=b.status,
-            search_scope=b.search_scope,
-            evaluations=b.evaluations,
-            score=b.score,
-            forma=b.forma,
-            build=build_response(data, choices),
-        )
-
-    out = BuildsResponse(
-        release=release.id,
-        dataset_hash=release.dataset_hash,
-        weapon=weapon_ref(data.weapon_by_slug[slug]),
-        elements=[ElementChoice(**r.model_dump()) for r in stored.elements],
-        variants=[
-            VariantBuilds(
-                element=v.element,
-                max=scored(v.max, v.element),
-                recommended=scored(v.recommended, v.element),
-                factions={f: scored(b, v.element) for f, b in v.factions.items()},
-                denominators=v.denominators,
-            )
-            for v in stored.variants
-        ],
-    )
-    return out.model_dump_json().encode()
