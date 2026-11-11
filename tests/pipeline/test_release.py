@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 
 from app.gamedata.builds import WeaponBuilds
+from app.gamedata.release import current
 from app.gamedata.store import load
 from app.pipeline import release
 
@@ -30,7 +31,7 @@ def test_publish_writes_the_release_and_points_current_at_it(tmp_path: Path) -> 
     gamedata, reference = _sources(tmp_path)
     releases = tmp_path / "releases"
     folder = release.publish(releases, _key(1), gamedata, reference, _builds("a", "b"), {"a", "b"})
-    assert release.current(releases) == folder == releases / _key(1).id
+    assert current(releases) == folder == releases / _key(1).id
     assert sorted(p.name for p in (folder / "builds").iterdir()) == ["a.json", "b.json"]
     assert (folder / "gamedata/meta.json").exists()
     assert (folder / "reference/enemies.json").exists()
@@ -43,7 +44,7 @@ def test_missing_builds_leave_current_unchanged(tmp_path: Path) -> None:
     first = release.publish(releases, _key(1), gamedata, reference, _builds("a"), {"a"})
     with pytest.raises(release.ReleaseError, match="missing"):
         release.publish(releases, _key(2), gamedata, reference, _builds("a"), {"a", "b"})
-    assert release.current(releases) == first
+    assert current(releases) == first
     assert not (releases / _key(2).id).exists()
 
 
@@ -58,7 +59,7 @@ def test_interrupted_run_leaves_current_unchanged(tmp_path: Path) -> None:
 
     with pytest.raises(KeyboardInterrupt):
         release.publish(releases, _key(2), gamedata, reference, crashing(), {"a", "b"})
-    assert release.current(releases) == first
+    assert current(releases) == first
 
 
 def test_only_the_last_two_releases_stay(tmp_path: Path) -> None:
@@ -100,7 +101,7 @@ def test_same_key_again_replaces_the_release_in_place(tmp_path: Path) -> None:
     releases = tmp_path / "releases"
     release.publish(releases, _key(1), gamedata, reference, _builds("a"), {"a"})
     folder = release.publish(releases, _key(1), gamedata, reference, _builds("a"), {"a"})
-    assert release.current(releases) == folder
+    assert current(releases) == folder
     assert (folder / "builds/a.json").exists()
     assert {p.name for p in releases.iterdir()} == {"current", _key(1).id}
 
@@ -122,4 +123,4 @@ def test_a_release_whose_gamedata_differs_from_its_key_is_refused(tmp_path: Path
     stale = release.Key("0" * 16, "ref", "calc", 1)
     with pytest.raises(release.ReleaseError, match="changed during the run"):
         release.publish(releases, stale, ROOT / "gamedata", reference, _builds("a"), {"a"})
-    assert release.current(releases) is None
+    assert current(releases) is None

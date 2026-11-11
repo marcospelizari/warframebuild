@@ -38,6 +38,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/weapons/{slug}/builds": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Builds */
+        get: operations["builds_api_weapons__slug__builds_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -123,6 +140,18 @@ export interface components {
             slots: components["schemas"]["Slot"][];
             weapon: components["schemas"]["WeaponRef"];
         };
+        /** BuildsResponse */
+        BuildsResponse: {
+            /** Dataset Hash */
+            dataset_hash: string;
+            /** Elements */
+            elements: components["schemas"]["ElementChoice"][];
+            /** Release */
+            release: string;
+            /** Variants */
+            variants: components["schemas"]["VariantBuilds"][];
+            weapon: components["schemas"]["WeaponRef"];
+        };
         /** CalcRequest */
         CalcRequest: {
             /**
@@ -186,6 +215,18 @@ export interface components {
             /** Max Score */
             max_score: number;
         };
+        /** ElementChoice */
+        ElementChoice: {
+            element: components["schemas"]["DamageType"];
+            /** Optimized */
+            optimized: boolean;
+            /** Rank */
+            rank: number;
+            /** Searched */
+            searched: number;
+            /** What If */
+            what_if: number;
+        };
         /** EnemyFight */
         EnemyFight: {
             /** Cost */
@@ -200,6 +241,8 @@ export interface components {
             target: string;
             /** Ttk */
             ttk: number | null;
+            /** Unique Name */
+            unique_name: string;
         };
         /** FactionScore */
         FactionScore: {
@@ -207,6 +250,31 @@ export interface components {
             faction: string;
             /** Score */
             score: number;
+        };
+        /** Forma */
+        Forma: {
+            /** Capacity */
+            capacity: number;
+            exilus: components["schemas"]["FormaSlot"] | null;
+            /** Forma */
+            forma: number;
+            /** Regular */
+            regular: components["schemas"]["FormaSlot"][];
+            /** Used */
+            used: number;
+        };
+        /** FormaSlot */
+        FormaSlot: {
+            /** Drain */
+            drain: number;
+            /** Forma */
+            forma: boolean;
+            polarity: components["schemas"]["Polarity"] | null;
+        };
+        /** HTTPValidationError */
+        HTTPValidationError: {
+            /** Detail */
+            detail?: components["schemas"]["ValidationError"][];
         };
         /**
          * HeadDps
@@ -240,6 +308,11 @@ export interface components {
             /** Version */
             version: string;
         };
+        /**
+         * Polarity
+         * @enum {string}
+         */
+        Polarity: "madurai" | "naramon" | "vazarin" | "any";
         /** Slot */
         Slot: {
             /** Index */
@@ -262,6 +335,52 @@ export interface components {
             kind: "wiki" | "reference" | "de" | "wfcd";
             /** Url */
             url: string;
+        };
+        /**
+         * StoredBuild
+         * @description A precomputed build: its search outcome and the build scored as /calc scores it.
+         */
+        StoredBuild: {
+            build: components["schemas"]["Build"];
+            /** Evaluations */
+            evaluations: number;
+            forma: components["schemas"]["Forma"] | null;
+            /** Score */
+            score: number;
+            /** Search Scope */
+            search_scope: string[];
+            /**
+             * Status
+             * @enum {string}
+             */
+            status: "optimal" | "best_found" | "what_if";
+        };
+        /** ValidationError */
+        ValidationError: {
+            /** Context */
+            ctx?: Record<string, never>;
+            /** Input */
+            input?: unknown;
+            /** Location */
+            loc: (string | number)[];
+            /** Message */
+            msg: string;
+            /** Error Type */
+            type: string;
+        };
+        /** VariantBuilds */
+        VariantBuilds: {
+            /** Denominators */
+            denominators: {
+                [key: string]: number;
+            };
+            element: components["schemas"]["DamageType"] | null;
+            /** Factions */
+            factions: {
+                [key: string]: components["schemas"]["StoredBuild"];
+            };
+            max: components["schemas"]["StoredBuild"];
+            recommended: components["schemas"]["StoredBuild"];
         };
         /** WeaponRef */
         WeaponRef: {
@@ -349,6 +468,55 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["Health"];
+                };
+            };
+        };
+    };
+    builds_api_weapons__slug__builds_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                slug: string;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["BuildsResponse"];
+                };
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+            /** @description Service Unavailable */
+            503: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
                 };
             };
         };

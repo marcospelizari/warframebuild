@@ -5,6 +5,7 @@ from typing import Literal
 from pydantic import BaseModel, ConfigDict, Field
 
 from app.domain.effects import DamageType
+from app.gamedata.builds import Forma
 from app.gamedata.models import Category
 
 
@@ -109,6 +110,7 @@ class Headshot(ApiModel):
 
 class EnemyFight(ApiModel):
     name: str
+    unique_name: str  # key of a variant's `denominators`
     faction: str
     target: str  # body part hit: the head spot on forms aimed at heads, else "Body"
     ttk: float | None  # seconds; None = alive at the cap
@@ -143,3 +145,38 @@ class Build(ApiModel):
     headshot: Headshot | None  # this form is aimed at heads; None = body shots
     combat: Combat
     assumptions: list[Assumption]
+
+
+class StoredBuild(ApiModel):
+    """A precomputed build: its search outcome and the build scored as /calc scores it."""
+
+    status: Literal["optimal", "best_found", "what_if"]
+    search_scope: list[str]  # C6
+    evaluations: int
+    score: float  # Max: dps.max_score; others: 1 / the objective's combat cost
+    forma: Forma | None  # None: no layout fits (flagged, Q6)
+    build: Build
+
+
+class VariantBuilds(ApiModel):
+    element: DamageType | None  # progenitor bonus; None: the gun has none
+    max: StoredBuild
+    recommended: StoredBuild
+    factions: dict[str, StoredBuild]
+    denominators: dict[str, float]  # per enemy uniqueName: its faction build's cost (G35)
+
+
+class ElementChoice(ApiModel):
+    element: DamageType
+    rank: int  # 1 = best Recommended search
+    searched: float  # Recommended score of the full search with this element (G85)
+    what_if: float  # element 1's Recommended mods with this element (G15)
+    optimized: bool  # only optimized elements are selectable (C7)
+
+
+class BuildsResponse(ApiModel):
+    release: str  # release id; also the ETag
+    dataset_hash: str
+    weapon: WeaponRef
+    elements: list[ElementChoice]  # empty without a progenitor bonus
+    variants: list[VariantBuilds]  # element 1 first

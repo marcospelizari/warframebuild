@@ -4,6 +4,7 @@ from pathlib import Path
 
 import pytest
 
+from app.gamedata.release import current
 from app.gamedata.store import load
 from app.pipeline import build_all, release
 from app.pipeline.publish import StoreError
@@ -30,7 +31,7 @@ def test_two_runs_give_byte_identical_releases(tmp_path: Path) -> None:
     seed = os.environ.get("PYTHONHASHSEED")
     build_all.run(one, workers=2, budget=1)
     build_all.run(two, workers=3, budget=1)
-    a, b = release.current(one.releases), release.current(two.releases)
+    a, b = current(one.releases), current(two.releases)
     assert a is not None and b is not None
     assert a.name == b.name
     assert _same_tree(a, b)

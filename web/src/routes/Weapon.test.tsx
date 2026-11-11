@@ -38,6 +38,7 @@ const build: Build = {
     enemies: [
       {
         name: "Lancer",
+        unique_name: "/Lancer",
         faction: "Grineer",
         target: "Body",
         ttk: 1.5,
@@ -46,6 +47,7 @@ const build: Build = {
       },
       {
         name: "Heavy Gunner",
+        unique_name: "/HeavyGunner",
         faction: "Grineer",
         target: "Body",
         ttk: null,

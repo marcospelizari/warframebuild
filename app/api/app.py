@@ -1,7 +1,9 @@
 """FastAPI application: JSON API under /api, built frontend (web/dist) for everything else."""
 
+import logging
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
+from functools import lru_cache
 from importlib.metadata import version
 from pathlib import Path
 
@@ -13,12 +15,17 @@ from starlette.exceptions import HTTPException
 from starlette.types import Scope
 
 from app.api import errors
-from app.api.routes import calc
+from app.api.routes import builds, calc
+from app.gamedata.release import open_current
 from app.gamedata.store import GameData, load
 
 ROOT = Path(__file__).resolve().parents[2]
 WEB_DIST = ROOT / "web" / "dist"
 GAMEDATA = ROOT / "gamedata"
+RELEASES = ROOT / "cache" / "releases"
+CACHED_GUNS = 64  # expanded /builds responses kept in memory
+
+log = logging.getLogger(__name__)
 
 
 class Health(BaseModel):
@@ -38,11 +45,30 @@ class SpaFiles(StaticFiles):
             return await super().get_response("index.html", scope)
 
 
-def create_app(web_dist: Path = WEB_DIST, data: GameData | None = None) -> FastAPI:
+def create_app(
+    web_dist: Path = WEB_DIST, data: GameData | None = None, releases: Path = RELEASES
+) -> FastAPI:
+    """Data and builds come from the current release (C4); before the first
+    `wfb build-all`, or when the release no longer loads (e.g. an older schema), data from
+    gamedata/ and /builds answers 503."""
+    try:
+        release = open_current(releases)
+    except (OSError, ValueError, KeyError) as error:
+        log.warning("current release unreadable (%s): serving gamedata/ without builds", error)
+        release = None
+
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         if getattr(app.state, "data", None) is None:
-            app.state.data = load(GAMEDATA)
+            app.state.data = None
+            if app.state.release is not None:
+                try:
+                    app.state.data = load(app.state.release.gamedata)
+                except (OSError, ValueError) as error:
+                    log.warning("release unusable (%s): serving gamedata/ without builds", error)
+                    app.state.release = None
+            if app.state.data is None:
+                app.state.data = load(GAMEDATA)
         yield
 
     app = FastAPI(
@@ -54,8 +80,14 @@ def create_app(web_dist: Path = WEB_DIST, data: GameData | None = None) -> FastA
         lifespan=lifespan,
     )
     app.state.data = data
+    app.state.release = release
+    if release is not None:  # /builds answers 503 without one
+        app.state.expanded_builds = lru_cache(maxsize=CACHED_GUNS)(
+            lambda slug: builds.expand(app.state.data, release, slug)
+        )
     errors.install(app)
     app.include_router(calc.router)
+    app.include_router(builds.router)
 
     @app.get("/api/health")
     def health() -> Health:

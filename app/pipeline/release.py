@@ -18,11 +18,11 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from app.gamedata.builds import WeaponBuilds
+from app.gamedata.release import POINTER
 from app.gamedata.store import load
 from app.pipeline.publish import dump, exclusive
 
 KEEP = 2
-POINTER = "current"
 
 
 class ReleaseError(RuntimeError):
@@ -58,13 +58,6 @@ def calculator_version(app_dir: Path) -> str:
     for layer in ("domain", "gamedata", "optimize"):
         digest.update(tree_hash(app_dir / layer, "*.py").encode())
     return digest.hexdigest()[:16]
-
-
-def current(releases: Path) -> Path | None:
-    pointer = releases / POINTER
-    if not pointer.exists():
-        return None
-    return releases / pointer.read_text().strip()
 
 
 @contextmanager

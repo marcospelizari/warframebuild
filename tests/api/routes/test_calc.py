@@ -12,7 +12,7 @@ from app.optimize.search import rounded
 
 @pytest.fixture
 def client(tmp_path: Path, gamedata: GameData) -> TestClient:
-    return TestClient(create_app(web_dist=tmp_path / "missing", data=gamedata))
+    return TestClient(create_app(web_dist=tmp_path / "missing", data=gamedata, releases=tmp_path))
 
 
 def _id(data: GameData, name: str) -> str:
@@ -62,13 +62,13 @@ def test_body_size_limit(client: TestClient) -> None:
 
 def test_spa_routes_get_index(tmp_path: Path, gamedata: GameData) -> None:
     (tmp_path / "index.html").write_text("<div id=root></div>", encoding="utf-8")
-    client = TestClient(create_app(web_dist=tmp_path, data=gamedata))
+    client = TestClient(create_app(web_dist=tmp_path, data=gamedata, releases=tmp_path))
     assert "root" in client.get("/w/soma-prime").text
     assert client.get("/api/nothing").status_code == 404
 
 
 def test_startup_loads_committed_gamedata(tmp_path: Path) -> None:
-    with TestClient(create_app(web_dist=tmp_path / "missing")) as client:
+    with TestClient(create_app(web_dist=tmp_path / "missing", releases=tmp_path)) as client:
         assert client.post("/api/calc", json={"weapon": "soma-prime"}).status_code == 200
 
 
