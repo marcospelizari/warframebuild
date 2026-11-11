@@ -7,7 +7,7 @@ from collections import Counter
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 
-from app.domain import compatibility, families
+from app.domain import families
 from app.domain.effects import DamageType, Trigger
 from app.domain.elements import ELEMENTS
 from app.domain.hit import AttackStats, Bonus
@@ -23,6 +23,7 @@ from app.gamedata.models import (
     Perk,
     Weapon,
 )
+from app.optimize.candidates import arcane_fits, fits
 from app.optimize.head import HEAD_TRIGGERS
 from app.optimize.shot import Form, Shot, shot
 
@@ -45,9 +46,7 @@ def check(
 ) -> None:
     """Build rules: arcane class, slots, exilus slot (Q30), duplicates, category,
     compatibility tags (G56), families, bonus element."""
-    if arcane and (
-        arcane.category != weapon.category or arcane.weapon_type not in (None, weapon.weapon_type)
-    ):
+    if arcane and not arcane_fits(weapon, arcane):
         raise BuildError("incompatible_arcane", f"{arcane.name} does not fit", "arcane")
     if len(mods) > MAX_SLOTS:
         raise BuildError("too_many_mods", f"at most {MAX_SLOTS} mods", "mods")
@@ -62,13 +61,7 @@ def check(
         seen.add(m.unique_name)
         if m.category != weapon.category:
             raise BuildError("incompatible_mod", f"{m.name} is a {m.category} mod", field)
-        if not compatibility.fits(
-            weapon.mod_classes,
-            weapon.compatibility_tags,
-            m.compat_class,
-            m.compatibility_tags,
-            m.incompatibility_tags,
-        ):
+        if not fits(weapon, m):
             raise BuildError("incompatible_mod", f"{m.name} does not fit {weapon.name}", field)
     clash = families.clashes((m.unique_name, m.family) for m in equipped)
     if clash:

@@ -15,7 +15,7 @@ from starlette.exceptions import HTTPException
 from starlette.types import Scope
 
 from app.api import errors
-from app.api.routes import builds, calc
+from app.api.routes import builds, calc, img, mods, weapons
 from app.gamedata.release import open_current
 from app.gamedata.store import GameData, load
 
@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[2]
 WEB_DIST = ROOT / "web" / "dist"
 GAMEDATA = ROOT / "gamedata"
 RELEASES = ROOT / "cache" / "releases"
+IMG = ROOT / "cache" / "img"
 CACHED_GUNS = 64  # expanded /builds responses kept in memory
 
 log = logging.getLogger(__name__)
@@ -46,7 +47,10 @@ class SpaFiles(StaticFiles):
 
 
 def create_app(
-    web_dist: Path = WEB_DIST, data: GameData | None = None, releases: Path = RELEASES
+    web_dist: Path = WEB_DIST,
+    data: GameData | None = None,
+    releases: Path = RELEASES,
+    img_dir: Path = IMG,
 ) -> FastAPI:
     """Data and builds come from the current release (C4); before the first
     `wfb build-all`, or when the release no longer loads (e.g. an older schema), data from
@@ -81,6 +85,7 @@ def create_app(
     )
     app.state.data = data
     app.state.release = release
+    app.state.img_dir = img_dir
     if release is not None:  # /builds answers 503 without one
         app.state.expanded_builds = lru_cache(maxsize=CACHED_GUNS)(
             lambda slug: builds.expand(app.state.data, release, slug)
@@ -88,6 +93,9 @@ def create_app(
     errors.install(app)
     app.include_router(calc.router)
     app.include_router(builds.router)
+    app.include_router(weapons.router)
+    app.include_router(mods.router)
+    app.include_router(img.router)
 
     @app.get("/api/health")
     def health() -> Health:

@@ -5,13 +5,28 @@ from dataclasses import dataclass
 
 from app.domain import compatibility
 from app.domain.effects import Support
-from app.gamedata.models import Mod, Weapon
+from app.gamedata.models import Arcane, Mod, Weapon
 
 
 @dataclass(frozen=True)
 class Pool:
     mods: list[Mod]  # sorted by uniqueName
     alternatives: dict[str, list[str]]  # kept uniqueName -> merged equivalents (G47)
+
+
+def fits(weapon: Weapon, m: Mod) -> bool:
+    """The mod can be equipped on the gun: same category, class and tags (G56, G82)."""
+    return m.category == weapon.category and compatibility.fits(
+        weapon.mod_classes,
+        weapon.compatibility_tags,
+        m.compat_class,
+        m.compatibility_tags,
+        m.incompatibility_tags,
+    )
+
+
+def arcane_fits(weapon: Weapon, a: Arcane) -> bool:
+    return a.category == weapon.category and a.weapon_type in (None, weapon.weapon_type)
 
 
 def pool(weapon: Weapon, mods: Iterable[Mod]) -> Pool:
@@ -21,16 +36,7 @@ def pool(weapon: Weapon, mods: Iterable[Mod]) -> Pool:
         (
             m
             for m in mods
-            if m.category == weapon.category
-            and m.effects.support == Support.FULL
-            and m.effects.effects
-            and compatibility.fits(
-                weapon.mod_classes,
-                weapon.compatibility_tags,
-                m.compat_class,
-                m.compatibility_tags,
-                m.incompatibility_tags,
-            )
+            if m.effects.support == Support.FULL and m.effects.effects and fits(weapon, m)
         ),
         key=lambda m: (m.base_drain, m.unique_name),
     )

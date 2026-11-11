@@ -38,6 +38,40 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/mods": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Mods */
+        get: operations["mods_api_mods_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/weapons": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Weapons */
+        get: operations["weapons_api_weapons_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/weapons/{slug}/builds": {
         parameters: {
             query?: never;
@@ -67,6 +101,22 @@ export interface components {
             field?: string | null;
             /** Message */
             message: string;
+        };
+        /** ArcaneItem */
+        ArcaneItem: {
+            /** Compatible */
+            compatible: boolean;
+            /** Name */
+            name: string;
+            /** Rarity */
+            rarity: string | null;
+            /** Reason */
+            reason: string | null;
+            /** Stats */
+            stats: string[];
+            support: components["schemas"]["Support"];
+            /** Unique Name */
+            unique_name: string;
         };
         /** ArcaneRef */
         ArcaneRef: {
@@ -244,6 +294,13 @@ export interface components {
             /** Unique Name */
             unique_name: string;
         };
+        /** ExcludedWeapon */
+        ExcludedWeapon: {
+            /** Name */
+            name: string;
+            /** Reason */
+            reason: string;
+        };
         /** FactionScore */
         FactionScore: {
             /** Faction */
@@ -308,6 +365,69 @@ export interface components {
             /** Version */
             version: string;
         };
+        /** ModItem */
+        ModItem: {
+            /** Compatible */
+            compatible: boolean;
+            /** Description */
+            description: string;
+            /** Drain */
+            drain: number;
+            /** Exilus */
+            exilus: boolean;
+            /** Family */
+            family: string | null;
+            /** Mod Set */
+            mod_set: string | null;
+            /** Name */
+            name: string;
+            /** Polarity */
+            polarity: string;
+            /** Rank */
+            rank: number;
+            /** Rarity */
+            rarity: string;
+            /** Reason */
+            reason: string | null;
+            /** Stats */
+            stats: string[];
+            support: components["schemas"]["Support"];
+            /** Unique Name */
+            unique_name: string;
+        };
+        /**
+         * ModList
+         * @description Everything the editor's picker offers for one gun (F7, G20).
+         */
+        ModList: {
+            /** Arcanes */
+            arcanes: components["schemas"]["ArcaneItem"][];
+            /** Dataset Hash */
+            dataset_hash: string;
+            /** Mods */
+            mods: components["schemas"]["ModItem"][];
+            /** Perks */
+            perks: components["schemas"]["PerkTier"][];
+            weapon: components["schemas"]["WeaponRef"];
+        };
+        /** PerkItem */
+        PerkItem: {
+            /**
+             * Form
+             * @enum {string}
+             */
+            form: "both" | "normal" | "incarnon";
+            /** Name */
+            name: string;
+            support: components["schemas"]["Support"];
+        };
+        /** PerkTier */
+        PerkTier: {
+            /** Options */
+            options: components["schemas"]["PerkItem"][];
+            /** Tier */
+            tier: number;
+        };
         /**
          * Polarity
          * @enum {string}
@@ -355,6 +475,11 @@ export interface components {
              */
             status: "optimal" | "best_found" | "what_if";
         };
+        /**
+         * Support
+         * @enum {string}
+         */
+        Support: "full" | "partial" | "unsupported";
         /** ValidationError */
         ValidationError: {
             /** Context */
@@ -381,6 +506,31 @@ export interface components {
             };
             max: components["schemas"]["StoredBuild"];
             recommended: components["schemas"]["StoredBuild"];
+        };
+        /** WeaponItem */
+        WeaponItem: {
+            category: components["schemas"]["Category"];
+            /** Image */
+            image: string | null;
+            /** Incarnon */
+            incarnon: boolean;
+            /** Name */
+            name: string;
+            /** Progenitor */
+            progenitor: boolean;
+            /** Slug */
+            slug: string;
+            /** Weapon Type */
+            weapon_type: string;
+        };
+        /** WeaponList */
+        WeaponList: {
+            /** Dataset Hash */
+            dataset_hash: string;
+            /** Excluded */
+            excluded: components["schemas"]["ExcludedWeapon"][];
+            /** Weapons */
+            weapons: components["schemas"]["WeaponItem"][];
         };
         /** WeaponRef */
         WeaponRef: {
@@ -468,6 +618,78 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["Health"];
+                };
+            };
+        };
+    };
+    mods_api_mods_get: {
+        parameters: {
+            query: {
+                weapon: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ModList"];
+                };
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    weapons_api_weapons_get: {
+        parameters: {
+            query?: {
+                category?: components["schemas"]["Category"] | null;
+                q?: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["WeaponList"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
         };
