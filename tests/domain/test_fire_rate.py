@@ -51,6 +51,20 @@ def test_charge_formula_and_cap() -> None:
     assert effective_fire_rate(opticor, 0.05) == pytest.approx(1 / (20 + 20))
 
 
+def test_bow_at_or_below_minus_100_percent_fires_at_the_10x_charge() -> None:
+    """Saved Fire_Rate:29: charge time at most 10x the base, reached from -90% on. Lenz:
+    Critical Delay + Vile Precision count x2 on bows, factor 1 - 1.12 = -0.12."""
+    bow = replace(AUTO, fire_rate=None, charge_time=1.2, bow=True, reload_time=0.6)
+    for factor in (0.1, 0.0, -0.12):
+        assert effective_fire_rate(bow, factor) == pytest.approx(1 / (10 * 1.2 + 0.6))
+    assert shot_times(bow, -0.12, 30)[0] == pytest.approx(12)
+
+
+def test_unbounded_factor_at_or_below_zero_never_fires() -> None:
+    assert effective_fire_rate(AUTO, -0.1) == 0.0
+    assert shot_times(AUTO, 0.0, 10) == []
+
+
 def test_lanka_charge_alone() -> None:
     """Saved Fire_Rate: Lanka has no delay between charged shots -> 1 / charge time."""
     lanka = replace(AUTO, fire_rate=None, charge_time=1.0)

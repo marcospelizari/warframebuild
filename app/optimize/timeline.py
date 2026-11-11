@@ -59,6 +59,8 @@ class Timeline:
         ]
 
     def events(self) -> list[Event]:
+        if not self.times:  # never fires (fire-rate factor at or below 0): no damage
+            return []
         hits, parts = self.shot.hits, self.lo.parts
         first = self.lo.parts[0][1]
         ramp = first.beam_ramp_start if first else self.lo.weapon.beam_ramp_start
