@@ -1,14 +1,15 @@
 """`wfb build-all`: every gun's builds, in parallel, into a new release (PLAN Q28b, C4, G16).
 
-Workers are spawned with `PYTHONHASHSEED=0` and each loads the dataset once. Results come
-back in slug order, so the release does not depend on the worker count.
+Workers are spawned with `PYTHONHASHSEED=0` and each loads the dataset once. Results are
+written as guns finish (one file each, manifest counts are order-free), so the release does
+not depend on the worker count or finishing order.
 """
 
 import multiprocessing
 import os
 import time
 from collections.abc import Callable, Iterator
-from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -50,6 +51,11 @@ def run(
             budget,
         )
         slugs = sorted(w.slug for w in data.weapons)
+        workers = workers or os.cpu_count() or 1
+        progress(
+            f"build-all: {len(slugs)} guns, {workers} workers, budget {budget}; "
+            "one line per finished gun (the first may take minutes); Ctrl+C stops"
+        )
         seed = os.environ.get("PYTHONHASHSEED")
         os.environ["PYTHONHASHSEED"] = "0"  # inherited by the spawned workers only (G16)
         try:
@@ -60,7 +66,8 @@ def run(
                 initargs=(paths.gamedata, key.dataset),
             ) as pool:
                 try:
-                    results = pool.map(_one, slugs, [budget] * len(slugs))
+                    jobs = [pool.submit(_one, slug, budget) for slug in slugs]
+                    results = (job.result() for job in as_completed(jobs))
                     folder = release.publish(
                         paths.releases,
                         key,
@@ -70,7 +77,7 @@ def run(
                         set(slugs),
                     )
                 except BaseException:
-                    pool.shutdown(cancel_futures=True)
+                    _stop(pool)
                     raise
         finally:
             if seed is None:
@@ -82,6 +89,14 @@ def run(
         f"release {key.id}: {len(slugs)} guns, budget {budget}, {minutes:.1f} min",
         f"written to {folder}, now current",
     ]
+
+
+def _stop(pool: ProcessPoolExecutor) -> None:
+    """End now: a running gun can take minutes and Ctrl+C would otherwise wait for it.
+    ProcessPoolExecutor has no public kill before Python 3.14 (terminate_workers)."""
+    for process in list(pool._processes.values()):
+        process.kill()
+    pool.shutdown(wait=False, cancel_futures=True)
 
 
 def _reported(

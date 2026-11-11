@@ -1,5 +1,9 @@
 import filecmp
+import multiprocessing
 import os
+import time
+from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures.process import BrokenProcessPool
 from pathlib import Path
 
 import pytest
@@ -29,7 +33,8 @@ def test_two_runs_give_byte_identical_releases(tmp_path: Path) -> None:
     """E3/G16, across worker counts; budget 1 keeps it quick."""
     one, two = _paths(tmp_path, "one"), _paths(tmp_path, "two")
     seed = os.environ.get("PYTHONHASHSEED")
-    build_all.run(one, workers=2, budget=1)
+    lines: list[str] = []
+    build_all.run(one, workers=2, budget=1, progress=lines.append)
     build_all.run(two, workers=3, budget=1)
     a, b = current(one.releases), current(two.releases)
     assert a is not None and b is not None
@@ -38,6 +43,8 @@ def test_two_runs_give_byte_identical_releases(tmp_path: Path) -> None:
     guns = {w.slug for w in load(ROOT / "gamedata").weapons}
     assert {p.stem for p in (a / "builds").glob("*.json")} == guns
     assert os.environ.get("PYTHONHASHSEED") == seed  # set for the workers only
+    assert lines[0].startswith("build-all: ") and "2 workers" in lines[0]  # before any gun
+    assert len(lines) == 1 + len(guns)
 
 
 def test_a_held_lock_fails_before_any_work(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
@@ -59,3 +66,18 @@ def test_a_worker_with_other_data_fails_with_the_reason(monkeypatch: pytest.Monk
     build_all._load(ROOT / "gamedata", "0" * 16)
     with pytest.raises(release.ReleaseError, match="changed during the run"):
         build_all._one("lenz", 1)
+
+
+def test_stop_kills_running_guns_at_once() -> None:
+    """Ctrl+C must not wait for running guns (one can take minutes at the full budget)."""
+    pool = ProcessPoolExecutor(1, mp_context=multiprocessing.get_context("spawn"))
+    job = pool.submit(time.sleep, 60)
+    deadline = time.monotonic() + 10
+    while not pool._processes:
+        assert time.monotonic() < deadline, "worker never started"
+        time.sleep(0.05)
+    started = time.monotonic()
+    build_all._stop(pool)
+    with pytest.raises(BrokenProcessPool):
+        job.result(timeout=10)
+    assert time.monotonic() - started < 10
