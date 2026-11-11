@@ -48,7 +48,9 @@ def best_max(
     budget: int = MAX_EVALUATIONS,
 ) -> Result:
     """`bonus`: the progenitor bonus element (Kuva/Tenet/Coda, G15)."""
-    mods = [m for m in pool(weapon, data.mods.mods).mods if not _bane(m)]  # no faction: no use
+    mods = [
+        m for m in pool(weapon, data.mods.mods, data.mods.sets).mods if not _bane(m)
+    ]  # no faction: no use
     return _search(data, weapon, mods, max_objective(data), bonus, budget)
 
 
@@ -67,7 +69,7 @@ def best_combat(
 def combat_mods(data: GameData, weapon: Weapon, faction: str | None) -> list[Mod]:
     """The pool without faction damage mods, except those of `faction`'s enemies."""
     banes = {e.bane for e in data.enemies if e.faction == faction} if faction else set()
-    return [m for m in pool(weapon, data.mods.mods).mods if _allowed(m, banes)]
+    return [m for m in pool(weapon, data.mods.mods, data.mods.sets).mods if _allowed(m, banes)]
 
 
 def choices(data: GameData, weapon: Weapon) -> list[list[Option]]:

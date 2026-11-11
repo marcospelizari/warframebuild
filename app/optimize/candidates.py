@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 from app.domain import compatibility
 from app.domain.effects import Support
-from app.gamedata.models import Arcane, Mod, Weapon
+from app.gamedata.models import Arcane, Mod, ModSet, Weapon
 
 
 @dataclass(frozen=True)
@@ -29,14 +29,22 @@ def arcane_fits(weapon: Weapon, a: Arcane) -> bool:
     return a.category == weapon.category and a.weapon_type in (None, weapon.weapon_type)
 
 
-def pool(weapon: Weapon, mods: Iterable[Mod]) -> Pool:
-    """Fitting mods with fully modelled damage effects (R6). Mods with identical effects,
-    tags and polarity and no family or set collapse into the lowest drain (G47)."""
+def pool(weapon: Weapon, mods: Iterable[Mod], sets: Iterable[ModSet]) -> Pool:
+    """Fitting mods with fully modelled damage effects, their own or their set's bonus (R6;
+    e.g. Vigilante Supplies). Mods with identical effects, tags and polarity and no family
+    or set collapse into the lowest drain (G47)."""
+    set_damage = {
+        s.unique_name
+        for s in sets
+        if all(b.support == Support.FULL for b in s.bonuses) and any(b.effects for b in s.bonuses)
+    }
     fit = sorted(
         (
             m
             for m in mods
-            if m.effects.support == Support.FULL and m.effects.effects and fits(weapon, m)
+            if m.effects.support == Support.FULL
+            and (m.effects.effects or m.mod_set in set_damage)
+            and fits(weapon, m)
         ),
         key=lambda m: (m.base_drain, m.unique_name),
     )
