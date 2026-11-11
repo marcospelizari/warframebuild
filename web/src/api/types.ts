@@ -51,6 +51,13 @@ export interface components {
             /** Message */
             message: string;
         };
+        /** ArcaneRef */
+        ArcaneRef: {
+            /** Name */
+            name: string;
+            /** Unique Name */
+            unique_name: string;
+        };
         /** Arsenal */
         Arsenal: {
             /** Beam Ramp Start */
@@ -94,6 +101,7 @@ export interface components {
         };
         /** Build */
         Build: {
+            arcane?: components["schemas"]["ArcaneRef"] | null;
             arsenal: components["schemas"]["Arsenal"];
             /** Assumptions */
             assumptions: components["schemas"]["Assumption"][];
@@ -102,6 +110,7 @@ export interface components {
             /** Dataset Hash */
             dataset_hash: string;
             dps: components["schemas"]["Dps"];
+            exilus?: components["schemas"]["Slot"] | null;
             /**
              * Form
              * @enum {string}
@@ -116,7 +125,17 @@ export interface components {
         };
         /** CalcRequest */
         CalcRequest: {
+            /**
+             * Arcane
+             * @description arcane uniqueName
+             */
+            arcane?: string | null;
             bonus_element?: components["schemas"]["DamageType"] | null;
+            /**
+             * Exilus
+             * @description exilus mod uniqueName
+             */
+            exilus?: string | null;
             /**
              * Mods
              * @description mod uniqueNames in slot order
@@ -164,6 +183,8 @@ export interface components {
             /** Direct Sustained */
             direct_sustained: number | null;
             head?: components["schemas"]["HeadDps"] | null;
+            /** Max Score */
+            max_score: number;
         };
         /** EnemyFight */
         EnemyFight: {

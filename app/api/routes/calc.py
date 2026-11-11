@@ -8,6 +8,7 @@ from app.api.assumptions import WIKI, assumptions, source
 from app.api.errors import ApiFailure
 from app.api.schemas import (
     ApiError,
+    ArcaneRef,
     Arsenal,
     BonusElement,
     Build,
@@ -24,12 +25,13 @@ from app.api.schemas import (
 )
 from app.domain.combat import CAP_S
 from app.domain.headshot import Head
-from app.gamedata.models import Mod, ReferenceHead, Weapon
+from app.gamedata.models import Arcane, Mod, ReferenceHead, Weapon
 from app.gamedata.store import GameData
 from app.optimize import combat
 from app.optimize.conditions import Resolved
 from app.optimize.evaluate import Evaluation, evaluate_loadout
 from app.optimize.loadout import MAX_SLOTS, BuildError, loadout
+from app.optimize.scoring import max_score
 
 ERRORS: dict[int | str, dict[str, object]] = {
     404: {"model": ApiError},
@@ -52,9 +54,24 @@ def calc(body: CalcRequest, request: Request) -> Build:
         if mod is None:
             raise ApiFailure(422, "unknown_mod", "no such mod", f"mods[{i}]")
         mods.append(mod)
+    exilus = data.mod_by_id.get(body.exilus) if body.exilus else None
+    if body.exilus and exilus is None:
+        raise ApiFailure(422, "unknown_mod", "no such mod", "exilus")
+    arcane = data.arcane_by_id.get(body.arcane) if body.arcane else None
+    if body.arcane and arcane is None:
+        raise ApiFailure(422, "unknown_arcane", "no such arcane", "arcane")
     incarnon = data.incarnon_by_id.get(weapon.unique_name)
     try:
-        lo = loadout(weapon, mods, body.bonus_element, incarnon, body.perks, sets=data.set_by_id)
+        lo = loadout(
+            weapon,
+            mods,
+            body.bonus_element,
+            incarnon,
+            body.perks,
+            arcane=arcane,
+            sets=data.set_by_id,
+            exilus=exilus,
+        )
     except BuildError as error:
         raise ApiFailure(422, error.code, error.message, error.field) from error
     head = Head(data.reference_head.multiplier, data.reference_head.critical)
@@ -62,7 +79,26 @@ def calc(body: CalcRequest, request: Request) -> Build:
     scored = combat.combat(lo, data.enemies, data.factions)
     fights = _combat(scored, lo.mark is not None)
     return _build(
-        data.meta.dataset_hash, weapon, mods, result, data.reference_head, fights, scored.conditions
+        data.meta.dataset_hash,
+        weapon,
+        mods,
+        exilus,
+        arcane,
+        result,
+        max_score(lo, head),
+        data.reference_head,
+        fights,
+        scored.conditions,
+    )
+
+
+def _slot(index: int, m: Mod | None) -> Slot:
+    return Slot(
+        index=index,
+        mod=m.unique_name if m else None,
+        name=m.name if m else None,
+        rank=m.fusion_limit if m else None,
+        polarity=m.polarity if m else None,
     )
 
 
@@ -90,22 +126,16 @@ def _build(
     dataset_hash: str,
     weapon: Weapon,
     mods: list[Mod],
+    exilus: Mod | None,
+    arcane: Arcane | None,
     e: Evaluation,
+    max_dps: float,
     head: ReferenceHead,
     fights: Combat,
     conditions: Resolved,
 ) -> Build:
     hit = e.hit
-    slots = [
-        Slot(
-            index=i,
-            mod=m.unique_name if m else None,
-            name=m.name if m else None,
-            rank=m.fusion_limit if m else None,
-            polarity=m.polarity if m else None,
-        )
-        for i, m in enumerate([*mods, *[None] * (MAX_SLOTS - len(mods))])
-    ]
+    slots = [_slot(i, m) for i, m in enumerate([*mods, *[None] * (MAX_SLOTS - len(mods))])]
     return Build(
         dataset_hash=dataset_hash,
         weapon=WeaponRef(
@@ -117,6 +147,8 @@ def _build(
         form=e.form,
         perks=e.perks,
         slots=slots,
+        exilus=_slot(MAX_SLOTS, exilus) if exilus else None,
+        arcane=ArcaneRef(unique_name=arcane.unique_name, name=arcane.name) if arcane else None,
         bonus_element=BonusElement(damage_type=e.bonus_element[0], share=e.bonus_element[1])
         if e.bonus_element
         else None,
@@ -146,6 +178,7 @@ def _build(
             )
             if e.head_burst_dps
             else None,
+            max_score=max_dps,
         ),
         headshot=Headshot(reason=e.headshot.reason, source=source(e.headshot.source))
         if e.headshot

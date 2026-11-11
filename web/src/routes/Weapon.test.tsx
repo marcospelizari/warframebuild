@@ -30,7 +30,7 @@ const build: Build = {
     reload_time: 3,
     beam_ramp_start: null,
   },
-  dps: { direct_burst: 288, direct_sustained: 235.1 },
+  dps: { direct_burst: 288, direct_sustained: 235.1, max_score: 300 },
   headshot: null,
   combat: {
     level: 120,

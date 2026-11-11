@@ -25,6 +25,8 @@ class CalcRequest(ApiModel):
     )
     bonus_element: DamageType | None = None
     perks: list[str] = Field(default_factory=list, max_length=4, description="perk names")
+    exilus: str | None = Field(None, max_length=200, description="exilus mod uniqueName")
+    arcane: str | None = Field(None, max_length=200, description="arcane uniqueName")
 
 
 class Source(ApiModel):
@@ -52,6 +54,11 @@ class Slot(ApiModel):
     name: str | None
     rank: int | None
     polarity: str | None
+
+
+class ArcaneRef(ApiModel):
+    unique_name: str
+    name: str
 
 
 class BonusElement(ApiModel):
@@ -90,6 +97,9 @@ class Dps(ApiModel):
     direct_burst: float
     direct_sustained: float | None  # None when the modelled magazine cannot fire one shot
     head: HeadDps | None = None  # forms aimed at heads only
+    # The Max objective (G80): DPS over 10 s on a neutral target, conditions held; the
+    # reference head on forms aimed at heads. Equals a stored Max build's score (E8).
+    max_score: float
 
 
 class Headshot(ApiModel):
@@ -125,6 +135,8 @@ class Build(ApiModel):
     form: Literal["normal", "incarnon"]
     perks: list[str]
     slots: list[Slot]
+    exilus: Slot | None = None
+    arcane: ArcaneRef | None = None
     bonus_element: BonusElement | None
     arsenal: Arsenal
     dps: Dps

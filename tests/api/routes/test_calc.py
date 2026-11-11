@@ -5,6 +5,9 @@ from fastapi.testclient import TestClient
 
 from app.api.app import create_app
 from app.gamedata.store import GameData
+from app.optimize.builds import weapon_builds
+from app.optimize.scoring import build_loadout, combat_objective, max_objective
+from app.optimize.search import rounded
 
 
 @pytest.fixture
@@ -147,3 +150,88 @@ def test_set_bonus_and_compatibility(client: TestClient, gamedata: GameData) -> 
     body = {"weapon": "lenz", "mods": [_id(gamedata, "Split Flights")]}
     error = client.post("/api/calc", json=body).json()
     assert (error["code"], error["field"]) == ("incompatible_mod", "mods[0]")
+
+
+def test_arcane_and_exilus_are_scored_and_echoed(client: TestClient, gamedata: GameData) -> None:
+    arcane = next(a for a in gamedata.arcanes if a.name == "Secondary Surge")
+    exilus = next(m for m in gamedata.mods.mods if m.name == "Vile Precision")
+    body = {"weapon": "lex-prime", "arcane": arcane.unique_name}
+    build = client.post("/api/calc", json=body).json()
+    assert build["arcane"] == {"unique_name": arcane.unique_name, "name": "Secondary Surge"}
+    assert build["exilus"] is None
+    assert build["dps"]["max_score"] > 0
+    rifle = client.post("/api/calc", json={"weapon": "soma-prime", "exilus": exilus.unique_name})
+    assert rifle.status_code == 200, rifle.json()
+    assert rifle.json()["exilus"]["name"] == "Vile Precision"
+
+
+@pytest.mark.parametrize(
+    ("body", "code", "field"),
+    [
+        ({"weapon": "lex-prime", "arcane": "/x"}, "unknown_arcane", "arcane"),
+        ({"weapon": "soma-prime", "exilus": "/x"}, "unknown_mod", "exilus"),
+    ],
+)
+def test_unknown_arcane_or_exilus(
+    client: TestClient, body: dict[str, object], code: str, field: str
+) -> None:
+    response = client.post("/api/calc", json=body)
+    assert response.status_code == 422
+    assert (response.json()["code"], response.json()["field"]) == (code, field)
+
+
+def test_exilus_slot_takes_only_exilus_mods(client: TestClient, gamedata: GameData) -> None:
+    body = {"weapon": "soma-prime", "exilus": _id(gamedata, "Serration")}
+    response = client.post("/api/calc", json=body)
+    assert (response.status_code, response.json()["code"]) == (422, "not_exilus")
+
+
+@pytest.mark.parametrize("gun", ["Soma Prime", "Kuva Hind", "Lex Prime"])
+def test_calc_returns_every_stored_score(client: TestClient, gamedata: GameData, gun: str) -> None:
+    """E8: each precomputed build through /calc gives its stored score (after `rounded`)."""
+    weapon = next(w for w in gamedata.weapons if w.name == gun)
+    stored = weapon_builds(gamedata, weapon, budget=60)
+    for v in stored.variants:
+        tabs = {"max": v.max, "recommended": v.recommended, **v.factions}
+        for tab, b in tabs.items():
+            body = {
+                "weapon": weapon.slug,
+                "mods": b.mods,
+                "exilus": b.exilus,
+                "arcane": b.arcane,
+                "perks": b.perks,
+                "bonus_element": v.element,
+            }
+            response = client.post("/api/calc", json=body)
+            assert response.status_code == 200, (tab, response.json())
+            out = response.json()
+            if tab == "max":
+                got = out["dps"]["max_score"]
+            elif tab == "recommended":
+                got = 1 / out["combat"]["score"]
+            else:
+                got = 1 / next(f["score"] for f in out["combat"]["factions"] if f["faction"] == tab)
+            assert rounded(got) == b.score, (v.element, tab)
+
+
+def test_calc_matches_the_search_scorer_with_exilus_arcane_and_perk(
+    client: TestClient, gamedata: GameData
+) -> None:
+    """E8 for the choice slots the stored samples above may leave empty."""
+    lex = next(w for w in gamedata.weapons if w.name == "Lex Prime")
+    mods = [next(m for m in gamedata.mods.mods if m.name == "Hornet Strike")]
+    exilus = next(m for m in gamedata.mods.mods if m.name == "Targeting Subsystem")
+    arcane = next(a for a in gamedata.arcanes if a.name == "Secondary Surge")
+    perk = next(p for p in gamedata.incarnon_by_id[lex.unique_name].perks if p.tier == 2)
+    lo = build_loadout(gamedata, lex, mods, exilus, (arcane, perk))
+    body = {
+        "weapon": lex.slug,
+        "mods": [m.unique_name for m in mods],
+        "exilus": exilus.unique_name,
+        "arcane": arcane.unique_name,
+        "perks": [perk.name],
+    }
+    out = client.post("/api/calc", json=body).json()
+    assert out["exilus"]["index"] == 8
+    assert rounded(out["dps"]["max_score"]) == rounded(max_objective(gamedata)(lo))
+    assert rounded(1 / out["combat"]["score"]) == rounded(combat_objective(gamedata)(lo))

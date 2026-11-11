@@ -2,8 +2,8 @@
 
 `cache/releases/<id>/` holds copies of `gamedata/` and `reference/`, `builds/<slug>.json`
 and `manifest.json`. The id is the cache key: dataset hash, reference hash, calculator
-version (hash of the `domain` + `optimize` sources) and the search budget. A release is
-written into a hidden temp folder, validated, renamed, and only then does the `current`
+version (hash of the `domain`, `gamedata` and `optimize` sources) and the search budget.
+A release is written into a hidden temp folder, validated, renamed, and only then does the `current`
 pointer file switch to it; an interrupted run leaves `current` unchanged. The last
 `KEEP` releases stay.
 """
@@ -52,9 +52,10 @@ def tree_hash(folder: Path, pattern: str) -> str:
 
 
 def calculator_version(app_dir: Path) -> str:
-    """E10: changes with any source change in `domain` or `optimize`."""
+    """E10: changes with any source change in `domain`, `optimize`, or `gamedata` (the build
+    file format)."""
     digest = hashlib.sha256()
-    for layer in ("domain", "optimize"):
+    for layer in ("domain", "gamedata", "optimize"):
         digest.update(tree_hash(app_dir / layer, "*.py").encode())
     return digest.hexdigest()[:16]
 
