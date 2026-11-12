@@ -32,7 +32,8 @@ Game data: `gamedata/` is generated and committed. To rebuild it:
 uv run wfb refresh            # downloads DE Public Export + WFCD into cache/raw/, rebuilds gamedata/
 uv run wfb refresh --offline  # rebuild from files already in cache/raw/
 uv run wfb check              # after a game update: changed sources, rows and wiki pages to re-check
-uv run wfb build-all          # precompute every gun's builds into cache/releases/ (hours)
+uv run wfb build-all          # precompute builds into cache/releases/ (guns whose inputs changed)
+uv run wfb update             # after a game update: refresh + build-all, then what needs you
 ```
 
 WARFRAME Wiki pages are never downloaded by the tool; they are saved by hand into

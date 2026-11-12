@@ -5,10 +5,11 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from app.gamedata import store
-from app.gamedata.changes import read_changes
+from app.gamedata.changes import Changes, read_changes
 from app.gamedata.models import Meta, SourceRecord
 from app.pipeline import changes, check, images, publish
 from app.pipeline.build import build
+from app.pipeline.build.effects import SwitchedOff
 from app.pipeline.sources import (
     SourceFile,
     de_export,
@@ -54,6 +55,41 @@ class Report:
     untagged: list[str] = field(default_factory=list)
     export_plus: list[str] = field(default_factory=list)
     image_failures: list[str] = field(default_factory=list)
+    found: Changes | None = None  # entry changes since the previous dataset (U1)
+    overrides_off: list[SwitchedOff] = field(default_factory=list)  # U2
+
+    def needs_you(self) -> list[str]:
+        """Hand work this refresh found, one line each (U12); [] when nothing needs a person."""
+        out = [f"rewrite override {o.key}: its text changed" for o in self.overrides_off]
+        for c in self.found.entries if self.found else []:
+            if c.support_dropped:
+                out.append(
+                    f"{c.name} ({c.kind}) is now {c.support_after}: an override if it matters"
+                )
+        known = {e.unique_name for e in self.previous.excluded_weapons} if self.previous else set()
+        out += [
+            f"{e.name} has no builds: {e.reason}"
+            for e in self.meta.excluded_weapons
+            if e.unique_name not in known
+        ]
+        if self.touched:
+            out.append(f"re-check {len(self.touched)} reference rows (full report)")
+        if self.wiki:
+            out.append(
+                "game files changed: compare the saved wiki pages and export-plus files with "
+                "their history and re-save changed ones (full report)"
+            )
+        # Gap groups: a header line, then indented lines of names.
+        for line in self.untagged:
+            if line.startswith(" ") and out and out[-1].endswith(":"):
+                out[-1] += f" {line.strip()}"
+            elif line.startswith(" ") and out:
+                out[-1] += f"; {line.strip()}"
+            else:
+                out.append(line)
+        if self.image_failures:
+            out.append(f"{len(self.image_failures)} picture downloads failed: run it again later")
+        return out
 
     def lines(self) -> list[str]:
         out = check.source_lines(self.source_changes)
@@ -148,6 +184,8 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
         source_changes=changed_sources,
         diff=diff,
         patch=changes.summary_lines(found, report_path, dataset.overrides_off),
+        found=found,
+        overrides_off=dataset.overrides_off,
         touched=check.touched_rows(reference_rows, diff),
         support=check.support_lines(dataset),
         untagged=check.untagged_lines(dataset)
