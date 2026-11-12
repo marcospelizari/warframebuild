@@ -12,6 +12,7 @@
 .tab[aria-pressed="true"],.tab[aria-current="page"]{color:var(--color-cream)}
 .tab[aria-pressed="true"]::after,.tab[aria-current="page"]::after{content:"";position:absolute;left:calc(50% - 4px);bottom:2px;width:7px;height:7px;background:var(--color-gold);transform:rotate(45deg)}
 .act{font:600 15px/1 var(--font-sans);min-height:44px;padding:0 22px;border-radius:22px;cursor:pointer;border:1px solid var(--color-gold);background:transparent;color:var(--color-cream)}
+.actPrimary{border-color:var(--color-gold);background:var(--color-gold);color:var(--color-bg)}
 .tag{font-size:12px;color:var(--color-gold);border:1px solid #5a4c33;padding:2px 7px;border-radius:10px;white-space:nowrap}
 .lnk{border:0;background:none;padding:0;font:inherit;color:var(--color-cyan);text-decoration:underline;cursor:pointer;min-height:44px}
 .srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

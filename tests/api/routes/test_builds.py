@@ -102,3 +102,12 @@ def test_pruned_release_answers_503(tmp_path: Path, gamedata: GameData, releases
     shutil.rmtree(folder / "builds")  # what pruning does to a running server's release
     response = client.get("/api/weapons/soma-prime/builds")
     assert (response.status_code, response.json()["code"]) == (503, "release_gone")
+
+
+def test_stored_and_calc_layouts_agree(client: TestClient) -> None:
+    """E8: the editor's /calc layout for unchanged mods is the stored one."""
+    recommended = client.get("/api/weapons/soma-prime/builds").json()["variants"][0]["recommended"]
+    assert recommended["build"]["forma"] == recommended["forma"]
+    assert set(recommended["without"]) >= set(
+        m["mod"] for m in recommended["build"]["slots"] if m["mod"]
+    )

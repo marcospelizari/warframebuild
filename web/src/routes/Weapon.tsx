@@ -2,11 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { ApiFailure, getBuilds, getMods, getWeapons } from "@/api/client";
-import { BuildFrame } from "@/components/BuildFrame";
-import { BuildTabs } from "@/components/BuildTabs";
-import { ScoreStrip } from "@/components/ScoreStrip";
-import { StatsPanel } from "@/components/StatsPanel";
-import { WeaponHeader } from "@/components/WeaponHeader";
+import { BuildView } from "@/components/BuildView";
 import { factionSlug } from "@/lib/faction";
 
 const SITE = "warframeBuild";
@@ -38,7 +34,9 @@ function NotShown({ text }: { text: string }) {
   );
 }
 
-export function WeaponPage({ slug, faction }: { slug: string; faction: string | null }) {
+type Props = { slug: string; faction: string | null; code?: string };
+
+export function WeaponPage({ slug, faction, code }: Props) {
   const builds = useQuery({ queryKey: ["builds", slug], queryFn: () => getBuilds(slug) });
   const mods = useQuery({ queryKey: ["mods", slug], queryFn: () => getMods(slug) });
   const list = useQuery({ queryKey: ["weapons"], queryFn: getWeapons });
@@ -64,30 +62,18 @@ export function WeaponPage({ slug, faction }: { slug: string; faction: string | 
     );
   }
   if (!variant) return <NotShown text={`No builds for ${builds.data.weapon.name} yet.`} />;
-  const stored = name ? variant.factions[name] : faction === null ? variant.recommended : null;
-  if (!stored) return <NotShown text="There is no such faction build for this gun." />;
-  const { weapon } = builds.data;
+  if (faction !== null && !name) {
+    return <NotShown text="There is no such faction build for this gun." />;
+  }
   return (
-    <main className="mx-auto max-w-[1376px] px-4 pt-5 pb-16 sm:px-8">
-      <WeaponHeader weapon={weapon} item={list.data?.weapons.find((w) => w.slug === slug)} />
-      <BuildTabs
-        slug={slug}
-        factions={factions}
-        faction={name ?? null}
-        level={stored.build.combat.level}
-      />
-      <ScoreStrip build={stored.build} faction={name ?? null} />
-      <div className="mt-7 flex flex-wrap items-start gap-9">
-        <div className="min-w-0 flex-[999_1_760px]">
-          <BuildFrame
-            title={name ? `Against ${name}` : "Recommended"}
-            stored={stored}
-            items={mods.data}
-            weaponType={weapon.weapon_type}
-          />
-        </div>
-        <StatsPanel stored={stored} />
-      </div>
-    </main>
+    <BuildView
+      key={slug}
+      slug={slug}
+      data={builds.data}
+      items={mods.data}
+      item={list.data?.weapons.find((w) => w.slug === slug)}
+      faction={name ?? null}
+      code={code}
+    />
   );
 }

@@ -185,6 +185,7 @@ export interface components {
              * @enum {string}
              */
             form: "normal" | "incarnon";
+            forma: components["schemas"]["Forma"] | null;
             headshot: components["schemas"]["Headshot"] | null;
             /** Perks */
             perks: string[];
@@ -478,6 +479,10 @@ export interface components {
              * @enum {string}
              */
             status: "optimal" | "best_found" | "what_if";
+            /** Without */
+            without: {
+                [key: string]: number;
+            };
         };
         /**
          * Support

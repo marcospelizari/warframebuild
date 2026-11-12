@@ -28,6 +28,7 @@ def expand(data: GameData, release: Release, slug: str) -> bytes:
             evaluations=b.evaluations,
             score=b.score,
             forma=b.forma,
+            without=b.without,
             build=build_response(data, choices),
         )
 

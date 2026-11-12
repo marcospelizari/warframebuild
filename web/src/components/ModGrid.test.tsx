@@ -4,7 +4,7 @@ import { items, stored } from "@/test/fixtures";
 import { ModGrid } from "./ModGrid";
 
 test("exilus first, mods in slot order, arcane last", () => {
-  render(<ModGrid stored={stored} items={items} weaponType="Rifle" />);
+  render(<ModGrid build={stored.build} forma={stored.forma} items={items} weaponType="Rifle" />);
   const labels = [...screen.getAllByRole("img"), ...screen.getAllByRole("button")].map((e) =>
     e.getAttribute("aria-label"),
   );
@@ -16,7 +16,7 @@ test("exilus first, mods in slot order, arcane last", () => {
 });
 
 test("drain and polarity come from the forma layout", () => {
-  render(<ModGrid stored={stored} items={items} weaponType="Rifle" />);
+  render(<ModGrid build={stored.build} forma={stored.forma} items={items} weaponType="Rifle" />);
   expect(screen.getByRole("button", { name: /^Serration/ })).toHaveAccessibleName(
     "Serration: +165% Damage. Madurai slot, forma, drain 7 (half: polarity matches).",
   );
@@ -28,13 +28,13 @@ test("drain and polarity come from the forma layout", () => {
 });
 
 test("mod picture and arcane icon use the API URLs", () => {
-  const { container } = render(<ModGrid stored={stored} items={items} weaponType="Rifle" />);
+  const { container } = render(<ModGrid build={stored.build} forma={stored.forma} items={items} weaponType="Rifle" />);
   const srcs = [...container.querySelectorAll("img")].map((i) => i.getAttribute("src"));
   expect(srcs).toEqual(["/img/mods/0123456789abcdef.jpg", "/img/arcanes/fedcba9876543210.png"]);
 });
 
 test("a build with no forma layout still shows the mods with their own drain", () => {
-  render(<ModGrid stored={{ ...stored, forma: null }} items={items} weaponType="Rifle" />);
+  render(<ModGrid build={stored.build} forma={null} items={items} weaponType="Rifle" />);
   expect(screen.getByRole("button", { name: /^Serration/ })).toHaveAccessibleName(
     /No slot polarity, drain 14\.$/,
   );

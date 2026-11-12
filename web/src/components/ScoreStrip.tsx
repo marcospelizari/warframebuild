@@ -4,17 +4,33 @@ import s from "./ScoreStrip.module.css";
 
 /** Average kill time (the score this build was chosen by), opening to every kill and
     the assumptions behind them. `faction` narrows both to that faction. */
-export function ScoreStrip({ build, faction }: { build: Build; faction: string | null }) {
+type Props = { build: Build; faction: string | null; baseline?: Build | null };
+
+/** Average kill time in seconds: over every enemy, or `faction`'s. */
+export function killTime(build: Build, faction: string | null): number {
+  const { combat } = build;
+  if (!faction) return combat.score;
+  return combat.factions.find((f) => f.faction === faction)?.score ?? combat.score;
+}
+
+/** `baseline`: the calculated build an edit is compared with (F6). */
+export function ScoreStrip({ build, faction, baseline = null }: Props) {
   const { combat } = build;
   const enemies = faction ? combat.enemies.filter((e) => e.faction === faction) : combat.enemies;
-  const score = faction
-    ? (combat.factions.find((f) => f.faction === faction)?.score ?? combat.score)
-    : combat.score;
+  const score = killTime(build, faction);
+  const delta = baseline ? score - killTime(baseline, faction) : 0;
   const shots = build.headshot ? "headshots" : "body shots";
   return (
     <details className={s.score}>
       <summary>
         <span className="font-display text-[42px] leading-none text-gold">{trim(score, 2)} s</span>
+        {baseline && (
+          <span className={`text-[15px] ${delta > 0.005 ? "text-[#ff9a7a]" : "text-[#7fe0a8]"}`}>
+            {Math.abs(delta) < 0.005
+              ? "Same as the calculated build"
+              : `${trim(Math.abs(delta), 2)} s ${delta > 0 ? "slower" : "faster"} than the calculated build`}
+          </span>
+        )}
         <span className="flex-[1_1_360px] text-[15px] leading-normal text-soft">
           Average time to kill {enemies.length} level {combat.level} Steel Path enemies, {shots},
           within {combat.cap_s} s.

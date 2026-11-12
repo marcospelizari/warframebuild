@@ -6,21 +6,25 @@ import {
   createRouter,
   RouterProvider,
 } from "@tanstack/react-router";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { afterEach, expect, test, vi } from "vitest";
-import { builds, items, weaponList } from "@/test/fixtures";
+import { build, builds, items, weaponList } from "@/test/fixtures";
+import { decode, encode, fromBuild } from "@/lib/editor";
 import { WeaponPage } from "./Weapon";
 
 afterEach(() => vi.unstubAllGlobals());
 
-function renderAt(path: string, answer: (url: string) => Response = ok) {
-  vi.stubGlobal("fetch", vi.fn(async (url: string) => answer(url)));
+function renderAt(path: string, answer: (url: string, init?: RequestInit) => Response = ok) {
+  const fetch = vi.fn(async (url: string, init?: RequestInit) => answer(url, init));
+  vi.stubGlobal("fetch", fetch);
   const root = createRootRoute();
+  const search = (raw: Record<string, unknown>) => (typeof raw.b === "string" ? { b: raw.b } : {});
   const weapon = createRoute({
     getParentRoute: () => root,
     path: "/w/$slug",
+    validateSearch: search,
     component: function W() {
-      return <WeaponPage slug={weapon.useParams().slug} faction={null} />;
+      return <WeaponPage slug={weapon.useParams().slug} faction={null} code={weapon.useSearch().b} />;
     },
   });
   const faction = createRoute({
@@ -41,10 +45,18 @@ function renderAt(path: string, answer: (url: string) => Response = ok) {
       <RouterProvider router={router} />
     </QueryClientProvider>,
   );
-  return router;
+  return { router, fetch };
 }
 
+const edited = {
+  ...build,
+  slots: [{ ...build.slots[1]!, index: 0 }, ...build.slots.slice(2), { ...build.slots[0]!, mod: null, name: null, index: 7 }],
+  combat: { ...build.combat, score: 1.2 },
+  dps: { ...build.dps, direct_burst: 40000 },
+};
+
 function ok(url: string) {
+  if (url === "/api/calc") return new Response(JSON.stringify(edited));
   if (url.startsWith("/api/mods")) return new Response(JSON.stringify(items));
   if (url === "/api/weapons") return new Response(JSON.stringify(weaponList));
   return new Response(JSON.stringify(builds));
@@ -78,7 +90,7 @@ test("a faction URL shows that faction's build and kills only", async () => {
 });
 
 test("the Faction builds tab opens the first faction", async () => {
-  const router = renderAt("/w/soma-prime");
+  const { router } = renderAt("/w/soma-prime");
   fireEvent.click(await screen.findByRole("link", { name: "Faction builds" }));
   expect(await screen.findByRole("heading", { name: "Against Grineer" })).toBeInTheDocument();
   expect(router.state.location.pathname).toBe("/w/soma-prime/grineer");
@@ -102,4 +114,44 @@ test("builds not ready: a player-facing message, not the admin one", async () =>
     url.includes("/builds") ? new Response(JSON.stringify(error), { status: 503 }) : ok(url),
   );
   expect(await screen.findByRole("alert")).toHaveTextContent("Builds are being updated.");
+});
+
+
+test("Why this mod: the opened card says how much slower the kill gets without it", async () => {
+  renderAt("/w/soma-prime");
+  expect(await screen.findByText("Without it: average kill +0.25 s")).toBeInTheDocument();
+});
+
+test("editing: pick a slot, change it, see the difference to the calculated build", async () => {
+  const { router, fetch } = renderAt("/w/soma-prime");
+  fireEvent.click(await screen.findByRole("button", { name: "Edit build" }));
+  await waitFor(() => expect(router.state.location.search).toHaveProperty("b"));
+  expect(screen.getByRole("heading", { name: "Your build" })).toBeInTheDocument();
+  expect(screen.queryByText(/Without it/)).toBeNull();
+  fireEvent.click(screen.getByRole("button", { name: /^Serration.*Change mod\.$/ }));
+  const dialog = await screen.findByRole("dialog", { name: "Choose a mod for slot 1" });
+  expect(within(dialog).getByRole("button", { name: /Galvanized Chamber/ })).toHaveAttribute("aria-disabled", "true");
+  fireEvent.click(within(dialog).getByRole("button", { name: "Leave empty" }));
+  expect(await screen.findByText("0.26 s slower than the calculated build", {}, { timeout: 2000 })).toBeInTheDocument();
+  expect(screen.getByText("40.0 k (−8.2 k)")).toBeInTheDocument();
+  const calls = fetch.mock.calls.filter(([url]) => url === "/api/calc");
+  expect(calls).toHaveLength(1); // debounced: one request for the settled edit
+  expect(JSON.parse(String(calls[0]![1]!.body)).mods).toEqual(["/GalvanizedChamber"]);
+  const code = router.state.location.search as { b?: string };
+  expect(decode(code.b!)?.mods).toEqual(["/GalvanizedChamber"]);
+  fireEvent.click(screen.getByRole("button", { name: "Back to the calculated build" }));
+  expect(await screen.findByRole("heading", { name: "Recommended" })).toBeInTheDocument();
+});
+
+test("a shared ?b= link opens the edited build", async () => {
+  const code = encode({ ...fromBuild(build), mods: ["/GalvanizedChamber"] });
+  renderAt(`/w/soma-prime?b=${code}`);
+  expect(await screen.findByRole("heading", { name: "Your build" })).toBeInTheDocument();
+  expect(await screen.findByText(/slower than the calculated build/, {}, { timeout: 2000 })).toBeInTheDocument();
+});
+
+test("a broken ?b= link falls back to the calculated build with a message", async () => {
+  renderAt("/w/soma-prime?b=9.nope");
+  expect(await screen.findByText(/This build link could not be opened/)).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: "Recommended" })).toBeInTheDocument();
 });

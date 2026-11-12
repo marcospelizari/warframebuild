@@ -13,6 +13,9 @@ export type ModItem = Schemas["ModItem"];
 export type ArcaneItem = Schemas["ArcaneItem"];
 export type Polarity = Schemas["Polarity"];
 export type DamageType = Schemas["DamageType"];
+export type ElementChoice = Schemas["ElementChoice"];
+export type PerkTier = Schemas["PerkTier"];
+export type VariantBuilds = Schemas["VariantBuilds"];
 export type Category = Schemas["Category"];
 export type WeaponItem = Schemas["WeaponItem"];
 export type WeaponRef = Schemas["WeaponRef"];
@@ -57,9 +60,11 @@ export function getMods(slug: string): Promise<ModList> {
   return getJson(`/api/mods?weapon=${encodeURIComponent(slug)}`);
 }
 
-export async function postCalc(body: CalcRequest): Promise<Build> {
+/** `signal` cancels a request a newer edit made stale (F7). */
+export async function postCalc(body: CalcRequest, signal?: AbortSignal): Promise<Build> {
   const response = await fetch("/api/calc", {
     method: "POST",
+    signal,
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
   });

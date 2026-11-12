@@ -22,6 +22,8 @@ type Props = {
   slot: FormaSlot | null; // null: no forma layout fits (Q6)
   label: string; // lower tab: the gun category, or "Exilus"
   exilus?: boolean;
+  why?: string | null; // F8 line in the opened card
+  onPick?: () => void; // editor: choose what goes here
 };
 
 function frame(mod: ModItem) {
@@ -58,16 +60,25 @@ function SlotMark({ slot, match }: { slot: FormaSlot | null; match: boolean }) {
   );
 }
 
-export function ModCard({ mod, slot, label, exilus = false }: Props) {
+export function ModCard({ mod, slot, label, exilus = false, why = null, onPick }: Props) {
   if (!mod) {
     const vars = { "--ph": SLOT_ART.placeholder, "--exi": SLOT_ART.exilus } as CSSProperties;
     return (
       <div className={s.cell} style={vars}>
-        <span
-          className={[s.blank, exilus && s.exi].filter(Boolean).join(" ")}
-          role="img"
-          aria-label={exilus ? "Empty exilus slot" : "Empty slot"}
-        />
+        {onPick ? (
+          <button
+            className={`${s.pick} ${[s.blank, exilus && s.exi].filter(Boolean).join(" ")}`}
+            type="button"
+            onClick={onPick}
+            aria-label={exilus ? "Empty exilus slot: choose a mod" : "Empty slot: choose a mod"}
+          />
+        ) : (
+          <span
+            className={[s.blank, exilus && s.exi].filter(Boolean).join(" ")}
+            role="img"
+            aria-label={exilus ? "Empty exilus slot" : "Empty slot"}
+          />
+        )}
       </div>
     );
   }
@@ -85,12 +96,18 @@ export function ModCard({ mod, slot, label, exilus = false }: Props) {
   const stats = mod.stats.join("\n");
   return (
     <div className={[s.cell, ...cls].filter(Boolean).join(" ")} style={vars}>
-      <button className={s.mod} type="button" aria-label={`${mod.name}: ${stats}. ${fit.where}.`}>
+      <button
+        className={s.mod}
+        type="button"
+        onClick={onPick}
+        aria-label={`${mod.name}: ${stats}. ${fit.where}.${why ? ` ${why}.` : ""}${onPick ? " Change mod." : ""}`}
+      >
         <span className={s.content} style={{ "--bg": parts.bg } as CSSProperties}>
           <span className={s.image}>{mod.image && <img src={mod.image} alt="" />}</span>
           <span className={s.desc}>
             <span className={s.name}>{mod.name}</span>
             <span className={s.eff}>{stats}</span>
+            {why && <span className={s.why}>{why}</span>}
           </span>
         </span>
         <span className={s.border} />

@@ -1,0 +1,17 @@
+/* Mod / arcane picker (F7), F (Orokin gilt) look. */
+.dialog{width:min(720px,100vw - 32px);max-height:min(760px,100vh - 48px);padding:0;border:1px solid var(--color-gold);outline:1px solid rgba(207,164,72,.35);outline-offset:5px;background:var(--color-surface);color:var(--color-cream)}
+.dialog::backdrop{background:rgba(8,7,5,.72)}
+.head{display:flex;align-items:center;gap:12px;padding:16px 18px 10px}
+.find{flex:1;min-width:0;min-height:44px;padding:0 12px;border:0;border-bottom:1px solid var(--color-gold);background:transparent;color:var(--color-cream);font:400 18px/1.2 var(--font-display)}
+.find:focus-visible{outline:none;box-shadow:0 2px 0 var(--color-cyan)}
+.list{list-style:none;margin:0;padding:4px 10px 14px;overflow-y:auto;max-height:calc(min(760px,100vh - 48px) - 140px)}
+.row{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;padding:6px 8px;border:0;border-bottom:1px solid #2a241a;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.row:hover:not([aria-disabled="true"]),.row:focus-visible{background:rgba(207,164,72,.1)}
+.row[aria-disabled="true"]{cursor:not-allowed;opacity:.5}
+.row[aria-current="true"]{box-shadow:inset 3px 0 0 var(--color-gold)}
+.thumb{flex:none;width:48px;height:48px;object-fit:cover;border:1px solid var(--color-line)}
+.noThumb{flex:none;width:48px;height:48px;border:1px solid var(--color-line)}
+.text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.stats{font-size:13px;color:var(--color-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.why{font-size:13px;color:#e0735f}
+.drain{flex:none;font:500 15px/1 var(--font-game);color:var(--color-label)}

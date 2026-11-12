@@ -3,7 +3,8 @@
 import math
 from collections.abc import Sequence
 
-from app.domain.polarity import Layout, Piece, capacity, solve
+from app.domain.polarity import Layout, Piece, Slot, capacity, solve
+from app.gamedata.builds import Forma, FormaSlot
 from app.gamedata.models import Mod, Weapon
 
 
@@ -28,3 +29,20 @@ def fits(weapon: Weapon, mods: Sequence[Mod], exilus: Mod | None) -> bool:
     least drain is each mod at half, rounded up (G84)."""
     equipped = [*mods, *([exilus] if exilus else [])]
     return sum(math.ceil(piece(m).drain / 2) for m in equipped) <= capacity(weapon.max_rank)
+
+
+def stored_forma(layout: Layout | None) -> Forma | None:
+    """The layout as stored and served; None: no layout fits."""
+    if layout is None:
+        return None
+
+    def slot(s: Slot) -> FormaSlot:
+        return FormaSlot(polarity=s.polarity, forma=s.forma, drain=s.drain)
+
+    return Forma(
+        regular=[slot(s) for s in layout.regular],
+        exilus=slot(layout.exilus) if layout.exilus else None,
+        forma=layout.forma,
+        used=layout.used,
+        capacity=layout.capacity,
+    )

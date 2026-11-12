@@ -1,6 +1,7 @@
 import type {
   Build,
   BuildsResponse,
+  Forma,
   ModItem,
   ModList,
   StoredBuild,
@@ -37,6 +38,18 @@ export const chamber: ModItem = {
   image: null,
 };
 
+export const forma: Forma = {
+  capacity: 60,
+  used: 58,
+  forma: 1,
+  exilus: { drain: 0, forma: false, polarity: null },
+  regular: [
+    { drain: 7, forma: true, polarity: "madurai" },
+    { drain: 21, forma: false, polarity: "naramon" },
+    ...Array.from({ length: 6 }, () => ({ drain: 0, forma: false, polarity: null })),
+  ],
+};
+
 export const build: Build = {
   dataset_hash: "h",
   weapon: { slug: "soma-prime", name: "Soma Prime", category: "primary", weapon_type: "Rifle" },
@@ -50,6 +63,7 @@ export const build: Build = {
   exilus: empty(8),
   arcane: { unique_name: "/Merciless", name: "Primary Merciless" },
   bonus_element: { damage_type: "viral", share: 0.6 },
+  forma,
   arsenal: {
     damage: { impact: 2, slash: 6, puncture: 3, viral: 9 },
     total_damage: 20,
@@ -86,17 +100,8 @@ export const stored: StoredBuild = {
   search_scope: [],
   evaluations: 100,
   score: 1,
-  forma: {
-    capacity: 60,
-    used: 58,
-    forma: 1,
-    exilus: { drain: 0, forma: false, polarity: null },
-    regular: [
-      { drain: 7, forma: true, polarity: "madurai" },
-      { drain: 21, forma: false, polarity: "naramon" },
-      ...Array.from({ length: 6 }, () => ({ drain: 0, forma: false, polarity: null })),
-    ],
-  },
+  forma,
+  without: { "/Serration": 0.8, "/Merciless": 1 },
   build,
 };
 

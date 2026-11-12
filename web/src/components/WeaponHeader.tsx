@@ -4,8 +4,10 @@ import u from "./ui.module.css";
 
 const cap = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
-/** Icon, name between ornaments, one meta line, copy-link button (canvas F-Weapon v46). */
-export function WeaponHeader({ weapon, item }: { weapon: WeaponRef; item: WeaponItem | undefined }) {
+/** Icon, name between ornaments, one meta line, Edit / copy-link buttons (canvas F-Weapon v46). */
+type Props = { weapon: WeaponRef; item: WeaponItem | undefined; onEdit?: () => void };
+
+export function WeaponHeader({ weapon, item, onEdit }: Props) {
   const [copied, setCopied] = useState(false);
   const meta = [
     `${cap(weapon.category)} ${weapon.weapon_type.toLowerCase()}`,
@@ -29,6 +31,11 @@ export function WeaponHeader({ weapon, item }: { weapon: WeaponRef; item: Weapon
       </div>
       <p className="mt-2 mb-0 text-[15px] text-muted">{meta.join(", ")}</p>
       <div className="mt-6 flex flex-wrap justify-center gap-2.5">
+        {onEdit && (
+          <button className={`${u.act} ${u.actPrimary}`} type="button" onClick={onEdit}>
+            Edit build
+          </button>
+        )}
         <button className={u.act} type="button" onClick={copy}>
           {copied ? "Link copied" : "Copy build link"}
         </button>

@@ -4,7 +4,7 @@ import { stored } from "@/test/fixtures";
 import { StatsPanel } from "./StatsPanel";
 
 test("progenitor bonus, capacity and incarnon perks", () => {
-  render(<StatsPanel stored={stored} />);
+  render(<StatsPanel build={stored.build} forma={stored.forma} />);
   expect(screen.getByText("+60% Viral")).toBeInTheDocument();
   expect(screen.getByText("58/60")).toBeInTheDocument();
   expect(screen.getByText("Fortress Salvo")).toBeInTheDocument();
@@ -12,7 +12,7 @@ test("progenitor bonus, capacity and incarnon perks", () => {
 });
 
 test("game number style and damage order: physical first, then by size", () => {
-  render(<StatsPanel stored={stored} />);
+  render(<StatsPanel build={stored.build} forma={stored.forma} />);
   expect(screen.getByText("30.5%")).toBeInTheDocument();
   expect(screen.getByText("3x")).toBeInTheDocument();
   expect(screen.getByText("48.2 k")).toBeInTheDocument();
@@ -25,7 +25,7 @@ test("game number style and damage order: physical first, then by size", () => {
 
 test("no bonus, no perks, no layout", () => {
   const build = { ...stored.build, bonus_element: null, perks: [], form: "normal" as const };
-  render(<StatsPanel stored={{ ...stored, build, forma: null }} />);
+  render(<StatsPanel build={build} forma={null} />);
   expect(screen.queryByText(/Progenitor/)).toBeNull();
   expect(screen.queryByText("INCARNON EVOLUTIONS")).toBeNull();
   expect(screen.getByText("Does not fit")).toBeInTheDocument();

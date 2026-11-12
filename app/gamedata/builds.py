@@ -2,6 +2,8 @@
 
 from typing import Literal
 
+from pydantic import Field
+
 from app.domain.effects import DamageType
 from app.domain.polarity import Polarity
 from app.gamedata.models import Model
@@ -32,6 +34,9 @@ class Build(Model):
     evaluations: int
     forma: Forma | None  # None: no layout fits (flagged, Q6)
     costs: dict[str, float]  # combat cost per scored enemy uniqueName; empty for Max
+    # F8: score with that mod, exilus or arcane (uniqueName) removed, the rest re-scored
+    # (no new search); empty in releases made before it.
+    without: dict[str, float] = Field(default_factory=dict)
 
 
 class Variant(Model):

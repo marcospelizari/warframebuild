@@ -23,11 +23,13 @@ from app.api.schemas import (
 )
 from app.domain.combat import CAP_S
 from app.domain.headshot import Head
+from app.gamedata.builds import Forma
 from app.gamedata.models import Arcane, Mod, ReferenceHead, Weapon
 from app.gamedata.store import GameData
 from app.optimize import combat
 from app.optimize.conditions import Resolved
 from app.optimize.evaluate import Evaluation, evaluate_loadout
+from app.optimize.forma import forma_layout, stored_forma
 from app.optimize.loadout import MAX_SLOTS, BuildError, loadout
 from app.optimize.scoring import max_score
 
@@ -73,6 +75,7 @@ def build_response(data: GameData, body: CalcRequest) -> Build:
         mods,
         exilus,
         arcane,
+        stored_forma(forma_layout(weapon, mods, exilus)),
         result,
         max_score(lo, head),
         data.reference_head,
@@ -124,6 +127,7 @@ def _build(
     mods: list[Mod],
     exilus: Mod | None,
     arcane: Arcane | None,
+    forma: Forma | None,
     e: Evaluation,
     max_dps: float,
     head: ReferenceHead,
@@ -143,6 +147,7 @@ def _build(
         bonus_element=BonusElement(damage_type=e.bonus_element[0], share=e.bonus_element[1])
         if e.bonus_element
         else None,
+        forma=forma,
         arsenal=Arsenal(
             damage=hit.arsenal_damage,
             total_damage=math.fsum(hit.arsenal_damage.values()),

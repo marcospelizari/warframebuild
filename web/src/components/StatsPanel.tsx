@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { DamageType, StoredBuild } from "@/api/client";
+import type { Build, DamageType, Forma } from "@/api/client";
 import { compact, trim } from "@/lib/format";
 import { damageIcon } from "./art";
 import s from "./StatsPanel.module.css";
@@ -46,9 +46,16 @@ function DamageName({ type }: { type: DamageType }) {
   );
 }
 
+function change(build: Build, baseline: Build): string {
+  const d = build.dps.direct_burst - baseline.dps.direct_burst;
+  return `${d >= 0 ? "+" : "−"}${compact(Math.abs(d))}`;
+}
+
 /** The arsenal's stat screen for one build (canvas F-Weapon v46), at max rank. */
-export function StatsPanel({ stored }: { stored: StoredBuild }) {
-  const { build, forma } = stored;
+type Props = { build: Build; forma: Forma | null; baseline?: Build | null };
+
+/** `baseline`: the calculated build an edit is compared with (F6). */
+export function StatsPanel({ build, forma, baseline = null }: Props) {
   const a = build.arsenal;
   const rank = (t: DamageType) => PHYSICAL.indexOf(t) + 1 || 9;
   const damage = (Object.entries(a.damage) as [DamageType, number][]).sort(
@@ -109,7 +116,10 @@ export function StatsPanel({ stored }: { stored: StoredBuild }) {
         </dl>
         <h3>CALCULATED</h3>
         <dl>
-          <Row k="Direct burst DPS" v={compact(build.dps.direct_burst)} />
+          <Row
+            k="Direct burst DPS"
+            v={compact(build.dps.direct_burst) + (baseline ? ` (${change(build, baseline)})` : "")}
+          />
         </dl>
       </div>
       <p className={s.note}>Same numbers as the arsenal screen once these mods are equipped at max rank.</p>

@@ -173,6 +173,9 @@
 
 .gal.cell:hover .desc,.gal .mod:focus-visible .desc{margin-bottom:10px;flex-grow:1}
 
+.why{display:block;margin-top:6px;font:500 12px/1.15 Roboto,sans-serif;color:#e8c46a}
+.pick{padding:0;border:1px dashed transparent;cursor:pointer}
+.pick:hover{border-color:var(--color-gold)}
 /* Sized to the grid's own box, not the window: 4 columns are 802 px at zoom 1. */
 .wrap{container-type:inline-size}
 @container (max-width:949px){.deck,.exrow,.arcrow{zoom:1}}
