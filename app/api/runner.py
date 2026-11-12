@@ -33,6 +33,10 @@ class Restarted(Exception):
     """The job's worker pool died (a stuck job's restart, or a crashed worker)."""
 
 
+class Closed(Restarted):
+    """The runner was shut down for a newer release (U11): its jobs belong on the new one."""
+
+
 class Runner:
     def __init__(
         self,
@@ -70,7 +74,7 @@ class Runner:
         finally:
             self._waiting -= 1
         if self._closed:
-            raise Restarted
+            raise Closed
         self._free -= 1
         try:
             job = self._submit(fn, args)

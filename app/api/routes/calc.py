@@ -22,5 +22,10 @@ router = APIRouter()
 @router.post("/api/calc", response_model=Build, responses=ERRORS)
 async def calc(body: CalcRequest, request: Request) -> Response:
     request.app.state.rate_limit.check(request)
-    built = await jobs.run(served(request).runner, jobs.calc, body.model_dump_json())
+    built = await jobs.run(
+        served(request).runner,
+        jobs.calc,
+        body.model_dump_json(),
+        current=lambda: served(request).runner,  # /calc reads no release: safe on a newer one
+    )
     return Response(built, media_type="application/json")

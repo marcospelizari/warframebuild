@@ -3,7 +3,6 @@ import pytest
 from app.domain.class_mechanics import (
     beam_level,
     beam_ramp,
-    beam_ramp_average,
     sniper_combo_multiplier,
 )
 
@@ -21,8 +20,6 @@ def test_beam_ramp() -> None:
     assert beam_ramp(0.2, 0) == 0.2
     assert beam_ramp(0.2, 0.3) == pytest.approx(0.6)
     assert beam_ramp(0.2, 5) == 1.0
-    assert beam_ramp_average(0.2, 0.6) == pytest.approx(0.6)
-    assert beam_ramp_average(0.2, 1.2) == pytest.approx((0.6 * 0.6 + 0.6) / 1.2)
 
 
 def test_beam_level_ramps_up_and_decays_after_a_stop() -> None:

@@ -44,10 +44,12 @@ Damage formulas follow the WARFRAME Wiki pages "Damage/Calculation", "Calculatin
 
 ## Search
 
-Builds are computed offline, not when a page is opened. A branch-and-bound search with a fixed,
-deterministic evaluation budget finds them. A build is labelled "optimal" only when the search
-proves it within the stated search scope (for example: the two best bonus elements); otherwise it
-is "best found". The same data produces the same builds on any machine.
+Builds are computed offline, not when a page is opened, with a fixed, deterministic evaluation
+budget. When every legal build of a gun fits the budget, all of them are scored and the best is
+labelled "optimal" within the stated search scope (for example: the two best bonus elements).
+Otherwise a local search starts from the empty build and takes the best-improving move (add,
+remove or swap a mod, change one choice) until none helps or the budget ends; that result is
+"best found". The same data produces the same builds on any machine.
 
 The budget is 20,000 evaluations per combat build, sized so a full `build-all` stays within
 one overnight run on a 6-core laptop; the combat evaluator uses numpy. Measurements and the

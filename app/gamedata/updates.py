@@ -16,6 +16,8 @@ class BuildChange(Model):
     build: str
     removed: list[str]  # names: mods, exilus, arcane, Incarnon evolutions, bonus element
     added: list[str]
+    # Same parts in another slot order: the element combinations changed (review P3).
+    reordered: bool = False
     kill_before: float | None  # average kill time, seconds
     kill_after: float | None
 

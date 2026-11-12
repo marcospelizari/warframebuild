@@ -23,7 +23,7 @@ def test_plain_gun_builds_are_scored_like_calc(client: TestClient) -> None:
     response = client.get("/api/weapons/soma-prime/builds")
     assert response.status_code == 200
     body = response.json()
-    assert response.headers["etag"] == f'"{body["release"]}"'
+    assert response.headers["etag"].startswith(f'"{body["release"]}-')
     assert body["weapon"]["name"] == "Soma Prime"
     assert body["elements"] == []
     [variant] = body["variants"]
@@ -57,6 +57,14 @@ def test_unchanged_release_answers_304(client: TestClient) -> None:
 def test_unknown_gun_is_404_and_never_names_another_file(client: TestClient, slug: str) -> None:
     response = client.get(f"/api/weapons/{slug}/builds")
     assert response.status_code == 404
+
+
+def test_api_code_change_changes_the_etag(client: TestClient) -> None:
+    """Review P2: the response is made by API code too; new code must not answer 304."""
+    etag = client.get("/api/weapons/soma-prime/builds").headers["etag"]
+    client.app.state.api_version = "other"  # type: ignore[attr-defined]
+    again = client.get("/api/weapons/soma-prime/builds", headers={"If-None-Match": etag})
+    assert again.status_code == 200 and again.headers["etag"] != etag
 
 
 def test_no_release_yet_answers_503(tmp_path: Path, gamedata: GameData) -> None:

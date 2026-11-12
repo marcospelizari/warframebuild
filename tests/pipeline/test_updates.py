@@ -110,3 +110,14 @@ def test_history_is_carried_newest_first(tmp_path: Path) -> None:
     _publish(releases, gamedata, "v2", _gun([HORNET], 1.0), "2026-11-13")
     last = _publish(releases, gamedata, "v3", _gun([SERRATION], 1.0), "2026-11-14")
     assert [u.date for u in read_updates(last).updates] == ["2026-11-14", "2026-11-13"]
+
+
+def test_new_slot_order_is_listed_as_reordered(tmp_path: Path) -> None:
+    """Review P3: element order counts; the page must not say "same mods"."""
+    gamedata = Path(__file__).resolve().parents[2] / "gamedata"
+    releases = tmp_path / "releases"
+    _publish(releases, gamedata, "v1", _gun([HORNET, SERRATION], 2.0), "2026-11-12")
+    folder = _publish(releases, gamedata, "v2", _gun([SERRATION, HORNET], 2.0), "2026-11-13")
+    (update,) = read_updates(folder).updates
+    recommended = update.guns[0].builds[0]
+    assert (recommended.removed, recommended.added, recommended.reordered) == ([], [], True)

@@ -5,12 +5,13 @@ A worker holds the game data the app serves: spawned processes load it from the 
 response JSON or an error tuple, since ApiFailure does not cross a process boundary.
 """
 
+from collections.abc import Callable
 from typing import Any
 
 from app.api.build_response import build_response
 from app.api.builds_response import expand
 from app.api.errors import ApiFailure
-from app.api.runner import Busy, Restarted, Runner, TimedOut
+from app.api.runner import Busy, Closed, Restarted, Runner, TimedOut
 from app.api.schemas.build import CalcRequest
 from app.gamedata.release import Release
 from app.gamedata.store import GameData, load
@@ -48,10 +49,21 @@ def builds(release: Release, slug: str) -> Outcome:
         return None, (503, "release_gone", "builds were replaced, try again", None)
 
 
-async def run(runner: Runner, job: Any, *args: Any) -> bytes:
-    """Run `job` on the served release's runner; Busy/TimedOut/job errors become API errors."""
+async def run(
+    runner: Runner, job: Any, *args: Any, current: Callable[[], Runner] | None = None
+) -> bytes:
+    """Run `job` on the served release's runner; Busy/TimedOut/job errors become API errors.
+    `current`: the runner served now; a job whose runner was closed for a newer release runs
+    there once instead of failing (jobs that do not depend on the release only)."""
     try:
         body, error = await runner.run(job, *args)
+    except Closed:
+        newer = current() if current else runner
+        if newer is runner:
+            raise ApiFailure(
+                503, "restarted", "workers restarted, try again", retry_after=1
+            ) from None
+        return await run(newer, job, *args)
     except Busy:
         raise ApiFailure(503, "busy", "too many requests in progress", retry_after=1) from None
     except TimedOut:

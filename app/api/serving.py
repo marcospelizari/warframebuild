@@ -52,16 +52,6 @@ def served(request: Request) -> Served:
     return value
 
 
-def swap(app: FastAPI) -> bool:
-    """Serve the release `current` names if it is new and loads; True when swapped.
-    Call on the event loop thread: `Runner` is not thread-safe (tests call it directly)."""
-    new = load_next(app)
-    if new is None:
-        return False
-    install(app, new)
-    return True
-
-
 def load_next(app: FastAPI) -> Served | None:
     """The new release, loaded (slow: run it off the event loop); None when there is none."""
     releases: Path = app.state.releases

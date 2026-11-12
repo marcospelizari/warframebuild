@@ -44,12 +44,3 @@ def beam_level(start: float, level: float, on_target: float, off_target: float =
     idle = max(0.0, off_target - BEAM_DECAY_DELAY_S)
     level = max(start, level - span * idle / BEAM_DECAY_S)
     return min(1.0, level + span * on_target / BEAM_RAMP_S)
-
-
-def beam_ramp_average(start: float, seconds: float) -> float:
-    """Average damage share over the first `seconds` on a target (linear ramp)."""
-    if seconds <= 0:
-        return start
-    ramp = min(seconds, BEAM_RAMP_S)
-    area = ramp * (start + beam_ramp(start, ramp)) / 2 + (seconds - ramp) * 1.0
-    return area / seconds

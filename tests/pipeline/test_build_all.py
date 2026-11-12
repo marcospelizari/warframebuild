@@ -1,3 +1,4 @@
+import dataclasses
 import filecmp
 import json
 import multiprocessing
@@ -10,10 +11,10 @@ from pathlib import Path
 import pytest
 
 from app.gamedata.release import current
-from app.gamedata.store import load
+from app.gamedata.store import GameData, load
 from app.optimize.candidates import fits
 from app.pipeline import build_all, refresh, release
-from app.pipeline.gun_inputs import INPUTS
+from app.pipeline.gun_inputs import HASHED, INPUTS, NOT_READ
 from app.pipeline.publish import StoreError
 from app.pipeline.refresh import Paths as RefreshPaths
 
@@ -130,3 +131,10 @@ def test_release_without_input_keys_searches_every_gun(tmp_path: Path) -> None:
     (tmp_path / INPUTS).write_text('{"lex-prime": "k"}')
     assert build_all._unchanged(tmp_path, {"lex-prime": "k"}) == {"lex-prime"}
     assert build_all._unchanged(tmp_path, {"lex-prime": "other"}) == set()
+
+
+def test_every_gamedata_field_is_hashed_or_never_read() -> None:
+    """Review gap: a new data file the search reads must enter the per-gun key (U3)."""
+    fields = {f.name for f in dataclasses.fields(GameData)}
+    assert fields == HASHED | NOT_READ
+    assert not HASHED & NOT_READ

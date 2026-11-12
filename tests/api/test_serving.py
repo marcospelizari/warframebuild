@@ -32,6 +32,14 @@ def _new_release(releases: Path, new_id: str, source: Path) -> Path:
     return folder
 
 
+def _swap(app: FastAPI) -> bool:
+    """What the watcher does each round, on this thread."""
+    new = serving.load_next(app)
+    if new is not None:
+        serving.install(app, new)
+    return new is not None
+
+
 def _app(tmp_path: Path, gamedata: GameData, releases: Path) -> FastAPI:
     return create_app(web_dist=tmp_path / "missing", data=gamedata, releases=releases)
 
@@ -46,16 +54,16 @@ def test_a_new_release_is_served_without_a_restart(
     client = TestClient(app)
     assert client.get("/api/weapons/soma-prime/builds").status_code == 200
     old = app.state.served
-    assert not serving.swap(app)  # nothing new
+    assert not _swap(app)  # nothing new
 
     _new_release(copy, "f" * 16, original)
-    assert serving.swap(app)
+    assert _swap(app)
     assert app.state.served.release.id == "f" * 16
     response = client.get("/api/weapons/soma-prime/builds")
     assert (response.status_code, response.json()["release"]) == (200, "f" * 16)
-    assert response.headers["etag"] == f'"{"f" * 16}"'
+    assert response.headers["etag"].startswith(f'"{"f" * 16}-')
     assert app.state.served.builds_cache.keys() == {"soma-prime"}  # old cache left behind
-    assert not serving.swap(app)
+    assert not _swap(app)
 
     async def on_old_runner() -> None:
         await old.runner.run(lambda: None)
@@ -74,13 +82,13 @@ def test_a_release_that_fails_to_load_keeps_the_old_one(
     old = app.state.served
     broken = _new_release(copy, "e" * 16, original)
     (broken / "gamedata/meta.json").write_text('{"schema_version": 0}')
-    assert not serving.swap(app)
+    assert not _swap(app)
     assert app.state.served is old
-    assert not serving.swap(app)  # not retried until `current` changes
+    assert not _swap(app)  # not retried until `current` changes
     assert len([r for r in caplog.records if "not served" in r.message]) == 1
 
     _new_release(copy, "d" * 16, original)
-    assert serving.swap(app)
+    assert _swap(app)
     assert app.state.served.release.id == "d" * 16
 
 
