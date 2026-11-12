@@ -1,1 +1,40 @@
 @import "tailwindcss";
+
+/* Direction F (Orokin gilt), canvas F-Weapon v46 / F-Home v50. */
+@theme {
+  --color-bg: #0f0d0a;
+  --color-surface: #16130e;
+  --color-panel: #12100c;
+  --color-line: #3a3122;
+  --color-line-strong: #4a3f2c;
+  --color-gold: #cfa448;
+  --color-cream: #eee6d6;
+  --color-ink: #f4eee2;
+  --color-label: #cdbf9f;
+  --color-soft: #d6ccb8;
+  --color-muted: #a89c86;
+  --color-cyan: #5cd3e6;
+  --font-display: Marcellus, serif;
+  --font-sans: "Hanken Grotesk", system-ui, sans-serif;
+  --font-game: Roboto, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: var(--color-cyan);
+}
+
+a:hover {
+  color: var(--color-cream);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 3px;
+}
