@@ -58,6 +58,7 @@ def create_app(
     releases: Path = RELEASES,
     img_dir: Path = IMG,
     art_dir: Path = ART,
+    public_origin: str | None = None,
 ) -> FastAPI:
     """Data and builds come from the current release (C4); before the first
     `wfb build-all`, or when the release no longer loads (e.g. an older schema), data from
@@ -101,6 +102,7 @@ def create_app(
     app.state.img_dir = img_dir
     app.state.art_dir = art_dir
     app.state.web_dist = web_dist
+    app.state.public_origin = pages.origin(public_origin) if public_origin else None
     app.state.builds_cache = {}
     app.state.rate_limit = RateLimit()
     # Injected data (tests) cannot reach a spawned process: threads share it instead.

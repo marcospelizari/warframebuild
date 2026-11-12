@@ -131,6 +131,10 @@ export interface components {
         Arsenal: {
             /** Beam Ramp Start */
             beam_ramp_start: number | null;
+            /** Combined */
+            combined: {
+                [key: string]: components["schemas"]["DamageType"][];
+            };
             /** Critical Chance */
             critical_chance: number;
             /** Critical Multiplier */

@@ -12,6 +12,7 @@ import {
   modRows,
   place,
   sameChoices,
+  showChoices,
   type Target,
   toRequest,
 } from "@/lib/editor";
@@ -37,8 +38,8 @@ const STATUS = {
 /** F8: how much slower the average kill gets without `id` (stored builds only). */
 function whyText(stored: StoredBuild, id: string): string | null {
   const without = stored.without[id];
-  if (without === undefined || stored.score <= 0) return null;
-  if (without <= 0) return "Without it: enemies survive the 10 s";
+  // Scores are 1 / combat cost, so both are above 0.
+  if (without === undefined || without <= 0 || stored.score <= 0) return null;
   const slower = 1 / without - 1 / stored.score;
   if (Math.abs(slower) < 0.005) return "Without it: about the same kill time";
   return `Without it: average kill ${slower > 0 ? "+" : "−"}${trim(Math.abs(slower), 2)} s`;
@@ -85,9 +86,18 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
     retry: false,
   });
   const editing = !!choices;
-  const live = editing && changed && calc.data ? calc.data : null;
-  const build = live ?? base.build;
-  const forma = live ? live.forma : base.forma;
+  // Numbers and layout count only when /calc answered for the picks on screen.
+  const unchanged = !choices || sameChoices(choices, fromBuild(base.build));
+  const fresh =
+    changed && settledCode === code && calc.data && !calc.isPlaceholderData ? calc.data : null;
+  const result = unchanged ? base.build : fresh;
+  const pending = !result;
+  const numbers = result ?? calc.data ?? base.build; // last known while waiting, dimmed
+  const forma = result === base.build ? base.forma : (fresh?.forma ?? null);
+  const build = choices ? showChoices(numbers, choices, items) : base.build;
+  const live = fresh && !unchanged ? fresh : null; // compared with the calculated build
+  // An error counts only for the picks on screen: a newer edit is not sent yet.
+  const failed = pending && settledCode === code ? calc.error : null;
   const weapon = data.weapon;
 
   return (
@@ -117,12 +127,14 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
           tiers={items.perks}
           perks={choices.perks}
           onPerks={(perks) => edit({ ...choices, perks })}
-          busy={calc.isFetching || settledCode !== code}
-          error={changed && calc.error ? calc.error.message : null}
+          busy={pending && !failed}
+          error={failed ? `Could not calculate this edit: ${failed.message}` : null}
           onReset={() => edit(null)}
         />
       )}
-      <ScoreStrip build={build} faction={faction} baseline={live ? base.build : null} />
+      <div className={pending ? "opacity-50" : undefined} aria-busy={pending}>
+        <ScoreStrip build={build} faction={faction} baseline={live ? base.build : null} />
+      </div>
       <div className="mt-7 flex flex-wrap items-start gap-9">
         <div className="min-w-0 flex-[999_1_760px]">
           <BuildFrame
@@ -133,6 +145,7 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
                 : STATUS[base.status](base.evaluations)
             }
             forma={forma}
+            pending={pending}
           >
             <ModGrid
               build={build}
@@ -144,7 +157,12 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
             />
           </BuildFrame>
         </div>
-        <StatsPanel build={build} forma={forma} baseline={live ? base.build : null} />
+        <StatsPanel
+          build={build}
+          forma={forma}
+          baseline={live ? base.build : null}
+          pending={pending}
+        />
       </div>
       {choices && target && target.kind === "arcane" && (
         <Picker

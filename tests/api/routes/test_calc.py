@@ -275,3 +275,12 @@ def test_calc_runs_in_worker_processes(tmp_path: Path) -> None:
         assert response.status_code == 200
         bad = client.post("/api/calc", json={"weapon": "soma-prime", "mods": ["/x"]})
         assert (bad.status_code, bad.json()["field"]) == (422, "mods[0]")
+
+
+def test_combined_elements_carry_their_parts(client: TestClient, gamedata: GameData) -> None:
+    mods = [_id(gamedata, "Infected Clip"), _id(gamedata, "Cryo Rounds")]  # toxin, cold
+    build = client.post("/api/calc", json={"weapon": "soma-prime", "mods": mods}).json()
+    arsenal = build["arsenal"]
+    assert "viral" in arsenal["damage"]
+    assert arsenal["combined"] == {"viral": ["cold", "toxin"]}
+    assert build["forma"] is not None and build["forma"]["used"] <= build["forma"]["capacity"]

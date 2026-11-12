@@ -4,15 +4,6 @@ import { compact, trim } from "@/lib/format";
 import { damageIcon } from "./art";
 import s from "./StatsPanel.module.css";
 
-// Combined elements and their parts, shown as in the arsenal: "Viral (cold + toxin)".
-const PARTS: Partial<Record<DamageType, [DamageType, DamageType]>> = {
-  blast: ["heat", "cold"],
-  radiation: ["heat", "electricity"],
-  gas: ["heat", "toxin"],
-  magnetic: ["cold", "electricity"],
-  viral: ["cold", "toxin"],
-  corrosive: ["electricity", "toxin"],
-};
 const PHYSICAL: DamageType[] = ["puncture", "slash", "impact"];
 const cap = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
@@ -30,16 +21,16 @@ function Row({ k, v, total = false }: { k: ReactNode; v: string; total?: boolean
   );
 }
 
-function DamageName({ type }: { type: DamageType }) {
-  const parts = PARTS[type];
+function DamageName({ type, parts }: { type: DamageType; parts: DamageType[] | undefined }) {
+  const [first, second] = parts ?? [];
   return (
     <>
       <Icon type={type} className={s.di} />
       {cap(type)}
-      {parts && (
+      {first && second && (
         <span className={s.mx}>
-          (<Icon type={parts[0]} className={s.di} alt={cap(parts[0])} />+
-          <Icon type={parts[1]} className={s.di} alt={cap(parts[1])} />)
+          (<Icon type={first} className={s.di} alt={cap(first)} />+
+          <Icon type={second} className={s.di} alt={cap(second)} />)
         </span>
       )}
     </>
@@ -52,19 +43,23 @@ function change(build: Build, baseline: Build): string {
 }
 
 /** The arsenal's stat screen for one build (canvas F-Weapon v46), at max rank. */
-type Props = { build: Build; forma: Forma | null; baseline?: Build | null };
+type Props = { build: Build; forma: Forma | null; baseline?: Build | null; pending?: boolean };
 
 /** `baseline`: the calculated build an edit is compared with (F6). */
-export function StatsPanel({ build, forma, baseline = null }: Props) {
+export function StatsPanel({ build, forma, baseline = null, pending = false }: Props) {
   const a = build.arsenal;
   const rank = (t: DamageType) => PHYSICAL.indexOf(t) + 1 || 9;
   const damage = (Object.entries(a.damage) as [DamageType, number][]).sort(
     ([x, vx], [y, vy]) => rank(x) - rank(y) || vy - vx,
   );
   const bonus = build.bonus_element;
-  const usedPct = forma ? Math.min(100, (forma.used / forma.capacity) * 100) : 100;
+  const usedPct = pending ? 0 : forma ? Math.min(100, (forma.used / forma.capacity) * 100) : 100;
   return (
-    <aside aria-label="Arsenal stats of this build" className={s.panel}>
+    <aside
+      aria-label="Arsenal stats of this build"
+      aria-busy={pending}
+      className={pending ? `${s.panel} opacity-50` : s.panel}
+    >
       {bonus && (
         <>
           <div className={s.pgb}>
@@ -79,7 +74,7 @@ export function StatsPanel({ build, forma, baseline = null }: Props) {
       )}
       <div className={s.cap}>
         <span>CAPACITY</span>
-        <span>{forma ? `${forma.used}/${forma.capacity}` : "Does not fit"}</span>
+        <span>{pending ? "…" : forma ? `${forma.used}/${forma.capacity}` : "Does not fit"}</span>
       </div>
       <div className={s.bar} aria-hidden="true">
         <div style={{ width: `${usedPct}%`, background: forma ? undefined : "#e0735f" }} />
@@ -110,7 +105,7 @@ export function StatsPanel({ build, forma, baseline = null }: Props) {
           <Row k="Critical Damage" v={`${trim(a.critical_multiplier, 1)}x`} />
           <Row k="Status" v={`${trim(a.status_chance * 100, 1)}%`} />
           {damage.map(([type, value]) => (
-            <Row key={type} k={<DamageName type={type} />} v={trim(value, 1)} />
+            <Row key={type} k={<DamageName type={type} parts={a.combined[type]} />} v={trim(value, 1)} />
           ))}
           <Row k="Total" v={trim(a.total_damage, 1)} total />
         </dl>
