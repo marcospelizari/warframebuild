@@ -29,7 +29,7 @@ from app.pipeline.sources.wiki_weapon_data import AttackData, WeaponData
 def build(
     de_weapons: list[dict[str, Any]],
     wfcd: list[dict[str, Any]],
-    manifest: list[dict[str, Any]],
+    textures: dict[str, str | None],
     fire: FireOverrides,
     tags: dict[str, list[str]],
     module: dict[str, WeaponData],
@@ -38,7 +38,6 @@ def build(
     overrides: Overrides,
 ) -> tuple[list[Weapon], list[Exclusion], list[Join]]:
     de = {w["uniqueName"]: w for w in de_weapons}
-    textures = {m["uniqueName"]: m.get("textureLocation") for m in manifest}
     by_id: dict[str, dict[str, Any]] = {}
     for w in wfcd:
         if w["uniqueName"] in by_id:

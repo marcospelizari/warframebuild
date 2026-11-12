@@ -26,6 +26,7 @@ WEB_DIST = ROOT / "web" / "dist"
 GAMEDATA = ROOT / "gamedata"
 RELEASES = ROOT / "cache" / "releases"
 IMG = ROOT / "cache" / "img"
+ART = ROOT / "cache" / "raw" / "wiki" / "img"  # card art saved by hand (T2), never committed
 # CPU work (E6/E7): runner size = concurrency cap; one uvicorn worker keeps it global.
 WORKERS = max(1, min(4, (os.cpu_count() or 2) // 2))
 QUEUE = 2 * WORKERS  # jobs waiting for a permit; more is 503
@@ -56,6 +57,7 @@ def create_app(
     data: GameData | None = None,
     releases: Path = RELEASES,
     img_dir: Path = IMG,
+    art_dir: Path = ART,
 ) -> FastAPI:
     """Data and builds come from the current release (C4); before the first
     `wfb build-all`, or when the release no longer loads (e.g. an older schema), data from
@@ -97,6 +99,7 @@ def create_app(
     app.state.data = data
     app.state.release = release
     app.state.img_dir = img_dir
+    app.state.art_dir = art_dir
     app.state.builds_cache = {}
     app.state.rate_limit = RateLimit()
     # Injected data (tests) cannot reach a spawned process: threads share it instead.

@@ -204,6 +204,7 @@ class Mod(Model):
     compatibility_tags: list[str] | None
     incompatibility_tags: list[str] | None
     compat_class: str | None  # export-plus `compat`; None = missing in export-plus
+    texture_location: str | None  # DE ExportManifest picture, cached by refresh
 
 
 class Arcane(Model):
@@ -214,6 +215,7 @@ class Arcane(Model):
     rarity: str | None
     level_stats: list[list[str]]
     effects: Effects  # max rank
+    texture_location: str | None  # DE ExportManifest picture, cached by refresh
 
 
 class Perk(Model):
@@ -248,7 +250,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[21] = 21
+    schema_version: Literal[22] = 22
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

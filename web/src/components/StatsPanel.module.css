@@ -1,0 +1,22 @@
+/* Arsenal stats panel, ported from canvas F-Weapon v46. */
+.panel{flex:1 1 340px;min-width:0}
+.pgb{display:flex;align-items:center;gap:8px;padding:11px 12px;border:1px solid var(--color-gold);background:rgba(207,164,72,.1);font:500 18px/1 var(--font-game);color:var(--color-ink)}
+.pgb .di{width:18px;height:18px}
+.pgb span{margin-left:auto;font-size:13px;color:var(--color-label)}
+.note{margin:6px 2px 12px;font-size:13px;line-height:1.5;color:var(--color-soft)}
+.cap{display:flex;justify-content:space-between;align-items:baseline;font:500 20px/1 var(--font-game);color:var(--color-cream);padding:12px 12px 9px;background:rgba(207,164,72,.08)}
+.bar{height:3px;background:#2a241a}
+.bar div{height:100%;background:var(--color-gold)}
+.ars{margin-top:8px;border:1px solid var(--color-line-strong);background:var(--color-panel);padding:8px 0 10px}
+.ars h3{margin:14px 12px 3px;font:700 15px/1.2 var(--font-game);color:var(--color-ink);letter-spacing:.02em}
+.ars h3:first-child{margin-top:4px}
+.ars dl{margin:0}
+.ar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:2px 12px;font:400 16px/1.4 var(--font-game);color:var(--color-ink)}
+.ar:nth-child(odd){background:rgba(255,255,255,.04)}
+.ar dt{color:var(--color-label);display:flex;align-items:center;gap:5px;min-width:0}
+.ar dd{margin:0;color:var(--color-ink);font-weight:500;text-align:right}
+.tot dt,.tot dd{color:var(--color-ink);font-weight:700}
+.di{width:15px;height:15px;flex:none}
+.mx{display:inline-flex;align-items:center;gap:2px;color:var(--color-label)}
+.mx .di{width:13px;height:13px}
+.perk{list-style:none;margin:0;padding:0}

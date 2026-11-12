@@ -145,7 +145,12 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
         export_plus=check.export_plus_lines(paths.raw) if changes else [],
     )
     if fetch_images and client is not None:
-        report.image_failures = images.fetch_missing(client, dataset.weapons, paths.img)
+        report.image_failures = images.fetch_missing(
+            client,
+            images.weapon_pictures(dataset.weapons, paths.img)
+            + images.item_pictures("mods", dataset.mods, paths.img)
+            + images.item_pictures("arcanes", dataset.arcanes, paths.img),
+        )
     return report
 
 

@@ -1,5 +1,5 @@
 {
- "changed_on": "2026-11-10",
+ "changed_on": "2026-11-12",
  "counts": {
   "arcanes": 34,
   "arcanes_full": 13,
@@ -23,7 +23,7 @@
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "1bbc3b6ba7d58260",
+ "dataset_hash": "a6e839da6b88cf7a",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -43,43 +43,43 @@
    "unique_name": "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire"
   }
  ],
- "fetched": "2026-11-08",
+ "fetched": "2026-11-12",
  "game_update": "Update 44.0",
- "schema_version": 21,
+ "schema_version": 22,
  "sources": [
   {
    "path": "de/ExportManifest.json",
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-12",
    "sha256_16": "55b7a52c2f0709ae",
    "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_y10Y6QId+-io-dCB3GMEmg"
   },
   {
    "path": "de/ExportRelicArcane_en.json",
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-12",
    "sha256_16": "3475b6fbd4bd6364",
    "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_en.json!00_BPSU5+RTY0mdOW9AmkGU5A"
   },
   {
    "path": "de/ExportSentinels_en.json",
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-12",
    "sha256_16": "f4c6fcc19c4b6e1b",
    "url": "https://content.warframe.com/PublicExport/Manifest/ExportSentinels_en.json!00_8iGr2T9MTskXt5zeKEVNmQ"
   },
   {
    "path": "de/ExportUpgrades_en.json",
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-12",
    "sha256_16": "df5c898b3e4b8574",
    "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_en.json!00_iIR9VcbRzLg4-0-6Yn7IrA"
   },
   {
    "path": "de/ExportWeapons_en.json",
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-12",
    "sha256_16": "c40c2bc40f770d0f",
    "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_en.json!00_Lp7tYn3OPr4R3amRyHcSaA"
   },
   {
    "path": "de/index_en.txt.lzma",
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-12",
    "sha256_16": "4a6e4acee99be6d0",
    "url": "https://content.warframe.com/PublicExport/index_en.txt.lzma"
   },
@@ -97,19 +97,19 @@
   },
   {
    "path": "wfcd/Arcanes.json",
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-12",
    "sha256_16": "72d67360bdce45b9",
    "url": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/Arcanes.json"
   },
   {
    "path": "wfcd/Primary.json",
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-12",
    "sha256_16": "d31b5a542ef06708",
    "url": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/Primary.json"
   },
   {
    "path": "wfcd/Secondary.json",
-   "retrieved": "2026-11-08",
+   "retrieved": "2026-11-12",
    "sha256_16": "c5adaa44161e4990",
    "url": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/Secondary.json"
   },
@@ -154,6 +154,12 @@
    "retrieved": "2026-11-10",
    "sha256_16": "9c12afd0eeb665d2",
    "url": "https://wiki.warframe.com/w/Assault_Rifle_Mods"
+  },
+  {
+   "path": "wiki/Assets.wikitext",
+   "retrieved": "2026-11-11",
+   "sha256_16": "8d899be813a77e0b",
+   "url": "https://wiki.warframe.com/w/Assets"
   },
   {
    "path": "wiki/Battalyst.wikitext",

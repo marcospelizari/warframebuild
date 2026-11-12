@@ -1,99 +1,29 @@
 import { useQuery } from "@tanstack/react-query";
-import { postCalc } from "@/api/client";
+import { getBuilds, getMods } from "@/api/client";
+import { ModGrid } from "@/components/ModGrid";
+import { StatsPanel } from "@/components/StatsPanel";
 
-// Step 4.6 walking skeleton: fixed (empty) mod list, numbers only, no styling.
-const MODS: string[] = [];
-
-const fmt = (n: number | null | undefined) => (n == null ? "–" : n.toFixed(2));
-
+// Step 10b: the Recommended build in the F grid and stats panel; header, tabs and
+// scoring strip arrive in 10d.
 export function WeaponPage({ slug }: { slug: string }) {
-  const build = useQuery({
-    queryKey: ["calc", slug, MODS],
-    queryFn: () => postCalc({ weapon: slug, mods: MODS }),
-  });
-  if (build.isPending) return <p>Loading…</p>;
-  if (build.isError) return <p role="alert">{build.error.message}</p>;
-  const { weapon, form, arsenal, dps, slots, combat, assumptions } = build.data;
+  const builds = useQuery({ queryKey: ["builds", slug], queryFn: () => getBuilds(slug) });
+  const mods = useQuery({ queryKey: ["mods", slug], queryFn: () => getMods(slug) });
+  if (builds.isError || mods.isError) {
+    return <p role="alert">{(builds.error ?? mods.error)?.message}</p>;
+  }
+  if (!builds.data || !mods.data) return <p>Loading…</p>;
+  const { weapon, variants } = builds.data;
+  const stored = variants[0]?.recommended;
+  if (!stored) return <p role="alert">No builds for {weapon.name} yet.</p>;
   return (
-    <main className="p-6">
-      <h1>{weapon.name}</h1>
-      <p>Form: {form}</p>
-      <h2>DPS</h2>
-      <dl>
-        <dt>Direct burst</dt>
-        <dd>{fmt(dps.direct_burst)}</dd>
-        <dt>Direct sustained</dt>
-        <dd>{fmt(dps.direct_sustained)}</dd>
-        {dps.head && (
-          <>
-            <dt>Burst on {dps.head.head}, 0 stacks</dt>
-            <dd>{fmt(dps.head.zero_stacks)}</dd>
-            <dt>Burst on {dps.head.head}, max hit stacks</dt>
-            <dd>{fmt(dps.head.max_stacks)}</dd>
-          </>
-        )}
-      </dl>
-      <h2>Combat (level {combat.level}, {combat.cap_s} s cap)</h2>
-      <p>Score: {fmt(combat.score)} (lower is better)</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Enemy</th>
-            <th>Faction</th>
-            <th>Hit</th>
-            <th>Time to kill</th>
-            <th>Removed</th>
-          </tr>
-        </thead>
-        <tbody>
-          {combat.enemies.map((e) => (
-            <tr key={e.name}>
-              <td>{e.name}</td>
-              <td>{e.faction}</td>
-              <td>{e.target}</td>
-              <td>{e.ttk == null ? "not killed" : `${fmt(e.ttk)} s`}</td>
-              <td>{`${Math.round(e.removed * 100)}%`}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <h2>Arsenal</h2>
-      <dl>
-        {Object.entries(arsenal.damage).map(([type, value]) => (
-          <div key={type}>
-            <dt>{type}</dt>
-            <dd>{fmt(value)}</dd>
-          </div>
-        ))}
-        <dt>Total damage</dt>
-        <dd>{fmt(arsenal.total_damage)}</dd>
-        <dt>Critical chance</dt>
-        <dd>{fmt(arsenal.critical_chance)}</dd>
-        <dt>Critical multiplier</dt>
-        <dd>{fmt(arsenal.critical_multiplier)}</dd>
-        <dt>Status chance</dt>
-        <dd>{fmt(arsenal.status_chance)}</dd>
-        <dt>Multishot</dt>
-        <dd>{fmt(arsenal.multishot)}</dd>
-        <dt>Fire rate</dt>
-        <dd>{fmt(arsenal.fire_rate)}</dd>
-        <dt>Magazine</dt>
-        <dd>{fmt(arsenal.magazine)}</dd>
-        <dt>Reload</dt>
-        <dd>{fmt(arsenal.reload_time)}</dd>
-      </dl>
-      <h2>Slots</h2>
-      <ol>
-        {slots.map((s) => (
-          <li key={s.index}>{s.name ?? "empty"}</li>
-        ))}
-      </ol>
-      <h2>Assumptions</h2>
-      <ul>
-        {assumptions.map((a) => (
-          <li key={a.id}>{a.text}</li>
-        ))}
-      </ul>
+    <main className="mx-auto max-w-[1360px] px-4 py-8">
+      <h1 className="text-center font-display text-4xl text-cream">{weapon.name}</h1>
+      <div className="mt-8 flex flex-wrap items-start gap-8">
+        <section aria-label="Recommended build" className="min-w-0 flex-[2_1_940px]">
+          <ModGrid stored={stored} items={mods.data} weaponType={weapon.weapon_type} />
+        </section>
+        <StatsPanel stored={stored} />
+      </div>
     </main>
   );
 }
