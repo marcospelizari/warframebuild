@@ -13,7 +13,7 @@ from app.api.build_response import build_response
 from app.api.builds_response import expand
 from app.api.errors import ApiFailure
 from app.api.runner import Busy, Restarted, Runner, TimedOut
-from app.api.schemas import CalcRequest
+from app.api.schemas.build import CalcRequest
 from app.gamedata.release import Release
 from app.gamedata.store import GameData, load
 

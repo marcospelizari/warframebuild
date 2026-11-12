@@ -4,7 +4,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Query, Request
 
-from app.api.schemas import ExcludedWeapon, WeaponItem, WeaponList
+from app.api.schemas.lists import ExcludedWeapon, WeaponItem, WeaponList
 from app.gamedata.images import image_path
 from app.gamedata.models import Category
 from app.gamedata.store import GameData

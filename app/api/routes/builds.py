@@ -7,7 +7,8 @@ from fastapi import APIRouter, Request, Response
 
 from app.api import jobs
 from app.api.errors import ApiFailure
-from app.api.schemas import ApiError, BuildsResponse
+from app.api.schemas.base import ApiError
+from app.api.schemas.stored import BuildsResponse
 from app.gamedata.release import Release
 from app.gamedata.store import GameData
 

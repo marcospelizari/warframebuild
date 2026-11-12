@@ -5,7 +5,7 @@ import math
 
 from app.api.assumptions import WIKI, assumptions, source
 from app.api.errors import ApiFailure
-from app.api.schemas import (
+from app.api.schemas.build import (
     ArcaneRef,
     Arsenal,
     BonusElement,

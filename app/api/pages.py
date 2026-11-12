@@ -1,4 +1,4 @@
-"""HTML for weapon page URLs (PLAN G88): index.html with the page's title, description,
+"""HTML for page URLs (PLAN G88): index.html with the page's title, description,
 canonical URL and link-preview tags, so crawlers and chat previews see each gun without
 running JavaScript. An unknown gun or faction gets a real 404 (the app shows its own page)."""
 
@@ -118,21 +118,38 @@ def weapon_meta(
     )
 
 
+def _site(request: Request) -> str:
+    # Behind a proxy the request's own scheme/host can be wrong or forged: prefer the
+    # configured address; the request's is for local runs.
+    return request.app.state.public_origin or str(request.base_url).rstrip("/")
+
+
 def _page(request: Request, slug: str, faction: str | None) -> HTMLResponse:
     index: Path = request.app.state.web_dist / "index.html"
     page = index.read_text(encoding="utf-8")
     data: GameData = request.app.state.data
     gun = data.weapon_by_slug.get(slug)
     meta = weapon_meta(data, request.app.state.release, gun, faction) if gun else None
-    # Behind a proxy the request's own scheme/host can be wrong or forged: prefer the
-    # configured address; the request's is for local runs.
-    site = request.app.state.public_origin or str(request.base_url).rstrip("/")
+    site = _site(request)
     if meta is None:
         missing = Meta(f"Page not found | {SITE}", "No such gun or faction.", "/", noindex=True)
         return HTMLResponse(render(page, missing, site), status_code=404)
     noindex = "b" in request.query_params  # an edited build: index the plain page only
     meta = Meta(meta.title, meta.description, meta.path, meta.image, noindex)
     return HTMLResponse(render(page, meta, site))
+
+
+UPDATES = Meta(
+    f"Game updates | {SITE}",
+    "What each Warframe update and each calculator change did to the gun builds.",
+    "/updates",
+)
+
+
+@router.get("/updates", include_in_schema=False)
+def updates_page(request: Request) -> HTMLResponse:
+    index: Path = request.app.state.web_dist / "index.html"
+    return HTMLResponse(render(index.read_text(encoding="utf-8"), UPDATES, _site(request)))
 
 
 @router.get("/w/{slug}", include_in_schema=False)

@@ -4,7 +4,7 @@ from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
-from app.api.schemas import ApiError
+from app.api.schemas.base import ApiError
 
 MAX_BODY = 4096  # bytes; /calc requests are a few hundred
 

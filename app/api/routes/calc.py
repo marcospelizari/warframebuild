@@ -4,7 +4,8 @@ the app's runner (E6/E7), rate-limited per address."""
 from fastapi import APIRouter, Request, Response
 
 from app.api import jobs
-from app.api.schemas import ApiError, Build, CalcRequest
+from app.api.schemas.base import ApiError
+from app.api.schemas.build import Build, CalcRequest
 
 ERRORS: dict[int | str, dict[str, object]] = {
     404: {"model": ApiError},

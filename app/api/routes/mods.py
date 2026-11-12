@@ -6,7 +6,8 @@ from fastapi import APIRouter, Query, Request
 
 from app.api.build_response import weapon_ref
 from app.api.errors import ApiFailure
-from app.api.schemas import ApiError, ArcaneItem, ModItem, ModList, PerkItem, PerkTier
+from app.api.schemas.base import ApiError
+from app.api.schemas.lists import ArcaneItem, ModItem, ModList, PerkItem, PerkTier
 from app.gamedata.images import PictureKind, picture_name, picture_path
 from app.gamedata.models import Arcane, Mod
 from app.gamedata.store import GameData

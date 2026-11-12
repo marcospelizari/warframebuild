@@ -21,6 +21,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/data": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Data Info */
+        get: operations["data_info_api_data_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/health": {
         parameters: {
             query?: never;
@@ -47,6 +64,23 @@ export interface paths {
         };
         /** Mods */
         get: operations["mods_api_mods_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/updates": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Updates */
+        get: operations["updates_api_updates_get"];
         put?: never;
         post?: never;
         delete?: never;
@@ -197,6 +231,22 @@ export interface components {
             slots: components["schemas"]["Slot"][];
             weapon: components["schemas"]["WeaponRef"];
         };
+        /**
+         * BuildChange
+         * @description One build of a gun that changed: `build` is "recommended" or a faction name.
+         */
+        BuildChange: {
+            /** Added */
+            added: string[];
+            /** Build */
+            build: string;
+            /** Kill After */
+            kill_after: number | null;
+            /** Kill Before */
+            kill_before: number | null;
+            /** Removed */
+            removed: string[];
+        };
         /** BuildsResponse */
         BuildsResponse: {
             /** Dataset Hash */
@@ -243,6 +293,11 @@ export interface components {
          * @enum {string}
          */
         Category: "primary" | "secondary";
+        /**
+         * Change
+         * @enum {string}
+         */
+        Change: "new" | "changed" | "removed";
         /** Combat */
         Combat: {
             /** Cap S */
@@ -262,6 +317,16 @@ export interface components {
          * @enum {string}
          */
         DamageType: "impact" | "puncture" | "slash" | "heat" | "cold" | "electricity" | "toxin" | "blast" | "radiation" | "gas" | "magnetic" | "viral" | "corrosive" | "void" | "tau";
+        /**
+         * DataInfo
+         * @description Which game data the site shows (U4): every page's footer.
+         */
+        DataInfo: {
+            /** Checked */
+            checked: string;
+            /** Game Update */
+            game_update: string | null;
+        };
         /** Dps */
         Dps: {
             /** Direct Burst */
@@ -301,6 +366,23 @@ export interface components {
             /** Unique Name */
             unique_name: string;
         };
+        /** EntryChange */
+        EntryChange: {
+            /** After */
+            after: string[];
+            /** Before */
+            before: string[];
+            change: components["schemas"]["Change"];
+            /** Key */
+            key: string;
+            kind: components["schemas"]["Kind"];
+            /** Name */
+            name: string;
+            support_after: components["schemas"]["Support"] | null;
+            support_before: components["schemas"]["Support"] | null;
+            /** Unparsed */
+            unparsed: string[];
+        };
         /** ExcludedWeapon */
         ExcludedWeapon: {
             /** Name */
@@ -334,6 +416,18 @@ export interface components {
             /** Forma */
             forma: boolean;
             polarity: components["schemas"]["Polarity"] | null;
+        };
+        /** GunChange */
+        GunChange: {
+            /** Builds */
+            builds: components["schemas"]["BuildChange"][];
+            change: components["schemas"]["Change"];
+            /** Name */
+            name: string;
+            /** Slug */
+            slug: string;
+            /** Stats Changed */
+            stats_changed: boolean;
         };
         /** HTTPValidationError */
         HTTPValidationError: {
@@ -372,6 +466,11 @@ export interface components {
             /** Version */
             version: string;
         };
+        /**
+         * Kind
+         * @enum {string}
+         */
+        Kind: "weapon" | "mod" | "arcane" | "perk";
         /** ModItem */
         ModItem: {
             /** Compatible */
@@ -493,6 +592,34 @@ export interface components {
          * @enum {string}
          */
         Support: "full" | "partial" | "unsupported";
+        /** Update */
+        Update: {
+            /** Date */
+            date: string;
+            /** Entries */
+            entries: components["schemas"]["EntryChange"][];
+            /** Game Update */
+            game_update: string | null;
+            /** Guns */
+            guns: components["schemas"]["GunChange"][];
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "game" | "calculator";
+            /** Release */
+            release: string;
+            /** Summary */
+            summary: string[];
+            /** Unavailable */
+            unavailable: string[];
+        };
+        /** UpdatesResponse */
+        UpdatesResponse: {
+            data: components["schemas"]["DataInfo"];
+            /** Updates */
+            updates: components["schemas"]["Update"][];
+        };
         /** ValidationError */
         ValidationError: {
             /** Context */
@@ -635,6 +762,26 @@ export interface operations {
             };
         };
     };
+    data_info_api_data_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["DataInfo"];
+                };
+            };
+        };
+    };
     health_api_health_get: {
         parameters: {
             query?: never;
@@ -691,6 +838,26 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    updates_api_updates_get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["UpdatesResponse"];
                 };
             };
         };

@@ -2,9 +2,11 @@
 
 import json
 from dataclasses import dataclass
+from functools import cached_property
 from pathlib import Path
 
 from app.gamedata.builds import WeaponBuilds
+from app.gamedata.updates import Updates, read_updates
 
 POINTER = "current"
 
@@ -26,6 +28,11 @@ class Release:
     @property
     def gamedata(self) -> Path:
         return self.folder / "gamedata"
+
+    @cached_property
+    def updates(self) -> Updates:
+        """Read once: a release never changes."""
+        return read_updates(self.folder)
 
     def builds(self, slug: str) -> WeaponBuilds:
         """`slug` must be a known gun slug (it names a file)."""

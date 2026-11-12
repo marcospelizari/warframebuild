@@ -16,7 +16,7 @@ from starlette.types import Scope
 
 from app.api import errors, jobs, pages
 from app.api.rate_limit import RateLimit
-from app.api.routes import builds, calc, img, mods, weapons
+from app.api.routes import builds, calc, img, mods, updates, weapons
 from app.api.runner import Runner
 from app.gamedata.release import open_current
 from app.gamedata.store import GameData, load
@@ -115,6 +115,7 @@ def create_app(
     app.include_router(weapons.router)
     app.include_router(mods.router)
     app.include_router(img.router)
+    app.include_router(updates.router)
 
     @app.get("/api/health")
     def health() -> Health:
