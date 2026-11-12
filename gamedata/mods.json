@@ -39,6 +39,7 @@
    "name": "Fass Canticle",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Icons/ImmortalRunes/ImmortalRuneChaos.png!00_akX46EjXWvqiqPC7f1AaUA",
    "unique_name": "/Lotus/Upgrades/Grimoire/FassAuraMod"
   },
   {
@@ -80,6 +81,7 @@
    "name": "Jahu Canticle",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Icons/ImmortalRunes/ImmortalRuneForm.png!00_FcczEUDmqkyzGGICXwFBGw",
    "unique_name": "/Lotus/Upgrades/Grimoire/JahuAuraMod"
   },
   {
@@ -121,6 +123,7 @@
    "name": "Khra Canticle",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Icons/ImmortalRunes/ImmortalRuneTime.png!00_PnUDmRnxb6mkRAC4ioWwDQ",
    "unique_name": "/Lotus/Upgrades/Grimoire/KhraAuraMod"
   },
   {
@@ -162,6 +165,7 @@
    "name": "Lohk Canticle",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Icons/ImmortalRunes/ImmortalRuneVoid.png!00_4so7-TixBkZCxfR-6GUWVQ",
    "unique_name": "/Lotus/Upgrades/Grimoire/LohkAuraMod"
   },
   {
@@ -204,6 +208,7 @@
    "name": "Netra Invocation",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Icons/ImmortalRunes/ImmortalRuneDecay.png!00_E3bZJOezAOKyEd0LgKTf4Q",
    "unique_name": "/Lotus/Upgrades/Grimoire/NetraStrikeMod"
   },
   {
@@ -246,6 +251,7 @@
    "name": "Ris Invocation",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Icons/ImmortalRunes/ImmortalRuneLight.png!00_XHQjnIUpKCaM2iQHKG6CgQ",
    "unique_name": "/Lotus/Upgrades/Grimoire/RisStrikeMod"
   },
   {
@@ -288,6 +294,7 @@
    "name": "Vome Invocation",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Icons/ImmortalRunes/ImmortalRuneOrder.png!00_POMzovyVnRfeqcWkZWTyfQ",
    "unique_name": "/Lotus/Upgrades/Grimoire/VomeStrikeMod"
   },
   {
@@ -330,6 +337,7 @@
    "name": "Xata Invocation",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Icons/ImmortalRunes/ImmortalRuneTruth.png!00_J3EF1uRl7zEn+iLGgU7QIw",
    "unique_name": "/Lotus/Upgrades/Grimoire/XataStrikeMod"
   },
   {
@@ -378,6 +386,7 @@
    "name": "Unseen Dread",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveStalkerBowAugmentMod.jpg!00_xMEiPRUhBM21nX5LsjOS+Q",
    "unique_name": "/Lotus/Upgrades/Mods/Bows/Event/Nightwave/NightwaveStalkerBowAugmentMod"
   },
   {
@@ -448,6 +457,7 @@
    "name": "Amalgam Barrel Diffusion",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DualSource/TacticalDiffusion.jpg!00_iiiuBW0wz4KErAClyn2ugA",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Pistol/MultishotDodgeMod"
   },
   {
@@ -505,6 +515,7 @@
    "name": "Amalgam Argonak Metal Auger",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DualSource/AmalgamArgonak.jpg!00_5hm3aQt2DWyVHZUjp0asLA",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Rifle/ArgonakDaggerMod"
   },
   {
@@ -585,6 +596,7 @@
    "name": "Amalgam Daikyu Target Acquired",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DualSource/AmalgamDaikyu.jpg!00_hAuRTLJetOxSnsoZh8EPww",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Rifle/DaikyuKatanaMod"
   },
   {
@@ -658,6 +670,7 @@
    "name": "Amalgam Javlok Magazine Warp",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DualSource/AmalgamJavlok.jpg!00_8Il9u6N4-tGLU997wsUXGg",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Rifle/JavlokSwordShieldMod"
   },
   {
@@ -748,6 +761,7 @@
    "name": "Amalgam Serration",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DualSource/SerratedRush.jpg!00_VWLRrbGMamf6yPdSFAVT8Q",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Rifle/SerratedRushMod"
   },
   {
@@ -818,6 +832,7 @@
    "name": "Amalgam Shotgun Barrage",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DualSource/VampireShot.jpg!00_hX0ednw0kogUPRo50S5pRg",
    "unique_name": "/Lotus/Upgrades/Mods/DualSource/Shotgun/ShotgunMedicMod"
   },
   {
@@ -878,6 +893,7 @@
    "name": "Dizzying Rounds",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/BroncoNightwaveMod.jpg!00_gEEEnLrw2mLyxJVvkMV+hw",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/BroncoNightwaveMod"
   },
   {
@@ -948,6 +964,7 @@
    "name": "Photon Overcharge",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/GlaxionNightwaveMod.jpg!00_KCOzaEUjdHFa1Vh-7f1KYg",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/GlaxionNightwaveMod"
   },
   {
@@ -991,6 +1008,7 @@
    "name": "Deadly Maneuvers",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/MagnusNightwaveMod.jpg!00_tbquLldAHHMgQceoYgMSPw",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/MagnusNightwaveMod"
   },
   {
@@ -1039,6 +1057,7 @@
    "name": "Spontaneous Singularity",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveCephPrimaryAugmentMod.jpg!00_W09shkFd9n9xYDfq-6zVYw",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/NightwaveCephPrimaryAugmentMod"
   },
   {
@@ -1117,6 +1136,7 @@
    "name": "Leaded Gas",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveLasSilencedPistolAugmentMod.jpg!00_gc6lI-llM+AF2pPIANz1mg",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/NightwaveLasSilencedPistolAugmentMod"
   },
   {
@@ -1211,6 +1231,7 @@
    "name": "Biotic Rounds",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveTC2024AK47AugmentMod.jpg!00_pWWr-4ndqghbQPPIcfJhJQ",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/NightwaveTC2024AK47AugmentMod"
   },
   {
@@ -1258,6 +1279,7 @@
    "name": "Pain Points",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveTnJetTurbinePistolAugmentMod.jpg!00_hmLUQch5v7iJtOQ0Pksvvg",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/NightwaveTnJetTurbinePistolAugmentMod"
   },
   {
@@ -1306,6 +1328,7 @@
    "name": "Clip Delegation",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/SobekNightwaveMod.jpg!00_FHd736CJ-qo+04Aqh9SYvQ",
    "unique_name": "/Lotus/Upgrades/Mods/Nightwave/SobekNightwaveMod"
   },
   {
@@ -1390,6 +1413,7 @@
    "name": "Creeping Bullseye",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/CorruptedCritChanceFireRatePistolMod.jpg!00_Rt5TOetOckQTbjehbB7Vkw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedCritChanceFireRatePistol"
   },
   {
@@ -1474,6 +1498,7 @@
    "name": "Hollow Point",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/CorruptedCritDmgForDmgMod.jpg!00_p8edkV4+nm31-LCsZIXvVw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedCritDamagePistol"
   },
   {
@@ -1562,6 +1587,7 @@
    "name": "Magnum Force",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/CorruptedDmgForRecoilMod.jpg!00_lTf3GUAXgkisahMCjhplkw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedDamageRecoilPistol"
   },
   {
@@ -1646,6 +1672,7 @@
    "name": "Anemic Agility",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/CorruptedFireRateDamagePistolMod.jpg!00_0Xx+xkNUsM1kz-DI89IArQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedFireRateDamagePistol"
   },
   {
@@ -1730,6 +1757,7 @@
    "name": "Tainted Clip",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/CorruptedMaxClipForReloadMod.jpg!00_M+S3RrpSDLLWAhJsO1qdqw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedMaxClipReloadSpeedPistol"
   },
   {
@@ -1798,6 +1826,7 @@
    "name": "Merciless Gunfight",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/CriticalDamagePunchThroughMod.jpg!00_Rx5Fvzc2qvzqzDaiBrGIFw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/CriticalDamagePunchThroughMod"
   },
   {
@@ -1874,6 +1903,7 @@
    "name": "Jolt",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/ElectEventPistolMod.jpg!00_GNqA3Ec4TiF2me3w9Pg2nQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/ElectEventPistolMod"
   },
   {
@@ -1950,6 +1980,7 @@
    "name": "Scorch",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/DualStatFireProcPistol.jpg!00_AU7-nDk77erjaqMvStbfMg",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/FireEventPistolMod"
   },
   {
@@ -2034,6 +2065,7 @@
    "name": "Lethal Torrent",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/Grinder.jpg!00_dGz2F6jBGuNoiU4fvl-SRg",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/GrinderMod"
   },
   {
@@ -2110,6 +2142,7 @@
    "name": "Frostbite",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/IceEventPistolMod.jpg!00_yOI6P-Fwolzvp2xHLu5pbg",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/IceEventPistolMod"
   },
   {
@@ -2186,6 +2219,7 @@
    "name": "Ice Storm",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/PistolIceStormMod.jpg!00_2VRwHNHrUJ5Zwj+qaUCRhQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/IceStormMod"
   },
   {
@@ -2262,6 +2296,7 @@
    "name": "Magnetic Might",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/MagneticCritDamagePistolMod.jpg!00_Ft014lO94tfd5ZxOe5AY7g",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/MagneticCritDamagePistolMod"
   },
   {
@@ -2338,6 +2373,7 @@
    "name": "Pistol Pestilence",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PoisonEventPistolMod.jpg!00_pBp98XocpB69xkDNngDDPQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/PoisonEventPistolMod"
   },
   {
@@ -2414,6 +2450,7 @@
    "name": "Accelerated Isotope",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/RadiationFireratePistolMod.jpg!00_HH7s69vLeFumwNg878fxvA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/RadiationFireratePistolMod"
   },
   {
@@ -2490,6 +2527,7 @@
    "name": "Stunning Speed",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/PistolStunningSpeed.jpg!00_eQn78V1gPfQMDi7Sw0z1lQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/DualStat/StunningSpeedMod"
   },
   {
@@ -2537,6 +2575,7 @@
    "name": "Targeting Subsystem",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/AccuracyWhileAiming.jpg!00_sx8nQKzlx7oSVOjLGRf3Vw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/AccuracyWhileAimingPistolMod"
   },
   {
@@ -2599,6 +2638,7 @@
    "name": "Damzav-Vati",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/AkbroncoPrimeViralMod.jpg!00_4A3KTADtjE9L-cjvp5f-PA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/AkbroncoViralDamageMod"
   },
   {
@@ -2646,6 +2686,7 @@
    "name": "Zazvat-Kar",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/AkstilettoPrimeAmmoEfficiencyMod.jpg!00_Qu3zMTCzPgSbEu-KoC85VA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/AkstilettoEfficiencyWhileAirborneMod"
   },
   {
@@ -2706,6 +2747,7 @@
    "name": "Primed Fulmination",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/SecondaryFirestormMod.jpg!00_9R+fHl84KvfXL-RQIhLvow",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/AmbulasEvent/Expert/SecondaryExplosionRadiusModExpert"
   },
   {
@@ -2745,6 +2787,7 @@
    "name": "Fulmination",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/SecondaryFirestormMod.jpg!00_9R+fHl84KvfXL-RQIhLvow",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/AmbulasEvent/SecondaryExplosionRadiusMod"
   },
   {
@@ -2809,6 +2852,7 @@
    "name": "Hydraulic Crosshairs",
    "polarity": "madurai",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/CritChanceWhileAiming.jpg!00_uZDWXhEs7e0wt8+-IkRtpA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/CritChanceWhileAimingPistolMod"
   },
   {
@@ -2904,6 +2948,7 @@
    "name": "Galvanized Crosshairs",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/Galvanized/CritChanceWhileAimingPistolSPMod.jpg!00_va+CuSX97xGgi1ywP5snBA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/CritChanceWhileAimingPistolSPMod"
   },
   {
@@ -2968,6 +3013,7 @@
    "name": "Sharpened Bullets",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/CritDamageWhileAiming.jpg!00_527IP-9smE8izKKbxpw9UQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/CritDamageWhileAimingPistolMod"
   },
   {
@@ -3032,6 +3078,7 @@
    "name": "Pressurized Magazine",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/FireRateWhileAiming.jpg!00_9vcdNqA7qTBHKdNmiqAAqw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/FireRateWhileAimingPistolMod"
   },
   {
@@ -3080,6 +3127,7 @@
    "name": "Critical Mutation",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveCatabolystAugmentMod.jpg!00_Qn8uY6xTHYyq0sGms5KO8Q",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/Nightwave/NightwaveCatabolystAugmentMod"
   },
   {
@@ -3127,6 +3175,7 @@
    "name": "Prototype Shock Coils",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveLasGooPistolAugmentMod.jpg!00_WpGQcHP5pbDKQ9azNUeA+A",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/Nightwave/NightwaveLasGooPistolAugmentMod"
   },
   {
@@ -3175,6 +3224,7 @@
    "name": "Sentient Surge",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveOcucorAugmentMod.jpg!00_ej51QKD+oO-jB0zmgg9-rg",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/Nightwave/NightwaveOcucorAugmentMod"
   },
   {
@@ -3223,6 +3273,7 @@
    "name": "Velox Conclusion",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveVeloxAugmentMod.jpg!00_ZVDBsExBHap-8AHKGUKRnQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/Nightwave/NightwaveVeloxAugmentMod"
   },
   {
@@ -3287,6 +3338,7 @@
    "name": "Energizing Shot",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/ShootPickupPistolMod.jpg!00_BlrgMaBaItTy1Wq1vIxspg",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/ShootPickUpPistolMod"
   },
   {
@@ -3351,6 +3403,7 @@
    "name": "Embedded Catalyzer",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/StatusChanceWhileAiming.jpg!00_QyBKKUJLNmloLHhb1Mrw3Q",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Event/StatusProcWhileAimingPistolMod"
   },
   {
@@ -3428,6 +3481,7 @@
    "name": "Primed Target Cracker",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolCritDamageMod.jpg!00_Rjv7Ett43OzsPrXhydNKjQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/PrimedWeaponCritDamageMod"
   },
   {
@@ -3505,6 +3559,7 @@
    "name": "Primed Convulsion",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolElectricityDamageMod.jpg!00_lH0f31DlJp1SHruVs2VX9g",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/PrimedWeaponElectricityDamageMod"
   },
   {
@@ -3582,6 +3637,7 @@
    "name": "Primed Slip Magazine",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolClipMax.jpg!00_PMVJQ2lJFq8eMrSflVNICg",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponClipMaxModExpert"
   },
   {
@@ -3659,6 +3715,7 @@
    "name": "Primed Pistol Gambit",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolCritChanceMod.jpg!00_BqSeR3FBV3B2VonFfJ4XJg",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponCritChanceModBeginnerExpert"
   },
   {
@@ -3736,6 +3793,7 @@
    "name": "Primed Heated Charge",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolFireDamageMod.jpg!00_UEzpWAUQY8fGWmN5e5-t+A",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponFireDamageModExpert"
   },
   {
@@ -3796,6 +3854,7 @@
    "name": "Primed Pistol Ammo Mutation",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolAmmoMutatorMod.jpg!00_EkmdJv2tABhaDM9b5jfKuQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolConvertAmmoModExpert"
   },
   {
@@ -3873,6 +3932,7 @@
    "name": "Primed Expel Corpus",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageCorpus.jpg!00_i-2jbHiOERfLN93OAOEkqQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageCorpusExpert"
   },
   {
@@ -3950,6 +4010,7 @@
    "name": "Primed Expel Orokin",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageCorrupted.jpg!00_axqUj2GxZfmt0SyQ3KRXSA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageCorruptedExpert"
   },
   {
@@ -4027,6 +4088,7 @@
    "name": "Primed Expel Grineer",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageGrineer.jpg!00_XA5ue8t8UGYH3jMWSV7r0Q",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageGrineerExpert"
   },
   {
@@ -4104,6 +4166,7 @@
    "name": "Primed Expel Infested",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageInfested.jpg!00_xhj10nxfXPARY-DW2bhqHA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageInfestedExpert"
   },
   {
@@ -4181,6 +4244,7 @@
    "name": "Primed Expel The Murmur",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/WeaponPistolFactionDamageMurmurs.jpg!00_q5E+dHF5vFM-kbIVWXRz6A",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageMurmursExpert"
   },
   {
@@ -4241,6 +4305,7 @@
    "name": "Primed Steady Hands",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolRecoilReductionMod.jpg!00_9y8xrkJ0TKikAlGwl5YH3A",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponRecoilReductionModExpert"
   },
   {
@@ -4318,6 +4383,7 @@
    "name": "Primed Quickdraw",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolReloadSpeedMod.jpg!00_nNZPsYXzs9Vyvgz8ArK5TA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/Expert/WeaponReloadSpeedModExpert"
   },
   {
@@ -4404,6 +4470,7 @@
    "name": "Semi-Pistol Cannonade",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolSemiAutoFantasyMod.jpg!00_QkD9ArpiCpAwRkHJOJXjmA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/PistolSemiAutoFantasyMod"
   },
   {
@@ -4488,6 +4555,7 @@
    "name": "Pistol Elementalist",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/PistolStatusDamageDuoMod.jpg!00_O5YwotB7VtuNQkT7ILSIHQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/PistolStatusDamageDuoMod"
   },
   {
@@ -4533,6 +4601,7 @@
    "name": "Cannonade",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RambowMod.jpg!00_4+lA9KkjREfm0hksj-vtyw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/ProjectileExplosionChanceMod"
   },
   {
@@ -4576,6 +4645,7 @@
    "name": "Concealed Explosives",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/ThrowingExplosionChanceMod.jpg!00_mjUu8estkoX5CwwTqZUuuA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/ThrowingExplosionChanceMod"
   },
   {
@@ -4621,6 +4691,7 @@
    "name": "Trick Mag",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolAmmoMaxMod.jpg!00_NYBjsp0zZegKAJOSRSJv9Q",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponAmmoMaxMod"
   },
   {
@@ -4683,6 +4754,7 @@
    "name": "No Return",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolArmorPiercingDamageMod.jpg!00_pdJYYWnaJDMYigYWSi4z+w",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponArmorPiercingDamageMod"
   },
   {
@@ -4724,6 +4796,7 @@
    "name": "Ruinous Extension",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/WeaponBeamDistancePistolMod.jpg!00_0ypfzjkraelheG9AWSK3YA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponBeamDistanceMod"
   },
   {
@@ -4789,6 +4862,7 @@
    "name": "Hemorrhage",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/WeaponBleedOnImpactPistolMod.jpg!00_pamc9M6JCEcldgYOb+wfbg",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponBleedOnImpactPistolMod"
   },
   {
@@ -4851,6 +4925,7 @@
    "name": "Slip Magazine",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolClipMax.jpg!00_PMVJQ2lJFq8eMrSflVNICg",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponClipMaxMod"
   },
   {
@@ -4913,6 +4988,7 @@
    "name": "Pistol Gambit",
    "polarity": "madurai",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolCritChanceMod.jpg!00_BqSeR3FBV3B2VonFfJ4XJg",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponCritChanceMod"
   },
   {
@@ -4975,6 +5051,7 @@
    "name": "Target Cracker",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolCritDamageMod.jpg!00_Rjv7Ett43OzsPrXhydNKjQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponCritDamageMod"
   },
   {
@@ -5052,6 +5129,7 @@
    "name": "Hornet Strike",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageAmountMod.jpg!00_OTuh4SstLyjT8E33T4ZEBQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponDamageAmountMod"
   },
   {
@@ -5114,6 +5192,7 @@
    "name": "Convulsion",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolElectricityDamageMod.jpg!00_lH0f31DlJp1SHruVs2VX9g",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponElectricityDamageMod"
   },
   {
@@ -5176,6 +5255,7 @@
    "name": "Pummel",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/EventImpactDamagePistolMod.jpg!00_PJP42Ws6Xcam1OiJKGNFeQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponEventPistolImpactDamageMod"
   },
   {
@@ -5238,6 +5318,7 @@
    "name": "Bore",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/EventPunctureDamageModPistol.jpg!00_hu8KtiIwwIg0DuXcwVM2uA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponEventPunctureDamageMod"
   },
   {
@@ -5300,6 +5381,7 @@
    "name": "Maim",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/EventSlashDamagePistolMod.jpg!00_zXW5-8lfxlJnOate8ibi7w",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponEventSlashDamageMod"
   },
   {
@@ -5362,6 +5444,7 @@
    "name": "Heated Charge",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolFireDamageMod.jpg!00_UEzpWAUQY8fGWmN5e5-t+A",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponFireDamageMod"
   },
   {
@@ -5424,6 +5507,7 @@
    "name": "Barrel Diffusion",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolFireIterationsMod.jpg!00_gejz+4B3jCQRP4s6DHunAw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponFireIterationsMod"
   },
   {
@@ -5528,6 +5612,7 @@
    "name": "Galvanized Diffusion",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/Galvanized/WeaponFireIterationsSPMod.jpg!00_ch5S-ecZzyn1Tr-O2jTO-A",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponFireIterationsSPMod"
   },
   {
@@ -5590,6 +5675,7 @@
    "name": "Gunslinger",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolFireRateMod.jpg!00_xIg+fE-X06TGrUtJiPkyJw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponFireRateMod"
   },
   {
@@ -5652,6 +5738,7 @@
    "name": "Deep Freeze",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolFreezeDamageMod.jpg!00_AJUjD+h64pR78fkzs2KSEA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponFreezeDamageMod"
   },
   {
@@ -5714,6 +5801,7 @@
    "name": "Concussion Rounds",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/ImpactDamagePistolMod.jpg!00_TydavNM8+YkxdBn3XKMqKg",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponImpactDamageMod"
   },
   {
@@ -5753,6 +5841,7 @@
    "name": "Suppress",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolSilencerMod.jpg!00_aUG+Vf9hja3fTzZzzN-6Zw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponNoiseReductionMod"
   },
   {
@@ -5798,6 +5887,7 @@
    "name": "Pistol Ammo Mutation",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolAmmoMutatorMod.jpg!00_EkmdJv2tABhaDM9b5jfKuQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolConvertAmmoMod"
   },
   {
@@ -5860,6 +5950,7 @@
    "name": "Expel Corpus",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageCorpus.jpg!00_i-2jbHiOERfLN93OAOEkqQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolFactionDamageCorpus"
   },
   {
@@ -5922,6 +6013,7 @@
    "name": "Expel Orokin",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageCorrupted.jpg!00_axqUj2GxZfmt0SyQ3KRXSA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolFactionDamageCorrupted"
   },
   {
@@ -5984,6 +6076,7 @@
    "name": "Expel Grineer",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageGrineer.jpg!00_XA5ue8t8UGYH3jMWSV7r0Q",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolFactionDamageGrineer"
   },
   {
@@ -6046,6 +6139,7 @@
    "name": "Expel Infested",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolDamageInfested.jpg!00_xhj10nxfXPARY-DW2bhqHA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolFactionDamageInfested"
   },
   {
@@ -6108,6 +6202,7 @@
    "name": "Expel The Murmur",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/WeaponPistolFactionDamageMurmurs.jpg!00_q5E+dHF5vFM-kbIVWXRz6A",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolFactionDamageMurmurs"
   },
   {
@@ -6147,6 +6242,7 @@
    "name": "Hawk Eye",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolZoomMod.jpg!00_tArK0HIHbD7c+iNNJTYu6w",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPistolZoomFovMod"
   },
   {
@@ -6209,6 +6305,7 @@
    "name": "Perpetual Agony",
    "polarity": "madurai",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/WeaponProcTimePistolMod.jpg!00_Uj21SBtkQSTc2nEIUgOr7Q",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponProcTimeMod"
   },
   {
@@ -6248,6 +6345,7 @@
    "name": "Lethal Momentum",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/WeaponProjectileSpeedPistolMod.jpg!00_5mzJW4Y-dVFuFqVMahbUqA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponProjectileSpeedMod"
   },
   {
@@ -6293,6 +6391,7 @@
    "name": "Seeker",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolPunctureDepthMod.jpg!00_VE+gr5E8aRknEjeuQvZ+Ag",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponPunctureDepthMod"
   },
   {
@@ -6332,6 +6431,7 @@
    "name": "Steady Hands",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolRecoilReductionMod.jpg!00_9y8xrkJ0TKikAlGwl5YH3A",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponRecoilReductionMod"
   },
   {
@@ -6394,6 +6494,7 @@
    "name": "Quickdraw",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PistolReloadSpeedMod.jpg!00_nNZPsYXzs9Vyvgz8ArK5TA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponReloadSpeedMod"
   },
   {
@@ -6456,6 +6557,7 @@
    "name": "Razor Shot",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/BleedDamagePistolMod.jpg!00_rlMQFyQsK+4EyW21gTGEfA",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponSlashDamageMod"
   },
   {
@@ -6560,6 +6662,7 @@
    "name": "Galvanized Shot",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/Galvanized/WeaponStatusChanceSPMod.jpg!00_pbRUMiExbXRZM0RQDfHa0w",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponStatusChanceSPMod"
   },
   {
@@ -6622,6 +6725,7 @@
    "name": "Sure Shot",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/StatusChancePistolMod.jpg!00_IPKBK8wrV1CrjxGs1ajL4g",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponStunChanceMod"
   },
   {
@@ -6684,6 +6788,7 @@
    "name": "Pathogen Rounds",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/PoisonDamagePistolMod.jpg!00_KtAvSH4d-yB-tysjrso5gw",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponToxinDamageMod"
   },
   {
@@ -6804,6 +6909,7 @@
    "name": "Pistol Acuity",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/WeaponWeakpointCriticalChanceMod.jpg!00_VLKbsGCWl31vstqrtpxsuQ",
    "unique_name": "/Lotus/Upgrades/Mods/Pistol/WeaponWeakpointCriticalChanceMod"
   },
   {
@@ -6848,6 +6954,7 @@
    "name": "Double Tap",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/PvP/Rifle/LatronThree.jpg!00_5--t81+-x0AR5KcHQbEdTw",
    "unique_name": "/Lotus/Upgrades/Mods/PvPMods/Rifle/MoreDamageonTripleTapRifleMod"
   },
   {
@@ -6891,6 +6998,7 @@
    "name": "Thunderbolt",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RambowMod.jpg!00_4+lA9KkjREfm0hksj-vtyw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/BowExplosionChanceMod"
   },
   {
@@ -6962,6 +7070,7 @@
    "name": "Split Flights",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/BowMultiShotOnHitMod.jpg!00_0xsPvCRIz4XIPNcYLZNT6Q",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/BowMultiShotOnHitMod"
   },
   {
@@ -7048,6 +7157,7 @@
    "name": "Critical Delay",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/CorruptedCriticalRateForFireRateMod.jpg!00_5H0C57DQilPdpFUxK9p7Yg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedCritRateFireRateRifle"
   },
   {
@@ -7136,6 +7246,7 @@
    "name": "Heavy Caliber",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/CorruptedDmgForRecoilRifleMod.jpg!00_SxVwHd70HgBRSGJBvVzAKA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedDamageRecoilRifle"
   },
   {
@@ -7222,6 +7333,7 @@
    "name": "Vile Acceleration",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/CorruptedFireRateDamageRifleMod.jpg!00_sCHiwjzprjUegVPlbjoBnQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedFireRateDamageRifle"
   },
   {
@@ -7326,6 +7438,7 @@
    "name": "Tainted Mag",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/CorruptedMaxClipForReloadSpeedMod.jpg!00_X-mXB925VEbb1qtBsun6WQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedMaxClipReloadSpeedRifle"
   },
   {
@@ -7396,6 +7509,7 @@
    "name": "Vile Precision",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/CorruptedRecoilForFireRateMod.jpg!00_1aID35GQdRgM1JNZNYj7cw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedRecoilFireRateRifle"
   },
   {
@@ -7480,6 +7594,7 @@
    "name": "Depleted Reload",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/CorruptedReloadSpeedMaxClipRifleMod.jpg!00_xUXQU0DVZAmEIphVqJObMw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/CorruptedReloadSpeedMaxClipRifle"
   },
   {
@@ -7556,6 +7671,7 @@
    "name": "High Voltage",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/ElectEventRifleMod.jpg!00_qW7isd9OZegVxSCzC5vC-w",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/ElectEventRifleMod"
   },
   {
@@ -7632,6 +7748,7 @@
    "name": "Thermite Rounds",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/DualStatFireProcRifle.jpg!00_go6O7SdALrx7nyduiaZnSg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/FireEventRifleMod"
   },
   {
@@ -7708,6 +7825,7 @@
    "name": "Hammer Shot",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/RifleHammerSHotMod.jpg!00_VKLay5k9E5v5ytIlm7vS2Q",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/HammerShotMod"
   },
   {
@@ -7784,6 +7902,7 @@
    "name": "Rime Rounds",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/IceEventRifleMod.jpg!00_yRg6FveNef0bOIRGaj4NPQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/IceEventRifleMod"
   },
   {
@@ -7860,6 +7979,7 @@
    "name": "Magnetic Capacity",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/MagneticClipRifleMod.jpg!00_0tJnFSeJx4n8Exe-yIyVIg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/MagneticClipRifleMod"
   },
   {
@@ -7936,6 +8056,7 @@
    "name": "Malignant Force",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/PoisonEventRifleMod.jpg!00_AZOGRvy+gU5i9viK2R9sUw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/PoisonEventRifleMod"
   },
   {
@@ -8026,6 +8147,7 @@
    "name": "Primed Shred",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/Shred.jpg!00_zVLR1cFGyOTmAhQ+K-OAmQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/PrimedShredMod"
   },
   {
@@ -8102,6 +8224,7 @@
    "name": "Radiated Reload",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/RadiationReloadRifleMod.jpg!00_hE5cT0FuNSmI7ORRZ4blCw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/RadiationReloadRifleMod"
   },
   {
@@ -8172,6 +8295,7 @@
    "name": "Shred",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/Shred.jpg!00_zVLR1cFGyOTmAhQ+K-OAmQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/ShredMod"
   },
   {
@@ -8248,6 +8372,7 @@
    "name": "Wildfire",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/RifleWildfireMod.jpg!00_eW1S8p2xFTOANkHjZvbmQw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/DualStat/WildfireMod"
   },
   {
@@ -8308,6 +8433,7 @@
    "name": "Sharpshooter",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/EnergyOnHeadshotRifle.jpg!00_9gqVvBJyK-TVbNYjUMJ7-g",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/EnergyOnHeadshotRifle"
   },
   {
@@ -8355,6 +8481,7 @@
    "name": "Guided Ordnance",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/AccuracyWhileAiming.jpg!00_xLbmWMEuoSE0Oo4gdPnSjw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/AccuracyWhileAimingRifleMod"
   },
   {
@@ -8405,6 +8532,7 @@
    "name": "Wild Frenzy",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/GrnAssaultRifleArbitrationMod.jpg!00_TOlqTO+DEmBRW6GN3Rh33g",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/GrnAssaultRifleArbitrationMod"
   },
   {
@@ -8448,6 +8576,7 @@
    "name": "Precision Strike",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/GrnGrenadeLauncherArbitrationMod.jpg!00_waRHfYCJnPEAS+-4KJ+aeg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/GrnGrenadeLauncherArbitrationMod"
   },
   {
@@ -8497,6 +8626,7 @@
    "name": "Exposing Harpoon",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/GrnHarpoonGunArbitrationMod.jpg!00_RhnTu0x6qZjGKCWB0pY2ag",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/GrnHarpoonGunArbitrationMod"
   },
   {
@@ -8569,6 +8699,7 @@
    "name": "Meticulous Aim",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/GrnSniperRifleArbitrationMod.jpg!00_heSUzqk7dFmjbxI+5y8kww",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/GrnSniperRifleArbitrationMod"
   },
   {
@@ -8619,6 +8750,7 @@
    "name": "Bursting Mass",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/InfCrpShockSwarmRifleArbitrationMod.jpg!00_wT7rabvm+opE8+rhJJw9VQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/InfCrpShockSwarmRifleArbitrationMod"
   },
   {
@@ -8668,6 +8800,7 @@
    "name": "Aerial Ace",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/JumpRefreshOnKillRifleMod.jpg!00_IwqYUPMyvo9lOKwo4euRuA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/JumpRefreshOnKillRifleMod"
   },
   {
@@ -8733,6 +8866,7 @@
    "name": "Mending Shot",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/ShootPickupRifleMod.jpg!00_gyZae6gXpin-Mq5vAyu6AA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Arbitration/ShootPickUpRifleMod"
   },
   {
@@ -8782,6 +8916,7 @@
    "name": "Flux Overdrive",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/FluxRifleCorpusArenaMod.jpg!00_RyiqQkxiT6VnNoOOQzZhZQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CorpusArena/FluxRifleCorpusArenaMod"
   },
   {
@@ -8831,6 +8966,7 @@
    "name": "Tether Grenades",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/PentaCorpusArenaMod.jpg!00_HQGn-7-TjcyRi+uaoRmS4A",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CorpusArena/PentaCorpusArenaMod"
   },
   {
@@ -8874,6 +9010,7 @@
    "name": "Thermagnetic Shells",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Pistol/CorpusArenaDetronMod.jpg!00_-ps2LzmIef8F0cjAK6hJIg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CorpusArena/SupraCorpusArenaMod"
   },
   {
@@ -8923,6 +9060,7 @@
    "name": "Kinetic Ricochet",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/TetraCorpusArenaMod.jpg!00_7y9MtO3MOa9SL0koPvQGeg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CorpusArena/TetraCorpusArenaMod"
   },
   {
@@ -8985,6 +9123,7 @@
    "name": "Argon Scope",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/CritChanceWhileAiming.jpg!00_CNFkcJr0EjsPVdjufbB7EA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CritChanceWhileAimingRifleMod"
   },
   {
@@ -9078,6 +9217,7 @@
    "name": "Galvanized Scope",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/Galvanized/CritChanceWhileAimingRifleSPMod.jpg!00_OpDK+FSgIVUQLBJS9swyrA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CritChanceWhileAimingRifleSPMod"
   },
   {
@@ -9140,6 +9280,7 @@
    "name": "Bladed Rounds",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/CritDamageWhileAiming.jpg!00_XM-U0sbwICKRFxdUv9b12A",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/CritDamageWhileAimingRifleMod"
   },
   {
@@ -9204,6 +9345,7 @@
    "name": "Spring-Loaded Chamber",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/FireRateWhileAiming.jpg!00_s-rFHcYnSuCXjUhQswI4VA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/FireRateWhileAimingRifleMod"
   },
   {
@@ -9253,6 +9395,7 @@
    "name": "Range Advantage",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveAkjagaraAugmentMod.jpg!00_AbyONcBny6UrC6ii+aa4wQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveAkjagaraAugmentMod"
   },
   {
@@ -9301,6 +9444,7 @@
    "name": "Dreadful Killshot",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveBasmuAugmentMod.jpg!00_w4ZMIvS-3NTzxSjo7ukSMA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveBasmuAugmentMod"
   },
   {
@@ -9349,6 +9493,7 @@
    "name": "Sentient Barrage",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveBattacorAugmentMod.jpg!00_DvKFPihG39rEKOFKvlwPBg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveBattacorAugmentMod"
   },
   {
@@ -9397,6 +9542,7 @@
    "name": "Vile Discharge",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveEmbolistAugmentMod.jpg!00_8F2TegMBFZvUa6WWD1JKWw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveEmbolistAugmentMod"
   },
   {
@@ -9473,6 +9619,7 @@
    "name": "Metamorphic Magazine",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveGorgonAugmentMod.jpg!00_6XjDi1PfHcGA3fQvgxQO1Q",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveGorgonAugmentMod"
   },
   {
@@ -9521,6 +9668,7 @@
    "name": "Necrophagic Vigor",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveHemaAugmentMod.jpg!00_kiZ1RGuL+d3V+4W4py8TzA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveHemaAugmentMod"
   },
   {
@@ -9569,6 +9717,7 @@
    "name": "Overpressured Rounds",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveLasGooAKAugmentMod.jpg!00_RAYa8bk1+cpHel94KKV4wQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveLasGooAKAugmentMod"
   },
   {
@@ -9617,6 +9766,7 @@
    "name": "Volatile Variant",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveSporothrixAugmentMod.jpg!00_pTuqihIZxRgdSCBmOEb3Cg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveSporothrixAugmentMod"
   },
   {
@@ -9665,6 +9815,7 @@
    "name": "Critical Precision",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveTiberonAugmentMod.jpg!00_+H3F-7EdkbNPezd2A4lD2w",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveTiberonAugmentMod"
   },
   {
@@ -9714,6 +9865,7 @@
    "name": "Combat Reload",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveTigrisAugmentMod.jpg!00_N05nhY+qqWwuRZJSzdUZyg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveTigrisAugmentMod"
   },
   {
@@ -9761,6 +9913,7 @@
    "name": "Eximus Advantage",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Nightwave/NightwaveZylokAugmentMod.jpg!00_fmqfdiPNdu9r+mdHisNTwg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/Nightwave/NightwaveZylokAugmentMod"
   },
   {
@@ -9831,6 +9984,7 @@
    "name": "Bhisaj-Bal",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/ParisPrimeStatusHealMod.jpg!00_gRJ3n9ogyq5HcU0N56SFtw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/ParisHealOnStatusMod"
   },
   {
@@ -9880,6 +10034,7 @@
    "name": "Nightwatch Napalm",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/OgrisNightwatchMod.jpg!00_sY5KDT4EfOKKWDAoTrl0xA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/ProjectNightwatch/OgrisNightwatchMod"
   },
   {
@@ -9925,6 +10080,7 @@
    "name": "Harkonar Scope",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/VulkarNightwatchMod.jpg!00_9yQDJTjazRidDHCzDBIABA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/ProjectNightwatch/VulkarNightwatchMod"
   },
   {
@@ -9973,6 +10129,7 @@
    "name": "Hata-Satya",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/SomaPrimeCritChanceMod.jpg!00_p3zurDJ++L1sXItreeg8JA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/SomaCritChanceOnHitMod"
   },
   {
@@ -10035,6 +10192,7 @@
    "name": "Catalyzer Link",
    "polarity": "madurai",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/StatusChanceWhileAiming.jpg!00_8FwwvJyjsUaBTqM9BfARUw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Event/StatusProcWhileAimingRifleMod"
   },
   {
@@ -10091,6 +10249,7 @@
    "name": "Primed Chamber",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleChargedChamberMod.jpg!00_rFZc-JEClkneAva7kBmpRQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/EventSniperReloadDamageMod"
   },
   {
@@ -10168,6 +10327,7 @@
    "name": "Primed Bane of Corpus",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageCorpus.jpg!00_T3tUYvRmabWTOdn3Z5W+nQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/PrimedWeaponFactionDamageCorpus"
   },
   {
@@ -10245,6 +10405,7 @@
    "name": "Primed Bane of Orokin",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageCorrupted.jpg!00_MukElBcxJsOhn67EmKZQRA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/PrimedWeaponFactionDamageCorrupted"
   },
   {
@@ -10322,6 +10483,7 @@
    "name": "Primed Bane of Grineer",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageGrineer.jpg!00_t82vNcbjse8Xe6GnQ6185Q",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/PrimedWeaponFactionDamageGrineer"
   },
   {
@@ -10399,6 +10561,7 @@
    "name": "Primed Bane of Infested",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageInfested.jpg!00_ul9oVFWaqX+MAC9Y+PcEyA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/PrimedWeaponFactionDamageInfested"
   },
   {
@@ -10476,6 +10639,7 @@
    "name": "Primed Bane of The Murmur",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/WeaponFactionDamageMurmurs.jpg!00_NpeJWOsJhW+O1E7d+hrnVg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/PrimedWeaponFactionDamageMurmurs"
   },
   {
@@ -10553,6 +10717,7 @@
    "name": "Primed Charged Chamber",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleChargedChamberMod.jpg!00_rFZc-JEClkneAva7kBmpRQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/SniperReloadDamageModExpert"
   },
   {
@@ -10630,6 +10795,7 @@
    "name": "Primed Magazine Warp",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleClipMaxMod.jpg!00_UmqpjC7lvnT3-xjVT3jyUg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponClipMaxModExpert"
   },
   {
@@ -10707,6 +10873,7 @@
    "name": "Primed Cryo Rounds",
    "polarity": "vazarin",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleFreezeDamageMod.jpg!00_nrOgIU-JHIZJlJL79Ny-kA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponFreezeDamageModExpert"
   },
   {
@@ -10767,6 +10934,7 @@
    "name": "Primed Firestorm",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/FirestormMod.jpg!00_9Y9UmRe+sZwevEPYar1Rtg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponIncreaseRadialExplosionModExpert"
   },
   {
@@ -10827,6 +10995,7 @@
    "name": "Primed Stabilizer",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleRecoilReductionMod.jpg!00_AWDbR3-DlZ0cnYvFNTG-CQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponRecoilReductionModExpert"
   },
   {
@@ -10904,6 +11073,7 @@
    "name": "Primed Fast Hands",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleReloadSpeedMod.jpg!00_63rPWkfzPDDI0wILKEaqgA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponReloadSpeedModExpert"
   },
   {
@@ -10966,6 +11136,7 @@
    "name": "Primed Rifle Ammo Mutation",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleAmmoMutatorMod.jpg!00_WC+Es4JfVgNh4km723+hzA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponRifleConvertAmmoModExpert"
   },
   {
@@ -11029,6 +11200,7 @@
    "name": "Primed Sniper Ammo Mutation",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/SniperAmmoMutatorMod.jpg!00_UCmfUwfYq+4iwDEZ4LS12w",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/Expert/WeaponSnipersConvertAmmoModExpert"
   },
   {
@@ -11079,6 +11251,7 @@
    "name": "Napalm Grenades",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/GrenadeLauncherProjectileMod.jpg!00_GGILOHE3nOMDakYet-jYug",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/GrenadeLauncherProjectileMod"
   },
   {
@@ -11167,6 +11340,7 @@
    "name": "Semi-Rifle Cannonade",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleSemiAutoFantasyMod.jpg!00_WUiU6u9P-tu1zSJGl92hiQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/RifleSemiAutoFantasyMod"
   },
   {
@@ -11235,6 +11409,7 @@
    "name": "Rifle Elementalist",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/RifleStatusDamageDuoMod.jpg!00_eClBwaaSpPGRS89UzP7UCQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/RifleStatusDamageDuoMod"
   },
   {
@@ -11297,6 +11472,7 @@
    "name": "Target Acquired",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/SniperHeadshotMultiplierMod.jpg!00_bwIod83EY5DDIB8xA31Cdw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/SniperHeadshotMultiplierMod"
   },
   {
@@ -11353,6 +11529,7 @@
    "name": "Charged Chamber",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleChargedChamberMod.jpg!00_rFZc-JEClkneAva7kBmpRQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/SniperReloadDamageMod"
   },
   {
@@ -11398,6 +11575,7 @@
    "name": "Ammo Drum",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleAmmoMaxMod.jpg!00_J9tK+1vZ48vD+lw4KVLo0g",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponAmmoMaxMod"
   },
   {
@@ -11460,6 +11638,7 @@
    "name": "Piercing Hit",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleArmorPiercingMod.jpg!00_D9Tq5bcePMAxc3rrB+DNzw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponArmorPiercingDamageMod"
   },
   {
@@ -11501,6 +11680,7 @@
    "name": "Sinister Reach",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/WeaponBeamDistanceRifleMod.jpg!00_jOiDxGoPP97WmeeSgKD9hQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponBeamDistanceMod"
   },
   {
@@ -11550,6 +11730,7 @@
    "name": "Combustion Beam",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/WeaponBeamExplodeOnDeathMod.jpg!00_B0nszK8P2HvhqEo89RrH6Q",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponBeamExplodeOnDeath"
   },
   {
@@ -11615,6 +11796,7 @@
    "name": "Internal Bleeding",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/WeaponBleedOnImpactProcRifleMod.jpg!00_F00EOGNgR2T2npg7oxCo+w",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponBleedOnImpactProcRifleMod"
   },
   {
@@ -11660,6 +11842,7 @@
    "name": "Arrow Mutation",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/BowAmmoMutatorMod.jpg!00_Uuqo04tYnTtBR0dQv1r0pQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponBowConvertAmmoMod"
   },
   {
@@ -11722,6 +11905,7 @@
    "name": "Magazine Warp",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleClipMaxMod.jpg!00_UmqpjC7lvnT3-xjVT3jyUg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponClipMaxMod"
   },
   {
@@ -11784,6 +11968,7 @@
    "name": "Point Strike",
    "polarity": "madurai",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleCritChanceMod.jpg!00_NuvH1sB7tW-jDJNW73Ksxg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponCritChanceMod"
   },
   {
@@ -11846,6 +12031,7 @@
    "name": "Vital Sense",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleCritDamageMod.jpg!00_zAbjNEEOfnMw2xyqKfdPQA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponCritDamageMod"
   },
   {
@@ -11908,6 +12094,7 @@
    "name": "Spectral Serration",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/WeaponDamageAmountInvisibleMod.jpg!00_SPFVjdyGi6Ny+iQT7RdOeA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountInvisibleMod"
   },
   {
@@ -11985,6 +12172,7 @@
    "name": "Serration",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageAmountMod.jpg!00_LB-rq5f9lY6XmLf0UNvZUg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod"
   },
   {
@@ -12047,6 +12235,7 @@
    "name": "Stormbringer",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleElectricityDamageMod.jpg!00_gvtZmHCnzvfnpH59NDgJSQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponElectricityDamageMod"
   },
   {
@@ -12109,6 +12298,7 @@
    "name": "Piercing Caliber",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/EventPunctureDamageModRifle.jpg!00_R7gNSNa71jJd5gMTcAx6MA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponEventPunctureDamageMod"
   },
   {
@@ -12171,6 +12361,7 @@
    "name": "Crash Course",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/EventImpactDamageRifleMod.jpg!00_DARS-ZRHKN1Dzy29o9iDUw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponEventRifleImpactDamageMod"
   },
   {
@@ -12233,6 +12424,7 @@
    "name": "Fanged Fusillade",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/EventSlashDamageRifleMod.jpg!00_9Ikn05zGdpzkomkeu6jFdg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponEventSlashDamageMod"
   },
   {
@@ -12295,6 +12487,7 @@
    "name": "Bane of Corpus",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageCorpus.jpg!00_T3tUYvRmabWTOdn3Z5W+nQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFactionDamageCorpus"
   },
   {
@@ -12357,6 +12550,7 @@
    "name": "Bane of Orokin",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageCorrupted.jpg!00_MukElBcxJsOhn67EmKZQRA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFactionDamageCorrupted"
   },
   {
@@ -12419,6 +12613,7 @@
    "name": "Bane of Grineer",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageGrineer.jpg!00_t82vNcbjse8Xe6GnQ6185Q",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFactionDamageGrineer"
   },
   {
@@ -12481,6 +12676,7 @@
    "name": "Bane of Infested",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleDamageInfested.jpg!00_ul9oVFWaqX+MAC9Y+PcEyA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFactionDamageInfested"
   },
   {
@@ -12543,6 +12739,7 @@
    "name": "Bane of The Murmur",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/WeaponFactionDamageMurmurs.jpg!00_NpeJWOsJhW+O1E7d+hrnVg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFactionDamageMurmurs"
   },
   {
@@ -12605,6 +12802,7 @@
    "name": "Hellfire",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleFireDamageMod.jpg!00_eO1tplZgwFOSY95kV-eNBA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFireDamageMod"
   },
   {
@@ -12667,6 +12865,7 @@
    "name": "Split Chamber",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleFireIterationsMod.jpg!00_lIgFB2TxWq4tXdNofRNSNw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFireIterationsMod"
   },
   {
@@ -12771,6 +12970,7 @@
    "name": "Galvanized Chamber",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/Galvanized/WeaponFireIterationsSPMod.jpg!00_SPJDpUKjOxInk8FgZRqJLw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFireIterationsSPMod"
   },
   {
@@ -12835,6 +13035,7 @@
    "name": "Speed Trigger",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleFireRateMod.jpg!00_gIslUCFuuMeJrS0709zKsw",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFireRateMod"
   },
   {
@@ -12897,6 +13098,7 @@
    "name": "Cryo Rounds",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleFreezeDamageMod.jpg!00_nrOgIU-JHIZJlJL79Ny-kA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponFreezeDamageMod"
   },
   {
@@ -12948,6 +13150,7 @@
    "name": "Adhesive Blast",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/WeaponGrenadeStickyMod.jpg!00_wZgXmEKklm2LfQgLrz0ZBg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponGrenadeStickyMod"
   },
   {
@@ -13010,6 +13213,7 @@
    "name": "Rupture",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/ImpactDamageRifleMod.jpg!00_FQVl3ueczvZ2pQvtVGlkzg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponImpactDamageMod"
   },
   {
@@ -13049,6 +13253,7 @@
    "name": "Firestorm",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/FirestormMod.jpg!00_9Y9UmRe+sZwevEPYar1Rtg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponIncreaseRadialExplosionMod"
   },
   {
@@ -13088,6 +13293,7 @@
    "name": "Hush",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleSilencerMod.jpg!00_1Pc9ngWgCqhlYu3bgd8QTg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponNoiseReductionMod"
   },
   {
@@ -13144,6 +13350,7 @@
    "name": "Continuous Misery",
    "polarity": "madurai",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/WeaponProcTimeRifleMod.jpg!00_fyeTdDGIMVC2ccNSHsgN5Q",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponProcTimeMod"
   },
   {
@@ -13185,6 +13392,7 @@
    "name": "Terminal Velocity",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/WeaponProjectileSpeedRifleMod.jpg!00_DeOwmKdsqcdI5oSgXq8vaA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponProjectileSpeedMod"
   },
   {
@@ -13230,6 +13438,7 @@
    "name": "Metal Auger",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RiflePunctureDepthMod.jpg!00_NEG4jGmTs4HcKDtZThxtMg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponPunctureDepthMod"
   },
   {
@@ -13269,6 +13478,7 @@
    "name": "Stabilizer",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleRecoilReductionMod.jpg!00_AWDbR3-DlZ0cnYvFNTG-CQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponRecoilReductionMod"
   },
   {
@@ -13331,6 +13541,7 @@
    "name": "Fast Hands",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleReloadSpeedMod.jpg!00_63rPWkfzPDDI0wILKEaqgA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponReloadSpeedMod"
   },
   {
@@ -13393,6 +13604,7 @@
    "name": "Cautious Shot",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/WeaponResistSelfDamageMod.jpg!00_iyRSOf8IXY1YMh9JEuoDjQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponResistSelfDamageMod"
   },
   {
@@ -13440,6 +13652,7 @@
    "name": "Rifle Ammo Mutation",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleAmmoMutatorMod.jpg!00_WC+Es4JfVgNh4km723+hzA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponRifleConvertAmmoMod"
   },
   {
@@ -13502,6 +13715,7 @@
    "name": "Sawtooth Clip",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/BleedDamageRifleMod.jpg!00_tejQ0E3dIa1u52G7uGaNtg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponSlashDamageMod"
   },
   {
@@ -13550,6 +13764,7 @@
    "name": "Sniper Ammo Mutation",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/SniperAmmoMutatorMod.jpg!00_UCmfUwfYq+4iwDEZ4LS12w",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponSnipersConvertAmmoMod"
   },
   {
@@ -13597,6 +13812,7 @@
    "name": "Shivering Contagion",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/WeaponSpreadFreezeProcsMod.jpg!00_gQ07ZCYgfRONB5bE40SruQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponSpreadFreezeProcsMod"
   },
   {
@@ -13701,6 +13917,7 @@
    "name": "Galvanized Aptitude",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/Galvanized/WeaponStatusChanceSPMod.jpg!00_F5pweg8gm+RR03zRXuDixQ",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponStatusChanceSPMod"
   },
   {
@@ -13763,6 +13980,7 @@
    "name": "Rifle Aptitude",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/StatusChanceRifleMod.jpg!00_DAH9JFgQcz3LYtXyQMxdYA",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponStunChanceMod"
   },
   {
@@ -13825,6 +14043,7 @@
    "name": "Infected Clip",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/PoisonDamageRifleMod.jpg!00_c7twqwTIWsWWBEybwhYljg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponToxinDamageMod"
   },
   {
@@ -13945,6 +14164,7 @@
    "name": "Primary Acuity",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/WeaponWeakpointCriticalChanceMod.jpg!00_sKkNx8QS5fztCSYjcq0hCg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponWeakpointCriticalChanceMod"
   },
   {
@@ -13984,6 +14204,7 @@
    "name": "Eagle Eye",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/RifleZoomMod.jpg!00_rzhvf0iQrLe0zMHb0FuLEg",
    "unique_name": "/Lotus/Upgrades/Mods/Rifle/WeaponZoomFovMod"
   },
   {
@@ -14068,6 +14289,7 @@
    "name": "Carnis Stinger",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Ashen/AshenStinger.jpg!00_lFA7uGFGkUlyXS-BBCJ8yg",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Ashen/AshenStingerMod"
   },
   {
@@ -14130,6 +14352,7 @@
    "name": "Augur Pact",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Augur/AugurPact.jpg!00_8yVMrAtC+ZmlfN0+zqZ1Og",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Augur/SecondaryAugurPactMod"
   },
   {
@@ -14192,6 +14415,7 @@
    "name": "Augur Seeker",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Augur/AugurSeeker.jpg!00_0hZi8e6D7xAh5TLHIXHIkQ",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Augur/SecondaryAugurSeekerMod"
   },
   {
@@ -14276,6 +14500,7 @@
    "name": "Jugulus Spines",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Boneblade/BonebladeSpines.jpg!00_vl9j+U8gYM9QD5AeZzXhtA",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Boneblade/BonebladeSpinesMod"
   },
   {
@@ -14360,6 +14585,7 @@
    "name": "Saxum Spittle",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Femur/FemurSpittle.jpg!00_TMf0eUZe9ag7R+ZMJgj8xg",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Femur/FemurSpittleMod"
   },
   {
@@ -14401,6 +14627,7 @@
    "name": "Aero Agility",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Hawk/HawksFinesse.jpg!00_nGyxu64rwmQRZUfoXuGhrg",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Hawk/HawkModB"
   },
   {
@@ -14440,6 +14667,7 @@
    "name": "Aero Periphery",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Hawk/HawksPeriphery.jpg!00_rSCoNWGniE93TBi1jdi4vA",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Hawk/HawkModC"
   },
   {
@@ -14502,6 +14730,7 @@
    "name": "Hunter Munitions",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Hunter/HunterMunitions.jpg!00_k8sRbu-ZSThNrHKpDmGO4A",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Hunter/PrimaryHunterMunitionsMod"
   },
   {
@@ -14564,6 +14793,7 @@
    "name": "Hunter Track",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Hunter/HunterTrack.jpg!00_vZf1Tn-4L9ph5-x4GV3QmQ",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Hunter/PrimaryHunterTrackMod"
   },
   {
@@ -14605,6 +14835,7 @@
    "name": "Motus Setup",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Raptor/RaptorsAmbush.jpg!00_SmUPS65aF8YCf0wwBEHhRw",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Raptor/RaptorModB"
   },
   {
@@ -14646,6 +14877,7 @@
    "name": "Proton Jet",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Spider/SpiderVenom.jpg!00_16oKyDhdjKGabnOxTDEKKA",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Spider/SpiderModB"
   },
   {
@@ -14692,6 +14924,7 @@
    "name": "Synth Charge",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Synth/PystolSynthChargeMod.jpg!00_+l2lzu-DmmFxFT0T4KOUtA",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Synth/PistolSynthChargeMod"
   },
   {
@@ -14754,6 +14987,7 @@
    "name": "Vigilante Armaments",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Vigilante/VigilanteArmaments.jpg!00_NZx65y5fdVN3xrcKpZ83ZA",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Vigilante/PrimaryVigilanteArmamentsMod"
   },
   {
@@ -14818,6 +15052,7 @@
    "name": "Vigilante Fervor",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Vigilante/VigilanteFervor.jpg!00_rc+hsT53CdX0+zhmr8WJcg",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Vigilante/PrimaryVigilanteFervorMod"
   },
   {
@@ -14863,6 +15098,7 @@
    "name": "Vigilante Offense",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Vigilante/VigilanteOffense.jpg!00_383wFQrj3QwXGsT7LJmTOg",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Vigilante/PrimaryVigilanteOffenseMod"
   },
   {
@@ -14908,6 +15144,7 @@
    "name": "Vigilante Supplies",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Sets/Vigilante/VigilanteSupplies.jpg!00_Qd4x9KUiqfdyAgR4Nl-cLg",
    "unique_name": "/Lotus/Upgrades/Mods/Sets/Vigilante/PrimaryVigilanteSuppliesMod"
   },
   {
@@ -14984,6 +15221,7 @@
    "name": "Accelerated Blast",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/ShotgunAcceleratedBlast.jpg!00_url21lqF0abOc8hmKMWneg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/AcceleratedBlastMod"
   },
   {
@@ -15060,6 +15298,7 @@
    "name": "Blaze",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/ShotgunBlazeMod.jpg!00_hO8yJxk148GNahlJvpZeWA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/BlazeMod"
   },
   {
@@ -15136,6 +15375,7 @@
    "name": "Chilling Reload",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ColdDmgReloadSpeedMod.jpg!00_2P1Vir5aD+dJv+IefMszCA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/ColdDmgReloadSpeedMod"
   },
   {
@@ -15224,6 +15464,7 @@
    "name": "Tainted Shell",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/CorruptedSpreadForFireRateShotgunMod.jpg!00_d05QgXiP2mds9ZjaWTOcTw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedAccuracyFireRateShotgun"
   },
   {
@@ -15308,6 +15549,7 @@
    "name": "Critical Deceleration",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/CorruptedCritChanceFireRateShotgunMod.jpg!00_c5QyNBfon2Va4AinTcnxbg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedCritChanceFireRateShotgun"
   },
   {
@@ -15376,6 +15618,7 @@
    "name": "Vicious Spread",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/CorruptedDamageForSpreadShotgunMod.jpg!00_qU2kcSlIoT0W8c-K+ebAtw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedDamageAccuracyShotgun"
   },
   {
@@ -15460,6 +15703,7 @@
    "name": "Frail Momentum",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/CorruptedFireRateDamageShotgunMod.jpg!00_D7eraEIgOMKPnoG0DJvNVQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedFireRateDamageShotgun"
   },
   {
@@ -15544,6 +15788,7 @@
    "name": "Burdened Magazine",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/CorruptedClipsizeForReloadShotgunMod.jpg!00_jjfU3Ur0JafmOUzR8GsJYA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/CorruptedMaxClipReloadSpeedShotgun"
   },
   {
@@ -15620,6 +15865,7 @@
    "name": "Shell Shock",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ElectEventShotgunMod.jpg!00_NInA-WDwZumiktqOTL3gSw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/ElectEventShotgunMod"
   },
   {
@@ -15696,6 +15942,7 @@
    "name": "Scattering Inferno",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/DualStatFireProcShotgun.jpg!00_Yrk6brGpUkY4xmpQoMS1UA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/FireEventShotgunMod"
   },
   {
@@ -15772,6 +16019,7 @@
    "name": "Frigid Blast",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/IceEventShotgunMod.jpg!00_nbyhQb4hDlcBbiV6UIMSFQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/IceEventShotgunMod"
   },
   {
@@ -15848,6 +16096,7 @@
    "name": "Magnetic Strafe",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/MagneticFireRateShotgunMod.jpg!00_r5xlda3j4Hbl85kncERo7g",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/MagneticFireRateShotgunMod"
   },
   {
@@ -15924,6 +16173,7 @@
    "name": "Toxic Barrage",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/PoisonEventShotgunMod.jpg!00_gkOeYR8ZzoHPoMh0y7t+Gw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/PoisonEventShotgunMod"
   },
   {
@@ -16000,6 +16250,7 @@
    "name": "Atomic Fallout",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/RadiationClipShotgunMod.jpg!00_GJJHXHlN2CmSsxnLsdd2dA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/RadiationClipShotgunMod"
   },
   {
@@ -16068,6 +16319,7 @@
    "name": "Seeking Fury",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/SeekingFury.jpg!00_6mGrCOCBbMxfoUcwuWF3fQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/DualStat/ReloadSpeedPunchThroughMod"
   },
   {
@@ -16115,6 +16367,7 @@
    "name": "Narrow Barrel",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/AccuracyWhileAiming.jpg!00_SsKencMTEq-1HvF21sKYHg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/AccuracyWhileAimingShotgunMod"
   },
   {
@@ -16181,6 +16434,7 @@
    "name": "Efficient Beams",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Rifle/CrpSplitLaserArbitrationMod.jpg!00_menTZZ5FHY0aIG86Ico5Kw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/Arbitration/CrpSplitLaserArbitrationMod"
   },
   {
@@ -16245,6 +16499,7 @@
    "name": "Laser Sight",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/CritChanceWhileAiming.jpg!00_bC33H0LQe9PqMJPnayBu6w",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/CritChanceWhileAimingShotgunMod"
   },
   {
@@ -16309,6 +16564,7 @@
    "name": "Shrapnel Shot",
    "polarity": "madurai",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/CritDamageWhileAiming.jpg!00_HR-6bKmM0hPk7GFIEuXEiQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/CritDamageWhileAimingShotgunMod"
   },
   {
@@ -16373,6 +16629,7 @@
    "name": "Repeater Clip",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/FireRateWhileAiming.jpg!00_z41Jvk5iR9xtUjtNMT0YCA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/FireRateWhileAimingShotgunMod"
   },
   {
@@ -16416,6 +16673,7 @@
    "name": "Fomorian Accelerant",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/DrakgoonNightwatchMod.jpg!00_1ezMt5JvOPbx9J7dSjeJkw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/ProjectNightwatch/DrakgoonNightwatchMod"
   },
   {
@@ -16465,6 +16723,7 @@
    "name": "Acid Shells",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/SobekNightwatchMod.jpg!00_z4uOW0mwmQuCbjIxhqC5iQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/ProjectNightwatch/SobekNightwatchMod"
   },
   {
@@ -16504,6 +16763,7 @@
    "name": "Silent Battery",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/WeaponNoiseReductionMod.jpg!00_kodj-gTvZVHdcznmWkha2g",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/ProjectNightwatch/WeaponNoiseReductionMod"
   },
   {
@@ -16568,6 +16828,7 @@
    "name": "Nano-Applicator",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/StatusChanceWhileAiming.jpg!00_k730llmsKpwbqV246OYj4Q",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Event/StatusProcWhileAimingShotgunMod"
   },
   {
@@ -16645,6 +16906,7 @@
    "name": "Primed Ammo Stock",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunClipMaxMod.jpg!00_eaYhOeXQ8Z1wSHXQg4zKOw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponClipMaxModExpert"
   },
   {
@@ -16722,6 +16984,7 @@
    "name": "Primed Blunderbuss",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunCriticalChanceMod.jpg!00_Vw09f9zqDY6XMnY0ncw6NA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponCritChanceModExpert"
   },
   {
@@ -16799,6 +17062,7 @@
    "name": "Primed Ravage",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunCritDamageMod.jpg!00_DQQ2x1FoDjHyS7i-0UjZFg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponCritDamageModExpert"
   },
   {
@@ -16876,6 +17140,7 @@
    "name": "Primed Point Blank",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunDamageAmountMod.jpg!00_coEsfC3hTrsNDmTQfIV1uw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponDamageAmountModExpert"
   },
   {
@@ -16953,6 +17218,7 @@
    "name": "Primed Charged Shell",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunElectricityDamageMod.jpg!00_+sKDZzjIpX61-ya3ZJzRog",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponElectricityDamageModExpert"
   },
   {
@@ -17030,6 +17296,7 @@
    "name": "Primed Chilling Grasp",
    "polarity": "vazarin",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunFreezeDamageMod.jpg!00_oDwxSxrBIogxUNCtLsnO0A",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponFreezeDamageModExpert"
   },
   {
@@ -17090,6 +17357,7 @@
    "name": "Primed Counterbalance",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/WeaponRecoilShotgunMod.jpg!00_6JWoL8OA+VhypQ35mx3ZOA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponRecoilReductionModExpert"
   },
   {
@@ -17167,6 +17435,7 @@
    "name": "Primed Tactical Pump",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunReloadSpeedMod.jpg!00_UhODq+OPor-+3FvLBh2Xgg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponReloadSpeedModExpert"
   },
   {
@@ -17227,6 +17496,7 @@
    "name": "Primed Shotgun Ammo Mutation",
    "polarity": "naramon",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunAmmoMutatorMod.jpg!00_RLfbzXi47+8fojZUaWihhQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunConvertAmmoModExpert"
   },
   {
@@ -17304,6 +17574,7 @@
    "name": "Primed Cleanse Corpus",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunDamageCorpus.jpg!00_vLrZ2-1aPZA-wnLpWiEE6g",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageCorpusExpert"
   },
   {
@@ -17381,6 +17652,7 @@
    "name": "Primed Cleanse Orokin",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunDamageCorrupted.jpg!00_2nSHyyNvFdJHNQDv5ZEusA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageCorruptedExpert"
   },
   {
@@ -17458,6 +17730,7 @@
    "name": "Primed Cleanse Grineer",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunDamageGrineer.jpg!00_0Zzm6x7Kw7fVkyzIvGU1cw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageGrineerExpert"
   },
   {
@@ -17535,6 +17808,7 @@
    "name": "Primed Cleanse Infested",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunDamageInfested.jpg!00_2NAX3kuoYAirp0oDPRPdDQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageInfestedExpert"
   },
   {
@@ -17612,6 +17886,7 @@
    "name": "Primed Cleanse The Murmur",
    "polarity": "madurai",
    "rarity": "LEGENDARY",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/WeaponShotgunFactionDamageMurmurs.jpg!00_0P1q4KQVaeaQbA0JTRfnrA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageMurmursExpert"
   },
   {
@@ -17700,6 +17975,7 @@
    "name": "Semi-Shotgun Cannonade",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunSemiAutoFantasyMod.jpg!00_qpKLw2IXc+Rn1T6Oq8uJSQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/ShotgunSemiAutoFantasyMod"
   },
   {
@@ -17784,6 +18060,7 @@
    "name": "Shotgun Elementalist",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/DoubleMods/ShotgunStatusDamageDuoMod.jpg!00_3Bb85RyKAkJrMrmoxoD7qA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/ShotgunStatusDamageDuoMod"
   },
   {
@@ -17829,6 +18106,7 @@
    "name": "Shell Compression",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunAmmoMaxMod.jpg!00_i6qB2X-XjZGGreWQ8+4AIQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponAmmoMaxMod"
   },
   {
@@ -17891,6 +18169,7 @@
    "name": "Flechette",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunPunctureDepthMod.jpg!00_06KRR4M88meXT5gmu7TCAg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponArmorPiercingDamageMod"
   },
   {
@@ -17953,6 +18232,7 @@
    "name": "Ammo Stock",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunClipMaxMod.jpg!00_eaYhOeXQ8Z1wSHXQg4zKOw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponClipMaxMod"
   },
   {
@@ -18015,6 +18295,7 @@
    "name": "Blunderbuss",
    "polarity": "madurai",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunCriticalChanceMod.jpg!00_Vw09f9zqDY6XMnY0ncw6NA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponCritChanceMod"
   },
   {
@@ -18077,6 +18358,7 @@
    "name": "Ravage",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunCritDamageMod.jpg!00_DQQ2x1FoDjHyS7i-0UjZFg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponCritDamageMod"
   },
   {
@@ -18139,6 +18421,7 @@
    "name": "Point Blank",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunDamageAmountMod.jpg!00_coEsfC3hTrsNDmTQfIV1uw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponDamageAmountMod"
   },
   {
@@ -18201,6 +18484,7 @@
    "name": "Charged Shell",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunElectricityDamageMod.jpg!00_+sKDZzjIpX61-ya3ZJzRog",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponElectricityDamageMod"
   },
   {
@@ -18263,6 +18547,7 @@
    "name": "Breach Loader",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/EventPunctureDamageModShotgun.jpg!00_fsbqXZHkEHpk5S64EFQB2Q",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponEventPunctureDamageMod"
   },
   {
@@ -18325,6 +18610,7 @@
    "name": "Full Contact",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/EventImpactDamageShotgunMod.jpg!00_SHRZVp3vXhWXODST2ianmg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponEventShotgunImpactDamageMod"
   },
   {
@@ -18387,6 +18673,7 @@
    "name": "Sweeping Serration",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/EventSlashDamageShotgunMod.jpg!00_L+6TiSdah4Rn7ennAjG8oQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponEventSlashDamageMod"
   },
   {
@@ -18449,6 +18736,7 @@
    "name": "Incendiary Coat",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunFireDamageMod.jpg!00_EMSmMx3PfN6pTp23A9JI-g",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponFireDamageMod"
   },
   {
@@ -18511,6 +18799,7 @@
    "name": "Hell's Chamber",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunFireIterationsMod.jpg!00_8AMZSFycne9JIVWu1SlEuA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponFireIterationsMod"
   },
   {
@@ -18615,6 +18904,7 @@
    "name": "Galvanized Hell",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/Galvanized/WeaponFireIterationsSPMod.jpg!00_19NsnGcdAWQpxzaXP+eXZw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponFireIterationsSPMod"
   },
   {
@@ -18677,6 +18967,7 @@
    "name": "Shotgun Barrage",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunFireRateMod.jpg!00_zFM2Cs0tK6ZRudPV9+aVeQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponFireRateMod"
   },
   {
@@ -18739,6 +19030,7 @@
    "name": "Chilling Grasp",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunFreezeDamageMod.jpg!00_oDwxSxrBIogxUNCtLsnO0A",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponFreezeDamageMod"
   },
   {
@@ -18801,6 +19093,7 @@
    "name": "Disruptor",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ImpactDamageShotgunMod.jpg!00_THDldRGKc2kP31uRjL74Rw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponImpactDamageMod"
   },
   {
@@ -18866,6 +19159,7 @@
    "name": "Magnetic Welt",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/WeaponMagneticOnImpactShotgunMod.jpg!00_OEP9uMmdo-NFQhm6xjuuWg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponMagneticOnImpactShotgunMod"
   },
   {
@@ -18928,6 +19222,7 @@
    "name": "Lingering Torment",
    "polarity": "madurai",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/WeaponProcTimeShotgunMod.jpg!00_BME20bnzdTdUuzyl8FRvqg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponProcTimeMod"
   },
   {
@@ -18967,6 +19262,7 @@
    "name": "Fatal Acceleration",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/WeaponProjectileSpeedShotgunMod.jpg!00_-yIChi+NeuvqXQITiL+AuA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponProjectileSpeedMod"
   },
   {
@@ -19038,6 +19334,7 @@
    "name": "Galvanized Acceleration",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/Galvanized/WeaponProjectileSpeedSPMod.jpg!00_DtyNgInszaXEm8GS2GjBqg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponProjectileSpeedSPMod"
   },
   {
@@ -19083,6 +19380,7 @@
    "name": "Seeking Force",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunArmorPiercingDamageMod.jpg!00_AqFHqxPUDat8rTXXXY+Wwg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponPunctureDepthMod"
   },
   {
@@ -19122,6 +19420,7 @@
    "name": "Counterbalance",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/WeaponRecoilShotgunMod.jpg!00_6JWoL8OA+VhypQ35mx3ZOA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponRecoilReductionMod"
   },
   {
@@ -19184,6 +19483,7 @@
    "name": "Tactical Pump",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunReloadSpeedMod.jpg!00_UhODq+OPor-+3FvLBh2Xgg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponReloadSpeedMod"
   },
   {
@@ -19229,6 +19529,7 @@
    "name": "Shotgun Ammo Mutation",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunAmmoMutatorMod.jpg!00_RLfbzXi47+8fojZUaWihhQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunConvertAmmoMod"
   },
   {
@@ -19291,6 +19592,7 @@
    "name": "Cleanse Corpus",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunDamageCorpus.jpg!00_vLrZ2-1aPZA-wnLpWiEE6g",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunFactionDamageCorpus"
   },
   {
@@ -19353,6 +19655,7 @@
    "name": "Cleanse Orokin",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunDamageCorrupted.jpg!00_2nSHyyNvFdJHNQDv5ZEusA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunFactionDamageCorrupted"
   },
   {
@@ -19415,6 +19718,7 @@
    "name": "Cleanse Grineer",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunDamageGrineer.jpg!00_0Zzm6x7Kw7fVkyzIvGU1cw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunFactionDamageGrineer"
   },
   {
@@ -19477,6 +19781,7 @@
    "name": "Cleanse Infested",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/ShotgunDamageInfested.jpg!00_2NAX3kuoYAirp0oDPRPdDQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunFactionDamageInfested"
   },
   {
@@ -19539,6 +19844,7 @@
    "name": "Cleanse The Murmur",
    "polarity": "madurai",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/WeaponShotgunFactionDamageMurmurs.jpg!00_0P1q4KQVaeaQbA0JTRfnrA",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponShotgunFactionDamageMurmurs"
   },
   {
@@ -19601,6 +19907,7 @@
    "name": "Shredder",
    "polarity": "naramon",
    "rarity": "COMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/BleedDamageShotgunMod.jpg!00_QO3Vt3zqOex-XfaokDmsRw",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponSlashDamageMod"
   },
   {
@@ -19705,6 +20012,7 @@
    "name": "Galvanized Savvy",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/Galvanized/WeaponStatusChanceSPMod.jpg!00_T44R2edKRLQNWy7mrtVVhg",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponStatusChanceSPMod"
   },
   {
@@ -19767,6 +20075,7 @@
    "name": "Shotgun Savvy",
    "polarity": "vazarin",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/StatusChanceShotgunMod.jpg!00_GecbzMv7lnYxApBDflyPfQ",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponStunChanceMod"
   },
   {
@@ -19829,6 +20138,7 @@
    "name": "Contagious Spread",
    "polarity": "naramon",
    "rarity": "UNCOMMON",
+   "texture_location": "/Lotus/Interface/Cards/Images/Shotgun/PoisonDamageShotgunMod.jpg!00_+5AyfFX4H1IQajY7ndBj9w",
    "unique_name": "/Lotus/Upgrades/Mods/Shotgun/WeaponToxinDamageMod"
   },
   {
@@ -19891,6 +20201,7 @@
    "name": "Toxic Sequence",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Acrid.jpg!00_gtuPxBO2CiMR5z3OkBBWZw",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/AcridMod"
   },
   {
@@ -19953,6 +20264,7 @@
    "name": "Soaring Truth",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Ballistica.jpg!00_pT7nir5P4xXWjimyAIKwQA",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/BallisticaMod"
   },
   {
@@ -19999,6 +20311,7 @@
    "name": "Entropy Spike",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Bolto.jpg!00_-0gjF49LLJ3aqm2NR-AQfA",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/BoltoMod"
   },
   {
@@ -20061,6 +20374,7 @@
    "name": "Gilded Truth",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/BurstonPrime.jpg!00_PF2qV1iKuYnRudodTki4Qw",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/BurstonPrimeMod"
   },
   {
@@ -20123,6 +20437,7 @@
    "name": "Eroding Blight",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Embolist.jpg!00_QILvBizAM9KeheX3I-RjNA",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/EmbolistMod"
   },
   {
@@ -20168,6 +20483,7 @@
    "name": "Winds of Purity",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Furis.jpg!00_NU3FulSSq-iNCPRc1pwm1Q",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/FurisMod"
   },
   {
@@ -20230,6 +20546,7 @@
    "name": "Deadly Sequence",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Grinlok.jpg!00_be7evbxeb1XrEtz6Pn-6Pw",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/GrinlokMod"
   },
   {
@@ -20294,6 +20611,7 @@
    "name": "Scattered Justice",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Hek.jpg!00_D7-UuCCvVRgWGPA4ReUZYA",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/HekMod"
   },
   {
@@ -20356,6 +20674,7 @@
    "name": "Stockpiled Blight",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Kunai.jpg!00_9rS3dKK92+-eSfdS1V92PA",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/KunaiMod"
   },
   {
@@ -20404,6 +20723,7 @@
    "name": "Voltage Sequence",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Lanka.jpg!00_Ed+5+z6+aCDAfSCRKqYYQA",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/LankaMod"
   },
   {
@@ -20450,6 +20770,7 @@
    "name": "Neutralizing Justice",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Miter.jpg!00_nw8QaGWj-koBrNesiVAg3Q",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/MiterMod"
   },
   {
@@ -20496,6 +20817,7 @@
    "name": "Disarming Purity",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Panthera.jpg!00_p3ueNc1cdXnU8pwmhCoAbg",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/PantheraMod"
   },
   {
@@ -20558,6 +20880,7 @@
    "name": "Shattering Justice",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Sobek.jpg!00_2sdrEuLcFEVtK6x6ucKB+w",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/SobekMod"
   },
   {
@@ -20603,6 +20926,7 @@
    "name": "Sequence Burn",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Spectra.jpg!00_DBA4ePMc8qUehQB1-EmGeQ",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/SpectraMod"
   },
   {
@@ -20649,6 +20973,7 @@
    "name": "Entropy Burst",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Supra.jpg!00_hGKLuUcDcXWeR3vJnCgf-Q",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/SupraMod"
   },
   {
@@ -20695,6 +21020,7 @@
    "name": "Stinging Truth",
    "polarity": "vazarin",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Viper.jpg!00_TUjpBfkso7uty3BBouc5lA",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/ViperMod"
   },
   {
@@ -20757,6 +21083,7 @@
    "name": "Lasting Purity",
    "polarity": "naramon",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Syndicate/Vulkar.jpg!00_+qLKLuKAFlsDof4tgzCP+w",
    "unique_name": "/Lotus/Upgrades/Mods/Syndicate/VulkarMod"
   },
   {
@@ -20821,6 +21148,7 @@
    "name": "Higasa Serration",
    "polarity": "madurai",
    "rarity": "RARE",
+   "texture_location": "/Lotus/Interface/Cards/Images/Unique/ShrineMaidenGunbrellaAugment.jpg!00_IharexDDgVFSk1YfVwYaYw",
    "unique_name": "/Lotus/Weapons/Tenno/LongGuns/Gunbrella/ShrineMaidenGunbrellaAugment"
   }
  ],

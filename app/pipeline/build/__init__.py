@@ -71,10 +71,12 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
     overrides = Overrides(reference(reference_dir / "overrides.json"))
     tag_rows = reference(reference_dir / weapon_tags.FILE)
     weapon_tags_all, weapon_parents = weapon_tags.fill(tag_rows, plus)
+    manifest = records(load_json(de / "ExportManifest.json"), "Manifest")
+    textures = {m["uniqueName"]: m.get("textureLocation") for m in manifest}
     gun_list, excluded, joins = weapons.build(
         records(load_json(de / "ExportWeapons_en.json"), "ExportWeapons"),
         wfcd,
-        records(load_json(de / "ExportManifest.json"), "Manifest"),
+        textures,
         FireOverrides.load(reference(reference_dir / "fire_overrides.json")),
         weapon_tags_all,
         wiki_weapon_data.load(raw_dir / "wiki"),
@@ -95,11 +97,13 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         reference(reference_dir / "mod_families.json"),
         reference(reference_dir / "exilus.json"),
         plus,
+        textures,
     )
     arcane_list = arcanes.build(
         records(load_json(de / "ExportRelicArcane_en.json"), "ExportRelicArcane"),
         wfcd_arcanes,
         overrides,
+        textures,
     )
     perks = incarnon.build(
         wiki_incarnon.load(raw_dir / "wiki"),

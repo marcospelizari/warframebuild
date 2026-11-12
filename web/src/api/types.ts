@@ -106,6 +106,8 @@ export interface components {
         ArcaneItem: {
             /** Compatible */
             compatible: boolean;
+            /** Image */
+            image: string | null;
             /** Name */
             name: string;
             /** Rarity */
@@ -377,6 +379,8 @@ export interface components {
             exilus: boolean;
             /** Family */
             family: string | null;
+            /** Image */
+            image: string | null;
             /** Mod Set */
             mod_set: string | null;
             /** Name */

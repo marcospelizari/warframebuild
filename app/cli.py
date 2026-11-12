@@ -32,7 +32,9 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("openapi", help="print the OpenAPI schema (input for web/src/api/types.ts)")
     ref = sub.add_parser("refresh", help="download sources, rebuild and validate gamedata/")
     ref.add_argument("--offline", action="store_true", help="use files already in cache/raw/")
-    ref.add_argument("--no-images", action="store_true", help="skip weapon icon downloads")
+    ref.add_argument(
+        "--no-images", action="store_true", help="skip gun icon, mod and arcane picture downloads"
+    )
     sub.add_parser("fixtures", help="trim cache/raw/ into tests/fixtures/raw/")
     chk = sub.add_parser("check", help="after a game update: what changed, what to re-check")
     chk.add_argument("--offline", action="store_true", help="skip the DE/WFCD source check")

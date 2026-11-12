@@ -12,6 +12,7 @@ from pathlib import Path
 
 from pydantic import TypeAdapter
 
+from app.gamedata.images import PictureKind, picture_name
 from app.gamedata.models import (
     Arcane,
     Enemy,
@@ -69,6 +70,16 @@ class GameData:
     @cached_property
     def mod_by_id(self) -> dict[str, Mod]:
         return {m.unique_name: m for m in self.mods.mods}
+
+    @cached_property
+    def picture_names(self) -> dict[PictureKind, frozenset[str]]:
+        """Per kind: the picture file names /img may serve (S2)."""
+
+        def names(items: list[Mod] | list[Arcane]) -> frozenset[str]:
+            found = (picture_name(i.unique_name, i.texture_location) for i in items)
+            return frozenset(n for n in found if n)
+
+        return {"mods": names(self.mods.mods), "arcanes": names(self.arcanes)}
 
 
 def dataset_hash(payloads: dict[str, bytes]) -> str:

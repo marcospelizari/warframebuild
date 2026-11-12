@@ -32,6 +32,7 @@
   ],
   "name": "Akimbo Slip Shot",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCT.png!00_NJG8lKgnRfWF73hJho4WJQ",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/AmmoEfficiencyOnSliding",
   "weapon_type": null
  },
@@ -68,6 +69,7 @@
   ],
   "name": "Secondary Surge",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDE.png!00_O+fSEem9EzsRZpdMe9f-Ig",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/BonusDamageNextShotForCurEnergy",
   "weapon_type": null
  },
@@ -104,6 +106,7 @@
   ],
   "name": "Primary Bulwark",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDU.png!00_+AFobvwMninc4nCKLdRiMA",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/DamageForBonusArmour",
   "weapon_type": null
  },
@@ -140,6 +143,7 @@
   ],
   "name": "Longbow Sharpshot",
   "rarity": "LEGENDARY",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCL.png!00_2i-QJpxbyBwSWPkjDInaVQ",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/LongbowDamageOnHeadshot",
   "weapon_type": "Bow"
  },
@@ -176,6 +180,7 @@
   ],
   "name": "Secondary Outburst",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCU.png!00_QUqHYyAsHABPWkLS-b0YMw",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/MultishotForCombo",
   "weapon_type": null
  },
@@ -212,6 +217,7 @@
   ],
   "name": "Primary Overcharge",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionEA.png!00_Pg-p0AgfQ3SAoDGrY2QIFw",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/MultishotForMaxEnergy",
   "weapon_type": null
  },
@@ -255,6 +261,7 @@
   ],
   "name": "Secondary Fortifier",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDG.png!00_DfQSe4cpOE-AfDgNEDOrbg",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/OverguardSteal",
   "weapon_type": null
  },
@@ -322,6 +329,7 @@
   ],
   "name": "Primary Frostbite",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCC.png!00_pfyV5cWWOKznfPlAnDLVFQ",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryCritDmgAndMultishotOnColdProc",
   "weapon_type": null
  },
@@ -390,6 +398,7 @@
   ],
   "name": "Primary Merciless",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathWarcrimesB.png!00_GF5MHuW9EvuC9o6rMdNvfw",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryDamageOnKill",
   "weapon_type": null
  },
@@ -442,6 +451,7 @@
   ],
   "name": "Primary Dexterity",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathMeleeToolsB.png!00_ir-UC1k7eJ6HdPoC+fo7EA",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryDamageOnMeleeKill",
   "weapon_type": null
  },
@@ -511,6 +521,7 @@
   ],
   "name": "Primary Deadhead",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathPrecisionHeadshotB.png!00_gRTh3hanyLSOoZPxgOwlDQ",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryDamageOnNoMelee",
   "weapon_type": null
  },
@@ -548,6 +559,7 @@
   ],
   "name": "Primary Plated Round",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCH.png!00_iIUidwuSlzEln12SNh7HCQ",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryDamagePerAmmoOnReload",
   "weapon_type": null
  },
@@ -582,6 +594,7 @@
   ],
   "name": "Primary Exhilarate",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCN.png!00_VV9cz2XAiJzoj4MooqflUg",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryEnergyRegenOnImpactProc",
   "weapon_type": null
  },
@@ -649,6 +662,7 @@
   ],
   "name": "Primary Blight",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCS.png!00_x2neUkt4aj0GJ0AUy50wxw",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryHeadshotCritMultOnHeadshot",
   "weapon_type": null
  },
@@ -686,6 +700,7 @@
   ],
   "name": "Primary Obstruct",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCM.png!00_NC+Z88RSh7AGCCiP4Q4aCA",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryJamEnemyWeaponsOnMagneticProc",
   "weapon_type": null
  },
@@ -722,6 +737,7 @@
   ],
   "name": "Secondary Irradiate",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDV.png!00_yVdXXkzbsqtsIjPgeJO2zA",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/RadialDamageOnMaxRadiationStackHit",
   "weapon_type": null
  },
@@ -758,6 +774,7 @@
   ],
   "name": "Secondary Cryogenic",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/SecondaryCritStrikeColdPunct.png!00_ce6H9-FzZpXgm8tRNNaq1Q",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryColdOnPuncture",
   "weapon_type": null
  },
@@ -794,6 +811,7 @@
   ],
   "name": "Secondary Kinship",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCI.png!00_sNS0ir2BBnw8GRS6mHo0hw",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryCritChancePerBuff",
   "weapon_type": null
  },
@@ -831,6 +849,7 @@
   ],
   "name": "Secondary Enervate",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDL.png!00_B2Oek7joCNZv97DCqhF09w",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryCritOnHit",
   "weapon_type": null
  },
@@ -882,6 +901,7 @@
   ],
   "name": "Cascadia Flare",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionBY.png!00_TuV0tinjdoP80hUN6DquzA",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryDamageOnHeatProc",
   "weapon_type": null
  },
@@ -950,6 +970,7 @@
   ],
   "name": "Secondary Merciless",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathWarcrimesA.png!00_jUgf2NWeaFIelCnTLp64fQ",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryDamageOnKill",
   "weapon_type": null
  },
@@ -1002,6 +1023,7 @@
   ],
   "name": "Secondary Dexterity",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathMeleeToolsA.png!00_DzUia8yKj8UW+wi6iIvrUA",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryDamageOnMeleeKill",
   "weapon_type": null
  },
@@ -1071,6 +1093,7 @@
   ],
   "name": "Secondary Deadhead",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathPrecisionHeadshotA.png!00_lQfjfrRQ3HzMQrZrwwNkBw",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryDamageOnNoMelee",
   "weapon_type": null
  },
@@ -1107,6 +1130,7 @@
   ],
   "name": "Secondary Shiver",
   "rarity": "LEGENDARY",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCP.png!00_F2mZRCVd-NCc9vYebe4bkQ",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryExtraDamagePerFreezeStack",
   "weapon_type": null
  },
@@ -1174,6 +1198,7 @@
   ],
   "name": "Conjunction Voltage",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCD.png!00_7d05yzmZqjDBgfE32hX+YA",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryReloadSpeedAndMultishotOnElectricProc",
   "weapon_type": null
  },
@@ -1210,6 +1235,7 @@
   ],
   "name": "Shotgun Vendetta",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCO.png!00_ld3sZ9ZUPUr5u5DJ+jJzdg",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/ShotgunMultishotAndReloadSpeedOnCloseKill",
   "weapon_type": "Shotgun"
  },
@@ -1246,6 +1272,7 @@
   ],
   "name": "Primary Debilitate",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDW.png!00_tdnStNuIpYGZQy44BP-LPg",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SplitStatusProcsOnStackedStatusHit",
   "weapon_type": null
  },
@@ -1313,6 +1340,7 @@
   ],
   "name": "Primary Crux",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDK.png!00_pxFHR1YEKqu9gQEUsKH88A",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/StatusAndAmmoEfficiencyOnWeakpointHit",
   "weapon_type": null
  },
@@ -1349,6 +1377,7 @@
   ],
   "name": "Primary Compression",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/PrimaryRadialAttack.png!00_me7URJNJ2cgpumyAXHWkGQ",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Utility/ConvergeRadialAttackOnAim",
   "weapon_type": null
  },
@@ -1385,6 +1414,7 @@
   ],
   "name": "Secondary Encumber",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCG.png!00_3vECDRIeMpsRITfAXi9JSA",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Utility/ExtraProcOnProc",
   "weapon_type": null
  },
@@ -1436,6 +1466,7 @@
   ],
   "name": "Fractalized Reset",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionBO.png!00_bFhqwz+tEfo3ZN2HtzFauA",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Zariman/PrimaryOnAbilityReloadSpeed",
   "weapon_type": null
  },
@@ -1472,6 +1503,7 @@
   ],
   "name": "Cascadia Overcharge",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionBL.png!00_umSgsdDrchvN6LZ8U0kC+w",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Zariman/SecondaryOnOvershieldCritChance",
   "weapon_type": null
  },
@@ -1508,6 +1540,7 @@
   ],
   "name": "Cascadia Accuracy",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionBU.png!00_m84SHzgBsK52QlBA4---DA",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Zariman/SecondaryOnRollCritChanceOnHeadshot",
   "weapon_type": null
  },
@@ -1544,6 +1577,7 @@
   ],
   "name": "Cascadia Empowered",
   "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionBT.png!00_OVXnr7TDKKnHVo0PMXYGCA",
   "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Zariman/SecondaryOnStatusProcBonusDamage",
   "weapon_type": null
  }

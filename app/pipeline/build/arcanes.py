@@ -14,7 +14,10 @@ ARCANE_PREFIX = "/Lotus/Upgrades/CosmeticEnhancers/"
 
 
 def build(
-    de_entries: list[dict[str, Any]], wfcd_arcanes: list[dict[str, Any]], overrides: Overrides
+    de_entries: list[dict[str, Any]],
+    wfcd_arcanes: list[dict[str, Any]],
+    overrides: Overrides,
+    textures: dict[str, str | None],
 ) -> list[Arcane]:
     """Every DE arcane must be typed by WFCD: one WFCD has not listed yet fails the
     refresh instead of silently missing from the optimizer."""
@@ -53,12 +56,12 @@ def build(
             "wait for WFCD or rerun later"
         )
     try:
-        return [_arcane(de[uid], slots[uid], overrides) for uid in sorted(slots)]
+        return [_arcane(de[uid], slots[uid], overrides, textures.get(uid)) for uid in sorted(slots)]
     except ValidationError as error:
         raise RefreshError(f"invalid arcane values: {error}") from error
 
 
-def _arcane(a: dict[str, Any], kind: str, overrides: Overrides) -> Arcane:
+def _arcane(a: dict[str, Any], kind: str, overrides: Overrides, texture: str | None) -> Arcane:
     category, weapon_type = GUN_ARCANE_TYPES[kind]
     levels = clean_levels(a["levelStats"])
     return Arcane(
@@ -69,4 +72,5 @@ def _arcane(a: dict[str, Any], kind: str, overrides: Overrides) -> Arcane:
         rarity=a.get("rarity"),
         level_stats=levels,
         effects=overrides.effects(a["uniqueName"], levels[-1]),
+        texture_location=texture,
     )

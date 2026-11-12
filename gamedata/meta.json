@@ -1,5 +1,5 @@
 {
- "changed_on": "2026-11-10",
+ "changed_on": "2026-11-12",
  "counts": {
   "arcanes": 34,
   "arcanes_full": 13,
@@ -23,7 +23,7 @@
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "1bbc3b6ba7d58260",
+ "dataset_hash": "a6e839da6b88cf7a",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -45,7 +45,7 @@
  ],
  "fetched": "2026-11-08",
  "game_update": "Update 44.0",
- "schema_version": 21,
+ "schema_version": 22,
  "sources": [
   {
    "path": "de/ExportManifest.json",
@@ -154,6 +154,12 @@
    "retrieved": "2026-11-10",
    "sha256_16": "9c12afd0eeb665d2",
    "url": "https://wiki.warframe.com/w/Assault_Rifle_Mods"
+  },
+  {
+   "path": "wiki/Assets.wikitext",
+   "retrieved": "2026-11-11",
+   "sha256_16": "8d899be813a77e0b",
+   "url": "https://wiki.warframe.com/w/Assets"
   },
   {
    "path": "wiki/Battalyst.wikitext",

@@ -24,6 +24,7 @@ def build(
     families: dict[str, Any],
     exilus: dict[str, Any],
     plus: ExportPlus,
+    textures: dict[str, str | None],
 ) -> tuple[list[Mod], list[ModSet], dict[str, int]]:
     rules = mod_filter["rules"]
     allow = {a["id"] for a in mod_filter.get("allow", [])}
@@ -76,6 +77,7 @@ def build(
                     family.get(m["uniqueName"]),
                     m["uniqueName"] in extra_exilus,
                     plus,
+                    textures.get(m["uniqueName"]),
                 )
                 for m in kept
             ),
@@ -103,7 +105,12 @@ def build(
 
 
 def _mod(
-    m: dict[str, Any], overrides: Overrides, family: str | None, exilus: bool, plus: ExportPlus
+    m: dict[str, Any],
+    overrides: Overrides,
+    family: str | None,
+    exilus: bool,
+    plus: ExportPlus,
+    texture: str | None,
 ) -> Mod:
     tags = plus.mod_tags.get(m["uniqueName"])
     description = clean_text("\n".join(m.get("description") or []))
@@ -127,6 +134,7 @@ def _mod(
         compatibility_tags=known(tags.compatibility, m["name"]) if tags else None,
         incompatibility_tags=known(tags.incompatibility, m["name"]) if tags else None,
         compat_class=plus.mod_compat.get(m["uniqueName"]),
+        texture_location=texture,
     )
 
 

@@ -217,6 +217,7 @@ class ModItem(ApiModel):
     support: Support  # R6: how fully its effects are modelled
     stats: list[str]  # max-rank text
     description: str
+    image: str | None  # /img URL; None when the picture is not cached
     compatible: bool
     reason: str | None  # why it does not fit this gun
 
@@ -227,6 +228,7 @@ class ArcaneItem(ApiModel):
     rarity: str | None
     support: Support
     stats: list[str]  # max-rank text
+    image: str | None  # /img URL; None when the picture is not cached
     compatible: bool
     reason: str | None
 

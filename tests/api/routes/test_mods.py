@@ -4,6 +4,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.api.app import create_app
+from app.gamedata.images import picture_name
 from app.gamedata.store import GameData
 
 
@@ -50,3 +51,17 @@ def test_arcane_reason_names_the_arcane_type(client: TestClient, gamedata: GameD
     unfit = [a for a in body["arcanes"] if not a["compatible"]]
     types = {a.unique_name: a.weapon_type for a in gamedata.arcanes}
     assert unfit and all(a["reason"] == f"{types[a['unique_name']]} only" for a in unfit)
+
+
+def test_picture_url_only_when_cached(tmp_path: Path, gamedata: GameData) -> None:
+    serration = next(m for m in gamedata.mods.mods if m.name == "Serration")
+    name = picture_name(serration.unique_name, serration.texture_location)
+    assert name is not None
+    (tmp_path / "img/mods").mkdir(parents=True)
+    (tmp_path / "img/mods" / name).write_bytes(b"\xff\xd8\xff")
+    app = create_app(web_dist=tmp_path, data=gamedata, releases=tmp_path, img_dir=tmp_path / "img")
+    body = TestClient(app).get("/api/mods", params={"weapon": "soma-prime"}).json()
+    by_name = {m["name"]: m for m in body["mods"]}
+    assert by_name["Serration"]["image"] == f"/img/mods/{name}"
+    assert by_name["Split Chamber"]["image"] is None  # not cached in tmp_path
+    assert all(a["image"] is None for a in body["arcanes"])
