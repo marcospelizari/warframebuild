@@ -9,14 +9,20 @@ from collections.abc import Sequence
 from typing import Literal
 
 from app.domain.effects import DamageType
-from app.domain.polarity import Layout, Slot
-from app.gamedata.builds import Build, ElementRow, Forma, FormaSlot, Variant, WeaponBuilds
-from app.gamedata.models import Arcane, Enemy, Perk, Weapon
+from app.gamedata.builds import Build, ElementRow, Variant, WeaponBuilds
+from app.gamedata.models import Arcane, Enemy, Mod, Perk, Weapon
 from app.gamedata.store import GameData
 from app.optimize.combat import combat
-from app.optimize.forma import forma_layout
-from app.optimize.scoring import best_combat, best_max, build_loadout, combat_objective
-from app.optimize.search import MAX_EVALUATIONS, Result, rounded
+from app.optimize.forma import forma_layout, stored_forma
+from app.optimize.scoring import (
+    Objective,
+    best_combat,
+    best_max,
+    build_loadout,
+    combat_objective,
+    max_objective,
+)
+from app.optimize.search import MAX_EVALUATIONS, Option, Result, rounded
 from app.optimize.variants import OPTIMIZED, elements, rank, what_if
 
 Status = Literal["optimal", "best_found", "what_if"]
@@ -130,10 +136,12 @@ def _build(
 ) -> Build:
     """`enemies`: the combat build's scored enemies; None for Max."""
     costs: dict[str, float] = {}
+    objective = max_objective(data)
     if enemies is not None:
         lo = build_loadout(data, weapon, r.mods, r.exilus, r.picks, bonus)
         fought = combat(lo, list(enemies), data.factions).enemies
         costs = {x.enemy.unique_name: rounded(x.outcome.cost) for x in fought}
+        objective = _combat_objective(data, list(enemies))
     arcane = r.picks[0] if r.picks else None
     return Build(
         mods=[m.unique_name for m in r.mods],
@@ -144,22 +152,29 @@ def _build(
         status=status or r.status,
         search_scope=scope,
         evaluations=r.evaluations,
-        forma=_forma(forma_layout(weapon, r.mods, r.exilus)),
+        forma=stored_forma(forma_layout(weapon, r.mods, r.exilus)),
         costs=costs,
+        without=_without(data, weapon, r, bonus, objective),
     )
 
 
-def _forma(layout: Layout | None) -> Forma | None:
-    if layout is None:
-        return None
+def _combat_objective(data: GameData, enemies: list[Enemy]) -> Objective:
+    return lambda lo: 1 / combat(lo, enemies, data.factions).score
 
-    def slot(s: Slot) -> FormaSlot:
-        return FormaSlot(polarity=s.polarity, forma=s.forma, drain=s.drain)
 
-    return Forma(
-        regular=[slot(s) for s in layout.regular],
-        exilus=slot(layout.exilus) if layout.exilus else None,
-        forma=layout.forma,
-        used=layout.used,
-        capacity=layout.capacity,
-    )
+def _without(
+    data: GameData, weapon: Weapon, r: Result, bonus: DamageType | None, objective: Objective
+) -> dict[str, float]:
+    """F8: the score with each mod, the exilus and the arcane removed, the rest kept."""
+
+    def score(mods: Sequence[Mod], exilus: Mod | None, picks: tuple[Option, ...]) -> float:
+        return rounded(objective(build_loadout(data, weapon, list(mods), exilus, picks, bonus)))
+
+    out = {
+        m.unique_name: score([x for x in r.mods if x is not m], r.exilus, r.picks) for m in r.mods
+    }
+    if r.exilus:
+        out[r.exilus.unique_name] = score(r.mods, None, r.picks)
+    if r.picks and isinstance(r.picks[0], Arcane):
+        out[r.picks[0].unique_name] = score(r.mods, r.exilus, (None, *r.picks[1:]))
+    return out

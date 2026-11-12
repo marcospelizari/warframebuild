@@ -30,6 +30,7 @@ def weapons(
                 weapon_type=w.weapon_type,
                 incarnon=w.unique_name in data.incarnon_by_id,
                 progenitor=w.bonus_element is not None,
+                mastery=w.mastery_req,
                 image=f"/img/weapons/{w.slug}.png"
                 if image_path(request.app.state.img_dir, w.slug).is_file()
                 else None,

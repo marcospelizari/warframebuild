@@ -140,6 +140,7 @@ class Build(ApiModel):
     exilus: Slot | None = None
     arcane: ArcaneRef | None = None
     bonus_element: BonusElement | None
+    forma: Forma | None  # fewest-forma layout of these mods; None: none fits (Q6)
     arsenal: Arsenal
     dps: Dps
     headshot: Headshot | None  # this form is aimed at heads; None = body shots
@@ -155,6 +156,7 @@ class StoredBuild(ApiModel):
     evaluations: int
     score: float  # Max: dps.max_score; others: 1 / the objective's combat cost
     forma: Forma | None  # None: no layout fits (flagged, Q6)
+    without: dict[str, float]  # F8: score with that mod, exilus or arcane removed
     build: Build
 
 
@@ -189,6 +191,7 @@ class WeaponItem(ApiModel):
     weapon_type: str
     incarnon: bool
     progenitor: bool  # Kuva/Tenet/Coda bonus element
+    mastery: int  # mastery rank needed
     image: str | None  # /img URL; None when the icon is not cached
 
 

@@ -173,12 +173,17 @@
 
 .gal.cell:hover .desc,.gal .mod:focus-visible .desc{margin-bottom:10px;flex-grow:1}
 
-@media (max-width:1180px){.deck,.exrow{zoom:.95}
-}
+.why{display:block;margin-top:6px;font:500 12px/1.15 Roboto,sans-serif;color:#e8c46a}
+.pick{padding:0;border:1px dashed transparent;cursor:pointer}
+.pick:hover{border-color:var(--color-gold)}
+/* Sized to the grid's own box, not the window: 4 columns are 802 px at zoom 1. */
+.wrap{container-type:inline-size}
+@container (max-width:949px){.deck,.exrow,.arcrow{zoom:1}}
+@container (max-width:829px){.deck,.exrow,.arcrow{zoom:.9}}
+@container (max-width:739px){.deck{grid-template-columns:repeat(2,184px);zoom:1}.exrow,.arcrow{zoom:1}}
+@container (max-width:419px){.deck{zoom:.9}}
+@container (max-width:359px){.deck{zoom:.8}.exrow,.arcrow{zoom:.9}}
 
-@media (max-width:760px){.deck{grid-template-columns:repeat(2,184px);zoom:.9}
-.exrow{zoom:1}
-}
 
 @media (prefers-reduced-motion:reduce){.mod,.cell,.name{transition:none}
 }

@@ -1,6 +1,8 @@
 from app.gamedata.models import Weapon
 from app.gamedata.store import GameData
 from app.optimize.builds import weapon_builds
+from app.optimize.scoring import build_loadout, combat_objective
+from app.optimize.search import rounded
 from app.optimize.variants import elements
 
 BUDGET = 20
@@ -53,3 +55,24 @@ def test_stored_builds_carry_a_forma_layout(gamedata: GameData) -> None:
     assert forma is not None
     assert forma.used <= forma.capacity
     assert len(forma.regular) == 8
+
+
+def test_why_this_mod_rescores_the_build_without_it(gamedata: GameData) -> None:
+    """F8: one entry per mod, exilus and arcane; the rest kept as is (no new search)."""
+    soma = _weapon(gamedata, "Soma Prime")
+    rec = weapon_builds(gamedata, soma, BUDGET).variants[0].recommended
+    keys = [*rec.mods, *([rec.exilus] if rec.exilus else []), *([rec.arcane] if rec.arcane else [])]
+    assert sorted(rec.without) == sorted(keys)
+    first, *rest = (gamedata.mod_by_id[m] for m in rec.mods)
+    exilus = gamedata.mod_by_id[rec.exilus] if rec.exilus else None
+    arcane = gamedata.arcane_by_id[rec.arcane] if rec.arcane else None
+    perks = [p for p in gamedata.incarnon_by_id[soma.unique_name].perks if p.name in rec.perks]
+    lo = build_loadout(gamedata, soma, rest, exilus, (arcane, *perks), None)
+    assert rec.without[first.unique_name] == rounded(combat_objective(gamedata)(lo))
+
+
+def test_max_build_has_why_values_too(gamedata: GameData) -> None:
+    out = weapon_builds(gamedata, _weapon(gamedata, "Soma Prime"), BUDGET).variants[0].max
+    assert set(out.without) == {*out.mods, *([out.exilus] if out.exilus else [])} | (
+        {out.arcane} if out.arcane else set()
+    )

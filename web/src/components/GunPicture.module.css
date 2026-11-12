@@ -1,0 +1,6 @@
+/* Gun icon box: DE icons are 512 x 512 with the gun across the width, so a square box
+   shows the whole gun at full width (no crop). */
+.pic{display:block;flex:none;width:112px;height:112px;object-fit:contain}
+.picSm{width:52px;height:52px}
+.blank{position:relative}
+.blank::after{content:"";position:absolute;left:calc(50% - 7px);top:calc(50% - 7px);width:12px;height:12px;border:1px solid #5a4c33;transform:rotate(45deg)}
