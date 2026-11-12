@@ -12,7 +12,7 @@ export function ModGrid({ stored, items, weaponType }: Props) {
   const { build, forma } = stored;
   const find = (id: string | null | undefined) => (id ? (mods.get(id) ?? null) : null);
   return (
-    <div>
+    <div className={s.wrap}>
       <div className={s.exrow}>
         <ModCard mod={find(build.exilus?.mod)} slot={forma?.exilus ?? null} label="Exilus" exilus />
       </div>

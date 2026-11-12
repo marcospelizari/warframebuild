@@ -25,6 +25,8 @@ def test_lists_every_gun_with_its_flags(client: TestClient, gamedata: GameData) 
     assert by_slug["lex-prime"]["image"] is None  # not cached
     assert by_slug["lex-prime"]["incarnon"] is True
     assert by_slug["kuva-hind"]["progenitor"] is True
+    soma = gamedata.weapon_by_slug["soma-prime"]
+    assert by_slug["soma-prime"]["mastery"] == soma.mastery_req
     assert {e["name"] for e in body["excluded"]} == {e.name for e in gamedata.meta.excluded_weapons}
 
 

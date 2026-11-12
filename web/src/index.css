@@ -19,22 +19,24 @@
   --font-game: Roboto, system-ui, sans-serif;
 }
 
-body {
-  margin: 0;
-  background: var(--color-bg);
-  color: var(--color-cream);
-  font-family: var(--font-sans);
-}
+@layer base {
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+  }
 
-a {
-  color: var(--color-cyan);
-}
+  a {
+    color: var(--color-cyan);
+  }
 
-a:hover {
-  color: var(--color-cream);
-}
+  a:hover {
+    color: var(--color-cream);
+  }
 
-:focus-visible {
-  outline: 2px solid var(--color-cyan);
-  outline-offset: 3px;
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 3px;
+  }
 }

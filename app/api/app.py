@@ -14,7 +14,7 @@ from pydantic import BaseModel
 from starlette.exceptions import HTTPException
 from starlette.types import Scope
 
-from app.api import errors, jobs
+from app.api import errors, jobs, pages
 from app.api.rate_limit import RateLimit
 from app.api.routes import builds, calc, img, mods, weapons
 from app.api.runner import Runner
@@ -100,6 +100,7 @@ def create_app(
     app.state.release = release
     app.state.img_dir = img_dir
     app.state.art_dir = art_dir
+    app.state.web_dist = web_dist
     app.state.builds_cache = {}
     app.state.rate_limit = RateLimit()
     # Injected data (tests) cannot reach a spawned process: threads share it instead.
@@ -118,6 +119,7 @@ def create_app(
         return Health(status="ok", version=version("warframebuild"))
 
     if web_dist.is_dir():
+        app.include_router(pages.router)  # before the mount: weapon URLs get their meta tags
         app.mount("/", SpaFiles(directory=web_dist, html=True), name="web")
     else:
 

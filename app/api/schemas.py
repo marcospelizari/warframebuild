@@ -189,6 +189,7 @@ class WeaponItem(ApiModel):
     weapon_type: str
     incarnon: bool
     progenitor: bool  # Kuva/Tenet/Coda bonus element
+    mastery: int  # mastery rank needed
     image: str | None  # /img URL; None when the icon is not cached
 
 

@@ -1,7 +1,6 @@
 import type { components } from "./types";
 
 type Schemas = components["schemas"];
-export type Health = Schemas["Health"];
 export type Build = Schemas["Build"];
 export type CalcRequest = Schemas["CalcRequest"];
 export type ApiError = Schemas["ApiError"];
@@ -14,10 +13,30 @@ export type ModItem = Schemas["ModItem"];
 export type ArcaneItem = Schemas["ArcaneItem"];
 export type Polarity = Schemas["Polarity"];
 export type DamageType = Schemas["DamageType"];
+export type Category = Schemas["Category"];
+export type WeaponItem = Schemas["WeaponItem"];
+export type WeaponRef = Schemas["WeaponRef"];
+export type WeaponList = Schemas["WeaponList"];
+export type ExcludedWeapon = Schemas["ExcludedWeapon"];
 
-async function failure(response: Response, what: string): Promise<Error> {
+/** A failed API call: HTTP status plus the API's error code when it sent one. */
+export class ApiFailure extends Error {
+  constructor(
+    message: string,
+    readonly status: number,
+    readonly code: string | null,
+  ) {
+    super(message);
+  }
+}
+
+async function failure(response: Response, what: string): Promise<ApiFailure> {
   const error = (await response.json().catch(() => null)) as ApiError | null;
-  return new Error(error?.message ?? `${what}: ${response.status}`);
+  return new ApiFailure(
+    error?.message ?? `${what}: ${response.status}`,
+    response.status,
+    error?.code ?? null,
+  );
 }
 
 async function getJson<T>(url: string): Promise<T> {
@@ -26,8 +45,8 @@ async function getJson<T>(url: string): Promise<T> {
   return (await response.json()) as T;
 }
 
-export function getHealth(): Promise<Health> {
-  return getJson("/api/health");
+export function getWeapons(): Promise<WeaponList> {
+  return getJson("/api/weapons");
 }
 
 export function getBuilds(slug: string): Promise<BuildsResponse> {

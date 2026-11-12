@@ -518,6 +518,8 @@ export interface components {
             image: string | null;
             /** Incarnon */
             incarnon: boolean;
+            /** Mastery */
+            mastery: number;
             /** Name */
             name: string;
             /** Progenitor */

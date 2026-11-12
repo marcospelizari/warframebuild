@@ -1,0 +1,18 @@
+/* Shared F (Orokin gilt) parts, from canvas F.css. */
+.gilt{position:relative;border:1px solid var(--color-gold);outline:1px solid rgba(207,164,72,.35);outline-offset:5px;background:var(--color-surface);margin:6px}
+.dia{position:absolute;width:9px;height:9px;background:var(--color-bg);border:1px solid var(--color-gold);transform:rotate(45deg)}
+.diaTop{top:-6px;left:calc(50% - 5px)}
+.diaBottom{bottom:-6px;left:calc(50% - 5px)}
+.orn{display:block;width:96px;height:9px;flex:none;background:linear-gradient(var(--color-gold),var(--color-gold)) 0 50%/100% 1px no-repeat}
+.orn::after{content:"";display:block;width:7px;height:7px;margin-left:auto;border:1px solid var(--color-gold);background:var(--color-bg);transform:rotate(45deg)}
+.ornLeft::after{margin-left:0}
+.chip{font:500 14px/1 var(--font-sans);padding:0 14px;min-height:44px;border:1px solid var(--color-line);border-radius:22px;background:transparent;color:var(--color-soft);cursor:pointer}
+.chip[aria-pressed="true"],.chip[aria-current="page"]{background:var(--color-gold);border-color:var(--color-gold);color:var(--color-bg)}
+.tab{position:relative;display:inline-block;text-decoration:none;font:400 22px/1 var(--font-display);padding:12px 4px 16px;margin:0 18px;border:0;background:none;color:var(--color-muted);cursor:pointer;min-height:48px}
+.tab[aria-pressed="true"],.tab[aria-current="page"]{color:var(--color-cream)}
+.tab[aria-pressed="true"]::after,.tab[aria-current="page"]::after{content:"";position:absolute;left:calc(50% - 4px);bottom:2px;width:7px;height:7px;background:var(--color-gold);transform:rotate(45deg)}
+.act{font:600 15px/1 var(--font-sans);min-height:44px;padding:0 22px;border-radius:22px;cursor:pointer;border:1px solid var(--color-gold);background:transparent;color:var(--color-cream)}
+.tag{font-size:12px;color:var(--color-gold);border:1px solid #5a4c33;padding:2px 7px;border-radius:10px;white-space:nowrap}
+.lnk{border:0;background:none;padding:0;font:inherit;color:var(--color-cyan);text-decoration:underline;cursor:pointer;min-height:44px}
+.srOnly{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:700px){.orn{display:none}.tab{margin:0 10px;font-size:19px}}

@@ -1,4 +1,12 @@
-import type { Build, BuildsResponse, ModItem, ModList, StoredBuild } from "@/api/client";
+import type {
+  Build,
+  BuildsResponse,
+  ModItem,
+  ModList,
+  StoredBuild,
+  WeaponItem,
+  WeaponList,
+} from "@/api/client";
 
 const empty = (index: number) => ({ index, mod: null, name: null, rank: null, polarity: null });
 
@@ -56,8 +64,21 @@ export const build: Build = {
   },
   dps: { direct_burst: 48210, direct_sustained: 40000, max_score: 300 },
   headshot: null,
-  combat: { level: 120, cap_s: 10, enemies: [], factions: [], score: 1 },
-  assumptions: [],
+  combat: {
+    level: 120,
+    cap_s: 10,
+    enemies: [
+      { name: "Lancer", unique_name: "/Lancer", faction: "Grineer", target: "Body", ttk: 0.5, removed: 1, cost: 0.5 },
+      { name: "Bombard", unique_name: "/Bombard", faction: "Grineer", target: "Body", ttk: null, removed: 0.4, cost: 25 },
+      { name: "Crewman", unique_name: "/Crewman", faction: "Corpus", target: "Body", ttk: 0.25, removed: 1, cost: 0.25 },
+    ],
+    factions: [
+      { faction: "Grineer", score: 3.54 },
+      { faction: "Corpus", score: 0.25 },
+    ],
+    score: 0.94,
+  },
+  assumptions: [{ id: "max_rank", text: "Mods at max rank, Orokin Catalyst installed" }],
 };
 
 export const stored: StoredBuild = {
@@ -103,5 +124,38 @@ export const builds: BuildsResponse = {
   dataset_hash: "h",
   weapon: build.weapon,
   elements: [],
-  variants: [{ element: null, max: stored, recommended: stored, factions: {}, denominators: {} }],
+  variants: [
+    {
+      element: null,
+      max: stored,
+      recommended: stored,
+      factions: { Grineer: stored, "The Murmur": stored },
+      denominators: {},
+    },
+  ],
+};
+
+const gun = (slug: string, name: string, extra: Partial<WeaponItem> = {}): WeaponItem => ({
+  slug,
+  name,
+  category: "primary",
+  weapon_type: "Rifle",
+  incarnon: false,
+  progenitor: false,
+  mastery: 8,
+  image: null,
+  ...extra,
+});
+
+export const weaponList: WeaponList = {
+  dataset_hash: "h",
+  weapons: [
+    gun("soma-prime", "Soma Prime", { incarnon: true, image: "/img/weapons/soma-prime.png" }),
+    gun("soma", "Soma"),
+    gun("kuva-soma", "Kuva Soma", { progenitor: true }),
+    gun("tigris-prime", "Tigris Prime", { weapon_type: "Shotgun" }),
+    gun("lex-prime", "Lex Prime", { category: "secondary", weapon_type: "Pistol" }),
+    ...Array.from({ length: 31 }, (_, i) => gun(`braton-${i}`, `Braton ${i}`)),
+  ],
+  excluded: [{ name: "Sirocco", reason: "a Drifter weapon" }],
 };
