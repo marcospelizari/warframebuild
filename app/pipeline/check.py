@@ -8,16 +8,14 @@ sources, reference rows verified before the last data change, and the wiki pages
 
 import json
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from pydantic import BaseModel
-
 from app.domain.effects import Support
 from app.gamedata.models import SourceRecord
-from app.gamedata.store import GameData
 from app.pipeline.build import Dataset
+from app.pipeline.changes import EntryDiff
 from app.pipeline.sources import Fetched, export_plus, saved_date, sha256_16, wfcd
 from app.pipeline.sources import de_export as de
 from app.pipeline.sources.http import PoliteClient
@@ -117,49 +115,7 @@ def stale_rows(rows: list[RefRow], changed_on: str) -> list[RefRow]:
     return [r for r in rows if r.verified < changed_on]
 
 
-# ---------- entry diff ----------
-
-
-@dataclass
-class EntryDiff:
-    new: dict[str, list[str]] = field(default_factory=dict)  # kind -> names
-    changed: dict[str, list[str]] = field(default_factory=dict)
-    removed: dict[str, list[str]] = field(default_factory=dict)
-    ids: set[str] = field(default_factory=set)  # every new/changed/removed uniqueName
-    unavailable: str | None = None  # previous dataset could not be read: no diff possible
-
-    @property
-    def empty(self) -> bool:
-        return self.unavailable is None and not self.ids
-
-
-def entry_diff(
-    previous: GameData | None, previous_error: str | None, dataset: Dataset
-) -> EntryDiff:
-    if previous_error is not None:
-        return EntryDiff(unavailable=previous_error)
-    diff = EntryDiff()
-    if previous is None:
-        return diff  # first refresh: nothing to compare with
-    kinds: dict[str, tuple[list[Any], list[Any]]] = {
-        "weapons": (previous.weapons, dataset.weapons),
-        "mods": (previous.mods.mods, dataset.mods),
-        "arcanes": (previous.arcanes, dataset.arcanes),
-    }
-    for kind, (old, new) in kinds.items():
-        before = {e.unique_name: e for e in old}
-        after = {e.unique_name: e for e in new}
-        changed_ids = {u for u in after.keys() & before.keys() if _differs(before[u], after[u])}
-        diff.new[kind] = sorted(after[u].name for u in after.keys() - before.keys())
-        diff.removed[kind] = sorted(before[u].name for u in before.keys() - after.keys())
-        diff.changed[kind] = sorted(after[u].name for u in changed_ids)
-        diff.ids |= (after.keys() ^ before.keys()) | changed_ids
-    return diff
-
-
-def _differs(a: BaseModel, b: BaseModel) -> bool:
-    # Slugs can move when a new namesake appears; that is not a data change.
-    return a.model_dump(exclude={"slug"}) != b.model_dump(exclude={"slug"})
+# ---------- rows touched by the entry diff ----------
 
 
 def touched_rows(rows: list[RefRow], diff: EntryDiff) -> list[RefRow]:
@@ -239,8 +195,8 @@ def source_lines(changes: list[str] | None) -> list[str]:
 def diff_lines(diff: EntryDiff, touched: list[RefRow], changed_on: str) -> list[str]:
     if diff.unavailable is not None:
         out = [
-            f"entries: previous dataset unreadable ({diff.unavailable}); "
-            "diff unavailable, re-check every reference row"
+            f"entries: no comparison with the previous dataset ({diff.unavailable}); "
+            "re-check every reference row"
         ]
     elif diff.empty:
         return ["entries: no new, changed or removed weapons, mods or arcanes"]

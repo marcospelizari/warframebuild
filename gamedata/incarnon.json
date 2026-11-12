@@ -36,6 +36,10 @@
     },
     "form": "both",
     "name": "Final Fusillade",
+    "text": [
+     "Increase Base Damage by +51.",
+     "+3 Multishot on last shot in magazine."
+    ],
     "tier": 2
    },
    {
@@ -68,6 +72,10 @@
     },
     "form": "both",
     "name": "Plentiful Mayhem",
+    "text": [
+     "Increase Base Damage by +31.",
+     "Multishot consumes ammo directly from Capacity and increases Damage by +60%."
+    ],
     "tier": 2
    },
    {
@@ -80,6 +88,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+50% Projectile Speed"
+    ],
     "tier": 3
    },
    {
@@ -94,6 +105,9 @@
     },
     "form": "both",
     "name": "Renewed Horror",
+    "text": [
+     "On Reload from Empty: Lingering damage field duration doubles on first shot."
+    ],
     "tier": 3
    },
    {
@@ -123,6 +137,9 @@
     },
     "form": "normal",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +9."
+    ],
     "tier": 3
    },
    {
@@ -152,6 +169,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +20%."
+    ],
     "tier": 4
    },
    {
@@ -197,6 +217,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +15%.",
+     "Increase Base Status Chance by +15%."
+    ],
     "tier": 4
    },
    {
@@ -226,6 +250,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +34%."
+    ],
     "tier": 4
    }
   ],
@@ -282,6 +309,10 @@
     },
     "form": "both",
     "name": "Crimson Overture",
+    "text": [
+     "Increase Base Damage by +6.",
+     "On Kill: +20% Ammo Efficiency for 5s. Stacks up to 4x."
+    ],
     "tier": 2
    },
    {
@@ -327,6 +358,10 @@
     },
     "form": "both",
     "name": "Paragon Essence",
+    "text": [
+     "Increase Base Damage by +4.",
+     "On Status Effect: +5% Fire Rate for 5s. Stacks up to 6x."
+    ],
     "tier": 2
    },
    {
@@ -339,6 +374,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+50% Projectile Speed"
+    ],
     "tier": 3
    },
    {
@@ -368,6 +406,9 @@
     },
     "form": "normal",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +30"
+    ],
     "tier": 3
    },
    {
@@ -382,6 +423,9 @@
     },
     "form": "both",
     "name": "Evolved Autoloader",
+    "text": [
+     "+50% Magazine Reloaded per second when Holstered."
+    ],
     "tier": 3
    },
    {
@@ -427,6 +471,10 @@
     },
     "form": "both",
     "name": "Deathtrap Trigger",
+    "text": [
+     "Increase Base Critical Chance by +14%",
+     "Increase Base Critical Damage Multiplier by +0.4x"
+    ],
     "tier": 4
    },
    {
@@ -441,6 +489,9 @@
     },
     "form": "both",
     "name": "High Ground",
+    "text": [
+     "Increase Base Critical Chance by 25% of current Status Chance, up to 35%."
+    ],
     "tier": 4
    },
    {
@@ -470,6 +521,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +14%"
+    ],
     "tier": 4
    }
   ],
@@ -526,6 +580,10 @@
     },
     "form": "both",
     "name": "Crimson Overture",
+    "text": [
+     "Increase Base Damage by +8.",
+     "On Kill: +20% Ammo Efficiency for 5s. Stacks up to 4x."
+    ],
     "tier": 2
    },
    {
@@ -571,6 +629,10 @@
     },
     "form": "both",
     "name": "Paragon Essence",
+    "text": [
+     "Increase Base Damage by +6.",
+     "On Status Effect: +5% Fire Rate for 5s. Stacks up to 6x."
+    ],
     "tier": 2
    },
    {
@@ -583,6 +645,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+50% Projectile Speed"
+    ],
     "tier": 3
    },
    {
@@ -612,6 +677,9 @@
     },
     "form": "normal",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +22"
+    ],
     "tier": 3
    },
    {
@@ -626,6 +694,9 @@
     },
     "form": "both",
     "name": "Evolved Autoloader",
+    "text": [
+     "+50% Magazine Reloaded per second when Holstered."
+    ],
     "tier": 3
    },
    {
@@ -671,6 +742,10 @@
     },
     "form": "both",
     "name": "Deathtrap Trigger",
+    "text": [
+     "Increase Base Critical Chance by +14%",
+     "Increase Base Critical Damage Multiplier by +0.6x"
+    ],
     "tier": 4
    },
    {
@@ -685,6 +760,9 @@
     },
     "form": "both",
     "name": "High Ground",
+    "text": [
+     "Increase Base Critical Chance by 25% of current Status Chance, up to 35%."
+    ],
     "tier": 4
    },
    {
@@ -714,6 +792,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +18%"
+    ],
     "tier": 4
    }
   ],
@@ -756,6 +837,10 @@
     },
     "form": "both",
     "name": "Steadfast Grit",
+    "text": [
+     "Increase Base Damage by +10.",
+     "On Shield/Overguard break: x3 Critical Damage for 6s."
+    ],
     "tier": 2
    },
    {
@@ -787,6 +872,10 @@
     },
     "form": "both",
     "name": "Fortress Salvo",
+    "text": [
+     "Increase Base Damage by +10.",
+     "With Armor Over 450: +80% Multishot."
+    ],
     "tier": 2
    },
    {
@@ -816,6 +905,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -828,6 +920,9 @@
     },
     "form": "both",
     "name": "Slayer's Nerve",
+    "text": [
+     "On Hit: +6% Accuracy and -6% Weapon Recoil for 6s. Stacks up to 10x."
+    ],
     "tier": 3
    },
    {
@@ -840,6 +935,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+50% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -869,6 +967,9 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +18%."
+    ],
     "tier": 4
    },
    {
@@ -898,6 +999,9 @@
     },
     "form": "both",
     "name": "Deathtrap Trigger",
+    "text": [
+     "Increase Base Critical Damage Multiplier by +2x."
+    ],
     "tier": 4
    },
    {
@@ -912,6 +1016,9 @@
     },
     "form": "both",
     "name": "Wiseman's Regard",
+    "text": [
+     "Increase Base Status Chance by 30% of current Critical Chance, up to 40%."
+    ],
     "tier": 4
    }
   ],
@@ -954,6 +1061,10 @@
     },
     "form": "both",
     "name": "Haven Foray",
+    "text": [
+     "Increase Base Damage by +50.",
+     "With Overshields: Increase Damage by +50."
+    ],
     "tier": 2
    },
    {
@@ -969,6 +1080,10 @@
     },
     "form": "both",
     "name": "Paladin Virtue",
+    "text": [
+     "Increase Damage by +75.",
+     "With Energy Max Over 700: Increase Critical Damage Multiplier by +0.5x."
+    ],
     "tier": 2
    },
    {
@@ -981,6 +1096,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+30% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -1010,6 +1128,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -1024,6 +1145,9 @@
     },
     "form": "normal",
     "name": "Hitman's Hoard",
+    "text": [
+     "Increase ammo maximum by +9."
+    ],
     "tier": 3
    },
    {
@@ -1039,6 +1163,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Critical Chance by +14%.",
+     "Increase Critical Damage Multiplier by +0.2x."
+    ],
     "tier": 4
    },
    {
@@ -1054,6 +1182,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Critical Chance by +9%.",
+     "Increase Status Chance by +9%."
+    ],
     "tier": 4
    },
    {
@@ -1083,6 +1215,9 @@
     },
     "form": "both",
     "name": "Fatal Affliction",
+    "text": [
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 4
    }
   ],
@@ -1125,6 +1260,10 @@
     },
     "form": "both",
     "name": "Haven Foray",
+    "text": [
+     "Increase Base Damage by +50.",
+     "With Overshields: Increase Damage by +50."
+    ],
     "tier": 2
    },
    {
@@ -1140,6 +1279,10 @@
     },
     "form": "both",
     "name": "Paladin Virtue",
+    "text": [
+     "Increase Damage by +75.",
+     "With Energy Max Over 700: Increase Critical Damage Multiplier by +0.5x."
+    ],
     "tier": 2
    },
    {
@@ -1152,6 +1295,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+30% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -1181,6 +1327,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -1195,6 +1344,9 @@
     },
     "form": "normal",
     "name": "Hitman's Hoard",
+    "text": [
+     "Increase ammo maximum by +9."
+    ],
     "tier": 3
    },
    {
@@ -1210,6 +1362,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Critical Chance by +10%.",
+     "Increase Critical Damage Multiplier by +0.2x."
+    ],
     "tier": 4
    },
    {
@@ -1225,6 +1381,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Critical Chance by +6%.",
+     "Increase Status Chance by +6%."
+    ],
     "tier": 4
    },
    {
@@ -1254,6 +1414,9 @@
     },
     "form": "both",
     "name": "Fatal Affliction",
+    "text": [
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 4
    }
   ],
@@ -1297,6 +1460,10 @@
     },
     "form": "both",
     "name": "Swift Sawblades",
+    "text": [
+     "Increase Base Damage by +77.",
+     "With Channeled Ability active: +70% Fire Rate."
+    ],
     "tier": 2
    },
    {
@@ -1328,6 +1495,10 @@
     },
     "form": "both",
     "name": "Plentiful Mayhem",
+    "text": [
+     "Increase Base Damage by +57.",
+     "Multishot consumes ammo directly from Capacity and increases Damage by +20."
+    ],
     "tier": 2
    },
    {
@@ -1340,6 +1511,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+50% Projectile Speed"
+    ],
     "tier": 3
    },
    {
@@ -1354,6 +1528,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload from Empty: +100% Reload Speed"
+    ],
     "tier": 3
    },
    {
@@ -1368,6 +1545,9 @@
     },
     "form": "normal",
     "name": "Mercenary Chamber",
+    "text": [
+     "Increase Base Ammo Capacity to 160"
+    ],
     "tier": 3
    },
    {
@@ -1382,6 +1562,9 @@
     },
     "form": "normal",
     "name": "Sawblade Storm",
+    "text": [
+     "Hold charged shot for 1s to increase area of effect."
+    ],
     "tier": 4
    },
    {
@@ -1411,6 +1594,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +22%"
+    ],
     "tier": 4
    },
    {
@@ -1456,6 +1642,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +12%",
+     "Increase Base Status Chance by +12%"
+    ],
     "tier": 4
    }
   ],
@@ -1499,6 +1689,10 @@
     },
     "form": "both",
     "name": "Hunter's Mantra",
+    "text": [
+     "Increase Base Damage by +5.",
+     "With Channeled Ability Active: +3 Punch Through, +40% Accuracy."
+    ],
     "tier": 2
    },
    {
@@ -1530,6 +1724,10 @@
     },
     "form": "both",
     "name": "Hoplite Virtue",
+    "text": [
+     "Increase Base Damage by +5.",
+     "On Shield Break: Increase Base Damage by +8 for 8s."
+    ],
     "tier": 2
    },
    {
@@ -1544,6 +1742,9 @@
     },
     "form": "both",
     "name": "Resonant Restore",
+    "text": [
+     "On Reload From Empty: Increase Base Magazine Capacity by +15. Stacks up to 3x."
+    ],
     "tier": 3
    },
    {
@@ -1573,6 +1774,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed"
+    ],
     "tier": 3
    },
    {
@@ -1585,6 +1789,9 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -1630,6 +1837,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +2%.",
+     "Increase Base Status Chance by +6%."
+    ],
     "tier": 4
    },
    {
@@ -1659,6 +1870,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +12%"
+    ],
     "tier": 4
    },
    {
@@ -1688,6 +1902,9 @@
     },
     "form": "both",
     "name": "Absolute Valor",
+    "text": [
+     "Increase Base Critical Chance by +6%."
+    ],
     "tier": 4
    }
   ],
@@ -1731,6 +1948,10 @@
     },
     "form": "both",
     "name": "Hunter's Mantra",
+    "text": [
+     "Increase Base Damage by +5.",
+     "With Channeled Ability Active: +3 Punch Through, +40% Accuracy."
+    ],
     "tier": 2
    },
    {
@@ -1762,6 +1983,10 @@
     },
     "form": "both",
     "name": "Hoplite Virtue",
+    "text": [
+     "Increase Base Damage by +5.",
+     "On Shield Break: Increase Base Damage by +8 for 8s."
+    ],
     "tier": 2
    },
    {
@@ -1776,6 +2001,9 @@
     },
     "form": "both",
     "name": "Resonant Restore",
+    "text": [
+     "On Reload From Empty: Increase Base Magazine Capacity by +15. Stacks up to 3x."
+    ],
     "tier": 3
    },
    {
@@ -1805,6 +2033,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed"
+    ],
     "tier": 3
    },
    {
@@ -1817,6 +2048,9 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -1862,6 +2096,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +8%.",
+     "Increase Base Status Chance by +6%."
+    ],
     "tier": 4
    },
    {
@@ -1891,6 +2129,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +14%"
+    ],
     "tier": 4
    },
    {
@@ -1920,6 +2161,9 @@
     },
     "form": "both",
     "name": "Absolute Valor",
+    "text": [
+     "Increase Base Critical Chance by +14%."
+    ],
     "tier": 4
    }
   ],
@@ -1964,6 +2208,10 @@
     },
     "form": "both",
     "name": "Blazing Barrel",
+    "text": [
+     "Increase Base Damage by +175.",
+     "On Firing: +5% Multishot. Stacks up to 10x"
+    ],
     "tier": 2
    },
    {
@@ -1995,6 +2243,10 @@
     },
     "form": "both",
     "name": "Overcharge Blast",
+    "text": [
+     "Increase Base Damage by +300.",
+     "With Energy Max above 700: +50% Blast Radius"
+    ],
     "tier": 2
    },
    {
@@ -2024,6 +2276,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed"
+    ],
     "tier": 3
    },
    {
@@ -2036,6 +2291,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+50% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -2050,6 +2308,9 @@
     },
     "form": "both",
     "name": "Resonant Restore",
+    "text": [
+     "On Reload From Empty: Increase Base Magazine Capacity by +10. Stacks up to 3x."
+    ],
     "tier": 3
    },
    {
@@ -2095,6 +2356,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +15%.",
+     "Increase Base Status Chance by +15%."
+    ],
     "tier": 4
    },
    {
@@ -2140,6 +2405,10 @@
     },
     "form": "both",
     "name": "Deathtrap Trigger",
+    "text": [
+     "Increase Base Critical Chance by +25%.",
+     "Increase Base Critical Damage Multiplier by +1.5x."
+    ],
     "tier": 4
    },
    {
@@ -2155,6 +2424,9 @@
     },
     "form": "both",
     "name": "Elemental Dominance",
+    "text": [
+     "Increase Base Status Chance by +20%. Effect doubles in Incarnon Form."
+    ],
     "tier": 4
    }
   ],
@@ -2182,6 +2454,10 @@
     },
     "form": "both",
     "name": "Paladin Virtue",
+    "text": [
+     "Increase Damage by +24.",
+     "With Energy Max over 700: Increase Critical Damage Multiplier by +1x."
+    ],
     "tier": 2
    },
    {
@@ -2197,6 +2473,10 @@
     },
     "form": "both",
     "name": "Hoplite Virtue",
+    "text": [
+     "Increase Damage by +24.",
+     "On Shield Break: Increase Damage by +30 for 8s."
+    ],
     "tier": 2
    },
    {
@@ -2211,6 +2491,9 @@
     },
     "form": "both",
     "name": "Moonrise Velocity",
+    "text": [
+     "+7 Range."
+    ],
     "tier": 3
    },
    {
@@ -2225,6 +2508,9 @@
     },
     "form": "both",
     "name": "Mercenary Chamber",
+    "text": [
+     "Increase ammo capacity to 560."
+    ],
     "tier": 3
    },
    {
@@ -2239,6 +2525,9 @@
     },
     "form": "normal",
     "name": "Resonant Restore",
+    "text": [
+     "On Reload From Empty: Increase magazine capacity by +5. Stacks up to 7x."
+    ],
     "tier": 3
    },
    {
@@ -2253,6 +2542,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Status Chance by +20%."
+    ],
     "tier": 4
    },
    {
@@ -2267,6 +2559,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Critical Chance by +19%."
+    ],
     "tier": 4
    },
    {
@@ -2282,6 +2577,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Critical Chance by +10%.",
+     "Increase Status Chance by +10%."
+    ],
     "tier": 4
    }
   ],
@@ -2324,6 +2623,10 @@
     },
     "form": "both",
     "name": "Carnage Reign",
+    "text": [
+     "Increase Damage by +60.",
+     "+33% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 2
    },
    {
@@ -2355,6 +2658,10 @@
     },
     "form": "both",
     "name": "Fevered Frenzy",
+    "text": [
+     "Increase Damage by +50.",
+     "On Ability Cast: +5% Multishot. Stacks up to 20x."
+    ],
     "tier": 2
    },
    {
@@ -2369,6 +2676,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload from Empty: +100% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -2381,6 +2691,9 @@
     },
     "form": "both",
     "name": "Evolved Autoloader",
+    "text": [
+     "+50% Magazine Reloaded/s when holstered."
+    ],
     "tier": 3
    },
    {
@@ -2393,6 +2706,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -2407,6 +2723,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Critical Chance by +20%."
+    ],
     "tier": 4
    },
    {
@@ -2436,6 +2755,9 @@
     },
     "form": "both",
     "name": "Neurotoxin",
+    "text": [
+     "On Headshot: +70% Toxin for 3s."
+    ],
     "tier": 4
    },
    {
@@ -2448,6 +2770,9 @@
     },
     "form": "both",
     "name": "Ripper Rounds",
+    "text": [
+     "On Kill: +3 Punch Through for 7s."
+    ],
     "tier": 4
    }
   ],
@@ -2490,6 +2815,10 @@
     },
     "form": "both",
     "name": "Haven Foray",
+    "text": [
+     "Increase Base Damage by +34.",
+     "With Overshields: Increase Base Damage by +30."
+    ],
     "tier": 2
    },
    {
@@ -2521,6 +2850,10 @@
     },
     "form": "both",
     "name": "Stormburst",
+    "text": [
+     "Increase Base Damage by +34.",
+     "On hitting enemies affected by Electricity Status: +0.4 Multishot for 2s. Stacks up to 3x."
+    ],
     "tier": 2
    },
    {
@@ -2533,6 +2866,9 @@
     },
     "form": "both",
     "name": "Practiced Grip",
+    "text": [
+     "Increase Accuracy by +50%"
+    ],
     "tier": 3
    },
    {
@@ -2562,6 +2898,9 @@
     },
     "form": "normal",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +25."
+    ],
     "tier": 3
    },
    {
@@ -2576,6 +2915,9 @@
     },
     "form": "both",
     "name": "Executioner's Fortune",
+    "text": [
+     "On Headshot: 10% chance for Instant Reload"
+    ],
     "tier": 3
    },
    {
@@ -2605,6 +2947,9 @@
     },
     "form": "both",
     "name": "Headcracker",
+    "text": [
+     "On Headshot: +5% Fire Rate for 2s. Stacks up to 10x."
+    ],
     "tier": 4
    },
    {
@@ -2619,6 +2964,9 @@
     },
     "form": "both",
     "name": "Prelude of Might",
+    "text": [
+     "With Critical Chance below 40%: Increase Base Critical Damage Multiplier by +3x."
+    ],
     "tier": 4
    },
    {
@@ -2648,6 +2996,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +39%."
+    ],
     "tier": 4
    }
   ],
@@ -2675,6 +3026,10 @@
     },
     "form": "both",
     "name": "Swift Conclusion",
+    "text": [
+     "Increase Damage by +80.",
+     "Increase Damage by +200% if enemy has less than half health."
+    ],
     "tier": 2
    },
    {
@@ -2706,6 +3061,10 @@
     },
     "form": "both",
     "name": "Sage's Resolve",
+    "text": [
+     "Increase Base Damage by +80",
+     "With Channeled Ability active: +100% Multishot."
+    ],
     "tier": 2
    },
    {
@@ -2718,6 +3077,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+60% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -2747,6 +3109,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +10."
+    ],
     "tier": 3
    },
    {
@@ -2776,6 +3141,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -2821,6 +3189,11 @@
     },
     "form": "both",
     "name": "Deathtrap Trigger",
+    "text": [
+     "On equip from Primary:",
+     "Increase Base Critical Chance by +42% for 4s.",
+     "Increase Base Critical Damage Multiplier by +1x for 4s."
+    ],
     "tier": 4
    },
    {
@@ -2835,6 +3208,9 @@
     },
     "form": "both",
     "name": "Accelerating Volley",
+    "text": [
+     "On Fire: +20% Fire Rate for 0.5s. Stacks up to 5x."
+    ],
     "tier": 4
    },
    {
@@ -2880,6 +3256,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +12%.",
+     "Increase Base Status Chance by +12%."
+    ],
     "tier": 4
    }
   ],
@@ -2922,6 +3302,10 @@
     },
     "form": "both",
     "name": "Deadly Pace",
+    "text": [
+     "Increase Base Damage by +50.",
+     "With Sprint Speed 1.2 or Higher: +80% Fire Rate."
+    ],
     "tier": 2
    },
    {
@@ -2953,6 +3337,10 @@
     },
     "form": "both",
     "name": "Guardian's Might",
+    "text": [
+     "Increase Base Damage by +50.",
+     "With Overshields: Increase Base Damage by +40."
+    ],
     "tier": 2
    },
    {
@@ -2967,6 +3355,9 @@
     },
     "form": "both",
     "name": "Ardent Trigger",
+    "text": [
+     "On Punch Through Hit: +40% Fire Rate for 6s."
+    ],
     "tier": 3
    },
    {
@@ -2979,6 +3370,9 @@
     },
     "form": "both",
     "name": "Markman's Focus",
+    "text": [
+     "-30% Zoom."
+    ],
     "tier": 3
    },
    {
@@ -2991,6 +3385,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+60% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -3006,6 +3403,10 @@
     },
     "form": "both",
     "name": "Vicious Promise",
+    "text": [
+     "Increase Base Critical Chance by +40% on undamaged enemies.",
+     "Increase Base Critical Damage Multiplier by +2x on undamaged enemies."
+    ],
     "tier": 4
    },
    {
@@ -3035,6 +3436,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +60%."
+    ],
     "tier": 4
    },
    {
@@ -3064,6 +3468,9 @@
     },
     "form": "both",
     "name": "Striking Succession",
+    "text": [
+     "On Hit: Increase Base Damage by +15 for 3s. Stacks up to 4x."
+    ],
     "tier": 4
    }
   ],
@@ -3105,6 +3512,10 @@
     },
     "form": "both",
     "name": "Tenno Targeting",
+    "text": [
+     "Increase Base Damage by +68.",
+     "With Channeled Ability Active: +4 Punch Through"
+    ],
     "tier": 2
    },
    {
@@ -3136,6 +3547,10 @@
     },
     "form": "both",
     "name": "Blazing Barrel",
+    "text": [
+     "Increase Base Damage by +68.",
+     "On Firing: +0.05 Base Multishot. Stacks up to 5x."
+    ],
     "tier": 2
    },
    {
@@ -3165,6 +3580,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -3179,6 +3597,9 @@
     },
     "form": "normal",
     "name": "Galvanic Reload",
+    "text": [
+     "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool."
+    ],
     "tier": 3
    },
    {
@@ -3191,6 +3612,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+30% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -3236,6 +3660,10 @@
     },
     "form": "incarnon",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +11%.",
+     "Increase Base Status Chance by +110% for Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -3265,6 +3693,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +10%."
+    ],
     "tier": 4
    },
    {
@@ -3326,6 +3757,11 @@
     },
     "form": "incarnon",
     "name": "Brutal Edge",
+    "text": [
+     "Increase Base Critical Chance by +2%.",
+     "Increase Base Status Chance by +2%.",
+     "Increase Base Status Chance by +20% for Incarnon Form."
+    ],
     "tier": 4
    }
   ],
@@ -3368,6 +3804,10 @@
     },
     "form": "both",
     "name": "Hunter's Mantra",
+    "text": [
+     "Increase Base Damage by +4.",
+     "With Channeled Ability active: Punch Through +4 and +40% Accuracy."
+    ],
     "tier": 2
    },
    {
@@ -3399,6 +3839,10 @@
     },
     "form": "both",
     "name": "Crimson Overture",
+    "text": [
+     "Increase Base Damage by +0.",
+     "On Kill: Increase Base Damage by +2 and +20% Ammo Efficiency for 5 seconds. Stacks up to 3x"
+    ],
     "tier": 2
    },
    {
@@ -3411,6 +3855,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+60% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -3440,6 +3887,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +20."
+    ],
     "tier": 3
    },
    {
@@ -3469,6 +3919,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -3498,6 +3951,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +20%"
+    ],
     "tier": 4
    },
    {
@@ -3543,6 +3999,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +4%",
+     "Increase Base Status Chance by +4%"
+    ],
     "tier": 4
    },
    {
@@ -3572,6 +4032,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +6%"
+    ],
     "tier": 4
    }
   ],
@@ -3615,6 +4078,10 @@
     },
     "form": "both",
     "name": "Sage's Resolve",
+    "text": [
+     "Increase Base Damage by +10.",
+     "With Channeled Ability Active: +25% Multishot."
+    ],
     "tier": 2
    },
    {
@@ -3646,6 +4113,10 @@
     },
     "form": "both",
     "name": "Infused Shots",
+    "text": [
+     "Increase Base Damage by +6.",
+     "On 50 Energy Spent: Increase Base Damage by +5 for 10s. Stacks up to 4x."
+    ],
     "tier": 2
    },
    {
@@ -3658,6 +4129,9 @@
     },
     "form": "both",
     "name": "Evolved Autoloader",
+    "text": [
+     "+50% Magazine Reloaded/s when Holstered"
+    ],
     "tier": 3
    },
    {
@@ -3672,6 +4146,9 @@
     },
     "form": "both",
     "name": "Moonrise Velocity",
+    "text": [
+     "+8 Range"
+    ],
     "tier": 3
    },
    {
@@ -3701,6 +4178,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +40."
+    ],
     "tier": 3
    },
    {
@@ -3746,6 +4226,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +20%.",
+     "Increase Base Critical Damage Multiplier by +0.2x."
+    ],
     "tier": 4
    },
    {
@@ -3791,6 +4275,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +12%.",
+     "Increase Base Status Chance by +10%."
+    ],
     "tier": 4
    },
    {
@@ -3820,6 +4308,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +20%."
+    ],
     "tier": 4
    }
   ],
@@ -3863,6 +4354,10 @@
     },
     "form": "both",
     "name": "Sage's Resolve",
+    "text": [
+     "Increase Base Damage by +10.",
+     "With Channeled Ability Active: +25% Multishot."
+    ],
     "tier": 2
    },
    {
@@ -3894,6 +4389,10 @@
     },
     "form": "both",
     "name": "Infused Shots",
+    "text": [
+     "Increase Base Damage by +6.",
+     "On 50 Energy Spent: Increase Base Damage by +5 for 10s. Stacks up to 4x."
+    ],
     "tier": 2
    },
    {
@@ -3906,6 +4405,9 @@
     },
     "form": "both",
     "name": "Evolved Autoloader",
+    "text": [
+     "+50% Magazine Reloaded/s when Holstered"
+    ],
     "tier": 3
    },
    {
@@ -3920,6 +4422,9 @@
     },
     "form": "both",
     "name": "Moonrise Velocity",
+    "text": [
+     "+8 Range"
+    ],
     "tier": 3
    },
    {
@@ -3949,6 +4454,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +40."
+    ],
     "tier": 3
    },
    {
@@ -3994,6 +4502,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +10%.",
+     "Increase Base Critical Damage Multiplier by +0.2x."
+    ],
     "tier": 4
    },
    {
@@ -4039,6 +4551,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +6%.",
+     "Increase Base Status Chance by +6%."
+    ],
     "tier": 4
    },
    {
@@ -4068,6 +4584,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +10%."
+    ],
     "tier": 4
    }
   ],
@@ -4124,6 +4643,10 @@
     },
     "form": "both",
     "name": "Headcracker",
+    "text": [
+     "Increase Base Damage by +10.",
+     "On Headshot: +7.5% Fire Rate for 4s. Stacks up to 10x."
+    ],
     "tier": 2
    },
    {
@@ -4155,6 +4678,10 @@
     },
     "form": "both",
     "name": "Prolific Perforation",
+    "text": [
+     "Increase Base Damage by +10.",
+     "On Punch Through Hit: +10% Critical Chance for 3s. Stacks up to 8x."
+    ],
     "tier": 2
    },
    {
@@ -4184,6 +4711,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed"
+    ],
     "tier": 3
    },
    {
@@ -4196,6 +4726,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+50% Projectile Speed"
+    ],
     "tier": 3
    },
    {
@@ -4208,6 +4741,10 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+40% Accuracy",
+     "-40% Weapon Recoil"
+    ],
     "tier": 3
    },
    {
@@ -4223,6 +4760,10 @@
     },
     "form": "incarnon",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status by +20% per projectile.",
+     "Increase Base Status by +20% for Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -4255,6 +4796,11 @@
     },
     "form": "incarnon",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +8%.",
+     "Increase Base Status by +8% per projectile.",
+     "Increase Base Status by +8% for Incarnon Form"
+    ],
     "tier": 4
    },
    {
@@ -4300,6 +4846,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +14%.",
+     "Increase Base Critical Damage Multiplier by +1.0x."
+    ],
     "tier": 4
    }
   ],
@@ -4342,6 +4892,10 @@
     },
     "form": "both",
     "name": "Deadly Pace",
+    "text": [
+     "Increase Base Damage by +40.",
+     "With Sprint Speed 1.2 or Higher: +80% Fire Rate."
+    ],
     "tier": 2
    },
    {
@@ -4373,6 +4927,10 @@
     },
     "form": "both",
     "name": "Guardian's Might",
+    "text": [
+     "Increase Base Damage by +40.",
+     "With Overshields: Increase Base Damage by +52."
+    ],
     "tier": 2
    },
    {
@@ -4387,6 +4945,9 @@
     },
     "form": "both",
     "name": "Ardent Trigger",
+    "text": [
+     "On Punch Through Hit: +40% Fire Rate for 6s."
+    ],
     "tier": 3
    },
    {
@@ -4399,6 +4960,9 @@
     },
     "form": "both",
     "name": "Markman's Focus",
+    "text": [
+     "-30% Zoom."
+    ],
     "tier": 3
    },
    {
@@ -4411,6 +4975,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+60% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -4426,6 +4993,10 @@
     },
     "form": "both",
     "name": "Vicious Promise",
+    "text": [
+     "Increase Base Critical Chance by +40% on undamaged enemies.",
+     "Increase Base Critical Damage Multiplier by +2x on undamaged enemies."
+    ],
     "tier": 4
    },
    {
@@ -4455,6 +5026,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +60%."
+    ],
     "tier": 4
    },
    {
@@ -4484,6 +5058,9 @@
     },
     "form": "both",
     "name": "Striking Succession",
+    "text": [
+     "On Hit: Increase Base Damage by +15 for 3s. Stacks up to 4x."
+    ],
     "tier": 4
    }
   ],
@@ -4526,6 +5103,10 @@
     },
     "form": "both",
     "name": "Deadly Pace",
+    "text": [
+     "Increase Base Damage by +20.",
+     "With Sprint Speed 1.2 or Higher: +80% Fire Rate."
+    ],
     "tier": 2
    },
    {
@@ -4557,6 +5138,10 @@
     },
     "form": "both",
     "name": "Guardian's Might",
+    "text": [
+     "Increase Base Damage by +20.",
+     "With Overshields: Increase Base Damage by +74."
+    ],
     "tier": 2
    },
    {
@@ -4571,6 +5156,9 @@
     },
     "form": "both",
     "name": "Ardent Trigger",
+    "text": [
+     "On Punch Through Hit: +40% Fire Rate for 6s."
+    ],
     "tier": 3
    },
    {
@@ -4583,6 +5171,9 @@
     },
     "form": "both",
     "name": "Markman's Focus",
+    "text": [
+     "-30% Zoom."
+    ],
     "tier": 3
    },
    {
@@ -4595,6 +5186,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+60% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -4610,6 +5204,10 @@
     },
     "form": "both",
     "name": "Vicious Promise",
+    "text": [
+     "Increase Base Critical Chance by +40% on undamaged enemies.",
+     "Increase Base Critical Damage Multiplier by +2x on undamaged enemies."
+    ],
     "tier": 4
    },
    {
@@ -4639,6 +5237,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +60%."
+    ],
     "tier": 4
    },
    {
@@ -4668,6 +5269,9 @@
     },
     "form": "both",
     "name": "Striking Succession",
+    "text": [
+     "On Hit: Increase Base Damage by +15 for 3s. Stacks up to 4x."
+    ],
     "tier": 4
    }
   ],
@@ -4710,6 +5314,10 @@
     },
     "form": "both",
     "name": "Hitman's Opportunity",
+    "text": [
+     "Increase Base Damage by +70.",
+     "+100% Damage to enemies below half Health"
+    ],
     "tier": 2
    },
    {
@@ -4742,6 +5350,10 @@
     },
     "form": "both",
     "name": "Stalker's Resentment",
+    "text": [
+     "Increase Base Damage by +50.",
+     "With Hate and Despair Equipped: Hits increase Base Damage by +10 and Fire Rate by +10%, stacks up to 5x. Resets on missed shot."
+    ],
     "tier": 2
    },
    {
@@ -4754,6 +5366,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+30% Projectile Speed"
+    ],
     "tier": 3
    },
    {
@@ -4766,6 +5381,9 @@
     },
     "form": "both",
     "name": "Marksman's Focus",
+    "text": [
+     "-30% Zoom"
+    ],
     "tier": 3
    },
    {
@@ -4780,6 +5398,9 @@
     },
     "form": "normal",
     "name": "Hitman's Hoard",
+    "text": [
+     "Increase Base Ammo Capacity to 144"
+    ],
     "tier": 3
    },
    {
@@ -4825,6 +5446,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +10%",
+     "Increase Base Status Chance by +10%"
+    ],
     "tier": 4
    },
    {
@@ -4854,6 +5479,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +24%"
+    ],
     "tier": 4
    },
    {
@@ -4883,6 +5511,9 @@
     },
     "form": "both",
     "name": "Zeroed In",
+    "text": [
+     "Increase Base Critical Damage Multiplier by +1x"
+    ],
     "tier": 4
    }
   ],
@@ -4939,6 +5570,10 @@
     },
     "form": "both",
     "name": "Well Rehearsed",
+    "text": [
+     "Increase Base Damage by +15.",
+     "On Consecutive Weakpoint Hits: Increase Base Damage by +5. Stacks up to 3x."
+    ],
     "tier": 2
    },
    {
@@ -4971,6 +5606,10 @@
     },
     "form": "both",
     "name": "Blazing Barrel",
+    "text": [
+     "Increase Base Damage by +15.",
+     "On Firing: +5% Multishot. Stacks up to 10x."
+    ],
     "tier": 2
    },
    {
@@ -5000,6 +5639,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +10."
+    ],
     "tier": 3
    },
    {
@@ -5014,6 +5656,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload From Empty: +60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -5026,6 +5671,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-60% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -5040,6 +5688,9 @@
     },
     "form": "both",
     "name": "Elemental Dominance",
+    "text": [
+     "Increase Base Status Chance by +15% Effect doubles in Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -5054,6 +5705,9 @@
     },
     "form": "both",
     "name": "Reaver's Rapture",
+    "text": [
+     "On Full Burst Hit: +20% Damage, resets on Reload"
+    ],
     "tier": 4
    },
    {
@@ -5069,6 +5723,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Critical Chance by +5%.",
+     "Increase Status Chance by +10%."
+    ],
     "tier": 4
    }
   ],
@@ -5111,6 +5769,10 @@
     },
     "form": "both",
     "name": "Hunter's Mantra",
+    "text": [
+     "Increase Base Damage by +4.",
+     "With Channeled Ability active: Punch Through +4 and +40% Accuracy."
+    ],
     "tier": 2
    },
    {
@@ -5142,6 +5804,10 @@
     },
     "form": "both",
     "name": "Crimson Overture",
+    "text": [
+     "Increase Base Damage by +0.",
+     "On Kill: Increase Base Damage by +2 and +20% Ammo Efficiency for 5 seconds. Stacks up to 3x"
+    ],
     "tier": 2
    },
    {
@@ -5154,6 +5820,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+60% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -5183,6 +5852,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +20."
+    ],
     "tier": 3
    },
    {
@@ -5212,6 +5884,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -5241,6 +5916,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +18%"
+    ],
     "tier": 4
    },
    {
@@ -5286,6 +5964,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +10%",
+     "Increase Base Status Chance by +10%"
+    ],
     "tier": 4
    },
    {
@@ -5315,6 +5997,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +14%"
+    ],
     "tier": 4
    }
   ],
@@ -5360,6 +6045,10 @@
     },
     "form": "normal",
     "name": "Forceful Finality",
+    "text": [
+     "Increase Base Damage by +42.",
+     "+5 Base Multishot on final magazine burst."
+    ],
     "tier": 2
    },
    {
@@ -5389,6 +6078,10 @@
     },
     "form": "both",
     "name": "Fortress Salvo",
+    "text": [
+     "Increase Base Damage by +42.",
+     "With Armor Over 450: +2 Punch Through."
+    ],
     "tier": 2
    },
    {
@@ -5418,6 +6111,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +21."
+    ],
     "tier": 3
    },
    {
@@ -5432,6 +6128,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload From Empty: +100% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -5444,6 +6143,9 @@
     },
     "form": "both",
     "name": "Kinetic Battle",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -5459,6 +6161,9 @@
     },
     "form": "both",
     "name": "Reaver's Rapture",
+    "text": [
+     "On Full Burst Hit: +20% Damage, resets on Reload."
+    ],
     "tier": 4
    },
    {
@@ -5488,6 +6193,9 @@
     },
     "form": "both",
     "name": "Absolute Valor",
+    "text": [
+     "Increase Base Critical Chance by +22%."
+    ],
     "tier": 4
    },
    {
@@ -5517,6 +6225,9 @@
     },
     "form": "both",
     "name": "Fatal Affliction",
+    "text": [
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 4
    }
   ],
@@ -5557,6 +6268,10 @@
     },
     "form": "both",
     "name": "Fortress Salvo",
+    "text": [
+     "Increase Base Damage by +12.",
+     "With Armor Over 450: +4 Punch Through."
+    ],
     "tier": 2
    },
    {
@@ -5588,6 +6303,10 @@
     },
     "form": "both",
     "name": "Fortifying Bloodshed",
+    "text": [
+     "Increase Base Damage by +10.",
+     "On Slash Status Kill: +100 Overshield."
+    ],
     "tier": 2
    },
    {
@@ -5600,6 +6319,9 @@
     },
     "form": "both",
     "name": "Kinetic Battle",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -5612,6 +6334,9 @@
     },
     "form": "both",
     "name": "Practiced Grip",
+    "text": [
+     "Increase Accuracy by +50%."
+    ],
     "tier": 3
    },
    {
@@ -5641,6 +6366,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -5655,6 +6383,9 @@
     },
     "form": "both",
     "name": "Fresh Havoc",
+    "text": [
+     "On Reload From Empty: Increase Base Damage by +6. Stacks up to 2x."
+    ],
     "tier": 4
    },
    {
@@ -5684,6 +6415,9 @@
     },
     "form": "both",
     "name": "Fatal Affliction",
+    "text": [
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 4
    },
    {
@@ -5713,6 +6447,9 @@
     },
     "form": "both",
     "name": "Zeroed In",
+    "text": [
+     "Increase Base Critical Damage Multiplier by +0.6x."
+    ],
     "tier": 4
    }
   ],
@@ -5754,6 +6491,10 @@
     },
     "form": "both",
     "name": "Tenno Targeting",
+    "text": [
+     "Increase Base Damage by +2.",
+     "With Channeled Ability Active: +4 Punch Through"
+    ],
     "tier": 2
    },
    {
@@ -5785,6 +6526,10 @@
     },
     "form": "both",
     "name": "Blazing Barrel",
+    "text": [
+     "Increase Base Damage by +2.",
+     "On Firing: +0.05 Base Multishot. Stacks up to 5x."
+    ],
     "tier": 2
    },
    {
@@ -5814,6 +6559,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -5828,6 +6576,9 @@
     },
     "form": "normal",
     "name": "Galvanic Reload",
+    "text": [
+     "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool."
+    ],
     "tier": 3
    },
    {
@@ -5840,6 +6591,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+30% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -5885,6 +6639,10 @@
     },
     "form": "incarnon",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +11.3%.",
+     "Increase Base Status Chance by +136% for Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -5914,6 +6672,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +12%."
+    ],
     "tier": 4
    },
    {
@@ -5975,6 +6736,11 @@
     },
     "form": "incarnon",
     "name": "Brutal Edge",
+    "text": [
+     "Increase Base Critical Chance by +4%.",
+     "Increase Base Status Chance by +4%.",
+     "Increase Base Status Chance by +48% for Incarnon Form."
+    ],
     "tier": 4
    }
   ],
@@ -6031,6 +6797,10 @@
     },
     "form": "both",
     "name": "Well Rehearsed",
+    "text": [
+     "Increase Base Damage by +15.",
+     "On Consecutive Weakpoint Hits: Increase Base Damage by +5. Stacks up to 3x."
+    ],
     "tier": 2
    },
    {
@@ -6063,6 +6833,10 @@
     },
     "form": "both",
     "name": "Blazing Barrel",
+    "text": [
+     "Increase Base Damage by +15.",
+     "On Firing: +5% Multishot. Stacks up to 10x."
+    ],
     "tier": 2
    },
    {
@@ -6092,6 +6866,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +12."
+    ],
     "tier": 3
    },
    {
@@ -6106,6 +6883,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload From Empty: +60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -6118,6 +6898,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-60% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -6132,6 +6915,9 @@
     },
     "form": "both",
     "name": "Elemental Dominance",
+    "text": [
+     "Increase Base Status Chance by +8% Effect doubles in Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -6146,6 +6932,9 @@
     },
     "form": "both",
     "name": "Reaver's Rapture",
+    "text": [
+     "On Full Burst Hit: +20% Damage, resets on Reload"
+    ],
     "tier": 4
    },
    {
@@ -6161,6 +6950,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Critical Chance by +5%.",
+     "Increase Status Chance by +10%."
+    ],
     "tier": 4
    }
   ],
@@ -6204,6 +6997,10 @@
     },
     "form": "both",
     "name": "Inciting Incident",
+    "text": [
+     "Increase Base Damage by +200.",
+     "With Channeled Ability Active: +2 Punch Through"
+    ],
     "tier": 2
    },
    {
@@ -6236,6 +7033,10 @@
     },
     "form": "both",
     "name": "Lone Enforcer",
+    "text": [
+     "Increase Base Damage by +150.",
+     "+25% Multishot if no enemies are within 5m."
+    ],
     "tier": 2
    },
    {
@@ -6265,6 +7066,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -6277,6 +7081,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-60% Recoil."
+    ],
     "tier": 3
    },
    {
@@ -6291,6 +7098,9 @@
     },
     "form": "both",
     "name": "Silent Running",
+    "text": [
+     "Reduce the chance an enemy will hear gunfire by 100%."
+    ],
     "tier": 3
    },
    {
@@ -6320,6 +7130,9 @@
     },
     "form": "both",
     "name": "Deadhead",
+    "text": [
+     "+25% Headshot Damage."
+    ],
     "tier": 4
    },
    {
@@ -6365,6 +7178,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +8%.",
+     "Increase Base Critical Damage Multiplier by +0.5x."
+    ],
     "tier": 4
    },
    {
@@ -6379,6 +7196,9 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Status Chance by 30% of current Critical Chance, up to 40%"
+    ],
     "tier": 4
    }
   ],
@@ -6435,6 +7255,10 @@
     },
     "form": "both",
     "name": "Well Rehearsed",
+    "text": [
+     "Increase Base Damage by +20.",
+     "On Consecutive Weakpoint Hits: Increase Base Damage by +5. Stacks up to 3x."
+    ],
     "tier": 2
    },
    {
@@ -6467,6 +7291,10 @@
     },
     "form": "both",
     "name": "Blazing Barrel",
+    "text": [
+     "Increase Base Damage by +20.",
+     "On Firing: +5% Multishot. Stacks up to 10x."
+    ],
     "tier": 2
    },
    {
@@ -6496,6 +7324,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +8."
+    ],
     "tier": 3
    },
    {
@@ -6510,6 +7341,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload From Empty: +60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -6522,6 +7356,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-60% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -6536,6 +7373,9 @@
     },
     "form": "both",
     "name": "Elemental Dominance",
+    "text": [
+     "Increase Base Status Chance by +15% Effect doubles in Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -6550,6 +7390,9 @@
     },
     "form": "both",
     "name": "Reaver's Rapture",
+    "text": [
+     "On Full Burst Hit: +20% Damage, resets on Reload"
+    ],
     "tier": 4
    },
    {
@@ -6565,6 +7408,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Critical Chance by +5%.",
+     "Increase Status Chance by +10%."
+    ],
     "tier": 4
    }
   ],
@@ -6622,6 +7469,10 @@
     },
     "form": "both",
     "name": "Riddled Target",
+    "text": [
+     "Increase Base Damage by +12.",
+     "On Puncture Status Effect: +25% Multishot for 8s. Stacks up to 4x."
+    ],
     "tier": 2
    },
    {
@@ -6653,6 +7504,10 @@
     },
     "form": "both",
     "name": "Swift Punishment",
+    "text": [
+     "Increase Base Damage by +12.",
+     "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 2
    },
    {
@@ -6665,6 +7520,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-60% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -6694,6 +7552,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +15."
+    ],
     "tier": 3
    },
    {
@@ -6706,6 +7567,9 @@
     },
     "form": "both",
     "name": "Marksman's Focus",
+    "text": [
+     "-30% Zoom."
+    ],
     "tier": 3
    },
    {
@@ -6720,6 +7584,9 @@
     },
     "form": "both",
     "name": "Flensing Spikes",
+    "text": [
+     "Remove 20% of enemy Armor per Puncture Status."
+    ],
     "tier": 4
    },
    {
@@ -6749,6 +7616,9 @@
     },
     "form": "both",
     "name": "Deadhead",
+    "text": [
+     "+100% Headshot Damage."
+    ],
     "tier": 4
    },
    {
@@ -6780,6 +7650,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +24%.",
+     "Increase Base Critical Damage Multiplier by +Yx."
+    ],
     "tier": 4
    }
   ],
@@ -6822,6 +7696,10 @@
     },
     "form": "both",
     "name": "Haven Foray",
+    "text": [
+     "Increase Base Damage by +28.",
+     "With Overshields: Increase Base Damage by +30."
+    ],
     "tier": 2
    },
    {
@@ -6853,6 +7731,10 @@
     },
     "form": "both",
     "name": "Stormburst",
+    "text": [
+     "Increase Base Damage by +28.",
+     "On hitting enemies affected by Electricity Status: +0.4 Multishot for 2s. Stacks up to 3x."
+    ],
     "tier": 2
    },
    {
@@ -6865,6 +7747,9 @@
     },
     "form": "both",
     "name": "Practiced Grip",
+    "text": [
+     "Increase Accuracy by +50%"
+    ],
     "tier": 3
    },
    {
@@ -6894,6 +7779,9 @@
     },
     "form": "normal",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +25."
+    ],
     "tier": 3
    },
    {
@@ -6908,6 +7796,9 @@
     },
     "form": "both",
     "name": "Executioner's Fortune",
+    "text": [
+     "On Headshot: 10% chance for Instant Reload"
+    ],
     "tier": 3
    },
    {
@@ -6937,6 +7828,9 @@
     },
     "form": "both",
     "name": "Headcracker",
+    "text": [
+     "On Headshot: +5% Fire Rate for 2s. Stacks up to 10x."
+    ],
     "tier": 4
    },
    {
@@ -6951,6 +7845,9 @@
     },
     "form": "both",
     "name": "Prelude of Might",
+    "text": [
+     "With Critical Chance below 40%: Increase Base Critical Damage Multiplier by +3x."
+    ],
     "tier": 4
    },
    {
@@ -6980,6 +7877,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +28%."
+    ],
     "tier": 4
    }
   ],
@@ -7020,6 +7920,10 @@
     },
     "form": "both",
     "name": "Speeding Bullet",
+    "text": [
+     "Increase Base Damage by +30.",
+     "With Sprint Speed 1.2 or Higher: +60% Projectile Speed."
+    ],
     "tier": 2
    },
    {
@@ -7051,6 +7955,10 @@
     },
     "form": "both",
     "name": "Infused Shots",
+    "text": [
+     "Increase Base Damage by +16.",
+     "On 50 Energy Spent: Increase Base Damage by +9 for 10s. Stacks up to 4x."
+    ],
     "tier": 2
    },
    {
@@ -7063,6 +7971,9 @@
     },
     "form": "both",
     "name": "Kinetic Battle",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -7075,6 +7986,9 @@
     },
     "form": "both",
     "name": "Practised Grip",
+    "text": [
+     "Increase Accuracy by +30%."
+    ],
     "tier": 3
    },
    {
@@ -7104,6 +8018,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +2."
+    ],
     "tier": 3
    },
    {
@@ -7118,6 +8035,9 @@
     },
     "form": "both",
     "name": "Enough for Everyone",
+    "text": [
+     "+80% Ammo efficiency when 6 enemies are within 6m."
+    ],
     "tier": 4
    },
    {
@@ -7147,6 +8067,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +20%."
+    ],
     "tier": 4
    },
    {
@@ -7161,6 +8084,9 @@
     },
     "form": "both",
     "name": "Rain of Lead",
+    "text": [
+     "+2 Base Multishot."
+    ],
     "tier": 4
    }
   ],
@@ -7204,6 +8130,10 @@
     },
     "form": "both",
     "name": "Feigned Retreat",
+    "text": [
+     "Increase Base Damage by +50.",
+     "+40% Damage to enemies below half Health."
+    ],
     "tier": 2
    },
    {
@@ -7221,6 +8151,10 @@
     },
     "form": "both",
     "name": "King's Gambit",
+    "text": [
+     "Increase Base Damage by +50 (Sicarus) / +50 (Prime)",
+     "x0 Critical Chance on Bodyshots, +150% Critical Chance on Weakpoint Hits."
+    ],
     "tier": 2
    },
    {
@@ -7233,6 +8167,9 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+40% Accuracy."
+    ],
     "tier": 3
    },
    {
@@ -7262,6 +8199,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -7291,6 +8231,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +9."
+    ],
     "tier": 3
    },
    {
@@ -7320,6 +8263,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +18%."
+    ],
     "tier": 4
    },
    {
@@ -7351,6 +8297,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by 12%.",
+     "Increase Base Status Chance to 12%."
+    ],
     "tier": 4
    },
    {
@@ -7365,6 +8315,9 @@
     },
     "form": "both",
     "name": "Wiseman's Regard",
+    "text": [
+     "Increase Base Status Chance by 30% of current Critical Chance, up to 40%"
+    ],
     "tier": 4
    }
   ],
@@ -7405,6 +8358,10 @@
     },
     "form": "both",
     "name": "Speeding Bullet",
+    "text": [
+     "Increase Base Damage by +36.",
+     "With Sprint Speed 1.2 or Higher: +60% Projectile Speed."
+    ],
     "tier": 2
    },
    {
@@ -7436,6 +8393,10 @@
     },
     "form": "both",
     "name": "Infused Shots",
+    "text": [
+     "Increase Base Damage by +20.",
+     "On 50 Energy Spent: Increase Base Damage by +10 for 10s. Stacks up to 4x."
+    ],
     "tier": 2
    },
    {
@@ -7448,6 +8409,9 @@
     },
     "form": "both",
     "name": "Kinetic Battle",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -7460,6 +8424,9 @@
     },
     "form": "both",
     "name": "Practised Grip",
+    "text": [
+     "Increase Accuracy by +30%."
+    ],
     "tier": 3
    },
    {
@@ -7489,6 +8456,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +2."
+    ],
     "tier": 3
    },
    {
@@ -7503,6 +8473,9 @@
     },
     "form": "both",
     "name": "Enough for Everyone",
+    "text": [
+     "+80% Ammo efficiency when 6 enemies are within 6m."
+    ],
     "tier": 4
    },
    {
@@ -7532,6 +8505,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +20%."
+    ],
     "tier": 4
    },
    {
@@ -7546,6 +8522,9 @@
     },
     "form": "both",
     "name": "Rain of Lead",
+    "text": [
+     "+2 Base Multishot."
+    ],
     "tier": 4
    }
   ],
@@ -7588,6 +8567,10 @@
     },
     "form": "both",
     "name": "Hoplite Virtue",
+    "text": [
+     "Increase Base Damage by +80.",
+     "On Shield Break: Increase Base Damage by +80 for 8 seconds."
+    ],
     "tier": 2
    },
    {
@@ -7619,6 +8602,10 @@
     },
     "form": "both",
     "name": "Trusty Sidearm",
+    "text": [
+     "Increase Base Damage by +80.",
+     "With Channeled Ability active: +60% Ammo Efficiency."
+    ],
     "tier": 2
    },
    {
@@ -7631,6 +8618,9 @@
     },
     "form": "both",
     "name": "Lex Talionis",
+    "text": [
+     "On Headshot: -20% Weapon Recoil and +20% Accuracy for 4s. Stacks up to 4x."
+    ],
     "tier": 3
    },
    {
@@ -7660,6 +8650,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +10."
+    ],
     "tier": 3
    },
    {
@@ -7674,6 +8667,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload From Empty: +100% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -7688,6 +8684,9 @@
     },
     "form": "both",
     "name": "Executioner's Dawn",
+    "text": [
+     "On Equip: +100% Headshot Damage for 4s."
+    ],
     "tier": 4
    },
    {
@@ -7717,6 +8716,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +40%."
+    ],
     "tier": 4
    },
    {
@@ -7762,6 +8764,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +20%.",
+     "Increase Base Critical Damage Multiplier by +0.4x."
+    ],
     "tier": 4
    }
   ],
@@ -7804,6 +8810,10 @@
     },
     "form": "both",
     "name": "Haven Foray",
+    "text": [
+     "Increase Base Damage by +2.",
+     "With Overshields: Increase Base Damage by +34."
+    ],
     "tier": 2
    },
    {
@@ -7835,6 +8845,10 @@
     },
     "form": "both",
     "name": "Reified Bane",
+    "text": [
+     "Increase Base Damage by +2.",
+     "On Reload from Empty Magazine: Increase Base Damage by +24."
+    ],
     "tier": 2
    },
    {
@@ -7849,6 +8863,9 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "Increase Accuracy and Reduce Recoil by +50%."
+    ],
     "tier": 3
    },
    {
@@ -7863,6 +8880,9 @@
     },
     "form": "normal",
     "name": "Marksman's Gain",
+    "text": [
+     "On Headshot: 20% chance for +50% Ammo Efficiency for 6s."
+    ],
     "tier": 3
    },
    {
@@ -7877,6 +8897,9 @@
     },
     "form": "both",
     "name": "Exact Penance",
+    "text": [
+     "On Kill: 50% chance for Instant Reload."
+    ],
     "tier": 3
    },
    {
@@ -7922,6 +8945,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +4%.",
+     "Increase Base Status Chance by +10%."
+    ],
     "tier": 4
    },
    {
@@ -7967,6 +8994,11 @@
     },
     "form": "both",
     "name": "Deathtrap Trigger",
+    "text": [
+     "On Equip from Primary:",
+     "Increase Base Critical Chance by +30% for 4s.",
+     "Increase Base Critical Damage Multiplier by +2.3x for 4s."
+    ],
     "tier": 4
    },
    {
@@ -7996,6 +9028,9 @@
     },
     "form": "both",
     "name": "Carnage Reign",
+    "text": [
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 4
    }
   ],
@@ -8038,6 +9073,10 @@
     },
     "form": "both",
     "name": "Haven Foray",
+    "text": [
+     "Increase Base Damage by +22.",
+     "With Overshields: Increase Base Damage by +40."
+    ],
     "tier": 2
    },
    {
@@ -8069,6 +9108,10 @@
     },
     "form": "both",
     "name": "Reified Bane",
+    "text": [
+     "Increase Base Damage by +12.",
+     "On Reload from Empty Magazine: Increase Base Damage by +30."
+    ],
     "tier": 2
    },
    {
@@ -8083,6 +9126,9 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "Increase Accuracy and Reduce Recoil by +50%."
+    ],
     "tier": 3
    },
    {
@@ -8097,6 +9143,9 @@
     },
     "form": "normal",
     "name": "Marksman's Gain",
+    "text": [
+     "On Headshot: 20% chance for +50% Ammo Efficiency for 6s."
+    ],
     "tier": 3
    },
    {
@@ -8111,6 +9160,9 @@
     },
     "form": "both",
     "name": "Exact Penance",
+    "text": [
+     "On Kill: 50% chance for Instant Reload."
+    ],
     "tier": 3
    },
    {
@@ -8156,6 +9208,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +6%.",
+     "Increase Base Status Chance by +12%."
+    ],
     "tier": 4
    },
    {
@@ -8201,6 +9257,11 @@
     },
     "form": "both",
     "name": "Deathtrap Trigger",
+    "text": [
+     "On Equip from Primary:",
+     "Increase Base Critical Chance by +38% for 4s.",
+     "Increase Base Critical Damage Multiplier by +2.6x for 4s."
+    ],
     "tier": 4
    },
    {
@@ -8230,6 +9291,9 @@
     },
     "form": "both",
     "name": "Carnage Reign",
+    "text": [
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 4
    }
   ],
@@ -8272,6 +9336,10 @@
     },
     "form": "both",
     "name": "Haven Foray",
+    "text": [
+     "Increase Base Damage by +40.",
+     "With Overshields: Increase Base Damage by +40."
+    ],
     "tier": 2
    },
    {
@@ -8303,6 +9371,10 @@
     },
     "form": "both",
     "name": "Reified Bane",
+    "text": [
+     "Increase Base Damage by +30.",
+     "On Reload from Empty Magazine: Increase Base Damage by +30."
+    ],
     "tier": 2
    },
    {
@@ -8317,6 +9389,9 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "Increase Accuracy and Reduce Recoil by +50%."
+    ],
     "tier": 3
    },
    {
@@ -8331,6 +9406,9 @@
     },
     "form": "normal",
     "name": "Marksman's Gain",
+    "text": [
+     "On Headshot: 20% chance for +50% Ammo Efficiency for 6s."
+    ],
     "tier": 3
    },
    {
@@ -8345,6 +9423,9 @@
     },
     "form": "both",
     "name": "Exact Penance",
+    "text": [
+     "On Kill: 50% chance for Instant Reload."
+    ],
     "tier": 3
    },
    {
@@ -8390,6 +9471,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +20%.",
+     "Increase Base Status Chance by +12%."
+    ],
     "tier": 4
    },
    {
@@ -8435,6 +9520,11 @@
     },
     "form": "both",
     "name": "Deathtrap Trigger",
+    "text": [
+     "On Equip from Primary:",
+     "Increase Base Critical Chance by +50% for 4s.",
+     "Increase Base Critical Damage Multiplier by +3.2x for 4s."
+    ],
     "tier": 4
    },
    {
@@ -8464,6 +9554,9 @@
     },
     "form": "both",
     "name": "Carnage Reign",
+    "text": [
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 4
    }
   ],
@@ -8536,6 +9629,12 @@
     },
     "form": "normal",
     "name": "Lone Gun",
+    "text": [
+     "Increase Base Damage by +66.",
+     "With No Primary Equipped:",
+     "Increase Base Damage by +40",
+     "Increase Base Magazine Capacity by +14."
+    ],
     "tier": 2
    },
    {
@@ -8597,6 +9696,12 @@
     },
     "form": "both",
     "name": "Deathtrap Trigger",
+    "text": [
+     "Increase Base Damage by +66.",
+     "On Equip From Primary:",
+     "Increase Base Critical Chance by +30% for 3s.",
+     "Increase Base Critical Damage Multiplier by +2.2x for 3s."
+    ],
     "tier": 2
    },
    {
@@ -8626,6 +9731,9 @@
     },
     "form": "normal",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +6."
+    ],
     "tier": 3
    },
    {
@@ -8638,6 +9746,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -8652,6 +9763,9 @@
     },
     "form": "normal",
     "name": "Awakened Readiness",
+    "text": [
+     "+20% Magazine Reloaded per second when Holstered."
+    ],
     "tier": 3
    },
    {
@@ -8681,6 +9795,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +16%."
+    ],
     "tier": 4
    },
    {
@@ -8726,6 +9843,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +10%.",
+     "Increase Base Status Chance by +10%."
+    ],
     "tier": 4
    },
    {
@@ -8755,6 +9876,9 @@
     },
     "form": "normal",
     "name": "Reaper's Plenty",
+    "text": [
+     "On Headshot: +100% Ammo Efficiency for 2s."
+    ],
     "tier": 4
    }
   ],
@@ -8811,6 +9935,10 @@
     },
     "form": "both",
     "name": "Headcracker",
+    "text": [
+     "Increase Base Damage by +30.",
+     "On Headshot: +7.5% Fire Rate for 4s. Stacks up to 10x."
+    ],
     "tier": 2
    },
    {
@@ -8842,6 +9970,10 @@
     },
     "form": "both",
     "name": "Prolific Perforation",
+    "text": [
+     "Increase Base Damage by +30.",
+     "On Punch Through Hit: +10% Critical Chance for 3s. Stacks up to 8x."
+    ],
     "tier": 2
    },
    {
@@ -8871,6 +10003,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed"
+    ],
     "tier": 3
    },
    {
@@ -8883,6 +10018,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+50% Projectile Speed"
+    ],
     "tier": 3
    },
    {
@@ -8895,6 +10033,10 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+40% Accuracy",
+     "-40% Weapon Recoil"
+    ],
     "tier": 3
    },
    {
@@ -8910,6 +10052,10 @@
     },
     "form": "incarnon",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status by +20% per projectile.",
+     "Increase Base Status by +20% for Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -8942,6 +10088,11 @@
     },
     "form": "incarnon",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +10%.",
+     "Increase Base Status by +10% per projectile.",
+     "Increase Base Status by +10% for Incarnon Form"
+    ],
     "tier": 4
    },
    {
@@ -8987,6 +10138,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +15%.",
+     "Increase Base Critical Damage Multiplier by +1.0x."
+    ],
     "tier": 4
    }
   ],
@@ -9044,6 +10199,10 @@
     },
     "form": "both",
     "name": "Precision's Payoff",
+    "text": [
+     "Increase Base Damage by +76.",
+     "On Burst Headshots: Increase Base Damage by +20. Stacks up to 3x."
+    ],
     "tier": 2
    },
    {
@@ -9075,6 +10234,10 @@
     },
     "form": "both",
     "name": "Mauler's Magazine",
+    "text": [
+     "Increase Base Damage by +76.",
+     "On Reload From Empty: Increase Base Critical Damage Multiplier by +1x. Stacks up to 2x."
+    ],
     "tier": 2
    },
    {
@@ -9104,6 +10267,9 @@
     },
     "form": "normal",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +12."
+    ],
     "tier": 3
    },
    {
@@ -9133,6 +10299,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -9145,6 +10314,10 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+60% Accuracy",
+     "-60% Recoil"
+    ],
     "tier": 3
    },
    {
@@ -9190,6 +10363,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +20%.",
+     "Increase Base Status Chance by +20%."
+    ],
     "tier": 4
    },
    {
@@ -9219,6 +10396,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +32%."
+    ],
     "tier": 4
    },
    {
@@ -9248,6 +10428,9 @@
     },
     "form": "both",
     "name": "Fatal Affliction",
+    "text": [
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 4
    }
   ],
@@ -9304,6 +10487,10 @@
     },
     "form": "both",
     "name": "Headcracker",
+    "text": [
+     "Increase Base Damage by +3.",
+     "On Headshot: +7.5% Fire Rate for 4s. Stacks up to 10x."
+    ],
     "tier": 2
    },
    {
@@ -9335,6 +10522,10 @@
     },
     "form": "both",
     "name": "Prolific Perforation",
+    "text": [
+     "Increase Base Damage by +3.",
+     "On Punch Through Hit: +10% Critical Chance for 3s. Stacks up to 8x."
+    ],
     "tier": 2
    },
    {
@@ -9364,6 +10555,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed"
+    ],
     "tier": 3
    },
    {
@@ -9376,6 +10570,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+50% Projectile Speed"
+    ],
     "tier": 3
    },
    {
@@ -9388,6 +10585,10 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+40% Accuracy",
+     "-40% Weapon Recoil"
+    ],
     "tier": 3
    },
    {
@@ -9403,6 +10604,10 @@
     },
     "form": "incarnon",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status by +18% per projectile.",
+     "Increase Base Status by +72% for Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -9435,6 +10640,11 @@
     },
     "form": "incarnon",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +7%.",
+     "Increase Base Status by +7% per projectile.",
+     "Increase Base Status by +28% for Incarnon Form"
+    ],
     "tier": 4
    },
    {
@@ -9480,6 +10690,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +12%.",
+     "Increase Base Critical Damage Multiplier by +1.0x."
+    ],
     "tier": 4
    }
   ],
@@ -9522,6 +10736,10 @@
     },
     "form": "both",
     "name": "Hoplite Virtue",
+    "text": [
+     "Increase Base Damage by +20.",
+     "On Shield Break: Increase Base Damage by +80 for 8 seconds."
+    ],
     "tier": 2
    },
    {
@@ -9553,6 +10771,10 @@
     },
     "form": "both",
     "name": "Trusty Sidearm",
+    "text": [
+     "Increase Base Damage by +20.",
+     "With Channeled Ability active: +60% Ammo Efficiency."
+    ],
     "tier": 2
    },
    {
@@ -9565,6 +10787,9 @@
     },
     "form": "both",
     "name": "Lex Talionis",
+    "text": [
+     "On Headshot: -20% Weapon Recoil and +20% Accuracy for 4s. Stacks up to 4x."
+    ],
     "tier": 3
    },
    {
@@ -9594,6 +10819,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +10."
+    ],
     "tier": 3
    },
    {
@@ -9608,6 +10836,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload From Empty: +100% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -9622,6 +10853,9 @@
     },
     "form": "both",
     "name": "Executioner's Dawn",
+    "text": [
+     "On Equip: +100% Headshot Damage for 4s."
+    ],
     "tier": 4
    },
    {
@@ -9651,6 +10885,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +30%."
+    ],
     "tier": 4
    },
    {
@@ -9696,6 +10933,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +19%.",
+     "Increase Base Critical Damage Multiplier by +0.4x."
+    ],
     "tier": 4
    }
   ],
@@ -9739,6 +10980,10 @@
     },
     "form": "both",
     "name": "Feigned Retreat",
+    "text": [
+     "Increase Base Damage by +40.",
+     "+40% Damage to enemies below half Health."
+    ],
     "tier": 2
    },
    {
@@ -9756,6 +11001,10 @@
     },
     "form": "both",
     "name": "King's Gambit",
+    "text": [
+     "Increase Base Damage by +40 (Sicarus) / +40 (Prime)",
+     "x0 Critical Chance on Bodyshots, +150% Critical Chance on Weakpoint Hits."
+    ],
     "tier": 2
    },
    {
@@ -9768,6 +11017,9 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+40% Accuracy."
+    ],
     "tier": 3
    },
    {
@@ -9797,6 +11049,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -9826,6 +11081,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +12."
+    ],
     "tier": 3
    },
    {
@@ -9855,6 +11113,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +14%."
+    ],
     "tier": 4
    },
    {
@@ -9886,6 +11147,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by 9%.",
+     "Increase Base Status Chance to 9%."
+    ],
     "tier": 4
    },
    {
@@ -9900,6 +11165,9 @@
     },
     "form": "both",
     "name": "Wiseman's Regard",
+    "text": [
+     "Increase Base Status Chance by 30% of current Critical Chance, up to 40%"
+    ],
     "tier": 4
    }
   ],
@@ -9972,6 +11240,12 @@
     },
     "form": "normal",
     "name": "Lone Gun",
+    "text": [
+     "Increase Base Damage by +24.",
+     "With No Primary Equipped:",
+     "Increase Base Damage by +40",
+     "Increase Base Magazine Capacity by +14."
+    ],
     "tier": 2
    },
    {
@@ -10033,6 +11307,12 @@
     },
     "form": "both",
     "name": "Deathtrap Trigger",
+    "text": [
+     "Increase Base Damage by +24.",
+     "On Equip From Primary:",
+     "Increase Base Critical Chance by +30% for 3s.",
+     "Increase Base Critical Damage Multiplier by +0.8x for 3s."
+    ],
     "tier": 2
    },
    {
@@ -10062,6 +11342,9 @@
     },
     "form": "normal",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +6."
+    ],
     "tier": 3
    },
    {
@@ -10074,6 +11357,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -10088,6 +11374,9 @@
     },
     "form": "normal",
     "name": "Awakened Readiness",
+    "text": [
+     "+20% Magazine Reloaded per second when Holstered."
+    ],
     "tier": 3
    },
    {
@@ -10117,6 +11406,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +18%."
+    ],
     "tier": 4
    },
    {
@@ -10162,6 +11454,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +10%.",
+     "Increase Base Status Chance by +10%."
+    ],
     "tier": 4
    },
    {
@@ -10191,6 +11487,9 @@
     },
     "form": "normal",
     "name": "Reaper's Plenty",
+    "text": [
+     "On Headshot: +100% Ammo Efficiency for 2s."
+    ],
     "tier": 4
    }
   ],
@@ -10248,6 +11547,10 @@
     },
     "form": "both",
     "name": "Precision's Payoff",
+    "text": [
+     "Increase Base Damage by +30.",
+     "On Burst Headshots: Increase Base Damage by +20. Stacks up to 3x."
+    ],
     "tier": 2
    },
    {
@@ -10279,6 +11582,10 @@
     },
     "form": "both",
     "name": "Mauler's Magazine",
+    "text": [
+     "Increase Base Damage by +30.",
+     "On Reload From Empty: Increase Base Critical Damage Multiplier by +1x. Stacks up to 2x."
+    ],
     "tier": 2
    },
    {
@@ -10308,6 +11615,9 @@
     },
     "form": "normal",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +18."
+    ],
     "tier": 3
    },
    {
@@ -10337,6 +11647,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -10349,6 +11662,10 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+60% Accuracy",
+     "-60% Recoil"
+    ],
     "tier": 3
    },
    {
@@ -10394,6 +11711,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +22%.",
+     "Increase Base Status Chance by +16%."
+    ],
     "tier": 4
    },
    {
@@ -10423,6 +11744,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +30%."
+    ],
     "tier": 4
    },
    {
@@ -10452,6 +11776,9 @@
     },
     "form": "both",
     "name": "Fatal Affliction",
+    "text": [
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 4
    }
   ],
@@ -10494,6 +11821,10 @@
     },
     "form": "both",
     "name": "Hunter's Mantra",
+    "text": [
+     "Increase Base Damage by +18.",
+     "With Channeled Ability active: Punch Through +4 and +40% Accuracy."
+    ],
     "tier": 2
    },
    {
@@ -10525,6 +11856,10 @@
     },
     "form": "both",
     "name": "Crimson Overture",
+    "text": [
+     "Increase Base Damage by +12.",
+     "On Kill: Increase Base Damage by +2 and +20% Ammo Efficiency for 5 seconds. Stacks up to 4x"
+    ],
     "tier": 2
    },
    {
@@ -10537,6 +11872,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+60% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -10566,6 +11904,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +20."
+    ],
     "tier": 3
    },
    {
@@ -10595,6 +11936,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -10624,6 +11968,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +20%"
+    ],
     "tier": 4
    },
    {
@@ -10669,6 +12016,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +8%",
+     "Increase Base Status Chance by +8%"
+    ],
     "tier": 4
    },
    {
@@ -10698,6 +12049,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +12%"
+    ],
     "tier": 4
    }
   ],
@@ -10742,6 +12096,10 @@
     },
     "form": "both",
     "name": "Daring Reverie",
+    "text": [
+     "Increase Base Damage by +4.",
+     "With Channeled Ability active: Increase Base Damage by +38. +50% Ammo Efficiency"
+    ],
     "tier": 2
    },
    {
@@ -10790,6 +12148,10 @@
     },
     "form": "both",
     "name": "Munitions Grit",
+    "text": [
+     "Increase Base Damage by +2.",
+     "Multishot consumes ammo directly from Capacity and does +54% Damage. +20% Multishot."
+    ],
     "tier": 2
    },
    {
@@ -10804,6 +12166,9 @@
     },
     "form": "normal",
     "name": "Mercenary Chamber",
+    "text": [
+     "Increase Base Ammo Capacity to 1125."
+    ],
     "tier": 3
    },
    {
@@ -10816,6 +12181,10 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+60% Accuracy",
+     "-60% Recoil"
+    ],
     "tier": 3
    },
    {
@@ -10830,6 +12199,9 @@
     },
     "form": "normal",
     "name": "Gunsmoke Pick Up",
+    "text": [
+     "On Punch Through Hit: 20% chance for 10% Ammo restored."
+    ],
     "tier": 3
    },
    {
@@ -10875,6 +12247,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +18%.",
+     "Increase Base Critical Damage Multiplier by +0.2x."
+    ],
     "tier": 4
    },
    {
@@ -10889,6 +12265,9 @@
     },
     "form": "both",
     "name": "Prelude of Might",
+    "text": [
+     "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.0x."
+    ],
     "tier": 4
    },
    {
@@ -10934,6 +12313,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +10%.",
+     "Increase Base Status Chance by +14%."
+    ],
     "tier": 4
    }
   ],
@@ -10979,6 +12362,10 @@
     },
     "form": "normal",
     "name": "Forceful Finality",
+    "text": [
+     "Increase Base Damage by +42.",
+     "+5 Base Multishot on final magazine burst."
+    ],
     "tier": 2
    },
    {
@@ -11008,6 +12395,10 @@
     },
     "form": "both",
     "name": "Fortress Salvo",
+    "text": [
+     "Increase Base Damage by +42.",
+     "With Armor Over 450: +2 Punch Through."
+    ],
     "tier": 2
    },
    {
@@ -11037,6 +12428,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +21."
+    ],
     "tier": 3
    },
    {
@@ -11051,6 +12445,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload From Empty: +100% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -11063,6 +12460,9 @@
     },
     "form": "both",
     "name": "Kinetic Battle",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -11078,6 +12478,9 @@
     },
     "form": "both",
     "name": "Reaver's Rapture",
+    "text": [
+     "On Full Burst Hit: +20% Damage, resets on Reload."
+    ],
     "tier": 4
    },
    {
@@ -11107,6 +12510,9 @@
     },
     "form": "both",
     "name": "Absolute Valor",
+    "text": [
+     "Increase Base Critical Chance by +22%."
+    ],
     "tier": 4
    },
    {
@@ -11136,6 +12542,9 @@
     },
     "form": "both",
     "name": "Fatal Affliction",
+    "text": [
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 4
    }
   ],
@@ -11179,6 +12588,10 @@
     },
     "form": "both",
     "name": "Hunter's Mantra",
+    "text": [
+     "Increase Base Damage by +10.",
+     "With Channeled Ability Active: +3 Punch Through, +40% Accuracy."
+    ],
     "tier": 2
    },
    {
@@ -11210,6 +12623,10 @@
     },
     "form": "both",
     "name": "Hoplite Virtue",
+    "text": [
+     "Increase Base Damage by +10.",
+     "On Shield Break: Increase Base Damage by +13 for 8s."
+    ],
     "tier": 2
    },
    {
@@ -11224,6 +12641,9 @@
     },
     "form": "both",
     "name": "Resonant Restore",
+    "text": [
+     "On Reload From Empty: Increase Base Magazine Capacity by +15. Stacks up to 3x."
+    ],
     "tier": 3
    },
    {
@@ -11253,6 +12673,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed"
+    ],
     "tier": 3
    },
    {
@@ -11265,6 +12688,9 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -11310,6 +12736,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +8%.",
+     "Increase Base Status Chance by +9%."
+    ],
     "tier": 4
    },
    {
@@ -11339,6 +12769,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +16%"
+    ],
     "tier": 4
    },
    {
@@ -11368,6 +12801,9 @@
     },
     "form": "both",
     "name": "Absolute Valor",
+    "text": [
+     "Increase Base Critical Chance by +14%."
+    ],
     "tier": 4
    }
   ],
@@ -11425,6 +12861,10 @@
     },
     "form": "both",
     "name": "Riddled Target",
+    "text": [
+     "Increase Base Damage by +6.",
+     "On Puncture Status Effect: +25% Multishot for 8s. Stacks up to 4x."
+    ],
     "tier": 2
    },
    {
@@ -11456,6 +12896,10 @@
     },
     "form": "both",
     "name": "Swift Punishment",
+    "text": [
+     "Increase Base Damage by +6.",
+     "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 2
    },
    {
@@ -11468,6 +12912,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-60% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -11497,6 +12944,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +15."
+    ],
     "tier": 3
    },
    {
@@ -11509,6 +12959,9 @@
     },
     "form": "both",
     "name": "Marksman's Focus",
+    "text": [
+     "-30% Zoom."
+    ],
     "tier": 3
    },
    {
@@ -11523,6 +12976,9 @@
     },
     "form": "both",
     "name": "Flensing Spikes",
+    "text": [
+     "Remove 20% of enemy Armor per Puncture Status."
+    ],
     "tier": 4
    },
    {
@@ -11552,6 +13008,9 @@
     },
     "form": "both",
     "name": "Deadhead",
+    "text": [
+     "+100% Headshot Damage."
+    ],
     "tier": 4
    },
    {
@@ -11583,6 +13042,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +24%.",
+     "Increase Base Critical Damage Multiplier by +Yx."
+    ],
     "tier": 4
    }
   ],
@@ -11627,6 +13090,10 @@
     },
     "form": "both",
     "name": "Daring Reverie",
+    "text": [
+     "Increase Base Damage by +24.",
+     "With Channeled Ability active: Increase Base Damage by +30. +50% Ammo Efficiency"
+    ],
     "tier": 2
    },
    {
@@ -11675,6 +13142,10 @@
     },
     "form": "both",
     "name": "Munitions Grit",
+    "text": [
+     "Increase Base Damage by +14.",
+     "Multishot consumes ammo directly from Capacity and does +60% Damage. +20% Multishot."
+    ],
     "tier": 2
    },
    {
@@ -11689,6 +13160,9 @@
     },
     "form": "normal",
     "name": "Mercenary Chamber",
+    "text": [
+     "Increase Base Ammo Capacity to 675."
+    ],
     "tier": 3
    },
    {
@@ -11701,6 +13175,10 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+60% Accuracy",
+     "-60% Recoil"
+    ],
     "tier": 3
    },
    {
@@ -11715,6 +13193,9 @@
     },
     "form": "normal",
     "name": "Gunsmoke Pick Up",
+    "text": [
+     "On Punch Through Hit: 20% chance for 10% Ammo restored."
+    ],
     "tier": 3
    },
    {
@@ -11760,6 +13241,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +16%.",
+     "Increase Base Critical Damage Multiplier by +0.4x."
+    ],
     "tier": 4
    },
    {
@@ -11774,6 +13259,9 @@
     },
     "form": "both",
     "name": "Prelude of Might",
+    "text": [
+     "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.4x."
+    ],
     "tier": 4
    },
    {
@@ -11819,6 +13307,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +12%.",
+     "Increase Base Status Chance by +12%."
+    ],
     "tier": 4
    }
   ],
@@ -11876,6 +13368,10 @@
     },
     "form": "both",
     "name": "Riddled Target",
+    "text": [
+     "Increase Base Damage by +48.",
+     "On Puncture Status Effect: +25% Multishot for 8s. Stacks up to 4x."
+    ],
     "tier": 2
    },
    {
@@ -11907,6 +13403,10 @@
     },
     "form": "both",
     "name": "Swift Punishment",
+    "text": [
+     "Increase Base Damage by +48.",
+     "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 2
    },
    {
@@ -11919,6 +13419,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-60% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -11948,6 +13451,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +15."
+    ],
     "tier": 3
    },
    {
@@ -11960,6 +13466,9 @@
     },
     "form": "both",
     "name": "Marksman's Focus",
+    "text": [
+     "-30% Zoom."
+    ],
     "tier": 3
    },
    {
@@ -11974,6 +13483,9 @@
     },
     "form": "both",
     "name": "Flensing Spikes",
+    "text": [
+     "Remove 20% of enemy Armor per Puncture Status."
+    ],
     "tier": 4
    },
    {
@@ -12003,6 +13515,9 @@
     },
     "form": "both",
     "name": "Deadhead",
+    "text": [
+     "+100% Headshot Damage."
+    ],
     "tier": 4
    },
    {
@@ -12034,6 +13549,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +30%.",
+     "Increase Base Critical Damage Multiplier by +Yx."
+    ],
     "tier": 4
    }
   ],
@@ -12078,6 +13597,10 @@
     },
     "form": "both",
     "name": "Daring Reverie",
+    "text": [
+     "Increase Base Damage by +28.",
+     "With Channeled Ability active: Increase Base Damage by +22. +50% Ammo Efficiency"
+    ],
     "tier": 2
    },
    {
@@ -12126,6 +13649,10 @@
     },
     "form": "both",
     "name": "Munitions Grit",
+    "text": [
+     "Increase Base Damage by +20.",
+     "Multishot consumes ammo directly from Capacity and does +48% Damage. +20% Multishot."
+    ],
     "tier": 2
    },
    {
@@ -12140,6 +13667,9 @@
     },
     "form": "normal",
     "name": "Mercenary Chamber",
+    "text": [
+     "Increase Base Ammo Capacity to 600."
+    ],
     "tier": 3
    },
    {
@@ -12152,6 +13682,10 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+60% Accuracy",
+     "-60% Recoil"
+    ],
     "tier": 3
    },
    {
@@ -12166,6 +13700,9 @@
     },
     "form": "normal",
     "name": "Gunsmoke Pick Up",
+    "text": [
+     "On Punch Through Hit: 20% chance for 10% Ammo restored."
+    ],
     "tier": 3
    },
    {
@@ -12211,6 +13748,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +18%.",
+     "Increase Base Critical Damage Multiplier by +0.5x."
+    ],
     "tier": 4
    },
    {
@@ -12225,6 +13766,9 @@
     },
     "form": "both",
     "name": "Prelude of Might",
+    "text": [
+     "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.3x."
+    ],
     "tier": 4
    },
    {
@@ -12270,6 +13814,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +10%.",
+     "Increase Base Status Chance by +12%."
+    ],
     "tier": 4
    }
   ],
@@ -12310,6 +13858,10 @@
     },
     "form": "both",
     "name": "Fortress Salvo",
+    "text": [
+     "Increase Base Damage by +12.",
+     "With Armor Over 450: +4 Punch Through."
+    ],
     "tier": 2
    },
    {
@@ -12341,6 +13893,10 @@
     },
     "form": "both",
     "name": "Fortifying Bloodshed",
+    "text": [
+     "Increase Base Damage by +10.",
+     "On Slash Status Kill: +100 Overshield."
+    ],
     "tier": 2
    },
    {
@@ -12353,6 +13909,9 @@
     },
     "form": "both",
     "name": "Kinetic Battle",
+    "text": [
+     "-50% Weapon Recoil."
+    ],
     "tier": 3
    },
    {
@@ -12365,6 +13924,9 @@
     },
     "form": "both",
     "name": "Practiced Grip",
+    "text": [
+     "Increase Accuracy by +50%."
+    ],
     "tier": 3
    },
    {
@@ -12394,6 +13956,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -12408,6 +13973,9 @@
     },
     "form": "both",
     "name": "Fresh Havoc",
+    "text": [
+     "On Reload From Empty: Increase Base Damage by +6. Stacks up to 2x."
+    ],
     "tier": 4
    },
    {
@@ -12437,6 +14005,9 @@
     },
     "form": "both",
     "name": "Fatal Affliction",
+    "text": [
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 4
    },
    {
@@ -12466,6 +14037,9 @@
     },
     "form": "both",
     "name": "Zeroed In",
+    "text": [
+     "Increase Base Critical Damage Multiplier by +0.6x."
+    ],
     "tier": 4
    }
   ],
@@ -12509,6 +14083,10 @@
     },
     "form": "both",
     "name": "Inciting Incident",
+    "text": [
+     "Increase Base Damage by +100.",
+     "With Channeled Ability Active: +2 Punch Through"
+    ],
     "tier": 2
    },
    {
@@ -12541,6 +14119,10 @@
     },
     "form": "both",
     "name": "Lone Enforcer",
+    "text": [
+     "Increase Base Damage by +75.",
+     "+25% Multishot if no enemies are within 5m."
+    ],
     "tier": 2
    },
    {
@@ -12570,6 +14152,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -12582,6 +14167,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-60% Recoil."
+    ],
     "tier": 3
    },
    {
@@ -12596,6 +14184,9 @@
     },
     "form": "both",
     "name": "Silent Running",
+    "text": [
+     "Reduce the chance an enemy will hear gunfire by 100%."
+    ],
     "tier": 3
    },
    {
@@ -12625,6 +14216,9 @@
     },
     "form": "both",
     "name": "Deadhead",
+    "text": [
+     "+25% Headshot Damage."
+    ],
     "tier": 4
    },
    {
@@ -12670,6 +14264,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +10%.",
+     "Increase Base Critical Damage Multiplier by +0.5x."
+    ],
     "tier": 4
    },
    {
@@ -12684,6 +14282,9 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Status Chance by 30% of current Critical Chance, up to 40%"
+    ],
     "tier": 4
    }
   ],
@@ -12728,6 +14329,10 @@
     },
     "form": "both",
     "name": "Daring Reverie",
+    "text": [
+     "Increase Base Damage by +12.",
+     "With Channeled Ability active: Increase Base Damage by +34. +50% Ammo Efficiency"
+    ],
     "tier": 2
    },
    {
@@ -12776,6 +14381,10 @@
     },
     "form": "both",
     "name": "Munitions Grit",
+    "text": [
+     "Increase Base Damage by +8.",
+     "Multishot consumes ammo directly from Capacity and does +58% Damage. +20% Multishot."
+    ],
     "tier": 2
    },
    {
@@ -12790,6 +14399,9 @@
     },
     "form": "normal",
     "name": "Mercenary Chamber",
+    "text": [
+     "Increase Base Ammo Capacity to 750."
+    ],
     "tier": 3
    },
    {
@@ -12802,6 +14414,10 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+60% Accuracy",
+     "-60% Recoil"
+    ],
     "tier": 3
    },
    {
@@ -12816,6 +14432,9 @@
     },
     "form": "normal",
     "name": "Gunsmoke Pick Up",
+    "text": [
+     "On Punch Through Hit: 20% chance for 10% Ammo restored."
+    ],
     "tier": 3
    },
    {
@@ -12861,6 +14480,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +16%.",
+     "Increase Base Critical Damage Multiplier by +0.4x."
+    ],
     "tier": 4
    },
    {
@@ -12875,6 +14498,9 @@
     },
     "form": "both",
     "name": "Prelude of Might",
+    "text": [
+     "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.0x."
+    ],
     "tier": 4
    },
    {
@@ -12920,6 +14546,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +10%.",
+     "Increase Base Status Chance by +12%."
+    ],
     "tier": 4
    }
   ],
@@ -12962,6 +14592,10 @@
     },
     "form": "both",
     "name": "Reified Bane",
+    "text": [
+     "Increase Base Damage by +10.",
+     "On Reload From Empty: Increase Base Damage by +14."
+    ],
     "tier": 2
    },
    {
@@ -12991,6 +14625,10 @@
     },
     "form": "both",
     "name": "Fortress Salvo",
+    "text": [
+     "Increase Base Damage by +16.",
+     "With Armor Over 450: +4 Punch Through"
+    ],
     "tier": 2
    },
    {
@@ -13005,6 +14643,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload From Empty: +100% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -13019,6 +14660,9 @@
     },
     "form": "both",
     "name": "Mercenary Chamber",
+    "text": [
+     "Increase Base Ammo Capacity to 195."
+    ],
     "tier": 3
    },
    {
@@ -13031,6 +14675,9 @@
     },
     "form": "both",
     "name": "Practiced Grip",
+    "text": [
+     "Increase Accuracy by +50%."
+    ],
     "tier": 3
    },
    {
@@ -13062,6 +14709,10 @@
     },
     "form": "incarnon",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +12% per projectile.",
+     "Increase Base Status Chance by +96% for Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -13107,6 +14758,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +20%.",
+     "Increase Base Critical Damage Multiplier by +0.5x."
+    ],
     "tier": 4
    },
    {
@@ -13154,6 +14809,11 @@
     },
     "form": "incarnon",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +10%.",
+     "Increase Base Status Chance by +6% per projectile.",
+     "Increase Base Status Chance by +48% for Incarnon Form."
+    ],
     "tier": 4
    }
   ],
@@ -13196,6 +14856,10 @@
     },
     "form": "both",
     "name": "Reified Bane",
+    "text": [
+     "Increase Base Damage by +10.",
+     "On Reload From Empty: Increase Base Damage by +14."
+    ],
     "tier": 2
    },
    {
@@ -13225,6 +14889,10 @@
     },
     "form": "both",
     "name": "Fortress Salvo",
+    "text": [
+     "Increase Base Damage by +16.",
+     "With Armor Over 450: +4 Punch Through"
+    ],
     "tier": 2
    },
    {
@@ -13239,6 +14907,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload From Empty: +100% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -13253,6 +14924,9 @@
     },
     "form": "both",
     "name": "Mercenary Chamber",
+    "text": [
+     "Increase Base Ammo Capacity to 195."
+    ],
     "tier": 3
    },
    {
@@ -13265,6 +14939,9 @@
     },
     "form": "both",
     "name": "Practiced Grip",
+    "text": [
+     "Increase Accuracy by +50%."
+    ],
     "tier": 3
    },
    {
@@ -13296,6 +14973,10 @@
     },
     "form": "incarnon",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +12% per projectile.",
+     "Increase Base Status Chance by +96% for Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -13341,6 +15022,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Base Critical Chance by +20%.",
+     "Increase Base Critical Damage Multiplier by +0.5x."
+    ],
     "tier": 4
    },
    {
@@ -13388,6 +15073,11 @@
     },
     "form": "incarnon",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +10%.",
+     "Increase Base Status Chance by +6% per projectile.",
+     "Increase Base Status Chance by +48% for Incarnon Form."
+    ],
     "tier": 4
    }
   ],
@@ -13429,6 +15119,10 @@
     },
     "form": "both",
     "name": "Tenno Targeting",
+    "text": [
+     "Increase Base Damage by +54.",
+     "With Channeled Ability Active: +4 Punch Through"
+    ],
     "tier": 2
    },
    {
@@ -13460,6 +15154,10 @@
     },
     "form": "both",
     "name": "Blazing Barrel",
+    "text": [
+     "Increase Base Damage by +54.",
+     "On Firing: +0.05 Base Multishot. Stacks up to 5x."
+    ],
     "tier": 2
    },
    {
@@ -13489,6 +15187,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -13503,6 +15204,9 @@
     },
     "form": "normal",
     "name": "Galvanic Reload",
+    "text": [
+     "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool."
+    ],
     "tier": 3
    },
    {
@@ -13515,6 +15219,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+30% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -13560,6 +15267,10 @@
     },
     "form": "incarnon",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +11%.",
+     "Increase Base Status Chance by +132% for Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -13589,6 +15300,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +16%."
+    ],
     "tier": 4
    },
    {
@@ -13650,6 +15364,11 @@
     },
     "form": "incarnon",
     "name": "Brutal Edge",
+    "text": [
+     "Increase Base Critical Chance by +4%.",
+     "Increase Base Status Chance by +4%.",
+     "Increase Base Status Chance by +48% for Incarnon Form."
+    ],
     "tier": 4
    }
   ],
@@ -13691,6 +15410,10 @@
     },
     "form": "both",
     "name": "Tenno Targeting",
+    "text": [
+     "Increase Base Damage by +24.",
+     "With Channeled Ability Active: +4 Punch Through"
+    ],
     "tier": 2
    },
    {
@@ -13722,6 +15445,10 @@
     },
     "form": "both",
     "name": "Blazing Barrel",
+    "text": [
+     "Increase Base Damage by +24.",
+     "On Firing: +0.05 Base Multishot. Stacks up to 5x."
+    ],
     "tier": 2
    },
    {
@@ -13751,6 +15478,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+60% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -13765,6 +15495,9 @@
     },
     "form": "normal",
     "name": "Galvanic Reload",
+    "text": [
+     "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool."
+    ],
     "tier": 3
    },
    {
@@ -13777,6 +15510,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+30% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -13822,6 +15558,10 @@
     },
     "form": "incarnon",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Base Status Chance by +10%.",
+     "Increase Base Status Chance by +100% for Incarnon Form."
+    ],
     "tier": 4
    },
    {
@@ -13851,6 +15591,9 @@
     },
     "form": "both",
     "name": "Commodore's Fortune",
+    "text": [
+     "Increase Base Critical Chance by +12%."
+    ],
     "tier": 4
    },
    {
@@ -13912,6 +15655,11 @@
     },
     "form": "incarnon",
     "name": "Brutal Edge",
+    "text": [
+     "Increase Base Critical Chance by +4%.",
+     "Increase Base Status Chance by +4.8%.",
+     "Increase Base Status Chance by +48% for Incarnon Form."
+    ],
     "tier": 4
    }
   ],
@@ -13939,6 +15687,10 @@
     },
     "form": "both",
     "name": "Swift Conclusion",
+    "text": [
+     "Increase Damage by +70.",
+     "Increase Damage by +200% if enemy has less than half health."
+    ],
     "tier": 2
    },
    {
@@ -13970,6 +15722,10 @@
     },
     "form": "both",
     "name": "Sage's Resolve",
+    "text": [
+     "Increase Base Damage by +70",
+     "With Channeled Ability active: +100% Multishot."
+    ],
     "tier": 2
    },
    {
@@ -13982,6 +15738,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+60% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -14011,6 +15770,9 @@
     },
     "form": "both",
     "name": "Extended Volley",
+    "text": [
+     "Increase Base Magazine Capacity by +10."
+    ],
     "tier": 3
    },
    {
@@ -14040,6 +15802,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+50% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -14085,6 +15850,11 @@
     },
     "form": "both",
     "name": "Deathtrap Trigger",
+    "text": [
+     "On equip from Primary:",
+     "Increase Base Critical Chance by +40% for 4s.",
+     "Increase Base Critical Damage Multiplier by +1.4x for 4s."
+    ],
     "tier": 4
    },
    {
@@ -14099,6 +15869,9 @@
     },
     "form": "both",
     "name": "Accelerating Volley",
+    "text": [
+     "On Fire: +20% Fire Rate for 0.5s. Stacks up to 5x."
+    ],
     "tier": 4
    },
    {
@@ -14144,6 +15917,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Base Critical Chance by +12%.",
+     "Increase Base Status Chance by +12%."
+    ],
     "tier": 4
    }
   ],
@@ -14187,6 +15964,10 @@
     },
     "form": "both",
     "name": "Fatal Affliction",
+    "text": [
+     "Increase Damage by +50.",
+     "+40% Direct Damage per Status Type affecting the target."
+    ],
     "tier": 2
    },
    {
@@ -14204,6 +15985,10 @@
     },
     "form": "both",
     "name": "Stalker's Vendetta",
+    "text": [
+     "Increase Damage by +60.",
+     "With Dread and Hate equipped: Multishot consumes ammo directly from Capacity and increases Damage by +100%. +30% Multishot."
+    ],
     "tier": 2
    },
    {
@@ -14216,6 +16001,9 @@
     },
     "form": "both",
     "name": "Marksman's Focus",
+    "text": [
+     "-30% Zoom."
+    ],
     "tier": 3
    },
    {
@@ -14228,6 +16016,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+50% Projectile Speed."
+    ],
     "tier": 3
    },
    {
@@ -14257,6 +16048,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+100% Reload Speed."
+    ],
     "tier": 3
    },
    {
@@ -14271,6 +16065,9 @@
     },
     "form": "both",
     "name": "Elemental Balance",
+    "text": [
+     "Increase Status Chance by +24%."
+    ],
     "tier": 4
    },
    {
@@ -14286,6 +16083,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "Increase Critical Chance by +12%.",
+     "Increase Status Chance by +12%."
+    ],
     "tier": 4
    },
    {
@@ -14301,6 +16102,10 @@
     },
     "form": "both",
     "name": "Critical Parallel",
+    "text": [
+     "Increase Critical Chance by +18%.",
+     "Increase Critical Damage Multiplier by +0.4x."
+    ],
     "tier": 4
    }
   ],
@@ -14324,6 +16129,9 @@
     },
     "form": "both",
     "name": "Attuned Accuracy",
+    "text": [
+     "+40% Accuracy when Aiming."
+    ],
     "tier": 2
    },
    {
@@ -14336,6 +16144,9 @@
     },
     "form": "both",
     "name": "Kinetic Baffle",
+    "text": [
+     "-50% Weapon Recoil"
+    ],
     "tier": 2
    },
    {
@@ -14348,6 +16159,9 @@
     },
     "form": "both",
     "name": "Frictionless Flight",
+    "text": [
+     "+50% Projectile Speed"
+    ],
     "tier": 2
    },
    {
@@ -14362,6 +16176,9 @@
     },
     "form": "both",
     "name": "Dual-Mode Chamber",
+    "text": [
+     "Reload toggles the weapon between +100% Projectile Speed and +4m Punch Through."
+    ],
     "tier": 3
    },
    {
@@ -14374,6 +16191,9 @@
     },
     "form": "both",
     "name": "Evolved Autoloader",
+    "text": [
+     "+50% Magazine Reloaded/s when Holstered"
+    ],
     "tier": 3
    },
    {
@@ -14389,6 +16209,9 @@
     },
     "form": "both",
     "name": "Mounting Momentum",
+    "text": [
+     "Reload increases Fire Rate by +10% per shell. Resets on reload."
+    ],
     "tier": 3
    },
    {
@@ -14436,6 +16259,10 @@
     },
     "form": "both",
     "name": "Brutal Edge",
+    "text": [
+     "+10% Critical Chance",
+     "+10% Status Chance"
+    ],
     "tier": 4
    },
    {
@@ -14450,6 +16277,9 @@
     },
     "form": "both",
     "name": "Incarnon Catalyst",
+    "text": [
+     "Headshots Build +50% more Incarnon Transmutation charge."
+    ],
     "tier": 4
    },
    {
@@ -14497,6 +16327,10 @@
     },
     "form": "both",
     "name": "Racking Wrath",
+    "text": [
+     "+20% Status Chance",
+     "-10% Critical Chance"
+    ],
     "tier": 4
    },
    {
@@ -14512,6 +16346,9 @@
     },
     "form": "both",
     "name": "Devastating Attrition",
+    "text": [
+     "50% chance to deal +2000% damage on non-critical hits"
+    ],
     "tier": 5
    },
    {
@@ -14526,6 +16363,9 @@
     },
     "form": "both",
     "name": "Ruptured Plentitude",
+    "text": [
+     "On Punch Through 3 enemies: +70% Ammo Efficiency for 20s"
+    ],
     "tier": 5
    },
    {
@@ -14540,6 +16380,9 @@
     },
     "form": "both",
     "name": "Agile Executor",
+    "text": [
+     "Gain 50% Ammo Efficiency while Aim Gliding and Sliding"
+    ],
     "tier": 5
    }
   ],
@@ -14565,6 +16408,9 @@
     },
     "form": "both",
     "name": "Void's Guidance",
+    "text": [
+     "+50% Accuracy and +50% less Recoil while Aiming"
+    ],
     "tier": 2
    },
    {
@@ -14594,6 +16440,9 @@
     },
     "form": "both",
     "name": "Rapid Wrath",
+    "text": [
+     "+20% Fire Rate"
+    ],
     "tier": 2
    },
    {
@@ -14606,6 +16455,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+80% Projectile Speed"
+    ],
     "tier": 2
    },
    {
@@ -14635,6 +16487,9 @@
     },
     "form": "normal",
     "name": "Retribution's Vessel",
+    "text": [
+     "+50% Magazine Capacity"
+    ],
     "tier": 3
    },
    {
@@ -14649,6 +16504,9 @@
     },
     "form": "both",
     "name": "Ready Retaliation",
+    "text": [
+     "On Reload from Empty: +100% Reload Speed for 6 seconds"
+    ],
     "tier": 3
    },
    {
@@ -14663,6 +16521,9 @@
     },
     "form": "normal",
     "name": "Executioner's Fortune",
+    "text": [
+     "On Headshot kill: 20% chance to instant Reload."
+    ],
     "tier": 3
    },
    {
@@ -14710,6 +16571,10 @@
     },
     "form": "both",
     "name": "Survivor's Edge",
+    "text": [
+     "+10% Critical Chance",
+     "+10% Status Chance"
+    ],
     "tier": 4
    },
    {
@@ -14724,6 +16589,9 @@
     },
     "form": "both",
     "name": "Incarnon Efficiency",
+    "text": [
+     "Headshots Build +50% more Incarnon Transmutation charge."
+    ],
     "tier": 4
    },
    {
@@ -14771,6 +16639,10 @@
     },
     "form": "both",
     "name": "Elemental Excess",
+    "text": [
+     "+20% Status Chance",
+     "-10% Critical Chance"
+    ],
     "tier": 4
    },
    {
@@ -14786,6 +16658,9 @@
     },
     "form": "both",
     "name": "Devouring Attrition",
+    "text": [
+     "50% chance to deal +2000% damage on non-critical hits"
+    ],
     "tier": 5
    },
    {
@@ -14800,6 +16675,9 @@
     },
     "form": "both",
     "name": "Spiteful Defilement",
+    "text": [
+     "Enemies suffering from fewer than 3 Status Effects will receive: +100% Critical Damage"
+    ],
     "tier": 5
    },
    {
@@ -14829,6 +16707,9 @@
     },
     "form": "both",
     "name": "Lingering Judgement",
+    "text": [
+     "On 2 headshots within 2 seconds: +50% Headshot damage for 8 seconds."
+    ],
     "tier": 5
    }
   ],
@@ -14853,6 +16734,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-40% Recoil"
+    ],
     "tier": 2
    },
    {
@@ -14882,6 +16766,9 @@
     },
     "form": "both",
     "name": "Rapid Wrath",
+    "text": [
+     "+20% Fire Rate"
+    ],
     "tier": 2
    },
    {
@@ -14894,6 +16781,9 @@
     },
     "form": "both",
     "name": "Raptor's Chase",
+    "text": [
+     "+50% Movement Speed while Aiming"
+    ],
     "tier": 2
    },
    {
@@ -14909,6 +16799,9 @@
     },
     "form": "both",
     "name": "Lethal Rearmament",
+    "text": [
+     "On Headshot: +30% Reload Speed for 12 seconds. Stacks up to 3 times."
+    ],
     "tier": 3
    },
    {
@@ -14923,6 +16816,9 @@
     },
     "form": "normal",
     "name": "Awakened Readiness",
+    "text": [
+     "30% Magazine Reloaded per second while Holstered"
+    ],
     "tier": 3
    },
    {
@@ -14937,6 +16833,9 @@
     },
     "form": "normal",
     "name": "Feather of Justice",
+    "text": [
+     "Gain 60% Ammo Efficiency while Aim Gliding or Sliding."
+    ],
     "tier": 3
    },
    {
@@ -14966,6 +16865,9 @@
     },
     "form": "both",
     "name": "Caput Mortuum",
+    "text": [
+     "+50% Headshot damage"
+    ],
     "tier": 4
    },
    {
@@ -14980,6 +16882,9 @@
     },
     "form": "both",
     "name": "Incarnon Efficiency",
+    "text": [
+     "Headshots Build +50% more Incarnon Transmutation charge."
+    ],
     "tier": 4
    },
    {
@@ -15027,6 +16932,10 @@
     },
     "form": "both",
     "name": "Elemental Excess",
+    "text": [
+     "+20% Status Chance",
+     "-10% Critical Chance"
+    ],
     "tier": 4
    },
    {
@@ -15056,6 +16965,9 @@
     },
     "form": "both",
     "name": "Devouring Attrition",
+    "text": [
+     "50% chance to deal +2000% damage on non-critical hits"
+    ],
     "tier": 5
    },
    {
@@ -15070,6 +16982,9 @@
     },
     "form": "normal",
     "name": "Reaper's Plenty",
+    "text": [
+     "On Headshot: +40% Ammo Efficiency for 6 seconds."
+    ],
     "tier": 5
    },
    {
@@ -15099,6 +17014,9 @@
     },
     "form": "both",
     "name": "Overwhelming Attrition",
+    "text": [
+     "On Hit that is neither Critical nor applies a Status Effect: +400% damage for 10 seconds. Stacks up to 3 times."
+    ],
     "tier": 5
    }
   ],
@@ -15123,6 +17041,9 @@
     },
     "form": "both",
     "name": "Marksman's Hand",
+    "text": [
+     "-30% Recoil"
+    ],
     "tier": 2
    },
    {
@@ -15152,6 +17073,9 @@
     },
     "form": "both",
     "name": "Rapid Wrath",
+    "text": [
+     "+25% Fire Rate"
+    ],
     "tier": 2
    },
    {
@@ -15164,6 +17088,9 @@
     },
     "form": "both",
     "name": "Swift Deliverance",
+    "text": [
+     "+50% Projectile Speed"
+    ],
     "tier": 2
    },
    {
@@ -15178,6 +17105,9 @@
     },
     "form": "normal",
     "name": "Extended Volley",
+    "text": [
+     "+10 Base Magazine Capacity"
+    ],
     "tier": 3
    },
    {
@@ -15207,6 +17137,9 @@
     },
     "form": "both",
     "name": "Rapid Reinforcement",
+    "text": [
+     "+30% Reload Speed"
+    ],
     "tier": 3
    },
    {
@@ -15221,6 +17154,9 @@
     },
     "form": "normal",
     "name": "Hunter's Rearmament",
+    "text": [
+     "On Kill: 10% chance to replenish 10 Ammo"
+    ],
     "tier": 3
    },
    {
@@ -15233,6 +17169,9 @@
     },
     "form": "both",
     "name": "Lethal Lance",
+    "text": [
+     "On Kill: +2.5 Punch Through for 20s"
+    ],
     "tier": 4
    },
    {
@@ -15247,6 +17186,9 @@
     },
     "form": "both",
     "name": "Incarnon Efficiency",
+    "text": [
+     "Headshots Build +50% more Incarnon Transmutation charge."
+    ],
     "tier": 4
    },
    {
@@ -15294,6 +17236,10 @@
     },
     "form": "both",
     "name": "Elemental Excess",
+    "text": [
+     "+20% Status Chance",
+     "-10% Critical Chance"
+    ],
     "tier": 4
    },
    {
@@ -15323,6 +17269,9 @@
     },
     "form": "both",
     "name": "Sequential Skullbuster",
+    "text": [
+     "On Consecutive Weakpoint Hits: +30% Headshot Damage. Stacks up to 4x"
+    ],
     "tier": 5
    },
    {
@@ -15338,6 +17287,9 @@
     },
     "form": "both",
     "name": "Impaler's Ferocity",
+    "text": [
+     "On Punch Through Hit: +200% Damage for 10s."
+    ],
     "tier": 5
    },
    {
@@ -15354,6 +17306,9 @@
     },
     "form": "both",
     "name": "Devastation Cascade",
+    "text": [
+     "Hitting enemies in Incarnon Form increases the Critical Chance and Critical Damage of the fully charged blast by +5%. Stacks up to 50 times."
+    ],
     "tier": 5
    }
   ],

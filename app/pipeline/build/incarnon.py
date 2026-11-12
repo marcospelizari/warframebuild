@@ -26,7 +26,9 @@ def build(
             continue
         parsed, form = parse_perk(r.lines, r.notes)
         effects = overrides.apply(f"{gun.unique_name}#{r.name}", parsed)
-        perks[gun.unique_name].append(Perk(tier=r.tier, name=r.name, form=form, effects=effects))
+        perks[gun.unique_name].append(
+            Perk(tier=r.tier, name=r.name, form=form, text=r.lines, effects=effects)
+        )
     rows = _rows(table, {w.unique_name: w for w in guns}, set(perks))
     names = {w.unique_name: w.name for w in guns}
     return [

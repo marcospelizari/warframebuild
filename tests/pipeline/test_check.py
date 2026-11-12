@@ -6,6 +6,7 @@ from app.gamedata import store
 from app.gamedata.models import Meta, SourceRecord
 from app.pipeline import check, publish
 from app.pipeline.build import build
+from app.pipeline.changes import EntryDiff
 from app.pipeline.refresh import Paths, load_previous, run
 from app.pipeline.sources import de_export as de
 from app.pipeline.sources import sha256_16, wfcd
@@ -184,30 +185,6 @@ def _bump_first_weapon(paths: Paths) -> None:
     weapons.write_text(json.dumps(data))
 
 
-def test_entry_diff_and_touched_rows(paths: Paths) -> None:
-    run(paths, offline=True, fetch_images=False)
-    previous = store.load(paths.gamedata)
-    weapons_path = paths.raw / "de/ExportWeapons_en.json"
-    data = json.loads(weapons_path.read_text())
-    lex = next(w for w in data["ExportWeapons"] if w["name"] == "Lex Prime")
-    lex["criticalChance"] += 0.05
-    weapons_path.write_text(json.dumps(data))
-    fire = json.loads((paths.reference / "fire_overrides.json").read_text())
-    fire["weapons"][lex["uniqueName"]] = {"name": "Lex Prime", "verified": "2026-10-01"}
-    (paths.reference / "fire_overrides.json").write_text(json.dumps(fire))
-
-    diff = check.entry_diff(previous, None, build(paths.raw, paths.reference))
-    assert diff.changed["weapons"] == ["Lex Prime"]
-    touched = check.touched_rows(check.reference_rows(paths.reference), diff)
-    assert sorted((r.file, r.label) for r in touched) == [
-        ("fire_overrides.json", "Lex Prime"),
-        ("headshot.json", "Lex Prime"),  # headshot row
-        ("headshot.json", "Lex Prime"),  # flat_heads row
-        ("main_attack.json", "Lex Prime"),
-    ]
-    assert "changed weapons (1): Lex Prime" in "\n".join(check.diff_lines(diff, touched, "x"))
-
-
 def test_unreadable_previous_dataset_is_reported(paths: Paths) -> None:
     """Review bug 3: an unreadable previous dataset never reads as 'no changes'."""
     run(paths, offline=True, fetch_images=False)
@@ -217,7 +194,7 @@ def test_unreadable_previous_dataset_is_reported(paths: Paths) -> None:
     assert previous is None and error and f"schema version 1, this code reads {current}" in error
     report = run(paths, offline=True, fetch_images=False)
     text = "\n".join(report.lines())
-    assert "previous dataset unreadable" in text
+    assert "no comparison with the previous dataset" in text
     assert "no new, changed or removed" not in text
     assert len(report.touched) == len(check.reference_rows(paths.reference))
 
@@ -261,7 +238,7 @@ def test_family_correction_listed_when_a_member_changes(paths: Paths) -> None:
     """Review R16: correction rows are keyed by their own id; their `mods` count."""
     rows = check.reference_rows(paths.reference)
     join = next(r for r in rows if r.key == "galvanized-aptitude-rifle-aptitude")
-    diff = check.EntryDiff(ids={join.depends_on[0]})
+    diff = EntryDiff(ids={join.depends_on[0]})
     assert join in check.touched_rows(rows, diff)
 
 

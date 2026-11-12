@@ -5,8 +5,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from app.gamedata import store
+from app.gamedata.changes import read_changes
 from app.gamedata.models import Meta, SourceRecord
-from app.pipeline import check, images, publish
+from app.pipeline import changes, check, images, publish
 from app.pipeline.build import build
 from app.pipeline.sources import (
     SourceFile,
@@ -45,7 +46,8 @@ class Report:
     meta: Meta
     previous: Meta | None
     source_changes: list[str] | None = None  # None = not checked (offline)
-    diff: check.EntryDiff = field(default_factory=check.EntryDiff)
+    diff: changes.EntryDiff = field(default_factory=changes.EntryDiff)
+    patch: list[str] = field(default_factory=list)  # support drops + report path (U1)
     touched: list[check.RefRow] = field(default_factory=list)
     wiki: list[str] = field(default_factory=list)
     support: list[str] = field(default_factory=list)
@@ -57,6 +59,7 @@ class Report:
         out = check.source_lines(self.source_changes)
         out += self._dataset_lines(self.meta, self.previous)
         out += check.diff_lines(self.diff, self.touched, self.meta.changed_on)
+        out += self.patch
         out += self.support
         out += self.untagged
         out += self.wiki
@@ -95,10 +98,11 @@ def run(
 
 def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClient | None) -> Report:
     previous, previous_error = load_previous(paths.gamedata)
+    before = changes.read_previous(_readable(paths.gamedata))
     # Fail early: nothing is downloaded while a hand-saved file is missing.
     saved_files = wiki_local.scan(paths.raw, paths.reference) + export_plus.scan(paths.raw)
     reference_rows = check.reference_rows(paths.reference)  # bad dates fail before publishing
-    changes: list[str] | None = None
+    changed_sources: list[str] | None = None
     saving: AbstractContextManager[list[SourceFile]]
     if offline:
         leftovers = interrupted_saves(paths.raw)
@@ -112,7 +116,7 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
     else:
         client = client or PoliteClient()
         fetched = de_export.fetch(client) + wfcd.fetch(client)
-        changes = check.changed(
+        changed_sources = check.changed(
             fetched,
             previous.meta.sources if previous else None,
             "previous dataset unreadable" if previous_error else "no current dataset",
@@ -126,23 +130,30 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
             [_record(f) for f in files],
             paths.gamedata,
             previous.meta if previous else None,
+            beside=changes.beside(before, changes.snapshot(dataset)),
         )
     write_sources(paths.raw, files)  # only once the new dataset is in place
 
-    diff = check.entry_diff(previous, previous_error, dataset)
+    found = read_changes(paths.gamedata)
+    assert found is not None  # just written
+    report_path = None
+    if before.dataset_hash != meta.dataset_hash:  # a new step, not a re-run on the same data
+        report_path = changes.write_report(found, paths.raw.parent, meta.changed_on)
+    diff = changes.entry_diff(found)
     report = Report(
         meta=meta,
         previous=previous.meta if previous else None,
-        source_changes=changes,
+        source_changes=changed_sources,
         diff=diff,
+        patch=changes.summary_lines(found, report_path),
         touched=check.touched_rows(reference_rows, diff),
         support=check.support_lines(dataset),
         untagged=check.untagged_lines(dataset)
         + check.module_gap_lines(dataset)
         + check.incarnon_gap_lines(dataset),
         # After a game update the hand-saved files need a look too.
-        wiki=check.wiki_lines(paths.raw, paths.reference) if changes else [],
-        export_plus=check.export_plus_lines(paths.raw) if changes else [],
+        wiki=check.wiki_lines(paths.raw, paths.reference) if changed_sources else [],
+        export_plus=check.export_plus_lines(paths.raw) if changed_sources else [],
     )
     if fetch_images and client is not None:
         report.image_failures = images.fetch_missing(
@@ -154,13 +165,18 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
     return report
 
 
+def _readable(gamedata: Path) -> Path:
+    """gamedata/, or its `.old` copy after a crash between the swap renames."""
+    return gamedata if gamedata.exists() else publish.backup_dir(gamedata)
+
+
 def load_previous(gamedata: Path) -> tuple[store.GameData | None, str | None]:
     """(dataset, None), (None, None) on first run, or (None, reason) when unreadable.
 
     Read-only: after a crash between the swap renames, reads the `.old` copy that
     publish.write will restore under its lock.
     """
-    source = gamedata if gamedata.exists() else publish.backup_dir(gamedata)
+    source = _readable(gamedata)
     if not (source / "meta.json").exists():
         return None, None
     try:
