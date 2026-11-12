@@ -12,6 +12,7 @@ not decided yet is a stand-in with the right *cost shape*, never a game fact:
 Nothing here is read by `app/`; the numbers it produces are timings, not builds.
 """
 
+import functools
 import math
 import random
 from collections.abc import Sequence
@@ -24,14 +25,14 @@ from app.domain.fire_rate import Firing, effective_fire_rate
 from app.domain.hit import AttackStats, Bonus, modded_hit
 from app.domain.stats import modded, modded_time, value_for
 from app.domain.status import (
-    BASE_DURATION_S,
-    FIRST_TICK_S,
+    Dot,
     dot_seed,
     dot_tick,
     dot_ticks,
     expected_procs,
     proc_shares,
 )
+from app.domain.status_rules import StatusRules
 from app.gamedata.models import Mod, Weapon
 from app.gamedata.store import GameData, load
 
@@ -47,7 +48,6 @@ WEAPONS = (
 )
 ENEMIES = 16  # ~2 per main faction (R1/E2)
 CAP_S = 10.0  # simulation cap (G33)
-DOT_TYPES = tuple(FIRST_TICK_S)
 USED_TRIGGERS = frozenset({Trigger.ALWAYS, Trigger.ON_HIT, Trigger.ON_KILL, Trigger.ON_CRIT})
 POOL_COMPAT = {
     "Rifle": ("Rifle", "Assault Rifle", "PRIMARY"),
@@ -84,6 +84,16 @@ class Enemy:
 
 def gamedata() -> GameData:
     return load(ROOT / "gamedata")
+
+
+@functools.cache
+def status_rules() -> StatusRules:
+    return gamedata().status_rules
+
+
+def dots() -> dict[DamageType, Dot]:
+    rules = status_rules()
+    return {t: d for t in DamageType if (d := rules.dot(t)) is not None}
 
 
 def pool(data: GameData, weapon: Weapon) -> list[Mod]:
@@ -129,6 +139,7 @@ def bonuses(weapon: Weapon, mods: Sequence[Mod]) -> list[Bonus]:
 def shot_model(weapon: Weapon, mods: Sequence[Mod]) -> ShotModel:
     """Per-candidate work done before any enemy: the real domain hit and fire rate."""
     b = bonuses(weapon, mods)
+    rules = status_rules()
     attack = weapon.attacks[0]
     hit = modded_hit(
         AttackStats(
@@ -178,12 +189,16 @@ def shot_model(weapon: Weapon, mods: Sequence[Mod]) -> ShotModel:
         direct=direct,
         procs=procs,
         dot_tick={
-            t: dot_tick(seed, t, hit.element_bonus.get(t, 0.0), 1.0, hit.status_damage)
-            for t in DOT_TYPES
+            t: dot_tick(d, seed, t, hit.element_bonus.get(t, 0.0), 1.0, hit.status_damage)
+            for t, d in dots().items()
             if procs.get(t)
         },
-        dot_ticks={t: dot_ticks(t, hit.status_duration) for t in DOT_TYPES if procs.get(t)},
-        duration=BASE_DURATION_S * (1 + hit.status_duration),
+        dot_ticks={
+            t: dot_ticks(d, rules.duration(t), hit.status_duration)
+            for t, d in dots().items()
+            if procs.get(t)
+        },
+        duration=rules.duration(DamageType.SLASH) * (1 + hit.status_duration),
         burst_dps=math.fsum(direct.values()) * rate,
     )
 

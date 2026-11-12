@@ -10,6 +10,9 @@ import math
 from collections import deque
 from collections.abc import Mapping, Sequence
 from enum import StrEnum
+from typing import Annotated
+
+from pydantic import BaseModel, ConfigDict, Field
 
 from app.domain.effects import DamageType, FireRateBoost
 
@@ -72,46 +75,16 @@ def boosted(value: float, boost: FireRateBoost | None, fire_rate: float) -> floa
     return value * boost.factor if boost and fire_rate < boost.below else value
 
 
-# How long one proc stays on the target (saved Status_Effect: Status Duration table; Void and
-# Tau from the damage-type table); x (1 + status duration). Knockdown and Lifted count as
-# status types too (same page) but it gives them no duration: not listed.
-STATUS_S: dict[DamageType, float] = {
-    DamageType.IMPACT: 6.0,
-    DamageType.PUNCTURE: 10.0,  # table (Status_Effect:256); a patch note there says 6 s (:1048)
-    DamageType.SLASH: 6.0,
-    DamageType.COLD: 6.0,
-    DamageType.ELECTRICITY: 6.0,
-    DamageType.HEAT: 6.0,
-    DamageType.TOXIN: 6.0,
-    DamageType.BLAST: 1.5,
-    DamageType.CORROSIVE: 8.0,
-    DamageType.GAS: 6.0,
-    DamageType.MAGNETIC: 6.0,
-    DamageType.RADIATION: 12.0,
-    DamageType.VIRAL: 6.0,
-    DamageType.VOID: 3.0,
-    DamageType.TAU: 8.0,
-}
-
-
 # ---------- damage over time (saved Damage/Calculation, Damage Over Time) ----------
 
-DOT_COEFFICIENT: dict[DamageType, float] = {
-    DamageType.SLASH: 0.35,
-    DamageType.HEAT: 0.5,
-    DamageType.ELECTRICITY: 0.5,
-    DamageType.TOXIN: 0.5,
-    DamageType.GAS: 0.5,
-}
-BASE_DURATION_S = 6.0  # one tick per second (Status_Effect, Status Damage)
-# Slash, Heat, Toxin tick first after 1 s; Electricity and Gas at once (Status_Effect).
-FIRST_TICK_S: dict[DamageType, float] = {
-    DamageType.SLASH: 1.0,
-    DamageType.HEAT: 1.0,
-    DamageType.TOXIN: 1.0,
-    DamageType.ELECTRICITY: 0.0,
-    DamageType.GAS: 0.0,
-}
+
+class Dot(BaseModel):
+    """One DoT type: tick coefficient `C` and the first tick's delay after the proc."""
+
+    model_config = ConfigDict(frozen=True, extra="forbid", allow_inf_nan=False)
+
+    coefficient: Annotated[float, Field(gt=0)]
+    first_tick_s: Annotated[float, Field(ge=0)]
 
 
 def dot_seed(modded_base: float, hit_multiplier: float, faction: float = 1.0) -> float:
@@ -122,6 +95,7 @@ def dot_seed(modded_base: float, hit_multiplier: float, faction: float = 1.0) ->
 
 
 def dot_tick(
+    dot: Dot,
     seeds: float,
     damage_type: DamageType,
     element_bonus: float = 0.0,
@@ -132,23 +106,22 @@ def dot_tick(
     Slash and Toxin stacks tick separately (one seed each). M = (1 + element bonus of the
     type's own mods, `element_bonuses`; none for Slash) x faction (a second time) x
     (1 + status damage)."""
-    coefficient = DOT_COEFFICIENT[damage_type]
     element = 1.0 if damage_type == DamageType.SLASH else 1 + element_bonus
-    return (seeds + 1) * coefficient * element * faction * (1 + status_damage)
+    return (seeds + 1) * dot.coefficient * element * faction * (1 + status_damage)
 
 
-def dot_ticks(damage_type: DamageType, duration_bonus: float) -> int:
-    """Ticks per proc over 6 s x (1 + status duration), one per second.
+def dot_ticks(dot: Dot, base_s: float, duration_bonus: float) -> int:
+    """Ticks per proc over `base_s` x (1 + status duration), one per second.
 
     After a 1 s delay (Slash, Heat, Toxin): `floor(duration - 1) + 1` (saved
     Damage_over_Time; 6 s -> 6, Hunter Track 11.4 s -> 11 as on Hunter_Munitions). From
     0 s (Electricity, Gas): Status_Effect's table shows ticks at 0..5 s for 6 s, so
     `ceil(duration)`; the formula's `+1` would give 7 (assumption, stated)."""
-    duration = BASE_DURATION_S * (1 + duration_bonus)
+    duration = base_s * (1 + duration_bonus)
     if duration <= 0:
         return 0
-    if FIRST_TICK_S[damage_type] > 0:
-        return max(0, math.floor(duration - FIRST_TICK_S[damage_type] + 1e-9) + 1)
+    if dot.first_tick_s > 0:
+        return max(0, math.floor(duration - dot.first_tick_s + 1e-9) + 1)
     return math.ceil(duration - 1e-9)
 
 
@@ -158,16 +131,17 @@ def heat_ticks(
     life: float,
     refreshed: bool,
     until: float,
+    first_tick_s: float,
 ) -> list[tuple[float, float]]:
     """Heat's one pooled tick per second (saved Heat_Damage:66; Damage/Calculation, DoT):
-    `(sum of live seeds + 1) x C x M`, from 1 s after the first proc. `procs`: (time,
+    `(sum of live seeds + 1) x C x M`, from `first_tick_s` after the first proc. `procs`: (time,
     expected seeds, expected procs) per hit; `tick_factor` = C x M. Each proc refreshes all
     stacks, so with `refreshed` every earlier proc stays live; otherwise each lasts `life`.
     Below one expected live proc the +1 scales with it."""
     if not procs:
         return []
     out = []
-    tick = procs[0][0] + FIRST_TICK_S[DamageType.HEAT]
+    tick = procs[0][0] + first_tick_s
     last = procs[-1][0] + life
     while tick <= min(last, until):
         live = [(s, p) for t, s, p in procs if t < tick and (refreshed or t > tick - life)]
@@ -181,28 +155,37 @@ def heat_ticks(
 
 # ---------- Blast (saved Blast_Damage; Damage/Calculation: stack-and-detonate) ----------
 
-BLAST_CAP = 10
-BLAST_CAP_BOSS = 4
-BLAST_STACK_S = 1.5  # fuse, x (1 + status duration) (Blast_Damage:21, :64)
-BLAST_PROC = 0.3  # share of modded base damage per stack (Blast_Damage:21, :36-41)
-BLAST_DETONATION = 3.0
+
+class Detonation(BaseModel):
+    """Blast stacks: `cap` active stacks detonate at once; each stack deals `proc` x modded
+    base damage to its target; `radial` x each stack's hit damage hits other enemies."""
+
+    model_config = ConfigDict(frozen=True, extra="forbid", allow_inf_nan=False)
+
+    cap: Annotated[int, Field(ge=1)]
+    proc: Annotated[float, Field(gt=0)]
+    radial: Annotated[float, Field(ge=0)]
 
 
 def blast_proc(
-    modded_base: float, hit_multiplier: float, faction: float = 1.0, status_damage: float = 0.0
+    blast: Detonation,
+    modded_base: float,
+    hit_multiplier: float,
+    faction: float = 1.0,
+    status_damage: float = 0.0,
 ) -> float:
-    """What one stack deals to its target: 0.3 x modded base damage (no element or physical
+    """What one stack deals to its target: `proc` (0.3) x modded base damage (no element or physical
     bonuses) x the hit's crit and body part (`hit_multiplier`, faction already in it) x
     faction again x (1 + status damage) (Blast_Damage:30-44; at least 1, Calculation:644)."""
-    return max(1.0, BLAST_PROC * modded_base * hit_multiplier * faction * (1 + status_damage))
+    return max(1.0, blast.proc * modded_base * hit_multiplier * faction * (1 + status_damage))
 
 
 def blast_hits(
-    stacks: Sequence[tuple[float, float, float]], fuse: float, cap: int = BLAST_CAP
+    stacks: Sequence[tuple[float, float, float]], fuse: float, cap: int
 ) -> list[tuple[float, float]]:
     """Blast damage on the target: (time, expected stacks, one stack's damage) per hit ->
     (time, damage). Each stack hits its target when its fuse runs out; at `cap` active stacks
-    they all hit at once. The 3x radial burst never hits the detonating target
+    they all hit at once. The radial burst never hits the detonating target
     (Blast_Damage:23, :59), so the target takes the same total, only sooner."""
     out: list[tuple[float, float]] = []
     active: deque[tuple[float, float, float]] = deque()
@@ -218,7 +201,8 @@ def blast_hits(
     return out
 
 
-def blast_detonation(stack_hits: Sequence[float]) -> float:
-    """The radial burst on *other* enemies in 5 m: 3 x the stacks' hit damage (not scored:
-    the detonating target never takes it, Blast_Damage:23)."""
-    return BLAST_DETONATION * math.fsum(stack_hits)
+def blast_detonation(blast: Detonation, stack_hits: Sequence[float]) -> float:
+    """The radial burst on *other* enemies in 5 m: `radial` (10) x the stacks' hit damage,
+    i.e. 300% base per stack (not scored: the detonating target never takes it,
+    Blast_Damage:23)."""
+    return blast.radial * math.fsum(stack_hits)

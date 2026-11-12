@@ -4,6 +4,7 @@ from pathlib import Path
 
 import pytest
 
+from app.domain.status_rules import StatusRules
 from app.gamedata.store import GameData, load
 from app.pipeline.refresh import Paths
 from app.pipeline.sources import wiki_incarnon, wiki_local
@@ -256,3 +257,9 @@ def _keep_fixture_guns(raw: Path, table: Path) -> None:
 def gamedata() -> GameData:
     """The committed gamedata/ (Q26: domain, optimizer and API tests read it)."""
     return load(ROOT / "gamedata")
+
+
+@pytest.fixture(scope="session")
+def rules(gamedata: GameData) -> StatusRules:
+    """Status numbers of the committed gamedata/ (reference/status_rules.json)."""
+    return gamedata.status_rules

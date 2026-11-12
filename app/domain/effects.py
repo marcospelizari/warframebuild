@@ -53,6 +53,7 @@ class Stat(StrEnum):
     AMMO_EFFICIENCY = "ammo_efficiency"
     FORCED_PROC = "forced_proc"  # chance to add a `damage_type` proc (V8)
     CRIT_TIER_UPGRADE = "crit_tier_upgrade"  # Vigilante set: chance to enhance a crit
+    STATUS_STACK_CAP = "status_stack_cap"  # +N max stacks of `damage_type`'s status
 
 
 PHYSICAL_TYPES = frozenset({DamageType.IMPACT, DamageType.PUNCTURE, DamageType.SLASH})
@@ -141,7 +142,12 @@ class Effect(BaseModel):
 
     @model_validator(mode="after")
     def _shape(self) -> "Effect":
-        needs_type = self.stat in (Stat.ELEMENT, Stat.PHYSICAL, Stat.FORCED_PROC)
+        needs_type = self.stat in (
+            Stat.ELEMENT,
+            Stat.PHYSICAL,
+            Stat.FORCED_PROC,
+            Stat.STATUS_STACK_CAP,
+        )
         if needs_type != (self.damage_type is not None):
             raise ValueError(f"{self.stat}: damage_type {'required' if needs_type else 'unused'}")
         if self.stat == Stat.PHYSICAL and self.damage_type not in PHYSICAL_TYPES:
@@ -154,6 +160,8 @@ class Effect(BaseModel):
             raise ValueError("trigger_damage_type only on on_status")
         if self.stat == Stat.FORCED_PROC and self.trigger not in _PROC_TRIGGERS:
             raise ValueError("forced_proc: trigger must be always, on_crit or on_status")
+        if self.stat == Stat.STATUS_STACK_CAP and self.operation != Operation.ADD:
+            raise ValueError("status_stack_cap: operation must be add")
         if self.fire_rate_boost is not None and self.stat != Stat.FORCED_PROC:
             raise ValueError("fire_rate_boost only on forced_proc")
         if self.per_status_type and self.stat != Stat.DIRECT_DAMAGE:

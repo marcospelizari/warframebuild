@@ -10,19 +10,15 @@ import math
 from bisect import bisect_left, bisect_right
 from dataclasses import dataclass, field
 
-from app.domain import debuffs
 from app.domain.class_mechanics import beam_level, sniper_combo_multiplier
 from app.domain.combat import CAP_S, INDEX, TYPES, Event
+from app.domain.debuffs import armor_kept
 from app.domain.direct_bonus import DirectBonus
 from app.domain.effects import DamageType, Faction
 from app.domain.fire_rate import shot_times
 from app.domain.headshot import Head
 from app.domain.hit import with_direct_bonus
 from app.domain.status import (
-    BASE_DURATION_S,
-    BLAST_STACK_S,
-    FIRST_TICK_S,
-    STATUS_S,
     blast_hits,
     blast_proc,
     dot_seed,
@@ -30,6 +26,7 @@ from app.domain.status import (
     dot_ticks,
     heat_ticks,
 )
+from app.domain.status_rules import StatusRules
 from app.optimize.conditions import Resolved
 from app.optimize.head import AOE, head_args
 from app.optimize.loadout import Loadout
@@ -46,12 +43,17 @@ class Timeline:
     res: Resolved
     head: Head | None
     bane: Faction | None
+    rules: StatusRules
     armored: dict[int, list[float]] = field(default_factory=dict)
     unarmored: dict[int, list[float]] = field(default_factory=dict)
     exact: dict[int, float] = field(default_factory=dict)  # merge key -> first event time
 
     def __post_init__(self) -> None:
         self.shot = self.res.shot
+        if self.shot.hits:
+            self.rules = self.rules.with_extra_stacks(self.shot.hits[0].stack_cap_bonus)
+        self.window = {t: r.duration_s for t, r in self.rules.types.items()}  # base, s
+        self.dots = {t: r.dot for t, r in self.rules.types.items() if r.dot is not None}
         self.times = shot_times(self.shot.firing, self.shot.rate_factor, CAP_S)
         self.own = [
             part_procs(hit, attack, self.lo.mark, self.head, self.shot, self.res.forced)
@@ -68,6 +70,8 @@ class Timeline:
         interval = 1 / self.shot.rate
         duration = 1 + hits[0].status_duration
         procs = self._procs_per_shot()
+        rules = self.rules
+        puncture, cold = rules.stacking(DamageType.PUNCTURE), rules.stacking(DamageType.COLD)
         heat: list[tuple[float, float, float, float]] = []  # time, seeds, procs, tick factor
         blast: list[tuple[float, float, float]] = []  # time, expected stacks, one stack
         combo_hits = 0.0
@@ -76,8 +80,8 @@ class Timeline:
                 off = max(0.0, t - last - interval)
                 level = beam_level(ramp, level, t - last - off, off)
                 last = t
-            punct = self._stacks(procs, DamageType.PUNCTURE, t, debuffs.PUNCTURE, duration)
-            cold = self._stacks(procs, DamageType.COLD, t, debuffs.COLD, duration)
+            punct = self._stacks(procs, DamageType.PUNCTURE, t, duration)
+            chill = self._stacks(procs, DamageType.COLD, t, duration)
             types = self._status_types(procs, t, duration) if self.res.direct else 0.0
             for base, (_, attack), own in zip(hits, parts, self.own, strict=True):
                 args = head_args(attack, self.lo.mark) if self.lo.mark else None
@@ -93,8 +97,8 @@ class Timeline:
                     flat=bool(args and args.flat),
                     extra_bonus=args.extra_bonus if args else 0.0,
                     extra_factor=args.extra_factor if args else 0.0,
-                    chance_add=debuffs.PUNCTURE.value(punct) if direct else 0.0,
-                    damage_add=debuffs.COLD.value(cold) if direct else 0.0,
+                    chance_add=puncture.value(punct) if direct else 0.0,
+                    damage_add=cold.value(chill) if direct else 0.0,
                 ) * (self._combo(combo_hits) if direct else 1.0)
                 if ramp is not None:
                     factor *= level  # one target from the first tick (V10)
@@ -103,20 +107,26 @@ class Timeline:
                 seed = dot_seed(hit.modded_base, factor)  # Bane already in `factor`
                 bane = hit.faction_multiplier.get(self.bane, 1.0) if self.bane else 1.0
                 for dt, p, ratio in own.seeded():
-                    if dt not in FIRST_TICK_S:
+                    dot = self.dots.get(dt)
+                    if dot is None:
                         continue
                     s = seed * ratio
-                    tick = dot_tick(s, dt, hit.element_bonus.get(dt, 0.0), bane, hit.status_damage)
+                    bonus = hit.element_bonus.get(dt, 0.0)
+                    tick = dot_tick(dot, s, dt, bonus, bane, hit.status_damage)
                     if dt in POOLED:
                         heat.append((t, p * s, p, tick / (s + 1)))
                         continue
-                    for j in range(dot_ticks(dt, hit.status_duration)):
-                        self._add(t + FIRST_TICK_S[dt] + j, dt, p * tick, slash=True)
+                    ticks = dot_ticks(dot, self.window[dt], hit.status_duration)
+                    for j in range(ticks):
+                        self._add(t + dot.first_tick_s + j, dt, p * tick, slash=True)
                 if own.total.get(DamageType.BLAST):
-                    stack = blast_proc(hit.modded_base, factor, bane, hit.status_damage)
+                    stack = blast_proc(
+                        rules.blast, hit.modded_base, factor, bane, hit.status_damage
+                    )
                     blast.append((t, own.total[DamageType.BLAST], stack))
         self._heat(heat, duration)
-        for at, v in blast_hits(blast, BLAST_STACK_S * duration):
+        fuse = self.window[DamageType.BLAST] * duration
+        for at, v in blast_hits(blast, fuse, rules.blast.cap):
             self._add(at, DamageType.BLAST, v)
         return self._with_debuffs(procs, duration)
 
@@ -138,10 +148,9 @@ class Timeline:
         procs: dict[DamageType, float],
         dt: DamageType,
         t: float,
-        stacking: debuffs.Stacking,
         duration: float,
     ) -> float:
-        return self._live(procs, dt, t, stacking.duration_s * duration)
+        return self._live(procs, dt, t, self.window[dt] * duration)
 
     def _live(
         self, procs: dict[DamageType, float], dt: DamageType, t: float, window: float
@@ -158,7 +167,7 @@ class Timeline:
         """Expected status types on the target for Galvanized-style bonuses: the bonus
         applies on the hits after the one that procs (Galvanized_Aptitude:42)."""
         return math.fsum(
-            min(1.0, self._live(procs, dt, t, STATUS_S[dt] * duration)) for dt in procs
+            min(1.0, self._live(procs, dt, t, self.window[dt] * duration)) for dt in procs
         )
 
     def _add(self, t: float, dt: DamageType, v: float, *, slash: bool = False) -> None:
@@ -176,11 +185,12 @@ class Timeline:
         all stacks); sparser ones each last one duration."""
         if not heat:
             return
-        life = BASE_DURATION_S * duration
+        life = self.window[HEAT] * duration
+        dot = self.dots[HEAT]
         per_shot = math.fsum(p for t, _, p, _ in heat if t == heat[0][0])
         gap = (self.times[1] - self.times[0]) / per_shot if len(self.times) > 1 else life
         procs = [(t, s, p) for t, s, p, _ in heat]
-        for tick, v in heat_ticks(procs, heat[0][3], life, gap <= life, CAP_S):
+        for tick, v in heat_ticks(procs, heat[0][3], life, gap <= life, CAP_S, dot.first_tick_s):
             self._add(tick, HEAT, v)
 
     def _with_debuffs(self, procs: dict[DamageType, float], duration: float) -> list[Event]:
@@ -189,26 +199,30 @@ class Timeline:
         if p_heat:
             first = math.ceil(1 / p_heat - 1e-9) - 1  # shot where expected Heat procs reach 1
             burning = self.times[first] if first < len(self.times) else None
+        rules = self.rules
+        strips = rules.heat_strip
+        corrosive = rules.stacking(DamageType.CORROSIVE)
+        viral, magnetic = rules.stacking(DamageType.VIRAL), rules.stacking(DamageType.MAGNETIC)
         zero = [0.0] * len(TYPES)
         out = []
         for key in sorted(self.armored.keys() | self.unarmored.keys()):
             t = self.exact[key]
             strip = (
-                debuffs.heat_strip(t - burning, duration - 1)
+                strips.strip(t - burning, duration - 1)
                 if burning is not None and t > burning
                 else 0.0
             )
-            c = self._stacks(procs, DamageType.CORROSIVE, t, debuffs.CORROSIVE, duration)
-            v = self._stacks(procs, DamageType.VIRAL, t, debuffs.VIRAL, duration)
-            m = self._stacks(procs, DamageType.MAGNETIC, t, debuffs.MAGNETIC, duration)
+            c = self._stacks(procs, DamageType.CORROSIVE, t, duration)
+            v = self._stacks(procs, DamageType.VIRAL, t, duration)
+            m = self._stacks(procs, DamageType.MAGNETIC, t, duration)
             out.append(
                 Event(
                     time=t,
                     armored=self.armored.get(key, zero),
                     unarmored=self.unarmored.get(key, zero),
-                    armor_kept=debuffs.armor_kept(c, strip),
-                    viral=1 + debuffs.VIRAL.value(v),
-                    magnetic=1 + debuffs.MAGNETIC.value(m),
+                    armor_kept=armor_kept(corrosive, c, strip),
+                    viral=1 + viral.value(v),
+                    magnetic=1 + magnetic.value(m),
                 )
             )
         return out

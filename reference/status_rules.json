@@ -1,0 +1,92 @@
+{
+  "about": "Status numbers per damage type (step 8, U13), built into gamedata/status_rules.json. `duration_s`: one proc's base duration, x (1 + status duration); it is also the DoT duration and each stack's window. `stacking`: debuff value at one stack (`first`), added per further stack (`step`), stacks counted (`cap`; a build's \"+N max <Type> stacks\" raises it). `dot`: tick coefficient C of (seeds + 1) x C x M and the first tick's delay. `heat_strip`: armor stripped per step after the first proc, `step_s` apart. `blast`: stacks that detonate at once, share of modded base damage per stack on the target, radial burst on other enemies per stack, as a multiple of that stack's hit (300% base = 10x the 30% hit, Blast_Damage:23). Which mechanic uses which part is code; the numbers are here. `source` = saved wiki page:line. Puncture: the table gives 10 s (Status_Effect:256), a patch note there 6 s (:1048). Cold: crit damage counted to the 9th stack; the 10-stack freeze is not modelled. Void and Tau durations from the damage-type table (Status_Effect:84, :88).",
+  "types": {
+    "impact": {
+      "duration_s": 6,
+      "source": ["Status_Effect:251-252"],
+      "verified": "2026-11-12"
+    },
+    "puncture": {
+      "duration_s": 10,
+      "stacking": {"first": 0.05, "step": 0.05, "cap": 5},
+      "source": ["Status_Effect:255-256", "Puncture_Damage:18-20"],
+      "verified": "2026-11-12"
+    },
+    "slash": {
+      "duration_s": 6,
+      "dot": {"coefficient": 0.35, "first_tick_s": 1},
+      "source": ["Status_Effect:259-260, :381-382", "Calculation:623"],
+      "verified": "2026-11-12"
+    },
+    "heat": {
+      "duration_s": 6,
+      "dot": {"coefficient": 0.5, "first_tick_s": 1},
+      "heat_strip": {"steps": [0.15, 0.30, 0.40, 0.50], "step_s": 0.5},
+      "source": ["Status_Effect:271-272, :384-385", "Calculation:623", "Heat_Damage:79, :85"],
+      "verified": "2026-11-12"
+    },
+    "cold": {
+      "duration_s": 6,
+      "stacking": {"first": 0.1, "step": 0.05, "cap": 9},
+      "source": ["Status_Effect:263-264", "Cold_Damage:18-20", "Critical_Hit:208-213"],
+      "verified": "2026-11-12"
+    },
+    "electricity": {
+      "duration_s": 6,
+      "dot": {"coefficient": 0.5, "first_tick_s": 0},
+      "source": ["Status_Effect:267-268, :390-391", "Calculation:623"],
+      "verified": "2026-11-12"
+    },
+    "toxin": {
+      "duration_s": 6,
+      "dot": {"coefficient": 0.5, "first_tick_s": 1},
+      "source": ["Status_Effect:275-276, :387-388", "Calculation:623"],
+      "verified": "2026-11-12"
+    },
+    "blast": {
+      "duration_s": 1.5,
+      "blast": {"cap": 10, "proc": 0.3, "radial": 10},
+      "source": ["Status_Effect:279-280", "Blast_Damage:21, :23, :36-41, :50, :64"],
+      "verified": "2026-11-12"
+    },
+    "radiation": {
+      "duration_s": 12,
+      "source": ["Status_Effect:295-296"],
+      "verified": "2026-11-12"
+    },
+    "gas": {
+      "duration_s": 6,
+      "dot": {"coefficient": 0.5, "first_tick_s": 0},
+      "source": ["Status_Effect:287-288, :393-394", "Calculation:623"],
+      "verified": "2026-11-12"
+    },
+    "magnetic": {
+      "duration_s": 6,
+      "stacking": {"first": 1.0, "step": 0.25, "cap": 10},
+      "source": ["Status_Effect:291-292", "Magnetic_Damage:23, :28"],
+      "verified": "2026-11-12"
+    },
+    "viral": {
+      "duration_s": 6,
+      "stacking": {"first": 1.0, "step": 0.25, "cap": 10},
+      "source": ["Status_Effect:299-300", "Viral_Damage:20, :25"],
+      "verified": "2026-11-12"
+    },
+    "corrosive": {
+      "duration_s": 8,
+      "stacking": {"first": 0.26, "step": 0.06, "cap": 10},
+      "source": ["Status_Effect:283-284", "Corrosive_Damage:21"],
+      "verified": "2026-11-12"
+    },
+    "void": {
+      "duration_s": 3,
+      "source": ["Status_Effect:84"],
+      "verified": "2026-11-12"
+    },
+    "tau": {
+      "duration_s": 8,
+      "source": ["Status_Effect:88"],
+      "verified": "2026-11-12"
+    }
+  }
+}

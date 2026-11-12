@@ -1,9 +1,10 @@
 """Per-gun input keys for an incremental build-all (G90 U3).
 
 A gun's key hashes everything its search reads: the gun, every mod and arcane that fits it
-(with the sets of those mods), its Incarnon perks, the enemies, faction modifiers and the
-reference head, plus the calculator version and the budget. A gun whose key matches the
-current release's copies its builds from there; any other gun is searched again.
+(with the sets of those mods), its Incarnon perks, the enemies, faction modifiers, the
+reference head and the status rules, plus the calculator version and the budget. A gun
+whose key matches the current release's copies its builds from there; any other gun is
+searched again.
 """
 
 import hashlib
@@ -22,7 +23,14 @@ _SKIP = {"texture_location"}
 
 def gun_keys(data: GameData, calculator: str, budget: int) -> dict[str, str]:
     shared = _digest(
-        [calculator, budget, _dump(data.enemies), _dump(data.factions), _dump(data.reference_head)]
+        [
+            calculator,
+            budget,
+            _dump(data.enemies),
+            _dump(data.factions),
+            _dump(data.reference_head),
+            _dump(data.status_rules),
+        ]
     )
     sets = {s.unique_name: s for s in data.mods.sets}
     keys = {}

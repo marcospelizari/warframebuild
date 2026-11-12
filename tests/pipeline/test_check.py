@@ -2,6 +2,7 @@ import json
 
 import pytest
 
+from app.domain.effects import DamageType
 from app.gamedata import store
 from app.gamedata.models import Meta, SourceRecord
 from app.pipeline import check, publish
@@ -11,7 +12,7 @@ from app.pipeline.refresh import Paths, load_previous, run
 from app.pipeline.sources import de_export as de
 from app.pipeline.sources import sha256_16, wfcd
 from app.pipeline.sources.http import PoliteClient
-from app.pipeline.sources.wiki_local import MissingWikiPages, scan
+from app.pipeline.sources.wiki_local import MissingWikiPages, pages, scan
 from tests.conftest import FIXTURE_RAW
 
 
@@ -245,3 +246,16 @@ def test_family_correction_listed_when_a_member_changes(paths: Paths) -> None:
 def test_single_reference_row_is_listed(paths: Paths) -> None:
     rows = check.reference_rows(paths.reference)
     assert ("headshot.json", "Grineer humanoid head") in {(r.file, r.label) for r in rows}
+
+
+def test_status_rule_rows_are_listed_with_their_wiki_pages(paths: Paths) -> None:
+    """U13: one row per damage type; every cited saved page names the file in its feeds."""
+    rows = [r for r in check.reference_rows(paths.reference) if r.file == "status_rules.json"]
+    assert {r.key for r in rows} == {t.value for t in DamageType}
+    table = json.loads((paths.reference / "status_rules.json").read_text())
+    cited = {c.split(":")[0] for row in table["types"].values() for c in row["source"]}
+    assert "Puncture_Damage" in cited and "Status_Effect" in cited
+    feeding = {p.stem for p in pages(paths.reference) if any("status_rules" in f for f in p.feeds)}
+    assert feeding == cited
+    text = "\n".join(check.wiki_lines(paths.raw, paths.reference))
+    assert "status_rules.json" in text

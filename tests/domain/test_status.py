@@ -6,6 +6,7 @@ from app.domain.effects import FireRateBoost
 from app.domain.elements import Part
 from app.domain.status import (
     CrowdControl,
+    Dot,
     blast_detonation,
     blast_hits,
     blast_proc,
@@ -19,6 +20,7 @@ from app.domain.status import (
     heat_ticks,
     proc_shares,
 )
+from app.domain.status_rules import StatusRules
 
 
 def test_proc_shares_example() -> None:
@@ -67,29 +69,36 @@ def test_internal_bleeding_threshold_is_strict() -> None:
     ],
 )
 def test_dot_tick_examples(
-    seed: float, damage_type: D, element: float, faction: float, expected: float
+    rules: StatusRules, seed: float, damage_type: D, element: float, faction: float, expected: float
 ) -> None:
     """Saved Damage/Calculation, Damage Over Time: (sum of seeds + 1) x C x M."""
-    assert dot_tick(seed, damage_type, element, faction) == pytest.approx(expected, abs=0.01)
+    tick = dot_tick(_dot(rules, damage_type), seed, damage_type, element, faction)
+    assert tick == pytest.approx(expected, abs=0.01)
 
 
-def test_dot_seed_and_status_damage() -> None:
+def test_dot_seed_and_status_damage(rules: StatusRules) -> None:
     seed = dot_seed(100 * 2.65, 1.0, 1.3)
-    assert dot_tick(seed, D.SLASH, faction=1.3, status_damage=0.9) == pytest.approx(
-        (100 * 2.65 * 1.3 + 1) * 0.35 * 1.3 * 1.9
+    assert dot_tick(
+        _dot(rules, D.SLASH), seed, D.SLASH, faction=1.3, status_damage=0.9
+    ) == pytest.approx((100 * 2.65 * 1.3 + 1) * 0.35 * 1.3 * 1.9)
+
+
+def test_slash_ignores_element_bonus(rules: StatusRules) -> None:
+    assert dot_tick(_dot(rules, D.SLASH), 40, D.SLASH, element_bonus=5.0) == pytest.approx(
+        41 * 0.35
     )
 
 
-def test_slash_ignores_element_bonus() -> None:
-    assert dot_tick(40, D.SLASH, element_bonus=5.0) == pytest.approx(41 * 0.35)
-
-
-def test_tick_counts() -> None:
+def test_tick_counts(rules: StatusRules) -> None:
     """Saved Damage_over_Time + Status_Effect: 6 ticks base; Hunter Track 11.4 s -> 11."""
-    assert dot_ticks(D.SLASH, 0.0) == 6
-    assert dot_ticks(D.SLASH, 0.9) == 11
-    assert dot_ticks(D.ELECTRICITY, 0.0) == 6
-    assert dot_ticks(D.GAS, 0.9) == 12
+
+    def ticks(t: D, bonus: float) -> int:
+        return dot_ticks(_dot(rules, t), rules.duration(t), bonus)
+
+    assert ticks(D.SLASH, 0.0) == 6
+    assert ticks(D.SLASH, 0.9) == 11
+    assert ticks(D.ELECTRICITY, 0.0) == 6
+    assert ticks(D.GAS, 0.9) == 12
 
 
 def test_dot_element_bonus_is_per_literal_type() -> None:
@@ -98,27 +107,30 @@ def test_dot_element_bonus_is_per_literal_type() -> None:
     assert element_bonuses(mods) == {D.HEAT: 0.9, D.TOXIN: 0.9, D.GAS: 0.6}
 
 
-def test_blast_proc_per_the_blast_page() -> None:
+def test_blast_proc_per_the_blast_page(rules: StatusRules) -> None:
     """Blast_Damage:30-44: 0.3 x modded base (faction in it) x crit/body part x faction again
     x (1 + status damage); at least 1 (Calculation:644)."""
-    assert blast_proc(100, 2.0 * 1.3, 1.3, 0.5) == pytest.approx(0.3 * 100 * 2.6 * 1.3 * 1.5)
-    assert blast_proc(2, 1.0) == 1.0
-    assert blast_detonation([100] * 10) == 3000  # on other enemies only (Blast_Damage:23)
+    assert blast_proc(rules.blast, 100, 2.0 * 1.3, 1.3, 0.5) == pytest.approx(
+        0.3 * 100 * 2.6 * 1.3 * 1.5
+    )
+    assert blast_proc(rules.blast, 2, 1.0) == 1.0
+    # On other enemies only: 300% base per stack = 10x a 30% stack hit (Blast_Damage:23).
+    assert blast_detonation(rules.blast, [30] * 10) == 3000
 
 
 def test_blast_stacks_hit_after_their_fuse() -> None:
-    hits = blast_hits([(0.0, 1.0, 30.0), (1.0, 1.0, 30.0)], fuse=1.5)
+    hits = blast_hits([(0.0, 1.0, 30.0), (1.0, 1.0, 30.0)], fuse=1.5, cap=10)
     assert hits == [(1.5, 30.0), (2.5, 30.0)]
-    longer = blast_hits([(0.0, 1.0, 30.0)], fuse=1.5 * 2)  # +100% status duration
+    longer = blast_hits([(0.0, 1.0, 30.0)], fuse=1.5 * 2, cap=10)  # +100% status duration
     assert longer == [(3.0, 30.0)]
 
 
 def test_ten_blast_stacks_hit_the_target_at_once_for_their_own_damage() -> None:
     """Blast_Damage:21, :23, :59: 10 hits of 30% at once; the 3x burst is not on the target."""
     stacks = [(0.1 * i, 1.0, 30.0) for i in range(10)]
-    [(at, damage)] = blast_hits(stacks, fuse=1.5)
+    [(at, damage)] = blast_hits(stacks, fuse=1.5, cap=10)
     assert at == pytest.approx(0.9) and damage == pytest.approx(300.0)  # not 3 x 300
-    [(at, damage)] = blast_hits([(0.0, 0.6, 30.0)], fuse=1.5)
+    [(at, damage)] = blast_hits([(0.0, 0.6, 30.0)], fuse=1.5, cap=10)
     assert at == 1.5 and damage == pytest.approx(18.0)  # expected stacks below one
 
 
@@ -126,7 +138,7 @@ def test_heat_pools_into_one_tick_that_grows_with_refreshed_stacks() -> None:
     """Heat_Damage:66: one tick per second from 1 s after the first proc; each proc adds its
     seed and refreshes all; the +1 counts once (Damage/Calculation: Heat example)."""
     procs = [(0.5, 40.0, 1.0), (1.6, 80.0, 1.0)]
-    ticks = heat_ticks(procs, 0.5 * 1.6, life=6.0, refreshed=True, until=10.0)
+    ticks = heat_ticks(procs, 0.5 * 1.6, life=6.0, refreshed=True, until=10.0, first_tick_s=1.0)
     assert ticks[0] == pytest.approx((1.5, (40 + 1) * 0.8))  # the second proc lands later
     assert ticks[1] == pytest.approx((2.5, (40 + 80 + 1) * 0.8))  # 96.8, the page's example
     assert ticks[-1][0] == pytest.approx(7.5)  # the burn ends 6 s after the last proc
@@ -134,12 +146,20 @@ def test_heat_pools_into_one_tick_that_grows_with_refreshed_stacks() -> None:
 
 def test_heat_without_refresh_drops_old_stacks() -> None:
     procs = [(0.0, 10.0, 1.0), (5.0, 10.0, 1.0)]
-    ticks = dict(heat_ticks(procs, 1.0, life=2.0, refreshed=False, until=10.0))
+    ticks = dict(heat_ticks(procs, 1.0, life=2.0, refreshed=False, until=10.0, first_tick_s=1.0))
     assert ticks[1.0] == pytest.approx(11.0)
     assert 3.0 not in ticks  # first burn over, second not yet
     assert ticks[6.0] == pytest.approx(11.0)
 
 
 def test_heat_expected_procs_below_one_scale_the_plus_one() -> None:
-    ticks = heat_ticks([(0.0, 4.0, 0.25)], 1.0, life=6.0, refreshed=True, until=2.0)
+    ticks = heat_ticks(
+        [(0.0, 4.0, 0.25)], 1.0, life=6.0, refreshed=True, until=2.0, first_tick_s=1.0
+    )
     assert ticks[0] == pytest.approx((1.0, 4.0 + 0.25))
+
+
+def _dot(rules: StatusRules, t: D) -> Dot:
+    dot = rules.dot(t)
+    assert dot is not None
+    return dot
