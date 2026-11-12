@@ -69,6 +69,7 @@ class BonusElement(ApiModel):
 
 class Arsenal(ApiModel):
     damage: dict[DamageType, float]  # per projectile, not quantized (as in the arsenal)
+    combined: dict[DamageType, list[DamageType]]  # combined element in `damage` -> its 2 parts
     total_damage: float
     critical_chance: float
     critical_multiplier: float

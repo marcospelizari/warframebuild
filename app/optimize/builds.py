@@ -20,6 +20,7 @@ from app.optimize.scoring import (
     best_max,
     build_loadout,
     combat_objective,
+    enemies_objective,
     max_objective,
 )
 from app.optimize.search import MAX_EVALUATIONS, Option, Result, rounded
@@ -141,7 +142,7 @@ def _build(
         lo = build_loadout(data, weapon, r.mods, r.exilus, r.picks, bonus)
         fought = combat(lo, list(enemies), data.factions).enemies
         costs = {x.enemy.unique_name: rounded(x.outcome.cost) for x in fought}
-        objective = _combat_objective(data, list(enemies))
+        objective = enemies_objective(data, enemies)
     arcane = r.picks[0] if r.picks else None
     return Build(
         mods=[m.unique_name for m in r.mods],
@@ -156,10 +157,6 @@ def _build(
         costs=costs,
         without=_without(data, weapon, r, bonus, objective),
     )
-
-
-def _combat_objective(data: GameData, enemies: list[Enemy]) -> Objective:
-    return lambda lo: 1 / combat(lo, enemies, data.factions).score
 
 
 def _without(

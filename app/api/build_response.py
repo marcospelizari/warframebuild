@@ -22,6 +22,7 @@ from app.api.schemas import (
     WeaponRef,
 )
 from app.domain.combat import CAP_S
+from app.domain.elements import PARTS
 from app.domain.headshot import Head
 from app.gamedata.builds import Forma
 from app.gamedata.models import Arcane, Mod, ReferenceHead, Weapon
@@ -150,6 +151,7 @@ def _build(
         forma=forma,
         arsenal=Arsenal(
             damage=hit.arsenal_damage,
+            combined={t: list(PARTS[t]) for t in hit.arsenal_damage if t in PARTS},
             total_damage=math.fsum(hit.arsenal_damage.values()),
             critical_chance=hit.critical_chance,
             critical_multiplier=hit.critical_multiplier,

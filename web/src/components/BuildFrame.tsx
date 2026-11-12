@@ -7,10 +7,16 @@ export function formaText(forma: Forma | null): string {
   return forma.forma === 0 ? "No forma needed" : `${forma.forma} forma`;
 }
 
-type Props = { title: string; note: string; forma: Forma | null; children: ReactNode };
+type Props = {
+  title: string;
+  note: string;
+  forma: Forma | null;
+  pending?: boolean; // an edit waits for /calc: the layout is not known yet
+  children: ReactNode;
+};
 
 /** The gilt-framed build: title, note (search status or edit state), forma count, grid. */
-export function BuildFrame({ title, note, forma, children }: Props) {
+export function BuildFrame({ title, note, forma, pending = false, children }: Props) {
   return (
     <section className={`${u.gilt} px-3 pt-[22px] pb-6 sm:px-6`} aria-labelledby="bt">
       <span className={`${u.dia} ${u.diaTop}`} aria-hidden="true" />
@@ -22,8 +28,8 @@ export function BuildFrame({ title, note, forma, children }: Props) {
           </h2>
           <p className="mt-1 mb-0 text-sm text-muted">{note}</p>
         </div>
-        <strong className={`text-[15px] ${forma ? "text-gold" : "text-[#e0735f]"}`}>
-          {formaText(forma)}
+        <strong className={`text-[15px] ${forma || pending ? "text-gold" : "text-[#e0735f]"}`}>
+          {pending ? "Forma: calculating…" : formaText(forma)}
         </strong>
       </div>
       {children}

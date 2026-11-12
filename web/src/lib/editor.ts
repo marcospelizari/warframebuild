@@ -24,6 +24,23 @@ export function fromBuild(build: Build): Choices {
   };
 }
 
+/** `build` with the slots, exilus and arcane the player picked: the grid always shows
+    the picks, even before (or without) a /calc answer for them. */
+export function showChoices(build: Build, c: Choices, items: ModList): Build {
+  const mods = new Map(items.mods.map((m) => [m.unique_name, m]));
+  const slot = (index: number, id: string | null | undefined) => {
+    const m = id ? mods.get(id) : undefined;
+    return { index, mod: id ?? null, name: m?.name ?? null, rank: m?.rank ?? null, polarity: m?.polarity ?? null };
+  };
+  const arcane = c.arcane ? items.arcanes.find((a) => a.unique_name === c.arcane) : undefined;
+  return {
+    ...build,
+    slots: Array.from({ length: MAX_MODS }, (_, i) => slot(i, c.mods[i])),
+    exilus: c.exilus ? slot(MAX_MODS, c.exilus) : null,
+    arcane: c.arcane ? { unique_name: c.arcane, name: arcane?.name ?? c.arcane } : null,
+  };
+}
+
 export function toRequest(weapon: string, c: Choices): CalcRequest {
   return {
     weapon,

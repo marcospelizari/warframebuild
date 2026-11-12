@@ -32,12 +32,23 @@ class Meta:
     noindex: bool = False
 
 
+ORIGIN = re.compile(r"https?://[A-Za-z0-9.-]+(:[0-9]{1,5})?")
+
+
+def origin(value: str) -> str:
+    """The site's public address (scheme + host), checked at startup."""
+    value = value.rstrip("/")
+    if not ORIGIN.fullmatch(value):
+        raise ValueError(f"public origin must look like https://example.org, got {value!r}")
+    return value
+
+
 def faction_slug(name: str) -> str:
     return name.lower().replace(" ", "-")
 
 
-def render(page: str, meta: Meta, origin: str) -> str:
-    url = origin + meta.path
+def render(page: str, meta: Meta, site: str) -> str:
+    url = site + meta.path
     tags = [
         f"<title>{escape(meta.title)}</title>",
         f'<meta name="description" content="{escape(meta.description)}" />',
@@ -50,7 +61,7 @@ def render(page: str, meta: Meta, origin: str) -> str:
         '<meta name="twitter:card" content="summary" />',
     ]
     if meta.image:
-        tags.append(f'<meta property="og:image" content="{escape(origin + meta.image)}" />')
+        tags.append(f'<meta property="og:image" content="{escape(site + meta.image)}" />')
     if meta.noindex:
         tags.append('<meta name="robots" content="noindex" />')
     block = "<!-- page-meta -->\n    " + "\n    ".join(tags) + "\n    <!-- /page-meta -->"
@@ -113,13 +124,15 @@ def _page(request: Request, slug: str, faction: str | None) -> HTMLResponse:
     data: GameData = request.app.state.data
     gun = data.weapon_by_slug.get(slug)
     meta = weapon_meta(data, request.app.state.release, gun, faction) if gun else None
-    origin = str(request.base_url).rstrip("/")
+    # Behind a proxy the request's own scheme/host can be wrong or forged: prefer the
+    # configured address; the request's is for local runs.
+    site = request.app.state.public_origin or str(request.base_url).rstrip("/")
     if meta is None:
         missing = Meta(f"Page not found | {SITE}", "No such gun or faction.", "/", noindex=True)
-        return HTMLResponse(render(page, missing, origin), status_code=404)
+        return HTMLResponse(render(page, missing, site), status_code=404)
     noindex = "b" in request.query_params  # an edited build: index the plain page only
     meta = Meta(meta.title, meta.description, meta.path, meta.image, noindex)
-    return HTMLResponse(render(page, meta, origin))
+    return HTMLResponse(render(page, meta, site))
 
 
 @router.get("/w/{slug}", include_in_schema=False)

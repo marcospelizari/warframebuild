@@ -22,6 +22,10 @@ COMBINED: dict[frozenset[D], D] = {
     frozenset({D.ELECTRICITY, D.TOXIN}): D.CORROSIVE,
 }
 ELEMENTS = frozenset(PRIMARY) | frozenset(COMBINED.values())
+# Each combined element's two parts, in HCET order (shown as "Viral (cold + toxin)").
+PARTS: dict[D, tuple[D, D]] = {
+    v: (a, b) for k, v in COMBINED.items() for a, b in [sorted(k, key=PRIMARY.index)]
+}
 
 
 @dataclass(frozen=True)

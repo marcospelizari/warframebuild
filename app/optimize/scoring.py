@@ -7,7 +7,7 @@ from collections.abc import Callable, Sequence
 from app.domain.combat import neutral_dps
 from app.domain.effects import DamageType, Faction, Stat, Support
 from app.domain.headshot import Head
-from app.gamedata.models import Arcane, Mod, Perk, Weapon
+from app.gamedata.models import Arcane, Enemy, Mod, Perk, Weapon
 from app.gamedata.store import GameData
 from app.optimize import forma
 from app.optimize.candidates import arcane_fits, pool
@@ -39,7 +39,13 @@ def combat_objective(data: GameData, faction: str | None = None) -> Objective:
     enemies = [e for e in data.enemies if faction is None or e.faction == faction]
     if not enemies:
         raise ValueError(f"no representative enemies for {faction!r}")
-    return lambda lo: 1 / combat(lo, enemies, data.factions).score
+    return enemies_objective(data, enemies)
+
+
+def enemies_objective(data: GameData, enemies: Sequence[Enemy]) -> Objective:
+    """1 / combat cost over exactly `enemies`."""
+    fought = list(enemies)
+    return lambda lo: 1 / combat(lo, fought, data.factions).score
 
 
 def best_max(

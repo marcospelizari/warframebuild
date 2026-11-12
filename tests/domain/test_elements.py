@@ -1,5 +1,5 @@
 from app.domain.effects import DamageType as D
-from app.domain.elements import Part, combine
+from app.domain.elements import COMBINED, PARTS, Part, combine
 
 
 def kinds(out: dict[D, list[Part]]) -> set[D]:
@@ -47,3 +47,9 @@ def test_secondary_elements_never_combine() -> None:
     out = combine([Part(D.HEAT, 0.9), Part(D.COLD, 0.9)], innate)
     assert kinds(out) == {D.BLAST}
     assert len(out[D.BLAST]) == 3
+
+
+def test_parts_of_each_combined_element_in_hcet_order() -> None:
+    assert PARTS[D.VIRAL] == (D.COLD, D.TOXIN)
+    assert PARTS[D.BLAST] == (D.HEAT, D.COLD)
+    assert {frozenset(p) for p in PARTS.values()} == set(COMBINED)

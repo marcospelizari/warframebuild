@@ -8,14 +8,19 @@ const cap = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 type Props = { weapon: WeaponRef; item: WeaponItem | undefined; onEdit?: () => void };
 
 export function WeaponHeader({ weapon, item, onEdit }: Props) {
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState<"no" | "yes" | "failed">("no");
   const meta = [
     `${cap(weapon.category)} ${weapon.weapon_type.toLowerCase()}`,
     item ? `mastery rank ${item.mastery}` : null,
     item?.incarnon ? "Incarnon" : null,
   ].filter(Boolean);
+  // No clipboard off HTTPS (e.g. a LAN address), and the browser may refuse the write.
   const copy = () => {
-    void navigator.clipboard.writeText(window.location.href).then(() => setCopied(true));
+    if (!navigator.clipboard) return setCopied("failed");
+    navigator.clipboard.writeText(window.location.href).then(
+      () => setCopied("yes"),
+      () => setCopied("failed"),
+    );
   };
   return (
     <section className="flex flex-col items-center pt-2 pb-1 text-center">
@@ -37,7 +42,7 @@ export function WeaponHeader({ weapon, item, onEdit }: Props) {
           </button>
         )}
         <button className={u.act} type="button" onClick={copy}>
-          {copied ? "Link copied" : "Copy build link"}
+          {copied === "yes" ? "Link copied" : copied === "failed" ? "Couldn't copy" : "Copy build link"}
         </button>
       </div>
     </section>

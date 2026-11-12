@@ -65,3 +65,25 @@ def test_faction_page_without_builds_is_not_a_404(tmp_path: Path, gamedata: Game
     response = TestClient(app).get("/w/soma-prime/grineer")
     assert response.status_code == 200
     assert "<title>Soma Prime build | warframeBuild</title>" in response.text
+
+
+def test_public_origin_wins_over_the_request_host(
+    tmp_path: Path, gamedata: GameData, releases: Path
+) -> None:
+    (tmp_path / "web").mkdir()
+    (tmp_path / "web/index.html").write_text(INDEX)
+    app = create_app(
+        web_dist=tmp_path / "web",
+        data=gamedata,
+        releases=releases,
+        public_origin="https://builds.example/",
+    )
+    page = TestClient(app).get("/w/soma-prime", headers={"host": "evil.example"}).text
+    assert '<link rel="canonical" href="https://builds.example/w/soma-prime" />' in page
+    assert "evil.example" not in page
+
+
+@pytest.mark.parametrize("bad", ["builds.example", "https://x.example/path", "javascript:x"])
+def test_public_origin_must_be_scheme_and_host(tmp_path: Path, bad: str) -> None:
+    with pytest.raises(ValueError, match="public origin"):
+        create_app(web_dist=tmp_path, public_origin=bad)

@@ -29,6 +29,11 @@ def main(argv: list[str] | None = None) -> int:
     serve = sub.add_parser("serve", help="run the app on http://127.0.0.1:8000")
     serve.add_argument("--host", default="127.0.0.1")
     serve.add_argument("--port", type=int, default=8000)
+    serve.add_argument(
+        "--public-origin",
+        help="site address for canonical and link-preview URLs, e.g. https://example.org "
+        "(default: the address each request came to)",
+    )
     sub.add_parser("openapi", help="print the OpenAPI schema (input for web/src/api/types.ts)")
     ref = sub.add_parser("refresh", help="download sources, rebuild and validate gamedata/")
     ref.add_argument("--offline", action="store_true", help="use files already in cache/raw/")
@@ -46,7 +51,8 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if args.command == "serve":
-        uvicorn.run(create_app(), host=args.host, port=args.port)
+        app = create_app(public_origin=args.public_origin)
+        uvicorn.run(app, host=args.host, port=args.port)
     elif args.command == "openapi":
         json.dump(create_app().openapi(), sys.stdout, indent=2, sort_keys=True)
         sys.stdout.write("\n")

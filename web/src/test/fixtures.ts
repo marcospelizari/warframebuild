@@ -66,6 +66,7 @@ export const build: Build = {
   forma,
   arsenal: {
     damage: { impact: 2, slash: 6, puncture: 3, viral: 9 },
+    combined: { viral: ["cold", "toxin"] },
     total_damage: 20,
     critical_chance: 0.305,
     critical_multiplier: 3,

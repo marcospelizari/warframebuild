@@ -155,3 +155,65 @@ test("a broken ?b= link falls back to the calculated build with a message", asyn
   expect(await screen.findByText(/This build link could not be opened/)).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: "Recommended" })).toBeInTheDocument();
 });
+
+test("the grid shows the picks at once, before /calc answers", async () => {
+  let answer: ((r: Response) => void) | null = null;
+  const { router } = renderAt("/w/soma-prime", (url) =>
+    url === "/api/calc" ? (new Promise((r) => (answer = r)) as unknown as Response) : ok(url),
+  );
+  fireEvent.click(await screen.findByRole("button", { name: "Edit build" }));
+  await waitFor(() => expect(router.state.location.search).toHaveProperty("b"));
+  fireEvent.click(screen.getByRole("button", { name: /^Serration.*Change mod\.$/ }));
+  fireEvent.click(within(await screen.findByRole("dialog")).getByRole("button", { name: "Leave empty" }));
+  await waitFor(() => expect(screen.queryByRole("button", { name: /^Serration/ })).toBeNull());
+  expect(screen.getByText("Forma: calculating…")).toBeInTheDocument();
+  await waitFor(() => expect(answer).not.toBeNull(), { timeout: 2000 });
+  answer!(new Response(JSON.stringify(edited)));
+  expect(await screen.findByText("0.26 s slower than the calculated build", {}, { timeout: 2000 })).toBeInTheDocument();
+});
+
+test("a failed /calc keeps the picks on screen and slots in the right place", async () => {
+  const limited = { code: "rate_limited", message: "too many requests", field: null };
+  const { router } = renderAt("/w/soma-prime", (url) =>
+    url === "/api/calc" ? new Response(JSON.stringify(limited), { status: 429 }) : ok(url),
+  );
+  fireEvent.click(await screen.findByRole("button", { name: "Edit build" }));
+  await waitFor(() => expect(router.state.location.search).toHaveProperty("b"));
+  fireEvent.click(screen.getByRole("button", { name: /^Serration.*Change mod\.$/ }));
+  fireEvent.click(within(await screen.findByRole("dialog")).getByRole("button", { name: "Leave empty" }));
+  expect(await screen.findByText(/Could not calculate this edit: too many requests/, {}, { timeout: 2000 })).toBeInTheDocument();
+  expect(screen.queryByRole("button", { name: /^Serration/ })).toBeNull();
+  const empties = screen.getAllByRole("button", { name: "Empty slot: choose a mod" });
+  fireEvent.click(empties[empties.length - 1]!);
+  expect(await screen.findByRole("dialog", { name: "Choose a mod for slot 2" })).toBeInTheDocument();
+});
+
+test.each([
+  ["has no clipboard", undefined],
+  ["refuses the write", { writeText: () => Promise.reject(new Error("denied")) }],
+])("copy link says so when the browser %s", async (_, clipboard) => {
+  vi.stubGlobal("navigator", { ...navigator, clipboard });
+  renderAt("/w/soma-prime");
+  fireEvent.click(await screen.findByRole("button", { name: "Copy build link" }));
+  expect(await screen.findByRole("button", { name: "Couldn't copy" })).toBeInTheDocument();
+});
+
+test("an old /calc error does not show while the next edit waits", async () => {
+  const limited = { code: "rate_limited", message: "too many requests", field: null };
+  const { router } = renderAt("/w/soma-prime", (url) =>
+    url === "/api/calc" ? new Response(JSON.stringify(limited), { status: 429 }) : ok(url),
+  );
+  fireEvent.click(await screen.findByRole("button", { name: "Edit build" }));
+  await waitFor(() => expect(router.state.location.search).toHaveProperty("b"));
+  fireEvent.click(screen.getByRole("button", { name: /^Serration.*Change mod\.$/ }));
+  fireEvent.click(within(await screen.findByRole("dialog")).getByRole("button", { name: "Leave empty" }));
+  expect(await screen.findByText(/Could not calculate this edit/, {}, { timeout: 2000 })).toBeInTheDocument();
+  fireEvent.click(screen.getByRole("button", { name: /^Galvanized Chamber[\s\S]*Change mod\.$/ }));
+  fireEvent.click(within(await screen.findByRole("dialog")).getByRole("button", { name: "Leave empty" }));
+  await waitFor(() => {
+    const b = (router.state.location.search as { b?: string }).b;
+    expect(decode(b!)?.mods).toEqual([]);
+  });
+  expect(screen.getByText("Calculating…")).toBeInTheDocument();
+  expect(screen.queryByText(/Could not calculate this edit/)).toBeNull();
+});
