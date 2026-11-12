@@ -222,6 +222,7 @@ class Perk(Model):
     tier: Annotated[int, Field(ge=2, le=5)]
     name: str
     form: Literal["both", "normal", "incarnon"]
+    text: list[str]  # wiki description lines (values filled in), then its notes
     effects: Effects
 
 
@@ -250,7 +251,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[22] = 22
+    schema_version: Literal[24] = 24
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

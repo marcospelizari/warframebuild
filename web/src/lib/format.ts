@@ -9,3 +9,12 @@ export function compact(value: number): string {
   if (value >= 1e3) return `${(value / 1e3).toFixed(1)} k`;
   return String(Math.round(value));
 }
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+/** ISO date "2026-11-12" as "12 Nov 2026" (no time zone shifts: the date is only text). */
+export function dateLabel(iso: string): string {
+  const [year, month, day] = iso.split("-").map(Number);
+  const name = month === undefined ? undefined : MONTHS[month - 1];
+  return name === undefined ? iso : `${day} ${name} ${year}`;
+}

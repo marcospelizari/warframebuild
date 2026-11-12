@@ -1,3 +1,4 @@
+from dataclasses import replace
 from pathlib import Path
 
 import pytest
@@ -255,14 +256,18 @@ def test_rate_limit_answers_429_with_retry_after(client: TestClient) -> None:
 
 
 def test_no_free_worker_answers_503_busy(client: TestClient, gamedata: GameData) -> None:
-    client.app.state.runner = Runner(0, 0, 5, False, jobs.load_data, (gamedata,))  # type: ignore[attr-defined]
+    state = client.app.state  # type: ignore[attr-defined]
+    state.served = replace(state.served, runner=Runner(0, 0, 5, False, jobs.load_data, (gamedata,)))
     response = client.post("/api/calc", json={"weapon": "soma-prime"})
     assert (response.status_code, response.json()["code"]) == (503, "busy")
     assert response.headers["retry-after"] == "1"
 
 
 def test_slow_job_answers_503_timeout(client: TestClient, gamedata: GameData) -> None:
-    client.app.state.runner = Runner(1, 0, 1e-6, False, jobs.load_data, (gamedata,))  # type: ignore[attr-defined]
+    state = client.app.state  # type: ignore[attr-defined]
+    state.served = replace(
+        state.served, runner=Runner(1, 0, 1e-6, False, jobs.load_data, (gamedata,))
+    )
     response = client.post("/api/calc", json={"weapon": "soma-prime"})
     assert (response.status_code, response.json()["code"]) == (503, "timeout")
 
@@ -270,7 +275,7 @@ def test_slow_job_answers_503_timeout(client: TestClient, gamedata: GameData) ->
 def test_calc_runs_in_worker_processes(tmp_path: Path) -> None:
     """Without injected data the app spawns workers that load gamedata/ themselves."""
     with TestClient(create_app(web_dist=tmp_path, releases=tmp_path)) as client:
-        assert client.app.state.runner._processes  # type: ignore[attr-defined]
+        assert client.app.state.served.runner._processes  # type: ignore[attr-defined]
         response = client.post("/api/calc", json={"weapon": "soma-prime"})
         assert response.status_code == 200
         bad = client.post("/api/calc", json={"weapon": "soma-prime", "mods": ["/x"]})

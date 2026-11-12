@@ -4,6 +4,7 @@ from pathlib import Path
 
 import pytest
 
+from app.domain.status_rules import StatusRules
 from app.gamedata.store import GameData, load
 from app.pipeline.refresh import Paths
 from app.pipeline.sources import wiki_incarnon, wiki_local
@@ -123,17 +124,19 @@ LAETUM_STUB = """===Evolutions===
 | '''Devouring Attrition'''
 |
 * '''50%''' chance to deal '''+2000%''' damage on non-critical hits
+* Affects both forms.
 |
 * Damage bonus is '''multiplicative''' to base damage bonuses such as {{M|Hornet Strike}}.
 |-
 | '''Overwhelming Attrition'''
 |
-* On Hit that is neither Critical nor applies a Status Effect: '''+400%''' damage for 10 seconds.
+* On Hit that is neither Critical nor applies a Status Effect: '''+400%''' damage for 10 seconds. Stacks up to 3 times.
 |
 * Damage bonus is '''additive''' to base damage bonuses such as {{M|Hornet Strike}}.
+* When the buff times out, one stack is lost and the buff duration resets.
 |-
 |}
-"""
+"""  # noqa: E501 (wiki line kept whole: overrides compare the exact text)
 GENESIS_STUB = """{{CustomCollapsible|Lex|Lex|expand=false|notlist=true}}
 {| class="wikitable sortable stickyHeader"
 ! colspan="3" | Evolution
@@ -254,3 +257,9 @@ def _keep_fixture_guns(raw: Path, table: Path) -> None:
 def gamedata() -> GameData:
     """The committed gamedata/ (Q26: domain, optimizer and API tests read it)."""
     return load(ROOT / "gamedata")
+
+
+@pytest.fixture(scope="session")
+def rules(gamedata: GameData) -> StatusRules:
+    """Status numbers of the committed gamedata/ (reference/status_rules.json)."""
+    return gamedata.status_rules

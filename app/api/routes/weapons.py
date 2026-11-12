@@ -4,7 +4,8 @@ from typing import Annotated
 
 from fastapi import APIRouter, Query, Request
 
-from app.api.schemas import ExcludedWeapon, WeaponItem, WeaponList
+from app.api.schemas.lists import ExcludedWeapon, WeaponItem, WeaponList
+from app.api.serving import served
 from app.gamedata.images import image_path
 from app.gamedata.models import Category
 from app.gamedata.store import GameData
@@ -18,7 +19,7 @@ def weapons(
     category: Category | None = None,
     q: Annotated[str, Query(max_length=64)] = "",
 ) -> WeaponList:
-    data: GameData = request.app.state.data
+    data: GameData = served(request).data
     needle = q.casefold()
     return WeaponList(
         dataset_hash=data.meta.dataset_hash,

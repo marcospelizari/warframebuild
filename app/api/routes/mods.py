@@ -6,7 +6,9 @@ from fastapi import APIRouter, Query, Request
 
 from app.api.build_response import weapon_ref
 from app.api.errors import ApiFailure
-from app.api.schemas import ApiError, ArcaneItem, ModItem, ModList, PerkItem, PerkTier
+from app.api.schemas.base import ApiError
+from app.api.schemas.lists import ArcaneItem, ModItem, ModList, PerkItem, PerkTier
+from app.api.serving import served
 from app.gamedata.images import PictureKind, picture_name, picture_path
 from app.gamedata.models import Arcane, Mod
 from app.gamedata.store import GameData
@@ -26,7 +28,7 @@ def _image(img_dir: Path, kind: PictureKind, item: Mod | Arcane) -> str | None:
 
 @router.get("/api/mods", responses=ERRORS)
 def mods(request: Request, weapon: str = Query(max_length=100)) -> ModList:
-    data: GameData = request.app.state.data
+    data: GameData = served(request).data
     gun = data.weapon_by_slug.get(weapon)
     if gun is None:
         raise ApiFailure(404, "unknown_weapon", "no such weapon", "weapon")

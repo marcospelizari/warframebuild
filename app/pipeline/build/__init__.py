@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 from pathlib import Path
 
+from app.domain.status_rules import StatusRules
 from app.gamedata.models import (
     Arcane,
     Enemy,
@@ -21,12 +22,13 @@ from app.pipeline.build import (
     headshot,
     incarnon,
     mods,
+    status_rules,
     weapon_classes,
     weapon_tags,
     weapons,
 )
 from app.pipeline.build.direct_bonus import DirectBonusTable
-from app.pipeline.build.effects import Overrides
+from app.pipeline.build.effects import Overrides, SwitchedOff
 from app.pipeline.build.fire import FireOverrides
 from app.pipeline.build.inputs import as_list, records, reference
 from app.pipeline.errors import RefreshError
@@ -58,6 +60,8 @@ class Dataset:
     reference_head: ReferenceHead
     enemies: list[Enemy]
     factions: list[FactionModifiers]
+    status_rules: StatusRules
+    overrides_off: list[SwitchedOff]  # entry text changed since written (U2)
 
 
 def build(raw_dir: Path, reference_dir: Path) -> Dataset:
@@ -126,6 +130,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         (raw_dir / "wiki/Enemy_Body_Parts.wikitext").read_text(encoding="utf-8").splitlines(),
         titles,
     )
+    rules = status_rules.build(reference(reference_dir / status_rules.FILE), titles)
     overrides.check_all_used()
     _check_arcane_classes(arcane_list, gun_list)
     if not gun_list or not mod_list or not arcane_list:
@@ -146,6 +151,8 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         head,
         enemy_list,
         factions,
+        rules,
+        overrides.switched_off,
     )
 
 

@@ -1,6 +1,6 @@
 """The `assumptions[]` of a /calc build: what the numbers take for granted, with sources."""
 
-from app.api.schemas import Assumption, Combat, Source
+from app.api.schemas.build import Assumption, Combat, Source
 from app.gamedata.models import Weapon
 from app.optimize.conditions import Resolved
 from app.optimize.evaluate import Evaluation

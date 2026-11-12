@@ -12,6 +12,7 @@ from pathlib import Path
 
 from pydantic import TypeAdapter
 
+from app.domain.status_rules import StatusRules
 from app.gamedata.images import PictureKind, picture_name
 from app.gamedata.models import (
     Arcane,
@@ -36,6 +37,7 @@ DATA_FILES = (
     "reference_head.json",
     "enemies.json",
     "factions.json",
+    "status_rules.json",
 )
 
 
@@ -50,6 +52,7 @@ class GameData:
     reference_head: ReferenceHead
     enemies: list[Enemy]
     factions: list[FactionModifiers]
+    status_rules: StatusRules
 
     @cached_property
     def weapon_by_slug(self) -> dict[str, Weapon]:
@@ -112,4 +115,5 @@ def load(gamedata_dir: Path) -> GameData:
         reference_head=ReferenceHead.model_validate_json(payloads["reference_head.json"]),
         enemies=TypeAdapter(list[Enemy]).validate_json(payloads["enemies.json"]),
         factions=TypeAdapter(list[FactionModifiers]).validate_json(payloads["factions.json"]),
+        status_rules=StatusRules.model_validate_json(payloads["status_rules.json"]),
     )

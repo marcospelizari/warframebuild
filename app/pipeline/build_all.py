@@ -2,9 +2,12 @@
 
 Workers are spawned with `PYTHONHASHSEED=0` and each loads the dataset once. Results are
 written as guns finish (one file each, manifest counts are order-free), so the release does
-not depend on the worker count or finishing order.
+not depend on the worker count or finishing order. Guns whose input key matches the current
+release's are copied from it instead of searched (G90 U3, `gun_inputs`).
 """
 
+import itertools
+import json
 import multiprocessing
 import os
 import time
@@ -14,10 +17,12 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from app.gamedata.builds import WeaponBuilds
+from app.gamedata.release import current
 from app.gamedata.store import GameData, load
 from app.optimize.builds import weapon_builds
 from app.optimize.search import MAX_EVALUATIONS
 from app.pipeline import release
+from app.pipeline.gun_inputs import INPUTS, gun_keys
 
 _data: GameData | None = None
 _error: str | None = None  # why this worker's dataset is unusable
@@ -51,44 +56,85 @@ def run(
             budget,
         )
         slugs = sorted(w.slug for w in data.weapons)
+        keys = gun_keys(data, key.calculator, budget)
+        previous = current(paths.releases)
+        copied = _unchanged(previous, keys)
+        todo = [s for s in slugs if s not in copied]
         workers = workers or os.cpu_count() or 1
         progress(
-            f"build-all: {len(slugs)} guns, {workers} workers, budget {budget}; "
-            "one line per finished gun (the first may take minutes); Ctrl+C stops"
+            f"build-all: {len(slugs)} guns, {len(todo)} to search, {len(copied)} unchanged "
+            f"(copied from the current release); {workers} workers, budget {budget}; "
+            "one line per searched gun (the first may take minutes); Ctrl+C stops"
         )
-        seed = os.environ.get("PYTHONHASHSEED")
-        os.environ["PYTHONHASHSEED"] = "0"  # inherited by the spawned workers only (G16)
-        try:
-            with ProcessPoolExecutor(
-                workers,
-                mp_context=multiprocessing.get_context("spawn"),
-                initializer=_load,
-                initargs=(paths.gamedata, key.dataset),
-            ) as pool:
-                try:
-                    jobs = [pool.submit(_one, slug, budget) for slug in slugs]
-                    results = (job.result() for job in as_completed(jobs))
-                    folder = release.publish(
-                        paths.releases,
-                        key,
-                        paths.gamedata,
-                        paths.reference,
-                        _reported(results, len(slugs), started, progress),
-                        set(slugs),
-                    )
-                except BaseException:
-                    _stop(pool)
-                    raise
-        finally:
-            if seed is None:
-                del os.environ["PYTHONHASHSEED"]
-            else:
-                os.environ["PYTHONHASHSEED"] = seed
+        assert previous is not None or not copied
+        kept = (_read(previous, s) for s in sorted(copied)) if previous else iter(())
+        folder = _publish(paths, key, keys, todo, kept, workers, budget, started, progress)
     minutes = (time.monotonic() - started) / 60
     return [
-        f"release {key.id}: {len(slugs)} guns, budget {budget}, {minutes:.1f} min",
+        f"release {key.id}: {len(slugs)} guns ({len(todo)} searched, {len(copied)} copied), "
+        f"budget {budget}, {minutes:.1f} min",
         f"written to {folder}, now current",
     ]
+
+
+def _unchanged(previous: Path | None, keys: dict[str, str]) -> set[str]:
+    """Guns whose input key matches the current release's and whose builds file is there."""
+    if previous is None:
+        return set()
+    try:
+        before = json.loads((previous / INPUTS).read_bytes())
+    except (OSError, ValueError):
+        return set()  # release made before U3, or unreadable: search every gun
+    return {
+        s
+        for s, k in keys.items()
+        if before.get(s) == k and (previous / "builds" / f"{s}.json").is_file()
+    }
+
+
+def _read(previous: Path, slug: str) -> WeaponBuilds:
+    return WeaponBuilds.model_validate_json((previous / "builds" / f"{slug}.json").read_bytes())
+
+
+def _publish(
+    paths: Paths,
+    key: release.Key,
+    keys: dict[str, str],
+    todo: list[str],
+    kept: Iterator[WeaponBuilds],
+    workers: int,
+    budget: int,
+    started: float,
+    progress: Callable[[str], None],
+) -> Path:
+    def publish(searched: Iterator[WeaponBuilds]) -> Path:
+        builds = itertools.chain(kept, _reported(searched, len(todo), started, progress))
+        return release.publish(
+            paths.releases, key, paths.gamedata, paths.reference, builds, set(keys), inputs=keys
+        )
+
+    if not todo:
+        return publish(iter(()))
+    seed = os.environ.get("PYTHONHASHSEED")
+    os.environ["PYTHONHASHSEED"] = "0"  # inherited by the spawned workers only (G16)
+    try:
+        with ProcessPoolExecutor(
+            min(workers, len(todo)),
+            mp_context=multiprocessing.get_context("spawn"),
+            initializer=_load,
+            initargs=(paths.gamedata, key.dataset),
+        ) as pool:
+            try:
+                jobs = [pool.submit(_one, slug, budget) for slug in todo]
+                return publish(job.result() for job in as_completed(jobs))
+            except BaseException:
+                _stop(pool)
+                raise
+    finally:
+        if seed is None:
+            del os.environ["PYTHONHASHSEED"]
+        else:
+            os.environ["PYTHONHASHSEED"] = seed
 
 
 def _stop(pool: ProcessPoolExecutor) -> None:

@@ -30,7 +30,7 @@ def _run(data: GameData, names: tuple[str, ...], budget: int) -> Result:
 
     def score(mods: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]) -> float:
         lo = loadout(lex, mods, form="normal", sets=data.set_by_id, exilus=exilus)
-        return max_score(lo, head)
+        return max_score(lo, head, data.status_rules)
 
     return search([by_name[n] for n in names], score, budget)
 

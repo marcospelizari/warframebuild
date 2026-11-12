@@ -10,7 +10,7 @@ import uvicorn
 
 from app.api.app import create_app
 from app.optimize.search import MAX_EVALUATIONS
-from app.pipeline import build_all, check, fixtures, refresh
+from app.pipeline import build_all, check, fixtures, refresh, update
 from app.pipeline.sources.http import PoliteClient
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,6 +48,14 @@ def main(argv: list[str] | None = None) -> int:
     every.add_argument(
         "--budget", type=_positive, default=MAX_EVALUATIONS, help="evaluations per build (E3)"
     )
+    upd = sub.add_parser(
+        "update", help="after a game update: refresh, build-all (changed guns only), what needs you"
+    )
+    upd.add_argument("--offline", action="store_true", help="use files already in cache/raw/")
+    upd.add_argument("--workers", type=_positive, help="worker processes (default: all CPUs)")
+    upd.add_argument(
+        "--budget", type=_positive, default=MAX_EVALUATIONS, help="evaluations per build (E3)"
+    )
     args = parser.parse_args(argv)
 
     if args.command == "serve":
@@ -74,6 +82,18 @@ def main(argv: list[str] | None = None) -> int:
                 lambda line: print(line, file=sys.stderr, flush=True),
             ),
             "build-all failed, current release unchanged",
+        )
+    elif args.command == "update":
+        return _guarded(
+            lambda: update.run(
+                refresh.Paths.project(ROOT),
+                build_all.Paths.project(ROOT),
+                offline=args.offline,
+                workers=args.workers,
+                budget=args.budget,
+                progress=lambda line: print(line, file=sys.stderr, flush=True),
+            ),
+            "update failed",
         )
     elif args.command == "fixtures":
         fixtures.write(ROOT / "cache/raw", ROOT / "tests/fixtures/raw")

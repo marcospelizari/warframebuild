@@ -47,7 +47,8 @@
       "title": "Blast_Damage",
       "impact": "high",
       "feeds": [
-        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)",
+        "status durations, stacks, DoT, Heat strip, Blast (status_rules.json, U13)"
       ]
     },
     "Bow": {
@@ -69,7 +70,8 @@
       "impact": "high",
       "feeds": [
         "damage pipeline (step 4)",
-        "Toxin shield-bypass exceptions"
+        "Toxin shield-bypass exceptions",
+        "status durations, stacks, DoT, Heat strip, Blast (status_rules.json, U13)"
       ]
     },
     "Cascadia_Flare": {
@@ -104,7 +106,8 @@
       "title": "Cold_Damage",
       "impact": "high",
       "feeds": [
-        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)",
+        "status durations, stacks, DoT, Heat strip, Blast (status_rules.json, U13)"
       ]
     },
     "Compatibility": {
@@ -154,7 +157,8 @@
       "title": "Corrosive_Damage",
       "impact": "high",
       "feeds": [
-        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)",
+        "status durations, stacks, DoT, Heat strip, Blast (status_rules.json, U13)"
       ]
     },
     "Corrupted": {
@@ -189,7 +193,8 @@
       "title": "Critical_Hit",
       "impact": "high",
       "feeds": [
-        "crit tiers, headshot crit (G38)"
+        "crit tiers, headshot crit (G38)",
+        "status durations, stacks, DoT, Heat strip, Blast (status_rules.json, U13)"
       ]
     },
     "Damage": {
@@ -317,7 +322,8 @@
       "impact": "high",
       "feeds": [
         "Heat armor strip timing, Heat stacking (step 8)",
-        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)",
+        "status durations, stacks, DoT, Heat strip, Blast (status_rules.json, U13)"
       ]
     },
     "Heavy_Gunner": {
@@ -424,7 +430,8 @@
       "title": "Magnetic_Damage",
       "impact": "high",
       "feeds": [
-        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)",
+        "status durations, stacks, DoT, Heat strip, Blast (status_rules.json, U13)"
       ]
     },
     "Mod": {
@@ -629,7 +636,8 @@
       "title": "Puncture_Damage",
       "impact": "high",
       "feeds": [
-        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)",
+        "status durations, stacks, DoT, Heat strip, Blast (status_rules.json, U13)"
       ]
     },
     "Radiation_Damage": {
@@ -736,7 +744,8 @@
       "impact": "high",
       "feeds": [
         "status, DoT and Blast rules (step 4)",
-        "mechanics checklist"
+        "mechanics checklist",
+        "status durations, stacks, DoT, Heat strip, Blast (status_rules.json, U13)"
       ]
     },
     "Steflos_Prime": {
@@ -820,7 +829,8 @@
       "title": "Viral_Damage",
       "impact": "high",
       "feeds": [
-        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+        "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)",
+        "status durations, stacks, DoT, Heat strip, Blast (status_rules.json, U13)"
       ]
     },
     "Void_Damage": {

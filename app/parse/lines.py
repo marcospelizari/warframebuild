@@ -14,6 +14,7 @@ from app.domain.effects import (
     Stat,
     Trigger,
 )
+from app.domain.status_rules import CAPPED
 
 _NUM = r"(?P<value>[+-]?\d{1,4}(?:\.\d{1,3})?)"
 
@@ -79,6 +80,10 @@ _PER_STATUS_TYPE = re.compile(
 _SET_CRIT_UPGRADE = re.compile(
     rf"{_NUM}% chance to enhance Critical Hits from (?:Primary|Secondary) Weapons\.?",
     re.IGNORECASE,
+)
+# "+1 max Puncture stacks"
+_STACK_CAP = re.compile(
+    r"(?P<value>[+-]\d{1,2}) max (?P<type>[A-Za-z]{3,12}) stacks?\.?", re.IGNORECASE
 )
 _LOCKED = re.compile(r"(?P<stat>Multishot|Fire Rate) cannot be modified\.?", re.IGNORECASE)
 REQUIRES = re.compile(r"Only compatible with (?P<trigger>Semi-Auto) Trigger\.?", re.IGNORECASE)
@@ -171,6 +176,20 @@ def line_effects(line: str, ctx: Context) -> list[Effect] | None:
     if m := _SET_CRIT_UPGRADE.fullmatch(line):
         return [
             Effect(stat=Stat.CRIT_TIER_UPGRADE, value=_pct(m["value"]), operation=Operation.ADD)
+        ]
+    if m := _STACK_CAP.fullmatch(line):
+        name = m["type"].lower()
+        if name not in DamageType.__members__.values() or DamageType(name) not in CAPPED:
+            return None  # no stack cap the combat model counts: unparsed, never full
+        return [
+            Effect(
+                stat=Stat.STATUS_STACK_CAP,
+                value=float(m["value"]),
+                operation=Operation.ADD,
+                damage_type=DamageType(name),
+                trigger=ctx.trigger,
+                trigger_damage_type=ctx.trigger_damage_type,
+            )
         ]
     if m := _LOCKED.fullmatch(line):
         stat = Stat.MULTISHOT if m["stat"].lower() == "multishot" else Stat.FIRE_RATE

@@ -140,7 +140,7 @@ def _build(
     objective = max_objective(data)
     if enemies is not None:
         lo = build_loadout(data, weapon, r.mods, r.exilus, r.picks, bonus)
-        fought = combat(lo, list(enemies), data.factions).enemies
+        fought = combat(lo, list(enemies), data.factions, data.status_rules).enemies
         costs = {x.enemy.unique_name: rounded(x.outcome.cost) for x in fought}
         objective = enemies_objective(data, enemies)
     arcane = r.picks[0] if r.picks else None

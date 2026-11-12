@@ -1,10 +1,16 @@
 import { createRootRoute, createRoute, createRouter } from "@tanstack/react-router";
 import { SiteLayout } from "./components/SiteLayout";
 import { Home } from "./routes/Home";
+import { UpdatesPage } from "./routes/Updates";
 import { WeaponPage } from "./routes/Weapon";
 
 const rootRoute = createRootRoute({ component: SiteLayout });
 const homeRoute = createRoute({ getParentRoute: () => rootRoute, path: "/", component: Home });
+const updatesRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/updates",
+  component: UpdatesPage,
+});
 // ?b= carries an edited build (F1); anything else in the query is dropped.
 const search = (raw: Record<string, unknown>): { b?: string } =>
   typeof raw.b === "string" ? { b: raw.b } : {};
@@ -32,7 +38,7 @@ const factionRoute = createRoute({
 });
 
 export const router = createRouter({
-  routeTree: rootRoute.addChildren([homeRoute, weaponRoute, factionRoute]),
+  routeTree: rootRoute.addChildren([homeRoute, updatesRoute, weaponRoute, factionRoute]),
 });
 
 declare module "@tanstack/react-router" {

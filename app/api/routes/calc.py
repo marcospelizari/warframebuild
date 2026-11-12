@@ -4,7 +4,9 @@ the app's runner (E6/E7), rate-limited per address."""
 from fastapi import APIRouter, Request, Response
 
 from app.api import jobs
-from app.api.schemas import ApiError, Build, CalcRequest
+from app.api.schemas.base import ApiError
+from app.api.schemas.build import Build, CalcRequest
+from app.api.serving import served
 
 ERRORS: dict[int | str, dict[str, object]] = {
     404: {"model": ApiError},
@@ -20,5 +22,5 @@ router = APIRouter()
 @router.post("/api/calc", response_model=Build, responses=ERRORS)
 async def calc(body: CalcRequest, request: Request) -> Response:
     request.app.state.rate_limit.check(request)
-    built = await jobs.run(request, jobs.calc, body.model_dump_json())
+    built = await jobs.run(served(request).runner, jobs.calc, body.model_dump_json())
     return Response(built, media_type="application/json")

@@ -2,7 +2,8 @@
 (PLAN Q28b, option A)."""
 
 from app.api.build_response import build_response, weapon_ref
-from app.api.schemas import BuildsResponse, CalcRequest, ElementChoice, StoredBuild, VariantBuilds
+from app.api.schemas.build import CalcRequest
+from app.api.schemas.stored import BuildsResponse, ElementChoice, StoredBuild, VariantBuilds
 from app.domain.effects import DamageType
 from app.gamedata.builds import Build as Stored
 from app.gamedata.release import Release

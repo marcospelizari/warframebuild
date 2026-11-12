@@ -283,6 +283,12 @@ def test_mods_and_sets_carry_parsed_effects(paths: Paths) -> None:
     assert vigilante.bonuses[-1].effects[0].stat == Stat.CRIT_TIER_UPGRADE
 
 
+VENDETTA = "/Lotus/Upgrades/CosmeticEnhancers/Offensive/ShotgunMultishotAndReloadSpeedOnCloseKill"
+VENDETTA_TEXT = [
+    "On shotgun kill within 5m of target:\n+180% Multishot and +75% Reload Speed for 15s."
+]
+
+
 def _override(paths: Paths, entries: dict[str, object]) -> None:
     path = paths.reference / "overrides.json"
     data = json.loads(path.read_text())
@@ -291,7 +297,7 @@ def _override(paths: Paths, entries: dict[str, object]) -> None:
 
 
 def test_override_replaces_parsed_effects(paths: Paths) -> None:
-    uid = "/Lotus/Upgrades/CosmeticEnhancers/Offensive/ShotgunMultishotAndReloadSpeedOnCloseKill"
+    uid = VENDETTA
     _override(
         paths,
         {
@@ -299,6 +305,7 @@ def test_override_replaces_parsed_effects(paths: Paths) -> None:
                 "name": "Shotgun Vendetta",
                 "verified": "2026-11-08",
                 "note": "test",
+                "text": VENDETTA_TEXT,
                 "effects": [
                     {"stat": "multishot", "value": 1.8, "trigger": "on_kill", "duration_s": 15}
                 ],
@@ -309,6 +316,37 @@ def test_override_replaces_parsed_effects(paths: Paths) -> None:
     assert arcane.effects.support == Support.FULL and arcane.effects.unparsed == []
     assert arcane.effects.effects[0].trigger == Trigger.ON_KILL
     assert arcane.effects.note == "test"
+
+
+def test_override_with_changed_text_is_switched_off(paths: Paths) -> None:
+    """G90 U2: an override never applies to text it was not written for."""
+    _override(
+        paths,
+        {
+            VENDETTA: {
+                "name": "Shotgun Vendetta",
+                "verified": "2026-11-08",
+                "effects": [{"stat": "multishot", "value": 1.2, "trigger": "on_kill"}],
+                "text": ["+120% Multishot on kill (old text)"],
+            }
+        },
+    )
+    dataset = build(paths.raw, paths.reference)
+    arcane = next(a for a in dataset.arcanes if a.unique_name == VENDETTA)
+    assert arcane.effects.support != Support.FULL and arcane.effects.note is None
+    (off,) = dataset.overrides_off
+    assert (off.key, off.written_for, off.now) == (
+        VENDETTA,
+        ["+120% Multishot on kill (old text)"],
+        VENDETTA_TEXT,
+    )
+
+
+def test_override_without_text_fails_with_the_current_text(paths: Paths) -> None:
+    _override(paths, {VENDETTA: {"name": "x", "verified": "2026-11-08", "support": "partial"}})
+    with pytest.raises(RefreshError, match="without `text`") as raised:
+        build(paths.raw, paths.reference)
+    assert "+180% Multishot" in str(raised.value)
 
 
 def test_override_matching_nothing_fails(paths: Paths) -> None:
@@ -368,6 +406,9 @@ def test_support_full_override_clears_unparsed(paths: Paths) -> None:
                 "verified": "2026-11-08",
                 "support": "full",
                 "note": "n",
+                "text": [thunderbolt.description, *thunderbolt.level_stats[-1]]
+                if thunderbolt.description
+                else thunderbolt.level_stats[-1],
             }
         },
     )
@@ -573,3 +614,8 @@ def test_bad_main_attack_row_fails(paths: Paths, change: dict[str, Any]) -> None
     table.write_text(json.dumps(data))
     with pytest.raises(RefreshError, match=r"main_attack\.json"):
         build(paths.raw, paths.reference)
+
+
+def test_fixture_overrides_match_their_text(paths: Paths) -> None:
+    """Guard: a stub page that drifts from the real text would silently switch overrides off."""
+    assert build(paths.raw, paths.reference).overrides_off == []

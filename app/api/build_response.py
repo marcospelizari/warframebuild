@@ -5,7 +5,7 @@ import math
 
 from app.api.assumptions import WIKI, assumptions, source
 from app.api.errors import ApiFailure
-from app.api.schemas import (
+from app.api.schemas.build import (
     ArcaneRef,
     Arsenal,
     BonusElement,
@@ -68,7 +68,7 @@ def build_response(data: GameData, body: CalcRequest) -> Build:
         raise ApiFailure(422, error.code, error.message, error.field) from error
     head = Head(data.reference_head.multiplier, data.reference_head.critical)
     result = evaluate_loadout(lo, head)
-    scored = combat.combat(lo, data.enemies, data.factions)
+    scored = combat.combat(lo, data.enemies, data.factions, data.status_rules)
     fights = _combat(scored, lo.mark is not None)
     return _build(
         data.meta.dataset_hash,
@@ -78,7 +78,7 @@ def build_response(data: GameData, body: CalcRequest) -> Build:
         arcane,
         stored_forma(forma_layout(weapon, mods, exilus)),
         result,
-        max_score(lo, head),
+        max_score(lo, head, data.status_rules),
         data.reference_head,
         fights,
         scored.conditions,

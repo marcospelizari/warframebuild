@@ -10,14 +10,15 @@ import datetime
 import json
 import os
 import shutil
-from collections.abc import Iterator
+from collections.abc import Callable, Iterator
 from contextlib import contextmanager
 from pathlib import Path
 
 from pydantic import BaseModel
 
 from app.domain.effects import Support
-from app.gamedata.models import Category, Meta, ModsFile, SourceRecord
+from app.gamedata.changes import read_changes, read_snapshot
+from app.gamedata.models import Category, Meta, Model, ModsFile, SourceRecord
 from app.gamedata.store import dataset_hash, load
 from app.pipeline.build import Dataset
 
@@ -80,8 +81,12 @@ def write(
     gamedata_dir: Path,
     previous: Meta | None,
     today: str | None = None,
+    beside: Callable[[Meta], dict[str, Model]] | None = None,
 ) -> Meta:
-    """Stage, re-load through the models, then swap in. On failure gamedata/ stays as it was."""
+    """Stage, re-load through the models, then swap in. On failure gamedata/ stays as it was.
+
+    `beside` gives files written next to the dataset, outside its hash (snapshot, changes).
+    """
     payloads = {
         "weapons.json": dump(dataset.weapons),
         "mods.json": dump(ModsFile(mods=dataset.mods, sets=dataset.mod_sets)),
@@ -91,6 +96,7 @@ def write(
         "reference_head.json": dump(dataset.reference_head),
         "enemies.json": dump(dataset.enemies),
         "factions.json": dump(dataset.factions),
+        "status_rules.json": dump(dataset.status_rules),
     }
     digest = dataset_hash(payloads)
     fetched = max((s.retrieved for s in sources if not s.path.startswith("wiki/")), default="")
@@ -126,6 +132,8 @@ def write(
         denied_mods=dataset.denied_mods,
     )
     payloads["meta.json"] = dump(meta)
+    for name, model in (beside(meta) if beside else {}).items():
+        payloads[name] = dump(model)
 
     staging, old, lock = _siblings(gamedata_dir)
     with exclusive(lock):
@@ -136,6 +144,8 @@ def write(
         for name, data in payloads.items():
             (staging / name).write_bytes(data)
         load(staging)  # validation: the app must be able to read what was written
+        read_snapshot(staging)
+        read_changes(staging)
         if gamedata_dir.exists():
             gamedata_dir.rename(old)
         staging.rename(gamedata_dir)

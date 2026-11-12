@@ -13,8 +13,8 @@ from collections import deque
 from dataclasses import dataclass
 
 from app.domain.effects import DamageType
-from app.domain.status import BLAST_CAP, BLAST_STACK_S, FIRST_TICK_S, blast_detonation
-from bench.workload import CAP_S, ShotModel
+from app.domain.status import blast_detonation
+from bench.workload import CAP_S, ShotModel, dots, status_rules
 
 HEAT_STEPS = ((0.5, 0.85), (1.0, 0.70), (1.5, 0.60))  # (elapsed below, armor kept); then 0.50
 ARMOR_CAP = 0.9
@@ -37,13 +37,14 @@ def damage_types(model: ShotModel) -> tuple[DamageType, ...]:
 def offsets(model: ShotModel) -> Offsets:
     types = damage_types(model)
     index = {t: i for i, t in enumerate(types)}
-    last = max([0] + [int(FIRST_TICK_S[t]) + n - 1 for t, n in model.dot_ticks.items() if n > 0])
+    first_tick = {t: d.first_tick_s for t, d in dots().items()}
+    last = max([0] + [int(first_tick[t]) + n - 1 for t, n in model.dot_ticks.items() if n > 0])
     armored = [[0.0] * len(types) for _ in range(last + 1)]
     unarmored = [[0.0] * len(types) for _ in range(last + 1)]
     for t, v in model.direct.items():
         armored[0][index[t]] += v
     for t, tick in model.dot_tick.items():
-        first = int(FIRST_TICK_S[t])
+        first = int(first_tick[t])
         target = unarmored if t == DamageType.SLASH else armored
         for j in range(model.dot_ticks[t]):
             target[first + j][index[t]] += model.procs[t] * tick
@@ -68,18 +69,20 @@ def blast_events(model: ShotModel, shots: list[float]) -> list[tuple[float, floa
     if not per_shot:
         return []
     hit = math.fsum(model.direct.values())
+    blast = status_rules().blast
+    fuse = status_rules().duration(DamageType.BLAST)
     stacks: deque[tuple[float, float]] = deque()  # (applied at, expected stacks)
     out: list[tuple[float, float]] = []
     for t in shots:
-        while stacks and stacks[0][0] + BLAST_STACK_S <= t:
+        while stacks and stacks[0][0] + fuse <= t:
             applied, n = stacks.popleft()
-            out.append((applied + BLAST_STACK_S, n * max(1.0, 0.3 * hit)))
+            out.append((applied + fuse, n * max(1.0, 0.3 * hit)))
         stacks.append((t, per_shot))
         total = math.fsum(n for _, n in stacks)
-        if total >= BLAST_CAP:
-            out.append((t, blast_detonation([hit * total])))
+        if total >= blast.cap:
+            out.append((t, blast_detonation(blast, [hit * total])))
             stacks.clear()
-    out += [(a + BLAST_STACK_S, n * max(1.0, 0.3 * hit)) for a, n in stacks]
+    out += [(a + fuse, n * max(1.0, 0.3 * hit)) for a, n in stacks]
     return [(t, v) for t, v in out if t <= CAP_S]
 
 

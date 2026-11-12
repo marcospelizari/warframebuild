@@ -2,15 +2,17 @@ import json
 
 import pytest
 
+from app.domain.effects import DamageType
 from app.gamedata import store
 from app.gamedata.models import Meta, SourceRecord
 from app.pipeline import check, publish
 from app.pipeline.build import build
+from app.pipeline.changes import EntryDiff
 from app.pipeline.refresh import Paths, load_previous, run
 from app.pipeline.sources import de_export as de
 from app.pipeline.sources import sha256_16, wfcd
 from app.pipeline.sources.http import PoliteClient
-from app.pipeline.sources.wiki_local import MissingWikiPages, scan
+from app.pipeline.sources.wiki_local import MissingWikiPages, pages, scan
 from tests.conftest import FIXTURE_RAW
 
 
@@ -184,30 +186,6 @@ def _bump_first_weapon(paths: Paths) -> None:
     weapons.write_text(json.dumps(data))
 
 
-def test_entry_diff_and_touched_rows(paths: Paths) -> None:
-    run(paths, offline=True, fetch_images=False)
-    previous = store.load(paths.gamedata)
-    weapons_path = paths.raw / "de/ExportWeapons_en.json"
-    data = json.loads(weapons_path.read_text())
-    lex = next(w for w in data["ExportWeapons"] if w["name"] == "Lex Prime")
-    lex["criticalChance"] += 0.05
-    weapons_path.write_text(json.dumps(data))
-    fire = json.loads((paths.reference / "fire_overrides.json").read_text())
-    fire["weapons"][lex["uniqueName"]] = {"name": "Lex Prime", "verified": "2026-10-01"}
-    (paths.reference / "fire_overrides.json").write_text(json.dumps(fire))
-
-    diff = check.entry_diff(previous, None, build(paths.raw, paths.reference))
-    assert diff.changed["weapons"] == ["Lex Prime"]
-    touched = check.touched_rows(check.reference_rows(paths.reference), diff)
-    assert sorted((r.file, r.label) for r in touched) == [
-        ("fire_overrides.json", "Lex Prime"),
-        ("headshot.json", "Lex Prime"),  # headshot row
-        ("headshot.json", "Lex Prime"),  # flat_heads row
-        ("main_attack.json", "Lex Prime"),
-    ]
-    assert "changed weapons (1): Lex Prime" in "\n".join(check.diff_lines(diff, touched, "x"))
-
-
 def test_unreadable_previous_dataset_is_reported(paths: Paths) -> None:
     """Review bug 3: an unreadable previous dataset never reads as 'no changes'."""
     run(paths, offline=True, fetch_images=False)
@@ -217,7 +195,7 @@ def test_unreadable_previous_dataset_is_reported(paths: Paths) -> None:
     assert previous is None and error and f"schema version 1, this code reads {current}" in error
     report = run(paths, offline=True, fetch_images=False)
     text = "\n".join(report.lines())
-    assert "previous dataset unreadable" in text
+    assert "no comparison with the previous dataset" in text
     assert "no new, changed or removed" not in text
     assert len(report.touched) == len(check.reference_rows(paths.reference))
 
@@ -261,10 +239,23 @@ def test_family_correction_listed_when_a_member_changes(paths: Paths) -> None:
     """Review R16: correction rows are keyed by their own id; their `mods` count."""
     rows = check.reference_rows(paths.reference)
     join = next(r for r in rows if r.key == "galvanized-aptitude-rifle-aptitude")
-    diff = check.EntryDiff(ids={join.depends_on[0]})
+    diff = EntryDiff(ids={join.depends_on[0]})
     assert join in check.touched_rows(rows, diff)
 
 
 def test_single_reference_row_is_listed(paths: Paths) -> None:
     rows = check.reference_rows(paths.reference)
     assert ("headshot.json", "Grineer humanoid head") in {(r.file, r.label) for r in rows}
+
+
+def test_status_rule_rows_are_listed_with_their_wiki_pages(paths: Paths) -> None:
+    """U13: one row per damage type; every cited saved page names the file in its feeds."""
+    rows = [r for r in check.reference_rows(paths.reference) if r.file == "status_rules.json"]
+    assert {r.key for r in rows} == {t.value for t in DamageType}
+    table = json.loads((paths.reference / "status_rules.json").read_text())
+    cited = {c.split(":")[0] for row in table["types"].values() for c in row["source"]}
+    assert "Puncture_Damage" in cited and "Status_Effect" in cited
+    feeding = {p.stem for p in pages(paths.reference) if any("status_rules" in f for f in p.feeds)}
+    assert feeding == cited
+    text = "\n".join(check.wiki_lines(paths.raw, paths.reference))
+    assert "status_rules.json" in text

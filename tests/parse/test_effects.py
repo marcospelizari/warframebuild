@@ -316,3 +316,21 @@ def test_galvanized_direct_damage_per_status_type() -> None:
     assert effect.stat == Stat.DIRECT_DAMAGE and effect.per_status_type
     assert effect.trigger == Trigger.ON_KILL
     assert (effect.value, effect.duration_s, effect.max_stacks) == (0.4, 14.0, 3)
+
+
+def test_max_stacks_line_raises_a_stack_cap() -> None:
+    """U13: "+N max <Status> stacks" for a status the combat model counts by stacks."""
+    assert _one(["+1 max Puncture stacks"]) == Effect(
+        stat=Stat.STATUS_STACK_CAP,
+        value=1.0,
+        operation=Operation.ADD,
+        damage_type=DamageType.PUNCTURE,
+    )
+    assert _one(["+2 Max Corrosive Stacks."]).damage_type == DamageType.CORROSIVE
+
+
+def test_max_stacks_line_without_a_counted_cap_stays_unparsed() -> None:
+    """Slash stacks have no cap in the model; `[PH]` marks DE placeholder text."""
+    for line in ("+1 max Slash stacks", "+1 max Frost stacks", "[PH] +1 max Puncture stacks"):
+        parsed = parse([line])
+        assert parsed.support == Support.UNSUPPORTED and parsed.unparsed == [line]

@@ -49,6 +49,7 @@ class Runner:
         self._free = size
         self._waiting = 0
         self._wake: asyncio.Event | None = None
+        self._closed = False  # shut down (old release, U11): new jobs go to the new runner
         self.restarts = 0
 
     @property
@@ -68,6 +69,8 @@ class Runner:
                 await self._wake.wait()
         finally:
             self._waiting -= 1
+        if self._closed:
+            raise Restarted
         self._free -= 1
         try:
             job = self._submit(fn, args)
@@ -84,6 +87,8 @@ class Runner:
             raise Restarted from None
 
     def shutdown(self) -> None:
+        """Running jobs finish and deliver their results; no new job starts here."""
+        self._closed = True
         if self._pool is not None:
             self._pool.shutdown(wait=False, cancel_futures=True)
             self._pool = None

@@ -11,6 +11,7 @@ from dataclasses import dataclass
 from app.domain.combat import TYPES, Event, Outcome, Target, fight, geometric_mean
 from app.domain.effects import Faction
 from app.domain.headshot import Head
+from app.domain.status_rules import StatusRules
 from app.gamedata.models import Enemy, FactionModifiers
 from app.optimize.conditions import Resolved, resolve
 from app.optimize.loadout import Loadout
@@ -31,10 +32,10 @@ class Combat:
     conditions: Resolved  # how conditional effects counted (on heads for aimed forms)
 
 
-def timeline(lo: Loadout, enemy: Enemy) -> list[Event]:
+def timeline(lo: Loadout, enemy: Enemy, rules: StatusRules) -> list[Event]:
     """Damage events of `lo` against `enemy` (before its faction modifiers and defences)."""
     head, bane = _key(lo, enemy)
-    return Timeline(lo, resolve(lo, head is not None), head, bane).events()
+    return Timeline(lo, resolve(lo, head is not None), head, bane, rules).events()
 
 
 def _key(lo: Loadout, enemy: Enemy) -> tuple[Head | None, Faction | None]:
@@ -42,7 +43,9 @@ def _key(lo: Loadout, enemy: Enemy) -> tuple[Head | None, Faction | None]:
     return (Head(head.multiplier, head.critical) if head else None, enemy.bane)
 
 
-def combat(lo: Loadout, enemies: list[Enemy], factions: list[FactionModifiers]) -> Combat:
+def combat(
+    lo: Loadout, enemies: list[Enemy], factions: list[FactionModifiers], rules: StatusRules
+) -> Combat:
     modifiers = {f.faction: f.modifiers for f in factions}
     resolved: dict[bool, Resolved] = {}
     timelines: dict[tuple[Head | None, Faction | None], list[Event]] = {}
@@ -53,7 +56,7 @@ def combat(lo: Loadout, enemies: list[Enemy], factions: list[FactionModifiers]) 
             on_head = key[0] is not None
             if on_head not in resolved:
                 resolved[on_head] = resolve(lo, on_head)
-            timelines[key] = Timeline(lo, resolved[on_head], *key).events()
+            timelines[key] = Timeline(lo, resolved[on_head], *key, rules).events()
         mods = modifiers[e.faction]
         target = Target(
             health=e.health,

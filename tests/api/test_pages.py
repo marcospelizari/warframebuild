@@ -87,3 +87,9 @@ def test_public_origin_wins_over_the_request_host(
 def test_public_origin_must_be_scheme_and_host(tmp_path: Path, bad: str) -> None:
     with pytest.raises(ValueError, match="public origin"):
         create_app(web_dist=tmp_path, public_origin=bad)
+
+
+def test_updates_page_carries_its_own_title(client: TestClient) -> None:
+    page = client.get("/updates").text
+    assert "<title>Game updates | warframeBuild</title>" in page
+    assert '<link rel="canonical" href="http://testserver/updates" />' in page

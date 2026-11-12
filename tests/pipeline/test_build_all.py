@@ -1,4 +1,5 @@
 import filecmp
+import json
 import multiprocessing
 import os
 import time
@@ -10,10 +11,14 @@ import pytest
 
 from app.gamedata.release import current
 from app.gamedata.store import load
-from app.pipeline import build_all, release
+from app.optimize.candidates import fits
+from app.pipeline import build_all, refresh, release
+from app.pipeline.gun_inputs import INPUTS
 from app.pipeline.publish import StoreError
+from app.pipeline.refresh import Paths as RefreshPaths
 
 ROOT = Path(__file__).resolve().parents[2]
+HORNET = "/Lotus/Upgrades/Mods/Pistol/WeaponDamageAmountMod"
 
 
 def _paths(tmp_path: Path, name: str) -> build_all.Paths:
@@ -81,3 +86,47 @@ def test_stop_kills_running_guns_at_once() -> None:
     with pytest.raises(BrokenProcessPool):
         job.result(timeout=10)
     assert time.monotonic() - started < 10
+
+
+def test_incremental_run_searches_only_changed_guns_and_equals_a_full_run(
+    paths: RefreshPaths, tmp_path: Path
+) -> None:
+    """G90 U3: a pistol mod change re-searches the guns it fits; the rest are copied."""
+    refresh.run(paths, offline=True, fetch_images=False)
+    inc = build_all.Paths(paths.gamedata, paths.reference, tmp_path / "inc", ROOT / "app")
+    build_all.run(inc, workers=2, budget=1)
+
+    upgrades = paths.raw / "de/ExportUpgrades_en.json"
+    data = json.loads(upgrades.read_text())
+    hornet = next(e for e in data["ExportUpgrades"] if e["uniqueName"] == HORNET)
+    hornet["levelStats"][-1]["stats"] = ["+240% Damage"]
+    upgrades.write_text(json.dumps(data))
+    refresh.run(paths, offline=True, fetch_images=False)
+
+    lines: list[str] = []
+    summary = build_all.run(inc, workers=2, budget=1, progress=lines.append)
+    searched = {line.split()[1] for line in lines[1:]}
+    gamedata = load(paths.gamedata)
+    mod = next(m for m in gamedata.mods.mods if m.unique_name == HORNET)
+    assert searched == {w.slug for w in gamedata.weapons if fits(w, mod)}
+    assert 0 < len(searched) < len(gamedata.weapons)
+    assert (
+        f"({len(searched)} searched, {len(gamedata.weapons) - len(searched)} copied)"
+        in (summary[0])
+    )
+
+    full = build_all.Paths(paths.gamedata, paths.reference, tmp_path / "full", ROOT / "app")
+    build_all.run(full, workers=2, budget=1)
+    a, b = current(inc.releases), current(full.releases)
+    assert a is not None and b is not None and a.name == b.name
+    assert _same_tree(a / "builds", b / "builds")
+    assert (a / INPUTS).read_bytes() == (b / INPUTS).read_bytes()
+
+
+def test_release_without_input_keys_searches_every_gun(tmp_path: Path) -> None:
+    (tmp_path / "builds").mkdir()
+    (tmp_path / "builds/lex-prime.json").write_text("{}")
+    assert build_all._unchanged(tmp_path, {"lex-prime": "k"}) == set()  # made before U3
+    (tmp_path / INPUTS).write_text('{"lex-prime": "k"}')
+    assert build_all._unchanged(tmp_path, {"lex-prime": "k"}) == {"lex-prime"}
+    assert build_all._unchanged(tmp_path, {"lex-prime": "other"}) == set()

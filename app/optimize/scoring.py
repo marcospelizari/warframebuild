@@ -7,6 +7,7 @@ from collections.abc import Callable, Sequence
 from app.domain.combat import neutral_dps
 from app.domain.effects import DamageType, Faction, Stat, Support
 from app.domain.headshot import Head
+from app.domain.status_rules import StatusRules
 from app.gamedata.models import Arcane, Enemy, Mod, Perk, Weapon
 from app.gamedata.store import GameData
 from app.optimize import forma
@@ -18,11 +19,12 @@ from app.optimize.search import MAX_EVALUATIONS, Option, Result, search
 from app.optimize.timeline import Timeline
 
 
-def max_score(lo: Loadout, head: Head) -> float:
+def max_score(lo: Loadout, head: Head, rules: StatusRules) -> float:
     """Conditions held as mid-mission (G78); forms aimed at heads hit `head` (the reference
     head), body forms the body."""
     on_head = head if lo.mark is not None else None
-    return neutral_dps(Timeline(lo, resolve(lo, on_head is not None), on_head, None).events())
+    res = resolve(lo, on_head is not None)
+    return neutral_dps(Timeline(lo, res, on_head, None, rules).events())
 
 
 Objective = Callable[[Loadout], float]
@@ -31,7 +33,7 @@ Objective = Callable[[Loadout], float]
 def max_objective(data: GameData) -> Objective:
     ref = data.reference_head
     head = Head(ref.multiplier, critical=ref.critical)
-    return lambda lo: max_score(lo, head)
+    return lambda lo: max_score(lo, head, data.status_rules)
 
 
 def combat_objective(data: GameData, faction: str | None = None) -> Objective:
@@ -45,7 +47,7 @@ def combat_objective(data: GameData, faction: str | None = None) -> Objective:
 def enemies_objective(data: GameData, enemies: Sequence[Enemy]) -> Objective:
     """1 / combat cost over exactly `enemies`."""
     fought = list(enemies)
-    return lambda lo: 1 / combat(lo, fought, data.factions).score
+    return lambda lo: 1 / combat(lo, fought, data.factions, data.status_rules).score
 
 
 def best_max(

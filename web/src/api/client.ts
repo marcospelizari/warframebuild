@@ -19,6 +19,12 @@ export type WeaponItem = Schemas["WeaponItem"];
 export type WeaponRef = Schemas["WeaponRef"];
 export type WeaponList = Schemas["WeaponList"];
 export type ExcludedWeapon = Schemas["ExcludedWeapon"];
+export type DataInfo = Schemas["DataInfo"];
+export type UpdatesResponse = Schemas["UpdatesResponse"];
+export type Update = Schemas["Update"];
+export type EntryChange = Schemas["EntryChange"];
+export type GunChange = Schemas["GunChange"];
+export type BuildChange = Schemas["BuildChange"];
 
 /** A failed API call: HTTP status plus the API's error code when it sent one. */
 export class ApiFailure extends Error {
@@ -48,6 +54,15 @@ async function getJson<T>(url: string): Promise<T> {
 
 export function getWeapons(): Promise<WeaponList> {
   return getJson("/api/weapons");
+}
+
+/** The game data every page names in its footer (U4). */
+export function getData(): Promise<DataInfo> {
+  return getJson("/api/data");
+}
+
+export function getUpdates(): Promise<UpdatesResponse> {
+  return getJson("/api/updates");
 }
 
 export function getBuilds(slug: string): Promise<BuildsResponse> {

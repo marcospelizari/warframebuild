@@ -8,7 +8,7 @@ DoT and fire rate are steps 4c and 8.
 
 import math
 from collections.abc import Mapping, Sequence
-from dataclasses import dataclass, replace
+from dataclasses import dataclass, field, replace
 
 from app.domain import crit, headshot
 from app.domain.damage import composition, element_bonuses, scaled
@@ -52,6 +52,7 @@ class ModdedHit:
     headshot_bonus: float = 0.0  # summed headshot-multiplier bonus (Deadhead, Target Acquired)
     direct_bonus: float | None = None  # Galvanized-style bonus once applied
     noncrit_factor: float = 1.0  # damage factor only non-crits get (Devouring Attrition)
+    stack_cap_bonus: dict[DamageType, int] = field(default_factory=dict)  # +N max stacks
 
     @property
     def projectile_damage(self) -> float:
@@ -201,7 +202,16 @@ def modded_hit(
         status_damage=modded(1.0, Stat.STATUS_DAMAGE, bonuses) - 1,
         status_duration=modded(1.0, Stat.STATUS_DURATION, bonuses) - 1,
         noncrit_factor=math.prod(noncrit),
+        stack_cap_bonus=_stack_cap_bonus(bonuses),
     )
+
+
+def _stack_cap_bonus(bonuses: Sequence[Bonus]) -> dict[DamageType, int]:
+    out: dict[DamageType, float] = {}
+    for e, v in bonuses:
+        if e.stat == Stat.STATUS_STACK_CAP and e.damage_type is not None:
+            out[e.damage_type] = out.get(e.damage_type, 0.0) + v
+    return {t: round(v) for t, v in out.items() if round(v)}
 
 
 def _with_base_damage(

@@ -8,6 +8,7 @@ pointer file switch to it; an interrupted run leaves `current` unchanged. The la
 `KEEP` releases stay.
 """
 
+import datetime
 import hashlib
 import os
 import shutil
@@ -18,8 +19,10 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from app.gamedata.builds import WeaponBuilds
-from app.gamedata.release import POINTER
+from app.gamedata.release import POINTER, current
 from app.gamedata.store import load
+from app.pipeline import updates
+from app.pipeline.gun_inputs import INPUTS
 from app.pipeline.publish import dump, exclusive
 
 KEEP = 2
@@ -75,9 +78,13 @@ def publish(
     reference: Path,
     builds: Iterable[WeaponBuilds],
     expected: set[str],
+    today: str | None = None,
+    inputs: dict[str, str] | None = None,
 ) -> Path:
     """Write the release from `builds` (consumed as they come), validate, switch `current`.
-    `expected`: the slug of every gun that must have builds. The caller holds `lock`."""
+    `expected`: the slug of every gun that must have builds. The caller holds `lock`.
+    `updates.json` compares it with the current release (U10); `inputs` (per-gun input
+    keys, U3) goes to `inputs.json` for the next incremental run."""
     for old in releases.glob(".*.tmp.old"):  # crash between the two renames below
         live = releases / old.name.removeprefix(".").removesuffix(".tmp.old")
         if not live.exists():
@@ -115,6 +122,9 @@ def publish(
         "no_forma_layout": unplaced,
     }
     (temp / "manifest.json").write_bytes(dump(manifest))
+    if inputs is not None:
+        (temp / INPUTS).write_bytes(dump(dict(sorted(inputs.items()))))
+    updates.write(temp, current(releases), key.id, today or datetime.date.today().isoformat())
     old = releases / f".{key.id}.tmp.old"  # same key again: the live copy goes last
     if final.exists():
         final.rename(old)
