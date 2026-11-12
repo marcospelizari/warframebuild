@@ -237,7 +237,7 @@ def test_utility_lines_are_ignored() -> None:
             "On Kill:\n+30% Projectile Speed and +30% Beam Range for 10s. Stacks up to 2x.",
         ]
     )
-    assert parsed.support == Support.FULL and parsed.effects == [] and not parsed.damage_related
+    assert parsed.support == Support.FULL and parsed.effects == [] and not parsed.unparsed
 
 
 def test_unknown_rule_without_damage_words_is_kept() -> None:
@@ -248,7 +248,7 @@ def test_unknown_rule_without_damage_words_is_kept() -> None:
             "Range by 5%."
         ]
     )
-    assert parsed.support == Support.UNSUPPORTED and parsed.damage_related
+    assert parsed.support == Support.UNSUPPORTED and parsed.unparsed
 
 
 def test_restriction_text_is_kept() -> None:
@@ -274,7 +274,7 @@ def test_unmodelled_condition_is_never_always_on() -> None:
 
 def test_free_text_damage_effect_is_unsupported() -> None:
     parsed = parse(["Enemies hit are pulled toward the impact point and take 20% more damage"])
-    assert parsed.support == Support.UNSUPPORTED and parsed.damage_related
+    assert parsed.support == Support.UNSUPPORTED and parsed.unparsed
 
 
 def test_internal_bleeding_forced_slash_on_impact_proc() -> None:

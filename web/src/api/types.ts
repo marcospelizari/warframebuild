@@ -246,6 +246,11 @@ export interface components {
             kill_before: number | null;
             /** Removed */
             removed: string[];
+            /**
+             * Reordered
+             * @default false
+             */
+            reordered: boolean;
         };
         /** BuildsResponse */
         BuildsResponse: {

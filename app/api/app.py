@@ -1,6 +1,7 @@
 """FastAPI application: JSON API under /api, built frontend (web/dist) for everything else."""
 
 import asyncio
+import hashlib
 import logging
 import os
 from collections.abc import AsyncIterator
@@ -89,6 +90,7 @@ def create_app(
         lifespan=lifespan,
     )
     app.state.releases = releases
+    app.state.api_version = api_version()
     app.state.failed_release = None
     app.state.img_dir = img_dir
     app.state.art_dir = art_dir
@@ -124,6 +126,15 @@ def create_app(
             )
 
     return app
+
+
+def api_version() -> str:
+    """Hash of the API's own sources: part of the /builds ETag."""
+    digest = hashlib.sha256()
+    folder = Path(__file__).parent
+    for path in sorted(folder.rglob("*.py")):
+        digest.update(path.relative_to(folder).as_posix().encode() + b"\0" + path.read_bytes())
+    return digest.hexdigest()[:12]
 
 
 def _first(app: FastAPI, release: Release | None) -> serving.Served:

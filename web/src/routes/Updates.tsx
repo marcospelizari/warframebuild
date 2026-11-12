@@ -207,10 +207,12 @@ function GunRow({ gun }: { gun: GunChange }) {
 function BuildLine({ change }: { change: BuildChange }) {
   const { kill_before: before, kill_after: after } = change;
   const label = change.build === "recommended" ? "Recommended" : change.build;
-  const swap =
+  const order = change.reordered ? "new slot order (element combinations)" : null;
+  const parts =
     change.removed.length || change.added.length
       ? `${change.removed.join(", ") || "nothing"} → ${change.added.join(", ") || "nothing"}`
-      : "same mods";
+      : null;
+  const swap = [parts, order].filter(Boolean).join("; ") || "same mods";
   return (
     <p className="m-0 mt-1 flex flex-wrap gap-x-3 text-[14px] text-soft">
       <span className="min-w-[110px] text-label">{label}</span>

@@ -17,21 +17,18 @@ from app.gamedata.store import GameData
 from app.optimize.candidates import arcane_fits, fits
 
 INPUTS = "inputs.json"
+# GameData fields: read whole by every gun's search (hashed whole), filtered per gun below,
+# or never read by the search. A test fails when a new field is in none of them.
+SHARED = ("enemies", "factions", "reference_head", "status_rules")
+PER_GUN = frozenset({"weapons", "mods", "arcanes", "incarnon"})
+HASHED = PER_GUN | set(SHARED)
+NOT_READ = frozenset({"meta", "joins"})  # provenance and name joins
 # Pictures are not search inputs: a new picture must not rebuild a gun.
 _SKIP = {"texture_location"}
 
 
 def gun_keys(data: GameData, calculator: str, budget: int) -> dict[str, str]:
-    shared = _digest(
-        [
-            calculator,
-            budget,
-            _dump(data.enemies),
-            _dump(data.factions),
-            _dump(data.reference_head),
-            _dump(data.status_rules),
-        ]
-    )
+    shared = _digest([calculator, budget, *(_dump(getattr(data, f)) for f in SHARED)])
     sets = {s.unique_name: s for s in data.mods.sets}
     keys = {}
     for gun in data.weapons:

@@ -183,8 +183,3 @@ class Parsed(BaseModel):
         if not self.unparsed:
             return Support.FULL
         return Support.PARTIAL if self.effects else Support.UNSUPPORTED
-
-    @property
-    def damage_related(self) -> bool:
-        # Every Stat changes damage or sustained DPS; utility text is never modelled.
-        return bool(self.unparsed or self.effects)

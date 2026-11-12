@@ -37,6 +37,7 @@ const body: UpdatesResponse = {
               build: "recommended",
               removed: ["Hornet Strike"],
               added: ["Bore"],
+              reordered: false,
               kill_before: 2,
               kill_after: 1.5,
             },
@@ -79,4 +80,20 @@ test("no updates yet says so", async () => {
   answer({ ...body, updates: [] });
   renderPage(UpdatesPage);
   expect(await screen.findByText(/No updates recorded yet/)).toBeInTheDocument();
+});
+
+test("a build with the same mods in a new slot order says so", async () => {
+  const [update] = body.updates;
+  const [gun] = update!.guns;
+  const reordered = {
+    ...gun!,
+    builds: [
+      { build: "recommended", removed: [], added: [], reordered: true, kill_before: 2, kill_after: 2 },
+    ],
+  };
+  answer({ ...body, updates: [{ ...update!, guns: [reordered] }] });
+  renderPage(UpdatesPage);
+  const card = await screen.findByRole("article", { name: "20 Nov 2026" });
+  fireEvent.click(within(card).getByText("Builds (1 gun)"));
+  expect(within(card).getByText("new slot order (element combinations)")).toBeInTheDocument();
 });

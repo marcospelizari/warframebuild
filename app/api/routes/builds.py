@@ -1,7 +1,7 @@
 """GET /api/weapons/{slug}/builds: a gun's precomputed builds from the current release, each
-scored by the /calc code (PLAN Q28b, option A); never a search. ETag = release id. A gun
-not in the in-memory cache is filled in on the runner (E6/E7); only those fills count
-against the per-address rate limit."""
+scored by the /calc code (PLAN Q28b, option A); never a search. ETag = release id + API
+code version. A gun not in the in-memory cache is filled in on the runner (E6/E7); only
+those fills count against the per-address rate limit."""
 
 from fastapi import APIRouter, Request, Response
 
@@ -35,7 +35,9 @@ async def builds(slug: str, request: Request) -> Response:
         raise ApiFailure(503, "release_mismatch", "the release was built from other game data")
     if slug not in data.weapon_by_slug:  # also keeps `slug` from naming any other file
         raise ApiFailure(404, "unknown_weapon", "no such weapon", "slug")
-    headers = {"ETag": f'"{release.id}"', "Cache-Control": "no-cache"}
+    # The response is made by API code too: a code change must not answer 304.
+    etag = f'"{release.id}-{request.app.state.api_version}"'
+    headers = {"ETag": etag, "Cache-Control": "no-cache"}
     if request.headers.get("if-none-match") == headers["ETag"]:
         return Response(status_code=304, headers=headers)
     cache = now.builds_cache

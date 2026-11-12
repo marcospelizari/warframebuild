@@ -158,10 +158,13 @@ def _build_change(
     )
     if before == after and not moved:  # order kept: element order counts
         return None
+    kept_before = [x for x in before if x in after]
+    kept_after = [x for x in after if x in before]
     return BuildChange(
         build=label,
         removed=[x for x in before if x not in after],
         added=[x for x in after if x not in before],
+        reordered=kept_before != kept_after,
         kill_before=kill_before,
         kill_after=kill_after,
     )
