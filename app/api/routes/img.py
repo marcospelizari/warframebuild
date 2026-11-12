@@ -9,6 +9,7 @@ from fastapi import APIRouter, Request
 from fastapi.responses import FileResponse
 
 from app.api.errors import ApiFailure
+from app.api.serving import served
 from app.gamedata.images import PictureKind, image_path, picture_path
 from app.gamedata.store import GameData
 
@@ -34,7 +35,7 @@ def _file(path: Path) -> FileResponse:
 
 @router.get("/img/weapons/{name}", include_in_schema=False)
 def icon(name: str, request: Request) -> FileResponse:
-    data: GameData = request.app.state.data
+    data: GameData = served(request).data
     weapon = data.weapon_by_slug.get(name.removesuffix(".png")) if name.endswith(".png") else None
     if weapon is None:
         raise _missing()
@@ -43,7 +44,7 @@ def icon(name: str, request: Request) -> FileResponse:
 
 @router.get("/img/{kind}/{name}", include_in_schema=False)
 def picture(kind: str, name: str, request: Request) -> FileResponse:
-    data: GameData = request.app.state.data
+    data: GameData = served(request).data
     known = KINDS.get(kind)
     if known is None or name not in data.picture_names[known]:
         raise _missing()

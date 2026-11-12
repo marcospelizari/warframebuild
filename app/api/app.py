@@ -1,5 +1,6 @@
 """FastAPI application: JSON API under /api, built frontend (web/dist) for everything else."""
 
+import asyncio
 import logging
 import os
 from collections.abc import AsyncIterator
@@ -14,11 +15,10 @@ from pydantic import BaseModel
 from starlette.exceptions import HTTPException
 from starlette.types import Scope
 
-from app.api import errors, jobs, pages
+from app.api import errors, pages, serving
 from app.api.rate_limit import RateLimit
 from app.api.routes import builds, calc, img, mods, updates, weapons
-from app.api.runner import Runner
-from app.gamedata.release import open_current
+from app.gamedata.release import Release, open_current
 from app.gamedata.store import GameData, load
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -62,7 +62,7 @@ def create_app(
 ) -> FastAPI:
     """Data and builds come from the current release (C4); before the first
     `wfb build-all`, or when the release no longer loads (e.g. an older schema), data from
-    gamedata/ and /builds answers 503."""
+    gamedata/ and /builds answers 503. A new release is picked up while running (U11)."""
     try:
         release = open_current(releases)
     except (OSError, ValueError, KeyError) as error:
@@ -71,23 +71,14 @@ def create_app(
 
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
-        if app.state.data is None:
-            folder = GAMEDATA
-            if app.state.release is not None:
-                try:
-                    app.state.data = load(app.state.release.gamedata)
-                    folder = app.state.release.gamedata
-                except (OSError, ValueError) as error:
-                    log.warning("release unusable (%s): serving gamedata/ without builds", error)
-                    app.state.release = None
-            if app.state.data is None:
-                app.state.data = load(GAMEDATA)
-            # Workers load the same folder the app serves (C4).
-            app.state.runner = Runner(WORKERS, QUEUE, TIMEOUT_S, True, jobs.load_data, (folder,))
+        if app.state.served is None:
+            app.state.served = _first(app, release)
+        watcher = asyncio.create_task(serving.watch(app))
         try:
             yield
         finally:
-            app.state.runner.shutdown()
+            watcher.cancel()
+            app.state.served.runner.shutdown()
 
     app = FastAPI(
         title="warframeBuild",
@@ -97,17 +88,17 @@ def create_app(
         openapi_url=None,
         lifespan=lifespan,
     )
-    app.state.data = data
-    app.state.release = release
+    app.state.releases = releases
+    app.state.failed_release = None
     app.state.img_dir = img_dir
     app.state.art_dir = art_dir
     app.state.web_dist = web_dist
     app.state.public_origin = pages.origin(public_origin) if public_origin else None
-    app.state.builds_cache = {}
     app.state.rate_limit = RateLimit()
     # Injected data (tests) cannot reach a spawned process: threads share it instead.
-    app.state.runner = (
-        Runner(WORKERS, QUEUE, TIMEOUT_S, False, jobs.load_data, (data,)) if data else None
+    app.state.pool = serving.Pool(WORKERS, QUEUE, TIMEOUT_S, processes=data is None)
+    app.state.served = (
+        serving.Served(data, release, app.state.pool.runner(data, GAMEDATA)) if data else None
     )
     errors.install(app)
     app.include_router(calc.router)
@@ -133,3 +124,20 @@ def create_app(
             )
 
     return app
+
+
+def _first(app: FastAPI, release: Release | None) -> serving.Served:
+    """At startup: the release's data, or gamedata/ without builds when it does not load."""
+    data, folder = None, GAMEDATA
+    if release is not None:
+        try:
+            data, folder = load(release.gamedata), release.gamedata
+        except (OSError, ValueError) as error:
+            log.warning("release unusable (%s): serving gamedata/ without builds", error)
+            app.state.failed_release = release.id  # the watcher waits for the next one
+            release = None
+    if data is None:
+        data = load(GAMEDATA)
+    # Workers load the same folder the app serves (C4).
+    pool: serving.Pool = app.state.pool
+    return serving.Served(data, release, pool.runner(data, folder))

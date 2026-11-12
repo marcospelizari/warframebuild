@@ -3,6 +3,7 @@
 from fastapi import APIRouter, Request
 
 from app.api.schemas.updates import DataInfo, UpdatesResponse
+from app.api.serving import served
 from app.gamedata.release import Release
 from app.gamedata.store import GameData
 
@@ -15,12 +16,13 @@ def _info(data: GameData) -> DataInfo:
 
 @router.get("/api/data")
 def data_info(request: Request) -> DataInfo:
-    return _info(request.app.state.data)
+    return _info(served(request).data)
 
 
 @router.get("/api/updates")
 def updates(request: Request) -> UpdatesResponse:
-    data: GameData = request.app.state.data
-    release: Release | None = request.app.state.release
+    now = served(request)
+    data: GameData = now.data
+    release: Release | None = now.release
     found = release.updates.updates if release else []
     return UpdatesResponse(data=_info(data), updates=found)

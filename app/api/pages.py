@@ -10,6 +10,7 @@ from pathlib import Path
 from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse
 
+from app.api.serving import served
 from app.gamedata.builds import Build, WeaponBuilds
 from app.gamedata.models import Weapon
 from app.gamedata.release import Release
@@ -127,9 +128,10 @@ def _site(request: Request) -> str:
 def _page(request: Request, slug: str, faction: str | None) -> HTMLResponse:
     index: Path = request.app.state.web_dist / "index.html"
     page = index.read_text(encoding="utf-8")
-    data: GameData = request.app.state.data
+    now = served(request)
+    data: GameData = now.data
     gun = data.weapon_by_slug.get(slug)
-    meta = weapon_meta(data, request.app.state.release, gun, faction) if gun else None
+    meta = weapon_meta(data, now.release, gun, faction) if gun else None
     site = _site(request)
     if meta is None:
         missing = Meta(f"Page not found | {SITE}", "No such gun or faction.", "/", noindex=True)

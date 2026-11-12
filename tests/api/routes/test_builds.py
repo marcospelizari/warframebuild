@@ -67,7 +67,8 @@ def test_no_release_yet_answers_503(tmp_path: Path, gamedata: GameData) -> None:
 
 def test_release_of_other_data_answers_503(client: TestClient) -> None:
     app = client.app
-    app.state.release = replace(app.state.release, dataset_hash="0" * 16)  # type: ignore[attr-defined]
+    now = app.state.served  # type: ignore[attr-defined]
+    app.state.served = replace(now, release=replace(now.release, dataset_hash="0" * 16))  # type: ignore[attr-defined]
     response = client.get("/api/weapons/soma-prime/builds")
     assert (response.status_code, response.json()["code"]) == (503, "release_mismatch")
 
@@ -76,7 +77,7 @@ def test_app_loads_its_data_from_the_current_release(tmp_path: Path, releases: P
     """C4: /calc and /builds read the same release."""
     with TestClient(create_app(web_dist=tmp_path, releases=releases)) as client:
         state = client.app.state  # type: ignore[attr-defined]
-        assert state.data.meta.dataset_hash == state.release.dataset_hash
+        assert state.served.data.meta.dataset_hash == state.served.release.dataset_hash
         assert client.get("/api/weapons/soma-prime/builds").status_code == 200
 
 

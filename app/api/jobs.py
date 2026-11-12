@@ -7,8 +7,6 @@ response JSON or an error tuple, since ApiFailure does not cross a process bound
 
 from typing import Any
 
-from fastapi import Request
-
 from app.api.build_response import build_response
 from app.api.builds_response import expand
 from app.api.errors import ApiFailure
@@ -47,12 +45,11 @@ def builds(release: Release, slug: str) -> Outcome:
     try:
         return expand(_worker_data(), release, slug), None
     except FileNotFoundError:  # a later build-all pruned this server's release
-        return None, (503, "release_gone", "builds were replaced: restart the app", None)
+        return None, (503, "release_gone", "builds were replaced, try again", None)
 
 
-async def run(request: Request, job: Any, *args: Any) -> bytes:
-    """Run `job` on the app's runner; Busy/TimedOut/job errors become API errors."""
-    runner: Runner = request.app.state.runner
+async def run(runner: Runner, job: Any, *args: Any) -> bytes:
+    """Run `job` on the served release's runner; Busy/TimedOut/job errors become API errors."""
     try:
         body, error = await runner.run(job, *args)
     except Busy:
