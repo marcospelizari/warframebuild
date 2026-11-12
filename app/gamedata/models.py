@@ -222,7 +222,7 @@ class Perk(Model):
     tier: Annotated[int, Field(ge=2, le=5)]
     name: str
     form: Literal["both", "normal", "incarnon"]
-    text: list[str]  # wiki description lines, values filled in
+    text: list[str]  # wiki description lines (values filled in), then its notes
     effects: Effects
 
 

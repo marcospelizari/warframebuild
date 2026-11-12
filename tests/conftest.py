@@ -123,17 +123,19 @@ LAETUM_STUB = """===Evolutions===
 | '''Devouring Attrition'''
 |
 * '''50%''' chance to deal '''+2000%''' damage on non-critical hits
+* Affects both forms.
 |
 * Damage bonus is '''multiplicative''' to base damage bonuses such as {{M|Hornet Strike}}.
 |-
 | '''Overwhelming Attrition'''
 |
-* On Hit that is neither Critical nor applies a Status Effect: '''+400%''' damage for 10 seconds.
+* On Hit that is neither Critical nor applies a Status Effect: '''+400%''' damage for 10 seconds. Stacks up to 3 times.
 |
 * Damage bonus is '''additive''' to base damage bonuses such as {{M|Hornet Strike}}.
+* When the buff times out, one stack is lost and the buff duration resets.
 |-
 |}
-"""
+"""  # noqa: E501 (wiki line kept whole: overrides compare the exact text)
 GENESIS_STUB = """{{CustomCollapsible|Lex|Lex|expand=false|notlist=true}}
 {| class="wikitable sortable stickyHeader"
 ! colspan="3" | Evolution

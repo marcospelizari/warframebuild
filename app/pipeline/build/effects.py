@@ -1,5 +1,7 @@
 """Stat text -> stored Effects: the step 3 parser plus hand-checked overrides (R6)."""
 
+import json
+from dataclasses import dataclass
 from typing import Any
 
 from pydantic import ValidationError
@@ -11,23 +13,42 @@ from app.pipeline.build.inputs import require_verified
 from app.pipeline.errors import RefreshError
 
 
+@dataclass(frozen=True)
+class SwitchedOff:
+    """An override whose entry text changed since it was written (U2): not applied."""
+
+    key: str
+    written_for: list[str]
+    now: list[str]
+
+
 class Overrides:
     """reference/overrides.json: per uniqueName, `effects` replace the parsed ones;
-    `support` / `note` adjust the status. Every entry must be used by the refresh."""
+    `support` / `note` adjust the status. Every entry must be used by the refresh and
+    name the text it was written for; when that text changed, the entry is switched off
+    and the parsed effects stand (G90 U2)."""
 
     def __init__(self, data: dict[str, Any]) -> None:
         self._entries: dict[str, dict[str, Any]] = data.get("entries", {})
         self._used: set[str] = set()
+        self._missing_text: dict[str, list[str]] = {}
+        self.switched_off: list[SwitchedOff] = []
 
     def effects(self, unique_name: str, stats: list[str], description: str = "") -> Effects:
-        return self.apply(unique_name, parse(stats, description))
+        text = ([description] if description else []) + list(stats)
+        return self.apply(unique_name, parse(stats, description), text)
 
-    def apply(self, unique_name: str, parsed: Parsed) -> Effects:
+    def apply(self, unique_name: str, parsed: Parsed, text: list[str]) -> Effects:
         """Parsed effects, replaced or adjusted by the entry for `unique_name` if any."""
         entry = self._entries.get(unique_name)
         if entry is None:
             return _stored(parsed)
         self._used.add(unique_name)
+        if "text" not in entry:
+            self._missing_text[unique_name] = text
+        elif entry["text"] != text:
+            self.switched_off.append(SwitchedOff(unique_name, list(entry["text"]), text))
+            return _stored(parsed)
         try:
             require_verified(entry, "overrides.json", unique_name)
             effects = [Effect(**e) for e in entry["effects"]] if "effects" in entry else None
@@ -53,6 +74,12 @@ class Overrides:
         if unused:
             raise RefreshError(
                 f"reference/overrides.json entries match no mod, arcane or perk: {unused}"
+            )
+        if self._missing_text:
+            listed = json.dumps(self._missing_text, indent=1, ensure_ascii=False)
+            raise RefreshError(
+                "reference/overrides.json entries without `text` (the text they were written "
+                f"for; check the values against it, then add it):\n{listed}"
             )
 
 

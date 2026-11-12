@@ -161,3 +161,25 @@ def test_source_key_order_is_not_a_change() -> None:
     assert changes._flat({"b": 1, "a": {"y": 2, "x": 3}}, "") == changes._flat(
         {"a": {"x": 3, "y": 2}, "b": 1}, ""
     )
+
+
+def test_switched_off_override_is_listed_first(paths: Paths) -> None:
+    """G90 U2: a changed text switches the override off; the update still goes out."""
+    run(paths, offline=True, fetch_images=False)
+    path = paths.reference / "overrides.json"
+    data = json.loads(path.read_text())
+    key = next(k for k in data["entries"] if k.endswith("#Devouring Attrition"))
+    data["entries"][key]["text"] = ["50% chance to deal +1500% damage on non-critical hits"]
+    path.write_text(json.dumps(data))
+
+    report = run(paths, offline=True, fetch_images=False)
+    lines = report.lines()
+    assert f"  {key}" in lines
+    assert lines.index("overrides switched off (1): their text changed, rewrite them:") < next(
+        i for i, line in enumerate(lines) if line.startswith("full patch report")
+    )
+    md = (
+        paths.raw.parent / f"patch-report-{report.meta.changed_on}-{report.meta.dataset_hash}.md"
+    ).read_text()
+    assert f"## Override switched off: {key}" in md
+    assert "- 50% chance to deal +1500% damage on non-critical hits" in md

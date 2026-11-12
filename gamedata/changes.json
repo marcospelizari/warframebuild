@@ -1,7 +1,4863 @@
 {
- "entries": [],
- "from_hash": "a6e839da6b88cf7a",
+ "entries": [
+  {
+   "after": [
+    "Increase ammo maximum by +9.",
+    "This bonus does not apply to the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase ammo maximum by +9.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher#Hitman's Hoard",
+   "kind": "perk",
+   "name": "Angstrum: Hitman's Hoard",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase ammo maximum by +9."
+   ]
+  },
+  {
+   "after": [
+    "+50% Reload Speed.",
+    "Bonus stacks additively with reload speed mods such as Fast Hands.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+50% Reload Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher#Rapid Reinforcement",
+   "kind": "perk",
+   "name": "Angstrum: Rapid Reinforcement",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "+30% Projectile Speed.",
+    "Bonus stacks additively with Terminal Velocity.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+30% Projectile Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/CorpusHandRocketLauncher#Swift Deliverance",
+   "kind": "perk",
+   "name": "Angstrum: Swift Deliverance",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Damage by +24.",
+    "On Shield Break: Increase Damage by +30 for 8s.",
+    "This is on personal shield break, not breaking enemy shields.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Damage by +24.",
+    "On Shield Break: Increase Damage by +30 for 8s.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun#Hoplite Virtue",
+   "kind": "perk",
+   "name": "Atomos: Hoplite Virtue",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Damage by +24.",
+    "On Shield Break: Increase Damage by +30 for 8s."
+   ]
+  },
+  {
+   "after": [
+    "Increase ammo capacity to 560.",
+    "This bonus not affect Incarnon form",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase ammo capacity to 560.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun#Mercenary Chamber",
+   "kind": "perk",
+   "name": "Atomos: Mercenary Chamber",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase ammo capacity to 560."
+   ]
+  },
+  {
+   "after": [
+    "+7 Range.",
+    "Bonus stacks additively to Ruinous Extension",
+    "This bonus has no effect on Incarnon Form",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+7 Range.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun#Moonrise Velocity",
+   "kind": "perk",
+   "name": "Atomos: Moonrise Velocity",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "+7 Range."
+   ]
+  },
+  {
+   "after": [
+    "On Reload From Empty: Increase magazine capacity by +5. Stacks up to 7x.",
+    "This bonus does not affect Incarnon form",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On Reload From Empty: Increase magazine capacity by +5. Stacks up to 7x.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun#Resonant Restore",
+   "kind": "perk",
+   "name": "Atomos: Resonant Restore",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Reload From Empty: Increase magazine capacity by +5. Stacks up to 7x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +3.",
+    "On Headshot: +7.5% Fire Rate for 4s. Stacks up to 10x.",
+    "On headshot effect has a 50% chance of activating.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +3.",
+    "On Headshot: +7.5% Fire Rate for 4s. Stacks up to 10x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeBallistica/PrimeBallistica#Headcracker",
+   "kind": "perk",
+   "name": "Ballistica Prime: Headcracker",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +30.",
+    "On Headshot: +7.5% Fire Rate for 4s. Stacks up to 10x.",
+    "On headshot effect has a 50% chance of activating.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +30.",
+    "On Headshot: +7.5% Fire Rate for 4s. Stacks up to 10x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/AutomaticHandCrossbow/AutoCrossBow#Headcracker",
+   "kind": "perk",
+   "name": "Ballistica: Headcracker",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "On Reload From Empty: +100% Reload Speed.",
+    "As the reload speed bonus is only applied at the end of the first reload from empty, the bonus will not apply to the first reload, only subsequent ones.",
+    "Bonus stacks additively with reload speed mods such as Tactical Pump.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "On Reload From Empty: +100% Reload Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/PrimeBoar#Ready Retaliation",
+   "kind": "perk",
+   "name": "Boar Prime: Ready Retaliation",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Reload From Empty: +100% Reload Speed."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +10.",
+    "On Reload From Empty: Increase Base Damage by +14.",
+    "The damage bonus is applied after finishing a reload while the magazine is empty, and lasts indefinitely until a manual reload is initiated while the magazine is not empty. Refilling the magazine through other means (such as with Blood For Ammo) will not remove the bonus.",
+    "Reload From empty bonus is incorrectly listed as +10 in game.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +10.",
+    "On Reload From Empty: Increase Base Damage by +14.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/PrimeBoar#Reified Bane",
+   "kind": "perk",
+   "name": "Boar Prime: Reified Bane",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Reload From Empty: Increase Base Damage by +14."
+   ]
+  },
+  {
+   "after": [
+    "On Reload From Empty: +100% Reload Speed.",
+    "As the reload speed bonus is only applied at the end of the first reload from empty, the bonus will not apply to the first reload, only subsequent ones.",
+    "Bonus stacks additively with reload speed mods such as Tactical Pump.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "On Reload From Empty: +100% Reload Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/FullAutoShotgun#Ready Retaliation",
+   "kind": "perk",
+   "name": "Boar: Ready Retaliation",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Reload From Empty: +100% Reload Speed."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +10.",
+    "On Reload From Empty: Increase Base Damage by +14.",
+    "The damage bonus is applied after finishing a reload while the magazine is empty, and lasts indefinitely until a manual reload is initiated while the magazine is not empty. Refilling the magazine through other means (such as with Blood For Ammo) will not remove the bonus.",
+    "Reload From empty bonus is incorrectly listed as +10 in game.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +10.",
+    "On Reload From Empty: Increase Base Damage by +14.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/FullAutoShotgun#Reified Bane",
+   "kind": "perk",
+   "name": "Boar: Reified Bane",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Reload From Empty: Increase Base Damage by +14."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +4.",
+    "With Channeled Ability active: Increase Base Damage by +38. +50% Ammo Efficiency",
+    "Channeled Abilities must be draining energy to be considered active. Abilities that do not drain energy over time such as Nekros's Desecrate, Hildryn's Haven, or Sevagoth's Gloom (with no enemies nearby) do not count.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +4.",
+    "With Channeled Ability active: Increase Base Damage by +38. +50% Ammo Efficiency",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/BratonPrime#Daring Reverie",
+   "kind": "perk",
+   "name": "Braton Prime: Daring Reverie",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Channeled Ability active: Increase Base Damage by +38.",
+    "With Channeled Ability active: +50% Ammo Efficiency"
+   ]
+  },
+  {
+   "after": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored.",
+    "The bonus does not apply to the Incarnon form.",
+    "A second target does not need to be hit, the bullet just has to have some amount of punch-through.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/BratonPrime#Gunsmoke Pick Up",
+   "kind": "perk",
+   "name": "Braton Prime: Gunsmoke Pick Up",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Ammo Capacity to 1125.",
+    "The bonus does not apply to the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Ammo Capacity to 1125.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/BratonPrime#Mercenary Chamber",
+   "kind": "perk",
+   "name": "Braton Prime: Mercenary Chamber",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Ammo Capacity to 1125."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +2.",
+    "Multishot consumes ammo directly from Capacity and does +54% Damage. +20% Multishot.",
+    "Affects both modes. In the case of Incarnon Form, it pulls directly from its magazine.",
+    "Damage bonus is a unique modifier that is multiplicative to other damage buffs.",
+    "Damage bonus only applies to shots generated by multishot.",
+    "The multishot bonus stacks additively with multishot mods such as Split Chamber.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +2.",
+    "Multishot consumes ammo directly from Capacity and does +54% Damage. +20% Multishot.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/BratonPrime#Munitions Grit",
+   "kind": "perk",
+   "name": "Braton Prime: Munitions Grit",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Multishot consumes ammo directly from Capacity and does +54% Damage.",
+    "Damage bonus is a unique modifier that is multiplicative to other damage buffs."
+   ]
+  },
+  {
+   "after": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.0x.",
+    "The critical damage increase is added as base critical damage and will be affected by mods.",
+    "Condition is affected by the critical chance increase effect of Puncture status.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.0x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/BratonPrime#Prelude of Might",
+   "kind": "perk",
+   "name": "Braton Prime: Prelude of Might",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.0x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +12.",
+    "With Channeled Ability active: Increase Base Damage by +34. +50% Ammo Efficiency",
+    "Channeled Abilities must be draining energy to be considered active. Abilities that do not drain energy over time such as Nekros's Desecrate, Hildryn's Haven, or Sevagoth's Gloom (with no enemies nearby) do not count.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +12.",
+    "With Channeled Ability active: Increase Base Damage by +34. +50% Ammo Efficiency",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/VIPRifle#Daring Reverie",
+   "kind": "perk",
+   "name": "Braton Vandal: Daring Reverie",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Channeled Ability active: Increase Base Damage by +34.",
+    "With Channeled Ability active: +50% Ammo Efficiency"
+   ]
+  },
+  {
+   "after": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored.",
+    "The bonus does not apply to the Incarnon form.",
+    "A second target does not need to be hit, the bullet just has to have some amount of punch-through.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/VIPRifle#Gunsmoke Pick Up",
+   "kind": "perk",
+   "name": "Braton Vandal: Gunsmoke Pick Up",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Ammo Capacity to 750.",
+    "The bonus does not apply to the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Ammo Capacity to 750.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/VIPRifle#Mercenary Chamber",
+   "kind": "perk",
+   "name": "Braton Vandal: Mercenary Chamber",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Ammo Capacity to 750."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +8.",
+    "Multishot consumes ammo directly from Capacity and does +58% Damage. +20% Multishot.",
+    "Affects both modes. In the case of Incarnon Form, it pulls directly from its magazine.",
+    "Damage bonus is a unique modifier that is multiplicative to other damage buffs.",
+    "Damage bonus only applies to shots generated by multishot.",
+    "The multishot bonus stacks additively with multishot mods such as Split Chamber.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +8.",
+    "Multishot consumes ammo directly from Capacity and does +58% Damage. +20% Multishot.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/VIPRifle#Munitions Grit",
+   "kind": "perk",
+   "name": "Braton Vandal: Munitions Grit",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Multishot consumes ammo directly from Capacity and does +58% Damage.",
+    "Damage bonus is a unique modifier that is multiplicative to other damage buffs."
+   ]
+  },
+  {
+   "after": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.0x.",
+    "The critical damage increase is added as base critical damage and will be affected by mods.",
+    "Condition is affected by the critical chance increase effect of Puncture status.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.0x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/VIPRifle#Prelude of Might",
+   "kind": "perk",
+   "name": "Braton Vandal: Prelude of Might",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.0x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +24.",
+    "With Channeled Ability active: Increase Base Damage by +30. +50% Ammo Efficiency",
+    "Channeled Abilities must be draining energy to be considered active. Abilities that do not drain energy over time such as Nekros's Desecrate, Hildryn's Haven, or Sevagoth's Gloom (with no enemies nearby) do not count.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +24.",
+    "With Channeled Ability active: Increase Base Damage by +30. +50% Ammo Efficiency",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/Rifle#Daring Reverie",
+   "kind": "perk",
+   "name": "Braton: Daring Reverie",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Channeled Ability active: Increase Base Damage by +30.",
+    "With Channeled Ability active: +50% Ammo Efficiency"
+   ]
+  },
+  {
+   "after": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored.",
+    "The bonus does not apply to the Incarnon form.",
+    "A second target does not need to be hit, the bullet just has to have some amount of punch-through.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/Rifle#Gunsmoke Pick Up",
+   "kind": "perk",
+   "name": "Braton: Gunsmoke Pick Up",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Ammo Capacity to 675.",
+    "The bonus does not apply to the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Ammo Capacity to 675.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/Rifle#Mercenary Chamber",
+   "kind": "perk",
+   "name": "Braton: Mercenary Chamber",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Ammo Capacity to 675."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +14.",
+    "Multishot consumes ammo directly from Capacity and does +60% Damage. +20% Multishot.",
+    "Affects both modes. In the case of Incarnon Form, it pulls directly from its magazine.",
+    "Damage bonus is a unique modifier that is multiplicative to other damage buffs.",
+    "Damage bonus only applies to shots generated by multishot.",
+    "The multishot bonus stacks additively with multishot mods such as Split Chamber.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +14.",
+    "Multishot consumes ammo directly from Capacity and does +60% Damage. +20% Multishot.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/Rifle#Munitions Grit",
+   "kind": "perk",
+   "name": "Braton: Munitions Grit",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Multishot consumes ammo directly from Capacity and does +60% Damage.",
+    "Damage bonus is a unique modifier that is multiplicative to other damage buffs."
+   ]
+  },
+  {
+   "after": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.4x.",
+    "The critical damage increase is added as base critical damage and will be affected by mods.",
+    "Condition is affected by the critical chance increase effect of Puncture status.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.4x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/Rifle#Prelude of Might",
+   "kind": "perk",
+   "name": "Braton: Prelude of Might",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.4x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +30.",
+    "With Sprint Speed 1.2 or Higher: +60% Projectile Speed.",
+    "The projectile speed bonus stacks additively with projectile speed mods such as Lethal Momentum.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +30.",
+    "With Sprint Speed 1.2 or Higher: +60% Projectile Speed.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/BroncoPrime#Speeding Bullet",
+   "kind": "perk",
+   "name": "Bronco Prime: Speeding Bullet",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +36.",
+    "With Sprint Speed 1.2 or Higher: +60% Projectile Speed.",
+    "The projectile speed bonus stacks additively with projectile speed mods such as Lethal Momentum.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +36.",
+    "With Sprint Speed 1.2 or Higher: +60% Projectile Speed.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/HandShotGun#Speeding Bullet",
+   "kind": "perk",
+   "name": "Bronco: Speeding Bullet",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +42.",
+    "+5 Base Multishot on final magazine burst.",
+    "Multishot bonus is added before mods, and is thus multiplied by multishot bonuses.",
+    "Multishot bonus does not affect the Incarnon form.",
+    "form: normal",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +42.",
+    "+5 Base Multishot on final magazine burst.",
+    "form: normal",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston#Forceful Finality",
+   "kind": "perk",
+   "name": "Burston Prime: Forceful Finality",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "+5 Base Multishot on final magazine burst."
+   ]
+  },
+  {
+   "after": [
+    "On Full Burst Hit: +20% Damage, resets on Reload.",
+    "Caps at 5x for +100% damage, additive with base damage mods such as Serration.",
+    "Burst condition is not affected by multishot or punch through, but counts object hits such as nullifier bubbles, and activates even if the first hit of a burst kills the target.",
+    "Resets when activating incarnon, and cannot be stacked in Incarnon form.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Full Burst Hit: +20% Damage, resets on Reload.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston#Reaver's Rapture",
+   "kind": "perk",
+   "name": "Burston Prime: Reaver's Rapture",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Full Burst Hit: +20% Damage, resets on Reload.",
+    "Caps at 5x for +100% damage, additive with base damage mods such as Serration."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +42.",
+    "+5 Base Multishot on final magazine burst.",
+    "Multishot bonus is added before mods, and is thus multiplied by multishot bonuses.",
+    "Multishot bonus does not affect the Incarnon form.",
+    "form: normal",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +42.",
+    "+5 Base Multishot on final magazine burst.",
+    "form: normal",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/BurstRifle#Forceful Finality",
+   "kind": "perk",
+   "name": "Burston: Forceful Finality",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "+5 Base Multishot on final magazine burst."
+   ]
+  },
+  {
+   "after": [
+    "On Full Burst Hit: +20% Damage, resets on Reload.",
+    "Caps at 5x for +100% damage, additive with base damage mods such as Serration.",
+    "Burst condition is not affected by multishot or punch through, but counts object hits such as nullifier bubbles, and activates even if the first hit of a burst kills the target.",
+    "Resets when activating incarnon, and cannot be stacked in Incarnon form.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Full Burst Hit: +20% Damage, resets on Reload.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/BurstRifle#Reaver's Rapture",
+   "kind": "perk",
+   "name": "Burston: Reaver's Rapture",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Full Burst Hit: +20% Damage, resets on Reload.",
+    "Caps at 5x for +100% damage, additive with base damage mods such as Serration."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +10.",
+    "On Shield/Overguard break: x3 Critical Damage for 6s.",
+    "This is on personal shield break, not breaking enemy shields.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +10.",
+    "On Shield/Overguard break: x3 Critical Damage for 6s.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Corpus/Pistols/CorpusMinigun/CorpusMinigun#Steadfast Grit",
+   "kind": "perk",
+   "name": "Cestra: Steadfast Grit",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Shield/Overguard break: x3 Critical Damage for 6s."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Magazine Capacity by +30",
+    "Increased Base Magazine Capacity does not affect Incarnon Form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Magazine Capacity by +30",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/ClanTech/Energy/DeraVandal#Extended Volley",
+   "kind": "perk",
+   "name": "Dera Vandal: Extended Volley",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Critical Chance by 25% of current Status Chance, up to 35%.",
+    "For Non-Incarnon Dera Vandal, +366.7% Status Chance is needed to max out the Critical Chance bonus.",
+    "For Incarnon Dera Vandal and Non-Incarnon Dera, +536.4% Status Chance is needed to max out the Critical Chance bonus.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Critical Chance by 25% of current Status Chance, up to 35%.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/ClanTech/Energy/DeraVandal#High Ground",
+   "kind": "perk",
+   "name": "Dera Vandal: High Ground",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Critical Chance by 25% of current Status Chance, up to 35%."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Magazine Capacity by +22",
+    "Increased Base Magazine Capacity does not affect Incarnon Form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Magazine Capacity by +22",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/ClanTech/Energy/EnergyRifle#Extended Volley",
+   "kind": "perk",
+   "name": "Dera: Extended Volley",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Critical Chance by 25% of current Status Chance, up to 35%.",
+    "For Non-Incarnon Dera Vandal, +366.7% Status Chance is needed to max out the Critical Chance bonus.",
+    "For Incarnon Dera Vandal and Non-Incarnon Dera, +536.4% Status Chance is needed to max out the Critical Chance bonus.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Critical Chance by 25% of current Status Chance, up to 35%.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/ClanTech/Energy/EnergyRifle#High Ground",
+   "kind": "perk",
+   "name": "Dera: High Ground",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Critical Chance by 25% of current Status Chance, up to 35%."
+   ]
+  },
+  {
+   "after": [
+    "Increase Damage by +60.",
+    "With Dread and Hate equipped: Multishot consumes ammo directly from Capacity and increases Damage by +100%. +30% Multishot.",
+    "Damage bonus is a unique modifier that is multiplicative to other damage buffs.",
+    "Damage bonus only applies to shots generated by multishot.",
+    "The multishot bonus stacks additively with multishot mods such as Barrel Diffusion.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Damage by +60.",
+    "With Dread and Hate equipped: Multishot consumes ammo directly from Capacity and increases Damage by +100%. +30% Multishot.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/ThrowingWeapons/StalkerKunai#Stalker's Vendetta",
+   "kind": "perk",
+   "name": "Despair: Stalker's Vendetta",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Damage by +60.",
+    "With Dread and Hate equipped: Multishot consumes ammo directly from Capacity and increases Damage by +100%.",
+    "With Dread and Hate equipped: +30% Multishot.",
+    "Damage bonus is a unique modifier that is multiplicative to other damage buffs."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +15.",
+    "On Firing: +5% Multishot. Stacks up to 10x.",
+    "The multishot bonus is additive to other sources of multishot such as Split Chamber.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +15.",
+    "On Firing: +5% Multishot. Stacks up to 10x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/DexTheThird/DexTheThird#Blazing Barrel",
+   "kind": "perk",
+   "name": "Dex Sybaris: Blazing Barrel",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Firing: +5% Multishot. Stacks up to 10x.",
+    "The multishot bonus is additive to other sources of multishot such as Split Chamber."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Status Chance by +15% Effect doubles in Incarnon Form.",
+    "Sybaris Prime gains +23% Status Chance in Incarnon form, rather than the expected +16%.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Status Chance by +15% Effect doubles in Incarnon Form.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/DexTheThird/DexTheThird#Elemental Dominance",
+   "kind": "perk",
+   "name": "Dex Sybaris: Elemental Dominance",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Status Chance by +15% Effect doubles in Incarnon Form."
+   ]
+  },
+  {
+   "after": [
+    "On Full Burst Hit: +20% Damage, resets on Reload",
+    "Stacks up to 4x.",
+    "This can be bypassed by using Blood Forge, but not effects that reload the weapon while holstered such as Lock and Load.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Full Burst Hit: +20% Damage, resets on Reload",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/DexTheThird/DexTheThird#Reaver's Rapture",
+   "kind": "perk",
+   "name": "Dex Sybaris: Reaver's Rapture",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Full Burst Hit: +20% Damage, resets on Reload"
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Ammo Capacity to 144",
+    "Does not affect the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Ammo Capacity to 144",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Bows/StalkerBow#Hitman's Hoard",
+   "kind": "perk",
+   "name": "Dread: Hitman's Hoard",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Ammo Capacity to 144"
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +70.",
+    "+100% Damage to enemies below half Health",
+    "The conditional damage bonus ignores the base damage increase from the same perk, the 2x damage from the charged shot (Primary Fire only) and Galvanized Aptitude's damage bonus.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +70.",
+    "+100% Damage to enemies below half Health",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Bows/StalkerBow#Hitman's Opportunity",
+   "kind": "perk",
+   "name": "Dread: Hitman's Opportunity",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "+100% Damage to enemies below half Health"
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +50.",
+    "With Hate and Despair Equipped: Hits increase Base Damage by +10 and Fire Rate by +10%, stacks up to 5x. Resets on missed shot.",
+    "Affects both regular and Incarnon forms.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +50.",
+    "With Hate and Despair Equipped: Hits increase Base Damage by +10 and Fire Rate by +10%, stacks up to 5x. Resets on missed shot.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Bows/StalkerBow#Stalker's Resentment",
+   "kind": "perk",
+   "name": "Dread: Stalker's Resentment",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Hate and Despair Equipped: Hits increase Base Damage by +10 and Fire Rate by +10%, stacks up to 5x.",
+    "With Hate and Despair Equipped: Resets on missed shot."
+   ]
+  },
+  {
+   "after": [
+    "Increase Damage by +60.",
+    "+33% Direct Damage per Status Type affecting the target.",
+    "Damage per Status Type bonus has an unlisted requirement of \"With Energy Max ≥ 200.\"",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Damage by +60.",
+    "+33% Direct Damage per Status Type affecting the target.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep#Carnage Reign",
+   "kind": "perk",
+   "name": "Dual Toxocyst: Carnage Reign",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Increase Damage by +60."
+   ]
+  },
+  {
+   "after": [
+    "Increase Damage by +50.",
+    "On Ability Cast: +5% Multishot. Stacks up to 20x.",
+    "The multishot bonus stacks additively with multishot mods such as Barrel Diffusion.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Damage by +50.",
+    "On Ability Cast: +5% Multishot. Stacks up to 20x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep#Fevered Frenzy",
+   "kind": "perk",
+   "name": "Dual Toxocyst: Fevered Frenzy",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Increase Damage by +50."
+   ]
+  },
+  {
+   "after": [
+    "On Headshot: +70% Toxin for 3s.",
+    "Currently does not work.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Headshot: +70% Toxin for 3s.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep#Neurotoxin",
+   "kind": "perk",
+   "name": "Dual Toxocyst: Neurotoxin",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "On Reload from Empty: +100% Reload Speed.",
+    "Currently does not work.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "On Reload from Empty: +100% Reload Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Infested/Pistols/InfVomitGun/InfVomitGunWep#Ready Retaliation",
+   "kind": "perk",
+   "name": "Dual Toxocyst: Ready Retaliation",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Reload from Empty: +100% Reload Speed."
+   ]
+  },
+  {
+   "after": [
+    "+10% Critical Chance",
+    "+10% Status Chance",
+    "Bonuses are added after mods as a flat value.",
+    "Status Chance bonus is divided by the base multishot of 4, for only +2.5% Status Chance per pellet.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+10% Critical Chance",
+    "+10% Status Chance",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun#Brutal Edge",
+   "kind": "perk",
+   "name": "Felarx: Brutal Edge",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Bonuses are added after mods as a flat value."
+   ]
+  },
+  {
+   "after": [
+    "50% chance to deal +2000% damage on non-critical hits",
+    "Affects both forms.",
+    "Damage bonus is multiplicative to base damage bonuses such as Serration.",
+    "form: both",
+    "tier: 5"
+   ],
+   "before": [
+    "50% chance to deal +2000% damage on non-critical hits",
+    "form: both",
+    "tier: 5"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun#Devastating Attrition",
+   "kind": "perk",
+   "name": "Felarx: Devastating Attrition",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "50% chance to deal +2000% damage on non-critical hits",
+    "Damage bonus is multiplicative to base damage bonuses such as Serration."
+   ]
+  },
+  {
+   "after": [
+    "Reload toggles the weapon between +100% Projectile Speed and +4m Punch Through.",
+    "Toggles for every shell loaded. For example, reloading all 6 shells will toggle 6 times, leaving it on the mode it started on.",
+    "\"Reload when holstered\" effects do toggle Dual-Mode Chamber.",
+    "Reloading via Garuda's Blood Forge or Cyte-09's Resupply does not switch chamber mode.",
+    "Affects Incarnon Form.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "Reload toggles the weapon between +100% Projectile Speed and +4m Punch Through.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun#Dual-Mode Chamber",
+   "kind": "perk",
+   "name": "Felarx: Dual-Mode Chamber",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Reload toggles the weapon between +100% Projectile Speed and +4m Punch Through."
+   ]
+  },
+  {
+   "after": [
+    "+50% Projectile Speed",
+    "Only applies while aiming.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "+50% Projectile Speed",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun#Frictionless Flight",
+   "kind": "perk",
+   "name": "Felarx: Frictionless Flight",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Headshots Build +50% more Incarnon Transmutation charge.",
+    "Reduces the number of headshots required to fully charge Transmutation to 20.",
+    "Each headshotting-bullet generates 3 charge, up from 2.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Headshots Build +50% more Incarnon Transmutation charge.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun#Incarnon Catalyst",
+   "kind": "perk",
+   "name": "Felarx: Incarnon Catalyst",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Headshots Build +50% more Incarnon Transmutation charge."
+   ]
+  },
+  {
+   "after": [
+    "-50% Weapon Recoil",
+    "Only applies while aiming.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "-50% Weapon Recoil",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun#Kinetic Baffle",
+   "kind": "perk",
+   "name": "Felarx: Kinetic Baffle",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Reload increases Fire Rate by +10% per shell. Resets on reload.",
+    "Increasing Magazine size increases the potential bonus, but also the reload time as shells are loaded individually.",
+    "Stacks up to 99x (+990% Fire Rate).",
+    "Affects Incarnon Form.",
+    "Activating Incarnon Form will add one stack to the counter. Deactivating Incarnon Form will reload the normal form's magazine while retaining stacks; this allows stacks to be sustained and built for as long as Incarnon charge can be built without reloading.",
+    "Deactivating Incarnon Form will also add stacks to the counter for each remaining unit of ammo missing from the magazine when Incarnon Form was activated. For example, if Incarnon Form is activated with 4 shells spent from the magazine and 10 stacks, deactivating Incarnon Form results in a total of 14 stacks.",
+    "Holstering will reset stacks.",
+    "\"Reload when holstered\" effects such as Lock and Load will build stacks after resetting.",
+    "Reloading via Garuda's Blood Forge does not reset nor build stacks. Reloading via Cyte-09's Resupply however will build 1 stack.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "Reload increases Fire Rate by +10% per shell. Resets on reload.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun#Mounting Momentum",
+   "kind": "perk",
+   "name": "Felarx: Mounting Momentum",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Reload increases Fire Rate by +10% per shell.",
+    "Resets on reload."
+   ]
+  },
+  {
+   "after": [
+    "+20% Status Chance",
+    "-10% Critical Chance",
+    "Bonuses are added after mods as a flat value.",
+    "Status Chance bonus is divided by the base multishot of 4, for only +5% Status Chance per pellet.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+20% Status Chance",
+    "-10% Critical Chance",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/PumpShotgun/ZarimanPumpShotgun#Racking Wrath",
+   "kind": "perk",
+   "name": "Felarx: Racking Wrath",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Bonuses are added after mods as a flat value."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Magazine Capacity by +25.",
+    "The bonus does not apply to the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Magazine Capacity by +25.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/AutoPistol#Extended Volley",
+   "kind": "perk",
+   "name": "Furis: Extended Volley",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "With Critical Chance below 40%: Increase Base Critical Damage Multiplier by +3x.",
+    "Condition is affected by the critical chance increase effect of Puncture status.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "With Critical Chance below 40%: Increase Base Critical Damage Multiplier by +3x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/AutoPistol#Prelude of Might",
+   "kind": "perk",
+   "name": "Furis: Prelude of Might",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "With Critical Chance below 40%: Increase Base Critical Damage Multiplier by +3x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +6.",
+    "On 50 Energy Spent: Increase Base Damage by +5 for 10s. Stacks up to 4x.",
+    "All stacks are removed after the most recent one expires. Gaining a stack will refresh the duration of all stacks.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +6.",
+    "On 50 Energy Spent: Increase Base Damage by +5 for 10s. Stacks up to 4x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSDroidArray#Infused Shots",
+   "kind": "perk",
+   "name": "Gammacor: Infused Shots",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On 50 Energy Spent: Increase Base Damage by +5 for 10s. Stacks up to 4x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +5.",
+    "On Shield Break: Increase Base Damage by +8 for 8s.",
+    "This is on personal shield break, not breaking enemy shields.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +5.",
+    "On Shield Break: Increase Base Damage by +8 for 8s.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/LongGuns/WraithGorgon/WraithGorgon#Hoplite Virtue",
+   "kind": "perk",
+   "name": "Gorgon Wraith: Hoplite Virtue",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Shield Break: Increase Base Damage by +8 for 8s."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +5.",
+    "With Channeled Ability Active: +3 Punch Through, +40% Accuracy.",
+    "Channeled Abilities must be draining energy to be considered active. Abilities that do not drain energy over time such as Nekros's Desecrate, Hildryn's Haven, or Sevagoth's Gloom (with no enemies nearby) do not count.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +5.",
+    "With Channeled Ability Active: +3 Punch Through, +40% Accuracy.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/LongGuns/WraithGorgon/WraithGorgon#Hunter's Mantra",
+   "kind": "perk",
+   "name": "Gorgon Wraith: Hunter's Mantra",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Channeled Ability Active: +3 Punch Through, +40% Accuracy."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +10.",
+    "On Shield Break: Increase Base Damage by +13 for 8s.",
+    "This is on personal shield break, not breaking enemy shields.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +10.",
+    "On Shield Break: Increase Base Damage by +13 for 8s.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/HeavyRifle#Hoplite Virtue",
+   "kind": "perk",
+   "name": "Gorgon: Hoplite Virtue",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Shield Break: Increase Base Damage by +13 for 8s."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +10.",
+    "With Channeled Ability Active: +3 Punch Through, +40% Accuracy.",
+    "Channeled Abilities must be draining energy to be considered active. Abilities that do not drain energy over time such as Nekros's Desecrate, Hildryn's Haven, or Sevagoth's Gloom (with no enemies nearby) do not count.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +10.",
+    "With Channeled Ability Active: +3 Punch Through, +40% Accuracy.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/HeavyRifle#Hunter's Mantra",
+   "kind": "perk",
+   "name": "Gorgon: Hunter's Mantra",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Channeled Ability Active: +3 Punch Through, +40% Accuracy."
+   ]
+  },
+  {
+   "after": [
+    "On Fire: +20% Fire Rate for 0.5s. Stacks up to 5x.",
+    "Bonus stacks additively with fire rate mods such as Gunslinger.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Fire: +20% Fire Rate for 0.5s. Stacks up to 5x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai#Accelerating Volley",
+   "kind": "perk",
+   "name": "Kunai: Accelerating Volley",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Fire: +20% Fire Rate for 0.5s. Stacks up to 5x."
+   ]
+  },
+  {
+   "after": [
+    "On equip from Primary:",
+    "Increase Base Critical Chance by +40% for 4s.",
+    "Increase Base Critical Damage Multiplier by +1.4x for 4s.",
+    "Bug: These are displayed as permanent bonuses in the Arsenal but only actually apply while the 4 second Deathtrap Trigger buff is active.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On equip from Primary:",
+    "Increase Base Critical Chance by +40% for 4s.",
+    "Increase Base Critical Damage Multiplier by +1.4x for 4s.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai#Deathtrap Trigger",
+   "kind": "perk",
+   "name": "Kunai: Deathtrap Trigger",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "+50% Reload Speed.",
+    "Bonus stacks additively with reload speed mods such as Quickdraw.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+50% Reload Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai#Rapid Reinforcement",
+   "kind": "perk",
+   "name": "Kunai: Rapid Reinforcement",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Critical Chance by +12%.",
+    "Increase Base Status Chance by +12%.",
+    "Base Status Chance increase is divided among the 2 projectiles in Incarnon mode, resulting in +6% Status Chance per projectile.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Critical Chance by +12%.",
+    "Increase Base Status Chance by +12%.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai#Survivor's Edge",
+   "kind": "perk",
+   "name": "Kunai: Survivor's Edge",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Damage by +70.",
+    "Increase Damage by +200% if enemy has less than half health.",
+    "Damage bonus if enemy has less than half health is additive with Hornet Strike in basic Kunai form, and multiplicative in Incarnon form. It is also additive with Galvanized Shot in hover=GunCO is multiplicative in incarnon form. The game logic that checks the proc status of a target is likely the same logic that checks its HP, providing the same bonus..",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Damage by +70.",
+    "Increase Damage by +200% if enemy has less than half health.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai#Swift Conclusion",
+   "kind": "perk",
+   "name": "Kunai: Swift Conclusion",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Damage by +70.",
+    "Increase Damage by +200% if enemy has less than half health.",
+    "Damage bonus if enemy has less than half health is additive with Hornet Strike in basic Kunai form, and multiplicative in Incarnon form. It is also additive with Galvanized Shot in hover=GunCO is multiplicative in incarnon form. The game logic that checks the proc status of a target is likely the same logic that checks its HP, providing the same bonus.."
+   ]
+  },
+  {
+   "after": [
+    "30% Magazine Reloaded per second while Holstered",
+    "Only affects untransformed Laetum.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "30% Magazine Reloaded per second while Holstered",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Awakened Readiness",
+   "kind": "perk",
+   "name": "Laetum: Awakened Readiness",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "30% Magazine Reloaded per second while Holstered"
+   ]
+  },
+  {
+   "after": [
+    "+50% Headshot damage",
+    "Affects both modes.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+50% Headshot damage",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Caput Mortuum",
+   "kind": "perk",
+   "name": "Laetum: Caput Mortuum",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "50% chance to deal +2000% damage on non-critical hits",
+    "Affects both forms.",
+    "Damage bonus is multiplicative to base damage bonuses such as Hornet Strike.",
+    "form: both",
+    "tier: 5"
+   ],
+   "before": [
+    "50% chance to deal +2000% damage on non-critical hits",
+    "form: both",
+    "tier: 5"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Devouring Attrition",
+   "kind": "perk",
+   "name": "Laetum: Devouring Attrition",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "+20% Status Chance",
+    "-10% Critical Chance",
+    "Bonuses are added after mods as a flat value.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+20% Status Chance",
+    "-10% Critical Chance",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Elemental Excess",
+   "kind": "perk",
+   "name": "Laetum: Elemental Excess",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Bonuses are added after mods as a flat value."
+   ]
+  },
+  {
+   "after": [
+    "Gain 60% Ammo Efficiency while Aim Gliding or Sliding.",
+    "Does not affect Incarnon Form",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Gain 60% Ammo Efficiency while Aim Gliding or Sliding.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Feather of Justice",
+   "kind": "perk",
+   "name": "Laetum: Feather of Justice",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Gain 60% Ammo Efficiency while Aim Gliding or Sliding."
+   ]
+  },
+  {
+   "after": [
+    "Headshots Build +50% more Incarnon Transmutation charge.",
+    "Reduces the number of weakpoint hits required to fully charge Transmutation to 8.",
+    "Each weakpoint hit generates 27 charge, up from 18.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Headshots Build +50% more Incarnon Transmutation charge.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Incarnon Efficiency",
+   "kind": "perk",
+   "name": "Laetum: Incarnon Efficiency",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Headshots Build +50% more Incarnon Transmutation charge."
+   ]
+  },
+  {
+   "after": [
+    "On Headshot: +30% Reload Speed for 12 seconds. Stacks up to 3 times.",
+    "Affects untransformed Laetum and Incarnon Form mode switching.",
+    "Stacks decay incrementally; when the buff times out, one stack is lost and the buff duration resets.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "On Headshot: +30% Reload Speed for 12 seconds. Stacks up to 3 times.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Lethal Rearmament",
+   "kind": "perk",
+   "name": "Laetum: Lethal Rearmament",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "+30% Reload Speed for 12 seconds.",
+    "Stacks up to 3 times."
+   ]
+  },
+  {
+   "after": [
+    "On Hit that is neither Critical nor applies a Status Effect: +400% damage for 10 seconds. Stacks up to 3 times.",
+    "Damage bonus is additive to base damage bonuses such as Hornet Strike.",
+    "When the buff times out, one stack is lost and the buff duration resets.",
+    "form: both",
+    "tier: 5"
+   ],
+   "before": [
+    "On Hit that is neither Critical nor applies a Status Effect: +400% damage for 10 seconds. Stacks up to 3 times.",
+    "form: both",
+    "tier: 5"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Overwhelming Attrition",
+   "kind": "perk",
+   "name": "Laetum: Overwhelming Attrition",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "On Headshot: +40% Ammo Efficiency for 6 seconds.",
+    "Does not affect Incarnon Form",
+    "form: normal",
+    "tier: 5"
+   ],
+   "before": [
+    "On Headshot: +40% Ammo Efficiency for 6 seconds.",
+    "form: normal",
+    "tier: 5"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Reaper's Plenty",
+   "kind": "perk",
+   "name": "Laetum: Reaper's Plenty",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "+40% Ammo Efficiency for 6 seconds."
+   ]
+  },
+  {
+   "after": [
+    "On Kill: 50% chance for Instant Reload.",
+    "Kills from status effects can also trigger the effect.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "On Kill: 50% chance for Instant Reload.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/LatoPrime#Exact Penance",
+   "kind": "perk",
+   "name": "Lato Prime: Exact Penance",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "50% chance for Instant Reload."
+   ]
+  },
+  {
+   "after": [
+    "On Headshot: 20% chance for +50% Ammo Efficiency for 6s.",
+    "The bonus can be refreshed on subsequent headshots.",
+    "The bonus does not affect the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On Headshot: 20% chance for +50% Ammo Efficiency for 6s.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/LatoPrime#Marksman's Gain",
+   "kind": "perk",
+   "name": "Lato Prime: Marksman's Gain",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "20% chance for +50% Ammo Efficiency for 6s."
+   ]
+  },
+  {
+   "after": [
+    "On Kill: 50% chance for Instant Reload.",
+    "Kills from status effects can also trigger the effect.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "On Kill: 50% chance for Instant Reload.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/LatoVandal#Exact Penance",
+   "kind": "perk",
+   "name": "Lato Vandal: Exact Penance",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "50% chance for Instant Reload."
+   ]
+  },
+  {
+   "after": [
+    "On Headshot: 20% chance for +50% Ammo Efficiency for 6s.",
+    "The bonus can be refreshed on subsequent headshots.",
+    "The bonus does not affect the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On Headshot: 20% chance for +50% Ammo Efficiency for 6s.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/LatoVandal#Marksman's Gain",
+   "kind": "perk",
+   "name": "Lato Vandal: Marksman's Gain",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "20% chance for +50% Ammo Efficiency for 6s."
+   ]
+  },
+  {
+   "after": [
+    "On Kill: 50% chance for Instant Reload.",
+    "Kills from status effects can also trigger the effect.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "On Kill: 50% chance for Instant Reload.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/Pistol#Exact Penance",
+   "kind": "perk",
+   "name": "Lato: Exact Penance",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "50% chance for Instant Reload."
+   ]
+  },
+  {
+   "after": [
+    "On Headshot: 20% chance for +50% Ammo Efficiency for 6s.",
+    "The bonus can be refreshed on subsequent headshots.",
+    "The bonus does not affect the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On Headshot: 20% chance for +50% Ammo Efficiency for 6s.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/Pistol#Marksman's Gain",
+   "kind": "perk",
+   "name": "Lato: Marksman's Gain",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "20% chance for +50% Ammo Efficiency for 6s."
+   ]
+  },
+  {
+   "after": [
+    "+100% Headshot Damage.",
+    "The bonus stacks additively with other headshot multiplier bonuses such as the passive from Primary Deadhead.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+100% Headshot Damage.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/LatronPrime#Deadhead",
+   "kind": "perk",
+   "name": "Latron Prime: Deadhead",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Remove 20% of enemy Armor per Puncture Status.",
+    "Has no effect on enemies immune to armor removal, such as Exploiter Orb or Archons.",
+    "Can fully strip Acolytes' armor, though they cannot have more than four Puncture status stacks at once.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Remove 20% of enemy Armor per Puncture Status.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/LatronPrime#Flensing Spikes",
+   "kind": "perk",
+   "name": "Latron Prime: Flensing Spikes",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Remove 20% of enemy Armor per Puncture Status."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +6.",
+    "On Puncture Status Effect: +25% Multishot for 8s. Stacks up to 4x.",
+    "The multishot bonus stacks additively with mods such as Split Chamber.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +6.",
+    "On Puncture Status Effect: +25% Multishot for 8s. Stacks up to 4x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/LatronPrime#Riddled Target",
+   "kind": "perk",
+   "name": "Latron Prime: Riddled Target",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +6.",
+    "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target.",
+    "Despite the description, the effect only requires 1.1 or higher sprint speed.",
+    "Equipping Amalgam Serration will allow any Warframe to reach the threshold without needing to mod for sprint speed on the Warframe itself.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +6.",
+    "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/LatronPrime#Swift Punishment",
+   "kind": "perk",
+   "name": "Latron Prime: Swift Punishment",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target."
+   ]
+  },
+  {
+   "after": [
+    "+100% Headshot Damage.",
+    "The bonus stacks additively with other headshot multiplier bonuses such as the passive from Primary Deadhead.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+100% Headshot Damage.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron#Deadhead",
+   "kind": "perk",
+   "name": "Latron Wraith: Deadhead",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Remove 20% of enemy Armor per Puncture Status.",
+    "Has no effect on enemies immune to armor removal, such as Exploiter Orb or Archons.",
+    "Can fully strip Acolytes' armor, though they cannot have more than four Puncture status stacks at once.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Remove 20% of enemy Armor per Puncture Status.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron#Flensing Spikes",
+   "kind": "perk",
+   "name": "Latron Wraith: Flensing Spikes",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Remove 20% of enemy Armor per Puncture Status."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +12.",
+    "On Puncture Status Effect: +25% Multishot for 8s. Stacks up to 4x.",
+    "The multishot bonus stacks additively with mods such as Split Chamber.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +12.",
+    "On Puncture Status Effect: +25% Multishot for 8s. Stacks up to 4x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron#Riddled Target",
+   "kind": "perk",
+   "name": "Latron Wraith: Riddled Target",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +12.",
+    "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target.",
+    "Despite the description, the effect only requires 1.1 or higher sprint speed.",
+    "Equipping Amalgam Serration will allow any Warframe to reach the threshold without needing to mod for sprint speed on the Warframe itself.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +12.",
+    "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/WraithLatron/WraithLatron#Swift Punishment",
+   "kind": "perk",
+   "name": "Latron Wraith: Swift Punishment",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target."
+   ]
+  },
+  {
+   "after": [
+    "+100% Headshot Damage.",
+    "The bonus stacks additively with other headshot multiplier bonuses such as the passive from Primary Deadhead.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+100% Headshot Damage.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle#Deadhead",
+   "kind": "perk",
+   "name": "Latron: Deadhead",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Remove 20% of enemy Armor per Puncture Status.",
+    "Has no effect on enemies immune to armor removal, such as Exploiter Orb or Archons.",
+    "Can fully strip Acolytes' armor, though they cannot have more than four Puncture status stacks at once.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Remove 20% of enemy Armor per Puncture Status.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle#Flensing Spikes",
+   "kind": "perk",
+   "name": "Latron: Flensing Spikes",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Remove 20% of enemy Armor per Puncture Status."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +48.",
+    "On Puncture Status Effect: +25% Multishot for 8s. Stacks up to 4x.",
+    "The multishot bonus stacks additively with mods such as Split Chamber.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +48.",
+    "On Puncture Status Effect: +25% Multishot for 8s. Stacks up to 4x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle#Riddled Target",
+   "kind": "perk",
+   "name": "Latron: Riddled Target",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +48.",
+    "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target.",
+    "Despite the description, the effect only requires 1.1 or higher sprint speed.",
+    "Equipping Amalgam Serration will allow any Warframe to reach the threshold without needing to mod for sprint speed on the Warframe itself.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +48.",
+    "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle#Swift Punishment",
+   "kind": "perk",
+   "name": "Latron: Swift Punishment",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Sprint Speed 1.2 or Higher: +30% Direct Damage per Status Type affecting the target."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +28.",
+    "With Channeled Ability active: Increase Base Damage by +22. +50% Ammo Efficiency",
+    "Channeled Abilities must be draining energy to be considered active. Abilities that do not drain energy over time such as Nekros's Desecrate, Hildryn's Haven, or Sevagoth's Gloom (with no enemies nearby) do not count.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +28.",
+    "With Channeled Ability active: Increase Base Damage by +22. +50% Ammo Efficiency",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/StartingRifle#Daring Reverie",
+   "kind": "perk",
+   "name": "MK1-Braton: Daring Reverie",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Channeled Ability active: Increase Base Damage by +22.",
+    "With Channeled Ability active: +50% Ammo Efficiency"
+   ]
+  },
+  {
+   "after": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored.",
+    "The bonus does not apply to the Incarnon form.",
+    "A second target does not need to be hit, the bullet just has to have some amount of punch-through.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/StartingRifle#Gunsmoke Pick Up",
+   "kind": "perk",
+   "name": "MK1-Braton: Gunsmoke Pick Up",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Punch Through Hit: 20% chance for 10% Ammo restored."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Ammo Capacity to 600.",
+    "The bonus does not apply to the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Ammo Capacity to 600.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/StartingRifle#Mercenary Chamber",
+   "kind": "perk",
+   "name": "MK1-Braton: Mercenary Chamber",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Ammo Capacity to 600."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +20.",
+    "Multishot consumes ammo directly from Capacity and does +48% Damage. +20% Multishot.",
+    "Affects both modes. In the case of Incarnon Form, it pulls directly from its magazine.",
+    "Damage bonus is a unique modifier that is multiplicative to other damage buffs.",
+    "Damage bonus only applies to shots generated by multishot.",
+    "The multishot bonus stacks additively with multishot mods such as Split Chamber.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +20.",
+    "Multishot consumes ammo directly from Capacity and does +48% Damage. +20% Multishot.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/StartingRifle#Munitions Grit",
+   "kind": "perk",
+   "name": "MK1-Braton: Munitions Grit",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Multishot consumes ammo directly from Capacity and does +48% Damage.",
+    "Damage bonus is a unique modifier that is multiplicative to other damage buffs."
+   ]
+  },
+  {
+   "after": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.3x.",
+    "The critical damage increase is added as base critical damage and will be affected by mods.",
+    "Condition is affected by the critical chance increase effect of Puncture status.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.3x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/StartingRifle#Prelude of Might",
+   "kind": "perk",
+   "name": "MK1-Braton: Prelude of Might",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "With Critical Chance Below 50%: Increase Base Critical Damage Multiplier by +3.3x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Magazine Capacity by +25.",
+    "The bonus does not apply to the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Magazine Capacity by +25.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Furis#Extended Volley",
+   "kind": "perk",
+   "name": "MK1-Furis: Extended Volley",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "With Critical Chance below 40%: Increase Base Critical Damage Multiplier by +3x.",
+    "Condition is affected by the critical chance increase effect of Puncture status.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "With Critical Chance below 40%: Increase Base Critical Damage Multiplier by +3x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Furis#Prelude of Might",
+   "kind": "perk",
+   "name": "MK1-Furis: Prelude of Might",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "With Critical Chance below 40%: Increase Base Critical Damage Multiplier by +3x."
+   ]
+  },
+  {
+   "after": [
+    "On Fire: +20% Fire Rate for 0.5s. Stacks up to 5x.",
+    "Bonus stacks additively with fire rate mods such as Gunslinger.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Fire: +20% Fire Rate for 0.5s. Stacks up to 5x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Kunai#Accelerating Volley",
+   "kind": "perk",
+   "name": "MK1-Kunai: Accelerating Volley",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Fire: +20% Fire Rate for 0.5s. Stacks up to 5x."
+   ]
+  },
+  {
+   "after": [
+    "On equip from Primary:",
+    "Increase Base Critical Chance by +42% for 4s.",
+    "Increase Base Critical Damage Multiplier by +1x for 4s.",
+    "Bug: These are displayed as permanent bonuses in the Arsenal but only actually apply while the 4 second Deathtrap Trigger buff is active.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On equip from Primary:",
+    "Increase Base Critical Chance by +42% for 4s.",
+    "Increase Base Critical Damage Multiplier by +1x for 4s.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Kunai#Deathtrap Trigger",
+   "kind": "perk",
+   "name": "MK1-Kunai: Deathtrap Trigger",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "+50% Reload Speed.",
+    "Bonus stacks additively with reload speed mods such as Quickdraw.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+50% Reload Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Kunai#Rapid Reinforcement",
+   "kind": "perk",
+   "name": "MK1-Kunai: Rapid Reinforcement",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Critical Chance by +12%.",
+    "Increase Base Status Chance by +12%.",
+    "Base Status Chance increase is divided among the 2 projectiles in Incarnon mode, resulting in +6% Status Chance per projectile.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Critical Chance by +12%.",
+    "Increase Base Status Chance by +12%.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Kunai#Survivor's Edge",
+   "kind": "perk",
+   "name": "MK1-Kunai: Survivor's Edge",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Damage by +80.",
+    "Increase Damage by +200% if enemy has less than half health.",
+    "Damage bonus if enemy has less than half health is additive with Hornet Strike in basic Kunai form, and multiplicative in Incarnon form. It is also additive with Galvanized Shot in hover=GunCO is multiplicative in incarnon form. The game logic that checks the proc status of a target is likely the same logic that checks its HP, providing the same bonus..",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Damage by +80.",
+    "Increase Damage by +200% if enemy has less than half health.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Kunai#Swift Conclusion",
+   "kind": "perk",
+   "name": "MK1-Kunai: Swift Conclusion",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Damage by +80.",
+    "Increase Damage by +200% if enemy has less than half health.",
+    "Damage bonus if enemy has less than half health is additive with Hornet Strike in basic Kunai form, and multiplicative in Incarnon form. It is also additive with Galvanized Shot in hover=GunCO is multiplicative in incarnon form. The game logic that checks the proc status of a target is likely the same logic that checks its HP, providing the same bonus.."
+   ]
+  },
+  {
+   "after": [
+    "On Punch Through Hit: +40% Fire Rate for 6s.",
+    "The fire rate bonus stacks additively with fire rate mods such as Speed Trigger but does not apply twice.",
+    "The bonus applies when hitting multiple enemies with either the normal or the Incarnon form as well as when hitting enemies through obstacles by adding punch through with mods such as Metal Auger.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "On Punch Through Hit: +40% Fire Rate for 6s.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Paris#Ardent Trigger",
+   "kind": "perk",
+   "name": "MK1-Paris: Ardent Trigger",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Punch Through Hit: +40% Fire Rate for 6s."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +50.",
+    "With Sprint Speed 1.2 or Higher: +80% Fire Rate.",
+    "The fire rate bonus stacks additively with fire rate mods such as Speed Trigger but does not apply twice.",
+    "Despite the description, the effect only requires 1.1 or higher sprint speed.",
+    "Equipping Amalgam Serration will allow any Warframe to reach the threshold without needing to mod for sprint speed on the Warframe itself.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +50.",
+    "With Sprint Speed 1.2 or Higher: +80% Fire Rate.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Paris#Deadly Pace",
+   "kind": "perk",
+   "name": "MK1-Paris: Deadly Pace",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Sprint Speed 1.2 or Higher: +80% Fire Rate."
+   ]
+  },
+  {
+   "after": [
+    "On Hit: Increase Base Damage by +15 for 3s. Stacks up to 4x.",
+    "When the buff times out, one stack is lost and the buff duration resets.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Hit: Increase Base Damage by +15 for 3s. Stacks up to 4x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Paris#Striking Succession",
+   "kind": "perk",
+   "name": "MK1-Paris: Striking Succession",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Critical Chance by +40% on undamaged enemies.",
+    "Increase Base Critical Damage Multiplier by +2x on undamaged enemies.",
+    "Enemies are undamaged as long as their health and shield have not been damaged.",
+    "Damaging Overguard is not taken into account.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Critical Chance by +40% on undamaged enemies.",
+    "Increase Base Critical Damage Multiplier by +2x on undamaged enemies.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Paris#Vicious Promise",
+   "kind": "perk",
+   "name": "MK1-Paris: Vicious Promise",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Critical Chance by +40% on undamaged enemies.",
+    "Increase Base Critical Damage Multiplier by +2x on undamaged enemies."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +68.",
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x.",
+    "Damage increase is per pellet.",
+    "The in-game description of +5 Multishot is incorrect.",
+    "The Multishot bonus adds 0.25 pellets to the base Multishot of both forms when fully stacked.",
+    "The Multishot bonus is lost upon reloading.",
+    "This can be bypassed by using Blood Forge, but not effects that reload the weapon while holstered such as Lock and Load.",
+    "Entering Incarnon Form counts as reloading but exiting does not.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +68.",
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Strun#Blazing Barrel",
+   "kind": "perk",
+   "name": "MK1-Strun: Blazing Barrel",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x."
+   ]
+  },
+  {
+   "after": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool.",
+    "The status effect may originate from any source.",
+    "The bonus can only apply once per enemy hit.",
+    "The bonus does not affect the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Strun#Galvanic Reload",
+   "kind": "perk",
+   "name": "MK1-Strun: Galvanic Reload",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool."
+   ]
+  },
+  {
+   "after": [
+    "+60% Reload Speed.",
+    "The bonus stacks additively with mods such as Tactical Pump.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+60% Reload Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Strun#Rapid Reinforcement",
+   "kind": "perk",
+   "name": "MK1-Strun: Rapid Reinforcement",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +68.",
+    "With Channeled Ability Active: +4 Punch Through",
+    "Damage increase is per pellet.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +68.",
+    "With Channeled Ability Active: +4 Punch Through",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/MK1Series/MK1Strun#Tenno Targeting",
+   "kind": "perk",
+   "name": "MK1-Strun: Tenno Targeting",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Ammo Capacity to 160",
+    "Does not affect the Incarnon form",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Ammo Capacity to 160",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun#Mercenary Chamber",
+   "kind": "perk",
+   "name": "Miter: Mercenary Chamber",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Ammo Capacity to 160"
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +57.",
+    "Multishot consumes ammo directly from Capacity and increases Damage by +20.",
+    "Affects both modes. In the case of Incarnon Form, it pools directly from its magazine.",
+    "Damage bonus from multishot consuming ammo only applies to projectiles generated by multishot.",
+    "Damage bonus is a flat +20 to both charged and uncharged shots, not affected by base damage mods. The bonus is affected by physical mods, elemental mods, critical hits, etc.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +57.",
+    "Multishot consumes ammo directly from Capacity and increases Damage by +20.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun#Plentiful Mayhem",
+   "kind": "perk",
+   "name": "Miter: Plentiful Mayhem",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Multishot consumes ammo directly from Capacity and increases Damage by +20."
+   ]
+  },
+  {
+   "after": [
+    "Hold charged shot for 1s to increase area of effect.",
+    "Does not affect the Incarnon form.",
+    "Each bounce will cause an explosion dealing 1400 Blast in a 5 meter AoE, with critical and status stats equal to the normal charged shot.",
+    "AoE has no damage falloff and does not require line of sight, damaging enemies through obstacles.",
+    "Can benefit from (Primed) Firestorm.",
+    "Inflicts self-stagger.",
+    "The 1s delay is not affected by mods.",
+    "Projectiles continue to ricochet as normal after the explosion.",
+    "If the weapon is given punch-through, the explosion only occurs on the first impact.",
+    "form: normal",
+    "tier: 4"
+   ],
+   "before": [
+    "Hold charged shot for 1s to increase area of effect.",
+    "form: normal",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/LongGuns/GrineerSawbladeGun/SawBladeGun#Sawblade Storm",
+   "kind": "perk",
+   "name": "Miter: Sawblade Storm",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Hold charged shot for 1s to increase area of effect."
+   ]
+  },
+  {
+   "after": [
+    "Hitting enemies in Incarnon Form increases the Critical Chance and Critical Damage of the fully charged blast by +5%. Stacks up to 50 times.",
+    "Bonuses are additive to mods.",
+    "Also triggers on DoT Status Effects applied by the charge-up beam, including damage caused to enemies caught in Gas clouds.",
+    "form: both",
+    "tier: 5"
+   ],
+   "before": [
+    "Hitting enemies in Incarnon Form increases the Critical Chance and Critical Damage of the fully charged blast by +5%. Stacks up to 50 times.",
+    "form: both",
+    "tier: 5"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon#Devastation Cascade",
+   "kind": "perk",
+   "name": "Onos: Devastation Cascade",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Hitting enemies in Incarnon Form increases the Critical Chance and Critical Damage of the fully charged blast by +5%.",
+    "Stacks up to 50 times.",
+    "Bonuses are additive to mods."
+   ]
+  },
+  {
+   "after": [
+    "+20% Status Chance",
+    "-10% Critical Chance",
+    "Bonuses are added after mods as a flat value.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+20% Status Chance",
+    "-10% Critical Chance",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon#Elemental Excess",
+   "kind": "perk",
+   "name": "Onos: Elemental Excess",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Bonuses are added after mods as a flat value."
+   ]
+  },
+  {
+   "after": [
+    "+10 Base Magazine Capacity",
+    "*Only affects untransformed Onos.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "+10 Base Magazine Capacity",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon#Extended Volley",
+   "kind": "perk",
+   "name": "Onos: Extended Volley",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "+10 Base Magazine Capacity"
+   ]
+  },
+  {
+   "after": [
+    "On Kill: 10% chance to replenish 10 Ammo",
+    "Only affects untransformed Onos.",
+    "Ammo is replenished to the reserve pool, not to the magazine.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On Kill: 10% chance to replenish 10 Ammo",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon#Hunter's Rearmament",
+   "kind": "perk",
+   "name": "Onos: Hunter's Rearmament",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "10% chance to replenish 10 Ammo"
+   ]
+  },
+  {
+   "after": [
+    "On Punch Through Hit: +200% Damage for 10s.",
+    "Damage bonus is additive to other base damage mods like Hornet Strike.",
+    "form: both",
+    "tier: 5"
+   ],
+   "before": [
+    "On Punch Through Hit: +200% Damage for 10s.",
+    "form: both",
+    "tier: 5"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon#Impaler's Ferocity",
+   "kind": "perk",
+   "name": "Onos: Impaler's Ferocity",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Punch Through Hit: +200% Damage for 10s.",
+    "Damage bonus is additive to other base damage mods like Hornet Strike."
+   ]
+  },
+  {
+   "after": [
+    "Headshots Build +50% more Incarnon Transmutation charge.",
+    "Reduces the number of weakpoint hits required to fully charge Transmutation to 8.",
+    "Each weakpoint hit generates 75 charge, up from 50.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Headshots Build +50% more Incarnon Transmutation charge.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon#Incarnon Efficiency",
+   "kind": "perk",
+   "name": "Onos: Incarnon Efficiency",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Headshots Build +50% more Incarnon Transmutation charge."
+   ]
+  },
+  {
+   "after": [
+    "On Kill: +2.5 Punch Through for 20s",
+    "Affects both modes.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Kill: +2.5 Punch Through for 20s",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon#Lethal Lance",
+   "kind": "perk",
+   "name": "Onos: Lethal Lance",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "+30% Reload Speed",
+    "Affects untransformed Onos and transformation into Incarnon mode.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+30% Reload Speed",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon#Rapid Reinforcement",
+   "kind": "perk",
+   "name": "Onos: Rapid Reinforcement",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "On Punch Through Hit: +40% Fire Rate for 6s.",
+    "The fire rate bonus stacks additively with fire rate mods such as Speed Trigger but does not apply twice.",
+    "The bonus applies when hitting multiple enemies with either the normal or the Incarnon form as well as when hitting enemies through obstacles by adding punch through with mods such as Metal Auger.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "On Punch Through Hit: +40% Fire Rate for 6s.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow#Ardent Trigger",
+   "kind": "perk",
+   "name": "Paris Prime: Ardent Trigger",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Punch Through Hit: +40% Fire Rate for 6s."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +20.",
+    "With Sprint Speed 1.2 or Higher: +80% Fire Rate.",
+    "The fire rate bonus stacks additively with fire rate mods such as Speed Trigger but does not apply twice.",
+    "Despite the description, the effect only requires 1.1 or higher sprint speed.",
+    "Equipping Amalgam Serration will allow any Warframe to reach the threshold without needing to mod for sprint speed on the Warframe itself.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +20.",
+    "With Sprint Speed 1.2 or Higher: +80% Fire Rate.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow#Deadly Pace",
+   "kind": "perk",
+   "name": "Paris Prime: Deadly Pace",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Sprint Speed 1.2 or Higher: +80% Fire Rate."
+   ]
+  },
+  {
+   "after": [
+    "On Hit: Increase Base Damage by +15 for 3s. Stacks up to 4x.",
+    "When the buff times out, one stack is lost and the buff duration resets.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Hit: Increase Base Damage by +15 for 3s. Stacks up to 4x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow#Striking Succession",
+   "kind": "perk",
+   "name": "Paris Prime: Striking Succession",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Critical Chance by +40% on undamaged enemies.",
+    "Increase Base Critical Damage Multiplier by +2x on undamaged enemies.",
+    "Enemies are undamaged as long as their health and shield have not been damaged.",
+    "Damaging Overguard is not taken into account.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Critical Chance by +40% on undamaged enemies.",
+    "Increase Base Critical Damage Multiplier by +2x on undamaged enemies.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow#Vicious Promise",
+   "kind": "perk",
+   "name": "Paris Prime: Vicious Promise",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Critical Chance by +40% on undamaged enemies.",
+    "Increase Base Critical Damage Multiplier by +2x on undamaged enemies."
+   ]
+  },
+  {
+   "after": [
+    "On Punch Through Hit: +40% Fire Rate for 6s.",
+    "The fire rate bonus stacks additively with fire rate mods such as Speed Trigger but does not apply twice.",
+    "The bonus applies when hitting multiple enemies with either the normal or the Incarnon form as well as when hitting enemies through obstacles by adding punch through with mods such as Metal Auger.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "On Punch Through Hit: +40% Fire Rate for 6s.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Bows/HuntingBow#Ardent Trigger",
+   "kind": "perk",
+   "name": "Paris: Ardent Trigger",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Punch Through Hit: +40% Fire Rate for 6s."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +40.",
+    "With Sprint Speed 1.2 or Higher: +80% Fire Rate.",
+    "The fire rate bonus stacks additively with fire rate mods such as Speed Trigger but does not apply twice.",
+    "Despite the description, the effect only requires 1.1 or higher sprint speed.",
+    "Equipping Amalgam Serration will allow any Warframe to reach the threshold without needing to mod for sprint speed on the Warframe itself.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +40.",
+    "With Sprint Speed 1.2 or Higher: +80% Fire Rate.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Bows/HuntingBow#Deadly Pace",
+   "kind": "perk",
+   "name": "Paris: Deadly Pace",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Sprint Speed 1.2 or Higher: +80% Fire Rate."
+   ]
+  },
+  {
+   "after": [
+    "On Hit: Increase Base Damage by +15 for 3s. Stacks up to 4x.",
+    "When the buff times out, one stack is lost and the buff duration resets.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Hit: Increase Base Damage by +15 for 3s. Stacks up to 4x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Bows/HuntingBow#Striking Succession",
+   "kind": "perk",
+   "name": "Paris: Striking Succession",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Critical Chance by +40% on undamaged enemies.",
+    "Increase Base Critical Damage Multiplier by +2x on undamaged enemies.",
+    "Enemies are undamaged as long as their health and shield have not been damaged.",
+    "Damaging Overguard is not taken into account.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Critical Chance by +40% on undamaged enemies.",
+    "Increase Base Critical Damage Multiplier by +2x on undamaged enemies.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Bows/HuntingBow#Vicious Promise",
+   "kind": "perk",
+   "name": "Paris: Vicious Promise",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Critical Chance by +40% on undamaged enemies.",
+    "Increase Base Critical Damage Multiplier by +2x on undamaged enemies."
+   ]
+  },
+  {
+   "after": [
+    "50% chance to deal +2000% damage on non-critical hits",
+    "Affects both forms.",
+    "Damage bonus is multiplicative to base damage bonuses such as Serration.",
+    "form: both",
+    "tier: 5"
+   ],
+   "before": [
+    "50% chance to deal +2000% damage on non-critical hits",
+    "form: both",
+    "tier: 5"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle#Devouring Attrition",
+   "kind": "perk",
+   "name": "Phenmor: Devouring Attrition",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "50% chance to deal +2000% damage on non-critical hits",
+    "Damage bonus is multiplicative to base damage bonuses such as Serration."
+   ]
+  },
+  {
+   "after": [
+    "+20% Status Chance",
+    "-10% Critical Chance",
+    "Bonuses are added after mods as a flat value.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+20% Status Chance",
+    "-10% Critical Chance",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle#Elemental Excess",
+   "kind": "perk",
+   "name": "Phenmor: Elemental Excess",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Bonuses are added after mods as a flat value."
+   ]
+  },
+  {
+   "after": [
+    "On Headshot kill: 20% chance to instant Reload.",
+    "Does not affect Incarnon Form",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On Headshot kill: 20% chance to instant Reload.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle#Executioner's Fortune",
+   "kind": "perk",
+   "name": "Phenmor: Executioner's Fortune",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "20% chance to instant Reload."
+   ]
+  },
+  {
+   "after": [
+    "Headshots Build +50% more Incarnon Transmutation charge.",
+    "Reduces the number of weakpoint hits required to fully charge Transmutation to 8.",
+    "Each weakpoint hit generates 51 charge, up from 34.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Headshots Build +50% more Incarnon Transmutation charge.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle#Incarnon Efficiency",
+   "kind": "perk",
+   "name": "Phenmor: Incarnon Efficiency",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Headshots Build +50% more Incarnon Transmutation charge."
+   ]
+  },
+  {
+   "after": [
+    "On 2 headshots within 2 seconds: +50% Headshot damage for 8 seconds.",
+    "Headshot damage bonus stacks additively with Primary Deadhead's headshot damage bonus.",
+    "form: both",
+    "tier: 5"
+   ],
+   "before": [
+    "On 2 headshots within 2 seconds: +50% Headshot damage for 8 seconds.",
+    "form: both",
+    "tier: 5"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle#Lingering Judgement",
+   "kind": "perk",
+   "name": "Phenmor: Lingering Judgement",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "On Reload from Empty: +100% Reload Speed for 6 seconds",
+    "Affects untransformed Phenmor. Can affect transition into Incarnon form with a well-timed manual reload. Does not affect transition from Incarnon back to base form.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "On Reload from Empty: +100% Reload Speed for 6 seconds",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle#Ready Retaliation",
+   "kind": "perk",
+   "name": "Phenmor: Ready Retaliation",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Reload from Empty: +100% Reload Speed for 6 seconds"
+   ]
+  },
+  {
+   "after": [
+    "+50% Magazine Capacity",
+    "Does not affect Incarnon Form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "+50% Magazine Capacity",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle#Retribution's Vessel",
+   "kind": "perk",
+   "name": "Phenmor: Retribution's Vessel",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Enemies suffering from fewer than 3 Status Effects will receive: +100% Critical Damage",
+    "Despite what the in-game description says, the bonus is a +1x flat bonus to critical damage, calculated after percentage modifiers, similarly to Tenacious Bond's bonus.",
+    "Multiple instances of the same status effect are not counted separately, e.g. having 5 corrosive and 5 radiation status effects on a target will not disable this buff.",
+    "form: both",
+    "tier: 5"
+   ],
+   "before": [
+    "Enemies suffering from fewer than 3 Status Effects will receive: +100% Critical Damage",
+    "form: both",
+    "tier: 5"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle#Spiteful Defilement",
+   "kind": "perk",
+   "name": "Phenmor: Spiteful Defilement",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Enemies suffering from fewer than 3 Status Effects will receive: +100% Critical Damage"
+   ]
+  },
+  {
+   "after": [
+    "+10% Critical Chance",
+    "+10% Status Chance",
+    "Bonuses are added after mods as a flat value.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+10% Critical Chance",
+    "+10% Status Chance",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle#Survivor's Edge",
+   "kind": "perk",
+   "name": "Phenmor: Survivor's Edge",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Bonuses are added after mods as a flat value."
+   ]
+  },
+  {
+   "after": [
+    "Increase ammo maximum by +9.",
+    "This bonus does not apply to the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase ammo maximum by +9.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/PrismaAngstrum#Hitman's Hoard",
+   "kind": "perk",
+   "name": "Prisma Angstrum: Hitman's Hoard",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase ammo maximum by +9."
+   ]
+  },
+  {
+   "after": [
+    "+50% Reload Speed.",
+    "Bonus stacks additively with reload speed mods such as Fast Hands.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+50% Reload Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/PrismaAngstrum#Rapid Reinforcement",
+   "kind": "perk",
+   "name": "Prisma Angstrum: Rapid Reinforcement",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "+30% Projectile Speed.",
+    "Bonus stacks additively with Terminal Velocity.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+30% Projectile Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Corpus/Pistols/CrpHandRL/PrismaAngstrum#Swift Deliverance",
+   "kind": "perk",
+   "name": "Prisma Angstrum: Swift Deliverance",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +5.",
+    "On Shield Break: Increase Base Damage by +8 for 8s.",
+    "This is on personal shield break, not breaking enemy shields.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +5.",
+    "On Shield Break: Increase Base Damage by +8 for 8s.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/LongGuns/VoidTraderGorgon/VTGorgon#Hoplite Virtue",
+   "kind": "perk",
+   "name": "Prisma Gorgon: Hoplite Virtue",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Shield Break: Increase Base Damage by +8 for 8s."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +5.",
+    "With Channeled Ability Active: +3 Punch Through, +40% Accuracy.",
+    "Channeled Abilities must be draining energy to be considered active. Abilities that do not drain energy over time such as Nekros's Desecrate, Hildryn's Haven, or Sevagoth's Gloom (with no enemies nearby) do not count.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +5.",
+    "With Channeled Ability Active: +3 Punch Through, +40% Accuracy.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/LongGuns/VoidTraderGorgon/VTGorgon#Hunter's Mantra",
+   "kind": "perk",
+   "name": "Prisma Gorgon: Hunter's Mantra",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "With Channeled Ability Active: +3 Punch Through, +40% Accuracy."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +10.",
+    "On Headshot: +7.5% Fire Rate for 4s. Stacks up to 10x.",
+    "On headshot effect has a 50% chance of activating.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +10.",
+    "On Headshot: +7.5% Fire Rate for 4s. Stacks up to 10x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Syndicates/RedVeil/Pistols/RVBallistica#Headcracker",
+   "kind": "perk",
+   "name": "Rakta Ballistica: Headcracker",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +40.",
+    "+40% Damage to enemies below half Health.",
+    "Bonus damage is additive with mods such as Hornet Strike but does not take into account the Base Damage increase from this perk.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +40.",
+    "+40% Damage to enemies below half Health.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeSicarus/PrimeSicarusPistol#Feigned Retreat",
+   "kind": "perk",
+   "name": "Sicarus Prime: Feigned Retreat",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "+40% Damage to enemies below half Health.",
+    "Bonus damage is additive with mods such as Hornet Strike but does not take into account the Base Damage increase from this perk."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +40 (Sicarus) / +40 (Prime)",
+    "x0 Critical Chance on Bodyshots, +150% Critical Chance on Weakpoint Hits.",
+    "Bodyshot modifier is multiplicative with all sources of Critical Chance, effectively making non-headshot critical hits impossible.",
+    "Citrine's Crystallize is an exception to this.",
+    "Weakpoint modifier is additive with mods such as Pistol Gambit",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +40 (Sicarus) / +40 (Prime)",
+    "x0 Critical Chance on Bodyshots, +150% Critical Chance on Weakpoint Hits.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeSicarus/PrimeSicarusPistol#King's Gambit",
+   "kind": "perk",
+   "name": "Sicarus Prime: King's Gambit",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Damage by +40 (Sicarus) / +40 (Prime)",
+    "x0 Critical Chance on Bodyshots, +150% Critical Chance on Weakpoint Hits.",
+    "Bodyshot modifier is multiplicative with all sources of Critical Chance, effectively making non-headshot critical hits impossible.",
+    "Weakpoint modifier is additive with mods such as Pistol Gambit"
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%",
+    "Maximum Base Status Chance increase is gained at 134% Critical Chance, achievable with +734% (Sicarus) / +434% (Prime) modded Critical Chance, or +567% (Sicarus) / +345% (Prime) in Incarnon Form.",
+    "Incarnon Form Status Chance is displayed in the Arsenal screen as if using the normal form's Critical Chance, but will properly use its' own Critical chance while in-mission.",
+    "In addition to regular Critical Chance mods, it is also affected by both parts of Galvanized Crosshairs while aiming, Secondary Outburst, Cascadia Overcharge, Arcane Avenger, Secondary Enervate, Yareli's Passive, Zephyr's Passive, Covenant's baseline Critical Chance bonus but not the 4x multiplier on headshots, and Cat's Eye.",
+    "Not affected by the King's Gambit Evolution II perk, Cascadia Accuracy, Crystallize, or Shadow Haze.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeSicarus/PrimeSicarusPistol#Wiseman's Regard",
+   "kind": "perk",
+   "name": "Sicarus Prime: Wiseman's Regard",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%"
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +50.",
+    "+40% Damage to enemies below half Health.",
+    "Bonus damage is additive with mods such as Hornet Strike but does not take into account the Base Damage increase from this perk.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +50.",
+    "+40% Damage to enemies below half Health.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/BurstPistol#Feigned Retreat",
+   "kind": "perk",
+   "name": "Sicarus: Feigned Retreat",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "+40% Damage to enemies below half Health.",
+    "Bonus damage is additive with mods such as Hornet Strike but does not take into account the Base Damage increase from this perk."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +50 (Sicarus) / +50 (Prime)",
+    "x0 Critical Chance on Bodyshots, +150% Critical Chance on Weakpoint Hits.",
+    "Bodyshot modifier is multiplicative with all sources of Critical Chance, effectively making non-headshot critical hits impossible.",
+    "Citrine's Crystallize is an exception to this.",
+    "Weakpoint modifier is additive with mods such as Pistol Gambit",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +50 (Sicarus) / +50 (Prime)",
+    "x0 Critical Chance on Bodyshots, +150% Critical Chance on Weakpoint Hits.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/BurstPistol#King's Gambit",
+   "kind": "perk",
+   "name": "Sicarus: King's Gambit",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Damage by +50 (Sicarus) / +50 (Prime)",
+    "x0 Critical Chance on Bodyshots, +150% Critical Chance on Weakpoint Hits.",
+    "Bodyshot modifier is multiplicative with all sources of Critical Chance, effectively making non-headshot critical hits impossible.",
+    "Weakpoint modifier is additive with mods such as Pistol Gambit"
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%",
+    "Maximum Base Status Chance increase is gained at 134% Critical Chance, achievable with +734% (Sicarus) / +434% (Prime) modded Critical Chance, or +567% (Sicarus) / +345% (Prime) in Incarnon Form.",
+    "Incarnon Form Status Chance is displayed in the Arsenal screen as if using the normal form's Critical Chance, but will properly use its' own Critical chance while in-mission.",
+    "In addition to regular Critical Chance mods, it is also affected by both parts of Galvanized Crosshairs while aiming, Secondary Outburst, Cascadia Overcharge, Arcane Avenger, Secondary Enervate, Yareli's Passive, Zephyr's Passive, Covenant's baseline Critical Chance bonus but not the 4x multiplier on headshots, and Cat's Eye.",
+    "Not affected by the King's Gambit Evolution II perk, Cascadia Accuracy, Crystallize, or Shadow Haze.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/BurstPistol#Wiseman's Regard",
+   "kind": "perk",
+   "name": "Sicarus: Wiseman's Regard",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%"
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +10.",
+    "On Slash Status Kill: +100 Overshield.",
+    "Damage increase is applied per pellet, giving Incarnon Form a total base damage increase of +80.",
+    "Slash status kill grants shields, which can be overshields.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +10.",
+    "On Slash Status Kill: +100 Overshield.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle#Fortifying Bloodshed",
+   "kind": "perk",
+   "name": "Soma Prime: Fortifying Bloodshed",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Slash Status Kill: +100 Overshield."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +12.",
+    "With Armor Over 450: +4 Punch Through.",
+    "Damage increase is applied per pellet, giving Incarnon Form a total base damage increase of +96.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +12.",
+    "With Armor Over 450: +4 Punch Through.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle#Fortress Salvo",
+   "kind": "perk",
+   "name": "Soma Prime: Fortress Salvo",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "On Reload From Empty: Increase Base Damage by +6. Stacks up to 2x.",
+    "Buff lasts permanently throughout the mission but is lost on death.",
+    "Switching to Incarnon Form from empty will also trigger the buff.",
+    "Damage increase is applied per pellet, giving Incarnon Form a total maximum base damage increase of +96.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Reload From Empty: Increase Base Damage by +6. Stacks up to 2x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle#Fresh Havoc",
+   "kind": "perk",
+   "name": "Soma Prime: Fresh Havoc",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Reload From Empty: Increase Base Damage by +6. Stacks up to 2x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +10.",
+    "On Slash Status Kill: +100 Overshield.",
+    "Damage increase is applied per pellet, giving Incarnon Form a total base damage increase of +80.",
+    "Slash status kill grants shields, which can be overshields.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +10.",
+    "On Slash Status Kill: +100 Overshield.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/TennoAR#Fortifying Bloodshed",
+   "kind": "perk",
+   "name": "Soma: Fortifying Bloodshed",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Slash Status Kill: +100 Overshield."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +12.",
+    "With Armor Over 450: +4 Punch Through.",
+    "Damage increase is applied per pellet, giving Incarnon Form a total base damage increase of +96.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +12.",
+    "With Armor Over 450: +4 Punch Through.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/TennoAR#Fortress Salvo",
+   "kind": "perk",
+   "name": "Soma: Fortress Salvo",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "On Reload From Empty: Increase Base Damage by +6. Stacks up to 2x.",
+    "Buff lasts permanently throughout the mission but is lost on death.",
+    "Switching to Incarnon Form from empty will also trigger the buff.",
+    "Damage increase is applied per pellet, giving Incarnon Form a total maximum base damage increase of +96.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Reload From Empty: Increase Base Damage by +6. Stacks up to 2x.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/TennoAR#Fresh Havoc",
+   "kind": "perk",
+   "name": "Soma: Fresh Havoc",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Reload From Empty: Increase Base Damage by +6. Stacks up to 2x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +2.",
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x.",
+    "Damage increase is per pellet.",
+    "The in-game description of +5 Multishot is incorrect.",
+    "The Multishot bonus adds 0.25 pellets to the base Multishot of both forms when fully stacked.",
+    "The Multishot bonus is lost upon reloading.",
+    "This can be bypassed by using Blood Forge, but not effects that reload the weapon while holstered such as Lock and Load.",
+    "Entering Incarnon Form counts as reloading but exiting does not.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +2.",
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon#Blazing Barrel",
+   "kind": "perk",
+   "name": "Strun Prime: Blazing Barrel",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x."
+   ]
+  },
+  {
+   "after": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool.",
+    "The status effect may originate from any source.",
+    "The bonus can only apply once per enemy hit.",
+    "The bonus does not affect the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon#Galvanic Reload",
+   "kind": "perk",
+   "name": "Strun Prime: Galvanic Reload",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool."
+   ]
+  },
+  {
+   "after": [
+    "+60% Reload Speed.",
+    "The bonus stacks additively with mods such as Tactical Pump.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+60% Reload Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon#Rapid Reinforcement",
+   "kind": "perk",
+   "name": "Strun Prime: Rapid Reinforcement",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +2.",
+    "With Channeled Ability Active: +4 Punch Through",
+    "Damage increase is per pellet.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +2.",
+    "With Channeled Ability Active: +4 Punch Through",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeStrun/PrimeStrunWeapon#Tenno Targeting",
+   "kind": "perk",
+   "name": "Strun Prime: Tenno Targeting",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +24.",
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x.",
+    "Damage increase is per pellet.",
+    "The in-game description of +5 Multishot is incorrect.",
+    "The Multishot bonus adds 0.25 pellets to the base Multishot of both forms when fully stacked.",
+    "The Multishot bonus is lost upon reloading.",
+    "This can be bypassed by using Blood Forge, but not effects that reload the weapon while holstered such as Lock and Load.",
+    "Entering Incarnon Form counts as reloading but exiting does not.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +24.",
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal#Blazing Barrel",
+   "kind": "perk",
+   "name": "Strun Wraith: Blazing Barrel",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x."
+   ]
+  },
+  {
+   "after": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool.",
+    "The status effect may originate from any source.",
+    "The bonus can only apply once per enemy hit.",
+    "The bonus does not affect the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal#Galvanic Reload",
+   "kind": "perk",
+   "name": "Strun Wraith: Galvanic Reload",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool."
+   ]
+  },
+  {
+   "after": [
+    "+60% Reload Speed.",
+    "The bonus stacks additively with mods such as Tactical Pump.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+60% Reload Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal#Rapid Reinforcement",
+   "kind": "perk",
+   "name": "Strun Wraith: Rapid Reinforcement",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +24.",
+    "With Channeled Ability Active: +4 Punch Through",
+    "Damage increase is per pellet.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +24.",
+    "With Channeled Ability Active: +4 Punch Through",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/ShotgunVandal#Tenno Targeting",
+   "kind": "perk",
+   "name": "Strun Wraith: Tenno Targeting",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +54.",
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x.",
+    "Damage increase is per pellet.",
+    "The in-game description of +5 Multishot is incorrect.",
+    "The Multishot bonus adds 0.25 pellets to the base Multishot of both forms when fully stacked.",
+    "The Multishot bonus is lost upon reloading.",
+    "This can be bypassed by using Blood Forge, but not effects that reload the weapon while holstered such as Lock and Load.",
+    "Entering Incarnon Form counts as reloading but exiting does not.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +54.",
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/Shotgun#Blazing Barrel",
+   "kind": "perk",
+   "name": "Strun: Blazing Barrel",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Firing: +0.05 Base Multishot. Stacks up to 5x."
+   ]
+  },
+  {
+   "after": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool.",
+    "The status effect may originate from any source.",
+    "The bonus can only apply once per enemy hit.",
+    "The bonus does not affect the Incarnon form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/Shotgun#Galvanic Reload",
+   "kind": "perk",
+   "name": "Strun: Galvanic Reload",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On hitting a target affected by an Electricity status, 40% chance to restore 1 round in the magazine from ammo pool."
+   ]
+  },
+  {
+   "after": [
+    "+60% Reload Speed.",
+    "The bonus stacks additively with mods such as Tactical Pump.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+60% Reload Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/Shotgun#Rapid Reinforcement",
+   "kind": "perk",
+   "name": "Strun: Rapid Reinforcement",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +54.",
+    "With Channeled Ability Active: +4 Punch Through",
+    "Damage increase is per pellet.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +54.",
+    "With Channeled Ability Active: +4 Punch Through",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Shotgun/Shotgun#Tenno Targeting",
+   "kind": "perk",
+   "name": "Strun: Tenno Targeting",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +175.",
+    "On Firing: +5% Multishot. Stacks up to 10x",
+    "Base Damage bonus of +175 is only applied once to the embed DoT and explosion, regardless of the number of stacks.",
+    "Base form embed DoT is increased from 4 - 36 to 179 - 211, and explosion damage is increased from 75 - 750 to 250 - 925.",
+    "Incarnon form embed DoT is increased from 50 - 200 to 225 - 375, and explosion damage is increased from 200 to 375.",
+    "Does not require the shots to hit enemies to stack.",
+    "Bonus is additive to other sources of multishot such as Split Chamber.",
+    "Resets after reloading, which can be bypassed by using Blood Forge, but not effects that reload the weapon while holstered such as Lock and Load.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +175.",
+    "On Firing: +5% Multishot. Stacks up to 10x",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun#Blazing Barrel",
+   "kind": "perk",
+   "name": "Stug: Blazing Barrel",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Firing: +5% Multishot. Stacks up to 10x",
+    "Bonus is additive to other sources of multishot such as Split Chamber."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +300.",
+    "With Energy Max above 700: +50% Blast Radius",
+    "Base Damage bonus of +300 is only applied once to the embed DoT and explosion, regardless of the number of stacks.",
+    "Base form embed DoT is increased from 4 - 36 to 304 - 336, and explosion damage is increased from 75 - 750 to 375 - 1075.",
+    "Incarnon form embed DoT is increased from 50 - 200 to 350 - 500, and explosion damage is increased from 200 to 500.",
+    "Blast Radius increase is additive with other sources, such as (Primed) Fulmination.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +300.",
+    "With Energy Max above 700: +50% Blast Radius",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun#Overcharge Blast",
+   "kind": "perk",
+   "name": "Stug: Overcharge Blast",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Blast Radius increase is additive with other sources, such as (Primed) Fulmination."
+   ]
+  },
+  {
+   "after": [
+    "+50% Projectile Speed.",
+    "Projectile speed increase does not apply to bouncing blobs, only the initial shot.",
+    "form: both",
+    "tier: 3"
+   ],
+   "before": [
+    "+50% Projectile Speed.",
+    "form: both",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun#Swift Deliverance",
+   "kind": "perk",
+   "name": "Stug: Swift Deliverance",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +15.",
+    "On Firing: +5% Multishot. Stacks up to 10x.",
+    "The multishot bonus is additive to other sources of multishot such as Split Chamber.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +15.",
+    "On Firing: +5% Multishot. Stacks up to 10x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeSybaris/PrimeSybarisRifle#Blazing Barrel",
+   "kind": "perk",
+   "name": "Sybaris Prime: Blazing Barrel",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Firing: +5% Multishot. Stacks up to 10x.",
+    "The multishot bonus is additive to other sources of multishot such as Split Chamber."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Status Chance by +8% Effect doubles in Incarnon Form.",
+    "Sybaris Prime gains +23% Status Chance in Incarnon form, rather than the expected +16%.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Status Chance by +8% Effect doubles in Incarnon Form.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeSybaris/PrimeSybarisRifle#Elemental Dominance",
+   "kind": "perk",
+   "name": "Sybaris Prime: Elemental Dominance",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Status Chance by +8% Effect doubles in Incarnon Form."
+   ]
+  },
+  {
+   "after": [
+    "On Full Burst Hit: +20% Damage, resets on Reload",
+    "Stacks up to 4x.",
+    "This can be bypassed by using Blood Forge, but not effects that reload the weapon while holstered such as Lock and Load.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Full Burst Hit: +20% Damage, resets on Reload",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeSybaris/PrimeSybarisRifle#Reaver's Rapture",
+   "kind": "perk",
+   "name": "Sybaris Prime: Reaver's Rapture",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Full Burst Hit: +20% Damage, resets on Reload"
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +20.",
+    "On Firing: +5% Multishot. Stacks up to 10x.",
+    "The multishot bonus is additive to other sources of multishot such as Split Chamber.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +20.",
+    "On Firing: +5% Multishot. Stacks up to 10x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle#Blazing Barrel",
+   "kind": "perk",
+   "name": "Sybaris: Blazing Barrel",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Firing: +5% Multishot. Stacks up to 10x.",
+    "The multishot bonus is additive to other sources of multishot such as Split Chamber."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Status Chance by +15% Effect doubles in Incarnon Form.",
+    "Sybaris Prime gains +23% Status Chance in Incarnon form, rather than the expected +16%.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Status Chance by +15% Effect doubles in Incarnon Form.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle#Elemental Dominance",
+   "kind": "perk",
+   "name": "Sybaris: Elemental Dominance",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Status Chance by +15% Effect doubles in Incarnon Form."
+   ]
+  },
+  {
+   "after": [
+    "On Full Burst Hit: +20% Damage, resets on Reload",
+    "Stacks up to 4x.",
+    "This can be bypassed by using Blood Forge, but not effects that reload the weapon while holstered such as Lock and Load.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "On Full Burst Hit: +20% Damage, resets on Reload",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/TnoLeverAction/TnoLeverActionRifle#Reaver's Rapture",
+   "kind": "perk",
+   "name": "Sybaris: Reaver's Rapture",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "On Full Burst Hit: +20% Damage, resets on Reload"
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +6.",
+    "On 50 Energy Spent: Increase Base Damage by +5 for 10s. Stacks up to 4x.",
+    "All stacks are removed after the most recent one expires. Gaining a stack will refresh the duration of all stacks.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +6.",
+    "On 50 Energy Spent: Increase Base Damage by +5 for 10s. Stacks up to 4x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Syndicates/CephalonSuda/Pistols/CSSynoidGammacor#Infused Shots",
+   "kind": "perk",
+   "name": "Synoid Gammacor: Infused Shots",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On 50 Energy Spent: Increase Base Damage by +5 for 10s. Stacks up to 4x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Magazine Capacity by +9.",
+    "Does not apply to Incarnon Form's Magazine.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Magazine Capacity by +9.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/ClanTech/Bio/BioWeapon#Extended Volley",
+   "kind": "perk",
+   "name": "Torid: Extended Volley",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +31.",
+    "Multishot consumes ammo directly from Capacity and increases Damage by +60%.",
+    "Damage bonus from multishot consuming ammo is multiplicative to base damage bonuses like Serration.",
+    "Affects both modes. In the case of Incarnon Form, it pools directly from its magazine.",
+    "Damage bonus from multishot consuming ammo on applies to projectiles generated by multishot.",
+    "In the Incarnon form, instead of increasing the damage of additional projectiles created by multishot, all multishot bonuses are increased by 60%.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +31.",
+    "Multishot consumes ammo directly from Capacity and increases Damage by +60%.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/ClanTech/Bio/BioWeapon#Plentiful Mayhem",
+   "kind": "perk",
+   "name": "Torid: Plentiful Mayhem",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "Multishot consumes ammo directly from Capacity and increases Damage by +60%.",
+    "Damage bonus from multishot consuming ammo is multiplicative to base damage bonuses like Serration."
+   ]
+  },
+  {
+   "after": [
+    "+20% Magazine Reloaded per second when Holstered.",
+    "Does not apply to Incarnon Form's Magazine.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "+20% Magazine Reloaded per second when Holstered.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol#Awakened Readiness",
+   "kind": "perk",
+   "name": "Vasto Prime: Awakened Readiness",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "+20% Magazine Reloaded per second when Holstered."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Magazine Capacity by +6.",
+    "Increased Base Magazine Capacity does not affect Incarnon Form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Magazine Capacity by +6.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol#Extended Volley",
+   "kind": "perk",
+   "name": "Vasto Prime: Extended Volley",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +24.",
+    "With No Primary Equipped:",
+    "Increase Base Damage by +40",
+    "Increase Base Magazine Capacity by +14.",
+    "Increased Base Magazine Capacity does not affect Incarnon Form.",
+    "form: normal",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +24.",
+    "With No Primary Equipped:",
+    "Increase Base Damage by +40",
+    "Increase Base Magazine Capacity by +14.",
+    "form: normal",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol#Lone Gun",
+   "kind": "perk",
+   "name": "Vasto Prime: Lone Gun",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "On Headshot: +100% Ammo Efficiency for 2s.",
+    "Does not apply to Incarnon Form.",
+    "form: normal",
+    "tier: 4"
+   ],
+   "before": [
+    "On Headshot: +100% Ammo Efficiency for 2s.",
+    "form: normal",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol#Reaper's Plenty",
+   "kind": "perk",
+   "name": "Vasto Prime: Reaper's Plenty",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Critical Chance by +10%.",
+    "Increase Base Status Chance by +10%.",
+    "Status Chance increase for Incarnon Form is divided by the innate multishot.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Critical Chance by +10%.",
+    "Increase Base Status Chance by +10%.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeVasto/PrimeVastoPistol#Survivor's Edge",
+   "kind": "perk",
+   "name": "Vasto Prime: Survivor's Edge",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "+20% Magazine Reloaded per second when Holstered.",
+    "Does not apply to Incarnon Form's Magazine.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "+20% Magazine Reloaded per second when Holstered.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/RevolverPistol#Awakened Readiness",
+   "kind": "perk",
+   "name": "Vasto: Awakened Readiness",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "+20% Magazine Reloaded per second when Holstered."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Magazine Capacity by +6.",
+    "Increased Base Magazine Capacity does not affect Incarnon Form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Magazine Capacity by +6.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/RevolverPistol#Extended Volley",
+   "kind": "perk",
+   "name": "Vasto: Extended Volley",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +66.",
+    "With No Primary Equipped:",
+    "Increase Base Damage by +40",
+    "Increase Base Magazine Capacity by +14.",
+    "Increased Base Magazine Capacity does not affect Incarnon Form.",
+    "form: normal",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +66.",
+    "With No Primary Equipped:",
+    "Increase Base Damage by +40",
+    "Increase Base Magazine Capacity by +14.",
+    "form: normal",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/RevolverPistol#Lone Gun",
+   "kind": "perk",
+   "name": "Vasto: Lone Gun",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "On Headshot: +100% Ammo Efficiency for 2s.",
+    "Does not apply to Incarnon Form.",
+    "form: normal",
+    "tier: 4"
+   ],
+   "before": [
+    "On Headshot: +100% Ammo Efficiency for 2s.",
+    "form: normal",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/RevolverPistol#Reaper's Plenty",
+   "kind": "perk",
+   "name": "Vasto: Reaper's Plenty",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Critical Chance by +10%.",
+    "Increase Base Status Chance by +10%.",
+    "Status Chance increase for Incarnon Form is divided by the innate multishot.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Critical Chance by +10%.",
+    "Increase Base Status Chance by +10%.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistol/RevolverPistol#Survivor's Edge",
+   "kind": "perk",
+   "name": "Vasto: Survivor's Edge",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "+25% Headshot Damage.",
+    "Bonus is additive with Target Acquired, Vectis's Scope bonus, and similar bonuses.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+25% Headshot Damage.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle#Deadhead",
+   "kind": "perk",
+   "name": "Vectis Prime: Deadhead",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +150.",
+    "+25% Multishot if no enemies are within 5m.",
+    "Multishot bonus is additive with Split Chamber and similar bonuses.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +150.",
+    "+25% Multishot if no enemies are within 5m.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle#Lone Enforcer",
+   "kind": "perk",
+   "name": "Vectis Prime: Lone Enforcer",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "+25% Multishot if no enemies are within 5m.",
+    "Multishot bonus is additive with Split Chamber and similar bonuses."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%",
+    "Maximum Base Status Chance increase is gained at 134% Critical Chance.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle#Survivor's Edge",
+   "kind": "perk",
+   "name": "Vectis Prime: Survivor's Edge",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%"
+   ]
+  },
+  {
+   "after": [
+    "+25% Headshot Damage.",
+    "Bonus is additive with Target Acquired, Vectis's Scope bonus, and similar bonuses.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "+25% Headshot Damage.",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle#Deadhead",
+   "kind": "perk",
+   "name": "Vectis: Deadhead",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +75.",
+    "+25% Multishot if no enemies are within 5m.",
+    "Multishot bonus is additive with Split Chamber and similar bonuses.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +75.",
+    "+25% Multishot if no enemies are within 5m.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle#Lone Enforcer",
+   "kind": "perk",
+   "name": "Vectis: Lone Enforcer",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "+25% Multishot if no enemies are within 5m.",
+    "Multishot bonus is additive with Split Chamber and similar bonuses."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%",
+    "Maximum Base Status Chance increase is gained at 134% Critical Chance.",
+    "form: both",
+    "tier: 4"
+   ],
+   "before": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%",
+    "form: both",
+    "tier: 4"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle#Survivor's Edge",
+   "kind": "perk",
+   "name": "Vectis: Survivor's Edge",
+   "support_after": "unsupported",
+   "support_before": "unsupported",
+   "unparsed": [
+    "Increase Base Status Chance by 30% of current Critical Chance, up to 40%"
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Magazine Capacity by +18.",
+    "Increased Base Magazine Capacity does not affect Incarnon Form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Magazine Capacity by +18.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeZylok/ZylokPrimePistol#Extended Volley",
+   "kind": "perk",
+   "name": "Zylok Prime: Extended Volley",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +30.",
+    "On Reload From Empty: Increase Base Critical Damage Multiplier by +1x. Stacks up to 2x.",
+    "Stacks are shown as a buff, which are lost when reloading from a partial magazine or on death.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +30.",
+    "On Reload From Empty: Increase Base Critical Damage Multiplier by +1x. Stacks up to 2x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeZylok/ZylokPrimePistol#Mauler's Magazine",
+   "kind": "perk",
+   "name": "Zylok Prime: Mauler's Magazine",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Reload From Empty: Increase Base Critical Damage Multiplier by +1x. Stacks up to 2x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +30.",
+    "On Burst Headshots: Increase Base Damage by +20. Stacks up to 3x.",
+    "Stacks are generated if both shots from holding and releasing Zylok's trigger are headshots.",
+    "Stacks are shown as a buff, which are lost on reload or switching to Incarnon Form.",
+    "Incarnon Form cannot trigger burst headshots, as it has a Charge trigger instead of Duplex.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +30.",
+    "On Burst Headshots: Increase Base Damage by +20. Stacks up to 3x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/PrimeZylok/ZylokPrimePistol#Precision's Payoff",
+   "kind": "perk",
+   "name": "Zylok Prime: Precision's Payoff",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Magazine Capacity by +12.",
+    "Increased Base Magazine Capacity does not affect Incarnon Form.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "before": [
+    "Increase Base Magazine Capacity by +12.",
+    "form: normal",
+    "tier: 3"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol#Extended Volley",
+   "kind": "perk",
+   "name": "Zylok: Extended Volley",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  },
+  {
+   "after": [
+    "Increase Base Damage by +76.",
+    "On Reload From Empty: Increase Base Critical Damage Multiplier by +1x. Stacks up to 2x.",
+    "Stacks are shown as a buff, which are lost when reloading from a partial magazine or on death.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +76.",
+    "On Reload From Empty: Increase Base Critical Damage Multiplier by +1x. Stacks up to 2x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol#Mauler's Magazine",
+   "kind": "perk",
+   "name": "Zylok: Mauler's Magazine",
+   "support_after": "partial",
+   "support_before": "partial",
+   "unparsed": [
+    "On Reload From Empty: Increase Base Critical Damage Multiplier by +1x. Stacks up to 2x."
+   ]
+  },
+  {
+   "after": [
+    "Increase Base Damage by +76.",
+    "On Burst Headshots: Increase Base Damage by +20. Stacks up to 3x.",
+    "Stacks are generated if both shots from holding and releasing Zylok's trigger are headshots.",
+    "Stacks are shown as a buff, which are lost on reload or switching to Incarnon Form.",
+    "Incarnon Form cannot trigger burst headshots, as it has a Charge trigger instead of Duplex.",
+    "form: both",
+    "tier: 2"
+   ],
+   "before": [
+    "Increase Base Damage by +76.",
+    "On Burst Headshots: Increase Base Damage by +20. Stacks up to 3x.",
+    "form: both",
+    "tier: 2"
+   ],
+   "change": "changed",
+   "key": "/Lotus/Weapons/Tenno/Pistols/ConclaveLeverPistol/ConclaveLeverPistol#Precision's Payoff",
+   "kind": "perk",
+   "name": "Zylok: Precision's Payoff",
+   "support_after": "full",
+   "support_before": "full",
+   "unparsed": []
+  }
+ ],
+ "from_hash": "36c0872d8d57bc11",
  "sources_changed": false,
- "to_hash": "36c0872d8d57bc11",
- "unavailable": "no snapshot.json (dataset made before the patch report)"
+ "to_hash": "c59126266d009bba",
+ "unavailable": null
 }

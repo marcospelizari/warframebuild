@@ -24,6 +24,7 @@ from app.gamedata.changes import (
 )
 from app.gamedata.models import Effects, Meta, Model
 from app.pipeline.build import Dataset
+from app.pipeline.build.effects import SwitchedOff
 
 _PLURAL = {Kind.WEAPON: "weapons", Kind.MOD: "mods", Kind.ARCANE: "arcanes", Kind.PERK: "perks"}
 _KIND_ORDER = list(_PLURAL)
@@ -223,11 +224,14 @@ def beside(previous: Previous, shown: Snapshot) -> Callable[[Meta], dict[str, Mo
 # ---------- report text ----------
 
 
-def summary_lines(found: Changes, report: Path | None) -> list[str]:
+def summary_lines(found: Changes, report: Path | None, off: list[SwitchedOff]) -> list[str]:
+    out = []
+    if off:
+        out.append(f"overrides switched off ({len(off)}): their text changed, rewrite them:")
+        out += [f"  {o.key}" for o in off]
     dropped = [c for c in found.entries if c.support_dropped]
-    if not dropped:
-        return [f"full patch report: {report}"] if report else []
-    out = [f"support dropped ({len(dropped)}), first in the patch report:"]
+    if dropped:
+        out.append(f"support dropped ({len(dropped)}), first in the patch report:")
     for c in dropped:
         out.append(f"  {c.name} ({c.kind}): {c.support_before} -> {c.support_after}")
         out += [f"      not modelled: {line}" for line in c.unparsed]
@@ -236,7 +240,7 @@ def summary_lines(found: Changes, report: Path | None) -> list[str]:
     return out
 
 
-def report_markdown(found: Changes, date: str) -> str:
+def report_markdown(found: Changes, date: str, off: list[SwitchedOff]) -> str:
     out = [
         f"# Patch report {date}",
         "",
@@ -245,21 +249,28 @@ def report_markdown(found: Changes, date: str) -> str:
     ]
     if found.unavailable:
         out += ["", f"No comparison: {found.unavailable}."]
+    for o in off:
+        out += ["", f"## Override switched off: {o.key}", "", "Written for -> now:"]
+        out += _diff(o.written_for, o.now)
     for c in found.entries:
         title = f"{c.name} ({c.kind}, {c.change})"
         if c.support_before != c.support_after and c.support_before and c.support_after:
             title += f": {c.support_before} -> {c.support_after}"
         out += ["", f"## {title}", ""]
         out += [f"Not modelled: {line}" for line in c.unparsed]
-        lines = [d for d in difflib.ndiff(c.before, c.after) if d[:2] in ("- ", "+ ")]
-        out += ["```diff", *lines, "```"] if lines else ["(text unchanged)"]
+        out += _diff(c.before, c.after)
     return "\n".join(out) + "\n"
 
 
-def write_report(found: Changes, cache_dir: Path, date: str) -> Path | None:
+def _diff(before: list[str], after: list[str]) -> list[str]:
+    lines = [d for d in difflib.ndiff(before, after) if d[:2] in ("- ", "+ ")]
+    return ["```diff", *lines, "```"] if lines else ["(text unchanged)"]
+
+
+def write_report(found: Changes, cache_dir: Path, date: str, off: list[SwitchedOff]) -> Path | None:
     """`cache/patch-report-<date>-<hash>.md` when something changed or was not compared."""
-    if not found.entries and not found.unavailable:
+    if not found.entries and not found.unavailable and not off:
         return None
     path = cache_dir / f"patch-report-{date}-{found.to_hash}.md"  # two updates a day: two files
-    path.write_text(report_markdown(found, date), encoding="utf-8")
+    path.write_text(report_markdown(found, date, off), encoding="utf-8")
     return path

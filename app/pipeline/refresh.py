@@ -138,14 +138,16 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
     assert found is not None  # just written
     report_path = None
     if before.dataset_hash != meta.dataset_hash:  # a new step, not a re-run on the same data
-        report_path = changes.write_report(found, paths.raw.parent, meta.changed_on)
+        report_path = changes.write_report(
+            found, paths.raw.parent, meta.changed_on, dataset.overrides_off
+        )
     diff = changes.entry_diff(found)
     report = Report(
         meta=meta,
         previous=previous.meta if previous else None,
         source_changes=changed_sources,
         diff=diff,
-        patch=changes.summary_lines(found, report_path),
+        patch=changes.summary_lines(found, report_path, dataset.overrides_off),
         touched=check.touched_rows(reference_rows, diff),
         support=check.support_lines(dataset),
         untagged=check.untagged_lines(dataset)

@@ -26,7 +26,7 @@ from app.pipeline.build import (
     weapons,
 )
 from app.pipeline.build.direct_bonus import DirectBonusTable
-from app.pipeline.build.effects import Overrides
+from app.pipeline.build.effects import Overrides, SwitchedOff
 from app.pipeline.build.fire import FireOverrides
 from app.pipeline.build.inputs import as_list, records, reference
 from app.pipeline.errors import RefreshError
@@ -58,6 +58,7 @@ class Dataset:
     reference_head: ReferenceHead
     enemies: list[Enemy]
     factions: list[FactionModifiers]
+    overrides_off: list[SwitchedOff]  # entry text changed since written (U2)
 
 
 def build(raw_dir: Path, reference_dir: Path) -> Dataset:
@@ -146,6 +147,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         head,
         enemy_list,
         factions,
+        overrides.switched_off,
     )
 
 

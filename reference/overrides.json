@@ -1,5 +1,5 @@
 {
-  "about": "Effects for stat text the parser cannot model (R6), keyed by uniqueName (`#<perk>` for Incarnon perks, `#zoom` for a sniper's zoom bonus). `effects` (domain Effect fields) replace the parsed ones and set support to full unless `support` is given; `support` + `note` alone only adjust the status. Values come from the entry's own DE text or a saved wiki page named in `note`; never guessed. Refresh fails on an entry that matches nothing.",
+  "about": "Effects for stat text the parser cannot model (R6), keyed by uniqueName (`#<perk>` for Incarnon perks, `#zoom` for a sniper's zoom bonus). `effects` (domain Effect fields) replace the parsed ones and set support to full unless `support` is given; `support` + `note` alone only adjust the status. Values come from the entry's own DE text or a saved wiki page named in `note`; never guessed. `text` is the entry's text the override was written for (mods: description + max-rank stats; perks: lines + notes; zoom: the zoom lines); when the text changes the override is switched off and listed by refresh, never applied to new text (G90 U2). Refresh fails on an entry that matches nothing or has no `text`.",
   "entries": {
     "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Devouring Attrition": {
       "effects": [
@@ -12,6 +12,11 @@
         }
       ],
       "note": "Laetum page, EVO5: '50% chance to deal +2000% damage on non-critical hits'; notes: multiplicative to base damage bonuses",
+      "text": [
+        "50% chance to deal +2000% damage on non-critical hits",
+        "Affects both forms.",
+        "Damage bonus is multiplicative to base damage bonuses such as Hornet Strike."
+      ],
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol#Overwhelming Attrition": {
@@ -26,16 +31,29 @@
         }
       ],
       "note": "Laetum page, EVO5: 'On Hit that is neither Critical nor applies a Status Effect: +400% damage for 10 seconds. Stacks up to 3 times'; notes: additive to base damage bonuses",
+      "text": [
+        "On Hit that is neither Critical nor applies a Status Effect: +400% damage for 10 seconds. Stacks up to 3 times.",
+        "Damage bonus is additive to base damage bonuses such as Hornet Strike.",
+        "When the buff times out, one stack is lost and the buff duration resets."
+      ],
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle#Deadhead": {
       "support": "full",
       "note": "Incarnon_Evolutions, Vectis Deadhead: '+25% Headshot Damage'; the notes line (additive with Target Acquired and the scope bonus) is how it stacks, not another stat",
+      "text": [
+        "+25% Headshot Damage.",
+        "Bonus is additive with Target Acquired, Vectis's Scope bonus, and similar bonuses."
+      ],
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle#Deadhead": {
       "support": "full",
       "note": "Incarnon_Evolutions, Vectis Deadhead: '+25% Headshot Damage'; the notes line (additive with Target Acquired and the scope bonus) is how it stacks, not another stat",
+      "text": [
+        "+25% Headshot Damage.",
+        "Bonus is additive with Target Acquired, Vectis's Scope bonus, and similar bonuses."
+      ],
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Tenno/Zariman/LongGuns/SemiAutoRifle/ZarimanSemiAutoRifle#Lingering Judgement": {
@@ -49,6 +67,10 @@
         }
       ],
       "note": "Phenmor page, EVO5: 'On 2 headshots within 2 seconds: +50% Headshot damage for 8 seconds'; notes: additive with Primary Deadhead's headshot bonus",
+      "text": [
+        "On 2 headshots within 2 seconds: +50% Headshot damage for 8 seconds.",
+        "Headshot damage bonus stacks additively with Primary Deadhead's headshot damage bonus."
+      ],
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/ClanTech/Energy/Railgun#zoom": {
@@ -60,6 +82,9 @@
         }
       ],
       "note": "Lanka page: 'The zoom bonus adds a flat +20/30/50 critical chance, applied after mods' (8x zoom: +50)",
+      "text": [
+        "+50% Critical Chance"
+      ],
       "verified": "2026-11-09"
     },
     "/Lotus/Weapons/Corpus/LongGuns/CrpSentAmlgSniper/CrpSentAmlgSniper#zoom": {
@@ -93,6 +118,11 @@
         "3.5x zoom Viral explosion (3.5x Zoom Radial Attack) not counted until the step-8 main-attack rows"
       ],
       "note": "Komorex page, Notes: 3.5x zoom +100% Impact/Puncture/Slash, additive with physical and elemental mods; -75% fire rate, additive with mods",
+      "text": [
+        "+100% Damage",
+        "+3.5m Explosion Radius",
+        "-75% Fire Rate"
+      ],
       "verified": "2026-11-09"
     }
   }
