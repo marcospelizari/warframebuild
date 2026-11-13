@@ -32,6 +32,11 @@ def elements(weapon: Weapon) -> list[DamageType]:
 
 def rank(data: GameData, weapon: Weapon, budget: int = MAX_EVALUATIONS) -> list[Ranked]:
     found = [Ranked(e, best_combat(data, weapon, bonus=e, budget=budget)) for e in elements(weapon)]
+    return ranked(weapon, found)
+
+
+def ranked(weapon: Weapon, found: list[Ranked]) -> list[Ranked]:
+    """Best Recommended score first; ties keep the gun's listed element order."""
     order = {e: i for i, e in enumerate(elements(weapon))}
     return sorted(found, key=lambda r: (-rounded(r.recommended.score), order[r.element]))
 

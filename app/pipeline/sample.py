@@ -9,7 +9,7 @@ from pathlib import Path
 from app.gamedata.builds import Build, WeaponBuilds
 from app.gamedata.store import load
 from app.optimize.search import MAX_EVALUATIONS
-from app.pipeline import build_all
+from app.pipeline import build_all, search_pool
 from app.pipeline.frozen_data import GUNS
 
 
@@ -21,7 +21,7 @@ def run(
 ) -> list[str]:
     started = time.monotonic()
     data = load(gamedata)
-    slugs = sorted(w.slug for w in data.weapons if w.name in GUNS)
+    slugs = build_all.slowest_first(data, [w.slug for w in data.weapons if w.name in GUNS])
     workers = workers or os.cpu_count() or 1
     progress(f"sample: {len(slugs)} guns, {workers} workers, budget {budget}; nothing is published")
 
@@ -34,13 +34,16 @@ def run(
             lines.append(line)
         return lines
 
-    lines = build_all.search(gamedata, data.meta.dataset_hash, slugs, workers, budget, report)
+    busy: dict[str, float] = {}
+    lines = search_pool.search(data, gamedata, slugs, workers, budget, report, busy)
     minutes = (time.monotonic() - started) / 60
-    estimate = minutes * len(data.weapons) / max(len(slugs), 1) / 60
+    # Search time per gun, spread over the workers; the sample's special cases are slower
+    # than most guns, so this errs high.
+    estimate = sum(busy.values()) / len(slugs) * len(data.weapons) / workers / 3600
     return [
         *lines,
         f"sample: {len(slugs)} guns in {minutes:.1f} min; a full build-all of "
-        f"{len(data.weapons)} guns takes about {estimate:.1f} h with the same workers",
+        f"{len(data.weapons)} guns takes at most about {estimate:.1f} h with {workers} workers",
     ]
 
 

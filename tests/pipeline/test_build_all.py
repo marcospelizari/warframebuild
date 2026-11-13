@@ -12,8 +12,9 @@ import pytest
 
 from app.gamedata.release import current
 from app.gamedata.store import GameData, load
+from app.optimize.builds import Search
 from app.optimize.candidates import fits
-from app.pipeline import build_all, refresh, release
+from app.pipeline import build_all, refresh, release, search_pool
 from app.pipeline.gun_inputs import HASHED, INPUTS, NOT_READ
 from app.pipeline.publish import StoreError
 from app.pipeline.refresh import Paths as RefreshPaths
@@ -67,11 +68,11 @@ def test_a_held_lock_fails_before_any_work(tmp_path: Path, monkeypatch: pytest.M
 
 
 def test_a_worker_with_other_data_fails_with_the_reason(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setattr(build_all, "_data", None)  # restored after the test
-    monkeypatch.setattr(build_all, "_error", None)
-    build_all._load(ROOT / "gamedata", "0" * 16)
+    monkeypatch.setattr(search_pool, "_data", None)  # restored after the test
+    monkeypatch.setattr(search_pool, "_error", None)
+    search_pool._load(ROOT / "gamedata", "0" * 16)
     with pytest.raises(release.ReleaseError, match="changed during the run"):
-        build_all._one("lenz", 1)
+        search_pool._task("lenz", Search("max", None), 1)
 
 
 def test_stop_kills_running_guns_at_once() -> None:
@@ -83,7 +84,7 @@ def test_stop_kills_running_guns_at_once() -> None:
         assert time.monotonic() < deadline, "worker never started"
         time.sleep(0.05)
     started = time.monotonic()
-    build_all._stop(pool)
+    search_pool._stop(pool)
     with pytest.raises(BrokenProcessPool):
         job.result(timeout=10)
     assert time.monotonic() - started < 10
@@ -138,3 +139,9 @@ def test_every_gamedata_field_is_hashed_or_never_read() -> None:
     fields = {f.name for f in dataclasses.fields(GameData)}
     assert fields == HASHED | NOT_READ
     assert not HASHED & NOT_READ
+
+
+def test_slowest_guns_start_first(gamedata: GameData) -> None:
+    """A bonus-element gun searches every element: started last, it ran alone at the end."""
+    order = build_all.slowest_first(gamedata, ["braton-prime", "soma-prime", "kuva-hind", "lenz"])
+    assert order == ["kuva-hind", "braton-prime", "soma-prime", "lenz"]
