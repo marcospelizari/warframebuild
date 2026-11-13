@@ -53,3 +53,15 @@ def test_bad_rows_stop_the_refresh(
 def test_a_row_for_an_unknown_gun_stops_the_refresh(gamedata: GameData) -> None:
     with pytest.raises(RefreshError, match="unknown guns"):
         blasts.apply({"weapons": {"/Lotus/Gone": {}}}, [], gamedata.incarnon, set())
+
+
+def test_a_row_may_name_the_primer_shot(gamedata: GameData) -> None:
+    torid = _gun(gamedata, "Torid")
+    shot = ["Grenade Impact", "Poison Cloud"]
+    table = {"weapons": {torid.unique_name: _row(torid, "Poison Cloud", shot=shot)}}
+    [out], _ = blasts.apply(table, [torid], gamedata.incarnon, set())
+    assert out.primer_shot == shot
+    for bad in (["Grenade Impact"], ["Incarnon Form", "Poison Cloud"], ["Nope"]):
+        table = {"weapons": {torid.unique_name: _row(torid, "Poison Cloud", shot=bad)}}
+        with pytest.raises(RefreshError, match="`shot`"):
+            blasts.apply(table, [torid], gamedata.incarnon, set())

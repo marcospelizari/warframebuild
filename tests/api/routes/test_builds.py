@@ -1,3 +1,4 @@
+import json
 import shutil
 from dataclasses import replace
 from pathlib import Path
@@ -135,3 +136,21 @@ def test_stored_and_calc_layouts_agree(client: TestClient) -> None:
     assert set(recommended["without"]) >= set(
         m["mod"] for m in recommended["build"]["slots"] if m["mod"]
     )
+
+
+def test_every_variant_carries_its_primer_build(client: TestClient, releases: Path) -> None:
+    """G49: the Primer build with its numbers and how they were counted."""
+    for slug in ("soma-prime", "kuva-hind"):
+        body = client.get(f"/api/weapons/{slug}/builds").json()
+        for variant in body["variants"]:
+            primer = variant["primer"]
+            assert primer["boost"] >= 1 and primer["enemies"] >= 1
+            assert primer["build"]["status"] in ("optimal", "best_found")
+            assert primer["assumptions"]
+    folder = current(releases)
+    assert folder is not None and (folder / "primers.json").is_file()
+    good = set(json.loads((folder / "primers.json").read_text())["good"])
+    body = client.get("/api/weapons/soma-prime/builds").json()
+    assert body["good_primer"] == ("soma-prime" in good)
+    items = {w["slug"]: w for w in client.get("/api/weapons").json()["weapons"]}
+    assert all(items[s]["good_primer"] == (s in good) for s in ("soma-prime", "kuva-hind"))

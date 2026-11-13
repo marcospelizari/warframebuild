@@ -9,6 +9,7 @@ from app.gamedata.builds import WeaponBuilds
 from app.gamedata.updates import Updates, read_updates
 
 POINTER = "current"
+PRIMERS = "primers.json"  # {"good": [slugs]}: guns shown as good primers (G49)
 
 
 def current(releases: Path) -> Path | None:
@@ -33,6 +34,14 @@ class Release:
     def updates(self) -> Updates:
         """Read once: a release never changes."""
         return read_updates(self.folder)
+
+    @cached_property
+    def good_primers(self) -> frozenset[str]:
+        """Empty for releases made before primers (G49)."""
+        try:
+            return frozenset(json.loads((self.folder / PRIMERS).read_bytes())["good"])
+        except (OSError, ValueError, KeyError):
+            return frozenset()
 
     def builds(self, slug: str) -> WeaponBuilds:
         """`slug` must be a known gun slug (it names a file)."""

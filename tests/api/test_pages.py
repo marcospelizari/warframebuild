@@ -37,6 +37,14 @@ def test_faction_page_names_the_faction(client: TestClient) -> None:
     assert 'href="http://testserver/w/soma-prime/the-murmur"' in page
 
 
+def test_primer_page_has_its_own_title_and_numbers(client: TestClient) -> None:
+    page = client.get("/w/soma-prime/primer")
+    assert page.status_code == 200
+    assert "<title>Soma Prime primer build: status mods | warframeBuild</title>" in page.text
+    assert "follow-up hits do" in page.text
+    assert 'href="http://testserver/w/soma-prime/primer"' in page.text
+
+
 def test_edited_build_is_not_indexed_and_points_to_the_plain_page(client: TestClient) -> None:
     page = client.get("/w/soma-prime?b=abc").text
     assert '<meta name="robots" content="noindex" />' in page

@@ -10,11 +10,12 @@ from dataclasses import dataclass
 from typing import Literal
 
 from app.domain.effects import DamageType
-from app.gamedata.builds import Build, ElementRow, Variant, WeaponBuilds
+from app.gamedata.builds import Build, ElementRow, PrimerNumbers, Variant, WeaponBuilds
 from app.gamedata.models import Arcane, Enemy, Mod, Perk, Weapon
 from app.gamedata.store import GameData
 from app.optimize.combat import combat
 from app.optimize.forma import forma_layout, stored_forma
+from app.optimize.primer import numbers, primed
 from app.optimize.scoring import (
     Objective,
     best_combat,
@@ -67,6 +68,7 @@ class Found:
     result: Result | None  # Search only
     build: Build | None  # Search, Swap
     value: float | None = None  # WhatIf
+    primer: PrimerNumbers | None = None  # Primer search
 
 
 Plan = Generator[list[Task], list[Found], WeaponBuilds]
@@ -126,6 +128,7 @@ def plan(data: GameData, weapon: Weapon) -> Plan:
                 factions=swapped,
                 denominators=_denominators(swapped),
                 primer=_build_of(done[-1]),
+                primer_numbers=done[-1].primer,
             )
         )
     rows = [
@@ -159,8 +162,9 @@ def run(data: GameData, weapon: Weapon, task: Task, budget: int) -> Found:
         return Found(found, _build(data, weapon, found, task.bonus, None, scope))
     if task.kind == "primer":
         found = best_primer(data, weapon, task.bonus, budget)
-        objective = primer_objective(data)
-        return Found(found, _build(data, weapon, found, task.bonus, None, scope, None, objective))
+        build = _build(data, weapon, found, task.bonus, None, scope, None, primer_objective(data))
+        lo = build_loadout(data, weapon, found.mods, found.exilus, found.picks, task.bonus)
+        return Found(found, build, primer=numbers(primed(lo, data.enemies, data.status_rules)))
     found = best_combat(data, weapon, task.faction, task.bonus, budget)
     enemies = data.enemies if task.faction is None else _enemies_of(data, task.faction)
     return Found(found, _build(data, weapon, found, task.bonus, enemies, scope))
@@ -197,6 +201,7 @@ def _variant(
         factions=by_faction,
         denominators=_denominators(by_faction),
         primer=_build_of(primer),
+        primer_numbers=primer.primer,
     )
 
 

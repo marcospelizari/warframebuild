@@ -16,10 +16,12 @@ from dataclasses import dataclass, replace
 from app.domain.combat import effective_hp, geometric_mean
 from app.domain.hit import AttackStats
 from app.domain.status_rules import StatusRules
+from app.gamedata.builds import PrimerNumbers
 from app.gamedata.models import Attack, Enemy
 from app.optimize.conditions import resolve
 from app.optimize.head import AOE
 from app.optimize.loadout import Loadout, attack_stats
+from app.optimize.search import rounded
 from app.optimize.timeline import Debuffs, Timeline
 
 BURST_S = 2.0  # the primer fires this long (Marcos 2026-11-13)
@@ -45,16 +47,63 @@ class Primed:
         return (self.boost - 1) + (self.enemies - 1) * (self.area_boost - 1)
 
 
+GOOD_SHARE = 0.10  # "good primer": Primer score among the top 10% of the guns,
+MIN_TYPES = 4.0  # with at least this many status types kept up (Marcos 2026-11-13: a
+# primer applies many status effects; an AoE gun with few elements is not one)
+
+
+def numbers(p: Primed) -> PrimerNumbers:
+    return PrimerNumbers(
+        boost=rounded(p.boost),
+        area_boost=rounded(p.area_boost),
+        enemies=rounded(p.enemies),
+        radius=rounded(p.radius) if p.radius is not None else None,
+        status_types=rounded(p.status_types),
+    )
+
+
+def good_primers(guns: dict[str, tuple[float, float]]) -> list[str]:
+    """Slugs of good primers from each gun's (Primer score, status types kept up)."""
+    if not guns:
+        return []
+    ranked = sorted((score for score, _ in guns.values()), reverse=True)
+    floor = ranked[max(0, math.ceil(len(ranked) * GOOD_SHARE) - 1)]
+    return sorted(s for s, (score, types) in guns.items() if score >= floor and types >= MIN_TYPES)
+
+
+def assumptions() -> list[str]:
+    """How the Primer score counts, shown with the build."""
+    return [
+        f"The primer fires for {BURST_S:g} s, then the follow-up weapon hits for {FOLLOW_S:g} s; "
+        "the boost is averaged over that time.",
+        "Boost = how much less damage the enemy needs to die (effective HP), from Viral, "
+        "Magnetic and armor stripped by Corrosive and Heat.",
+        f"Enemies around the target: blast area x 1 enemy per {1 / DENSITY:g} m², at most "
+        f"{MAX_PRIMED:g}; each rolls its own statuses from the blast.",
+        "Slows, stuns and crit bonuses for the follow-up are not counted.",
+    ]
+
+
 def follow_up_times() -> list[float]:
     step = FOLLOW_S / SAMPLES
     return [BURST_S + (i + 0.5) * step for i in range(SAMPLES)]
 
 
+def primer_shot(lo: Loadout) -> Loadout:
+    """The shot the primer fires: the normal form's `primer_shot` attacks when the gun has
+    them (Epitaph's uncharged shot; reference/blasts.json), else the scored shot."""
+    names = lo.weapon.primer_shot if lo.form == "normal" else []
+    if not names:
+        return lo
+    by_name = {a.name: a for a in lo.weapon.attacks}
+    return replace(lo, parts=[(attack_stats(lo.weapon, by_name[n]), by_name[n]) for n in names])
+
+
 def blast(lo: Loadout) -> Loadout | None:
-    """The scored shot's AoE part(s) alone: Incarnon Form parts with an AoE attack, or the
-    primary fire's blast (reference/blasts.json) for the normal form."""
+    """The primer shot's AoE part(s) alone: Incarnon Form or `primer_shot` parts with an AoE
+    attack, or the primary fire's blast (reference/blasts.json) for the normal form."""
     parts: list[tuple[AttackStats, Attack | None]]
-    if lo.form != "normal":
+    if lo.form != "normal" or lo.weapon.primer_shot:
         parts = [(s, a) for s, a in lo.parts if a is not None and a.shot_type == AOE]
     else:
         a = next((x for x in lo.weapon.attacks if x.name == lo.weapon.blast), None)
@@ -84,6 +133,7 @@ def enemies_reached(r: float | None) -> float:
 
 
 def primed(lo: Loadout, enemies: Sequence[Enemy], rules: StatusRules) -> Primed:
+    lo = primer_shot(lo)
     times = follow_up_times()
     target = Timeline(lo, resolve(lo, False), None, None, rules, until=BURST_S)
     area = blast(lo)

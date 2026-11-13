@@ -21,7 +21,9 @@ def weapons(
     category: Category | None = None,
     q: Annotated[str, Query(max_length=64)] = "",
 ) -> WeaponList:
-    data: GameData = served(request).data
+    now = served(request)
+    data: GameData = now.data
+    good = now.release.good_primers if now.release else frozenset()
     needle = q.casefold()
     return WeaponList(
         dataset_hash=data.meta.dataset_hash,
@@ -37,6 +39,7 @@ def weapons(
                 image=f"/img/weapons/{w.slug}.png"
                 if image_path(request.app.state.img_dir, w.slug).is_file()
                 else None,
+                good_primer=w.slug in good,
             )
             for w in sorted(data.weapons, key=lambda w: (w.name, w.slug))
             if (category is None or w.category == category) and needle in w.name.casefold()

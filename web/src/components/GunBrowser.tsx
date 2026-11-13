@@ -108,6 +108,7 @@ export function GunBrowser({ weapons }: { weapons: WeaponItem[] | undefined }) {
                 {w.weapon_type}, MR {w.mastery}
               </span>
               {tagOf(w) && <span className={u.tag}>{tagOf(w)}</span>}
+              {w.good_primer && <span className={u.tag}>Good primer</span>}
             </Link>
           </li>
         ))}

@@ -137,9 +137,19 @@ export const builds: BuildsResponse = {
       recommended: stored,
       factions: { Grineer: stored, "The Murmur": stored },
       denominators: {},
+      primer: {
+        build: { ...stored, score: 2, without: { "/Serration": 1.5, "/Merciless": 2 } },
+        boost: 4.63,
+        area_boost: 3.58,
+        enemies: 12,
+        radius: 10,
+        status_types: 5.9,
+        assumptions: ["The primer fires for 2 s, then the follow-up weapon hits for 6 s."],
+      },
     },
   ],
   not_modelled: [],
+  good_primer: true,
 };
 
 const gun = (slug: string, name: string, extra: Partial<WeaponItem> = {}): WeaponItem => ({
@@ -151,6 +161,7 @@ const gun = (slug: string, name: string, extra: Partial<WeaponItem> = {}): Weapo
   progenitor: false,
   mastery: 8,
   image: null,
+  good_primer: false,
   ...extra,
 });
 

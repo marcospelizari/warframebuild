@@ -16,6 +16,7 @@ import {
   type Target,
   toRequest,
 } from "@/lib/editor";
+import { PRIMER } from "@/lib/faction";
 import { trim } from "@/lib/format";
 import { useDebounced } from "@/lib/useDebounced";
 import { BuildFrame } from "./BuildFrame";
@@ -25,6 +26,7 @@ import { ElementSwitch } from "./ElementSwitch";
 import { ModGrid } from "./ModGrid";
 import { NotModelled } from "./NotModelled";
 import { Picker } from "./Picker";
+import { PrimerStrip } from "./PrimerStrip";
 import { ScoreStrip } from "./ScoreStrip";
 import { StatsPanel } from "./StatsPanel";
 import { WeaponHeader } from "./WeaponHeader";
@@ -35,6 +37,15 @@ const STATUS = {
     `Best of ${n.toLocaleString("en")} mod combinations tried; a better one may exist.`,
   what_if: () => "What-if: the first element's mods with this element.",
 };
+
+/** F8 for the Primer build: its score is the extra follow-up damage it gives. */
+function primerWhy(stored: StoredBuild, id: string): string | null {
+  const without = stored.without[id];
+  if (without === undefined || stored.score <= 0) return null;
+  const lost = 1 - without / stored.score;
+  if (Math.abs(lost) < 0.005) return "Without it: about the same priming";
+  return `Without it: priming ${lost > 0 ? "−" : "+"}${Math.round(Math.abs(lost) * 100)}%`;
+}
 
 /** F8: how much slower the average kill gets without `id` (stored builds only). */
 function whyText(stored: StoredBuild, id: string): string | null {
@@ -51,7 +62,7 @@ type Props = {
   data: BuildsResponse;
   items: ModList;
   item: WeaponItem | undefined;
-  faction: string | null; // faction name; null = Recommended
+  faction: string | null; // faction name, PRIMER, or null = Recommended
   code: string | undefined; // ?b= edited build
 };
 
@@ -59,13 +70,18 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
   const navigate = useNavigate();
   const [picked, setPicked] = useState(0); // variant shown while not editing
   const [target, setTarget] = useState<Target | null>(null);
-  const choices = code ? decode(code) : null;
+  // The Primer tab is not editable (/calc scores kill times, not priming): ?b= is ignored.
+  const choices = code && faction !== PRIMER ? decode(code) : null;
   const elements = data.variants.flatMap((v) => (v.element ? [v.element] : []));
   const index = choices
     ? Math.max(0, data.variants.findIndex((v) => v.element === choices.element))
     : picked;
   const variant = data.variants[index] ?? data.variants[0]!;
-  const base = (faction ? variant.factions[faction] : variant.recommended) ?? variant.recommended;
+  const primer = faction === PRIMER ? (variant.primer ?? null) : null;
+  const versus = faction === PRIMER ? null : faction; // a faction build's faction
+  const base = primer
+    ? primer.build
+    : ((versus ? variant.factions[versus] : variant.recommended) ?? variant.recommended);
   const factions = Object.keys(variant.factions);
 
   const edit = (next: Choices | null) =>
@@ -106,14 +122,21 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
       <WeaponHeader
         weapon={weapon}
         item={item}
-        onEdit={editing ? undefined : () => edit(fromBuild(base.build))}
+        good={!!data.good_primer}
+        onEdit={editing || primer ? undefined : () => edit(fromBuild(base.build))}
       />
-      {code && !choices && (
+      {code && !choices && faction !== PRIMER && (
         <p role="alert" className="mt-4 text-center text-soft">
           This build link could not be opened. Showing the calculated build.
         </p>
       )}
-      <BuildTabs slug={slug} factions={factions} faction={faction} level={build.combat.level} />
+      <BuildTabs
+        slug={slug}
+        factions={factions}
+        faction={primer ? PRIMER : versus}
+        level={build.combat.level}
+        primer={!!data.variants[0]?.primer}
+      />
       <div className="mt-3">
         <ElementSwitch
           elements={elements}
@@ -133,13 +156,19 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
           onReset={() => edit(null)}
         />
       )}
-      <div className={pending ? "opacity-50" : undefined} aria-busy={pending}>
-        <ScoreStrip build={build} faction={faction} baseline={live ? base.build : null} />
-      </div>
+      {primer ? (
+        <PrimerStrip primer={primer} />
+      ) : (
+        <div className={pending ? "opacity-50" : undefined} aria-busy={pending}>
+          <ScoreStrip build={build} faction={versus} baseline={live ? base.build : null} />
+        </div>
+      )}
       <div className="mt-7 flex flex-wrap items-start gap-9">
         <div className="min-w-0 flex-[999_1_760px]">
           <BuildFrame
-            title={editing ? "Your build" : faction ? `Against ${faction}` : "Recommended"}
+            title={
+              editing ? "Your build" : primer ? "Primer" : versus ? `Against ${versus}` : "Recommended"
+            }
             note={
               editing
                 ? "Your edit, calculated with the same rules as the builds on this site."
@@ -153,7 +182,9 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
               forma={forma}
               items={items}
               weaponType={weapon.weapon_type}
-              why={editing ? undefined : (id) => whyText(base, id)}
+              why={
+                editing ? undefined : (id) => (primer ? primerWhy(base, id) : whyText(base, id))
+              }
               onPick={choices ? setTarget : undefined}
             />
             <NotModelled all={data.not_modelled} build={build} />

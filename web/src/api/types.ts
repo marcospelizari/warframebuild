@@ -258,6 +258,11 @@ export interface components {
             dataset_hash: string;
             /** Elements */
             elements: components["schemas"]["ElementChoice"][];
+            /**
+             * Good Primer
+             * @default false
+             */
+            good_primer: boolean;
             /** Not Modelled */
             not_modelled: components["schemas"]["NotModelled"][];
             /** Release */
@@ -564,6 +569,26 @@ export interface components {
          * @enum {string}
          */
         Polarity: "madurai" | "naramon" | "vazarin" | "any";
+        /**
+         * Primer
+         * @description The Primer build (G49): its score is the extra follow-up damage summed over the
+         *     primed enemies; `without` values are that score too.
+         */
+        Primer: {
+            /** Area Boost */
+            area_boost: number;
+            /** Assumptions */
+            assumptions: string[];
+            /** Boost */
+            boost: number;
+            build: components["schemas"]["StoredBuild"];
+            /** Enemies */
+            enemies: number;
+            /** Radius */
+            radius: number | null;
+            /** Status Types */
+            status_types: number;
+        };
         /** Slot */
         Slot: {
             /** Index */
@@ -668,11 +693,17 @@ export interface components {
                 [key: string]: components["schemas"]["StoredBuild"];
             };
             max: components["schemas"]["StoredBuild"];
+            primer?: components["schemas"]["Primer"] | null;
             recommended: components["schemas"]["StoredBuild"];
         };
         /** WeaponItem */
         WeaponItem: {
             category: components["schemas"]["Category"];
+            /**
+             * Good Primer
+             * @default false
+             */
+            good_primer: boolean;
             /** Image */
             image: string | null;
             /** Incarnon */

@@ -175,6 +175,9 @@ class Weapon(Model):
     # The primary fire's AoE attack (name in `attacks`), for the primer's radius and the
     # enemies around the target (reference/blasts.json, G49); None: no such blast or no row.
     blast: str | None = None
+    # The primary-fire attacks the primer fires when DE's summary is another mode (Epitaph:
+    # the uncharged shot, not the charged one); [] = the scored shot (reference/blasts.json).
+    primer_shot: list[str] = []
     # Highest zoom level's bonus (wiki module Zoom, saved Sniper_Rifle); applies while aiming.
     zoom: Effects | None = None
 

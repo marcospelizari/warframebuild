@@ -15,7 +15,9 @@ from app.optimize.primer import (
     MAX_PRIMED,
     enemies_reached,
     follow_up_times,
+    good_primers,
     primed,
+    primer_shot,
 )
 from app.optimize.timeline import Timeline
 
@@ -100,3 +102,20 @@ def test_radius_mods_join_only_the_primer_pool(gamedata: GameData) -> None:
     primer = {m.name for m in pool(lenz, gamedata.mods.mods, sets, primer=True).mods}
     assert "Primed Firestorm" not in names
     assert "Primed Firestorm" in primer and names < primer
+
+
+def test_the_primer_fires_its_own_shot_when_the_row_names_one(gamedata: GameData) -> None:
+    """Epitaph: DE's numbers are the charged shot; the primer fires the uncharged one."""
+    lo = _gun(gamedata, "Torid", "Infected Clip", "Stormbringer", blast="Poison Cloud")
+    weapon = lo.weapon.model_copy(update={"primer_shot": ["Poison Cloud"]})
+    fired = primer_shot(loadout(weapon, []))
+    assert [a.name for _, a in fired.parts if a] == ["Poison Cloud"]
+    assert primer_shot(lo) is lo  # no shot named: the scored shot
+
+
+def test_good_primers_need_a_top_score_and_many_status_types() -> None:
+    """Marcos 2026-11-13: many elements and statuses make a primer, not an AoE alone."""
+    guns = {f"g{i}": (float(i), 5.0) for i in range(20)}  # top 10% = g19, g18
+    guns["aoe"] = (100.0, 2.0)  # best score, few statuses
+    assert good_primers(guns) == ["g18", "g19"]
+    assert good_primers({}) == []

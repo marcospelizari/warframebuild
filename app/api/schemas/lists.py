@@ -17,6 +17,7 @@ class WeaponItem(ApiModel):
     progenitor: bool  # Kuva/Tenet/Coda bonus element
     mastery: int  # mastery rank needed
     image: str | None  # /img URL; None when the icon is not cached
+    good_primer: bool = False  # G49: a top Primer score with many status types
 
 
 class ExcludedWeapon(ApiModel):

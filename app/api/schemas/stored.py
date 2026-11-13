@@ -20,12 +20,26 @@ class StoredBuild(ApiModel):
     build: Build
 
 
+class Primer(ApiModel):
+    """The Primer build (G49): its score is the extra follow-up damage summed over the
+    primed enemies; `without` values are that score too."""
+
+    build: StoredBuild
+    boost: float  # follow-up damage multiplier on the target
+    area_boost: float  # on an enemy around it (1 without a blast)
+    enemies: float  # enemies primed, the target included
+    radius: float | None  # m, the blast after radius mods
+    status_types: float  # different status types kept up on the target
+    assumptions: list[str]
+
+
 class VariantBuilds(ApiModel):
     element: DamageType | None  # progenitor bonus; None: the gun has none
     max: StoredBuild
     recommended: StoredBuild
     factions: dict[str, StoredBuild]
     denominators: dict[str, float]  # per enemy uniqueName: its faction build's cost (G35)
+    primer: Primer | None = None  # None in releases made before it
 
 
 class ElementChoice(ApiModel):
@@ -52,3 +66,4 @@ class BuildsResponse(ApiModel):
     elements: list[ElementChoice]  # empty without a progenitor bonus
     variants: list[VariantBuilds]  # element 1 first
     not_modelled: list[NotModelled]  # same for every build of the gun
+    good_primer: bool = False  # top Primer score with many status types (G49)
