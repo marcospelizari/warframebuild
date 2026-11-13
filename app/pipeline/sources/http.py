@@ -5,7 +5,9 @@ import urllib.error
 import urllib.request
 from collections.abc import Callable
 from email.utils import parsedate_to_datetime
+from http.client import HTTPMessage
 from importlib.metadata import version
+from typing import IO
 
 REPO_URL = "https://gitlab.com/warframebuild/warframebuild"
 USER_AGENT = f"warframeBuild/{version('warframebuild')} (+{REPO_URL})"
@@ -17,8 +19,28 @@ class DownloadError(RuntimeError):
     pass
 
 
+class _HttpsRedirects(urllib.request.HTTPRedirectHandler):
+    """A redirect may not leave https (get() checks only the first URL)."""
+
+    def redirect_request(
+        self,
+        req: urllib.request.Request,
+        fp: IO[bytes],
+        code: int,
+        msg: str,
+        headers: HTTPMessage,
+        newurl: str,
+    ) -> urllib.request.Request | None:
+        if not newurl.startswith("https://"):
+            raise DownloadError(f"GET {req.full_url}: redirect to non-https {newurl}")
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+_OPENER = urllib.request.build_opener(_HttpsRedirects)
+
+
 def _default_opener(request: urllib.request.Request, timeout: float) -> object:
-    return urllib.request.urlopen(request, timeout=timeout)  # https only, see get()
+    return _OPENER.open(request, timeout=timeout)  # https only, see get()
 
 
 class PoliteClient:

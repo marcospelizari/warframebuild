@@ -1,0 +1,16 @@
+# Only what the Dockerfile copies: no git history, wiki, tests, local environments.
+**
+!pyproject.toml
+!uv.lock
+!README.md
+!LICENSE
+!NOTICE
+!app/
+!gamedata/
+!web/
+web/node_modules/
+web/dist/
+!cache/img/
+!cache/raw/wiki/img/
+!cache/releases/
+**/__pycache__/

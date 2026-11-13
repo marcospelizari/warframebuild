@@ -9,7 +9,7 @@ from app.api import jobs
 from app.api.errors import ApiFailure
 from app.api.schemas.base import ApiError
 from app.api.schemas.stored import BuildsResponse
-from app.api.serving import served
+from app.api.serving import remember, served
 from app.gamedata.release import Release
 from app.gamedata.store import GameData
 
@@ -45,7 +45,5 @@ async def builds(slug: str, request: Request) -> Response:
     if body is None:
         request.app.state.rate_limit.check(request)
         body = await jobs.run(now.runner, jobs.builds, release, slug)
-    cache[slug] = body  # most recent last
-    while len(cache) > CACHED_GUNS:
-        cache.pop(next(iter(cache)))
+    remember(cache, slug, body, CACHED_GUNS)
     return Response(body, media_type="application/json", headers=headers)

@@ -2,9 +2,11 @@ import io
 import urllib.error
 import urllib.request
 from email.message import Message
+from http.client import HTTPMessage
 
 import pytest
 
+from app.pipeline.sources import http
 from app.pipeline.sources.http import USER_AGENT, DownloadError, PoliteClient
 
 
@@ -67,3 +69,14 @@ def test_enforces_size_cap() -> None:
 def test_refuses_plain_http() -> None:
     with pytest.raises(DownloadError, match="non-https"):
         FakeNet([]).client().get("http://x", max_bytes=10)
+
+
+def test_a_redirect_may_not_leave_https() -> None:
+    handler = http._HttpsRedirects()
+    request = urllib.request.Request("https://content.example/a")
+    with pytest.raises(DownloadError, match="non-https"):
+        handler.redirect_request(request, io.BytesIO(), 302, "Found", HTTPMessage(), "http://x/a")
+    kept = handler.redirect_request(
+        request, io.BytesIO(), 302, "Found", HTTPMessage(), "https://cdn.example/a"
+    )
+    assert kept is not None and kept.full_url == "https://cdn.example/a"
