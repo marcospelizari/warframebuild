@@ -1,0 +1,270 @@
+[
+ {
+  "armor": 0.0,
+  "bane": "corpus",
+  "faction": "Corpus",
+  "head": {
+   "critical": false,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 305370.72265625,
+  "level": 120,
+  "name": "Corpus Tech",
+  "shield": 43580.0146484375,
+  "source": "Module:Enemies/data/corpus",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/Corpus/Spaceman/AIWeek/DeployableSpacemanAgent"
+ },
+ {
+  "armor": 0.0,
+  "bane": "corpus",
+  "faction": "Corpus",
+  "head": {
+   "critical": false,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 42043.9013671875,
+  "level": 120,
+  "name": "Crewman",
+  "shield": 22976.02294921875,
+  "source": "Module:Enemies/data/corpus",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/Corpus/Spaceman/AIWeek/RifleSpacemanAgent"
+ },
+ {
+  "armor": 2700.0,
+  "bane": "grineer",
+  "faction": "Grineer",
+  "head": {
+   "critical": true,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 241312.28515625,
+  "level": 120,
+  "name": "Heavy Gunner",
+  "shield": 0.0,
+  "source": "Module:Enemies/data/grineer",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/Grineer/AIWeek/MinigunBombard"
+ },
+ {
+  "armor": 1541.1865234375,
+  "bane": "grineer",
+  "faction": "Grineer",
+  "head": {
+   "critical": true,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 84015.09765625,
+  "level": 120,
+  "name": "Lancer",
+  "shield": 0.0,
+  "source": "Module:Enemies/data/grineer",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/Grineer/AIWeek/RifleLancer"
+ },
+ {
+  "armor": 0.0,
+  "bane": "infested",
+  "faction": "Infested",
+  "head": {
+   "critical": true,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 503590.625,
+  "level": 120,
+  "name": "Ancient Healer",
+  "shield": 0.0,
+  "source": "Module:Enemies/data/infestation",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/Infested/AiWeek/Ancients/HealingAncient"
+ },
+ {
+  "armor": 0.0,
+  "bane": "infested",
+  "faction": "Infested",
+  "head": {
+   "critical": true,
+   "multiplier": 1.0,
+   "part": "Mouth"
+  },
+  "health": 100718.125,
+  "level": 120,
+  "name": "Charger",
+  "shield": 0.0,
+  "source": "Module:Enemies/data/infestation",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/Infested/AiWeek/Quadrupeds/Quadruped"
+ },
+ {
+  "armor": 0.0,
+  "bane": "orokin",
+  "faction": "Orokin",
+  "head": {
+   "critical": false,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 35556.4501953125,
+  "level": 120,
+  "name": "Corrupted Crewman",
+  "shield": 21917.7978515625,
+  "source": "Module:Enemies/data/orokin",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/Orokin/RifleSpacemanAgent"
+ },
+ {
+  "armor": 2700.0,
+  "bane": "orokin",
+  "faction": "Orokin",
+  "head": {
+   "critical": true,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 477612.65625,
+  "level": 120,
+  "name": "Corrupted Heavy Gunner",
+  "shield": 0.0,
+  "source": "Module:Enemies/data/orokin",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/Orokin/OrokinMinigunBombard"
+ },
+ {
+  "armor": 2700.0,
+  "bane": null,
+  "faction": "Scaldra",
+  "head": {
+   "critical": true,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 273049.0625,
+  "level": 120,
+  "name": "Scaldra Eradicator",
+  "shield": 0.0,
+  "source": "Module:Enemies/data/scaldra",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/WF1999Lasrian/LasrianGoonadier/LasrianGoonadier1999Agent"
+ },
+ {
+  "armor": 1541.1865234375,
+  "bane": null,
+  "faction": "Scaldra",
+  "head": {
+   "critical": true,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 105018.876953125,
+  "level": 120,
+  "name": "Scaldra Jaeger",
+  "shield": 0.0,
+  "source": "Module:Enemies/data/scaldra",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/WF1999Lasrian/LasrianRifleLancer/LasrianLancer1999Agent"
+ },
+ {
+  "armor": 2311.77978515625,
+  "bane": null,
+  "faction": "Sentient",
+  "head": {
+   "critical": true,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 339495.5078125,
+  "level": 120,
+  "name": "Battalyst",
+  "shield": 0.0,
+  "source": "Module:Enemies/data/sentient",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/Sentients/Troopers/SentientBaseTrooperAgent"
+ },
+ {
+  "armor": 2311.77978515625,
+  "bane": null,
+  "faction": "Sentient",
+  "head": {
+   "critical": true,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 339495.5078125,
+  "level": 120,
+  "name": "Conculyst",
+  "shield": 0.0,
+  "source": "Module:Enemies/data/sentient",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/Sentients/Troopers/SentientMeleeTrooperAgent"
+ },
+ {
+  "armor": 0.0,
+  "bane": null,
+  "faction": "Techrot",
+  "head": {
+   "critical": true,
+   "multiplier": 3.0,
+   "part": "Head"
+  },
+  "health": 429404.53125,
+  "level": 120,
+  "name": "Techrot Obsolyte",
+  "shield": 66638.4033203125,
+  "source": "Module:Enemies/data/techrot",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/WF1999Infested/InfestedAncient/InfestedAncient1999Agent"
+ },
+ {
+  "armor": 0.0,
+  "bane": null,
+  "faction": "Techrot",
+  "head": {
+   "critical": false,
+   "multiplier": 1.5,
+   "part": "Propane Tank"
+  },
+  "health": 85880.908203125,
+  "level": 120,
+  "name": "Techrot Volatile Galliflex",
+  "shield": 16659.600830078125,
+  "source": "Module:Enemies/data/techrot",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/WF1999Infested/InfestedVolatileRunner/InfestedVolatileRunner1999Agent"
+ },
+ {
+  "armor": 0.0,
+  "bane": "murmur",
+  "faction": "The Murmur",
+  "head": null,
+  "health": 1033247.1875,
+  "level": 120,
+  "name": "Lumbering Fragment",
+  "shield": 0.0,
+  "source": "Module:Enemies/data/themurmur",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/ManInTheWall/Octopede/Leg/BipedalLegs/MITWOctopedeBipedalLegsAgent"
+ },
+ {
+  "armor": 0.0,
+  "bane": "murmur",
+  "faction": "The Murmur",
+  "head": {
+   "critical": false,
+   "multiplier": 1.5,
+   "part": "Head"
+  },
+  "health": 2214101.09375,
+  "level": 120,
+  "name": "The Hollow Vein",
+  "shield": 0.0,
+  "source": "Module:Enemies/data/themurmur",
+  "toxin_bypasses_shield": true,
+  "unique_name": "/Lotus/Types/Enemies/ManInTheWall/Slinky/MITWSlinkyAgent"
+ }
+]

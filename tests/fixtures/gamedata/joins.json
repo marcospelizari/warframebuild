@@ -1,0 +1,132 @@
+[
+ {
+  "de_name": "Torid",
+  "unique_name": "/Lotus/Weapons/ClanTech/Bio/BioWeapon",
+  "wfcd_name": "Torid"
+ },
+ {
+  "de_name": "Ignis Wraith",
+  "unique_name": "/Lotus/Weapons/ClanTech/Chemical/FlameThrowerWraith",
+  "wfcd_name": "Ignis Wraith"
+ },
+ {
+  "de_name": "Lenz",
+  "unique_name": "/Lotus/Weapons/Corpus/Bow/Longbow/CrpBow",
+  "wfcd_name": "Lenz"
+ },
+ {
+  "de_name": "Opticor",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/CrpBFG",
+  "wfcd_name": "Opticor"
+ },
+ {
+  "de_name": "Komorex",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpSentAmlgSniper/CrpSentAmlgSniper",
+  "wfcd_name": "Komorex"
+ },
+ {
+  "de_name": "Kuva Hind",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hind/KuvaHind",
+  "wfcd_name": "Kuva Hind"
+ },
+ {
+  "de_name": "Vulkar Wraith",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/VulkarWraith",
+  "wfcd_name": "Vulkar Wraith"
+ },
+ {
+  "de_name": "Atomos",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun",
+  "wfcd_name": "Atomos"
+ },
+ {
+  "de_name": "Nunchasa",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/DuelistBow/DuelistBow",
+  "wfcd_name": "Nunchasa"
+ },
+ {
+  "de_name": "Nataruk",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep",
+  "wfcd_name": "Nataruk"
+ },
+ {
+  "de_name": "Cernos Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/PrimeCernos/PrimeCernos",
+  "wfcd_name": "Cernos Prime"
+ },
+ {
+  "de_name": "Paris Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow",
+  "wfcd_name": "Paris Prime"
+ },
+ {
+  "de_name": "Burston Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston",
+  "wfcd_name": "Burston Prime"
+ },
+ {
+  "de_name": "Cedo Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeCedo/PrimeCedoWeapon",
+  "wfcd_name": "Cedo Prime"
+ },
+ {
+  "de_name": "Soma Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle",
+  "wfcd_name": "Soma Prime"
+ },
+ {
+  "de_name": "Vectis Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle",
+  "wfcd_name": "Vectis Prime"
+ },
+ {
+  "de_name": "Rubico Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/RubicoPrime/RubicoPrimeWeapon",
+  "wfcd_name": "Rubico Prime"
+ },
+ {
+  "de_name": "Furis",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/AutoPistol",
+  "wfcd_name": "Furis"
+ },
+ {
+  "de_name": "Aksondol",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/DuelistPistols/DuelistPistols",
+  "wfcd_name": "Aksondol"
+ },
+ {
+  "de_name": "Lex Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex",
+  "wfcd_name": "Lex Prime"
+ },
+ {
+  "de_name": "Braton Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/BratonPrime",
+  "wfcd_name": "Braton Prime"
+ },
+ {
+  "de_name": "Latron Prime",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/LatronPrime",
+  "wfcd_name": "Latron Prime"
+ },
+ {
+  "de_name": "Hek",
+  "unique_name": "/Lotus/Weapons/Tenno/Shotgun/QuadShotgun",
+  "wfcd_name": "Hek"
+ },
+ {
+  "de_name": "Kunai",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai",
+  "wfcd_name": "Kunai"
+ },
+ {
+  "de_name": "Laetum",
+  "unique_name": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol",
+  "wfcd_name": "Laetum"
+ },
+ {
+  "de_name": "Onos",
+  "unique_name": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon",
+  "wfcd_name": "Onos"
+ }
+]

@@ -10,7 +10,7 @@ import uvicorn
 
 from app.api.app import create_app
 from app.optimize.search import MAX_EVALUATIONS
-from app.pipeline import build_all, check, fixtures, refresh, update
+from app.pipeline import build_all, check, fixtures, frozen_data, refresh, update
 from app.pipeline.sources.http import PoliteClient
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,7 +40,10 @@ def main(argv: list[str] | None = None) -> int:
     ref.add_argument(
         "--no-images", action="store_true", help="skip gun icon, mod and arcane picture downloads"
     )
-    sub.add_parser("fixtures", help="trim cache/raw/ into tests/fixtures/raw/")
+    sub.add_parser(
+        "fixtures",
+        help="trim cache/raw/ into tests/fixtures/raw/, gamedata/ into tests/fixtures/gamedata/",
+    )
     chk = sub.add_parser("check", help="after a game update: what changed, what to re-check")
     chk.add_argument("--offline", action="store_true", help="skip the DE/WFCD source check")
     every = sub.add_parser("build-all", help="precompute every gun's builds into a new release")
@@ -97,6 +100,7 @@ def main(argv: list[str] | None = None) -> int:
         )
     elif args.command == "fixtures":
         fixtures.write(ROOT / "cache/raw", ROOT / "tests/fixtures/raw")
+        frozen_data.write(ROOT / "gamedata", ROOT / "tests/fixtures/gamedata")
     return 0
 
 

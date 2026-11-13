@@ -1,0 +1,3158 @@
+[
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.15,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "toxin": 100.0
+    },
+    "direct_bonus": "multiplying",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.5,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Grenade Impact",
+    "shot_speed": 40.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.23
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.15,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "toxin": 40.0
+    },
+    "direct_bonus": "multiplying",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 3.0,
+     "reduction": 1.0,
+     "start": 0.0
+    },
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Poison Cloud",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.25
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": 0.2,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.29,
+    "critical_multiplier": 3.1,
+    "damage": {
+     "toxin": 51.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 8.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.39
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
+  "critical_chance": 0.15000001,
+  "critical_multiplier": 2.0,
+  "damage": {
+   "toxin": 140.0
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 1.5000001,
+  "headshot": [],
+  "magazine_size": 5,
+  "mastery_req": 4,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Bio/BioWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Torid",
+  "no_reload": false,
+  "polarities": [],
+  "reload_replaces_shot": false,
+  "reload_time": 1.7,
+  "riven_disposition": 1.2,
+  "slug": "torid",
+  "sniper_combo_min": null,
+  "status_chance": 0.23000002,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Torid.png!00_gU076-1G9miDgJJuPslshQ",
+  "trigger": "SEMI",
+  "unique_name": "/Lotus/Weapons/ClanTech/Bio/BioWeapon",
+  "weapon_type": "Launcher",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 0.5,
+    "beam_ramp_start": 0.2,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.17,
+    "critical_multiplier": 2.5,
+    "damage": {
+     "heat": 35.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 8.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.29
+   }
+  ],
+  "beam_ramp_start": 0.2,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "BEAM"
+  ],
+  "critical_chance": 0.17,
+  "critical_multiplier": 2.5,
+  "damage": {
+   "heat": 35.0
+  },
+  "exilus_polarity": "madurai",
+  "fire_rate": 8.0,
+  "headshot": [],
+  "magazine_size": 200,
+  "mastery_req": 9,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/Chemical/FlameThrower",
+   "/Lotus/Weapons/ClanTech/Chemical/FlameThrowerWraith",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Ignis Wraith",
+  "no_reload": false,
+  "polarities": [],
+  "reload_replaces_shot": false,
+  "reload_time": 1.7,
+  "riven_disposition": 1.2,
+  "slug": "ignis-wraith",
+  "sniper_combo_min": null,
+  "status_chance": 0.28999996,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/IgnisWraith.png!00_Ju4C2Bx+kraLXO6u4Z0E5Q",
+  "trigger": "HELD",
+  "unique_name": "/Lotus/Weapons/ClanTech/Chemical/FlameThrowerWraith",
+  "weapon_type": "Rifle",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": 1.2,
+    "critical_chance": 0.5,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 50.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.0,
+    "forced_procs": [
+     "impact"
+    ],
+    "multishot": 1.0,
+    "name": "Charged Shot",
+    "shot_speed": 60.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.05
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": 1.2,
+    "critical_chance": 0.5,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "cold": 10.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 7.2,
+     "reduction": 0.7,
+     "start": 0.0
+    },
+    "fire_rate": 1.0,
+    "forced_procs": [
+     "cold"
+    ],
+    "multishot": 1.0,
+    "name": "Initial Blast",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.05
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": 1.2,
+    "critical_chance": 0.5,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "blast": 660.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 7.2,
+     "reduction": 0.7,
+     "start": 0.0
+    },
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Bubble Collapse",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.05
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "CRPBOW",
+   "PROJECTILE",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
+  "critical_chance": 0.5,
+  "critical_multiplier": 2.0,
+  "damage": {
+   "cold": 10.0,
+   "impact": 50.0
+  },
+  "exilus_polarity": "madurai",
+  "fire_rate": 1.0,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Bows are aimed at heads",
+    "separate_extra": false,
+    "source": null
+   }
+  ],
+  "magazine_size": 1,
+  "mastery_req": 8,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/Bow/Longbow/CrpBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Lenz",
+  "no_reload": false,
+  "polarities": [
+   "naramon",
+   "naramon"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 0.60000002,
+  "riven_disposition": 1.2,
+  "slug": "lenz",
+  "sniper_combo_min": null,
+  "status_chance": 0.050000012,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Lenz.png!00_USf0LiP3-JpmA1JjKdsJ6w",
+  "trigger": "CHARGE",
+  "unique_name": "/Lotus/Weapons/Corpus/Bow/Longbow/CrpBow",
+  "weapon_type": "Bow",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": 2.0,
+    "critical_chance": 0.2,
+    "critical_multiplier": 2.5,
+    "damage": {
+     "impact": 100.0,
+     "puncture": 850.0,
+     "slash": 50.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.0,
+    "forced_procs": [
+     "big_stagger"
+    ],
+    "multishot": 1.0,
+    "name": "Charged Shot",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.2
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.2,
+    "critical_multiplier": 2.5,
+    "damage": {
+     "magnetic": 400.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 6.0,
+     "reduction": 0.6,
+     "start": 0.0
+    },
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Charged Shot AoE",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.2
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.2,
+    "critical_multiplier": 2.5,
+    "damage": {
+     "impact": 50.0,
+     "puncture": 425.0,
+     "slash": 25.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Quick Shot",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.2
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.2,
+    "critical_multiplier": 2.5,
+    "damage": {
+     "magnetic": 200.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 6.0,
+     "reduction": 0.6,
+     "start": 0.0
+    },
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Quick Shot AoE",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.2
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "AOE",
+   "ASSAULT_AMMO",
+   "SINGLESHOT"
+  ],
+  "critical_chance": 0.2,
+  "critical_multiplier": 2.5,
+  "damage": {
+   "impact": 100.0,
+   "puncture": 850.0,
+   "slash": 49.999954
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 1.0,
+  "headshot": [],
+  "magazine_size": 5,
+  "mastery_req": 14,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/ClanTech/LotusSpecialRifle",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/CrpBFG",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Opticor",
+  "no_reload": false,
+  "polarities": [
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 2.0,
+  "riven_disposition": 1.2,
+  "slug": "opticor",
+  "sniper_combo_min": null,
+  "status_chance": 0.19999999,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Opticor.png!00_se3FuHWDvcJ-CFico-IBGw",
+  "trigger": "CHARGE",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/CrpBFG",
+  "weapon_type": "Rifle",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.16,
+    "critical_multiplier": 2.1,
+    "damage": {
+     "impact": 9.7,
+     "puncture": 40.74,
+     "slash": 46.56
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 600.0,
+     "reduction": 0.5,
+     "start": 400.0
+    },
+    "fire_rate": 5.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": 250.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.35
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.16,
+    "critical_multiplier": 2.1,
+    "damage": {
+     "viral": 53.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 3.6,
+     "reduction": 0.4,
+     "start": 0.0
+    },
+    "fire_rate": 5.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "3.5x Zoom Radial Attack",
+    "shot_speed": null,
+    "shot_type": null,
+    "status_chance": 0.34
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
+  "critical_chance": 0.16,
+  "critical_multiplier": 2.0999999,
+  "damage": {
+   "impact": 9.6999998,
+   "puncture": 40.739998,
+   "slash": 46.560001
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 5.0000005,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
+    "source": null
+   }
+  ],
+  "magazine_size": 20,
+  "mastery_req": 8,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Corpus/LongGuns/CrpSentAmlgSniper/CrpSentAmlgSniper",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Komorex",
+  "no_reload": false,
+  "polarities": [],
+  "reload_replaces_shot": false,
+  "reload_time": 3.0,
+  "riven_disposition": 1.2,
+  "slug": "komorex",
+  "sniper_combo_min": 5,
+  "status_chance": 0.35000002,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/CrpSentAmalgSniper.png!00_NAe9w3uL1KGIeLTv8568Fw",
+  "trigger": "SEMI",
+  "unique_name": "/Lotus/Weapons/Corpus/LongGuns/CrpSentAmlgSniper/CrpSentAmlgSniper",
+  "weapon_type": "Sniper",
+  "zoom": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": "impact",
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "physical",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 1.0,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": "puncture",
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "physical",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 1.0,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": "slash",
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "physical",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 1.0,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "fire_rate",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": -0.75,
+     "while_aiming": false
+    }
+   ],
+   "note": "Komorex page, Notes: 3.5x zoom +100% Impact/Puncture/Slash, additive with physical and elemental mods; -75% fire rate, additive with mods",
+   "requires_trigger": null,
+   "support": "partial",
+   "unparsed": [
+    "3.5x zoom Viral explosion (3.5x Zoom Radial Attack) not counted until the step-8 main-attack rows"
+   ]
+  }
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": 5,
+    "burst_delay": 0.07,
+    "charge_time": null,
+    "critical_chance": 0.25,
+    "critical_multiplier": 2.1,
+    "damage": {
+     "impact": 7.5,
+     "puncture": 7.5,
+     "slash": 15.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 5.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Burst",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.33
+   },
+   {
+    "ammo_cost": 3.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.37,
+    "critical_multiplier": 2.9,
+    "damage": {
+     "impact": 18.0,
+     "puncture": 18.0,
+     "slash": 54.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 2.5,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Semi-Auto",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.21
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.21,
+    "critical_multiplier": 1.9,
+    "damage": {
+     "impact": 6.0,
+     "puncture": 6.0,
+     "slash": 18.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 10.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Auto",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.33
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": {
+   "elements": [
+    "impact",
+    "heat",
+    "cold",
+    "electricity",
+    "toxin",
+    "magnetic",
+    "radiation"
+   ],
+   "max_share": 0.6,
+   "page": "Kuva_Weapons"
+  },
+  "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
+  "critical_chance": 0.25,
+  "critical_multiplier": 2.0999999,
+  "damage": {
+   "impact": 7.5,
+   "puncture": 7.5,
+   "slash": 15.0
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 9.09091,
+  "headshot": [],
+  "magazine_size": 90,
+  "mastery_req": 15,
+  "max_rank": 40,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hind/KuvaHind",
+   "/Lotus/Weapons/Grineer/LongGuns/BurstRifle/GrnBurstRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Kuva Hind",
+  "no_reload": false,
+  "polarities": [
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 2.3,
+  "riven_disposition": 1.2,
+  "slug": "kuva-hind",
+  "sniper_combo_min": null,
+  "status_chance": 0.33000004,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/KuvaHind.png!00_4tdifZfPuvMlQURC1tzonw",
+  "trigger": "BURST",
+  "unique_name": "/Lotus/Weapons/Grineer/KuvaLich/LongGuns/Hind/KuvaHind",
+  "weapon_type": "Rifle",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.2,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 245.7,
+     "puncture": 27.3
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 600.0,
+     "reduction": 0.5,
+     "start": 400.0
+    },
+    "fire_rate": 2.0,
+    "forced_procs": [
+     "big_stagger"
+    ],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.25
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
+  "critical_chance": 0.2,
+  "critical_multiplier": 2.0,
+  "damage": {
+   "impact": 245.7,
+   "puncture": 27.300001
+  },
+  "exilus_polarity": "madurai",
+  "fire_rate": 2.0,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
+    "source": null
+   }
+  ],
+  "magazine_size": 8,
+  "mastery_req": 7,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/GrnSniperRifle",
+   "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/VulkarWraith",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Vulkar Wraith",
+  "no_reload": false,
+  "polarities": [
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 3.0,
+  "riven_disposition": 1.2,
+  "slug": "vulkar-wraith",
+  "sniper_combo_min": 2,
+  "status_chance": 0.25,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/VulkarWraith.png!00_OkdM9b4zLBHNaVQC3FVOlw",
+  "trigger": "SEMI",
+  "unique_name": "/Lotus/Weapons/Grineer/LongGuns/GrineerSniperRifle/VulkarWraith",
+  "weapon_type": "Sniper",
+  "zoom": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "headshot_multiplier",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.7,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  }
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": 0.2,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.15,
+    "critical_multiplier": 1.7,
+    "damage": {
+     "heat": 29.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 8.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.21
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.18,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "impact": 100.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.5,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form",
+    "shot_speed": 50.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.41
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.18,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "blast": 450.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 7.9,
+     "reduction": 0.8,
+     "start": 0.0
+    },
+    "fire_rate": 1.5,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form Radial Attack",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.41
+   }
+  ],
+  "beam_ramp_start": 0.2,
+  "bonus_element": null,
+  "category": "secondary",
+  "compatibility_tags": [
+   "BEAM"
+  ],
+  "critical_chance": 0.15000001,
+  "critical_multiplier": 1.7,
+  "damage": {
+   "heat": 29.0
+  },
+  "exilus_polarity": "madurai",
+  "fire_rate": 8.0,
+  "headshot": [],
+  "magazine_size": 70,
+  "mastery_req": 5,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolBeam"
+  ],
+  "multishot": 1.0,
+  "name": "Atomos",
+  "no_reload": false,
+  "polarities": [
+   "vazarin"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 2.0,
+  "riven_disposition": 1.2,
+  "slug": "atomos",
+  "sniper_combo_min": null,
+  "status_chance": 0.20999998,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Atomos.png!00_zc-bgD-Oj6nINEZiJLRcbA",
+  "trigger": "HELD",
+  "unique_name": "/Lotus/Weapons/Grineer/Pistols/HeatGun/GrnHeatGun",
+  "weapon_type": "Pistol",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": 0.6,
+    "critical_chance": 0.32,
+    "critical_multiplier": 2.4,
+    "damage": {
+     "cold": 200.0,
+     "puncture": 200.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Charged Shot",
+    "shot_speed": 70.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.32
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": 1.5,
+    "critical_chance": 0.36,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "cold": 500.0,
+     "puncture": 250.0,
+     "slash": 250.0
+    },
+    "direct_bonus": "multiplying",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Alt-Fire",
+    "shot_speed": 85.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.36
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "OMICRUS",
+   "PROJECTILE"
+  ],
+  "critical_chance": 0.31999999,
+  "critical_multiplier": 2.4000001,
+  "damage": {
+   "cold": 200.0,
+   "puncture": 200.0
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 1.0,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Bows are aimed at heads",
+    "separate_extra": false,
+    "source": null
+   }
+  ],
+  "magazine_size": 1,
+  "mastery_req": 14,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/DuelistBow/DuelistBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusWep",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Nunchasa",
+  "no_reload": false,
+  "polarities": [
+   "madurai",
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 0.60000002,
+  "riven_disposition": 1.2,
+  "slug": "nunchasa",
+  "sniper_combo_min": null,
+  "status_chance": 0.31999999,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/DuelistBow.png!00_maYTU6wn-H5Ma8O31KFJBQ",
+  "trigger": "CHARGE",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/DuelistBow/DuelistBow",
+  "weapon_type": "Bow",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.2,
+    "critical_multiplier": 1.8,
+    "damage": {
+     "puncture": 405.0,
+     "slash": 45.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 0.667,
+    "forced_procs": [
+     "impact"
+    ],
+    "multishot": 1.0,
+    "name": "Quick Shot",
+    "shot_speed": 140.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.3
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": 1.0,
+    "critical_chance": 0.5,
+    "critical_multiplier": 2.2,
+    "damage": {
+     "puncture": 648.0,
+     "slash": 252.0
+    },
+    "direct_bonus": "multiplying",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 0.667,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Charged Shot",
+    "shot_speed": 70.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.5
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": 0.7,
+    "critical_chance": 0.6,
+    "critical_multiplier": 2.4,
+    "damage": {
+     "puncture": 648.0,
+     "slash": 252.0
+    },
+    "direct_bonus": "multiplying",
+    "extra_headshot": -2.0,
+    "falloff": null,
+    "fire_rate": 0.667,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Perfect Shot",
+    "shot_speed": 70.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.5
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "BATTERY",
+   "OMICRUS",
+   "PROJECTILE"
+  ],
+  "critical_chance": 0.2,
+  "critical_multiplier": 1.8,
+  "damage": {
+   "puncture": 648.0,
+   "slash": 251.99997
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 0.66666669,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Bows are aimed at heads",
+    "separate_extra": false,
+    "source": null
+   }
+  ],
+  "magazine_size": 1,
+  "mastery_req": 0,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep",
+   "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusWep",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Nataruk",
+  "no_reload": false,
+  "polarities": [
+   "madurai",
+   "madurai",
+   "madurai",
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 0.6,
+  "riven_disposition": 1.2,
+  "slug": "nataruk",
+  "sniper_combo_min": null,
+  "status_chance": 0.5,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/OmicrusBow.png!00_I2+VO91uI6PPa9uonf1+rA",
+  "trigger": "CHARGE",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/Omicrus/OmicrusPlayerWep",
+  "weapon_type": "Bow",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.35,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 82.8,
+     "puncture": 4.6,
+     "slash": 4.6
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": 0.5,
+    "falloff": null,
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 3.0,
+    "name": "Uncharged Horizontal/Vertical Shot",
+    "shot_speed": 70.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.3
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": 0.5,
+    "critical_chance": 0.35,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 165.6,
+     "puncture": 9.2,
+     "slash": 9.2
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": 0.5,
+    "falloff": null,
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 3.0,
+    "name": "Charged Horizontal/Vertical Shot",
+    "shot_speed": 95.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.3
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
+  "critical_chance": 0.34999999,
+  "critical_multiplier": 2.0,
+  "damage": {
+   "impact": 165.59999,
+   "puncture": 9.1999998,
+   "slash": 9.2000027
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 1.0,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Bows are aimed at heads",
+    "separate_extra": true,
+    "source": null
+   }
+  ],
+  "magazine_size": 1,
+  "mastery_req": 12,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/AntlerBow/AntlerBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/Bows/PrimeCernos/PrimeCernos",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
+  "multishot": 3.0,
+  "name": "Cernos Prime",
+  "no_reload": false,
+  "polarities": [
+   "madurai",
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 0.64999998,
+  "riven_disposition": 1.2,
+  "slug": "cernos-prime",
+  "sniper_combo_min": null,
+  "status_chance": 0.30000001,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/CernosPrime.png!00_f+XRxlTM-LboaeRlHyyGzg",
+  "trigger": "CHARGE",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/PrimeCernos/PrimeCernos",
+  "weapon_type": "Bow",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.45,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 9.0,
+     "puncture": 153.0,
+     "slash": 18.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Uncharged Shot",
+    "shot_speed": 70.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.2
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": 0.5,
+    "critical_chance": 0.45,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 9.0,
+     "puncture": 288.0,
+     "slash": 63.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Charged Shot",
+    "shot_speed": 95.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.2
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": 0.8,
+    "critical_chance": 0.5,
+    "critical_multiplier": 3.4,
+    "damage": {
+     "heat": 420.0,
+     "impact": 100.0
+    },
+    "direct_bonus": "multiplying",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form Charged Shot",
+    "shot_speed": 85.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.2
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
+  "critical_chance": 0.44999999,
+  "critical_multiplier": 2.0,
+  "damage": {
+   "impact": 9.0,
+   "puncture": 288.0,
+   "slash": 63.000004
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 1.0,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Bows are aimed at heads",
+    "separate_extra": false,
+    "source": null
+   },
+   {
+    "flat": true,
+    "form": "incarnon",
+    "reason": "Bows are aimed at heads",
+    "separate_extra": false,
+    "source": null
+   }
+  ],
+  "magazine_size": 1,
+  "mastery_req": 8,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Bows/HuntingBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusBow",
+   "/Lotus/Weapons/Tenno/Bows/LotusLongBow",
+   "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Paris Prime",
+  "no_reload": false,
+  "polarities": [
+   "naramon",
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 0.69999999,
+  "riven_disposition": 1.2,
+  "slug": "paris-prime",
+  "sniper_combo_min": null,
+  "status_chance": 0.19999999,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/ParisPrime.png!00_tM4ynZP7MWkllgYC9ZFoNw",
+  "trigger": "CHARGE",
+  "unique_name": "/Lotus/Weapons/Tenno/Bows/PrimeHuntingBow",
+  "weapon_type": "Bow",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": 3,
+    "burst_delay": 0.04,
+    "charge_time": null,
+    "critical_chance": 0.18,
+    "critical_multiplier": 1.8,
+    "damage": {
+     "impact": 13.8,
+     "puncture": 13.8,
+     "slash": 18.4
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 5.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.3
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.28,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "heat": 13.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 20.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.3
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.28,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "heat": 13.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 2.0,
+     "reduction": 1.0,
+     "start": 0.0
+    },
+    "fire_rate": 20.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form Radial Attack",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.3
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
+  "critical_chance": 0.18000001,
+  "critical_multiplier": 1.8,
+  "damage": {
+   "impact": 13.8,
+   "puncture": 13.8,
+   "slash": 18.4
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 9.375,
+  "headshot": [],
+  "magazine_size": 45,
+  "mastery_req": 12,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/BurstRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Burston Prime",
+  "no_reload": false,
+  "polarities": [
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 2.0,
+  "riven_disposition": 1.2,
+  "slug": "burston-prime",
+  "sniper_combo_min": null,
+  "status_chance": 0.30000001,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/BurstonPrime.png!00_EJ07-uFoUAKwJKFpVh3U0w",
+  "trigger": "BURST",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeBurston/PrimeBurston",
+  "weapon_type": "Rifle",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.24,
+    "critical_multiplier": 2.4,
+    "damage": {
+     "puncture": 32.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 52.0,
+     "reduction": 0.9667,
+     "start": 26.0
+    },
+    "fire_rate": 4.5,
+    "forced_procs": [],
+    "multishot": 7.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.02
+   },
+   {
+    "ammo_cost": 0.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.1,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "slash": 20.0
+    },
+    "direct_bonus": "multiplying",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Alt-Fire Glaive",
+    "shot_speed": 75.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.5
+   },
+   {
+    "ammo_cost": 0.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.1,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "blast": 10.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 6.0,
+     "reduction": 0.0,
+     "start": 0.0
+    },
+    "fire_rate": 1.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Glaive Radial Attack",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.5
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "PROJECTILE"
+  ],
+  "critical_chance": 0.23999999,
+  "critical_multiplier": 2.4000001,
+  "damage": {
+   "puncture": 32.0
+  },
+  "exilus_polarity": "madurai",
+  "fire_rate": 4.5,
+  "headshot": [],
+  "magazine_size": 40,
+  "mastery_req": 15,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeCedo/PrimeCedoWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/TnAlchemistShotgun/TnAlchemistShotgun",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusStandardShotgun"
+  ],
+  "multishot": 7.0,
+  "name": "Cedo Prime",
+  "no_reload": false,
+  "polarities": [
+   "madurai",
+   "madurai",
+   "vazarin"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 1.8,
+  "riven_disposition": 1.2,
+  "slug": "cedo-prime",
+  "sniper_combo_min": null,
+  "status_chance": 0.019999981,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/CedoPrime.png!00_3kRkcZqEqP0I8LGsnQHm2Q",
+  "trigger": "AUTO",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeCedo/PrimeCedoWeapon",
+  "weapon_type": "Shotgun",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.3,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "impact": 1.2,
+     "puncture": 4.8,
+     "slash": 6.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 15.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Fully Spooled",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.1
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.1,
+    "critical_multiplier": 3.4,
+    "damage": {
+     "impact": 1.08,
+     "puncture": 5.04,
+     "slash": 11.88
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 0.0,
+     "reduction": 0.0,
+     "start": 0.0
+    },
+    "fire_rate": 7.0,
+    "forced_procs": [],
+    "multishot": 8.0,
+    "name": "Incarnon Form",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.03
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
+  "critical_chance": 0.30000001,
+  "critical_multiplier": 3.0,
+  "damage": {
+   "impact": 1.2,
+   "puncture": 4.8000002,
+   "slash": 6.0
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 15.000001,
+  "headshot": [],
+  "magazine_size": 200,
+  "mastery_req": 7,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/TennoAR"
+  ],
+  "multishot": 1.0,
+  "name": "Soma Prime",
+  "no_reload": false,
+  "polarities": [
+   "madurai",
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 3.0,
+  "riven_disposition": 1.2,
+  "slug": "soma-prime",
+  "sniper_combo_min": null,
+  "status_chance": 0.10000002,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/SomaPrime.png!00_SS8MHJGKlL6dMyxh5WJnVA",
+  "trigger": "AUTO",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeSoma/PrimeSomaRifle",
+  "weapon_type": "Rifle",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.3,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 140.0,
+     "puncture": 157.5,
+     "slash": 52.5
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 600.0,
+     "reduction": 0.5,
+     "start": 400.0
+    },
+    "fire_rate": 2.67,
+    "forced_procs": [
+     "stagger"
+    ],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.3
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.35,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "cold": 150.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.333,
+    "forced_procs": [
+     "cold"
+    ],
+    "multishot": 1.0,
+    "name": "Incarnon Form",
+    "shot_speed": 300.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.3
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.35,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "cold": 150.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 6.7,
+     "reduction": 0.0,
+     "start": 0.0
+    },
+    "fire_rate": 1.333,
+    "forced_procs": [
+     "cold"
+    ],
+    "multishot": 1.0,
+    "name": "Incarnon Form Headshot AoE",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.3
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.35,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "cold": 25.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 0.15,
+     "reduction": 0.0,
+     "start": 0.0
+    },
+    "fire_rate": 1.333,
+    "forced_procs": [
+     "cold"
+    ],
+    "multishot": 1.0,
+    "name": "Incarnon Form Embed AoE",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.3
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SINGLESHOT",
+   "SNIPER_AMMO"
+  ],
+  "critical_chance": 0.30000001,
+  "critical_multiplier": 2.0,
+  "damage": {
+   "impact": 140.0,
+   "puncture": 157.5,
+   "slash": 52.499992
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 2.6666667,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
+    "source": null
+   },
+   {
+    "flat": false,
+    "form": "incarnon",
+    "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
+    "source": null
+   }
+  ],
+  "magazine_size": 2,
+  "mastery_req": 14,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/BaseTennoSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/TennoSniperRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Vectis Prime",
+  "no_reload": false,
+  "polarities": [
+   "madurai",
+   "naramon"
+  ],
+  "reload_replaces_shot": true,
+  "reload_time": 0.85000002,
+  "riven_disposition": 1.2,
+  "slug": "vectis-prime",
+  "sniper_combo_min": 5,
+  "status_chance": 0.30000001,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/VectisPrime.png!00_TACdXT7VxD1YOTpo4aJW3A",
+  "trigger": "SEMI",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/PrimeVectis/PrimeVectisRifle",
+  "weapon_type": "Sniper",
+  "zoom": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "headshot_multiplier",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.6,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  }
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.38,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "impact": 149.6,
+     "puncture": 28.1,
+     "slash": 9.3
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 600.0,
+     "reduction": 0.5,
+     "start": 400.0
+    },
+    "fire_rate": 3.67,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.16
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SNIPER_AMMO"
+  ],
+  "critical_chance": 0.38,
+  "critical_multiplier": 3.0,
+  "damage": {
+   "impact": 149.60001,
+   "puncture": 28.050001,
+   "slash": 9.3499908
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 3.6666667,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Sniper rifles are aimed at heads",
+    "separate_extra": false,
+    "source": null
+   }
+  ],
+  "magazine_size": 5,
+  "mastery_req": 12,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LongGuns/FiveShotSniper/FiveShotSniper",
+   "/Lotus/Weapons/Tenno/LongGuns/RubicoPrime/RubicoPrimeWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LotusLongGunSniperRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusSniperRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Rubico Prime",
+  "no_reload": false,
+  "polarities": [
+   "madurai",
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 2.0,
+  "riven_disposition": 1.2,
+  "slug": "rubico-prime",
+  "sniper_combo_min": 1,
+  "status_chance": 0.15999997,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/RubicoPrime.png!00_DxIa667qvWUX1HU+3rJ6BQ",
+  "trigger": "SEMI",
+  "unique_name": "/Lotus/Weapons/Tenno/LongGuns/RubicoPrime/RubicoPrimeWeapon",
+  "weapon_type": "Sniper",
+  "zoom": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "critical_damage",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.5,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  }
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.05,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 3.0,
+     "puncture": 14.0,
+     "slash": 3.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 10.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.12
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": 0.2,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.26,
+    "critical_multiplier": 3.4,
+    "damage": {
+     "heat": 100.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 16.0,
+     "reduction": 0.48,
+     "start": 10.0
+    },
+    "fire_rate": 12.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.24
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "secondary",
+  "compatibility_tags": [],
+  "critical_chance": 0.050000001,
+  "critical_multiplier": 2.0,
+  "damage": {
+   "impact": 3.0,
+   "puncture": 14.0,
+   "slash": 2.9999995
+  },
+  "exilus_polarity": "madurai",
+  "fire_rate": 10.000001,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Incarnon perk Headcracker (EVO 4): On Headshot: +5% Fire Rate for 2s, stacks 10x",
+    "separate_extra": false,
+    "source": "Incarnon_Evolutions"
+   },
+   {
+    "flat": false,
+    "form": "incarnon",
+    "reason": "Incarnon perk Headcracker (EVO 4): On Headshot: +5% Fire Rate for 2s, stacks 10x",
+    "separate_extra": false,
+    "source": "Incarnon_Evolutions"
+   }
+  ],
+  "magazine_size": 35,
+  "mastery_req": 1,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/AutoPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun"
+  ],
+  "multishot": 1.0,
+  "name": "Furis",
+  "no_reload": false,
+  "polarities": [
+   "naramon"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 1.4,
+  "riven_disposition": 1.2,
+  "slug": "furis",
+  "sniper_combo_min": null,
+  "status_chance": 0.12,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Furis.png!00_arVhDhLUywqC4l-h-ulJHQ",
+  "trigger": "AUTO",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistol/AutoPistol",
+  "weapon_type": "Pistol",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.24,
+    "critical_multiplier": 2.6,
+    "damage": {
+     "cold": 70.0,
+     "puncture": 70.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 4.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": 110.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.22
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "SEMI_AUTO"
+  ],
+  "critical_chance": 0.23999999,
+  "critical_multiplier": 2.5999999,
+  "damage": {
+   "cold": 70.0,
+   "puncture": 70.0
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 4.0,
+  "headshot": [],
+  "magazine_size": 8,
+  "mastery_req": 14,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusAkimbo",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistols/DuelistPistols/DuelistPistols"
+  ],
+  "multishot": 1.0,
+  "name": "Aksondol",
+  "no_reload": false,
+  "polarities": [
+   "vazarin"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 2.5999999,
+  "riven_disposition": 1.2,
+  "slug": "aksondol",
+  "sniper_combo_min": null,
+  "status_chance": 0.22000003,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/DuelistPistols.png!00_4HdxA3LvFVpj97P1ESEykQ",
+  "trigger": "SEMI",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/DuelistPistols/DuelistPistols",
+  "weapon_type": "Pistol",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.25,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 18.0,
+     "puncture": 144.0,
+     "slash": 18.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 2.08,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.25
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.35,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "impact": 400.0,
+     "radiation": 800.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 18.0,
+     "reduction": 0.3333,
+     "start": 10.0
+    },
+    "fire_rate": 0.67,
+    "forced_procs": [
+     "impact"
+    ],
+    "multishot": 1.0,
+    "name": "Incarnon Form",
+    "shot_speed": 110.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.44
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "secondary",
+  "compatibility_tags": [
+   "SEMI_AUTO"
+  ],
+  "critical_chance": 0.25,
+  "critical_multiplier": 2.0,
+  "damage": {
+   "impact": 18.0,
+   "puncture": 144.0,
+   "slash": 17.999994
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 2.0833335,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Incarnon perk Executioner's Dawn (EVO 4): On Equip: +100% Headshot Damage for 4s",
+    "separate_extra": false,
+    "source": "Incarnon_Evolutions"
+   },
+   {
+    "flat": true,
+    "form": "incarnon",
+    "reason": "Incarnon perk Executioner's Dawn (EVO 4): On Equip: +100% Headshot Damage for 4s",
+    "separate_extra": false,
+    "source": "Incarnon_Evolutions"
+   }
+  ],
+  "magazine_size": 8,
+  "mastery_req": 8,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/HeavyPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex"
+  ],
+  "multishot": 1.0,
+  "name": "Lex Prime",
+  "no_reload": false,
+  "polarities": [
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 2.3499999,
+  "riven_disposition": 1.2,
+  "slug": "lex-prime",
+  "sniper_combo_min": null,
+  "status_chance": 0.25,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/LexPrime.png!00_kYTVvNsdYXoUoTeBYKLlTw",
+  "trigger": "SEMI",
+  "unique_name": "/Lotus/Weapons/Tenno/Pistols/PrimeLex/PrimeLex",
+  "weapon_type": "Pistol",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.12,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 1.75,
+     "puncture": 12.25,
+     "slash": 21.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 9.58,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.26
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.3,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "impact": 28.0,
+     "puncture": 2.8,
+     "slash": 39.2
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 5.67,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.3
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.3,
+    "critical_multiplier": 3.0,
+    "damage": {
+     "heat": 70.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 3.0,
+     "reduction": 0.1,
+     "start": 0.0
+    },
+    "fire_rate": 5.67,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form AoE",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.3
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO"
+  ],
+  "critical_chance": 0.12,
+  "critical_multiplier": 2.0,
+  "damage": {
+   "impact": 1.75,
+   "puncture": 12.25,
+   "slash": 21.0
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 9.583334,
+  "headshot": [],
+  "magazine_size": 75,
+  "mastery_req": 8,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/BratonPrime",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/Rifle"
+  ],
+  "multishot": 1.0,
+  "name": "Braton Prime",
+  "no_reload": false,
+  "polarities": [],
+  "reload_replaces_shot": false,
+  "reload_time": 2.1500001,
+  "riven_disposition": 1.2,
+  "slug": "braton-prime",
+  "sniper_combo_min": null,
+  "status_chance": 0.25999999,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/BratonPrime.png!00_PCAHas9fsU8PVac+9N1lRg",
+  "trigger": "AUTO",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/BratonPrime",
+  "weapon_type": "Rifle",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.22,
+    "critical_multiplier": 2.8,
+    "damage": {
+     "impact": 9.0,
+     "puncture": 72.0,
+     "slash": 9.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 4.17,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.26
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.44,
+    "critical_multiplier": 3.4,
+    "damage": {
+     "impact": 50.0
+    },
+    "direct_bonus": "multiplying",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 3.33,
+    "forced_procs": [
+     "impact"
+    ],
+    "multishot": 1.0,
+    "name": "Incarnon Form",
+    "shot_speed": 120.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.3
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.44,
+    "critical_multiplier": 3.4,
+    "damage": {
+     "heat": 70.0,
+     "puncture": 70.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 4.0,
+     "reduction": 0.2,
+     "start": 0.0
+    },
+    "fire_rate": 3.33,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form AoE",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.3
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "ASSAULT_AMMO",
+   "SEMI_AUTO"
+  ],
+  "critical_chance": 0.22,
+  "critical_multiplier": 2.8,
+  "damage": {
+   "impact": 9.0,
+   "puncture": 72.0,
+   "slash": 8.9999971
+  },
+  "exilus_polarity": "madurai",
+  "fire_rate": 4.166667,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Incarnon perk Deadhead (EVO 4): +100% Headshot Damage",
+    "separate_extra": false,
+    "source": "Incarnon_Evolutions"
+   },
+   {
+    "flat": false,
+    "form": "incarnon",
+    "reason": "Incarnon perk Deadhead (EVO 4): +100% Headshot Damage",
+    "separate_extra": false,
+    "source": "Incarnon_Evolutions"
+   }
+  ],
+  "magazine_size": 15,
+  "mastery_req": 10,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Rifle/LatronPrime",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusAssaultStandardRifle",
+   "/Lotus/Weapons/Tenno/Rifle/LotusRifle",
+   "/Lotus/Weapons/Tenno/Rifle/SemiAutoRifle"
+  ],
+  "multishot": 1.0,
+  "name": "Latron Prime",
+  "no_reload": false,
+  "polarities": [
+   "madurai",
+   "naramon"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 2.4000001,
+  "riven_disposition": 1.2,
+  "slug": "latron-prime",
+  "sniper_combo_min": null,
+  "status_chance": 0.25999999,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/LatronPrime.png!00_YVT4BFb0qZrMl-fv1VYvVQ",
+  "trigger": "SEMI",
+  "unique_name": "/Lotus/Weapons/Tenno/Rifle/LatronPrime",
+  "weapon_type": "Rifle",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.1,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 11.25,
+     "puncture": 48.75,
+     "slash": 15.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 20.0,
+     "reduction": 0.8,
+     "start": 10.0
+    },
+    "fire_rate": 2.17,
+    "forced_procs": [],
+    "multishot": 7.0,
+    "name": "Normal Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.107
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "primary",
+  "compatibility_tags": [
+   "SEMI_AUTO",
+   "SINGLESHOT"
+  ],
+  "critical_chance": 0.1,
+  "critical_multiplier": 2.0,
+  "damage": {
+   "impact": 11.25,
+   "puncture": 48.75,
+   "slash": 15.000004
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 2.1666667,
+  "headshot": [],
+  "magazine_size": 4,
+  "mastery_req": 4,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/LotusLongGun",
+   "/Lotus/Weapons/Tenno/Shotgun/LotusShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/QuadShotgun",
+   "/Lotus/Weapons/Tenno/Shotgun/QuadShotgunBase"
+  ],
+  "multishot": 7.0,
+  "name": "Hek",
+  "no_reload": false,
+  "polarities": [],
+  "reload_replaces_shot": false,
+  "reload_time": 2.0,
+  "riven_disposition": 1.2,
+  "slug": "hek",
+  "sniper_combo_min": null,
+  "status_chance": 0.10714287,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/PrimaryWeapons/Weapons/Hek.png!00_IyNMZLrLYJub+eCvoxh0ag",
+  "trigger": "SEMI",
+  "unique_name": "/Lotus/Weapons/Tenno/Shotgun/QuadShotgun",
+  "weapon_type": "Shotgun",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.08,
+    "critical_multiplier": 1.6,
+    "damage": {
+     "impact": 4.6,
+     "puncture": 34.5,
+     "slash": 6.9
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 3.33,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": 70.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.08
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.18,
+    "critical_multiplier": 2.0,
+    "damage": {
+     "impact": 8.0,
+     "puncture": 14.0,
+     "slash": 18.0
+    },
+    "direct_bonus": "multiplying",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 3.33,
+    "forced_procs": [],
+    "multishot": 2.0,
+    "name": "Incarnon Form",
+    "shot_speed": 70.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.16
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "secondary",
+  "compatibility_tags": [
+   "PROJECTILE",
+   "THROWN"
+  ],
+  "critical_chance": 0.079999998,
+  "critical_multiplier": 1.6,
+  "damage": {
+   "impact": 4.5999999,
+   "puncture": 34.5,
+   "slash": 6.8999987
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 3.3333335,
+  "headshot": [],
+  "magazine_size": 10,
+  "mastery_req": 0,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Akimbo/LotusThrown",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai"
+  ],
+  "multishot": 1.0,
+  "name": "Kunai",
+  "no_reload": false,
+  "polarities": [
+   "madurai",
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 0.75,
+  "riven_disposition": 1.2,
+  "slug": "kunai",
+  "sniper_combo_min": null,
+  "status_chance": 0.079999983,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/Kunai.png!00_GNWwK7HWnW3AYckq6UnnTw",
+  "trigger": "AUTO",
+  "unique_name": "/Lotus/Weapons/Tenno/ThrowingWeapons/Kunai",
+  "weapon_type": "Throwing",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.22,
+    "critical_multiplier": 2.2,
+    "damage": {
+     "impact": 64.0,
+     "slash": 96.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 2.5,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": 100.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.22
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.22,
+    "critical_multiplier": 2.2,
+    "damage": {
+     "impact": 100.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 6.67,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form",
+    "shot_speed": 40.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.22
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.22,
+    "critical_multiplier": 2.2,
+    "damage": {
+     "radiation": 300.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 2.0,
+     "reduction": 0.2,
+     "start": 0.0
+    },
+    "fire_rate": 6.67,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Auto Radial Attack",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.22
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "secondary",
+  "compatibility_tags": [
+   "AOE",
+   "PROJECTILE"
+  ],
+  "critical_chance": 0.22,
+  "critical_multiplier": 2.2,
+  "damage": {
+   "impact": 64.0,
+   "slash": 96.0
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 2.5000002,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Incarnon perk Caput Mortuum (EVO 4): +50% Headshot Damage",
+    "separate_extra": false,
+    "source": "Incarnon_Evolutions"
+   },
+   {
+    "flat": false,
+    "form": "incarnon",
+    "reason": "Incarnon perk Caput Mortuum (EVO 4): +50% Headshot Damage",
+    "separate_extra": false,
+    "source": "Incarnon_Evolutions"
+   }
+  ],
+  "magazine_size": 12,
+  "mastery_req": 14,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolGun",
+   "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol"
+  ],
+  "multishot": 1.0,
+  "name": "Laetum",
+  "no_reload": false,
+  "polarities": [
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 2.0,
+  "riven_disposition": 1.2,
+  "slug": "laetum",
+  "sniper_combo_min": null,
+  "status_chance": 0.22000003,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/ZarimanHeavyPistol.png!00_1hBWd52+GqZa3vGplXCTbQ",
+  "trigger": "SEMI",
+  "unique_name": "/Lotus/Weapons/Tenno/Zariman/Pistols/HeavyPistol/ZarimanHeavyPistol",
+  "weapon_type": "Pistol",
+  "zoom": null
+ },
+ {
+  "attacks": [
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.26,
+    "critical_multiplier": 2.4,
+    "damage": {
+     "puncture": 220.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 1.4,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Normal Attack",
+    "shot_speed": 100.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.22
+   },
+   {
+    "ammo_cost": 1.0,
+    "beam_ramp_start": 0.2,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.14,
+    "critical_multiplier": 1.6,
+    "damage": {
+     "radiation": 30.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 2.0,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form Held Damage",
+    "shot_speed": 40.0,
+    "shot_type": "Projectile",
+    "status_chance": 0.18
+   },
+   {
+    "ammo_cost": 50.0,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.38,
+    "critical_multiplier": 3.2,
+    "damage": {
+     "heat": 2200.0
+    },
+    "direct_bonus": "adding",
+    "extra_headshot": null,
+    "falloff": null,
+    "fire_rate": 0.25,
+    "forced_procs": [
+     "heat"
+    ],
+    "multishot": 1.0,
+    "name": "Incarnon Form Charge Attack",
+    "shot_speed": null,
+    "shot_type": "Hit-Scan",
+    "status_chance": 0.26
+   },
+   {
+    "ammo_cost": null,
+    "beam_ramp_start": null,
+    "burst_count": null,
+    "burst_delay": null,
+    "charge_time": null,
+    "critical_chance": 0.38,
+    "critical_multiplier": 3.2,
+    "damage": {
+     "heat": 1100.0
+    },
+    "direct_bonus": "none",
+    "extra_headshot": null,
+    "falloff": {
+     "end": 3.0,
+     "reduction": 0.3,
+     "start": 0.0
+    },
+    "fire_rate": 0.25,
+    "forced_procs": [],
+    "multishot": 1.0,
+    "name": "Incarnon Form Charge Radial Attack",
+    "shot_speed": null,
+    "shot_type": "AoE",
+    "status_chance": 0.26
+   }
+  ],
+  "beam_ramp_start": null,
+  "bonus_element": null,
+  "category": "secondary",
+  "compatibility_tags": [
+   "BEAM",
+   "PROJECTILE"
+  ],
+  "critical_chance": 0.25999999,
+  "critical_multiplier": 2.4000001,
+  "damage": {
+   "puncture": 220.0
+  },
+  "exilus_polarity": "naramon",
+  "fire_rate": 1.4000001,
+  "headshot": [
+   {
+    "flat": false,
+    "form": "normal",
+    "reason": "Incarnon perk Sequential Skullbuster (EVO 5): On Consecutive Weakpoint Hits: +30% Headshot Damage, stacks 4x",
+    "separate_extra": false,
+    "source": "Incarnon_Evolutions"
+   },
+   {
+    "flat": false,
+    "form": "incarnon",
+    "reason": "Incarnon perk Sequential Skullbuster (EVO 5): On Consecutive Weakpoint Hits: +30% Headshot Damage, stacks 4x",
+    "separate_extra": false,
+    "source": "Incarnon_Evolutions"
+   }
+  ],
+  "magazine_size": 20,
+  "mastery_req": 14,
+  "max_rank": 30,
+  "mod_classes": [
+   "/Lotus/Types/Game/LotusWeapon",
+   "/Lotus/Weapons/Tenno/Pistol/LotusPistol",
+   "/Lotus/Weapons/Tenno/Pistol/LotusSinglePistolOther",
+   "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon"
+  ],
+  "multishot": 1.0,
+  "name": "Onos",
+  "no_reload": false,
+  "polarities": [
+   "madurai"
+  ],
+  "reload_replaces_shot": false,
+  "reload_time": 2.0,
+  "riven_disposition": 1.2,
+  "slug": "onos",
+  "sniper_combo_min": null,
+  "status_chance": 0.22000003,
+  "texture_location": "/Lotus/Interface/Icons/StoreIcons/Weapons/SecondaryWeapons/Weapons/EntratiWristGun.png!00_Fk6EPRi37VvdBvMQzqpeWA",
+  "trigger": "AUTO",
+  "unique_name": "/Lotus/Weapons/Thanotech/EntratiWristGun/EntratiWristGunWeapon",
+  "weapon_type": "Pistol",
+  "zoom": null
+ }
+]

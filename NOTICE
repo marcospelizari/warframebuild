@@ -22,6 +22,9 @@ used under the Warframe Content Policy (https://www.warframe.com/en/contentpolic
 for this free, non-commercial project. Item images are loaded from the same
 Public Export.
 
+tests/fixtures/gamedata/ is a frozen copy of part of gamedata/ used by tests;
+every notice in this file about a gamedata/ file applies to its copy there.
+
 -------------------------------------------------------------------------------
 Warframe Community Developers (WFCD) data
 -------------------------------------------------------------------------------
