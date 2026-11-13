@@ -32,6 +32,7 @@ Game data: `gamedata/` is generated and committed. To rebuild it:
 uv run wfb refresh            # downloads DE Public Export + WFCD into cache/raw/, rebuilds gamedata/
 uv run wfb refresh --offline  # rebuild from files already in cache/raw/
 uv run wfb check              # after a game update: changed sources, rows and wiki pages to re-check
+uv run wfb sample             # search 26 test guns like build-all, publish nothing: check a change in minutes
 uv run wfb build-all          # precompute builds into cache/releases/ (guns whose inputs changed)
 uv run wfb update             # after a game update: refresh + build-all, then what needs you
 ```
@@ -49,6 +50,10 @@ Checks (the same as CI):
 uv run ruff check . && uv run ruff format --check . && uv run mypy && uv run pytest
 cd web && npm run lint && npm run typecheck && npm test
 ```
+
+Test data: `tests/fixtures/` holds trimmed source files and a frozen slice of `gamedata/`,
+so a game update does not change test results. After a `gamedata/` schema change, regenerate
+both with `uv run wfb fixtures`.
 
 After an API change, regenerate the frontend types:
 
