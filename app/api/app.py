@@ -16,9 +16,9 @@ from pydantic import BaseModel
 from starlette.exceptions import HTTPException
 from starlette.types import Scope
 
-from app.api import errors, pages, serving
+from app.api import errors, headers, pages, serving
 from app.api.rate_limit import RateLimit
-from app.api.routes import builds, calc, img, mods, updates, weapons
+from app.api.routes import builds, calc, img, mods, sitemap, updates, weapons
 from app.gamedata.release import Release, open_current
 from app.gamedata.store import GameData, load
 
@@ -36,19 +36,23 @@ TIMEOUT_S = 5.0  # a request stops waiting; a job at 2x restarts the pool
 log = logging.getLogger(__name__)
 
 
+NOT_PAGES = frozenset({"api", "img", "assets"})
+
+
 class Health(BaseModel):
     status: str
     version: str
 
 
 class SpaFiles(StaticFiles):
-    """Unknown paths outside /api get index.html, so client routes survive a reload (F1)."""
+    """Unknown page paths get index.html, so client routes survive a reload (F1); a missing
+    file under /api, /img or /assets stays a 404 (an old asset must never cache as HTML)."""
 
     async def get_response(self, path: str, scope: Scope) -> Response:
         try:
             return await super().get_response(path, scope)
         except HTTPException as error:
-            if error.status_code != 404 or path == "api" or path.startswith("api/"):
+            if error.status_code != 404 or path.split("/", 1)[0] in NOT_PAGES:
                 raise
             return await super().get_response("index.html", scope)
 
@@ -103,12 +107,14 @@ def create_app(
         serving.Served(data, release, app.state.pool.runner(data, GAMEDATA)) if data else None
     )
     errors.install(app)
+    headers.install(app, https=(app.state.public_origin or "").startswith("https://"))
     app.include_router(calc.router)
     app.include_router(builds.router)
     app.include_router(weapons.router)
     app.include_router(mods.router)
     app.include_router(img.router)
     app.include_router(updates.router)
+    app.include_router(sitemap.router)
 
     @app.get("/api/health")
     def health() -> Health:

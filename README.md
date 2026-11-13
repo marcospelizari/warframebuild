@@ -61,6 +61,22 @@ After an API change, regenerate the frontend types:
 uv run wfb openapi > web/openapi.json && (cd web && npm run gen:types)
 ```
 
+## Run the container
+
+The image holds the built frontend, the app and one release. Release, pictures and card
+art live in `cache/` (not in git), so build it on the machine that ran `wfb build-all`, and
+push it only to a private registry:
+
+```sh
+podman build --format docker --build-arg RELEASE="$(cat cache/releases/current)" -t warframebuild .
+podman run --rm --read-only --tmpfs /tmp --cap-drop=ALL --security-opt=no-new-privileges \
+  -p 127.0.0.1:8000:8000 warframebuild --public-origin https://example.org
+```
+
+Behind a reverse proxy (TLS ends there), add `--forwarded-allow-ips <proxy address>` so the
+rate limit sees each visitor's address. `--public-origin https://…` also turns on HSTS.
+After a new `wfb build-all`, build and start a new image. No access log is written.
+
 ## Repository
 
 Developed on GitLab; GitHub is a read-only mirror.

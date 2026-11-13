@@ -8,8 +8,11 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^\\.gitlab-ci\\.yml$"],
-      "matchStrings": ["UV_VERSION: \"(?<currentValue>[^\"]+)\""],
+      "fileMatch": ["^\\.gitlab-ci\\.yml$", "^Dockerfile$"],
+      "matchStrings": [
+        "UV_VERSION: \"(?<currentValue>[^\"]+)\"",
+        "ARG UV_VERSION=(?<currentValue>\\S+)"
+      ],
       "depNameTemplate": "uv",
       "datasourceTemplate": "pypi"
     }

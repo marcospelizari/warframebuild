@@ -34,6 +34,11 @@ def main(argv: list[str] | None = None) -> int:
         help="site address for canonical and link-preview URLs, e.g. https://example.org "
         "(default: the address each request came to)",
     )
+    serve.add_argument(
+        "--forwarded-allow-ips",
+        help="proxy addresses whose X-Forwarded-For is trusted for the client address "
+        "(rate limit); default $FORWARDED_ALLOW_IPS, else 127.0.0.1 and ::1",
+    )
     sub.add_parser("openapi", help="print the OpenAPI schema (input for web/src/api/types.ts)")
     ref = sub.add_parser("refresh", help="download sources, rebuild and validate gamedata/")
     ref.add_argument("--offline", action="store_true", help="use files already in cache/raw/")
@@ -67,7 +72,15 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command == "serve":
         app = create_app(public_origin=args.public_origin)
-        uvicorn.run(app, host=args.host, port=args.port)
+        # No access log: visitor addresses are not stored (S9); errors still go to stderr.
+        uvicorn.run(
+            app,
+            host=args.host,
+            port=args.port,
+            forwarded_allow_ips=args.forwarded_allow_ips,
+            access_log=False,
+            server_header=False,
+        )
     elif args.command == "openapi":
         json.dump(create_app().openapi(), sys.stdout, indent=2, sort_keys=True)
         sys.stdout.write("\n")
