@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from typing import Any
 
 from app.pipeline.build.inputs import require_verified
-from app.pipeline.errors import RefreshError
+from app.pipeline.errors import DataGap, RefreshError
 from app.pipeline.sources.wiki_weapon_data import AttackData, WeaponData
 
 FILE = "fire_overrides.json"
@@ -96,22 +96,19 @@ def fire_rate(d: dict[str, Any], data: WeaponData | None) -> float | None:
         return float(rate)
     if data is not None and data.no_shot_delay and d.get("trigger") == CHARGE:
         return None
-    raise RefreshError(
-        f"{d['name']} ({d['uniqueName']}): no usable fire rate in DE and no 'no delay' "
-        f"rule in the wiki module. Add an `exclude` entry with the reason to "
-        f"reference/{FILE} until real values are known."
+    raise DataGap(
+        "no usable fire rate in the game files and no 'no delay' rule in the wiki weapon "
+        f"data (or an `exclude` entry in reference/{FILE} until real values are known)"
     )
 
 
-def attack_data(
-    name: str, attack_names: list[str], data: WeaponData | None
-) -> dict[str, AttackData | None]:
+def attack_data(attack_names: list[str], data: WeaponData | None) -> dict[str, AttackData | None]:
     """Module values per WFCD attack; None for every attack of a gun the modules lack."""
     if data is None:
         return dict.fromkeys(attack_names)
     if sorted(attack_names) != sorted(data.attacks):
-        raise RefreshError(
-            f"{name}: WFCD attacks {sorted(attack_names)} differ from the wiki module "
+        raise DataGap(
+            f"WFCD attacks {sorted(attack_names)} differ from the wiki module "
             f"{sorted(data.attacks)}; check both before trusting forced procs"
         )
     return {n: data.attacks[n] for n in attack_names}

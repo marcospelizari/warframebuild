@@ -30,9 +30,12 @@ class DirectBonusTable:
                 raise RefreshError(f"reference/{FILE} {uid}: {error}") from error
         return cls(weapons)
 
-    def check(self, attack_names: dict[str, list[str]]) -> None:
-        """Every row names a gun in the data and attacks that gun has."""
+    def check(self, attack_names: dict[str, list[str]], excluded: set[str]) -> None:
+        """Every row names a gun in the data and attacks that gun has; rows of `excluded`
+        guns wait until they are built."""
         for uid, attacks in self.weapons.items():
+            if uid in excluded:
+                continue
             if uid not in attack_names:
                 raise RefreshError(f"reference/{FILE}: unknown gun {uid}")
             missing = sorted(set(attacks) - set(attack_names[uid]))

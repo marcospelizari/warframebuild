@@ -1,8 +1,10 @@
 import pytest
 
 from app.pipeline.errors import RefreshError
-from app.pipeline.sources.wiki_incarnon import clean, genesis, native
-from tests.conftest import GENESIS_STUB, LAETUM_STUB
+from app.pipeline.sources import wiki_local
+from app.pipeline.sources.wiki_incarnon import NATIVE_FEED, clean, genesis, native, native_stems
+from app.pipeline.sources.wiki_local import Page
+from tests.conftest import GENESIS_STUB, LAETUM_STUB, ROOT
 
 
 def test_genesis_fills_values_per_variant() -> None:
@@ -36,3 +38,13 @@ def test_clean_markup() -> None:
     assert clean("'''+20%''' [[Status Chance|status]] {{D|Heat}} [[File:x.png|64px]]") == (
         "+20% status Heat"
     )
+
+
+def test_native_pages_come_from_the_saved_page_list() -> None:
+    """U7: a new native Incarnon gun needs its saved page and a wiki_pages.json row, no code."""
+    pages = wiki_local.pages(ROOT / "reference")
+    stems = native_stems(pages)
+    assert {"Laetum", "Onos", "Thalys"} <= set(stems)
+    assert "Incarnon_Evolutions" not in stems  # Genesis table, read separately
+    new = Page("New_Gun", "New Gun", "high", [NATIVE_FEED])
+    assert "New_Gun" in native_stems([*pages, new])

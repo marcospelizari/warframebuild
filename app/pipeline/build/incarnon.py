@@ -8,16 +8,18 @@ from typing import Any
 from app.gamedata.models import Incarnon, Perk, Weapon
 from app.parse.incarnon import parse_perk
 from app.pipeline.build.effects import Overrides
+from app.pipeline.build.gaps import Gaps
 from app.pipeline.build.inputs import require_verified
-from app.pipeline.errors import RefreshError
+from app.pipeline.errors import DataGap, RefreshError
 from app.pipeline.sources.wiki_incarnon import RawPerk
 
 FILE = "main_attack.json"
 
 
 def build(
-    raw: list[RawPerk], guns: list[Weapon], overrides: Overrides, table: dict[str, Any]
+    raw: list[RawPerk], guns: list[Weapon], overrides: Overrides, table: dict[str, Any], gaps: Gaps
 ) -> list[Incarnon]:
+    """A gun with perks but no main_attack row is a gap (new gun: excluded, U7)."""
     by_name = {w.name.casefold(): w for w in guns}
     perks: dict[str, list[Perk]] = defaultdict(list)
     for r in raw:
@@ -30,7 +32,12 @@ def build(
         perks[gun.unique_name].append(
             Perk(tier=r.tier, name=r.name, form=form, text=text, effects=effects)
         )
-    rows = _rows(table, {w.unique_name: w for w in guns}, set(perks))
+    rows: dict[str, dict[str, Any]] = table.get("weapons", {})
+    for uid in sorted(perks.keys() - rows.keys()):
+        gun = next(w for w in guns if w.unique_name == uid)
+        gaps.exclude(uid, gun.name, DataGap(f"Incarnon perks but no row in reference/{FILE}"))
+        del perks[uid]
+    _check(rows, {w.unique_name: w for w in guns}, set(perks) | gaps.ids)
     names = {w.unique_name: w.name for w in guns}
     return [
         Incarnon(
@@ -49,15 +56,14 @@ def build(
     ]
 
 
-def _rows(
-    table: dict[str, Any], guns: dict[str, Weapon], incarnon: set[str]
-) -> dict[str, dict[str, Any]]:
-    rows: dict[str, dict[str, Any]] = table.get("weapons", {})
-    missing = sorted(guns[u].name for u in incarnon - rows.keys())
-    stray = sorted(rows.keys() - incarnon)
-    if missing or stray:
-        raise RefreshError(f"reference/{FILE}: no row for {missing}; rows without perks {stray}")
+def _check(rows: dict[str, dict[str, Any]], guns: dict[str, Weapon], known: set[str]) -> None:
+    """Rows of guns with perks are valid; rows of excluded guns (in `known`) are kept."""
+    stray = sorted(rows.keys() - known)
+    if stray:
+        raise RefreshError(f"reference/{FILE}: rows without perks {stray}")
     for uid, row in rows.items():
+        if uid not in guns:
+            continue  # excluded gun: its row is checked once it is built
         require_verified(row, FILE, uid)
         parts, flat = row.get("incarnon"), row.get("no_multishot", [])
         hits = row.get("hits", {})  # part -> hits per shot (Vectis embed, PLAN G75)
@@ -80,4 +86,3 @@ def _rows(
             and isinstance(row.get("note"), str | None)
         ):
             raise RefreshError(f"reference/{FILE} {guns[uid].name}: invalid row {row}")
-    return rows

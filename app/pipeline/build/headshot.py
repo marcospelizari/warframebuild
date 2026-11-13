@@ -22,9 +22,14 @@ HEAD_KEYS = {"name", "multiplier", "critical", "source", "verified"}
 
 
 def apply(
-    table: dict[str, Any], guns: list[Weapon], incarnon: set[str], titles: dict[str, str]
+    table: dict[str, Any],
+    guns: list[Weapon],
+    incarnon: set[str],
+    titles: dict[str, str],
+    excluded: set[str],
 ) -> tuple[list[Weapon], ReferenceHead]:
-    """`titles`: saved page stem -> canonical wiki title (reference/wiki_pages.json)."""
+    """`titles`: saved page stem -> canonical wiki title (reference/wiki_pages.json);
+    rows of `excluded` guns are kept for when they are built."""
     classes: dict[str, Any] = table.get("classes", {})
     rows: dict[str, Any] = table.get("weapons", {})
     flats: dict[str, Any] = table.get("flat_heads", {})
@@ -36,11 +41,14 @@ def apply(
     for key, row, allowed_keys in keyed:
         _check_row(key, row, allowed_keys, titles)
     unknown_types = sorted(classes.keys() - {w.weapon_type for w in guns})
-    unknown_guns = sorted((rows.keys() | flats.keys() | separate.keys()) - by_id.keys())
+    unknown_guns = sorted((rows.keys() | flats.keys() | separate.keys()) - by_id.keys() - excluded)
     if unknown_types or unknown_guns:
         raise RefreshError(
             f"reference/{FILE}: unknown classes {unknown_types}, guns {unknown_guns}"
         )
+    rows, flats, separate = (
+        {k: r for k, r in t.items() if k in by_id} for t in (rows, flats, separate)
+    )
     for uid in rows:
         if by_id[uid].weapon_type in classes:
             raise RefreshError(f"reference/{FILE} {by_id[uid].name}: already covered by class row")

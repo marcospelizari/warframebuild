@@ -69,8 +69,11 @@ class Overrides:
         except (ValidationError, ValueError, KeyError) as error:
             raise RefreshError(f"reference/overrides.json {unique_name}: {error}") from error
 
-    def check_all_used(self) -> None:
-        unused = sorted(self._entries.keys() - self._used)
+    def check_all_used(self, excluded: set[str]) -> None:
+        """Entries of `excluded` guns or arcanes (`<uid>` or `<uid>#<perk>`) wait unused."""
+        unused = sorted(
+            k for k in self._entries.keys() - self._used if k.split("#", 1)[0] not in excluded
+        )
         if unused:
             raise RefreshError(
                 f"reference/overrides.json entries match no mod, arcane or perk: {unused}"

@@ -68,7 +68,9 @@ workload are in `bench/README.md` (step 4.5 spike; step 8 re-measures with the r
 - Wiki pages and export-plus files are not fetched automatically. They are saved by hand and
   parsed locally.
 - `wfb refresh` turns the downloads into validated, versioned data in `gamedata/`. `wfb check`
-  reports which sources changed after a game update.
+  reports which sources changed after a game update. A new gun or arcane whose data is not
+  complete yet (for example not in WFCD) is left out with its reason; one the current data
+  already has fails the refresh instead, so a broken source never removes guns from the site.
 - The site never contacts these sources at runtime.
 - Data, reference tables and computed builds are published together as one release; a failed
   or interrupted build keeps the previous release in service.

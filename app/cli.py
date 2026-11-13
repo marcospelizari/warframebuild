@@ -126,6 +126,7 @@ def run_check(*, offline: bool) -> list[str]:
     lines += check.stale_lines(check.stale_rows(rows, meta.changed_on), meta.changed_on)
     lines += check.wiki_lines(paths.raw, paths.reference)
     lines += check.export_plus_lines(paths.raw)
+    lines += [f"no builds for {e.name}: {e.reason}" for e in meta.excluded_weapons]  # U7
     if changes:
         lines.append("next: `uv run wfb refresh`, then re-check the rows it lists")
     return lines

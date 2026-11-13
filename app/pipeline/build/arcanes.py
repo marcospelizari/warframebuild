@@ -6,7 +6,8 @@ from pydantic import ValidationError
 
 from app.gamedata.models import Arcane
 from app.pipeline.build.effects import Overrides
-from app.pipeline.errors import RefreshError
+from app.pipeline.build.gaps import Gaps
+from app.pipeline.errors import DataGap, RefreshError
 from app.pipeline.sources.de_text import clean_levels
 from app.pipeline.sources.wfcd import GUN_ARCANE_TYPES, OTHER_ARCANE_TYPES
 
@@ -18,9 +19,10 @@ def build(
     wfcd_arcanes: list[dict[str, Any]],
     overrides: Overrides,
     textures: dict[str, str | None],
+    gaps: Gaps,
 ) -> list[Arcane]:
-    """Every DE arcane must be typed by WFCD: one WFCD has not listed yet fails the
-    refresh instead of silently missing from the optimizer."""
+    """Every DE arcane must be typed by WFCD: a new one WFCD has not listed yet is left out
+    with its reason in `gaps` (U8), never silently missing from the optimizer."""
     slots: dict[str, str] = {}
     seen: set[str] = set()
     unknown = set()
@@ -49,12 +51,8 @@ def build(
     missing = sorted(slots.keys() - de.keys())
     if missing:
         raise RefreshError(f"gun arcanes in WFCD without DE level stats: {missing}")
-    untyped = sorted(de.keys() - seen)
-    if untyped:
-        raise RefreshError(
-            f"DE arcanes not in WFCD Arcanes.json yet (slot unknown): {untyped}; "
-            "wait for WFCD or rerun later"
-        )
+    for uid in sorted(de.keys() - seen):  # slot unknown until WFCD lists it (U8)
+        gaps.exclude(uid, de[uid]["name"], DataGap("in the game files, not in WFCD's data yet"))
     try:
         return [_arcane(de[uid], slots[uid], overrides, textures.get(uid)) for uid in sorted(slots)]
     except ValidationError as error:

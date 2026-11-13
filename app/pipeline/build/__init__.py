@@ -30,6 +30,7 @@ from app.pipeline.build import (
 from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.effects import Overrides, SwitchedOff
 from app.pipeline.build.fire import FireOverrides
+from app.pipeline.build.gaps import Established, Gaps
 from app.pipeline.build.inputs import as_list, records, reference
 from app.pipeline.errors import RefreshError
 from app.pipeline.sources import (
@@ -62,9 +63,14 @@ class Dataset:
     factions: list[FactionModifiers]
     status_rules: StatusRules
     overrides_off: list[SwitchedOff]  # entry text changed since written (U2)
+    excluded_arcanes: list[Exclusion]  # new arcanes with incomplete data (U8)
 
 
-def build(raw_dir: Path, reference_dir: Path) -> Dataset:
+def build(raw_dir: Path, reference_dir: Path, established: Established | None = None) -> Dataset:
+    """`established` guns and arcanes must build; new ones with incomplete data are excluded
+    with a reason (U7/U8). None: every entry must build."""
+    gun_gaps = Gaps(established.weapons if established else None)
+    arcane_gaps = Gaps(established.arcanes if established else None)
     de = raw_dir / "de"
     wfcd = [
         *as_list(load_json(raw_dir / "wfcd/Primary.json")),
@@ -87,12 +93,14 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         DirectBonusTable.load(reference(reference_dir / "galvanized_behaviour.json")),
         wiki_progenitor.load(raw_dir / "wiki"),
         overrides,
+        gun_gaps,
     )
     gun_list = weapon_classes.apply(
-        reference(reference_dir / weapon_classes.FILE), gun_list, weapon_parents
+        reference(reference_dir / weapon_classes.FILE), gun_list, weapon_parents, gun_gaps
     )
     weapon_tags.check_known(
-        tag_rows, {w.unique_name for w in gun_list} | {e.unique_name for e in excluded}
+        tag_rows,
+        {w.unique_name for w in gun_list} | {e.unique_name for e in excluded} | gun_gaps.ids,
     )
     mod_list, sets, denied = mods.build(
         load_json(de / "ExportUpgrades_en.json"),
@@ -108,19 +116,24 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         wfcd_arcanes,
         overrides,
         textures,
+        arcane_gaps,
     )
+    saved_pages = wiki_local.pages(reference_dir)
     perks = incarnon.build(
-        wiki_incarnon.load(raw_dir / "wiki"),
+        wiki_incarnon.load(raw_dir / "wiki", wiki_incarnon.native_stems(saved_pages)),
         gun_list,
         overrides,
         reference(reference_dir / "main_attack.json"),
+        gun_gaps,
     )
-    titles = {p.stem: p.title for p in wiki_local.pages(reference_dir)}
+    gun_list = [w for w in gun_list if w.unique_name not in gun_gaps.ids]
+    titles = {p.stem: p.title for p in saved_pages}
     gun_list, head = headshot.apply(
         reference(reference_dir / "headshot.json"),
         gun_list,
         {i.unique_name for i in perks},
         titles,
+        gun_gaps.ids,
     )
     enemy_list, factions = enemies.build(
         reference(reference_dir / "enemies.json"),
@@ -131,7 +144,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         titles,
     )
     rules = status_rules.build(reference(reference_dir / status_rules.FILE), titles)
-    overrides.check_all_used()
+    overrides.check_all_used(gun_gaps.ids | arcane_gaps.ids)
     _check_arcane_classes(arcane_list, gun_list)
     if not gun_list or not mod_list or not arcane_list:
         raise RefreshError(
@@ -140,7 +153,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         )
     return Dataset(
         gun_list,
-        excluded,
+        sorted(excluded + gun_gaps.excluded, key=lambda e: e.unique_name),
         mod_list,
         sets,
         denied,
@@ -153,6 +166,7 @@ def build(raw_dir: Path, reference_dir: Path) -> Dataset:
         factions,
         rules,
         overrides.switched_off,
+        arcane_gaps.excluded,
     )
 
 

@@ -6,10 +6,11 @@ from pathlib import Path
 
 from app.gamedata import store
 from app.gamedata.changes import Changes, read_changes
-from app.gamedata.models import Meta, SourceRecord
+from app.gamedata.models import Exclusion, Meta, SourceRecord
 from app.pipeline import changes, check, images, publish
 from app.pipeline.build import build
 from app.pipeline.build.effects import SwitchedOff
+from app.pipeline.build.gaps import Established
 from app.pipeline.sources import (
     SourceFile,
     de_export,
@@ -57,6 +58,7 @@ class Report:
     image_failures: list[str] = field(default_factory=list)
     found: Changes | None = None  # entry changes since the previous dataset (U1)
     overrides_off: list[SwitchedOff] = field(default_factory=list)  # U2
+    excluded_arcanes: list[Exclusion] = field(default_factory=list)  # U8: until WFCD lists them
 
     def needs_you(self) -> list[str]:
         """Hand work this refresh found, one line each (U12); [] when nothing needs a person."""
@@ -72,6 +74,7 @@ class Report:
             for e in self.meta.excluded_weapons
             if e.unique_name not in known
         ]
+        out += [f"{e.name} (arcane) left out: {e.reason}" for e in self.excluded_arcanes]
         if self.touched:
             out.append(f"re-check {len(self.touched)} reference rows (full report)")
         if self.wiki:
@@ -160,7 +163,7 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
         saving = saved_until_failure(paths.raw, fetched)
     with saving as downloaded:
         files = sorted(downloaded + saved_files, key=lambda f: f.path)
-        dataset = build(paths.raw, paths.reference)
+        dataset = build(paths.raw, paths.reference, Established.of(previous))
         meta = publish.write(
             dataset,
             [_record(f) for f in files],
@@ -186,6 +189,7 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
         patch=changes.summary_lines(found, report_path, dataset.overrides_off),
         found=found,
         overrides_off=dataset.overrides_off,
+        excluded_arcanes=dataset.excluded_arcanes,
         touched=check.touched_rows(reference_rows, diff),
         support=check.support_lines(dataset),
         untagged=check.untagged_lines(dataset)
