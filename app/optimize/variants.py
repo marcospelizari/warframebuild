@@ -12,8 +12,8 @@ from app.domain.effects import DamageType
 from app.domain.elements import ELEMENTS
 from app.gamedata.models import Weapon
 from app.gamedata.store import GameData
-from app.optimize.scoring import Objective, best_combat, build_loadout
-from app.optimize.search import MAX_EVALUATIONS, Result, rounded
+from app.optimize.scoring import Objective, build_loadout
+from app.optimize.search import Result, rounded
 
 OPTIMIZED = 2
 
@@ -28,11 +28,6 @@ def elements(weapon: Weapon) -> list[DamageType]:
     """Elemental bonuses the gun can roll, in its listed order (Impact left out)."""
     rolls = weapon.bonus_element.elements if weapon.bonus_element else []
     return [e for e in rolls if e in ELEMENTS]
-
-
-def rank(data: GameData, weapon: Weapon, budget: int = MAX_EVALUATIONS) -> list[Ranked]:
-    found = [Ranked(e, best_combat(data, weapon, bonus=e, budget=budget)) for e in elements(weapon)]
-    return ranked(weapon, found)
 
 
 def ranked(weapon: Weapon, found: list[Ranked]) -> list[Ranked]:

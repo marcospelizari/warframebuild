@@ -37,13 +37,13 @@ def run(
     busy: dict[str, float] = {}
     lines = search_pool.search(data, gamedata, slugs, workers, budget, report, busy)
     minutes = (time.monotonic() - started) / 60
-    # Search time per gun, spread over the workers; the sample's special cases are slower
-    # than most guns, so this errs high.
+    # Search time spread evenly over the workers: no waiting counted (worker start, a gun's
+    # next round, the last guns), but the sample's special cases are slower than most guns.
     estimate = sum(busy.values()) / len(slugs) * len(data.weapons) / workers / 3600
     return [
         *lines,
         f"sample: {len(slugs)} guns in {minutes:.1f} min; a full build-all of "
-        f"{len(data.weapons)} guns takes at most about {estimate:.1f} h with {workers} workers",
+        f"{len(data.weapons)} guns takes about {estimate:.1f} h with {workers} workers",
     ]
 
 

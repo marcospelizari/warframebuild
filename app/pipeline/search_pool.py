@@ -70,6 +70,7 @@ def _scheduled(
     running: dict[Future[tuple[Found, float]], tuple[str, int]] = {}
 
     def queue(slug: str, batch: list[Task]) -> None:
+        assert batch, f"{slug}: empty round"  # would drop the gun from the release silently
         answers[slug] = [None] * len(batch)
         ready.extendleft(reversed([(slug, i, t) for i, t in enumerate(batch)]))
 

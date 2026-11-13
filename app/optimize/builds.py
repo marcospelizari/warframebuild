@@ -7,7 +7,7 @@ faction builds are element 1's with the element swapped (`what_if`, not optimize
 
 from collections.abc import Generator, Sequence
 from dataclasses import dataclass
-from typing import Literal, cast
+from typing import Literal
 
 from app.domain.effects import DamageType
 from app.gamedata.builds import Build, ElementRow, Variant, WeaponBuilds
@@ -113,14 +113,14 @@ def plan(data: GameData, weapon: Weapon) -> Plan:
     last = yield [*(WhatIf(base, r.element) for r in order), *swaps]
     variants = [_variant(top, top_max, recs[top], by)]
     if second:
-        swapped = {f: x.build for f, x in zip(factions, last[len(order) :], strict=True)}
+        swapped = {f: _build_of(x) for f, x in zip(factions, last[len(order) :], strict=True)}
         variants.append(
             Variant(
                 element=second,
                 max=_build_of(done[-1]),
                 recommended=_build_of(recs[second]),
-                factions=cast(dict[str, Build], swapped),
-                denominators=_denominators(cast(dict[str, Build], swapped)),
+                factions=swapped,
+                denominators=_denominators(swapped),
             )
         )
     rows = [
@@ -128,7 +128,7 @@ def plan(data: GameData, weapon: Weapon) -> Plan:
             element=r.element,
             rank=i + 1,
             searched=rounded(r.recommended.score),
-            what_if=cast(float, x.value),
+            what_if=_value(x),
             optimized=i < OPTIMIZED,
         )
         for i, (r, x) in enumerate(zip(order, last[: len(order)], strict=True))
@@ -165,6 +165,11 @@ def _scope(weapon: Weapon) -> list[str]:
 def _result(f: Found) -> Result:
     assert f.result is not None
     return f.result
+
+
+def _value(f: Found) -> float:
+    assert f.value is not None
+    return f.value
 
 
 def _build_of(f: Found) -> Build:
