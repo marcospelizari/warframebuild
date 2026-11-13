@@ -21,6 +21,7 @@ TABLE = ArchonShards(
                 effect=Effect(stat=Stat.CRITICAL_CHANCE, value=0.5),
                 tauforged=0.75,
                 at_cap="at its cap",
+                needs_status=DamageType.HEAT,
                 source=SRC,
             )
         ],
@@ -57,9 +58,18 @@ def test_buffs_apply_to_their_weapon_slot_only() -> None:
 
 def test_candidates_include_colours_counted_by_a_buff() -> None:
     assert TABLE.candidates("primary") == [Shard.CRIMSON, Shard.AZURE, Shard.VIOLET]
-    assert TABLE.candidates("secondary") == [Shard.TOPAZ]
+    assert TABLE.candidates("secondary", {DamageType.HEAT}) == [Shard.TOPAZ]
 
 
 def test_conditions_of_buffs_counted_at_cap_once() -> None:
-    assert TABLE.conditions([Shard.TOPAZ, Shard.TOPAZ], "secondary") == ["at its cap"]
-    assert TABLE.conditions([Shard.TOPAZ], "primary") == []
+    heat = {DamageType.HEAT}
+    assert TABLE.conditions([Shard.TOPAZ, Shard.TOPAZ], "secondary", heat) == ["at its cap"]
+    assert TABLE.conditions([Shard.TOPAZ], "primary", heat) == []
+
+
+def test_a_buff_needing_a_status_counts_only_when_the_gun_applies_it() -> None:
+    """PLAN G91: Topaz needs kills on enemies with Heat; without Heat it gives nothing."""
+    assert TABLE.effects([Shard.TOPAZ], "secondary", False) == []
+    assert TABLE.candidates("secondary") == []
+    [crit] = TABLE.effects([Shard.TOPAZ], "secondary", False, {DamageType.HEAT})
+    assert crit.value == 0.5

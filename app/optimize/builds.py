@@ -14,6 +14,7 @@ from app.gamedata.builds import Build, ElementRow, PrimerNumbers, Variant, Weapo
 from app.gamedata.enemies import Enemy
 from app.gamedata.models import Arcane, Mod, Perk, Weapon
 from app.gamedata.store import GameData
+from app.optimize import shards
 from app.optimize.combat import combat
 from app.optimize.forma import forma_layout, stored_forma
 from app.optimize.primer import numbers, primed
@@ -258,6 +259,12 @@ def _build(
         forma=stored_forma(forma_layout(weapon, r.mods, r.exilus)),
         costs=costs,
         without=_without(data, weapon, r, bonus, objective),
+        shards=shards.advice(
+            build_loadout(data, weapon, r.mods, r.exilus, r.picks, bonus),
+            data.archon_shards,
+            data.status_rules,
+            objective,
+        ),
     )
 
 

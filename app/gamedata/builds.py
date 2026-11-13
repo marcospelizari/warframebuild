@@ -4,6 +4,7 @@ from typing import Literal
 
 from pydantic import Field
 
+from app.domain.archon_shards import Shard
 from app.domain.effects import DamageType
 from app.domain.polarity import Polarity
 from app.gamedata.models import Model
@@ -23,6 +24,20 @@ class Forma(Model):
     capacity: int
 
 
+class ShardStep(Model):
+    shard: Shard
+    score: float  # the build's score with this shard and the ones before it
+
+
+class ShardAdvice(Model):
+    """Shards beside a build, slot by slot (G91, optimize.shards): each next slot takes the
+    shard that gains most on top of the earlier ones; stops when no shard gains."""
+
+    normal: list[ShardStep]
+    tauforged: list[ShardStep]
+    conditions: list[str]  # what buffs counted at their cap need (Topaz)
+
+
 class Build(Model):
     mods: list[str]  # uniqueNames, slot order
     exilus: str | None
@@ -37,6 +52,7 @@ class Build(Model):
     # F8: score with that mod, exilus or arcane (uniqueName) removed, the rest re-scored
     # (no new search); empty in releases made before it.
     without: dict[str, float] = Field(default_factory=dict)
+    shards: ShardAdvice | None = None  # None in releases made before G91
 
 
 class PrimerNumbers(Model):

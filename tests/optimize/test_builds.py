@@ -90,6 +90,15 @@ def test_max_build_has_why_values_too(gamedata: GameData) -> None:
     )
 
 
+def test_every_stored_build_carries_shard_advice(gamedata: GameData) -> None:
+    """G91: shards beside the build, scored in the build's own metric; mods unchanged."""
+    v = weapon_builds(gamedata, _weapon(gamedata, "Soma Prime"), BUDGET).variants[0]
+    builds = [v.max, v.recommended, *v.factions.values(), v.primer]
+    for b in builds:
+        assert b is not None and b.shards is not None
+    assert v.recommended.shards and v.recommended.shards.normal[0].score > v.recommended.score
+
+
 def test_every_variant_gets_a_primer_build(gamedata: GameData) -> None:
     """G49: every gun, every optimized element; no faction mods, no enemy costs."""
     soma = weapon_builds(gamedata, _weapon(gamedata, "Soma Prime"), BUDGET)

@@ -23,7 +23,7 @@
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "f7abd0378ddd7a9c",
+ "dataset_hash": "c4c80fafd70875e3",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -278,6 +278,12 @@
    "url": "https://wiki.warframe.com/w/Corrosive_Damage"
   },
   {
+   "path": "wiki/Corrosive_Projection.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "e49221a8ca5e0278",
+   "url": "https://wiki.warframe.com/w/Corrosive_Projection"
+  },
+  {
    "path": "wiki/Corrupted.wikitext",
    "retrieved": "2026-11-07",
    "sha256_16": "f479f6f6aa78fe12",
@@ -330,6 +336,12 @@
    "retrieved": "2026-11-08",
    "sha256_16": "5b50c548f677e4d0",
    "url": "https://wiki.warframe.com/w/Damage_over_Time"
+  },
+  {
+   "path": "wiki/Dead_Eye.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "3e9727138d1f62a0",
+   "url": "https://wiki.warframe.com/w/Dead_Eye"
   },
   {
    "path": "wiki/Electricity_Damage.wikitext",
@@ -674,6 +686,12 @@
    "url": "https://wiki.warframe.com/w/Phenmor"
   },
   {
+   "path": "wiki/Pistol_Amp.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "1de000fde8fe030a",
+   "url": "https://wiki.warframe.com/w/Pistol_Amp"
+  },
+  {
    "path": "wiki/Pistol_Mods.wikitext",
    "retrieved": "2026-11-10",
    "sha256_16": "155096c127cf9597",
@@ -728,6 +746,12 @@
    "url": "https://wiki.warframe.com/w/Rifle"
   },
   {
+   "path": "wiki/Rifle_Amp.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "b23d79cdd70d321a",
+   "url": "https://wiki.warframe.com/w/Rifle_Amp"
+  },
+  {
    "path": "wiki/Rifle_Mods.wikitext",
    "retrieved": "2026-11-10",
    "sha256_16": "fe6e8bba32aa3f2b",
@@ -774,6 +798,18 @@
    "retrieved": "2026-11-07",
    "sha256_16": "643a744fae9b61d3",
    "url": "https://wiki.warframe.com/w/Sentient"
+  },
+  {
+   "path": "wiki/Shield_Disruption.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "e7e8fdd35efc85fb",
+   "url": "https://wiki.warframe.com/w/Shield_Disruption"
+  },
+  {
+   "path": "wiki/Shotgun_Amp.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "dacc1ffd4fe25dba",
+   "url": "https://wiki.warframe.com/w/Shotgun_Amp"
   },
   {
    "path": "wiki/Shotgun_Mods.wikitext",
@@ -900,6 +936,12 @@
    "retrieved": "2026-11-10",
    "sha256_16": "c00ee339305fdfba",
    "url": "https://wiki.warframe.com/w/Weapons"
+  },
+  {
+   "path": "wiki/Worthy_Comradery.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "8a3c7676080b9469",
+   "url": "https://wiki.warframe.com/w/Worthy_Comradery"
   }
  ]
 }

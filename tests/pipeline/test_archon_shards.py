@@ -5,6 +5,7 @@ from typing import Any
 import pytest
 
 from app.domain.archon_shards import Shard
+from app.domain.effects import DamageType
 from app.pipeline.build import archon_shards
 from app.pipeline.errors import RefreshError
 from app.pipeline.refresh import Paths
@@ -19,7 +20,11 @@ def _table(paths: Paths) -> dict[str, Any]:
 def test_the_table_builds_from_the_saved_page(paths: Paths) -> None:
     table = archon_shards.build(_table(paths), TITLES)
     assert set(table.buffs) == set(Shard)
-    assert table.candidates("secondary") == [Shard.CRIMSON, Shard.EMERALD, Shard.TOPAZ]
+    assert table.candidates("secondary", {DamageType.HEAT}) == [
+        Shard.CRIMSON,
+        Shard.EMERALD,
+        Shard.TOPAZ,
+    ]
 
 
 @pytest.mark.parametrize(

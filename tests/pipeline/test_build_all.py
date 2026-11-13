@@ -20,12 +20,13 @@ from app.pipeline.publish import StoreError
 from app.pipeline.refresh import Paths as RefreshPaths
 
 ROOT = Path(__file__).resolve().parents[2]
+FIXTURE_GAMEDATA = ROOT / "tests/fixtures/gamedata"
 HORNET = "/Lotus/Upgrades/Mods/Pistol/WeaponDamageAmountMod"
 
 
-def _paths(tmp_path: Path, name: str) -> build_all.Paths:
+def _paths(tmp_path: Path, name: str, gamedata: Path | None = None) -> build_all.Paths:
     p = build_all.Paths.project(ROOT)
-    return build_all.Paths(p.gamedata, p.reference, tmp_path / name, p.app)
+    return build_all.Paths(gamedata or p.gamedata, p.reference, tmp_path / name, p.app)
 
 
 def _same_tree(a: Path, b: Path) -> bool:
@@ -37,8 +38,9 @@ def _same_tree(a: Path, b: Path) -> bool:
 
 
 def test_two_runs_give_byte_identical_releases(tmp_path: Path) -> None:
-    """E3/G16, across worker counts; budget 1 keeps it quick."""
-    one, two = _paths(tmp_path, "one"), _paths(tmp_path, "two")
+    """E3/G16, across worker counts; budget 1 and the fixture guns keep it quick (the shard
+    advice scores every build whatever the budget)."""
+    one, two = _paths(tmp_path, "one", FIXTURE_GAMEDATA), _paths(tmp_path, "two", FIXTURE_GAMEDATA)
     seed = os.environ.get("PYTHONHASHSEED")
     lines: list[str] = []
     build_all.run(one, workers=2, budget=1, progress=lines.append)
@@ -47,7 +49,7 @@ def test_two_runs_give_byte_identical_releases(tmp_path: Path) -> None:
     assert a is not None and b is not None
     assert a.name == b.name
     assert _same_tree(a, b)
-    guns = {w.slug for w in load(ROOT / "gamedata").weapons}
+    guns = {w.slug for w in load(FIXTURE_GAMEDATA).weapons}
     assert {p.stem for p in (a / "builds").glob("*.json")} == guns
     assert os.environ.get("PYTHONHASHSEED") == seed  # set for the workers only
     assert lines[0].startswith("build-all: ") and "2 workers" in lines[0]  # before any gun
