@@ -8,24 +8,18 @@ release's are copied from it instead of searched (G90 U3, `gun_inputs`).
 
 import itertools
 import json
-import multiprocessing
 import os
 import time
 from collections.abc import Callable, Iterator
-from concurrent.futures import ProcessPoolExecutor, as_completed
 from dataclasses import dataclass
 from pathlib import Path
 
 from app.gamedata.builds import WeaponBuilds
 from app.gamedata.release import current
 from app.gamedata.store import GameData, load
-from app.optimize.builds import weapon_builds
 from app.optimize.search import MAX_EVALUATIONS
-from app.pipeline import release
+from app.pipeline import release, search_pool
 from app.pipeline.gun_inputs import INPUTS, gun_keys
-
-_data: GameData | None = None
-_error: str | None = None  # why this worker's dataset is unusable
 
 
 @dataclass(frozen=True)
@@ -59,7 +53,7 @@ def run(
         keys = gun_keys(data, key.calculator, budget)
         previous = current(paths.releases)
         copied = _unchanged(previous, keys)
-        todo = [s for s in slugs if s not in copied]
+        todo = slowest_first(data, [s for s in slugs if s not in copied])
         workers = workers or os.cpu_count() or 1
         progress(
             f"build-all: {len(slugs)} guns, {len(todo)} to search, {len(copied)} unchanged "
@@ -68,13 +62,24 @@ def run(
         )
         assert previous is not None or not copied
         kept = (_read(previous, s) for s in sorted(copied)) if previous else iter(())
-        folder = _publish(paths, key, keys, todo, kept, workers, budget, started, progress)
+        folder = _publish(paths, data, key, keys, todo, kept, workers, budget, started, progress)
     minutes = (time.monotonic() - started) / 60
     return [
         f"release {key.id}: {len(slugs)} guns ({len(todo)} searched, {len(copied)} copied), "
         f"budget {budget}, {minutes:.1f} min",
         f"written to {folder}, now current",
     ]
+
+
+def slowest_first(data: GameData, slugs: list[str]) -> list[str]:
+    """Guns with a bonus element (one Recommended search per element) first, then Incarnon
+    guns, then the rest: a long gun never runs alone at the end of the run."""
+
+    def key(slug: str) -> tuple[bool, bool, str]:
+        w = data.weapon_by_slug[slug]
+        return (w.bonus_element is None, w.unique_name not in data.incarnon_by_id, slug)
+
+    return sorted(slugs, key=key)
 
 
 def _unchanged(previous: Path | None, keys: dict[str, str]) -> set[str]:
@@ -98,6 +103,7 @@ def _read(previous: Path, slug: str) -> WeaponBuilds:
 
 def _publish(
     paths: Paths,
+    data: GameData,
     key: release.Key,
     keys: dict[str, str],
     todo: list[str],
@@ -113,48 +119,7 @@ def _publish(
             paths.releases, key, paths.gamedata, paths.reference, builds, set(keys), inputs=keys
         )
 
-    return search(paths.gamedata, key.dataset, todo, workers, budget, publish)
-
-
-def search[T](
-    gamedata: Path,
-    dataset: str,
-    slugs: list[str],
-    workers: int,
-    budget: int,
-    consume: Callable[[Iterator[WeaponBuilds]], T],
-) -> T:
-    """Search `slugs` in worker processes; `consume` gets the builds as guns finish."""
-    if not slugs:
-        return consume(iter(()))
-    seed = os.environ.get("PYTHONHASHSEED")
-    os.environ["PYTHONHASHSEED"] = "0"  # inherited by the spawned workers only (G16)
-    try:
-        with ProcessPoolExecutor(
-            min(workers, len(slugs)),
-            mp_context=multiprocessing.get_context("spawn"),
-            initializer=_load,
-            initargs=(gamedata, dataset),
-        ) as pool:
-            try:
-                jobs = [pool.submit(_one, slug, budget) for slug in slugs]
-                return consume(job.result() for job in as_completed(jobs))
-            except BaseException:
-                _stop(pool)
-                raise
-    finally:
-        if seed is None:
-            del os.environ["PYTHONHASHSEED"]
-        else:
-            os.environ["PYTHONHASHSEED"] = seed
-
-
-def _stop(pool: ProcessPoolExecutor) -> None:
-    """End now: a running gun can take minutes and Ctrl+C would otherwise wait for it.
-    ProcessPoolExecutor has no public kill before Python 3.14 (terminate_workers)."""
-    for process in list(pool._processes.values()):
-        process.kill()
-    pool.shutdown(wait=False, cancel_futures=True)
+    return search_pool.search(data, paths.gamedata, todo, workers, budget, publish)
 
 
 def _reported(
@@ -163,20 +128,3 @@ def _reported(
     for done, b in enumerate(results, 1):
         progress(f"{done}/{total} {b.slug} ({(time.monotonic() - started) / 60:.1f} min)")
         yield b
-
-
-def _load(gamedata: Path, dataset: str) -> None:
-    """Never raises: a failing initializer breaks the pool and hides the reason."""
-    global _data, _error
-    try:
-        _data = load(gamedata)
-        if _data.meta.dataset_hash != dataset:
-            _error = f"gamedata/ changed during the run ({dataset} -> {_data.meta.dataset_hash})"
-    except Exception as error:
-        _error = f"worker could not load gamedata/: {error}"
-
-
-def _one(slug: str, budget: int) -> WeaponBuilds:
-    if _error or _data is None:
-        raise release.ReleaseError(_error or "worker started without its dataset")
-    return weapon_builds(_data, _data.weapon_by_slug[slug], budget)

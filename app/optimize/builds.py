@@ -5,7 +5,8 @@ Kuva/Tenet/Coda guns: element 1 gets all of them, element 2 Max + Recommended, a
 faction builds are element 1's with the element swapped (`what_if`, not optimized).
 """
 
-from collections.abc import Sequence
+from collections.abc import Generator, Sequence
+from dataclasses import dataclass
 from typing import Literal
 
 from app.domain.effects import DamageType
@@ -24,94 +25,175 @@ from app.optimize.scoring import (
     max_objective,
 )
 from app.optimize.search import MAX_EVALUATIONS, Option, Result, rounded
-from app.optimize.variants import OPTIMIZED, elements, rank, what_if
+from app.optimize.variants import OPTIMIZED, Ranked, elements, ranked, what_if
 
 Status = Literal["optimal", "best_found", "what_if"]
 
 
+@dataclass(frozen=True)
+class Search:
+    """One search and its stored build. faction None: Recommended (every enemy)."""
+
+    kind: Literal["combat", "max"]
+    bonus: DamageType | None
+    faction: str | None = None
+
+
+@dataclass(frozen=True)
+class Swap:
+    """`base` (element 1's faction build) with element 2 swapped in, re-scored (G15)."""
+
+    base: Result
+    top: DamageType
+    second: DamageType
+    faction: str
+
+
+@dataclass(frozen=True)
+class WhatIf:
+    """`base` (element 1's Recommended) scored with `element` as the bonus (G85 rows)."""
+
+    base: Result
+    element: DamageType
+
+
+Task = Search | Swap | WhatIf
+
+
+@dataclass(frozen=True)
+class Found:
+    result: Result | None  # Search only
+    build: Build | None  # Search, Swap
+    value: float | None = None  # WhatIf
+
+
+Plan = Generator[list[Task], list[Found], WeaponBuilds]
+
+
 def weapon_builds(data: GameData, weapon: Weapon, budget: int = MAX_EVALUATIONS) -> WeaponBuilds:
-    def stored(variants: list[Variant], rows: list[ElementRow]) -> WeaponBuilds:
-        return WeaponBuilds(
-            weapon=weapon.unique_name, slug=weapon.slug, variants=variants, elements=rows
+    """The plan run in this process; build-all runs the same tasks in parallel."""
+    steps = plan(data, weapon)
+    batch = next(steps)
+    while True:
+        try:
+            batch = steps.send([run(data, weapon, t, budget) for t in batch])
+        except StopIteration as stop:
+            done: WeaponBuilds = stop.value
+            return done
+
+
+def plan(data: GameData, weapon: Weapon) -> Plan:
+    """The gun's builds as batches of independent tasks; each batch is answered in order.
+    Evaluations happen only in `run`, so where the tasks run does not change the builds."""
+    factions = _factions(data)
+    rolls = elements(weapon)
+    if not rolls:
+        rec, plain_max, *per_faction = yield [
+            Search("combat", None),
+            Search("max", None),
+            *(Search("combat", None, f) for f in factions),
+        ]
+        return _stored(
+            weapon, [_variant(None, plain_max, rec, dict(zip(factions, per_faction, strict=True)))]
         )
 
-    if not elements(weapon):
-        recommended = best_combat(data, weapon, budget=budget)
-        return stored([_optimized(data, weapon, None, recommended, budget, [])[0]], [])
-
-    ranked = rank(data, weapon, budget)
-    scope = [f"elements: top {min(OPTIMIZED, len(ranked))} of {len(ranked)}"]
-    top = ranked[0]
-    first, faction_results = _optimized(data, weapon, top.element, top.recommended, budget, scope)
-    variants = [first]
-    if len(ranked) > 1:
-        second = ranked[1].element
-        swap = [f"what-if: {top.element.value} build, not optimized for {second.value}"]
-        by_faction = {
-            f: _swapped(data, weapon, r, second, f, swap) for f, r in faction_results.items()
-        }
+    found = yield [Search("combat", e) for e in rolls]
+    recs = {e: f for e, f in zip(rolls, found, strict=True)}
+    order = ranked(weapon, [Ranked(e, _result(recs[e])) for e in rolls])
+    top = order[0].element
+    second = order[1].element if len(order) > 1 else None
+    done = yield [
+        Search("max", top),
+        *(Search("combat", top, f) for f in factions),
+        *([Search("max", second)] if second else []),
+    ]
+    top_max, by = done[0], dict(zip(factions, done[1 : 1 + len(factions)], strict=True))
+    base = _result(recs[top])
+    swaps = [Swap(_result(by[f]), top, second, f) for f in factions] if second else []
+    last = yield [*(WhatIf(base, r.element) for r in order), *swaps]
+    variants = [_variant(top, top_max, recs[top], by)]
+    if second:
+        swapped = {f: _build_of(x) for f, x in zip(factions, last[len(order) :], strict=True)}
         variants.append(
             Variant(
                 element=second,
-                max=_build(
-                    data, weapon, best_max(data, weapon, second, budget), second, None, scope
-                ),
-                recommended=_build(
-                    data, weapon, ranked[1].recommended, second, data.enemies, scope
-                ),
-                factions=by_faction,
-                denominators=_denominators(by_faction),
+                max=_build_of(done[-1]),
+                recommended=_build_of(recs[second]),
+                factions=swapped,
+                denominators=_denominators(swapped),
             )
         )
-    objective = combat_objective(data)
     rows = [
         ElementRow(
             element=r.element,
             rank=i + 1,
             searched=rounded(r.recommended.score),
-            what_if=rounded(what_if(data, weapon, top.recommended, r.element, objective)),
+            what_if=_value(x),
             optimized=i < OPTIMIZED,
         )
-        for i, r in enumerate(ranked)
+        for i, (r, x) in enumerate(zip(order, last[: len(order)], strict=True))
     ]
-    return stored(variants, rows)
+    return _stored(weapon, variants, rows)
 
 
-def _optimized(
-    data: GameData,
-    weapon: Weapon,
-    bonus: DamageType | None,
-    recommended: Result,
-    budget: int,
-    scope: list[str],
-) -> tuple[Variant, dict[str, Result]]:
-    """All builds of one element; also the faction search results (element 2 reuses them)."""
-    results = {f: best_combat(data, weapon, f, bonus, budget) for f in _factions(data)}
-    by_faction = {
-        f: _build(data, weapon, r, bonus, _enemies_of(data, f), scope) for f, r in results.items()
-    }
-    variant = Variant(
+def run(data: GameData, weapon: Weapon, task: Task, budget: int) -> Found:
+    """One task: a search plus its stored build, a swapped faction build, or a what-if."""
+    scope = _scope(weapon)
+    if isinstance(task, WhatIf):
+        value = what_if(data, weapon, task.base, task.element, combat_objective(data))
+        return Found(None, None, rounded(value))
+    if isinstance(task, Swap):
+        swap = [f"what-if: {task.top.value} build, not optimized for {task.second.value}"]
+        score = what_if(data, weapon, task.base, task.second, combat_objective(data, task.faction))
+        r = task.base
+        swapped = Result(r.mods, r.exilus, r.picks, score, r.status, 0)
+        enemies = _enemies_of(data, task.faction)
+        return Found(None, _build(data, weapon, swapped, task.second, enemies, swap, "what_if"))
+    if task.kind == "max":
+        found = best_max(data, weapon, task.bonus, budget)
+        return Found(found, _build(data, weapon, found, task.bonus, None, scope))
+    found = best_combat(data, weapon, task.faction, task.bonus, budget)
+    enemies = data.enemies if task.faction is None else _enemies_of(data, task.faction)
+    return Found(found, _build(data, weapon, found, task.bonus, enemies, scope))
+
+
+def _scope(weapon: Weapon) -> list[str]:
+    rolls = elements(weapon)
+    return [f"elements: top {min(OPTIMIZED, len(rolls))} of {len(rolls)}"] if rolls else []
+
+
+def _result(f: Found) -> Result:
+    assert f.result is not None
+    return f.result
+
+
+def _value(f: Found) -> float:
+    assert f.value is not None
+    return f.value
+
+
+def _build_of(f: Found) -> Build:
+    assert f.build is not None
+    return f.build
+
+
+def _variant(bonus: DamageType | None, top_max: Found, rec: Found, by: dict[str, Found]) -> Variant:
+    by_faction = {f: _build_of(x) for f, x in by.items()}
+    return Variant(
         element=bonus,
-        max=_build(data, weapon, best_max(data, weapon, bonus, budget), bonus, None, scope),
-        recommended=_build(data, weapon, recommended, bonus, data.enemies, scope),
+        max=_build_of(top_max),
+        recommended=_build_of(rec),
         factions=by_faction,
         denominators=_denominators(by_faction),
     )
-    return variant, results
 
 
-def _swapped(
-    data: GameData,
-    weapon: Weapon,
-    r: Result,
-    bonus: DamageType,
-    faction: str,
-    scope: list[str],
-) -> Build:
-    """`r` with `bonus` as the progenitor element, re-scored for `faction` (G15)."""
-    score = what_if(data, weapon, r, bonus, combat_objective(data, faction))
-    swapped = Result(r.mods, r.exilus, r.picks, score, r.status, 0)
-    return _build(data, weapon, swapped, bonus, _enemies_of(data, faction), scope, "what_if")
+def _stored(
+    weapon: Weapon, variants: list[Variant], rows: list[ElementRow] | None = None
+) -> WeaponBuilds:
+    return WeaponBuilds(
+        weapon=weapon.unique_name, slug=weapon.slug, variants=variants, elements=rows or []
+    )
 
 
 def _factions(data: GameData) -> list[str]:
