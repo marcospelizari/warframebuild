@@ -10,7 +10,7 @@ import uvicorn
 
 from app.api.app import create_app
 from app.optimize.search import MAX_EVALUATIONS
-from app.pipeline import build_all, check, fixtures, frozen_data, refresh, update
+from app.pipeline import build_all, check, fixtures, frozen_data, refresh, sample, update
 from app.pipeline.sources.http import PoliteClient
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -51,6 +51,10 @@ def main(argv: list[str] | None = None) -> int:
     every.add_argument(
         "--budget", type=_positive, default=MAX_EVALUATIONS, help="evaluations per build (E3)"
     )
+    smp = sub.add_parser(
+        "sample", help="search the test guns like build-all, publish nothing (minutes, not hours)"
+    )
+    smp.add_argument("--workers", type=_positive, help="worker processes (default: all CPUs)")
     upd = sub.add_parser(
         "update", help="after a game update: refresh, build-all (changed guns only), what needs you"
     )
@@ -76,6 +80,15 @@ def main(argv: list[str] | None = None) -> int:
         )
     elif args.command == "check":
         return _guarded(lambda: run_check(offline=args.offline), "check failed")
+    elif args.command == "sample":
+        return _guarded(
+            lambda: sample.run(
+                ROOT / "gamedata",
+                args.workers,
+                progress=lambda line: print(line, file=sys.stderr, flush=True),
+            )[-1:],
+            "sample failed",
+        )
     elif args.command == "build-all":
         return _guarded(
             lambda: build_all.run(
