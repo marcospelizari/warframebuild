@@ -8,10 +8,12 @@ from app.api import jobs
 from app.api.app import create_app
 from app.api.rate_limit import RateLimit
 from app.api.runner import Runner
+from app.gamedata.release import open_current
 from app.gamedata.store import GameData
 from app.optimize.builds import weapon_builds
 from app.optimize.scoring import build_loadout, combat_objective, max_objective
 from app.optimize.search import rounded
+from tests.api.conftest import GUNS
 
 
 @pytest.fixture
@@ -193,10 +195,16 @@ def test_exilus_slot_takes_only_exilus_mods(client: TestClient, gamedata: GameDa
 
 
 @pytest.mark.parametrize("gun", ["Soma Prime", "Kuva Hind", "Lex Prime"])
-def test_calc_returns_every_stored_score(client: TestClient, gamedata: GameData, gun: str) -> None:
-    """E8: each precomputed build through /calc gives its stored score (after `rounded`)."""
+def test_calc_returns_every_stored_score(
+    client: TestClient, gamedata: GameData, releases: Path, gun: str
+) -> None:
+    """E8: each precomputed build through /calc gives its stored score (after `rounded`).
+    Guns in the shared test release are read from it, not searched again."""
     weapon = next(w for w in gamedata.weapons if w.name == gun)
-    stored = weapon_builds(gamedata, weapon, budget=60)
+    shared = open_current(releases)
+    assert shared is not None
+    in_release = gun in GUNS
+    stored = shared.builds(weapon.slug) if in_release else weapon_builds(gamedata, weapon, 20)
     for v in stored.variants:
         tabs = {"max": v.max, "recommended": v.recommended, **v.factions}
         for tab, b in tabs.items():

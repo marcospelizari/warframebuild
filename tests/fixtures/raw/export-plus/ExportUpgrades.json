@@ -1,4 +1,32 @@
 {
+ "/Lotus/Upgrades/Mods/Aura/EnemyArmorReductionAuraMod": {
+  "baseDrain": -2,
+  "codexSecret": false,
+  "compat": "/Lotus/Types/Game/PowerSuits/PlayerPowerSuit",
+  "compatName": "AURA",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/MissionBuffs/EnemyArmorReductionBuff.png",
+  "introducedAt": 1369347222,
+  "name": "/Lotus/Language/Items/EnemyArmorReductionBuffName",
+  "polarity": "AP_TACTIC",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "AURA"
+ },
+ "/Lotus/Upgrades/Mods/Aura/PlayerRifleDamageAuraMod": {
+  "baseDrain": -2,
+  "codexSecret": false,
+  "compat": "/Lotus/Types/Game/PowerSuits/PlayerPowerSuit",
+  "compatName": "AURA",
+  "fusionLimit": 5,
+  "icon": "/Lotus/Interface/Cards/Images/MissionBuffs/PlayerRifleDamageBuff.png",
+  "introducedAt": 1355892773,
+  "name": "/Lotus/Language/Items/PlayerRifleDamageBuffName",
+  "polarity": "AP_ATTACK",
+  "rarity": "UNCOMMON",
+  "tradable": true,
+  "type": "AURA"
+ },
  "/Lotus/Upgrades/Mods/Pistol/Beginner/WeaponCritChanceModBeginner": {
   "baseDrain": 2,
   "codexSecret": false,

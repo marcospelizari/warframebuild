@@ -38,6 +38,11 @@ class ShardAdvice(Model):
     conditions: list[str]  # what buffs counted at their cap need (Topaz)
 
 
+class AuraGain(Model):
+    aura: str  # DE uniqueName
+    score: float  # the build's score with this aura
+
+
 class Build(Model):
     mods: list[str]  # uniqueNames, slot order
     exilus: str | None
@@ -53,6 +58,8 @@ class Build(Model):
     # (no new search); empty in releases made before it.
     without: dict[str, float] = Field(default_factory=dict)
     shards: ShardAdvice | None = None  # None in releases made before G91
+    # Every aura that fits the gun, best first (G91, optimize.auras); None: before G91.
+    auras: list[AuraGain] | None = None
 
 
 class PrimerNumbers(Model):

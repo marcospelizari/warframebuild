@@ -99,6 +99,7 @@ def write(
         "factions.json": dump(dataset.factions),
         "status_rules.json": dump(dataset.status_rules),
         "archon_shards.json": dump(dataset.archon_shards),
+        "auras.json": dump(dataset.auras),
     }
     digest = dataset_hash(payloads)
     fetched = max((s.retrieved for s in sources if not s.path.startswith("wiki/")), default="")

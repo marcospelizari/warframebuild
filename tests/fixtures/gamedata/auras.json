@@ -1,0 +1,177 @@
+{
+ "auras": [
+  {
+   "armor_kept": 0.82,
+   "effect": null,
+   "name": "Corrosive Projection",
+   "shield_kept": 1.0,
+   "source": [
+    "Corrosive_Projection:22",
+    "Corrosive_Projection:38-46"
+   ],
+   "unique_name": "/Lotus/Upgrades/Mods/Aura/EnemyArmorReductionAuraMod",
+   "weapon_types": null
+  },
+  {
+   "armor_kept": 1.0,
+   "effect": {
+    "chance": 1.0,
+    "class_values": {},
+    "damage_type": null,
+    "duration_s": null,
+    "faction": null,
+    "fire_rate_boost": null,
+    "max_stacks": 1,
+    "operation": "stacking_multiply",
+    "per_status_type": false,
+    "stat": "damage",
+    "trigger": "always",
+    "trigger_damage_type": null,
+    "value": 0.525,
+    "while_aiming": false
+   },
+   "name": "Dead Eye",
+   "shield_kept": 1.0,
+   "source": [
+    "Dead_Eye:21",
+    "Dead_Eye:29",
+    "Dead_Eye:32"
+   ],
+   "unique_name": "/Lotus/Upgrades/Mods/Aura/PlayerSniperDamageAuraMod",
+   "weapon_types": [
+    "Sniper"
+   ]
+  },
+  {
+   "armor_kept": 1.0,
+   "effect": {
+    "chance": 1.0,
+    "class_values": {},
+    "damage_type": null,
+    "duration_s": null,
+    "faction": null,
+    "fire_rate_boost": null,
+    "max_stacks": 1,
+    "operation": "stacking_multiply",
+    "per_status_type": false,
+    "stat": "damage",
+    "trigger": "always",
+    "trigger_damage_type": null,
+    "value": 0.27,
+    "while_aiming": false
+   },
+   "name": "Pistol Amp",
+   "shield_kept": 1.0,
+   "source": [
+    "Pistol_Amp:3",
+    "Pistol_Amp:22",
+    "Pistol_Amp:33-34"
+   ],
+   "unique_name": "/Lotus/Upgrades/Mods/Aura/PlayerPistolDamageAuraMod",
+   "weapon_types": [
+    "Pistol",
+    "Dual Pistols",
+    "Throwing"
+   ]
+  },
+  {
+   "armor_kept": 1.0,
+   "effect": {
+    "chance": 1.0,
+    "class_values": {},
+    "damage_type": null,
+    "duration_s": null,
+    "faction": null,
+    "fire_rate_boost": null,
+    "max_stacks": 1,
+    "operation": "stacking_multiply",
+    "per_status_type": false,
+    "stat": "damage",
+    "trigger": "always",
+    "trigger_damage_type": null,
+    "value": 0.27,
+    "while_aiming": false
+   },
+   "name": "Rifle Amp",
+   "shield_kept": 1.0,
+   "source": [
+    "Rifle_Amp:22",
+    "Rifle_Amp:29-31"
+   ],
+   "unique_name": "/Lotus/Upgrades/Mods/Aura/PlayerRifleDamageAuraMod",
+   "weapon_types": [
+    "Rifle",
+    "Bow",
+    "Sniper",
+    "Launcher"
+   ]
+  },
+  {
+   "armor_kept": 1.0,
+   "effect": null,
+   "name": "Shield Disruption",
+   "shield_kept": 0.82,
+   "source": [
+    "Shield_Disruption:21"
+   ],
+   "unique_name": "/Lotus/Upgrades/Mods/Aura/EnemyShieldReductionAuraMod",
+   "weapon_types": null
+  },
+  {
+   "armor_kept": 1.0,
+   "effect": {
+    "chance": 1.0,
+    "class_values": {},
+    "damage_type": null,
+    "duration_s": null,
+    "faction": null,
+    "fire_rate_boost": null,
+    "max_stacks": 1,
+    "operation": "stacking_multiply",
+    "per_status_type": false,
+    "stat": "damage",
+    "trigger": "always",
+    "trigger_damage_type": null,
+    "value": 0.18,
+    "while_aiming": false
+   },
+   "name": "Shotgun Amp",
+   "shield_kept": 1.0,
+   "source": [
+    "Shotgun_Amp:22",
+    "Shotgun_Amp:33"
+   ],
+   "unique_name": "/Lotus/Upgrades/Mods/Aura/PlayerShellDamageAuraMod",
+   "weapon_types": [
+    "Shotgun"
+   ]
+  },
+  {
+   "armor_kept": 1.0,
+   "effect": {
+    "chance": 1.0,
+    "class_values": {},
+    "damage_type": null,
+    "duration_s": null,
+    "faction": null,
+    "fire_rate_boost": null,
+    "max_stacks": 1,
+    "operation": "stacking_multiply",
+    "per_status_type": false,
+    "stat": "weak_point_critical_chance",
+    "trigger": "always",
+    "trigger_damage_type": null,
+    "value": 0.75,
+    "while_aiming": false
+   },
+   "name": "Worthy Comradery",
+   "shield_kept": 1.0,
+   "source": [
+    "Worthy_Comradery:23",
+    "Worthy_Comradery:31-32"
+   ],
+   "unique_name": "/Lotus/Upgrades/Mods/Aura/PlayerWeakpointCriticalChanceAuraMod",
+   "weapon_types": null
+  }
+ ]
+}

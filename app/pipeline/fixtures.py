@@ -58,6 +58,8 @@ MOD_NAMES = (
     "Pistol Gambit",
     "Mending Shot",  # joined to Thunderbolt (saved Mod/Compatibility)
     "Thunderbolt",
+    "Rifle Amp",  # aura (aura_buffs.json)
+    "Corrosive Projection",  # aura changing the enemy
 )
 ARCANE_NAMES = (
     "Primary Merciless",

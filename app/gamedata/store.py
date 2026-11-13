@@ -13,6 +13,7 @@ from pathlib import Path
 from pydantic import TypeAdapter
 
 from app.domain.archon_shards import ArchonShards
+from app.domain.auras import Auras
 from app.domain.status_rules import StatusRules
 from app.gamedata.enemies import Enemy, FactionModifiers, ReferenceHead
 from app.gamedata.images import PictureKind, picture_name
@@ -30,6 +31,7 @@ DATA_FILES = (
     "factions.json",
     "status_rules.json",
     "archon_shards.json",
+    "auras.json",
 )
 
 
@@ -46,6 +48,7 @@ class GameData:
     factions: list[FactionModifiers]
     status_rules: StatusRules
     archon_shards: ArchonShards
+    auras: Auras
 
     @cached_property
     def weapon_by_slug(self) -> dict[str, Weapon]:
@@ -110,4 +113,5 @@ def load(gamedata_dir: Path) -> GameData:
         factions=TypeAdapter(list[FactionModifiers]).validate_json(payloads["factions.json"]),
         status_rules=StatusRules.model_validate_json(payloads["status_rules.json"]),
         archon_shards=ArchonShards.model_validate_json(payloads["archon_shards.json"]),
+        auras=Auras.model_validate_json(payloads["auras.json"]),
     )

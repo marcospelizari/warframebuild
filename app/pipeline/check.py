@@ -114,6 +114,17 @@ def blast_gap_lines(dataset: Dataset) -> list[str]:
     ]
 
 
+def aura_lines(dataset: Dataset) -> list[str]:
+    """Aura rows left out: DE's aura text changed or the aura is gone (G91)."""
+    if not dataset.auras_changed:
+        return []
+    return [
+        "aura text changed in the game files (left out of the advice; re-check the saved "
+        "page and reference/aura_buffs.json `de_text`):",
+        f"  auras ({len(dataset.auras_changed)}): {_names(dataset.auras_changed)}",
+    ]
+
+
 def incarnon_gap_lines(dataset: Dataset) -> list[str]:
     """Guns with an Incarnon attack but no perks from the saved pages."""
     have = {i.unique_name for i in dataset.incarnon}

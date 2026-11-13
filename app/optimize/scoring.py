@@ -34,7 +34,8 @@ def max_score(lo: Loadout, head: Head, rules: StatusRules) -> float:
 Objective = Callable[[Loadout], float]
 
 
-def max_objective(data: GameData) -> Objective:
+def max_objective(data: GameData, enemies: Sequence[Enemy] = ()) -> Objective:
+    """`enemies` unused: Max hits a neutral target (G80), no armor or shields to change."""
     ref = data.reference_head
     head = Head(ref.multiplier, critical=ref.critical)
     return lambda lo: max_score(lo, head, data.status_rules)
@@ -54,9 +55,10 @@ def enemies_objective(data: GameData, enemies: Sequence[Enemy]) -> Objective:
     return lambda lo: 1 / combat(lo, fought, data.factions, data.status_rules).score
 
 
-def primer_objective(data: GameData) -> Objective:
+def primer_objective(data: GameData, enemies: Sequence[Enemy] | None = None) -> Objective:
     """Extra follow-up damage the build's burst gives primed enemies (G49)."""
-    return lambda lo: primed(lo, data.enemies, data.status_rules).score
+    fought = list(data.enemies if enemies is None else enemies)
+    return lambda lo: primed(lo, fought, data.status_rules).score
 
 
 def best_primer(
