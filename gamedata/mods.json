@@ -2697,7 +2697,24 @@
    "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "effects": {
-    "effects": [],
+    "effects": [
+     {
+      "chance": 1.0,
+      "class_values": {},
+      "damage_type": null,
+      "duration_s": null,
+      "faction": null,
+      "fire_rate_boost": null,
+      "max_stacks": 1,
+      "operation": "stacking_multiply",
+      "per_status_type": false,
+      "stat": "blast_radius",
+      "trigger": "always",
+      "trigger_damage_type": null,
+      "value": 0.44,
+      "while_aiming": false
+     }
+    ],
     "note": null,
     "requires_trigger": null,
     "support": "full",
@@ -2758,7 +2775,24 @@
    "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "effects": {
-    "effects": [],
+    "effects": [
+     {
+      "chance": 1.0,
+      "class_values": {},
+      "damage_type": null,
+      "duration_s": null,
+      "faction": null,
+      "fire_rate_boost": null,
+      "max_stacks": 1,
+      "operation": "stacking_multiply",
+      "per_status_type": false,
+      "stat": "blast_radius",
+      "trigger": "always",
+      "trigger_damage_type": null,
+      "value": 0.24,
+      "while_aiming": false
+     }
+    ],
     "note": null,
     "requires_trigger": null,
     "support": "full",
@@ -10884,7 +10918,24 @@
    "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "effects": {
-    "effects": [],
+    "effects": [
+     {
+      "chance": 1.0,
+      "class_values": {},
+      "damage_type": null,
+      "duration_s": null,
+      "faction": null,
+      "fire_rate_boost": null,
+      "max_stacks": 1,
+      "operation": "stacking_multiply",
+      "per_status_type": false,
+      "stat": "blast_radius",
+      "trigger": "always",
+      "trigger_damage_type": null,
+      "value": 0.44,
+      "while_aiming": false
+     }
+    ],
     "note": null,
     "requires_trigger": null,
     "support": "full",
@@ -13224,7 +13275,24 @@
    "compatibility_tags": [],
    "description": "Improves the Blast Radius of weapons with Radial Attacks.",
    "effects": {
-    "effects": [],
+    "effects": [
+     {
+      "chance": 1.0,
+      "class_values": {},
+      "damage_type": null,
+      "duration_s": null,
+      "faction": null,
+      "fire_rate_boost": null,
+      "max_stacks": 1,
+      "operation": "stacking_multiply",
+      "per_status_type": false,
+      "stat": "blast_radius",
+      "trigger": "always",
+      "trigger_damage_type": null,
+      "value": 0.24,
+      "while_aiming": false
+     }
+    ],
     "note": null,
     "requires_trigger": null,
     "support": "full",

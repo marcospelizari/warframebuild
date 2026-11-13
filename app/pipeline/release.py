@@ -19,8 +19,9 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from app.gamedata.builds import WeaponBuilds
-from app.gamedata.release import POINTER, current
+from app.gamedata.release import POINTER, PRIMERS, current
 from app.gamedata.store import load
+from app.optimize.primer import good_primers
 from app.pipeline import updates
 from app.pipeline.gun_inputs import INPUTS
 from app.pipeline.publish import dump, exclusive
@@ -104,10 +105,15 @@ def publish(
     (temp / "builds").mkdir()
     statuses: Counter[str] = Counter()
     unplaced = 0
+    primers: dict[str, tuple[float, float]] = {}
     for b in builds:
         (temp / "builds" / f"{b.slug}.json").write_bytes(dump(b))
+        first = b.variants[0] if b.variants else None
+        if first and first.primer and first.primer_numbers:
+            primers[b.slug] = (first.primer.score, first.primer_numbers.status_types)
         for v in b.variants:
-            for build in (v.max, v.recommended, *v.factions.values()):
+            primer = [v.primer] if v.primer else []
+            for build in (v.max, v.recommended, *v.factions.values(), *primer):
                 statuses[build.status] += 1
                 unplaced += build.forma is None
     _validate(temp / "builds", expected)
@@ -122,6 +128,7 @@ def publish(
         "no_forma_layout": unplaced,
     }
     (temp / "manifest.json").write_bytes(dump(manifest))
+    (temp / PRIMERS).write_bytes(dump({"good": good_primers(primers)}))
     if inputs is not None:
         (temp / INPUTS).write_bytes(dump(dict(sorted(inputs.items()))))
     updates.write(temp, current(releases), key.id, today or datetime.date.today().isoformat())

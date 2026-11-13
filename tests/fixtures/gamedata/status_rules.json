@@ -61,6 +61,7 @@
    },
    "duration_s": 6.0,
    "heat_strip": {
+    "restore_s": 1.5,
     "step_s": 0.5,
     "steps": [
      0.15,

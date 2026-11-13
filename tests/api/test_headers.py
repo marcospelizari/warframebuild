@@ -1,5 +1,6 @@
 """Step 11 hardening: headers (S6), generic 500 (S7), caching and fallbacks, crawler files."""
 
+import shutil
 from pathlib import Path
 
 import pytest
@@ -9,6 +10,7 @@ from fastapi.testclient import TestClient
 from app.api.app import create_app
 from app.api.headers import CACHE_FOREVER, CSP
 from app.api.rate_limit import RateLimit
+from app.gamedata.release import current
 from app.gamedata.store import GameData
 
 
@@ -96,3 +98,20 @@ def test_list_answers_are_kept_and_building_them_is_rate_limited(
         assert client.get("/api/weapons").content == weapons.content
     assert client.get("/api/mods?weapon=lex-prime").status_code == 429
     assert client.get("/api/weapons?q=soma").status_code == 429
+
+
+def test_sitemap_lists_good_primers_primer_pages(
+    tmp_path: Path, gamedata: GameData, releases: Path
+) -> None:
+    copy = tmp_path / "releases"
+    shutil.copytree(releases, copy)
+    folder = current(copy)
+    assert folder is not None
+    (folder / "primers.json").write_text('{"good": ["soma-prime"]}')
+    dist = tmp_path / "dist"
+    dist.mkdir()
+    (dist / "index.html").write_text("<p>app</p>", encoding="utf-8")
+    app = create_app(web_dist=dist, data=gamedata, releases=copy, public_origin="https://x.org")
+    text = TestClient(app).get("/sitemap.xml").text
+    assert "<loc>https://x.org/w/soma-prime/primer</loc>" in text
+    assert "<loc>https://x.org/w/kuva-hind/primer</loc>" not in text

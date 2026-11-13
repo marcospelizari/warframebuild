@@ -39,12 +39,24 @@ class Build(Model):
     without: dict[str, float] = Field(default_factory=dict)
 
 
+class PrimerNumbers(Model):
+    """What the Primer build's burst does to follow-up hits (G49, optimize.primer)."""
+
+    boost: float  # follow-up damage multiplier on the target
+    area_boost: float  # the same on an enemy around it (1 without a blast)
+    enemies: float  # enemies primed, the target included
+    radius: float | None  # m, the blast after radius mods; None: no blast
+    status_types: float  # different status types kept up on the target
+
+
 class Variant(Model):
     element: DamageType | None  # progenitor bonus; None: the gun has none
     max: Build
     recommended: Build
     factions: dict[str, Build]
     denominators: dict[str, float]  # per enemy: its faction build's cost (G35)
+    primer: Build | None = None  # G49; None in releases made before it
+    primer_numbers: PrimerNumbers | None = None
 
 
 class ElementRow(Model):

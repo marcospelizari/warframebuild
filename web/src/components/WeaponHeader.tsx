@@ -5,9 +5,14 @@ import u from "./ui.module.css";
 const cap = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
 /** Icon, name between ornaments, one meta line, Edit / copy-link buttons (canvas F-Weapon v46). */
-type Props = { weapon: WeaponRef; item: WeaponItem | undefined; onEdit?: () => void };
+type Props = {
+  weapon: WeaponRef;
+  item: WeaponItem | undefined;
+  good?: boolean; // a good primer (G49)
+  onEdit?: () => void;
+};
 
-export function WeaponHeader({ weapon, item, onEdit }: Props) {
+export function WeaponHeader({ weapon, item, good = false, onEdit }: Props) {
   const [copied, setCopied] = useState<"no" | "yes" | "failed">("no");
   const meta = [
     `${cap(weapon.category)} ${weapon.weapon_type.toLowerCase()}`,
@@ -35,6 +40,13 @@ export function WeaponHeader({ weapon, item, onEdit }: Props) {
         <span className={u.orn} aria-hidden="true" />
       </div>
       <p className="mt-2 mb-0 text-[15px] text-muted">{meta.join(", ")}</p>
+      {good && (
+        <p className="mt-2 mb-0">
+          <span className={u.tag} title="Top Primer score, with many status types kept up">
+            Good primer
+          </span>
+        </p>
+      )}
       <div className="mt-6 flex flex-wrap justify-center gap-2.5">
         {onEdit && (
           <button className={`${u.act} ${u.actPrimary}`} type="button" onClick={onEdit}>

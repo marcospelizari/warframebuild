@@ -7,6 +7,7 @@ from app.domain.combat import (
     Event,
     Target,
     armor_reduction,
+    effective_hp,
     fight,
     geometric_mean,
     neutral_dps,
@@ -127,3 +128,18 @@ def test_neutral_dps_counts_viral_and_the_cap() -> None:
         Event(time=CAP_S + 1, armored=hit, unarmored=zero, armor_kept=1.0, viral=1.0, magnetic=1.0),
     ]
     assert neutral_dps(events) == pytest.approx(300 / CAP_S)
+
+
+def test_effective_hp_matches_the_priming_page() -> None:
+    """Priming:37-40, 2700 armor: 1 Corrosive (to 1998) = +125.79%, 10 Corrosive (to 540) =
+    +497.51%, 10 Corrosive and 1 Viral = +1095.02%, 10 Viral and 1 Corrosive = +859.61%."""
+    plain = effective_hp(1.0, 0.0, 2700)
+
+    def boost(kept: float, viral: float = 1.0) -> float:
+        return plain / effective_hp(1.0, 0.0, 2700, armor_kept=kept, viral=viral)
+
+    assert boost(1998 / 2700) == pytest.approx(2.2579, abs=1e-4)
+    assert boost(540 / 2700) == pytest.approx(5.9751, abs=1e-4)
+    assert boost(540 / 2700, viral=2.0) == pytest.approx(11.9502, abs=1e-4)
+    assert boost(1998 / 2700, viral=4.25) == pytest.approx(9.5961, abs=1e-4)
+    assert effective_hp(100, 50, 0, magnetic=2.0) == pytest.approx(125)  # shield halved

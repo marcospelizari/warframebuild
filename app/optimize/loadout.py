@@ -130,19 +130,18 @@ def _parts(
     if incarnon is None:
         raise ValueError(f"{weapon.name} has no Incarnon Form")
     attacks = {a.name: a for a in weapon.attacks}
-    return [
-        (
-            AttackStats(
-                damage=a.damage,
-                critical_chance=a.critical_chance,
-                critical_multiplier=a.critical_multiplier,
-                status_chance=a.status_chance,
-                multishot=a.multishot or weapon.multishot,
-            ),
-            a,
-        )
-        for a in (attacks[n] for n in incarnon.attacks)
-    ]
+    return [(attack_stats(weapon, a), a) for a in (attacks[n] for n in incarnon.attacks)]
+
+
+def attack_stats(weapon: Weapon, a: Attack) -> AttackStats:
+    """One WFCD attack's own stats (Incarnon Form parts, the primer's blast)."""
+    return AttackStats(
+        damage=a.damage,
+        critical_chance=a.critical_chance,
+        critical_multiplier=a.critical_multiplier,
+        status_chance=a.status_chance,
+        multishot=a.multishot or weapon.multishot,
+    )
 
 
 def set_entries(mods: Sequence[Mod], sets: Mapping[str, ModSet]) -> list[tuple[str, Effects]]:

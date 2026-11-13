@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { ApiFailure, getBuilds, getMods, getWeapons } from "@/api/client";
 import { BuildView } from "@/components/BuildView";
-import { factionSlug } from "@/lib/faction";
+import { factionSlug, PRIMER } from "@/lib/faction";
 
 const SITE = "warframeBuild";
 const BUSY = new Set(["no_release", "release_mismatch", "release_gone"]);
@@ -42,15 +42,19 @@ export function WeaponPage({ slug, faction, code }: Props) {
   const list = useQuery({ queryKey: ["weapons"], queryFn: getWeapons });
   const variant = builds.data?.variants[0];
   const factions = variant ? Object.keys(variant.factions) : [];
-  const name = faction === null ? null : factions.find((f) => factionSlug(f) === faction);
+  const isPrimer = faction === PRIMER;
+  const name =
+    faction === null || isPrimer ? null : factions.find((f) => factionSlug(f) === faction);
   const gun = builds.data?.weapon.name;
 
   useEffect(() => {
     if (!gun) return;
-    document.title = name
-      ? `${gun} build against ${name} | ${SITE}`
-      : `${gun} build: mods, forma, arcane | ${SITE}`;
-  }, [gun, name]);
+    document.title = isPrimer
+      ? `${gun} primer build: status mods | ${SITE}`
+      : name
+        ? `${gun} build against ${name} | ${SITE}`
+        : `${gun} build: mods, forma, arcane | ${SITE}`;
+  }, [gun, name, isPrimer]);
 
   const error = builds.error ?? mods.error;
   if (error) return <Problem error={error} />;
@@ -62,7 +66,10 @@ export function WeaponPage({ slug, faction, code }: Props) {
     );
   }
   if (!variant) return <NotShown text={`No builds for ${builds.data.weapon.name} yet.`} />;
-  if (faction !== null && !name) {
+  if (isPrimer && !variant.primer) {
+    return <NotShown text={`No primer build for ${builds.data.weapon.name} yet.`} />;
+  }
+  if (faction !== null && !isPrimer && !name) {
     return <NotShown text="There is no such faction build for this gun." />;
   }
   return (
@@ -72,7 +79,7 @@ export function WeaponPage({ slug, faction, code }: Props) {
       data={builds.data}
       items={mods.data}
       item={list.data?.weapons.find((w) => w.slug === slug)}
-      faction={name ?? null}
+      faction={isPrimer ? PRIMER : (name ?? null)}
       code={code}
     />
   );

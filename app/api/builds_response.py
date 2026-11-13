@@ -7,14 +7,17 @@ from app.api.schemas.stored import (
     BuildsResponse,
     ElementChoice,
     NotModelled,
+    Primer,
     StoredBuild,
     VariantBuilds,
 )
 from app.domain.effects import DamageType
 from app.gamedata.builds import Build as Stored
+from app.gamedata.builds import PrimerNumbers
 from app.gamedata.release import Release
 from app.gamedata.store import GameData
 from app.optimize.candidates import unmodelled
+from app.optimize.primer import assumptions
 
 
 def expand(data: GameData, release: Release, slug: str) -> bytes:
@@ -53,9 +56,13 @@ def expand(data: GameData, release: Release, slug: str) -> bytes:
                 recommended=scored(v.recommended, v.element),
                 factions={f: scored(b, v.element) for f, b in v.factions.items()},
                 denominators=v.denominators,
+                primer=_primer(scored(v.primer, v.element), v.primer_numbers)
+                if v.primer and v.primer_numbers
+                else None,
             )
             for v in stored.variants
         ],
+        good_primer=slug in release.good_primers,
         not_modelled=[
             NotModelled(
                 kind=u.kind,
@@ -67,3 +74,7 @@ def expand(data: GameData, release: Release, slug: str) -> bytes:
         ],
     )
     return out.model_dump_json().encode()
+
+
+def _primer(build: StoredBuild, n: PrimerNumbers) -> Primer:
+    return Primer(build=build, **n.model_dump(), assumptions=assumptions())

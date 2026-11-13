@@ -32,13 +32,17 @@ async def weapons(
     body = None if q else now.lists_cache.pop(key, None)
     if body is None:
         request.app.state.rate_limit.check(request)
-        body = _list(now.data, request.app.state.img_dir, category, q).model_dump_json().encode()
+        good = now.release.good_primers if now.release else frozenset()
+        data, img = now.data, request.app.state.img_dir
+        body = _list(data, img, category, q, good).model_dump_json().encode()
     if not q:
         remember(now.lists_cache, key, body, LISTS_KEPT)
     return Response(body, media_type="application/json")
 
 
-def _list(data: GameData, img_dir: Path, category: Category | None, q: str) -> WeaponList:
+def _list(
+    data: GameData, img_dir: Path, category: Category | None, q: str, good: frozenset[str]
+) -> WeaponList:
     needle = q.casefold()
     return WeaponList(
         dataset_hash=data.meta.dataset_hash,
@@ -54,6 +58,7 @@ def _list(data: GameData, img_dir: Path, category: Category | None, q: str) -> W
                 image=f"/img/weapons/{w.slug}.png"
                 if image_path(img_dir, w.slug).is_file()
                 else None,
+                good_primer=w.slug in good,
             )
             for w in sorted(data.weapons, key=lambda w: (w.name, w.slug))
             if (category is None or w.category == category) and needle in w.name.casefold()

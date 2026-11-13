@@ -37,6 +37,13 @@ TIME_EPS = 1e-6  # s
 POOLED = (HEAT,)  # Heat stacks share one tick and refresh each other (Heat_Damage:66)
 
 
+@dataclass(frozen=True)
+class Debuffs:
+    armor_kept: float  # share of armor left after strips
+    viral: float  # health damage factor
+    magnetic: float  # shield damage factor
+
+
 @dataclass
 class Timeline:
     lo: Loadout
@@ -44,6 +51,8 @@ class Timeline:
     head: Head | None
     bane: Faction | None
     rules: StatusRules
+    until: float = CAP_S  # last shot time; a primer stops early (G49)
+    shots: tuple[float, ...] | None = None  # shot times to use instead of the loadout's
     armored: dict[int, list[float]] = field(default_factory=dict)
     unarmored: dict[int, list[float]] = field(default_factory=dict)
     exact: dict[int, float] = field(default_factory=dict)  # merge key -> first event time
@@ -54,11 +63,21 @@ class Timeline:
             self.rules = self.rules.with_extra_stacks(self.shot.hits[0].stack_cap_bonus)
         self.window = {t: r.duration_s for t, r in self.rules.types.items()}  # base, s
         self.dots = {t: r.dot for t, r in self.rules.types.items() if r.dot is not None}
-        self.times = shot_times(self.shot.firing, self.shot.rate_factor, CAP_S)
+        self.times = (
+            list(self.shots)
+            if self.shots is not None
+            else shot_times(self.shot.firing, self.shot.rate_factor, self.until)
+        )
         self.own = [
             part_procs(hit, attack, self.lo.mark, self.head, self.shot, self.res.forced)
             for hit, (_, attack) in zip(self.shot.hits, self.lo.parts, strict=True)
         ]
+        self.procs = self._procs_per_shot()
+        self.duration = 1 + self.shot.hits[0].status_duration if self.shot.hits else 1.0
+        stacking = self.rules.stacking
+        self.debuff_rules = tuple(
+            stacking(t) for t in (DamageType.CORROSIVE, DamageType.VIRAL, DamageType.MAGNETIC)
+        )
 
     def events(self) -> list[Event]:
         if not self.times:  # never fires (fire-rate factor at or below 0): no damage
@@ -68,8 +87,7 @@ class Timeline:
         ramp = first.beam_ramp_start if first else self.lo.weapon.beam_ramp_start
         level, last = ramp or 1.0, 0.0  # beam damage share; time of the previous shot
         interval = 1 / self.shot.rate
-        duration = 1 + hits[0].status_duration
-        procs = self._procs_per_shot()
+        duration, procs = self.duration, self.procs
         rules = self.rules
         puncture, cold = rules.stacking(DamageType.PUNCTURE), rules.stacking(DamageType.COLD)
         heat: list[tuple[float, float, float, float]] = []  # time, seeds, procs, tick factor
@@ -128,7 +146,7 @@ class Timeline:
         fuse = self.window[DamageType.BLAST] * duration
         for at, v in blast_hits(blast, fuse, rules.blast.cap):
             self._add(at, DamageType.BLAST, v)
-        return self._with_debuffs(procs, duration)
+        return self._with_debuffs()
 
     def _procs_per_shot(self) -> dict[DamageType, float]:
         out: dict[DamageType, float] = {}
@@ -163,6 +181,9 @@ class Timeline:
         shots = bisect_left(self.times, before) - bisect_right(self.times, before - window)
         return p * shots
 
+    def status_types_at(self, t: float) -> float:
+        return self._status_types(self.procs, t, self.duration)
+
     def _status_types(self, procs: dict[DamageType, float], t: float, duration: float) -> float:
         """Expected status types on the target for Galvanized-style bonuses: the bonus
         applies on the hits after the one that procs (Galvanized_Aptitude:42)."""
@@ -193,36 +214,48 @@ class Timeline:
         for tick, v in heat_ticks(procs, heat[0][3], life, gap <= life, CAP_S, dot.first_tick_s):
             self._add(tick, HEAT, v)
 
-    def _with_debuffs(self, procs: dict[DamageType, float], duration: float) -> list[Event]:
-        p_heat = procs.get(HEAT, 0.0)
-        burning = None
-        if p_heat:
-            first = math.ceil(1 / p_heat - 1e-9) - 1  # shot where expected Heat procs reach 1
-            burning = self.times[first] if first < len(self.times) else None
-        rules = self.rules
-        strips = rules.heat_strip
-        corrosive = rules.stacking(DamageType.CORROSIVE)
-        viral, magnetic = rules.stacking(DamageType.VIRAL), rules.stacking(DamageType.MAGNETIC)
+    def _with_debuffs(self) -> list[Event]:
         zero = [0.0] * len(TYPES)
         out = []
         for key in sorted(self.armored.keys() | self.unarmored.keys()):
             t = self.exact[key]
-            strip = (
-                strips.strip(t - burning, duration - 1)
-                if burning is not None and t > burning
-                else 0.0
-            )
-            c = self._stacks(procs, DamageType.CORROSIVE, t, duration)
-            v = self._stacks(procs, DamageType.VIRAL, t, duration)
-            m = self._stacks(procs, DamageType.MAGNETIC, t, duration)
+            state = self.debuffs_at(t)
             out.append(
                 Event(
                     time=t,
                     armored=self.armored.get(key, zero),
                     unarmored=self.unarmored.get(key, zero),
-                    armor_kept=armor_kept(corrosive, c, strip),
-                    viral=1 + viral.value(v),
-                    magnetic=1 + magnetic.value(m),
+                    armor_kept=state.armor_kept,
+                    viral=state.viral,
+                    magnetic=state.magnetic,
                 )
             )
         return out
+
+    def debuffs_at(self, t: float) -> Debuffs:
+        """The target's debuffs at `t` from the shots in `self.times`."""
+        procs, duration = self.procs, self.duration
+        corrosive, viral, magnetic = self.debuff_rules
+        c = self._stacks(procs, DamageType.CORROSIVE, t, duration)
+        v = self._stacks(procs, DamageType.VIRAL, t, duration)
+        m = self._stacks(procs, DamageType.MAGNETIC, t, duration)
+        return Debuffs(
+            armor_kept(corrosive, c, self._heat_strip(t)),
+            1 + viral.value(v),
+            1 + magnetic.value(m),
+        )
+
+    def _heat_strip(self, t: float) -> float:
+        """Heat's armor strip at `t`: ramps up from the shot where expected Heat procs reach
+        one, holds while the shots keep it burning, returns after the last (Heat_Damage:81)."""
+        p_heat, duration = self.procs.get(HEAT, 0.0), self.duration
+        if not p_heat or not self.times:
+            return 0.0
+        first = math.ceil(1 / p_heat - 1e-9) - 1
+        if first >= len(self.times) or t <= self.times[first]:
+            return 0.0
+        burning, strips = self.times[first], self.rules.heat_strip
+        end = self.times[-1] + self.window[HEAT] * duration
+        if t <= end:
+            return strips.strip(t - burning, duration - 1)
+        return strips.after_burn(strips.strip(end - burning, duration - 1), t - end)

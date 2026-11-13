@@ -54,6 +54,7 @@ class Stat(StrEnum):
     FORCED_PROC = "forced_proc"  # chance to add a `damage_type` proc (V8)
     CRIT_TIER_UPGRADE = "crit_tier_upgrade"  # Vigilante set: chance to enhance a crit
     STATUS_STACK_CAP = "status_stack_cap"  # +N max stacks of `damage_type`'s status
+    BLAST_RADIUS = "blast_radius"  # AoE radius (Firestorm "Blast Range"); primer only (G49)
 
 
 PHYSICAL_TYPES = frozenset({DamageType.IMPACT, DamageType.PUNCTURE, DamageType.SLASH})

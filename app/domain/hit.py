@@ -53,6 +53,7 @@ class ModdedHit:
     direct_bonus: float | None = None  # Galvanized-style bonus once applied
     noncrit_factor: float = 1.0  # damage factor only non-crits get (Devouring Attrition)
     stack_cap_bonus: dict[DamageType, int] = field(default_factory=dict)  # +N max stacks
+    blast_radius: float = 0.0  # summed AoE radius bonus (Firestorm +0.44)
 
     @property
     def projectile_damage(self) -> float:
@@ -203,6 +204,7 @@ def modded_hit(
         status_duration=modded(1.0, Stat.STATUS_DURATION, bonuses) - 1,
         noncrit_factor=math.prod(noncrit),
         stack_cap_bonus=_stack_cap_bonus(bonuses),
+        blast_radius=modded(1.0, Stat.BLAST_RADIUS, bonuses) - 1,
     )
 
 

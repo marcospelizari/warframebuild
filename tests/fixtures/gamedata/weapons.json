@@ -73,6 +73,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -104,6 +105,7 @@
   "name": "Torid",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -142,6 +144,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -173,6 +176,7 @@
   "name": "Ignis Wraith",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -267,6 +271,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -311,6 +316,7 @@
    "naramon",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -429,6 +435,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -463,6 +470,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -533,6 +541,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -572,6 +581,7 @@
   "name": "Komorex",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -733,6 +743,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -777,6 +788,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3,
   "riven_disposition": 1.2,
@@ -822,6 +834,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -863,6 +876,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -972,6 +986,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -1000,6 +1015,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -1063,6 +1079,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1104,6 +1121,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -1191,6 +1209,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1235,6 +1254,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.6,
   "riven_disposition": 1.2,
@@ -1299,6 +1319,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1341,6 +1362,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.64999998,
   "riven_disposition": 1.2,
@@ -1428,6 +1450,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1477,6 +1500,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.69999999,
   "riven_disposition": 1.2,
@@ -1565,6 +1589,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1598,6 +1623,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -1688,6 +1714,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1720,6 +1747,7 @@
    "madurai",
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -1788,6 +1816,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1822,6 +1851,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -1948,6 +1978,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1999,6 +2030,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": true,
   "reload_time": 0.85000002,
   "riven_disposition": 1.2,
@@ -2066,6 +2098,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2109,6 +2142,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -2198,6 +2232,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -2241,6 +2276,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -2280,6 +2316,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -2310,6 +2347,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
@@ -2379,6 +2417,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -2425,6 +2464,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3499999,
   "riven_disposition": 1.2,
@@ -2515,6 +2555,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2546,6 +2587,7 @@
   "name": "Braton Prime",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.1500001,
   "riven_disposition": 1.2,
@@ -2637,6 +2679,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2687,6 +2730,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -2731,6 +2775,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2761,6 +2806,7 @@
   "name": "Hek",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -2825,6 +2871,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -2857,6 +2904,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.75,
   "riven_disposition": 1.2,
@@ -2944,6 +2992,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -2989,6 +3038,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -3099,6 +3149,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -3143,6 +3194,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,

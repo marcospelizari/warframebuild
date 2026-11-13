@@ -232,12 +232,18 @@ def test_utility_lines_are_ignored() -> None:
     parsed = parse(
         [
             "-60% Weapon Recoil",
-            "+44% Blast Range",
             "+2.1 Punch Through",
             "On Kill:\n+30% Projectile Speed and +30% Beam Range for 10s. Stacks up to 2x.",
         ]
     )
     assert parsed.support == Support.FULL and parsed.effects == [] and not parsed.unparsed
+
+
+def test_blast_range_is_the_primers_radius_stat() -> None:
+    """Firestorm, Fulmination (Area_of_Effect:37-44): counted by the primer score (G49)."""
+    effect = _one(["+44% Blast Range"])
+    assert (effect.stat, effect.value) == (Stat.BLAST_RADIUS, 0.44)
+    assert _one(["+24% Blast Radius"]).stat == Stat.BLAST_RADIUS
 
 
 def test_unknown_rule_without_damage_words_is_kept() -> None:

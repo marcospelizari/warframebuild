@@ -4,6 +4,8 @@
 .score summary::-webkit-details-marker{display:none}
 .more::after{content:"Show kill times and assumptions"}
 .score[open] .more::after{content:"Hide kill times and assumptions"}
+.howMore::after{content:"How this is counted"}
+.score[open] .howMore::after{content:"Hide how this is counted"}
 .led{display:flex;align-items:baseline;gap:10px;padding:6px 0;font-size:15px}
 .led dt{flex:1;display:flex;align-items:baseline;gap:10px;color:var(--color-muted);min-width:0}
 .led dt::after{content:"";flex:1;border-bottom:1px dotted #5a4c33}

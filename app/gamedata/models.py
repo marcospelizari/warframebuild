@@ -172,6 +172,12 @@ class Weapon(Model):
     beam_ramp_start: Fraction | None
     bonus_element: BonusElement | None  # saved <Family>_Weapons pages
     headshot: list[Headshot] = []  # forms aimed at heads (reference/headshot.json)
+    # The primary fire's AoE attack (name in `attacks`), for the primer's radius and the
+    # enemies around the target (reference/blasts.json, G49); None: no such blast or no row.
+    blast: str | None = None
+    # The primary-fire attacks the primer fires when DE's summary is another mode (Epitaph:
+    # the uncharged shot, not the charged one); [] = the scored shot (reference/blasts.json).
+    primer_shot: list[str] = []
     # Highest zoom level's bonus (wiki module Zoom, saved Sniper_Rifle); applies while aiming.
     zoom: Effects | None = None
 
@@ -252,7 +258,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[24] = 24
+    schema_version: Literal[25] = 25
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

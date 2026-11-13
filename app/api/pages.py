@@ -11,7 +11,7 @@ from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse
 
 from app.api.serving import served
-from app.gamedata.builds import Build, WeaponBuilds
+from app.gamedata.builds import Build, Variant, WeaponBuilds
 from app.gamedata.models import Weapon
 from app.gamedata.release import Release
 from app.gamedata.store import GameData
@@ -20,6 +20,8 @@ from app.gamedata.store import GameData
 BLOCK = re.compile(r"<!-- page-meta -->.*?<!-- /page-meta -->", re.DOTALL)
 SITE = "warframeBuild"
 SCORED = "Calculated against level 120 Steel Path enemies."
+PRIMER = "primer"  # /w/<slug>/primer; no faction has this name
+PRIMED = "Statuses that make follow-up hits stronger, against level 120 Steel Path enemies."
 
 router = APIRouter()
 
@@ -90,10 +92,13 @@ def _stored(release: Release | None, slug: str) -> WeaponBuilds | None:
 def weapon_meta(
     data: GameData, release: Release | None, gun: Weapon, faction: str | None
 ) -> Meta | None:
-    """None: no such faction among the gun's stored builds."""
+    """None: no such faction among the gun's stored builds. `faction` "primer": the Primer
+    build (G49)."""
     stored = _stored(release, gun.slug)
     variant = stored.variants[0] if stored and stored.variants else None
     image = f"/img/weapons/{gun.slug}.png"
+    if faction == PRIMER:
+        return _primer_meta(data, gun, variant, image)
     if faction is None:
         line = (
             f"Recommended {gun.name} build: {_summary(data, variant.recommended)} "
@@ -115,6 +120,22 @@ def weapon_meta(
         f"{gun.name} build against {name} | {SITE}",
         f"{gun.name} build against {name}: {_summary(data, variant.factions[name])} {SCORED}",
         f"/w/{gun.slug}/{faction}",
+        image,
+    )
+
+
+def _primer_meta(data: GameData, gun: Weapon, variant: Variant | None, image: str) -> Meta | None:
+    if variant is None:
+        return Meta(f"{gun.name} primer build | {SITE}", PRIMED, f"/w/{gun.slug}/{PRIMER}", image)
+    if variant.primer is None or variant.primer_numbers is None:
+        return None
+    n = variant.primer_numbers
+    reach = f"about {n.enemies:.0f} enemies" if n.enemies >= 1.5 else "one enemy"
+    line = f"Primes {reach}: follow-up hits do {n.boost:.1f}x damage."
+    return Meta(
+        f"{gun.name} primer build: status mods | {SITE}",
+        f"{gun.name} primer build: {_summary(data, variant.primer)} {line} {PRIMED}",
+        f"/w/{gun.slug}/{PRIMER}",
         image,
     )
 

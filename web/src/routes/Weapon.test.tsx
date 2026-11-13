@@ -96,6 +96,28 @@ test("the Faction builds tab opens the first faction", async () => {
   expect(router.state.location.pathname).toBe("/w/soma-prime/grineer");
 });
 
+test("the Primer tab shows the primer build, its numbers and no kill times", async () => {
+  const { router } = renderAt("/w/soma-prime");
+  fireEvent.click(await screen.findByRole("link", { name: "Primer" }));
+  expect(await screen.findByRole("heading", { name: "Primer" })).toBeInTheDocument();
+  expect(router.state.location.pathname).toBe("/w/soma-prime/primer");
+  expect(screen.getByRole("link", { name: "Primer" })).toHaveAttribute("aria-current", "page");
+  expect(screen.getByText("4.6×")).toBeInTheDocument();
+  expect(
+    screen.getByText(/about 12 enemies around it take 3\.6× \(10 m blast\)/),
+  ).toBeInTheDocument();
+  expect(screen.getByText(/The primer fires for 2 s/)).toBeInTheDocument();
+  expect(screen.queryByText(/Average time to kill/)).toBeNull();
+  expect(screen.queryByRole("button", { name: "Edit build" })).toBeNull();
+  expect(screen.queryByRole("navigation", { name: "Faction" })).toBeNull();
+  expect(document.title).toBe("Soma Prime primer build: status mods | warframeBuild");
+});
+
+test("a good primer carries the badge", async () => {
+  renderAt("/w/soma-prime");
+  expect(await screen.findByText("Good primer")).toBeInTheDocument();
+});
+
 test("an unknown faction says so", async () => {
   renderAt("/w/soma-prime/nope");
   expect(await screen.findByRole("alert")).toHaveTextContent("There is no such faction build");

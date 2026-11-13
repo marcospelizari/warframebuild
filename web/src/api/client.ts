@@ -6,6 +6,7 @@ export type CalcRequest = Schemas["CalcRequest"];
 export type ApiError = Schemas["ApiError"];
 export type BuildsResponse = Schemas["BuildsResponse"];
 export type StoredBuild = Schemas["StoredBuild"];
+export type Primer = Schemas["Primer"];
 export type Forma = Schemas["Forma"];
 export type FormaSlot = Schemas["FormaSlot"];
 export type ModList = Schemas["ModList"];

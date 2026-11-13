@@ -18,6 +18,7 @@ from app.gamedata.models import (
 )
 from app.pipeline.build import (
     arcanes,
+    blasts,
     enemies,
     headshot,
     incarnon,
@@ -64,6 +65,7 @@ class Dataset:
     status_rules: StatusRules
     overrides_off: list[SwitchedOff]  # entry text changed since written (U2)
     excluded_arcanes: list[Exclusion]  # new arcanes with incomplete data (U8)
+    blast_missing: list[str]  # guns with a normal-form AoE attack and no blasts.json row
 
 
 def build(raw_dir: Path, reference_dir: Path, established: Established | None = None) -> Dataset:
@@ -135,6 +137,9 @@ def build(raw_dir: Path, reference_dir: Path, established: Established | None = 
         titles,
         gun_gaps.ids,
     )
+    gun_list, blast_missing = blasts.apply(
+        reference(reference_dir / blasts.FILE), gun_list, perks, gun_gaps.ids
+    )
     enemy_list, factions = enemies.build(
         reference(reference_dir / "enemies.json"),
         reference(reference_dir / "enemy_scaling.json"),
@@ -167,6 +172,7 @@ def build(raw_dir: Path, reference_dir: Path, established: Established | None = 
         rules,
         overrides.switched_off,
         arcane_gaps.excluded,
+        blast_missing,
     )
 
 

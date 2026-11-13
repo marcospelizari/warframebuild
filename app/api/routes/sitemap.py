@@ -1,12 +1,12 @@
-"""GET /robots.txt and /sitemap.xml (PLAN G88): the home page and every gun's page, dated
-by the served game data."""
+"""GET /robots.txt and /sitemap.xml (PLAN G88): the home page, every gun's page and good
+primers' Primer pages (G49), dated by the served game data."""
 
 from html import escape
 
 from fastapi import APIRouter, Request
 from fastapi.responses import PlainTextResponse, Response
 
-from app.api.pages import site
+from app.api.pages import PRIMER, site
 from app.api.serving import served
 
 router = APIRouter()
@@ -19,9 +19,15 @@ def robots(request: Request) -> PlainTextResponse:
 
 @router.get("/sitemap.xml", include_in_schema=False)
 def sitemap(request: Request) -> Response:
-    data = served(request).data
+    now = served(request)
+    data = now.data
     origin, date = site(request), data.meta.fetched
-    paths = ["/", *(f"/w/{w.slug}" for w in sorted(data.weapons, key=lambda w: w.slug))]
+    good = now.release.good_primers if now.release else frozenset()
+    paths = ["/"]
+    for w in sorted(data.weapons, key=lambda w: w.slug):
+        paths.append(f"/w/{w.slug}")
+        if w.slug in good:  # a good primer's Primer tab (G49)
+            paths.append(f"/w/{w.slug}/{PRIMER}")
     urls = "".join(
         f"<url><loc>{escape(origin + p)}</loc><lastmod>{date}</lastmod></url>\n" for p in paths
     )

@@ -1,5 +1,5 @@
 {
- "changed_on": "2026-11-12",
+ "changed_on": "2026-11-13",
  "counts": {
   "arcanes": 34,
   "arcanes_full": 13,
@@ -23,7 +23,7 @@
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "181adfcad67dc34d",
+ "dataset_hash": "c7dd7676a069f551",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -47,7 +47,7 @@
  ],
  "fetched": "2026-11-12",
  "game_update": "Update 44.0",
- "schema_version": 24,
+ "schema_version": 25,
  "sources": [
   {
    "path": "de/ExportManifest.json",
@@ -138,6 +138,12 @@
    "retrieved": "2026-11-07",
    "sha256_16": "3ef4faa82d624a9f",
    "url": "https://wiki.warframe.com/w/Archon_Shard"
+  },
+  {
+   "path": "wiki/Area_of_Effect.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "5fe9b0032e6f973b",
+   "url": "https://wiki.warframe.com/w/Area_of_Effect"
   },
   {
    "path": "wiki/Arm-Cannon.wikitext",
@@ -306,6 +312,12 @@
    "retrieved": "2026-11-07",
    "sha256_16": "9e769dcc5686b9e8",
    "url": "https://wiki.warframe.com/w/Damage"
+  },
+  {
+   "path": "wiki/Damage_Falloff.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "405703ae48057a3a",
+   "url": "https://wiki.warframe.com/w/Damage_Falloff"
   },
   {
    "path": "wiki/Damage_Type_Modifier.wikitext",
@@ -690,6 +702,12 @@
    "retrieved": "2026-11-10",
    "sha256_16": "617977ba87ae126e",
    "url": "https://wiki.warframe.com/w/Primary_Mods"
+  },
+  {
+   "path": "wiki/Priming.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "e118662029ddebfa",
+   "url": "https://wiki.warframe.com/w/Priming"
   },
   {
    "path": "wiki/Puncture_Damage.wikitext",

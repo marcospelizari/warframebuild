@@ -1,0 +1,4 @@
+{
+  "about": "The AoE attack of each gun's primary fire (PLAN G49 P2): its radius (WFCD falloff end, after radius mods) sets how many enemies around the target the primer score counts, and enemies around the target get that attack's statuses. Alt-fire blasts never count (Marcos 2026-11-13). `blast`: the WFCD attack name, or null when the primary fire has none. Rows are drafted from WFCD attack lists in cache/Blasts.md and enter here once reviewed. Incarnon Forms use their main_attack.json parts instead.",
+  "weapons": {}
+}
