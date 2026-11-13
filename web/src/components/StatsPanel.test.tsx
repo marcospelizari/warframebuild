@@ -30,3 +30,12 @@ test("no bonus, no perks, no layout", () => {
   expect(screen.queryByText("INCARNON EVOLUTIONS")).toBeNull();
   expect(screen.getByText("Does not fit")).toBeInTheDocument();
 });
+
+test("each Incarnon perk is labelled with its evolution tier", () => {
+  const tiers = [
+    { tier: 2, options: [{ name: "Other", form: "both" as const, support: "full" as const }] },
+    { tier: 4, options: [{ name: "Fortress Salvo", form: "both" as const, support: "full" as const }] },
+  ];
+  render(<StatsPanel build={stored.build} forma={stored.forma} tiers={tiers} />);
+  expect(screen.getByText("EVO IV").parentElement?.textContent).toBe("EVO IVFortress Salvo");
+});

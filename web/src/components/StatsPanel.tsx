@@ -1,10 +1,11 @@
 import type { ReactNode } from "react";
-import type { Build, DamageType, Forma } from "@/api/client";
+import type { Build, DamageType, Forma, PerkTier } from "@/api/client";
 import { compact, trim } from "@/lib/format";
 import { damageIcon } from "./art";
 import s from "./StatsPanel.module.css";
 
 const PHYSICAL: DamageType[] = ["puncture", "slash", "impact"];
+const EVO = ["", "I", "II", "III", "IV", "V"]; // game names of the Incarnon tiers
 const cap = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 
 function Icon({ type, className, alt = "" }: { type: DamageType; className?: string; alt?: string }) {
@@ -43,11 +44,19 @@ function change(build: Build, baseline: Build): string {
 }
 
 /** The arsenal's stat screen for one build (canvas F-Weapon v46), at max rank. */
-type Props = { build: Build; forma: Forma | null; baseline?: Build | null; pending?: boolean };
+type Props = {
+  build: Build;
+  forma: Forma | null;
+  baseline?: Build | null;
+  pending?: boolean;
+  tiers?: PerkTier[]; // the gun's Incarnon tiers, to label each perk
+};
 
 /** `baseline`: the calculated build an edit is compared with (F6). */
-export function StatsPanel({ build, forma, baseline = null, pending = false }: Props) {
+export function StatsPanel({ build, forma, baseline = null, pending = false, tiers = [] }: Props) {
   const a = build.arsenal;
+  const tierOf = (perk: string) =>
+    tiers.find((t) => t.options.some((o) => o.name === perk))?.tier;
   const rank = (t: DamageType) => PHYSICAL.indexOf(t) + 1 || 9;
   const damage = (Object.entries(a.damage) as [DamageType, number][]).sort(
     ([x, vx], [y, vy]) => rank(x) - rank(y) || vy - vx,
@@ -84,11 +93,15 @@ export function StatsPanel({ build, forma, baseline = null, pending = false }: P
           <>
             <h3>INCARNON EVOLUTIONS</h3>
             <ul className={s.perk}>
-              {build.perks.map((p) => (
-                <li key={p} className={s.ar}>
-                  {p}
-                </li>
-              ))}
+              {build.perks.map((p) => {
+                const tier = tierOf(p);
+                return (
+                  <li key={p} className={s.ar}>
+                    {tier && <span className={s.evo}>EVO {EVO[tier]}</span>}
+                    {p}
+                  </li>
+                );
+              })}
             </ul>
           </>
         )}

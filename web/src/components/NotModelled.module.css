@@ -1,0 +1,4 @@
+.box{margin-top:14px;font-size:13px;line-height:1.5}
+.box summary{cursor:pointer;color:var(--color-muted)}
+.box summary::marker{color:var(--color-gold)}
+.list{margin:8px 0 0;padding-left:18px;color:var(--color-muted);display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}

@@ -5,11 +5,12 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 
-from app.api.app import create_app
+from app.api.app import SERVED_CODE, create_app
 from app.api.rate_limit import RateLimit
 from app.gamedata.release import current
 from app.gamedata.store import GameData
 from app.optimize.search import rounded
+from tests.test_layers import ALLOWED
 
 
 @pytest.fixture
@@ -36,6 +37,15 @@ def test_plain_gun_builds_are_scored_like_calc(client: TestClient) -> None:
         assert rounded(1 / scores[faction]) == stored["score"]
     enemies = {e["unique_name"] for e in recommended["build"]["combat"]["enemies"]}
     assert set(variant["denominators"]) == enemies
+
+
+def test_builds_list_what_was_not_calculated(client: TestClient) -> None:
+    """U5: entries the search left out, each with the text it could not calculate."""
+    rows = client.get("/api/weapons/soma-prime/builds").json()["not_modelled"]
+    assert rows
+    assert {r["support"] for r in rows} <= {"partial", "unsupported"}
+    assert all(r["text"] for r in rows)
+    assert "Serration" not in {r["name"] for r in rows}
 
 
 def test_progenitor_gun_has_two_variants_and_element_rows(client: TestClient) -> None:
@@ -65,6 +75,11 @@ def test_api_code_change_changes_the_etag(client: TestClient) -> None:
     client.app.state.api_version = "other"  # type: ignore[attr-defined]
     again = client.get("/api/weapons/soma-prime/builds", headers={"If-None-Match": etag})
     assert again.status_code == 200 and again.headers["etag"] != etag
+
+
+def test_etag_hashes_every_layer_the_api_runs() -> None:
+    """Review P3: a change in optimizer code (e.g. `unmodelled`) must change the ETag too."""
+    assert set(SERVED_CODE) == {"api", *ALLOWED["api"]}
 
 
 def test_no_release_yet_answers_503(tmp_path: Path, gamedata: GameData) -> None:
