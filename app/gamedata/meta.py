@@ -22,7 +22,7 @@ class SourceRecord(Model):
 
 
 class Meta(Model):
-    schema_version: Literal[25] = 25
+    schema_version: Literal[26] = 26
     dataset_hash: str
     # Newest content update named in the data (WFCD `introduced`); a label only:
     # DE publishes no update name, and hotfixes without new items do not change it.

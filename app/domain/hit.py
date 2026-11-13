@@ -46,6 +46,8 @@ class ModdedHit:
     damage_multiplier: float  # Serration group x separate damage factors
     element_bonus: dict[DamageType, float]  # summed bonus of the mods of each element (DoT)
     status_damage: float  # bonus (Elementalist), additive group, separate factor on DoT
+    # Bonus to one status's damage, in the same additive group (Emerald shard: Toxin).
+    type_status_damage: dict[DamageType, float]
     status_duration: float  # bonus (Hunter Track +0.9)
     head_critical_chance: float = 0.0  # with weak-point crit chance (Acuity)
     weak_point_damage: float = 0.0  # summed bonus (Acuity +3.5)
@@ -200,12 +202,24 @@ def modded_hit(
         modded_base=math.fsum(damage.values()) * damage_multiplier,
         damage_multiplier=damage_multiplier,
         element_bonus=element_bonuses(elements),
-        status_damage=modded(1.0, Stat.STATUS_DAMAGE, bonuses) - 1,
+        status_damage=modded(
+            1.0, Stat.STATUS_DAMAGE, [(e, v) for e, v in bonuses if e.damage_type is None]
+        )
+        - 1,
+        type_status_damage=_type_status_damage(bonuses),
         status_duration=modded(1.0, Stat.STATUS_DURATION, bonuses) - 1,
         noncrit_factor=math.prod(noncrit),
         stack_cap_bonus=_stack_cap_bonus(bonuses),
         blast_radius=modded(1.0, Stat.BLAST_RADIUS, bonuses) - 1,
     )
+
+
+def _type_status_damage(bonuses: Sequence[Bonus]) -> dict[DamageType, float]:
+    out: dict[DamageType, float] = {}
+    for e, v in bonuses:
+        if e.stat == Stat.STATUS_DAMAGE and e.damage_type is not None:
+            out[e.damage_type] = out.get(e.damage_type, 0.0) + v
+    return out
 
 
 def _stack_cap_bonus(bonuses: Sequence[Bonus]) -> dict[DamageType, int]:

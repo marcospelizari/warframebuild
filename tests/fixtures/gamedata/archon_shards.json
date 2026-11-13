@@ -1,0 +1,186 @@
+{
+ "buffs": {
+  "amber": [],
+  "azure": [],
+  "crimson": [
+   {
+    "at_cap": null,
+    "effect": {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "status_chance",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.25,
+     "while_aiming": false
+    },
+    "per_shard": null,
+    "source": [
+     "Archon_Shard:259, :261"
+    ],
+    "tauforged": 0.375,
+    "weapons": [
+     "primary"
+    ]
+   },
+   {
+    "at_cap": null,
+    "effect": {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "critical_chance",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.25,
+     "while_aiming": false
+    },
+    "per_shard": null,
+    "source": [
+     "Archon_Shard:264, :266"
+    ],
+    "tauforged": 0.375,
+    "weapons": [
+     "secondary"
+    ]
+   }
+  ],
+  "emerald": [
+   {
+    "at_cap": null,
+    "effect": {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": "toxin",
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "status_damage",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    },
+    "per_shard": null,
+    "source": [
+     "Archon_Shard:334, :337"
+    ],
+    "tauforged": 0.45,
+    "weapons": [
+     "primary",
+     "secondary"
+    ]
+   },
+   {
+    "at_cap": null,
+    "effect": {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": "corrosive",
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "add",
+     "per_status_type": false,
+     "stat": "status_stack_cap",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 2.0,
+     "while_aiming": false
+    },
+    "per_shard": null,
+    "source": [
+     "Archon_Shard:349, :352"
+    ],
+    "tauforged": 3.0,
+    "weapons": [
+     "primary",
+     "secondary"
+    ]
+   }
+  ],
+  "topaz": [
+   {
+    "at_cap": "Topaz: +1% critical chance per kill on an enemy with Heat, counted at its cap",
+    "effect": {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "critical_chance",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.5,
+     "while_aiming": false
+    },
+    "per_shard": null,
+    "source": [
+     "Archon_Shard:366, :368, :370"
+    ],
+    "tauforged": 0.75,
+    "weapons": [
+     "secondary"
+    ]
+   }
+  ],
+  "violet": [
+   {
+    "at_cap": null,
+    "effect": {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": "electricity",
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "element",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    },
+    "per_shard": {
+     "colors": [
+      "crimson",
+      "azure",
+      "violet"
+     ],
+     "tauforged": 0.15,
+     "value": 0.1
+    },
+    "source": [
+     "Archon_Shard:388, :390"
+    ],
+    "tauforged": 0.45,
+    "weapons": [
+     "primary"
+    ]
+   }
+  ]
+ }
+}

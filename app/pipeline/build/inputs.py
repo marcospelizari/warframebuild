@@ -32,3 +32,20 @@ def require_verified(entry: dict[str, Any], file: str, key: str) -> None:
     them for re-check once the data changes after that date (G48)."""
     if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(entry.get("verified", ""))):
         raise RefreshError(f"reference/{file} {key}: `verified` (YYYY-MM-DD) is required")
+
+
+# "Puncture_Damage:18-20" or "Status_Effect:252, :256"
+_CITE = re.compile(r"(?P<page>[A-Za-z_()]+):\d+(?:-\d+)?(?:, :\d+(?:-\d+)?)*")
+
+
+def require_cites(sources: Any, file: str, key: str, titles: dict[str, str]) -> None:
+    """`sources`: one or more 'Page:line' of saved pages listed in wiki_pages.json."""
+    if not isinstance(sources, list) or not sources:
+        raise RefreshError(f"reference/{file} {key}: `source` lists saved pages and lines")
+    for cite in sources:
+        m = _CITE.fullmatch(cite) if isinstance(cite, str) else None
+        if m is None or m["page"] not in titles:
+            raise RefreshError(
+                f"reference/{file} {key}: source {cite!r} is not 'Page:line' of a saved page "
+                "listed in wiki_pages.json"
+            )
