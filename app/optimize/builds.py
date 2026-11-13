@@ -11,7 +11,8 @@ from typing import Literal
 
 from app.domain.effects import DamageType
 from app.gamedata.builds import Build, ElementRow, PrimerNumbers, Variant, WeaponBuilds
-from app.gamedata.models import Arcane, Enemy, Mod, Perk, Weapon
+from app.gamedata.enemies import Enemy
+from app.gamedata.models import Arcane, Mod, Perk, Weapon
 from app.gamedata.store import GameData
 from app.optimize.combat import combat
 from app.optimize.forma import forma_layout, stored_forma

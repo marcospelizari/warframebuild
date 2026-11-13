@@ -12,7 +12,7 @@ from app.domain.combat import TYPES, Event, Outcome, Target, fight, geometric_me
 from app.domain.effects import Faction
 from app.domain.headshot import Head
 from app.domain.status_rules import StatusRules
-from app.gamedata.models import Enemy, FactionModifiers
+from app.gamedata.enemies import Enemy, FactionModifiers
 from app.optimize.conditions import Resolved, resolve
 from app.optimize.loadout import Loadout
 from app.optimize.timeline import Timeline

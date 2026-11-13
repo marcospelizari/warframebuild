@@ -13,20 +13,10 @@ from pathlib import Path
 from pydantic import TypeAdapter
 
 from app.domain.status_rules import StatusRules
+from app.gamedata.enemies import Enemy, FactionModifiers, ReferenceHead
 from app.gamedata.images import PictureKind, picture_name
-from app.gamedata.models import (
-    Arcane,
-    Enemy,
-    FactionModifiers,
-    Incarnon,
-    Join,
-    Meta,
-    Mod,
-    ModSet,
-    ModsFile,
-    ReferenceHead,
-    Weapon,
-)
+from app.gamedata.meta import Join, Meta
+from app.gamedata.models import Arcane, Incarnon, Mod, ModSet, ModsFile, Weapon
 
 DATA_FILES = (
     "weapons.json",

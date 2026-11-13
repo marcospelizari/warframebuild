@@ -3,7 +3,7 @@ from pathlib import Path
 
 from app.domain.effects import Support
 from app.gamedata.changes import SNAPSHOT, Change, Changes, Kind, Shown, Snapshot, read_changes
-from app.pipeline import changes, check
+from app.pipeline import changes, reference_rows
 from app.pipeline.refresh import Paths, run
 
 HORNET = "/Lotus/Upgrades/Mods/Pistol/WeaponDamageAmountMod"
@@ -118,7 +118,7 @@ def test_dataset_without_snapshot_is_reported_unavailable(paths: Paths) -> None:
     _raise_lex_crit(paths)
     report = run(paths, offline=True, fetch_images=False)
     assert report.diff.unavailable and "no snapshot.json" in report.diff.unavailable
-    assert len(report.touched) == len(check.reference_rows(paths.reference))
+    assert len(report.touched) == len(reference_rows.reference_rows(paths.reference))
     md = Path(
         paths.raw.parent / f"patch-report-{report.meta.changed_on}-{report.meta.dataset_hash}.md"
     ).read_text()

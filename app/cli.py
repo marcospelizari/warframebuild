@@ -11,7 +11,16 @@ import uvicorn
 
 from app.api.app import create_app
 from app.optimize.search import MAX_EVALUATIONS
-from app.pipeline import build_all, check, fixtures, frozen_data, refresh, sample, update
+from app.pipeline import (
+    build_all,
+    check,
+    fixtures,
+    frozen_data,
+    reference_rows,
+    refresh,
+    sample,
+    update,
+)
 from app.pipeline.sources.http import PoliteClient
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -163,8 +172,10 @@ def run_check(*, offline: bool) -> list[str]:
     meta = current.meta
     changes = None if offline else check.source_changes(PoliteClient(), meta.sources)
     lines = check.source_lines(changes)
-    rows = check.reference_rows(paths.reference)
-    lines += check.stale_lines(check.stale_rows(rows, meta.changed_on), meta.changed_on)
+    rows = reference_rows.reference_rows(paths.reference)
+    lines += reference_rows.stale_lines(
+        reference_rows.stale_rows(rows, meta.changed_on), meta.changed_on
+    )
     lines += check.wiki_lines(paths.raw, paths.reference)
     lines += check.export_plus_lines(paths.raw)
     lines += [f"no builds for {e.name}: {e.reason}" for e in meta.excluded_weapons]  # U7

@@ -10,7 +10,8 @@ from app.domain.combat import neutral_dps
 from app.domain.effects import DamageType, Faction, Stat, Support
 from app.domain.headshot import Head
 from app.domain.status_rules import StatusRules
-from app.gamedata.models import Arcane, Enemy, Mod, Perk, Weapon
+from app.gamedata.enemies import Enemy
+from app.gamedata.models import Arcane, Mod, Perk, Weapon
 from app.gamedata.store import GameData
 from app.optimize import forma
 from app.optimize.candidates import arcane_fits, pool

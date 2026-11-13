@@ -4,18 +4,9 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from app.domain.status_rules import StatusRules
-from app.gamedata.models import (
-    Arcane,
-    Enemy,
-    Exclusion,
-    FactionModifiers,
-    Incarnon,
-    Join,
-    Mod,
-    ModSet,
-    ReferenceHead,
-    Weapon,
-)
+from app.gamedata.enemies import Enemy, FactionModifiers, ReferenceHead
+from app.gamedata.meta import Exclusion, Join
+from app.gamedata.models import Arcane, Incarnon, Mod, ModSet, Weapon
 from app.pipeline.build import (
     arcanes,
     blasts,

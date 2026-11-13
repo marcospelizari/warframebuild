@@ -5,7 +5,7 @@ import json
 
 import pytest
 
-from app.gamedata.models import Exclusion
+from app.gamedata.meta import Exclusion
 from app.pipeline.build import Dataset, build
 from app.pipeline.build.gaps import Established
 from app.pipeline.errors import RefreshError

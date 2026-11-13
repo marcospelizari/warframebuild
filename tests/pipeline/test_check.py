@@ -4,10 +4,9 @@ import pytest
 
 from app.domain.effects import DamageType
 from app.gamedata import store
-from app.gamedata.models import Meta, SourceRecord
-from app.pipeline import check, publish
+from app.gamedata.meta import Meta, SourceRecord
+from app.pipeline import check, publish, reference_rows
 from app.pipeline.build import build
-from app.pipeline.changes import EntryDiff
 from app.pipeline.refresh import Paths, load_previous, run
 from app.pipeline.sources import de_export as de
 from app.pipeline.sources import sha256_16, wfcd
@@ -114,25 +113,6 @@ def test_online_refresh_downloads_each_source_once(paths: Paths) -> None:
     assert len(asked) == len(set(asked)) == 1 + len(de.EXPORTS) + len(wfcd.FILES)
 
 
-def test_reference_rows_and_staleness_by_date(paths: Paths) -> None:
-    rows = check.reference_rows(paths.reference)
-    keys = {(r.file, r.key) for r in rows}
-    epitaph = "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon"
-    assert ("fire_overrides.json", epitaph) in keys
-    assert ("fire_overrides.json", "beam_ramp_start") in keys
-    assert ("mod_filter.json", "expert") in keys
-    assert check.stale_rows(rows, "2026-11-08") == []
-    assert len(check.stale_rows(rows, "2026-12-01")) == len(rows)
-
-
-def test_verified_must_be_a_date(paths: Paths) -> None:
-    rules = json.loads((paths.reference / "mod_filter.json").read_text())
-    rules["rules"][0]["verified"] = "Update 44.0"
-    (paths.reference / "mod_filter.json").write_text(json.dumps(rules))
-    with pytest.raises(ValueError, match="YYYY-MM-DD"):
-        check.reference_rows(paths.reference)
-
-
 def test_changed_on_moves_only_when_data_changes(paths: Paths) -> None:
     """Review bug 2: staleness follows data changes, not the newest gun's update name."""
     dataset = build(paths.raw, paths.reference)
@@ -156,8 +136,8 @@ def test_changed_on_moves_only_when_data_changes(paths: Paths) -> None:
         today="2026-12-03",
     )
     assert moved.changed_on == "2026-12-03"
-    rows = check.reference_rows(paths.reference)
-    assert check.stale_rows(rows, moved.changed_on) == rows
+    rows = reference_rows.reference_rows(paths.reference)
+    assert reference_rows.stale_rows(rows, moved.changed_on) == rows
 
 
 def test_changed_on_is_the_refresh_date_never_earlier(paths: Paths) -> None:
@@ -197,7 +177,7 @@ def test_unreadable_previous_dataset_is_reported(paths: Paths) -> None:
     text = "\n".join(report.lines())
     assert "no comparison with the previous dataset" in text
     assert "no new, changed or removed" not in text
-    assert len(report.touched) == len(check.reference_rows(paths.reference))
+    assert len(report.touched) == len(reference_rows.reference_rows(paths.reference))
 
 
 def test_refresh_reports_no_entry_change_on_rerun(paths: Paths) -> None:
@@ -235,22 +215,11 @@ def test_unreadable_dataset_source_line_says_so(paths: Paths) -> None:
     assert not list(paths.raw.rglob(".*.prev"))
 
 
-def test_family_correction_listed_when_a_member_changes(paths: Paths) -> None:
-    """Review R16: correction rows are keyed by their own id; their `mods` count."""
-    rows = check.reference_rows(paths.reference)
-    join = next(r for r in rows if r.key == "galvanized-aptitude-rifle-aptitude")
-    diff = EntryDiff(ids={join.depends_on[0]})
-    assert join in check.touched_rows(rows, diff)
-
-
-def test_single_reference_row_is_listed(paths: Paths) -> None:
-    rows = check.reference_rows(paths.reference)
-    assert ("headshot.json", "Grineer humanoid head") in {(r.file, r.label) for r in rows}
-
-
 def test_status_rule_rows_are_listed_with_their_wiki_pages(paths: Paths) -> None:
     """U13: one row per damage type; every cited saved page names the file in its feeds."""
-    rows = [r for r in check.reference_rows(paths.reference) if r.file == "status_rules.json"]
+    rows = [
+        r for r in reference_rows.reference_rows(paths.reference) if r.file == "status_rules.json"
+    ]
     assert {r.key for r in rows} == {t.value for t in DamageType}
     table = json.loads((paths.reference / "status_rules.json").read_text())
     cited = {c.split(":")[0] for row in table["types"].values() for c in row["source"]}

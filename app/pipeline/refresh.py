@@ -6,8 +6,8 @@ from pathlib import Path
 
 from app.gamedata import store
 from app.gamedata.changes import Changes, read_changes
-from app.gamedata.models import Exclusion, Meta, SourceRecord
-from app.pipeline import changes, check, images, publish
+from app.gamedata.meta import Exclusion, Meta, SourceRecord
+from app.pipeline import changes, check, images, publish, reference_rows
 from app.pipeline.build import build
 from app.pipeline.build.effects import SwitchedOff
 from app.pipeline.build.gaps import Established
@@ -50,7 +50,7 @@ class Report:
     source_changes: list[str] | None = None  # None = not checked (offline)
     diff: changes.EntryDiff = field(default_factory=changes.EntryDiff)
     patch: list[str] = field(default_factory=list)  # support drops + report path (U1)
-    touched: list[check.RefRow] = field(default_factory=list)
+    touched: list[reference_rows.RefRow] = field(default_factory=list)
     wiki: list[str] = field(default_factory=list)
     support: list[str] = field(default_factory=list)
     untagged: list[str] = field(default_factory=list)
@@ -140,7 +140,7 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
     before = changes.read_previous(_readable(paths.gamedata))
     # Fail early: nothing is downloaded while a hand-saved file is missing.
     saved_files = wiki_local.scan(paths.raw, paths.reference) + export_plus.scan(paths.raw)
-    reference_rows = check.reference_rows(paths.reference)  # bad dates fail before publishing
+    rows = reference_rows.reference_rows(paths.reference)  # bad dates fail before publishing
     changed_sources: list[str] | None = None
     saving: AbstractContextManager[list[SourceFile]]
     if offline:
@@ -190,7 +190,7 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
         found=found,
         overrides_off=dataset.overrides_off,
         excluded_arcanes=dataset.excluded_arcanes,
-        touched=check.touched_rows(reference_rows, diff),
+        touched=reference_rows.touched_rows(rows, diff),
         support=check.support_lines(dataset),
         untagged=check.untagged_lines(dataset)
         + check.module_gap_lines(dataset)

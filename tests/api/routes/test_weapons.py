@@ -6,7 +6,7 @@ from fastapi.testclient import TestClient
 
 from app.api.app import create_app
 from app.api.routes.weapons import PENDING
-from app.gamedata.models import Exclusion
+from app.gamedata.meta import Exclusion
 from app.gamedata.store import GameData
 
 PNG = b"\x89PNG\r\n\x1a\n"

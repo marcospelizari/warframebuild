@@ -6,10 +6,10 @@ from typing import Any
 
 from pydantic import ValidationError
 
-from app.domain.direct_bonus import DirectBonus
-from app.domain.effects import DamageType
 from app.domain.polarity import Polarity
-from app.gamedata.models import Attack, BonusElement, Exclusion, Falloff, Join, Weapon
+from app.gamedata.meta import Exclusion, Join
+from app.gamedata.models import BonusElement, Weapon
+from app.pipeline.build.attacks import attack
 from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.effects import Overrides
 from app.pipeline.build.fire import FireOverrides, attack_data, fire_rate
@@ -24,7 +24,7 @@ from app.pipeline.sources.de_export import (
 from app.pipeline.sources.export_plus import known
 from app.pipeline.sources.wfcd import POLARITIES
 from app.pipeline.sources.wiki_progenitor import Progenitor
-from app.pipeline.sources.wiki_weapon_data import AttackData, WeaponData
+from app.pipeline.sources.wiki_weapon_data import WeaponData
 
 
 def build(
@@ -138,7 +138,7 @@ def _weapon(
             # WFCD lists each attack (charged, per pellet, AoE part); DE gives one summary,
             # so values legitimately differ. The main attack is chosen later (main_attack.json).
             attacks=[
-                _attack(
+                attack(
                     a,
                     d["name"],
                     extra[a["name"]],
@@ -177,55 +177,6 @@ def _with_zoom(weapon: Weapon, data: WeaponData | None, overrides: Overrides) ->
         return weapon
     effects = overrides.effects(f"{weapon.unique_name}#zoom", data.zoom)
     return weapon.model_copy(update={"zoom": effects})
-
-
-def _attack(
-    a: dict[str, Any],
-    weapon: str,
-    extra: AttackData | None,
-    direct: DirectBonus = DirectBonus.ADDING,
-    beam_start: float | None = None,
-) -> Attack:
-    known = {t.value for t in DamageType}
-    unknown = set(a.get("damage", {})) - known
-    if unknown:
-        raise RefreshError(f"{weapon} / {a.get('name')}: unknown damage types {sorted(unknown)}")
-    falloff = a.get("falloff")
-    try:
-        return _attack_model(a, falloff, extra, direct, beam_start)
-    except ValidationError as error:
-        raise RefreshError(f"{weapon} / {a.get('name')}: invalid values: {error}") from error
-
-
-def _attack_model(
-    a: dict[str, Any],
-    falloff: dict[str, Any] | None,
-    extra: AttackData | None,
-    direct: DirectBonus,
-    beam_start: float | None,
-) -> Attack:
-    return Attack(
-        name=a["name"],
-        # WFCD uses speed 0 on DoT pseudo-attacks (e.g. Tysis "Corrosive DoT"): no own rate.
-        fire_rate=a.get("speed") or None,
-        critical_chance=a["crit_chance"] / 100,
-        critical_multiplier=a["crit_mult"],
-        status_chance=a["status_chance"] / 100,
-        shot_type=a.get("shot_type"),
-        damage={DamageType(k): float(v) for k, v in a.get("damage", {}).items() if v},
-        falloff=Falloff(**falloff) if falloff else None,
-        charge_time=a.get("charge_time"),
-        shot_speed=a.get("shot_speed"),
-        forced_procs=extra.forced_procs if extra else None,
-        burst_count=extra.burst_count if extra else None,
-        burst_delay=extra.burst_delay if extra else None,
-        ammo_cost=extra.ammo_cost if extra else None,
-        multishot=extra.multishot if extra else None,
-        extra_headshot=extra.extra_headshot if extra else None,
-        parent=extra.parent if extra else None,
-        beam_ramp_start=beam_start,
-        direct_bonus=direct,
-    )
 
 
 def _slugs(items: list[tuple[str, str]]) -> dict[str, str]:

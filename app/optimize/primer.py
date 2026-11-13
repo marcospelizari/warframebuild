@@ -17,7 +17,8 @@ from app.domain.combat import effective_hp, geometric_mean
 from app.domain.hit import AttackStats
 from app.domain.status_rules import StatusRules
 from app.gamedata.builds import PrimerNumbers
-from app.gamedata.models import Attack, Enemy
+from app.gamedata.enemies import Enemy
+from app.gamedata.models import Attack
 from app.optimize.conditions import resolve
 from app.optimize.head import AOE
 from app.optimize.loadout import Loadout, attack_stats

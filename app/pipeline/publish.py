@@ -18,7 +18,8 @@ from pydantic import BaseModel
 
 from app.domain.effects import Support
 from app.gamedata.changes import read_changes, read_snapshot
-from app.gamedata.models import Category, Meta, Model, ModsFile, SourceRecord
+from app.gamedata.meta import Meta, SourceRecord
+from app.gamedata.models import Category, Model, ModsFile
 from app.gamedata.store import dataset_hash, load
 from app.pipeline.build import Dataset
 
