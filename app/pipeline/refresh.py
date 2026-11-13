@@ -194,7 +194,8 @@ def _run(paths: Paths, *, offline: bool, fetch_images: bool, client: PoliteClien
         support=check.support_lines(dataset),
         untagged=check.untagged_lines(dataset)
         + check.module_gap_lines(dataset)
-        + check.incarnon_gap_lines(dataset),
+        + check.incarnon_gap_lines(dataset)
+        + check.blast_gap_lines(dataset),
         # After a game update the hand-saved files need a look too.
         wiki=check.wiki_lines(paths.raw, paths.reference) if changed_sources else [],
         export_plus=check.export_plus_lines(paths.raw) if changed_sources else [],

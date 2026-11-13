@@ -6,7 +6,7 @@ import re
 # are dropped; any other line the parser cannot model stays in `unparsed` (R6), so an
 # unknown combat rule can never pass as fully supported.
 _UTILITY_STATS = (
-    r"Punch Through|Blast (?:Radius|Range)|Projectile Speed|(?:Weapon )?Recoil|Accuracy|Zoom"
+    r"Punch Through|Projectile Speed|(?:Weapon )?Recoil|Accuracy|Zoom"
     r"|Beam Range|Movement Speed|Sprint Speed|Dodge Speed|Mobility|Ammo Maximum|Life Steal"
     r"|Heal Rate|Revive Speed|Combo Duration|Shield Recharge Delay|from Health Orbs"
     r"|Magazine Reloaded/s when Holstered|Aim Glide/Wall Latch Duration|Arcane Revive"

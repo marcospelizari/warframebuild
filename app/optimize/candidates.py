@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from typing import Literal
 
 from app.domain import compatibility
-from app.domain.effects import Support
+from app.domain.effects import Stat, Support
 from app.gamedata.models import Arcane, Effects, Mod, ModSet, Weapon
 from app.gamedata.store import GameData
 
@@ -14,6 +14,13 @@ from app.gamedata.store import GameData
 class Pool:
     mods: list[Mod]  # sorted by uniqueName
     alternatives: dict[str, list[str]]  # kept uniqueName -> merged equivalents (G47)
+
+
+PRIMER_ONLY = frozenset({Stat.BLAST_RADIUS})
+
+
+def _primer_only(m: Mod) -> bool:
+    return bool(m.effects.effects) and all(e.stat in PRIMER_ONLY for e in m.effects.effects)
 
 
 def fits(weapon: Weapon, m: Mod) -> bool:
@@ -55,10 +62,11 @@ def arcane_fits(weapon: Weapon, a: Arcane) -> bool:
     return a.category == weapon.category and a.weapon_type in (None, weapon.weapon_type)
 
 
-def pool(weapon: Weapon, mods: Iterable[Mod], sets: Iterable[ModSet]) -> Pool:
+def pool(weapon: Weapon, mods: Iterable[Mod], sets: Iterable[ModSet], primer: bool = False) -> Pool:
     """Fitting mods with fully modelled damage effects, their own or their set's bonus (R6;
     e.g. Vigilante Supplies). Mods with identical effects, tags and polarity and no family
-    or set collapse into the lowest drain (G47)."""
+    or set collapse into the lowest drain (G47). Mods that only change what the primer
+    score counts (blast radius) join the primer's pool only."""
     set_damage = {
         s.unique_name
         for s in sets
@@ -70,6 +78,7 @@ def pool(weapon: Weapon, mods: Iterable[Mod], sets: Iterable[ModSet]) -> Pool:
             for m in mods
             if m.effects.support == Support.FULL
             and (m.effects.effects or m.mod_set in set_damage)
+            and (primer or not _primer_only(m))
             and fits(weapon, m)
         ),
         key=lambda m: (m.base_drain, m.unique_name),

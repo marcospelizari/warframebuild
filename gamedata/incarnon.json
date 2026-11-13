@@ -2278,6 +2278,7 @@
      "requires_trigger": null,
      "support": "partial",
      "unparsed": [
+      "With Energy Max above 700: +50% Blast Radius",
       "Blast Radius increase is additive with other sources, such as (Primed) Fulmination."
      ]
     },

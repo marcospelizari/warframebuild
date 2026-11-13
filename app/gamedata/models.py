@@ -172,6 +172,9 @@ class Weapon(Model):
     beam_ramp_start: Fraction | None
     bonus_element: BonusElement | None  # saved <Family>_Weapons pages
     headshot: list[Headshot] = []  # forms aimed at heads (reference/headshot.json)
+    # The primary fire's AoE attack (name in `attacks`), for the primer's radius and the
+    # enemies around the target (reference/blasts.json, G49); None: no such blast or no row.
+    blast: str | None = None
     # Highest zoom level's bonus (wiki module Zoom, saved Sniper_Rifle); applies while aiming.
     zoom: Effects | None = None
 

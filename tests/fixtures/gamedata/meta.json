@@ -23,7 +23,7 @@
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "1773956518d52a62",
+ "dataset_hash": "10ab0bf17db00851",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -138,6 +138,12 @@
    "retrieved": "2026-11-07",
    "sha256_16": "3ef4faa82d624a9f",
    "url": "https://wiki.warframe.com/w/Archon_Shard"
+  },
+  {
+   "path": "wiki/Area_of_Effect.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "5fe9b0032e6f973b",
+   "url": "https://wiki.warframe.com/w/Area_of_Effect"
   },
   {
    "path": "wiki/Arm-Cannon.wikitext",
@@ -306,6 +312,12 @@
    "retrieved": "2026-11-07",
    "sha256_16": "9e769dcc5686b9e8",
    "url": "https://wiki.warframe.com/w/Damage"
+  },
+  {
+   "path": "wiki/Damage_Falloff.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "405703ae48057a3a",
+   "url": "https://wiki.warframe.com/w/Damage_Falloff"
   },
   {
    "path": "wiki/Damage_Type_Modifier.wikitext",

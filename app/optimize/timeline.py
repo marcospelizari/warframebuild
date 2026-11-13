@@ -52,6 +52,7 @@ class Timeline:
     bane: Faction | None
     rules: StatusRules
     until: float = CAP_S  # last shot time; a primer stops early (G49)
+    shots: tuple[float, ...] | None = None  # shot times to use instead of the loadout's
     armored: dict[int, list[float]] = field(default_factory=dict)
     unarmored: dict[int, list[float]] = field(default_factory=dict)
     exact: dict[int, float] = field(default_factory=dict)  # merge key -> first event time
@@ -62,7 +63,11 @@ class Timeline:
             self.rules = self.rules.with_extra_stacks(self.shot.hits[0].stack_cap_bonus)
         self.window = {t: r.duration_s for t, r in self.rules.types.items()}  # base, s
         self.dots = {t: r.dot for t, r in self.rules.types.items() if r.dot is not None}
-        self.times = shot_times(self.shot.firing, self.shot.rate_factor, self.until)
+        self.times = (
+            list(self.shots)
+            if self.shots is not None
+            else shot_times(self.shot.firing, self.shot.rate_factor, self.until)
+        )
         self.own = [
             part_procs(hit, attack, self.lo.mark, self.head, self.shot, self.res.forced)
             for hit, (_, attack) in zip(self.shot.hits, self.lo.parts, strict=True)

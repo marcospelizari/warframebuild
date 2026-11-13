@@ -73,6 +73,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -145,6 +146,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -258,6 +260,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -327,6 +330,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -395,6 +399,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -490,6 +495,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -561,6 +567,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -631,6 +638,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -697,6 +705,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -792,6 +801,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -889,6 +899,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -984,6 +995,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1088,6 +1100,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -1247,6 +1260,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -1334,6 +1348,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -1414,6 +1429,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -1567,6 +1583,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -1701,6 +1718,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -1783,6 +1801,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -1894,6 +1913,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -2025,6 +2045,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -2164,6 +2185,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2302,6 +2324,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2386,6 +2409,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2454,6 +2478,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2523,6 +2548,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2640,6 +2666,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2786,6 +2813,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2938,6 +2966,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3037,6 +3066,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -3118,6 +3148,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3184,6 +3215,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3305,6 +3337,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3408,6 +3441,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3607,6 +3641,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3681,6 +3716,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3827,6 +3863,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3970,6 +4007,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4046,6 +4084,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4140,6 +4179,7 @@
    }
   ],
   "beam_ramp_start": 0.6,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4235,6 +4275,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4332,6 +4373,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4404,6 +4446,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4553,6 +4596,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4629,6 +4673,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -4720,6 +4765,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -4786,6 +4832,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -4854,6 +4901,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -4951,6 +4999,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5044,6 +5093,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -5124,6 +5174,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5268,6 +5319,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5383,6 +5435,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5499,6 +5552,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5598,6 +5652,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -5731,6 +5786,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5797,6 +5853,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5864,6 +5921,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5932,6 +5990,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -6074,6 +6133,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -6169,6 +6229,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -6239,6 +6300,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -6307,6 +6369,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -6373,6 +6436,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -6466,6 +6530,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -6580,6 +6645,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -6710,6 +6776,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -6794,6 +6861,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -6911,6 +6979,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -7022,6 +7091,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -7134,6 +7204,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -7224,6 +7295,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -7332,6 +7404,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -7518,6 +7591,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -7612,6 +7686,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -7721,6 +7796,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -7798,6 +7874,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -7903,6 +7980,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -7986,6 +8064,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -8090,6 +8169,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8161,6 +8241,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8231,6 +8312,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -8323,6 +8405,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8392,6 +8475,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8465,6 +8549,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8539,6 +8624,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8611,6 +8697,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8758,6 +8845,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8838,6 +8926,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8945,6 +9034,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9145,6 +9235,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9300,6 +9391,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9373,6 +9465,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9468,6 +9561,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9573,6 +9667,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9671,6 +9766,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9773,6 +9869,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -9860,6 +9957,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9963,6 +10061,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [],
@@ -10056,6 +10155,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -10180,6 +10280,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -10303,6 +10404,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -10374,6 +10476,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -10551,6 +10654,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -10624,6 +10728,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -10697,6 +10802,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -10765,6 +10871,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -10857,6 +10964,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -10959,6 +11067,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11061,6 +11170,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11132,6 +11242,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -11205,6 +11316,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11351,6 +11463,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11421,6 +11534,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -11533,6 +11647,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11601,6 +11716,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -11670,6 +11786,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -11765,6 +11882,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11892,6 +12010,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -11994,6 +12113,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -12129,6 +12249,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -12215,6 +12336,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -12331,6 +12453,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -12447,6 +12570,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -12529,6 +12653,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -12706,6 +12831,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -12812,6 +12938,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -12917,6 +13044,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": {
    "elements": [
     "impact",
@@ -13055,6 +13183,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13180,6 +13309,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13284,6 +13414,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13387,6 +13518,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13456,6 +13588,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13566,6 +13699,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13635,6 +13769,7 @@
    }
   ],
   "beam_ramp_start": 0.7,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13802,6 +13937,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -13895,6 +14031,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -14072,6 +14209,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -14167,6 +14305,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -14273,6 +14412,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -14341,6 +14481,7 @@
    }
   ],
   "beam_ramp_start": 0.3,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -14408,6 +14549,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -14509,6 +14651,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -14629,6 +14772,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -14698,6 +14842,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -14770,6 +14915,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -14866,6 +15012,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -14974,6 +15121,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -15094,6 +15242,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15240,6 +15389,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15328,6 +15478,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15445,6 +15596,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15542,6 +15694,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15639,6 +15792,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15712,6 +15866,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -15860,6 +16015,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15984,6 +16140,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16102,6 +16259,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16176,6 +16334,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -16280,6 +16439,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16378,6 +16538,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -16454,6 +16615,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16549,6 +16711,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -16678,6 +16841,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16769,6 +16933,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -16842,6 +17007,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16914,6 +17080,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16982,6 +17149,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17051,6 +17219,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -17118,6 +17287,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17188,6 +17358,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17260,6 +17431,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17332,6 +17504,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -17400,6 +17573,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17468,6 +17642,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17540,6 +17715,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17612,6 +17788,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17684,6 +17861,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -17780,6 +17958,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -17862,6 +18041,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -17987,6 +18167,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18089,6 +18270,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18217,6 +18399,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18351,6 +18534,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18459,6 +18643,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18569,6 +18754,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18707,6 +18893,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18836,6 +19023,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18973,6 +19161,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19110,6 +19299,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19266,6 +19456,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -19362,6 +19553,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19452,6 +19644,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19521,6 +19714,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19597,6 +19791,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19727,6 +19922,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19822,6 +20018,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19967,6 +20164,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20062,6 +20260,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20160,6 +20359,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20238,6 +20438,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20337,6 +20538,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20469,6 +20671,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20620,6 +20823,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20723,6 +20927,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20801,6 +21006,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20898,6 +21104,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21020,6 +21227,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21143,6 +21351,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21269,6 +21478,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21372,6 +21582,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21443,6 +21654,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [],
@@ -21548,6 +21760,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21673,6 +21886,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21753,6 +21967,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21950,6 +22165,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22099,6 +22315,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22202,6 +22419,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22279,6 +22497,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22377,6 +22596,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22509,6 +22729,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22609,6 +22830,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22723,6 +22945,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22844,6 +23067,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22923,6 +23147,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23069,6 +23294,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23229,6 +23455,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23371,6 +23598,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23448,6 +23676,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23621,6 +23850,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23696,6 +23926,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23829,6 +24060,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23926,6 +24158,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24048,6 +24281,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24142,6 +24376,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24210,6 +24445,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24313,6 +24549,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24441,6 +24678,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24570,6 +24808,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24695,6 +24934,7 @@
    }
   ],
   "beam_ramp_start": 0.2,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24765,6 +25005,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24913,6 +25154,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24989,6 +25231,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25123,6 +25366,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25197,6 +25441,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25324,6 +25569,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25403,6 +25649,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25503,6 +25750,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25599,6 +25847,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25687,6 +25936,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25759,6 +26009,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25882,6 +26133,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25997,6 +26249,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -26112,6 +26365,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -26207,6 +26461,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -26289,6 +26544,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -26391,6 +26647,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -26484,6 +26741,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -26593,6 +26851,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -26689,6 +26948,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -26784,6 +27044,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -26880,6 +27141,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -26987,6 +27249,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -27082,6 +27345,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27203,6 +27467,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27337,6 +27602,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -27418,6 +27684,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -27486,6 +27753,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27556,6 +27824,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -27624,6 +27893,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27694,6 +27964,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -27789,6 +28060,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27861,6 +28133,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27936,6 +28209,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -28006,6 +28280,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -28077,6 +28352,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -28168,6 +28444,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28286,6 +28563,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28431,6 +28709,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28585,6 +28864,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -28655,6 +28935,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28751,6 +29032,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28851,6 +29133,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28937,6 +29220,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -29032,6 +29316,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -29105,6 +29390,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -29201,6 +29487,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -29285,6 +29572,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -29385,6 +29673,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -29470,6 +29759,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -29568,6 +29858,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -29691,6 +29982,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -29856,6 +30148,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -29948,6 +30241,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -30022,6 +30316,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -30090,6 +30385,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30180,6 +30476,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30249,6 +30546,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30317,6 +30615,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30409,6 +30708,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30502,6 +30802,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -30596,6 +30897,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -30665,6 +30967,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30734,6 +31037,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -30858,6 +31162,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -30955,6 +31260,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -31048,6 +31354,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -31171,6 +31478,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -31290,6 +31598,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -31414,6 +31723,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -31535,6 +31845,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -31675,6 +31986,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -31794,6 +32106,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -31886,6 +32199,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32040,6 +32354,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32139,6 +32454,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32296,6 +32612,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32459,6 +32776,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32536,6 +32854,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32645,6 +32964,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [],
@@ -32738,6 +33058,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [],
@@ -32831,6 +33152,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [],
@@ -32903,6 +33225,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -33031,6 +33354,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -33162,6 +33486,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -33256,6 +33581,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -33350,6 +33676,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -33422,6 +33749,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -33494,6 +33822,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -33567,6 +33896,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -33690,6 +34020,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -33792,6 +34123,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -33864,6 +34196,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -33935,6 +34268,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34027,6 +34361,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34127,6 +34462,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34228,6 +34564,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -34336,6 +34673,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -34471,6 +34809,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34626,6 +34965,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34788,6 +35128,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34930,6 +35271,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -35000,6 +35342,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -35073,6 +35416,7 @@
    }
   ],
   "beam_ramp_start": null,
+  "blast": null,
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [

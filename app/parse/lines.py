@@ -39,6 +39,8 @@ _STATS: dict[str, tuple[Stat, DamageType | None]] = {
     "magazine capacity": (Stat.MAGAZINE_CAPACITY, None),
     "reload speed": (Stat.RELOAD_SPEED, None),
     "ammo efficiency": (Stat.AMMO_EFFICIENCY, None),
+    "blast radius": (Stat.BLAST_RADIUS, None),
+    "blast range": (Stat.BLAST_RADIUS, None),  # Firestorm, Fulmination
     **{t.value: (Stat.PHYSICAL if t in PHYSICAL_TYPES else Stat.ELEMENT, t) for t in DamageType},
 }
 _STAT_NAMES = "|".join(re.escape(n) for n in sorted(_STATS, key=len, reverse=True))
