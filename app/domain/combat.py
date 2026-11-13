@@ -54,6 +54,22 @@ def armor_reduction(armor: float) -> float:
     return min(ARMOR_MAX_REDUCTION, ARMOR_MAX_REDUCTION * math.sqrt(armor / ARMOR_SCALE))
 
 
+def effective_hp(
+    health: float,
+    shield: float,
+    armor: float,
+    *,
+    armor_kept: float = 1.0,
+    viral: float = 1.0,
+    magnetic: float = 1.0,
+) -> float:
+    """Damage a neutral hit (no damage type modifier, no Toxin) needs to remove shield and
+    health: shield / Magnetic + health / (Viral x what armor lets through). Priming:37
+    compares primers by this ratio (2700 armor stripped to 1998 = 4.428x less EHP)."""
+    through = 1 - armor_reduction(armor * armor_kept)
+    return shield / magnetic + health / (viral * through)
+
+
 def fight(events: Sequence[Event], target: Target) -> Outcome:
     shield, health = target.shield, target.health
     bypass = INDEX[DamageType.TOXIN] if target.toxin_bypasses_shield else -1

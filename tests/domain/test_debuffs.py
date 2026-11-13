@@ -36,3 +36,19 @@ def test_cap_bonus_counts_one_more_stack(rules: StatusRules) -> None:
     assert puncture.cap == 6
     assert puncture.value(6) == pytest.approx(0.30)
     assert rules.stacking(D.PUNCTURE).cap == 5  # the shared rules are unchanged
+
+
+def test_heat_armor_returns_after_the_burn(rules: StatusRules) -> None:
+    """Heat_Damage:81: after the proc ends, 50%, 40%, 30%, 15%, 0% every 1.5 s."""
+    heat = rules.heat_strip
+    assert [heat.after_burn(0.50, s) for s in (0, 1.4, 1.5, 3.0, 4.5, 6.0, 9.0)] == [
+        0.50,
+        0.50,
+        0.40,
+        0.30,
+        0.15,
+        0.0,
+        0.0,
+    ]
+    assert heat.after_burn(0.30, 1.5) == 0.15  # a burn that ended before the full strip
+    assert heat.after_burn(0.0, 0.0) == 0.0

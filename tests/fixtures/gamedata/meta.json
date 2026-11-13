@@ -1,5 +1,5 @@
 {
- "changed_on": "2026-11-12",
+ "changed_on": "2026-11-13",
  "counts": {
   "arcanes": 34,
   "arcanes_full": 13,
@@ -23,7 +23,7 @@
   "secondary": 148,
   "weapons": 344
  },
- "dataset_hash": "5a2d0fc82874d31b",
+ "dataset_hash": "1773956518d52a62",
  "denied_mods": {
   "beginner": 60,
   "conclave": 70,
@@ -34,18 +34,20 @@
  "excluded_weapons": [
   {
    "name": "Sirocco",
+   "pending": false,
    "reason": "not a primary or secondary gun (DE category OperatorAmps)",
    "unique_name": "/Lotus/Weapons/Operator/Pistols/DrifterPistol/DrifterPistolPlayerWeapon"
   },
   {
    "name": "Grimoire",
+   "pending": false,
    "reason": "second Grimoire entry with no row in the wiki weapon module: magazine size unknown",
    "unique_name": "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire"
   }
  ],
  "fetched": "2026-11-12",
  "game_update": "Update 44.0",
- "schema_version": 24,
+ "schema_version": 25,
  "sources": [
   {
    "path": "de/ExportManifest.json",
@@ -688,6 +690,12 @@
    "retrieved": "2026-11-10",
    "sha256_16": "617977ba87ae126e",
    "url": "https://wiki.warframe.com/w/Primary_Mods"
+  },
+  {
+   "path": "wiki/Priming.wikitext",
+   "retrieved": "2026-11-13",
+   "sha256_16": "e118662029ddebfa",
+   "url": "https://wiki.warframe.com/w/Priming"
   },
   {
    "path": "wiki/Puncture_Damage.wikitext",

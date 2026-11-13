@@ -1,5 +1,5 @@
 {
-  "about": "Status numbers per damage type (step 8, U13), built into gamedata/status_rules.json. `duration_s`: one proc's base duration, x (1 + status duration); it is also the DoT duration and each stack's window. `stacking`: debuff value at one stack (`first`), added per further stack (`step`), stacks counted (`cap`; a build's \"+N max <Type> stacks\" raises it). `dot`: tick coefficient C of (seeds + 1) x C x M and the first tick's delay. `heat_strip`: armor stripped per step after the first proc, `step_s` apart. `blast`: stacks that detonate at once, share of modded base damage per stack on the target, radial burst on other enemies per stack, as a multiple of that stack's hit (300% base = 10x the 30% hit, Blast_Damage:23). Which mechanic uses which part is code; the numbers are here. `source` = saved wiki page:line. Puncture: the table gives 10 s (Status_Effect:256), a patch note there 6 s (:1048). Cold: crit damage counted to the 9th stack; the 10-stack freeze is not modelled. Void and Tau durations from the damage-type table (Status_Effect:84, :88).",
+  "about": "Status numbers per damage type (step 8, U13), built into gamedata/status_rules.json. `duration_s`: one proc's base duration, x (1 + status duration); it is also the DoT duration and each stack's window. `stacking`: debuff value at one stack (`first`), added per further stack (`step`), stacks counted (`cap`; a build's \"+N max <Type> stacks\" raises it). `dot`: tick coefficient C of (seeds + 1) x C x M and the first tick's delay. `heat_strip`: armor stripped per step after the first proc, `step_s` apart; after the burn ends the steps return in reverse, one per `restore_s`, then 0 (Heat_Damage:81). `blast`: stacks that detonate at once, share of modded base damage per stack on the target, radial burst on other enemies per stack, as a multiple of that stack's hit (300% base = 10x the 30% hit, Blast_Damage:23). Which mechanic uses which part is code; the numbers are here. `source` = saved wiki page:line. Puncture: the table gives 10 s (Status_Effect:256), a patch note there 6 s (:1048). Cold: crit damage counted to the 9th stack; the 10-stack freeze is not modelled. Void and Tau durations from the damage-type table (Status_Effect:84, :88).",
   "types": {
     "impact": {
       "duration_s": 6,
@@ -21,8 +21,8 @@
     "heat": {
       "duration_s": 6,
       "dot": {"coefficient": 0.5, "first_tick_s": 1},
-      "heat_strip": {"steps": [0.15, 0.30, 0.40, 0.50], "step_s": 0.5},
-      "source": ["Status_Effect:271-272, :384-385", "Calculation:623", "Heat_Damage:79, :85"],
+      "heat_strip": {"steps": [0.15, 0.30, 0.40, 0.50], "step_s": 0.5, "restore_s": 1.5},
+      "source": ["Status_Effect:271-272, :384-385", "Calculation:623", "Heat_Damage:79, :81, :85"],
       "verified": "2026-11-12"
     },
     "cold": {
