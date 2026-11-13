@@ -19,6 +19,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Impact",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.23
@@ -45,6 +46,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Poison Cloud",
+    "parent": "Grenade Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.25
@@ -67,13 +69,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.39
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Poison Cloud"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -138,13 +143,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.29
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -211,6 +217,7 @@
     ],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.05
@@ -239,6 +246,7 @@
     ],
     "multishot": 1.0,
     "name": "Initial Blast",
+    "parent": "Charged Shot",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.05
@@ -265,13 +273,17 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Bubble Collapse",
+    "parent": "Charged Shot",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.05
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Initial Blast",
+   "Bubble Collapse"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -353,6 +365,7 @@
     ],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
@@ -379,6 +392,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.2
@@ -403,6 +417,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Quick Shot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
@@ -429,13 +444,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Quick Shot AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Charged Shot AoE"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -509,6 +527,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 250.0,
     "shot_type": "Projectile",
     "status_chance": 0.35
@@ -535,13 +554,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "3.5x Zoom Radial Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.34
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -689,6 +709,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.33
@@ -713,6 +734,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Semi-Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.21
@@ -737,13 +759,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.33
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -828,13 +851,14 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.25
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -932,6 +956,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.21
@@ -954,6 +979,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 50.0,
     "shot_type": "Projectile",
     "status_chance": 0.41
@@ -980,13 +1006,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Radial Attack",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.41
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -1049,6 +1076,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.32
@@ -1073,13 +1101,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.36
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1157,6 +1186,7 @@
     ],
     "multishot": 1.0,
     "name": "Quick Shot",
+    "parent": null,
     "shot_speed": 140.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -1180,6 +1210,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -1203,13 +1234,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Perfect Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1289,6 +1321,7 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Uncharged Horizontal/Vertical Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -1313,13 +1346,14 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Charged Horizontal/Vertical Shot",
+    "parent": null,
     "shot_speed": 95.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1397,6 +1431,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Uncharged Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -1421,6 +1456,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 95.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -1444,13 +1480,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Charged Shot",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1535,6 +1572,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -1557,6 +1595,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -1583,13 +1622,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Radial Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1660,6 +1700,7 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.02
@@ -1682,6 +1723,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire Glaive",
+    "parent": null,
     "shot_speed": 75.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -1708,13 +1750,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Glaive Radial Attack",
+    "parent": "Alt-Fire Glaive",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1782,6 +1825,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -1810,13 +1854,14 @@
     "forced_procs": [],
     "multishot": 8.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.03
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1892,6 +1937,7 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -1916,6 +1962,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 300.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -1944,6 +1991,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form Headshot AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
@@ -1972,13 +2020,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form Embed AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2092,13 +2141,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2200,6 +2250,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
@@ -2226,13 +2277,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.24
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -2310,13 +2362,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 110.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -2382,6 +2435,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.25
@@ -2411,13 +2465,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 110.0,
     "shot_type": "Projectile",
     "status_chance": 0.44
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -2499,6 +2554,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
@@ -2523,6 +2579,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -2549,13 +2606,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2622,6 +2680,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
@@ -2646,6 +2705,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -2673,13 +2733,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2769,13 +2830,14 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.107
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2841,6 +2903,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.08
@@ -2865,13 +2928,14 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -2938,6 +3002,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
@@ -2960,6 +3025,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
@@ -2986,13 +3052,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto Radial Attack",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -3071,6 +3138,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
@@ -3093,6 +3161,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Held Damage",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.18
@@ -3117,6 +3186,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form Charge Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
@@ -3143,13 +3213,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Charge Radial Attack",
+    "parent": "Incarnon Form Held Damage",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [

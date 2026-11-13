@@ -1,4 +1,142 @@
 {
-  "about": "The AoE attack of each gun's primary fire (PLAN G49 P2): its radius (WFCD falloff end, after radius mods) sets how many enemies around the target the primer score counts, and enemies around the target get that attack's statuses. Alt-fire blasts never count (Marcos 2026-11-13). `blast`: the WFCD attack name, or null when the primary fire has none. Rows are drafted from WFCD attack lists in cache/Blasts.md and enter here once reviewed. Incarnon Forms use their main_attack.json parts instead.",
-  "weapons": {}
+  "about": "Exceptions to the primary-fire blasts derived from the saved wiki weapon modules (PLAN G49 P2, pipeline/build/blasts.py: the AoE attacks whose AttackParentIndex is the scored attack, or that attack itself when it is AoE). `blasts`: WFCD attack names replacing the derived list ([] = none). `shot` (optional): the primary-fire attacks the primer fires when DE's numbers are another mode. `reason` says why the derived list is wrong for this gun.",
+  "weapons": {
+    "/Lotus/Weapons/Corpus/BoardExec/Primary/CrpBEFerrox/CrpBEFerrox": {
+      "name": "Tenet Ferrox",
+      "blasts": [],
+      "reason": "Radial Attack is the thrown spear's detonation (Spear Throw is the Semi alt fire); the charged shot is hit-scan with no blast. The module gives it no parent.",
+      "source": "Module_Weapons_data_primary Tenet Ferrox Attacks 1-4",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Corpus/LongGuns/CrpArSniper/CrpArSniperRifle": {
+      "name": "Ambassador",
+      "blasts": [],
+      "reason": "Charged AoE is the Charge alt fire's blast (attacks 2-3); the scored Auto has none. The module gives it no parent.",
+      "source": "Module_Weapons_data_primary Ambassador Attacks 1-3",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/CrpBFG": {
+      "name": "Opticor",
+      "blasts": [
+        "Charged Shot AoE"
+      ],
+      "reason": "The charged shot (the scored primary fire) ends in Charged Shot AoE; the module gives it no parent. Quick Shot AoE is the released-early shot.",
+      "source": "Module_Weapons_data_primary Opticor Attacks 1-4",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Corpus/LongGuns/CrpBFG/Vandal/VandalCrpBFG": {
+      "name": "Opticor Vandal",
+      "blasts": [
+        "Charged Shot AoE"
+      ],
+      "reason": "The charged shot (the scored primary fire) ends in Charged Shot AoE; the module gives it no parent. Quick Shot AoE is the released-early shot.",
+      "source": "Module_Weapons_data_primary Opticor Vandal Attacks 1-4",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Corpus/LongGuns/CrpSentExperimentRifle/CrpSentExperimentRifle": {
+      "name": "Battacor",
+      "blasts": [],
+      "reason": "The module parents Secondary Fire AoE to the primary attack, but it is the alt-fire's blast (attack 2 Secondary Fire, Trigger Auto-Charge); alt-fire blasts do not count (project decision 2026-11-13).",
+      "source": "Module_Weapons_data_secondary Battacor Attacks 2-3",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Corpus/LongGuns/Spears/Railgun/CorpusRailgun": {
+      "name": "Ferrox",
+      "blasts": [],
+      "reason": "Radial Attack is the thrown spear's detonation (Spear Throw is the Semi alt fire); the charged shot is hit-scan with no blast. The module gives it no parent.",
+      "source": "Module_Weapons_data_primary Ferrox Attacks 1-4",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Grineer/LongGuns/GrnCannon/GrnCannonWeapon": {
+      "name": "Zarr",
+      "blasts": [
+        "Cannon Mode Explosion",
+        "Cannon Mode Cluster Bomb Explosion"
+      ],
+      "reason": "The cannon shell's cluster bombs explode with it; the module parents only Cannon Mode Explosion. Barrage Mode is the other mode.",
+      "source": "Module_Weapons_data_primary Zarr Attacks 1-5",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Grineer/Pistols/GrineerCrossbow/GrineerGooGun": {
+      "name": "Stug",
+      "blasts": [
+        "Blob Embed",
+        "Blob Explosion"
+      ],
+      "reason": "Each blob bursts after it sticks; the module gives Blob Explosion no parent. Incarnon Form Bounce Explosion belongs to the Incarnon Form.",
+      "source": "Module_Weapons_data_secondary Stug Attacks 1-5",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Infested/Pistols/InfUzi/InfUziWeapon": {
+      "name": "Zymos",
+      "blasts": [
+        "Radial Attack"
+      ],
+      "reason": "Headshot Explosion only happens on headshots; the primer scores body shots.",
+      "source": "Module_Weapons_data_secondary Zymos Attacks 2-3",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Tenno/Bows/TnChoirBow/TnChoirBow": {
+      "name": "Evensong",
+      "blasts": [
+        "Charged Radial Attack"
+      ],
+      "reason": "DE's numbers are the charged shot plus its radial (500 + 150 = 650); the module gives the radial no parent.",
+      "source": "Module_Weapons_data_primary Evensong Attacks 1-3",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Tenno/LongGuns/PrimeTrumna/PrimeTrumnaWeapon": {
+      "name": "Trumna Prime",
+      "blasts": [
+        "Auto AoE"
+      ],
+      "reason": "Every Auto shot bursts in Auto AoE; the module gives it no parent. The grenade is the Semi-Auto alt fire.",
+      "source": "Module_Weapons_data_primary Trumna Prime Attacks 1-4",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/PrimeEpitaph/PrimeEpitaphSidearmWeapon": {
+      "name": "Epitaph Prime",
+      "blasts": [
+        "Uncharged AoE"
+      ],
+      "shot": [
+        "Uncharged Direct Hit",
+        "Uncharged AoE"
+      ],
+      "reason": "DE's numbers are the charged shot; players prime with the uncharged primary fire (project decision 2026-11-13: the best primer; Priming:155 lists Epitaph (Primary Fire)).",
+      "source": "Module_Weapons_data_secondary Epitaph Prime Attacks 2-3; Priming:155",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Tenno/Pistols/TnWraitheSidearm/TnWraitheSidearmWeapon": {
+      "name": "Epitaph",
+      "blasts": [
+        "Uncharged AoE"
+      ],
+      "shot": [
+        "Uncharged Direct Hit",
+        "Uncharged AoE"
+      ],
+      "reason": "DE's numbers are the charged shot; players prime with the uncharged primary fire (project decision 2026-11-13: the best primer; Priming:155 lists Epitaph (Primary Fire)).",
+      "source": "Module_Weapons_data_secondary Epitaph Attacks 2-3; Priming:155",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Tenno/ThrowingWeapons/U18ThrowingKnives/U18throwingknives": {
+      "name": "Talons",
+      "blasts": [
+        "Mid-Flight Detonation"
+      ],
+      "reason": "Each throw explodes once: mid-flight (scored) or embedded, never both.",
+      "source": "Module_Weapons_data_secondary Talons Attacks 1-2",
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Weapons/Thanotech/ThanoRifle/ThanotechRifle": {
+      "name": "Trumna",
+      "blasts": [
+        "Auto AoE"
+      ],
+      "reason": "Every Auto shot bursts in Auto AoE; the module gives it no parent. The grenade is the Semi-Auto alt fire.",
+      "source": "Module_Weapons_data_primary Trumna Attacks 1-4",
+      "verified": "2026-11-13"
+    }
+  }
 }

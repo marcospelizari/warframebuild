@@ -170,14 +170,14 @@ def module_gap_lines(dataset: Dataset) -> list[str]:
 
 
 def blast_gap_lines(dataset: Dataset) -> list[str]:
-    """Guns with a normal-form AoE attack and no reference/blasts.json row: they prime one
-    enemy (PLAN G49)."""
+    """Guns whose primary-fire blasts the saved wiki weapon modules leave open: the gun is
+    not listed, or an AoE attack has no parent link (PLAN G49)."""
     names = sorted(dataset.blast_missing)
     if not names:
         return []
     return [
-        "AoE attack but no reference/blasts.json row (primer counts one enemy; review "
-        "cache/Blasts.md):",
+        "AoE attack with no parent link in the saved wiki weapon modules (primer blast "
+        "unsure; re-save the modules, or add a reference/blasts.json row):",
         f"  weapons ({len(names)}): {_names(names)}",
     ]
 

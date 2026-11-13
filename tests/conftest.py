@@ -187,6 +187,7 @@ def paths(tmp_path: Path) -> Paths:
     _keep_fixture_guns(raw, reference / "galvanized_behaviour.json")
     _keep_fixture_guns(raw, reference / "headshot.json")
     _keep_fixture_guns(raw, reference / "weapon_tags.json")
+    _keep_fixture_guns(raw, reference / "blasts.json")
     _keep_rows(reference / "main_attack.json", {"Lex Prime", "Laetum"})
     _keep_overrides(raw, reference / "overrides.json", {"ZarimanHeavyPistol", "PrimeLex"})
     _keep_enemies(reference / "enemies.json")

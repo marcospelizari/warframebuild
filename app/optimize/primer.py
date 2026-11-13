@@ -24,7 +24,7 @@ from app.optimize.loadout import Loadout, attack_stats
 from app.optimize.search import rounded
 from app.optimize.timeline import Debuffs, Timeline
 
-BURST_S = 2.0  # the primer fires this long (Marcos 2026-11-13)
+BURST_S = 2.0  # the primer fires this long (project decision 2026-11-13)
 FOLLOW_S = 6.0  # then the follow-up weapon hits for this long
 SAMPLES = 60  # points in the follow-up window (midpoints of equal steps)
 # Assumptions (shown with the build): a Steel Path crowd, enemies per m² of blast area,
@@ -47,9 +47,12 @@ class Primed:
         return (self.boost - 1) + (self.enemies - 1) * (self.area_boost - 1)
 
 
-GOOD_SHARE = 0.10  # "good primer": Primer score among the top 10% of the guns,
-MIN_TYPES = 4.0  # with at least this many status types kept up (Marcos 2026-11-13: a
-# primer applies many status effects; an AoE gun with few elements is not one)
+# "Good primer" (project decision 2026-11-13): a top Primer score, many status types kept up (a
+# primer applies many status effects; an AoE gun with few elements is not one), and not a
+# top damage gun (nobody primes with Incarnon Torid): G49's "high relative to its damage".
+GOOD_SHARE = 0.10  # at most this share of all guns, the best Primer scores first
+MIN_TYPES = 5.0  # status types kept up
+DAMAGE_SHARE = 0.25  # Recommended score among the top 25%: a damage gun
 
 
 def numbers(p: Primed) -> PrimerNumbers:
@@ -62,13 +65,15 @@ def numbers(p: Primed) -> PrimerNumbers:
     )
 
 
-def good_primers(guns: dict[str, tuple[float, float]]) -> list[str]:
-    """Slugs of good primers from each gun's (Primer score, status types kept up)."""
+def good_primers(guns: dict[str, tuple[float, float, float]]) -> list[str]:
+    """Slugs of good primers from each gun's (Primer score, status types kept up,
+    Recommended score)."""
     if not guns:
         return []
-    ranked = sorted((score for score, _ in guns.values()), reverse=True)
-    floor = ranked[max(0, math.ceil(len(ranked) * GOOD_SHARE) - 1)]
-    return sorted(s for s, (score, types) in guns.items() if score >= floor and types >= MIN_TYPES)
+    ranked = sorted((r for _, _, r in guns.values()), reverse=True)
+    damage = ranked[max(0, math.ceil(len(ranked) * DAMAGE_SHARE) - 1)]
+    eligible = [(-p, s) for s, (p, types, r) in guns.items() if types >= MIN_TYPES and r < damage]
+    return sorted(s for _, s in sorted(eligible)[: math.ceil(len(guns) * GOOD_SHARE)])
 
 
 def assumptions() -> list[str]:
@@ -100,14 +105,17 @@ def primer_shot(lo: Loadout) -> Loadout:
 
 
 def blast(lo: Loadout) -> Loadout | None:
-    """The primer shot's AoE part(s) alone: Incarnon Form or `primer_shot` parts with an AoE
-    attack, or the primary fire's blast (reference/blasts.json) for the normal form."""
+    """The primer shot's blast part(s) alone: Incarnon Form parts with an AoE attack, else
+    the gun's `blasts` (from its `primer_shot` parts when it has one)."""
     parts: list[tuple[AttackStats, Attack | None]]
-    if lo.form != "normal" or lo.weapon.primer_shot:
+    if lo.form != "normal":
         parts = [(s, a) for s, a in lo.parts if a is not None and a.shot_type == AOE]
+    elif lo.weapon.primer_shot:
+        parts = [(s, a) for s, a in lo.parts if a is not None and a.name in lo.weapon.blasts]
     else:
-        a = next((x for x in lo.weapon.attacks if x.name == lo.weapon.blast), None)
-        parts = [(attack_stats(lo.weapon, a), a)] if a is not None else []
+        by_name = {a.name: a for a in lo.weapon.attacks}
+        found = [by_name[n] for n in lo.weapon.blasts if n in by_name]
+        parts = [(attack_stats(lo.weapon, a), a) for a in found]
     return replace(lo, parts=parts) if parts else None
 
 

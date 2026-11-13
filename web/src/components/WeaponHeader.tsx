@@ -42,7 +42,7 @@ export function WeaponHeader({ weapon, item, good = false, onEdit }: Props) {
       <p className="mt-2 mb-0 text-[15px] text-muted">{meta.join(", ")}</p>
       {good && (
         <p className="mt-2 mb-0">
-          <span className={u.tag} title="Top Primer score, with many status types kept up">
+          <span className={u.tag} title="Among the best Primer scores, many status types kept up, and not a top damage gun">
             Good primer
           </span>
         </p>

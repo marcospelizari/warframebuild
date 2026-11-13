@@ -57,6 +57,7 @@ class Attack(Model):
     # Wiki module ExtraHeadshotDmg: -2 = heads hit at 1x, no weak-point bonuses; > 0 = extra
     # headshot factor (Cernos Prime 0.5 -> x1.5; saved Enemy_Body_Parts, Notes).
     extra_headshot: float | None = None
+    parent: str | None = None  # wiki AttackParentIndex: the attack this blast belongs to
     # Beam damage at the start of the ramp-up (saved Continuous_Weapon) when this attack is a
     # beam: its own Held trigger, or the gun's when the attack has none; None = not a beam.
     beam_ramp_start: Fraction | None = None
@@ -172,9 +173,9 @@ class Weapon(Model):
     beam_ramp_start: Fraction | None
     bonus_element: BonusElement | None  # saved <Family>_Weapons pages
     headshot: list[Headshot] = []  # forms aimed at heads (reference/headshot.json)
-    # The primary fire's AoE attack (name in `attacks`), for the primer's radius and the
-    # enemies around the target (reference/blasts.json, G49); None: no such blast or no row.
-    blast: str | None = None
+    # The primary fire's AoE attacks (names in `attacks`), for the primer's radius and the
+    # enemies around the target (pipeline.build.blasts, G49); [] = none known.
+    blasts: list[str] = []
     # The primary-fire attacks the primer fires when DE's summary is another mode (Epitaph:
     # the uncharged shot, not the charged one); [] = the scored shot (reference/blasts.json).
     primer_shot: list[str] = []

@@ -65,7 +65,7 @@ class Dataset:
     status_rules: StatusRules
     overrides_off: list[SwitchedOff]  # entry text changed since written (U2)
     excluded_arcanes: list[Exclusion]  # new arcanes with incomplete data (U8)
-    blast_missing: list[str]  # guns with a normal-form AoE attack and no blasts.json row
+    blast_missing: list[str]  # guns with an AoE attack no wiki module links (G49)
 
 
 def build(raw_dir: Path, reference_dir: Path, established: Established | None = None) -> Dataset:

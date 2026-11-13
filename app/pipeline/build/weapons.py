@@ -222,6 +222,7 @@ def _attack_model(
         ammo_cost=extra.ammo_cost if extra else None,
         multishot=extra.multishot if extra else None,
         extra_headshot=extra.extra_headshot if extra else None,
+        parent=extra.parent if extra else None,
         beam_ramp_start=beam_start,
         direct_bonus=direct,
     )
