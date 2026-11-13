@@ -1,6 +1,7 @@
 """`wfb` command line."""
 
 import argparse
+import ipaddress
 import json
 import sys
 from collections.abc import Callable
@@ -14,6 +15,13 @@ from app.pipeline import build_all, check, fixtures, frozen_data, refresh, sampl
 from app.pipeline.sources.http import PoliteClient
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def _loopback(host: str) -> bool:
+    try:
+        return host == "localhost" or ipaddress.ip_address(host).is_loopback
+    except ValueError:
+        return False
 
 
 def _positive(text: str) -> int:
@@ -71,6 +79,9 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if args.command == "serve":
+        if args.public_origin is None and not _loopback(args.host):
+            # Page URLs would otherwise come from each request's Host header (S6).
+            parser.error(f"--host {args.host} needs --public-origin https://<site address>")
         app = create_app(public_origin=args.public_origin)
         # No access log: visitor addresses are not stored (S9); errors still go to stderr.
         uvicorn.run(

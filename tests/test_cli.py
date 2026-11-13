@@ -1,4 +1,5 @@
 import pytest
+import uvicorn
 
 from app import cli
 from app.cli import ROOT
@@ -23,3 +24,14 @@ def test_build_all_rejects_counts_below_one(flag: str, value: str) -> None:
     with pytest.raises(SystemExit) as exit:
         cli.main(["build-all", flag, value])
     assert exit.value.code == 2
+
+
+def test_serve_off_loopback_needs_the_public_origin(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Page URLs would otherwise come from each request's Host header."""
+    with pytest.raises(SystemExit):
+        cli.main(["serve", "--host", "0.0.0.0"])
+    started: list[str] = []
+    monkeypatch.setattr(uvicorn, "run", lambda app, **kw: started.append(kw["host"]))
+    cli.main(["serve", "--host", "::1"])
+    cli.main(["serve", "--host", "0.0.0.0", "--public-origin", "https://example.org"])
+    assert started == ["::1", "0.0.0.0"]

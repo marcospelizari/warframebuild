@@ -73,7 +73,8 @@ podman run --rm --read-only --tmpfs /tmp --cap-drop=ALL --security-opt=no-new-pr
   -p 127.0.0.1:8000:8000 warframebuild --public-origin https://example.org
 ```
 
-Behind a reverse proxy (TLS ends there), add `--forwarded-allow-ips <proxy address>` so the
+`--public-origin` is required when the server listens beyond localhost, as it does in the
+image. Behind a reverse proxy (TLS ends there), add `--forwarded-allow-ips <proxy address>` so the
 rate limit sees each visitor's address. `--public-origin https://…` also turns on HSTS.
 After a new `wfb build-all`, build and start a new image. No access log is written.
 

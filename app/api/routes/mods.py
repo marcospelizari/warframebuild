@@ -1,20 +1,21 @@
-"""GET /api/mods?weapon=<slug>: what the editor may offer for one gun (F7, G20)."""
+"""GET /api/mods?weapon=<slug>: what the editor may offer for one gun (F7, G20). Answers
+are kept per release; building one counts against the per-address rate limit."""
 
 from pathlib import Path
 
-from fastapi import APIRouter, Query, Request
+from fastapi import APIRouter, Query, Request, Response
 
 from app.api.build_response import weapon_ref
 from app.api.errors import ApiFailure
 from app.api.schemas.base import ApiError
 from app.api.schemas.lists import ArcaneItem, ModItem, ModList, PerkItem, PerkTier
-from app.api.serving import served
+from app.api.serving import LISTS_KEPT, remember, served
 from app.gamedata.images import PictureKind, picture_name, picture_path
-from app.gamedata.models import Arcane, Mod
+from app.gamedata.models import Arcane, Mod, Weapon
 from app.gamedata.store import GameData
 from app.optimize.candidates import arcane_fits, fits
 
-ERRORS: dict[int | str, dict[str, object]] = {404: {"model": ApiError}}
+ERRORS: dict[int | str, dict[str, object]] = {404: {"model": ApiError}, 429: {"model": ApiError}}
 
 router = APIRouter()
 
@@ -26,14 +27,23 @@ def _image(img_dir: Path, kind: PictureKind, item: Mod | Arcane) -> str | None:
     return f"/img/{kind}/{name}"
 
 
-@router.get("/api/mods", responses=ERRORS)
-def mods(request: Request, weapon: str = Query(max_length=100)) -> ModList:
-    data: GameData = served(request).data
-    gun = data.weapon_by_slug.get(weapon)
+@router.get("/api/mods", response_model=ModList, responses=ERRORS)
+async def mods(request: Request, weapon: str = Query(max_length=100)) -> Response:
+    now = served(request)
+    gun = now.data.weapon_by_slug.get(weapon)
     if gun is None:
         raise ApiFailure(404, "unknown_weapon", "no such weapon", "weapon")
+    key = f"mods:{gun.slug}"
+    body = now.lists_cache.pop(key, None)
+    if body is None:
+        request.app.state.rate_limit.check(request)
+        body = _mod_list(now.data, gun, request.app.state.img_dir).model_dump_json().encode()
+    remember(now.lists_cache, key, body, LISTS_KEPT)
+    return Response(body, media_type="application/json")
+
+
+def _mod_list(data: GameData, gun: Weapon, img_dir: Path) -> ModList:
     unfit = f"does not fit {gun.name}"
-    img_dir: Path = request.app.state.img_dir
     incarnon = data.incarnon_by_id.get(gun.unique_name)
     perks = incarnon.perks if incarnon else []
     return ModList(

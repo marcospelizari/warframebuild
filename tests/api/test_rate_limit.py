@@ -32,3 +32,13 @@ def test_full_buckets_are_forgotten_past_the_cap(monkeypatch: pytest.MonkeyPatch
     now[0] = 5.0  # a and b are full again
     limit.check(_request("c"))
     assert set(limit._buckets) == {"c"}
+
+
+def test_an_ipv6_slash_64_shares_one_bucket() -> None:
+    limit = RateLimit(rate=1, burst=1, clock=lambda: 0.0)
+    limit.check(_request("2001:db8:1:2::1"))
+    with pytest.raises(ApiFailure):
+        limit.check(_request("2001:db8:1:2:ffff::9"))  # same /64
+    limit.check(_request("2001:db8:1:3::1"))  # next /64
+    limit.check(_request("192.0.2.1"))
+    limit.check(_request("192.0.2.2"))  # IPv4 stays per address

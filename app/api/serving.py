@@ -18,6 +18,7 @@ from app.api.runner import Runner
 from app.gamedata.release import Release, current, open_current
 from app.gamedata.store import GameData, load
 
+LISTS_KEPT = 70  # answers in Served.lists_cache: 64 guns' mod lists + the weapon lists
 INTERVAL_S = 5.0  # how often the `current` pointer is read (one small file)
 
 log = logging.getLogger(__name__)
@@ -29,6 +30,15 @@ class Served:
     release: Release | None  # None: no usable release, /builds answers 503
     runner: Runner
     builds_cache: dict[str, bytes] = field(default_factory=dict)  # this release's responses
+    lists_cache: dict[str, bytes] = field(default_factory=dict)  # /api/mods, /api/weapons
+
+
+def remember(cache: dict[str, bytes], key: str, body: bytes, limit: int) -> None:
+    """Keep `body` as the most recent answer; the oldest go past `limit`. Callers take an
+    answer with `cache.pop(key)` and give it back here (async routes: one thread)."""
+    cache[key] = body
+    while len(cache) > limit:
+        cache.pop(next(iter(cache)))
 
 
 @dataclass

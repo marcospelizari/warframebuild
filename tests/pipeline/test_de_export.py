@@ -23,3 +23,11 @@ def test_rejects_malformed_line() -> None:
     raw = lzma.compress(text, format=lzma.FORMAT_ALONE)
     with pytest.raises(IndexError_, match="malformed"):
         decode_index(raw)
+
+
+def test_rejects_an_index_that_decodes_huge() -> None:
+    """A tiny file can decode to gigabytes: decoding stops past the cap (S5)."""
+    raw = lzma.compress(b"\n" * (2 * 1024 * 1024), format=lzma.FORMAT_ALONE)
+    assert len(raw) < 64 * 1024
+    with pytest.raises(IndexError_, match="more than"):
+        decode_index(raw)

@@ -8,6 +8,7 @@ from fastapi.testclient import TestClient
 
 from app.api.app import create_app
 from app.api.headers import CACHE_FOREVER, CSP
+from app.api.rate_limit import RateLimit
 from app.gamedata.store import GameData
 
 
@@ -80,3 +81,18 @@ def test_robots_and_sitemap_name_every_gun_page(tmp_path: Path, gamedata: GameDa
     assert "<loc>https://example.org/</loc>" in sitemap.text
     assert "<loc>https://example.org/w/soma-prime</loc>" in sitemap.text
     assert sitemap.text.count("<url>") == 1 + len(gamedata.weapons)
+
+
+def test_list_answers_are_kept_and_building_them_is_rate_limited(
+    tmp_path: Path, gamedata: GameData
+) -> None:
+    app = _app(tmp_path, gamedata)
+    app.state.rate_limit = RateLimit(rate=0.001, burst=2)
+    client = TestClient(app)
+    first = client.get("/api/mods?weapon=soma-prime")
+    weapons = client.get("/api/weapons")
+    for _ in range(5):  # kept answers: no token used, same bytes
+        assert client.get("/api/mods?weapon=soma-prime").content == first.content
+        assert client.get("/api/weapons").content == weapons.content
+    assert client.get("/api/mods?weapon=lex-prime").status_code == 429
+    assert client.get("/api/weapons?q=soma").status_code == 429
