@@ -107,7 +107,8 @@ def publish(
     for b in builds:
         (temp / "builds" / f"{b.slug}.json").write_bytes(dump(b))
         for v in b.variants:
-            for build in (v.max, v.recommended, *v.factions.values()):
+            primer = [v.primer] if v.primer else []
+            for build in (v.max, v.recommended, *v.factions.values(), *primer):
                 statuses[build.status] += 1
                 unplaced += build.forma is None
     _validate(temp / "builds", expected)

@@ -4,7 +4,9 @@ A build = a mod set plus one option per choice slot (the arcane, each Incarnon E
 Every legal build is scored when they all fit the evaluation budget (`optimal`); otherwise,
 from the empty build, the best-improving move (add / remove / swap a mod, change one choice)
 is taken until none helps or the budget ends (`best_found`): adds fill the slots greedily,
-swaps then refine. A mod set is scored at its best element pairing (`layout.orders`).
+swaps then refine. `starts` adds climbs from given mod sets first, for objectives only a
+pair of mods raises (the primer's Viral = Toxin + Cold). A mod set is scored at its best
+element pairing (`layout.orders`).
 """
 
 from collections.abc import Callable, Iterator, Sequence
@@ -52,9 +54,11 @@ def search(
     score: Score,
     budget: int = MAX_EVALUATIONS,
     choices: Sequence[Sequence[Option]] = (),
+    starts: Sequence[Sequence[Mod]] = (),
 ) -> Result:
     """`pool`: candidate mods (`candidates.pool`), each fitting the gun; `choices`: the
-    options of each choice slot (include None when the slot may stay empty)."""
+    options of each choice slot (include None when the slot may stay empty); `starts`: mod
+    sets (from `pool`) the local search also climbs from, in order, before the empty build."""
     s = _Search(list(pool), score, budget, [list(c) for c in choices])
     total = _legal_upper(s.pool) * prod(len(c) for c in s.choices) * MAX_ORDERS
     exhaustive = total <= budget
@@ -63,7 +67,13 @@ def search(
             for state in s.all_states():
                 s.consider(state)
         else:
-            s.improve()
+            s.consider((frozenset(), tuple(0 for _ in s.choices)))  # a result at any budget
+            index = {m.unique_name: i for i, m in enumerate(s.pool)}
+            for start in starts:
+                chosen = frozenset(index[m.unique_name] for m in start)
+                if s.legal(chosen):
+                    s.improve(chosen)
+            s.improve(frozenset())
     except _Budget:
         exhaustive = False
     return s.result("optimal" if exhaustive else "best_found")
@@ -161,8 +171,8 @@ class _Search:
                 if k != picks[slot]:
                     yield chosen, (*picks[:slot], k, *picks[slot + 1 :])
 
-    def improve(self) -> None:
-        current: State = (frozenset(), tuple(0 for _ in self.choices))
+    def improve(self, start: frozenset[int]) -> None:
+        current: State = (start, tuple(0 for _ in self.choices))
         self.consider(current)
         while True:
             here = self.key(current)

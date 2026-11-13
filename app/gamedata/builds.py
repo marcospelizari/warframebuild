@@ -45,6 +45,7 @@ class Variant(Model):
     recommended: Build
     factions: dict[str, Build]
     denominators: dict[str, float]  # per enemy: its faction build's cost (G35)
+    primer: Build | None = None  # G49; None in releases made before it
 
 
 class ElementRow(Model):

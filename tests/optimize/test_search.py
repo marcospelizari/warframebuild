@@ -107,3 +107,22 @@ def test_choice_slots_are_searched() -> None:
     assert result.picks == (b, c)
     heuristic = search([], score, 3, [[None, a, b], [None, c]])
     assert heuristic.status == "best_found"
+
+
+def test_starts_reach_a_pair_that_one_mod_moves_cannot() -> None:
+    """The primer's Viral needs Toxin and Cold together: either alone scores less than the
+    plain build, so the climb from empty never adds them (G49)."""
+    mods = [
+        Mod.model_construct(unique_name=n, name=n, family=None, exilus=False, effects=NONE)
+        for n in ("toxin", "cold", "status")
+    ]
+
+    def score(regular: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]) -> float:
+        names = {m.name for m in regular}
+        pair = {"toxin", "cold"} <= names
+        return (5.0 if pair else -1.0 * len(names & {"toxin", "cold"})) + ("status" in names)
+
+    plain = search(mods, score, budget=20)  # under the exhaustive size (24): a local climb
+    assert plain.status == "best_found" and {m.name for m in plain.mods} == {"status"}
+    seeded = search(mods, score, budget=20, starts=[mods[:2]])
+    assert {m.name for m in seeded.mods} == {"toxin", "cold", "status"}

@@ -19,10 +19,12 @@ from app.optimize.scoring import (
     Objective,
     best_combat,
     best_max,
+    best_primer,
     build_loadout,
     combat_objective,
     enemies_objective,
     max_objective,
+    primer_objective,
 )
 from app.optimize.search import MAX_EVALUATIONS, Option, Result, rounded
 from app.optimize.variants import OPTIMIZED, Ranked, elements, ranked, what_if
@@ -34,7 +36,7 @@ Status = Literal["optimal", "best_found", "what_if"]
 class Search:
     """One search and its stored build. faction None: Recommended (every enemy)."""
 
-    kind: Literal["combat", "max"]
+    kind: Literal["combat", "max", "primer"]
     bonus: DamageType | None
     faction: str | None = None
 
@@ -88,14 +90,14 @@ def plan(data: GameData, weapon: Weapon) -> Plan:
     factions = _factions(data)
     rolls = elements(weapon)
     if not rolls:
-        rec, plain_max, *per_faction = yield [
+        rec, plain_max, primer, *per_faction = yield [
             Search("combat", None),
             Search("max", None),
+            Search("primer", None),
             *(Search("combat", None, f) for f in factions),
         ]
-        return _stored(
-            weapon, [_variant(None, plain_max, rec, dict(zip(factions, per_faction, strict=True)))]
-        )
+        by = dict(zip(factions, per_faction, strict=True))
+        return _stored(weapon, [_variant(None, plain_max, rec, by, primer)])
 
     found = yield [Search("combat", e) for e in rolls]
     recs = {e: f for e, f in zip(rolls, found, strict=True)}
@@ -104,23 +106,26 @@ def plan(data: GameData, weapon: Weapon) -> Plan:
     second = order[1].element if len(order) > 1 else None
     done = yield [
         Search("max", top),
+        Search("primer", top),
         *(Search("combat", top, f) for f in factions),
-        *([Search("max", second)] if second else []),
+        *([Search("max", second), Search("primer", second)] if second else []),
     ]
-    top_max, by = done[0], dict(zip(factions, done[1 : 1 + len(factions)], strict=True))
+    top_max, top_primer = done[0], done[1]
+    by = dict(zip(factions, done[2 : 2 + len(factions)], strict=True))
     base = _result(recs[top])
     swaps = [Swap(_result(by[f]), top, second, f) for f in factions] if second else []
     last = yield [*(WhatIf(base, r.element) for r in order), *swaps]
-    variants = [_variant(top, top_max, recs[top], by)]
+    variants = [_variant(top, top_max, recs[top], by, top_primer)]
     if second:
         swapped = {f: _build_of(x) for f, x in zip(factions, last[len(order) :], strict=True)}
         variants.append(
             Variant(
                 element=second,
-                max=_build_of(done[-1]),
+                max=_build_of(done[-2]),
                 recommended=_build_of(recs[second]),
                 factions=swapped,
                 denominators=_denominators(swapped),
+                primer=_build_of(done[-1]),
             )
         )
     rows = [
@@ -152,6 +157,10 @@ def run(data: GameData, weapon: Weapon, task: Task, budget: int) -> Found:
     if task.kind == "max":
         found = best_max(data, weapon, task.bonus, budget)
         return Found(found, _build(data, weapon, found, task.bonus, None, scope))
+    if task.kind == "primer":
+        found = best_primer(data, weapon, task.bonus, budget)
+        objective = primer_objective(data)
+        return Found(found, _build(data, weapon, found, task.bonus, None, scope, None, objective))
     found = best_combat(data, weapon, task.faction, task.bonus, budget)
     enemies = data.enemies if task.faction is None else _enemies_of(data, task.faction)
     return Found(found, _build(data, weapon, found, task.bonus, enemies, scope))
@@ -177,7 +186,9 @@ def _build_of(f: Found) -> Build:
     return f.build
 
 
-def _variant(bonus: DamageType | None, top_max: Found, rec: Found, by: dict[str, Found]) -> Variant:
+def _variant(
+    bonus: DamageType | None, top_max: Found, rec: Found, by: dict[str, Found], primer: Found
+) -> Variant:
     by_faction = {f: _build_of(x) for f, x in by.items()}
     return Variant(
         element=bonus,
@@ -185,6 +196,7 @@ def _variant(bonus: DamageType | None, top_max: Found, rec: Found, by: dict[str,
         recommended=_build_of(rec),
         factions=by_faction,
         denominators=_denominators(by_faction),
+        primer=_build_of(primer),
     )
 
 
@@ -216,10 +228,12 @@ def _build(
     enemies: Sequence[Enemy] | None,
     scope: list[str],
     status: Status | None = None,
+    objective: Objective | None = None,
 ) -> Build:
-    """`enemies`: the combat build's scored enemies; None for Max."""
+    """`enemies`: the combat build's scored enemies; None for Max and Primer. `objective`:
+    what `without` re-scores (default Max's, or the combat build's enemies)."""
     costs: dict[str, float] = {}
-    objective = max_objective(data)
+    objective = objective or max_objective(data)
     if enemies is not None:
         lo = build_loadout(data, weapon, r.mods, r.exilus, r.picks, bonus)
         fought = combat(lo, list(enemies), data.factions, data.status_rules).enemies

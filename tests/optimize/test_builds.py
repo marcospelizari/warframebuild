@@ -1,7 +1,15 @@
-from app.gamedata.models import Weapon
+from app.domain.effects import Stat
+from app.gamedata.models import Mod, Weapon
 from app.gamedata.store import GameData
 from app.optimize.builds import weapon_builds
-from app.optimize.scoring import build_loadout, combat_objective
+from app.optimize.candidates import pool
+from app.optimize.scoring import (
+    best_primer,
+    build_loadout,
+    combat_objective,
+    element_starts,
+    primer_objective,
+)
 from app.optimize.search import rounded
 from app.optimize.variants import elements
 
@@ -10,6 +18,10 @@ BUDGET = 20
 
 def _weapon(data: GameData, name: str) -> Weapon:
     return next(w for w in data.weapons if w.name == name)
+
+
+def _mod(data: GameData, unique_name_or_name: str) -> Mod:
+    return next(m for m in data.mods.mods if unique_name_or_name in (m.unique_name, m.name))
 
 
 def _factions(data: GameData) -> set[str]:
@@ -76,3 +88,32 @@ def test_max_build_has_why_values_too(gamedata: GameData) -> None:
     assert set(out.without) == {*out.mods, *([out.exilus] if out.exilus else [])} | (
         {out.arcane} if out.arcane else set()
     )
+
+
+def test_every_variant_gets_a_primer_build(gamedata: GameData) -> None:
+    """G49: every gun, every optimized element; no faction mods, no enemy costs."""
+    soma = weapon_builds(gamedata, _weapon(gamedata, "Soma Prime"), BUDGET)
+    primer = soma.variants[0].primer
+    assert primer is not None and primer.costs == {} and primer.score >= 0
+    assert primer.status in ("optimal", "best_found") and primer.without
+    effects = [e for m in primer.mods for e in _mod(gamedata, m).effects.effects]
+    assert not any(e.stat == Stat.FACTION_DAMAGE for e in effects)
+    hind = weapon_builds(gamedata, _weapon(gamedata, "Kuva Hind"), BUDGET)
+    assert all(v.primer is not None for v in hind.variants)
+
+
+def test_primer_search_beats_a_plain_damage_build(gamedata: GameData) -> None:
+    soma = _weapon(gamedata, "Soma Prime")
+    found = best_primer(gamedata, soma, budget=200)
+    plain = build_loadout(gamedata, soma, [_mod(gamedata, "Serration")], None, ())
+    assert found.score > primer_objective(gamedata)(plain)
+
+
+def test_primer_starts_cover_every_element_combination(gamedata: GameData) -> None:
+    soma = _weapon(gamedata, "Soma Prime")
+    mods = pool(soma, gamedata.mods.mods, gamedata.mods.sets, primer=True).mods
+    starts = element_starts(mods)
+    assert len(starts) == 15  # 4 elements: 1 + 4 + 6 + 4 combinations, most first
+    assert [len(s) for s in starts] == sorted((len(s) for s in starts), reverse=True)
+    kinds = [{e.damage_type for m in s for e in m.effects.effects} for s in starts]
+    assert all(len(k) == len(s) for k, s in zip(kinds, starts, strict=True))  # one per element

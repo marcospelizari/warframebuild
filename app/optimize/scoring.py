@@ -1,8 +1,10 @@
 """Build objectives (PLAN G4) and their searches: Max = damage per second on a neutral target
 (G80); Recommended = combat score over every faction's representative enemies, faction
-builds over one faction's (R1). Faction damage mods only in their own faction's build."""
+builds over one faction's (R1); Primer = the damage boost a burst gives follow-up hits (G49).
+Faction damage mods only in their own faction's build."""
 
 from collections.abc import Callable, Sequence
+from itertools import combinations
 
 from app.domain.combat import neutral_dps
 from app.domain.effects import DamageType, Faction, Stat, Support
@@ -15,6 +17,7 @@ from app.optimize.candidates import arcane_fits, pool
 from app.optimize.combat import combat
 from app.optimize.conditions import resolve
 from app.optimize.loadout import Loadout, loadout
+from app.optimize.primer import primed
 from app.optimize.search import MAX_EVALUATIONS, Option, Result, search
 from app.optimize.timeline import Timeline
 
@@ -48,6 +51,48 @@ def enemies_objective(data: GameData, enemies: Sequence[Enemy]) -> Objective:
     """1 / combat cost over exactly `enemies`."""
     fought = list(enemies)
     return lambda lo: 1 / combat(lo, fought, data.factions, data.status_rules).score
+
+
+def primer_objective(data: GameData) -> Objective:
+    """Extra follow-up damage the build's burst gives primed enemies (G49)."""
+    return lambda lo: primed(lo, data.enemies, data.status_rules).score
+
+
+def best_primer(
+    data: GameData,
+    weapon: Weapon,
+    bonus: DamageType | None = None,
+    budget: int = MAX_EVALUATIONS,
+) -> Result:
+    """The primer pool (radius mods too), no faction mods: the follow-up does the damage."""
+    found = pool(weapon, data.mods.mods, data.mods.sets, primer=True).mods
+    mods = [m for m in found if not _bane(m)]
+    return _search(data, weapon, mods, primer_objective(data), bonus, budget, element_starts(mods))
+
+
+PRIMARY = (DamageType.HEAT, DamageType.COLD, DamageType.TOXIN, DamageType.ELECTRICITY)
+
+
+def element_starts(mods: Sequence[Mod]) -> list[list[Mod]]:
+    """The strongest plain element mod of each primary element, in every combination, most
+    elements first: a primer gains from a combined element (Viral) only once both halves
+    are on, which one-mod moves cannot reach (G49)."""
+    best: dict[DamageType, Mod] = {}
+    for m in sorted(mods, key=lambda m: m.unique_name):
+        if len(m.effects.effects) != 1:
+            continue
+        e = m.effects.effects[0]
+        if e.stat != Stat.ELEMENT or e.damage_type not in PRIMARY:
+            continue
+        held = best.get(e.damage_type)
+        if held is None or e.value > held.effects.effects[0].value:
+            best[e.damage_type] = m
+    kinds = [t for t in PRIMARY if t in best]
+    return [
+        [best[t] for t in combo]
+        for size in range(len(kinds), 0, -1)
+        for combo in combinations(kinds, size)
+    ]
 
 
 def best_max(
@@ -132,13 +177,14 @@ def _search(
     objective: Objective,
     bonus: DamageType | None,
     budget: int,
+    starts: Sequence[Sequence[Mod]] = (),
 ) -> Result:
     def score(regular: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]) -> float:
         if not forma.fits(weapon, regular, exilus):
             return 0.0  # over capacity with any forma (Q6): never chosen
         return objective(build_loadout(data, weapon, regular, exilus, picks, bonus))
 
-    return search(mods, score, budget, choices(data, weapon))
+    return search(mods, score, budget, choices(data, weapon), starts)
 
 
 def _bane(m: Mod) -> bool:
