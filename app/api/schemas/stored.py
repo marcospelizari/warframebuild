@@ -4,7 +4,7 @@ from typing import Literal
 
 from app.api.schemas.base import ApiModel
 from app.api.schemas.build import Build, WeaponRef
-from app.domain.effects import DamageType
+from app.domain.effects import DamageType, Support
 from app.gamedata.builds import Forma
 
 
@@ -36,9 +36,19 @@ class ElementChoice(ApiModel):
     optimized: bool  # only optimized elements are selectable (C7)
 
 
+class NotModelled(ApiModel):
+    """An entry the gun can use that the search left out: it may make a build stronger (U5)."""
+
+    kind: Literal["perk", "mod", "arcane"]
+    name: str
+    support: Support  # partial or unsupported
+    text: list[str]  # the text not calculated, then the modelling note
+
+
 class BuildsResponse(ApiModel):
     release: str  # release id; also the ETag
     dataset_hash: str
     weapon: WeaponRef
     elements: list[ElementChoice]  # empty without a progenitor bonus
     variants: list[VariantBuilds]  # element 1 first
+    not_modelled: list[NotModelled]  # same for every build of the gun

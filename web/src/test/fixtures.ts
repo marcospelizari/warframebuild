@@ -139,6 +139,7 @@ export const builds: BuildsResponse = {
       denominators: {},
     },
   ],
+  not_modelled: [],
 };
 
 const gun = (slug: string, name: string, extra: Partial<WeaponItem> = {}): WeaponItem => ({

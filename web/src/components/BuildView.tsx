@@ -23,6 +23,7 @@ import { BuildTabs } from "./BuildTabs";
 import { EditBar } from "./EditBar";
 import { ElementSwitch } from "./ElementSwitch";
 import { ModGrid } from "./ModGrid";
+import { NotModelled } from "./NotModelled";
 import { Picker } from "./Picker";
 import { ScoreStrip } from "./ScoreStrip";
 import { StatsPanel } from "./StatsPanel";
@@ -155,6 +156,7 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
               why={editing ? undefined : (id) => whyText(base, id)}
               onPick={choices ? setTarget : undefined}
             />
+            <NotModelled all={data.not_modelled} build={build} />
           </BuildFrame>
         </div>
         <StatsPanel
@@ -162,6 +164,7 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
           forma={forma}
           baseline={live ? base.build : null}
           pending={pending}
+          tiers={items.perks}
         />
       </div>
       {choices && target && target.kind === "arcane" && (

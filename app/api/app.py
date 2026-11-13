@@ -128,12 +128,15 @@ def create_app(
     return app
 
 
+SERVED_CODE = ("api", "domain", "gamedata", "optimize")  # the API and the layers it imports
+
+
 def api_version() -> str:
-    """Hash of the API's own sources: part of the /builds ETag."""
+    """Hash of the code that shapes a response: part of the /builds ETag."""
     digest = hashlib.sha256()
-    folder = Path(__file__).parent
-    for path in sorted(folder.rglob("*.py")):
-        digest.update(path.relative_to(folder).as_posix().encode() + b"\0" + path.read_bytes())
+    root = Path(__file__).parent.parent
+    for path in sorted(p for layer in SERVED_CODE for p in (root / layer).rglob("*.py")):
+        digest.update(path.relative_to(root).as_posix().encode() + b"\0" + path.read_bytes())
     return digest.hexdigest()[:12]
 
 

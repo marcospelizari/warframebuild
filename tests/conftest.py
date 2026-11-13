@@ -194,7 +194,7 @@ def paths(tmp_path: Path) -> Paths:
         if page.format == "lua":
             stub = MODULE_STUBS.get(page.stem, "return {}")
         else:
-            native = page.stem in wiki_incarnon.NATIVE
+            native = wiki_incarnon.NATIVE_FEED in page.feeds
             stub = PAGE_STUBS.get(page.stem, NATIVE_STUB if native else "stub")
         (raw / "wiki" / page.filename).write_text(stub, encoding="utf-8")
     return Paths(

@@ -1,9 +1,12 @@
+from dataclasses import replace
 from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
 
 from app.api.app import create_app
+from app.api.routes.weapons import PENDING
+from app.gamedata.models import Exclusion
 from app.gamedata.store import GameData
 
 PNG = b"\x89PNG\r\n\x1a\n"
@@ -41,3 +44,20 @@ def test_filters_by_category_and_plain_name_search(client: TestClient) -> None:
 def test_search_text_is_capped(client: TestClient) -> None:
     response = client.get("/api/weapons", params={"q": "x" * 65})
     assert (response.status_code, response.json()["code"]) == (422, "invalid_request")
+
+
+def test_gun_waiting_for_data_shows_a_plain_reason(tmp_path: Path, gamedata: GameData) -> None:
+    """U7/U8: visitors see one plain line; hand exclusions keep their own reason."""
+    waiting = Exclusion(
+        unique_name="/New", name="New Gun", reason="class root /New ...", pending=True
+    )
+    meta = gamedata.meta.model_copy(
+        update={"excluded_weapons": [*gamedata.meta.excluded_weapons, waiting]}
+    )
+    app = create_app(web_dist=tmp_path, data=replace(gamedata, meta=meta), releases=tmp_path)
+    reasons = {
+        e["name"]: e["reason"] for e in TestClient(app).get("/api/weapons").json()["excluded"]
+    }
+    assert reasons["New Gun"] == PENDING
+    hand = gamedata.meta.excluded_weapons[0]
+    assert reasons[hand.name] == hand.reason

@@ -13,7 +13,8 @@ from app.gamedata.models import Attack, BonusElement, Exclusion, Falloff, Join, 
 from app.pipeline.build.direct_bonus import DirectBonusTable
 from app.pipeline.build.effects import Overrides
 from app.pipeline.build.fire import FireOverrides, attack_data, fire_rate
-from app.pipeline.errors import RefreshError
+from app.pipeline.build.gaps import Gaps
+from app.pipeline.errors import DataGap, RefreshError
 from app.pipeline.sources.de_export import (
     DAMAGE_SLOT_COUNT,
     DAMAGE_SLOTS,
@@ -36,26 +37,26 @@ def build(
     direct: DirectBonusTable,
     progenitor: dict[str, Progenitor],
     overrides: Overrides,
+    gaps: Gaps,
 ) -> tuple[list[Weapon], list[Exclusion], list[Join]]:
+    """`gaps` collects new guns whose data is incomplete (U7/U8)."""
     de = {w["uniqueName"]: w for w in de_weapons}
     by_id: dict[str, dict[str, Any]] = {}
     for w in wfcd:
         if w["uniqueName"] in by_id:
             raise RefreshError(f"duplicate WFCD entry: {w['uniqueName']}")
         by_id[w["uniqueName"]] = w
-    unmatched = sorted(u for u in by_id if u not in de)
-    if unmatched:
-        raise RefreshError(f"WFCD guns missing in DE ExportWeapons: {unmatched}")
+    for uid in sorted(u for u in by_id if u not in de):
+        gaps.exclude(uid, by_id[uid]["name"], DataGap("in WFCD's data, not in the game files"))
     de_guns = {
         u for u, w in de.items() if w.get("productCategory") in WEAPON_CATEGORY and w.get("trigger")
     }
-    missing = sorted(de_guns - by_id.keys())
-    if missing:
-        raise RefreshError(f"DE guns missing in WFCD: {[de[u]['name'] for u in missing]}")
+    for uid in sorted(de_guns - by_id.keys()):
+        gaps.exclude(uid, de[uid]["name"], DataGap("in the game files, not in WFCD's data yet"))
 
     kept: list[tuple[dict[str, Any], dict[str, Any]]] = []
     excluded: list[Exclusion] = []
-    for uid in sorted(by_id):
+    for uid in sorted(u for u in by_id if u in de):
         d, w = de[uid], by_id[uid]
         reason = None
         if d["productCategory"] not in WEAPON_CATEGORY:
@@ -67,15 +68,19 @@ def build(
         else:
             kept.append((d, w))
 
-    fire.check_known({d["uniqueName"] for d, _ in kept} | {e.unique_name for e in excluded})
-    direct.check({d["uniqueName"]: [a["name"] for a in w.get("attacks") or []] for d, w in kept})
+    fire.check_known(set(by_id) | de_guns)
+    direct.check(
+        {d["uniqueName"]: [a["name"] for a in w.get("attacks") or []] for d, w in kept}, gaps.ids
+    )
     slugs = _slugs([(d["uniqueName"], d["name"]) for d, _ in kept])
-    weapons = [
-        _weapon(
-            d, w, slugs[d["uniqueName"]], textures.get(d["uniqueName"]), tags, fire, module, direct
-        )
-        for d, w in kept
-    ]
+    weapons = []
+    for d, w in kept:
+        uid = d["uniqueName"]
+        try:
+            weapons.append(_weapon(d, w, slugs[uid], textures.get(uid), tags, fire, module, direct))
+        except DataGap as gap:
+            gaps.exclude(uid, d["name"], gap)
+    kept = [(d, w) for d, w in kept if d["uniqueName"] not in gaps.ids]
     weapons = [_with_bonus(x, progenitor.get(x.name)) for x in weapons]
     weapons = [_with_zoom(x, module.get(x.unique_name), overrides) for x in weapons]
     joins = [
@@ -104,9 +109,9 @@ def _weapon(
     damage = {t: float(v) for t, v in zip(DAMAGE_SLOTS, per_shot, strict=False) if v}
     category = WEAPON_CATEGORY[d["productCategory"]]
     data = module.get(d["uniqueName"])
-    extra = attack_data(d["name"], [a["name"] for a in w.get("attacks") or []], data)
+    extra = attack_data([a["name"] for a in w.get("attacks") or []], data)
     if w.get("category", "").lower() != category:
-        raise RefreshError(f"{d['name']}: DE says {category}, WFCD says {w.get('category')}")
+        raise DataGap(f"the game files say {category}, WFCD says {w.get('category')}")
     try:
         return Weapon(
             unique_name=d["uniqueName"],
@@ -256,9 +261,9 @@ def _magazine(d: dict[str, Any], data: WeaponData | None) -> int | None:
     if size is not None:
         return int(size)
     if data is None or data.magazine is None:
-        raise RefreshError(
-            f"{d['name']}: no magazine size in DE or the wiki module "
-            "(exclude it in reference/fire_overrides.json until known)"
+        raise DataGap(
+            "no magazine size in the game files or the wiki weapon data "
+            "(or exclude it in reference/fire_overrides.json until known)"
         )
     return data.magazine or None
 

@@ -240,7 +240,8 @@ class Incarnon(Model):
 class Exclusion(Model):
     unique_name: str
     name: str
-    reason: str
+    reason: str  # for us: refresh report, wfb check
+    pending: bool = False  # new, waiting for source data (G90 U7/U8), not left out by hand
 
 
 class SourceRecord(Model):

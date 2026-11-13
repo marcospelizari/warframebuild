@@ -10,9 +10,12 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from app.pipeline.errors import RefreshError
+from app.pipeline.sources.wiki_local import Page
 
 GENESIS = "Incarnon_Evolutions"
-NATIVE = ("Felarx", "Innodem", "Laetum", "Onos", "Phenmor", "Praedos", "Ruvox", "Thalys")
+# reference/wiki_pages.json `feeds` label of a native Incarnon weapon's own page (U7: a new
+# one needs only its saved page and that row, no code).
+NATIVE_FEED = "native Incarnon perks (step 6)"
 SUFFIX = ".wikitext"
 
 _BLOCK = re.compile(
@@ -36,9 +39,13 @@ class RawPerk:
     notes: list[str]
 
 
-def load(wiki_dir: Path) -> list[RawPerk]:
+def native_stems(pages: list[Page]) -> list[str]:
+    return sorted(p.stem for p in pages if NATIVE_FEED in p.feeds)
+
+
+def load(wiki_dir: Path, native_pages: list[str]) -> list[RawPerk]:
     out = genesis(_read(wiki_dir, GENESIS))
-    for stem in NATIVE:
+    for stem in native_pages:
         out += native(stem.replace("_", " "), _read(wiki_dir, stem))
     return out
 

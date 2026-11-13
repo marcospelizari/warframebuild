@@ -10,7 +10,7 @@ import uvicorn
 
 from app.api.app import create_app
 from app.optimize.search import MAX_EVALUATIONS
-from app.pipeline import build_all, check, fixtures, refresh, update
+from app.pipeline import build_all, check, fixtures, frozen_data, refresh, sample, update
 from app.pipeline.sources.http import PoliteClient
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,7 +40,10 @@ def main(argv: list[str] | None = None) -> int:
     ref.add_argument(
         "--no-images", action="store_true", help="skip gun icon, mod and arcane picture downloads"
     )
-    sub.add_parser("fixtures", help="trim cache/raw/ into tests/fixtures/raw/")
+    sub.add_parser(
+        "fixtures",
+        help="trim cache/raw/ into tests/fixtures/raw/, gamedata/ into tests/fixtures/gamedata/",
+    )
     chk = sub.add_parser("check", help="after a game update: what changed, what to re-check")
     chk.add_argument("--offline", action="store_true", help="skip the DE/WFCD source check")
     every = sub.add_parser("build-all", help="precompute every gun's builds into a new release")
@@ -48,6 +51,10 @@ def main(argv: list[str] | None = None) -> int:
     every.add_argument(
         "--budget", type=_positive, default=MAX_EVALUATIONS, help="evaluations per build (E3)"
     )
+    smp = sub.add_parser(
+        "sample", help="search the test guns like build-all, publish nothing (minutes, not hours)"
+    )
+    smp.add_argument("--workers", type=_positive, help="worker processes (default: all CPUs)")
     upd = sub.add_parser(
         "update", help="after a game update: refresh, build-all (changed guns only), what needs you"
     )
@@ -73,6 +80,15 @@ def main(argv: list[str] | None = None) -> int:
         )
     elif args.command == "check":
         return _guarded(lambda: run_check(offline=args.offline), "check failed")
+    elif args.command == "sample":
+        return _guarded(
+            lambda: sample.run(
+                ROOT / "gamedata",
+                args.workers,
+                progress=lambda line: print(line, file=sys.stderr, flush=True),
+            )[-1:],
+            "sample failed",
+        )
     elif args.command == "build-all":
         return _guarded(
             lambda: build_all.run(
@@ -97,6 +113,7 @@ def main(argv: list[str] | None = None) -> int:
         )
     elif args.command == "fixtures":
         fixtures.write(ROOT / "cache/raw", ROOT / "tests/fixtures/raw")
+        frozen_data.write(ROOT / "gamedata", ROOT / "tests/fixtures/gamedata")
     return 0
 
 
@@ -126,6 +143,7 @@ def run_check(*, offline: bool) -> list[str]:
     lines += check.stale_lines(check.stale_rows(rows, meta.changed_on), meta.changed_on)
     lines += check.wiki_lines(paths.raw, paths.reference)
     lines += check.export_plus_lines(paths.raw)
+    lines += [f"no builds for {e.name}: {e.reason}" for e in meta.excluded_weapons]  # U7
     if changes:
         lines.append("next: `uv run wfb refresh`, then re-check the rows it lists")
     return lines

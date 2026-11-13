@@ -1,0 +1,885 @@
+{
+ "changed_on": "2026-11-12",
+ "counts": {
+  "arcanes": 34,
+  "arcanes_full": 13,
+  "arcanes_partial": 0,
+  "arcanes_primary": 16,
+  "arcanes_secondary": 18,
+  "arcanes_unsupported": 21,
+  "enemies": 16,
+  "excluded_weapons": 2,
+  "factions": 14,
+  "incarnon_weapons": 69,
+  "mod_sets": 10,
+  "mods": 328,
+  "mods_full": 243,
+  "mods_partial": 19,
+  "mods_unsupported": 66,
+  "perks_full": 316,
+  "perks_partial": 106,
+  "perks_unsupported": 146,
+  "primary": 196,
+  "secondary": 148,
+  "weapons": 344
+ },
+ "dataset_hash": "5a2d0fc82874d31b",
+ "denied_mods": {
+  "beginner": 60,
+  "conclave": 70,
+  "expert": 42,
+  "intermediate": 15,
+  "no-level-stats": 4
+ },
+ "excluded_weapons": [
+  {
+   "name": "Sirocco",
+   "reason": "not a primary or secondary gun (DE category OperatorAmps)",
+   "unique_name": "/Lotus/Weapons/Operator/Pistols/DrifterPistol/DrifterPistolPlayerWeapon"
+  },
+  {
+   "name": "Grimoire",
+   "reason": "second Grimoire entry with no row in the wiki weapon module: magazine size unknown",
+   "unique_name": "/Lotus/Weapons/Tenno/Grimoire/TnDoppelgangerGrimoire"
+  }
+ ],
+ "fetched": "2026-11-12",
+ "game_update": "Update 44.0",
+ "schema_version": 24,
+ "sources": [
+  {
+   "path": "de/ExportManifest.json",
+   "retrieved": "2026-11-12",
+   "sha256_16": "55b7a52c2f0709ae",
+   "url": "https://content.warframe.com/PublicExport/Manifest/ExportManifest.json!00_y10Y6QId+-io-dCB3GMEmg"
+  },
+  {
+   "path": "de/ExportRelicArcane_en.json",
+   "retrieved": "2026-11-12",
+   "sha256_16": "3475b6fbd4bd6364",
+   "url": "https://content.warframe.com/PublicExport/Manifest/ExportRelicArcane_en.json!00_BPSU5+RTY0mdOW9AmkGU5A"
+  },
+  {
+   "path": "de/ExportSentinels_en.json",
+   "retrieved": "2026-11-12",
+   "sha256_16": "f4c6fcc19c4b6e1b",
+   "url": "https://content.warframe.com/PublicExport/Manifest/ExportSentinels_en.json!00_8iGr2T9MTskXt5zeKEVNmQ"
+  },
+  {
+   "path": "de/ExportUpgrades_en.json",
+   "retrieved": "2026-11-12",
+   "sha256_16": "df5c898b3e4b8574",
+   "url": "https://content.warframe.com/PublicExport/Manifest/ExportUpgrades_en.json!00_iIR9VcbRzLg4-0-6Yn7IrA"
+  },
+  {
+   "path": "de/ExportWeapons_en.json",
+   "retrieved": "2026-11-12",
+   "sha256_16": "c40c2bc40f770d0f",
+   "url": "https://content.warframe.com/PublicExport/Manifest/ExportWeapons_en.json!00_Lp7tYn3OPr4R3amRyHcSaA"
+  },
+  {
+   "path": "de/index_en.txt.lzma",
+   "retrieved": "2026-11-12",
+   "sha256_16": "4a6e4acee99be6d0",
+   "url": "https://content.warframe.com/PublicExport/index_en.txt.lzma"
+  },
+  {
+   "path": "export-plus/ExportUpgrades.json",
+   "retrieved": "2026-11-08",
+   "sha256_16": "eb1b4af7825eff07",
+   "url": "https://raw.githubusercontent.com/calamity-inc/warframe-public-export-plus/senpai/ExportUpgrades.json"
+  },
+  {
+   "path": "export-plus/ExportWeapons.json",
+   "retrieved": "2026-11-08",
+   "sha256_16": "a0fe031227c3cf90",
+   "url": "https://raw.githubusercontent.com/calamity-inc/warframe-public-export-plus/senpai/ExportWeapons.json"
+  },
+  {
+   "path": "wfcd/Arcanes.json",
+   "retrieved": "2026-11-12",
+   "sha256_16": "72d67360bdce45b9",
+   "url": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/Arcanes.json"
+  },
+  {
+   "path": "wfcd/Primary.json",
+   "retrieved": "2026-11-12",
+   "sha256_16": "d31b5a542ef06708",
+   "url": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/Primary.json"
+  },
+  {
+   "path": "wfcd/Secondary.json",
+   "retrieved": "2026-11-12",
+   "sha256_16": "c5adaa44161e4990",
+   "url": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/json/Secondary.json"
+  },
+  {
+   "path": "wiki/Aksondol.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "ae362eb6d1bdfa66",
+   "url": "https://wiki.warframe.com/w/Aksondol"
+  },
+  {
+   "path": "wiki/Ancient_Healer.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "6dbdb51209ca5813",
+   "url": "https://wiki.warframe.com/w/Ancient_Healer"
+  },
+  {
+   "path": "wiki/Arcane_Enhancement.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "3e588d19deb320e8",
+   "url": "https://wiki.warframe.com/w/Arcane_Enhancement"
+  },
+  {
+   "path": "wiki/Archon_Shard.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "3ef4faa82d624a9f",
+   "url": "https://wiki.warframe.com/w/Archon_Shard"
+  },
+  {
+   "path": "wiki/Arm-Cannon.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "0e9eb65d1a18a74a",
+   "url": "https://wiki.warframe.com/w/Arm-Cannon"
+  },
+  {
+   "path": "wiki/Armor.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "e2ba45eb98ee6ccc",
+   "url": "https://wiki.warframe.com/w/Armor"
+  },
+  {
+   "path": "wiki/Assault_Rifle_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "9c12afd0eeb665d2",
+   "url": "https://wiki.warframe.com/w/Assault_Rifle_Mods"
+  },
+  {
+   "path": "wiki/Assets.wikitext",
+   "retrieved": "2026-11-11",
+   "sha256_16": "8d899be813a77e0b",
+   "url": "https://wiki.warframe.com/w/Assets"
+  },
+  {
+   "path": "wiki/Battalyst.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "d4abcdff2f7effa8",
+   "url": "https://wiki.warframe.com/w/Battalyst"
+  },
+  {
+   "path": "wiki/Blast_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "845574f25c4dc4a5",
+   "url": "https://wiki.warframe.com/w/Blast_Damage"
+  },
+  {
+   "path": "wiki/Bow.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "ea61a6fedfbf4751",
+   "url": "https://wiki.warframe.com/w/Bow"
+  },
+  {
+   "path": "wiki/Bow_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "ee532807f8787e6e",
+   "url": "https://wiki.warframe.com/w/Bow_Mods"
+  },
+  {
+   "path": "wiki/Calculating_Bonuses.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "374170e97384f88d",
+   "url": "https://wiki.warframe.com/w/Calculating_Bonuses"
+  },
+  {
+   "path": "wiki/Calculation.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "0d0f96d5e5506e65",
+   "url": "https://wiki.warframe.com/w/Damage/Calculation"
+  },
+  {
+   "path": "wiki/Cascadia_Flare.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "20261dc0efbdee41",
+   "url": "https://wiki.warframe.com/w/Cascadia_Flare"
+  },
+  {
+   "path": "wiki/Charger.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "b8cce0736bd2a182",
+   "url": "https://wiki.warframe.com/w/Charger"
+  },
+  {
+   "path": "wiki/Cinematic_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "cdb8b3616d41a9da",
+   "url": "https://wiki.warframe.com/w/Damage/Cinematic_Damage"
+  },
+  {
+   "path": "wiki/Coda_Weapons.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "7ad6535e5f624a20",
+   "url": "https://wiki.warframe.com/w/Coda_Weapons"
+  },
+  {
+   "path": "wiki/Cold_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "f5dbd8ce3385b662",
+   "url": "https://wiki.warframe.com/w/Cold_Damage"
+  },
+  {
+   "path": "wiki/Compatibility.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "bed577547fdee373",
+   "url": "https://wiki.warframe.com/w/Mod/Compatibility"
+  },
+  {
+   "path": "wiki/Conculyst.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "dfe2f68e3e142f3f",
+   "url": "https://wiki.warframe.com/w/Conculyst"
+  },
+  {
+   "path": "wiki/Condition_Overload_(Mechanic).wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "f1838f8322651bfd",
+   "url": "https://wiki.warframe.com/w/Condition_Overload_(Mechanic)"
+  },
+  {
+   "path": "wiki/Continuous_Weapon.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "714e0fd1506e9430",
+   "url": "https://wiki.warframe.com/w/Continuous_Weapon"
+  },
+  {
+   "path": "wiki/Corpus.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "43020a3d87d4a3c1",
+   "url": "https://wiki.warframe.com/w/Corpus"
+  },
+  {
+   "path": "wiki/Corpus_Tech.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "ecb63a44bd73f498",
+   "url": "https://wiki.warframe.com/w/Corpus_Tech"
+  },
+  {
+   "path": "wiki/Corrosive_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "f6cfc51267f51d44",
+   "url": "https://wiki.warframe.com/w/Corrosive_Damage"
+  },
+  {
+   "path": "wiki/Corrupted.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "f479f6f6aa78fe12",
+   "url": "https://wiki.warframe.com/w/Corrupted"
+  },
+  {
+   "path": "wiki/Corrupted_Crewman.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "6ce830f17ea70ad5",
+   "url": "https://wiki.warframe.com/w/Corrupted_Crewman"
+  },
+  {
+   "path": "wiki/Corrupted_Heavy_Gunner.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "95b07ab408e42f31",
+   "url": "https://wiki.warframe.com/w/Corrupted_Heavy_Gunner"
+  },
+  {
+   "path": "wiki/Crewman.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "0578b3b4c1f95a22",
+   "url": "https://wiki.warframe.com/w/Crewman"
+  },
+  {
+   "path": "wiki/Critical_Hit.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "d4f2ff5b44c26173",
+   "url": "https://wiki.warframe.com/w/Critical_Hit"
+  },
+  {
+   "path": "wiki/Damage.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "9e769dcc5686b9e8",
+   "url": "https://wiki.warframe.com/w/Damage"
+  },
+  {
+   "path": "wiki/Damage_Type_Modifier.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "bfc2a1369088437c",
+   "url": "https://wiki.warframe.com/w/Damage_Type_Modifier"
+  },
+  {
+   "path": "wiki/Damage_over_Time.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "5b50c548f677e4d0",
+   "url": "https://wiki.warframe.com/w/Damage_over_Time"
+  },
+  {
+   "path": "wiki/Electricity_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "635554ffb593d637",
+   "url": "https://wiki.warframe.com/w/Electricity_Damage"
+  },
+  {
+   "path": "wiki/Enemy_Body_Parts.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "2dbb680d749058ab",
+   "url": "https://wiki.warframe.com/w/Enemy_Body_Parts"
+  },
+  {
+   "path": "wiki/Enemy_Level_Scaling.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "01080a09ce7bf518",
+   "url": "https://wiki.warframe.com/w/Enemy_Level_Scaling"
+  },
+  {
+   "path": "wiki/Epitaph.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "96cbe721931e8887",
+   "url": "https://wiki.warframe.com/w/Epitaph"
+  },
+  {
+   "path": "wiki/Epitaph_Prime.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "518f5512462a15a2",
+   "url": "https://wiki.warframe.com/w/Epitaph_Prime"
+  },
+  {
+   "path": "wiki/Exilus_Mods.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "d631522e3e0d83fc",
+   "url": "https://wiki.warframe.com/w/Exilus_Mods"
+  },
+  {
+   "path": "wiki/Exilus_Warframe_Adapter.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "61f17882d71c9503",
+   "url": "https://wiki.warframe.com/w/Exilus_Warframe_Adapter"
+  },
+  {
+   "path": "wiki/Exilus_Weapon_Adapter.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "d5435611083eeedb",
+   "url": "https://wiki.warframe.com/w/Exilus_Weapon_Adapter"
+  },
+  {
+   "path": "wiki/Faction_Damage_Mods.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "db249fddfd33a332",
+   "url": "https://wiki.warframe.com/w/Faction_Damage_Mods"
+  },
+  {
+   "path": "wiki/Felarx.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "6a967ffe8a67b773",
+   "url": "https://wiki.warframe.com/w/Felarx"
+  },
+  {
+   "path": "wiki/Fire_Rate.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "80e2b859aed5a0ca",
+   "url": "https://wiki.warframe.com/w/Fire_Rate"
+  },
+  {
+   "path": "wiki/Galvanized_Aptitude.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "f3af4c8853a56255",
+   "url": "https://wiki.warframe.com/w/Galvanized_Aptitude"
+  },
+  {
+   "path": "wiki/Galvanized_Savvy.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "c828efe0d9485d22",
+   "url": "https://wiki.warframe.com/w/Galvanized_Savvy"
+  },
+  {
+   "path": "wiki/Galvanized_Shot.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "a3e989f618c11d5c",
+   "url": "https://wiki.warframe.com/w/Galvanized_Shot"
+  },
+  {
+   "path": "wiki/Gas_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "205d92fca58c0cc0",
+   "url": "https://wiki.warframe.com/w/Gas_Damage"
+  },
+  {
+   "path": "wiki/Grineer.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "2fc64c599b63cb99",
+   "url": "https://wiki.warframe.com/w/Grineer"
+  },
+  {
+   "path": "wiki/Heat_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "72d3089b66d2c4c1",
+   "url": "https://wiki.warframe.com/w/Heat_Damage"
+  },
+  {
+   "path": "wiki/Heavy_Gunner.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "0980a5fba65a7c3c",
+   "url": "https://wiki.warframe.com/w/Heavy_Gunner"
+  },
+  {
+   "path": "wiki/Hunter_Munitions.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "d11ec014c695a916",
+   "url": "https://wiki.warframe.com/w/Hunter_Munitions"
+  },
+  {
+   "path": "wiki/Impact_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "3bd0f98a742386bf",
+   "url": "https://wiki.warframe.com/w/Impact_Damage"
+  },
+  {
+   "path": "wiki/Incarnon.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "b1efd08e9fe5bd41",
+   "url": "https://wiki.warframe.com/w/Incarnon"
+  },
+  {
+   "path": "wiki/Incarnon_Evolutions.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "01120a534549a67f",
+   "url": "https://wiki.warframe.com/w/Incarnon_Evolutions"
+  },
+  {
+   "path": "wiki/Infested.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "da2226365f783e78",
+   "url": "https://wiki.warframe.com/w/Infested"
+  },
+  {
+   "path": "wiki/Innodem.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "4e279b50b6e4d45f",
+   "url": "https://wiki.warframe.com/w/Innodem"
+  },
+  {
+   "path": "wiki/Internal_Bleeding.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "2e53f5002763e1a9",
+   "url": "https://wiki.warframe.com/w/Internal_Bleeding"
+  },
+  {
+   "path": "wiki/Komorex.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "cdc2be7e3617b153",
+   "url": "https://wiki.warframe.com/w/Komorex"
+  },
+  {
+   "path": "wiki/Kuva_Weapons.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "5a49eb998bbb6e87",
+   "url": "https://wiki.warframe.com/w/Kuva_Weapons"
+  },
+  {
+   "path": "wiki/Laetum.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "2ccbf0c0b7db83b0",
+   "url": "https://wiki.warframe.com/w/Laetum"
+  },
+  {
+   "path": "wiki/Lancer.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "0d02b93636239fbe",
+   "url": "https://wiki.warframe.com/w/Lancer"
+  },
+  {
+   "path": "wiki/Lanka.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "92d5a3724203063e",
+   "url": "https://wiki.warframe.com/w/Lanka"
+  },
+  {
+   "path": "wiki/Launcher.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "d9cb6a6cd70ef66f",
+   "url": "https://wiki.warframe.com/w/Launcher"
+  },
+  {
+   "path": "wiki/List_of_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "dbaebe065d4587c8",
+   "url": "https://wiki.warframe.com/w/List_of_Mods"
+  },
+  {
+   "path": "wiki/Lumbering_Fragment.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "348e1ec11cd5a6ea",
+   "url": "https://wiki.warframe.com/w/Lumbering_Fragment"
+  },
+  {
+   "path": "wiki/Magnetic_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "7d44d4c0e9b5e3ee",
+   "url": "https://wiki.warframe.com/w/Magnetic_Damage"
+  },
+  {
+   "path": "wiki/Melee_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "b2dfe079320134e8",
+   "url": "https://wiki.warframe.com/w/Melee_Mods"
+  },
+  {
+   "path": "wiki/Mod.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "4b48e3891e14ed06",
+   "url": "https://wiki.warframe.com/w/Mod"
+  },
+  {
+   "path": "wiki/Module_Enemies_anarchs.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "856db5a1bb68b62f",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/anarchs"
+  },
+  {
+   "path": "wiki/Module_Enemies_corpus.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "f71a163c483d6857",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/corpus"
+  },
+  {
+   "path": "wiki/Module_Enemies_data.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "c9978cbff502a409",
+   "url": "https://wiki.warframe.com/w/Module_Enemies_data"
+  },
+  {
+   "path": "wiki/Module_Enemies_grineer.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "5cb3288d8d9c0158",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/grineer"
+  },
+  {
+   "path": "wiki/Module_Enemies_infestation.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "cbc0548435207352",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/infestation"
+  },
+  {
+   "path": "wiki/Module_Enemies_narmer.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "e4b7c3e65b2ee12e",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/narmer"
+  },
+  {
+   "path": "wiki/Module_Enemies_orokin.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "d96dca7eefe7f98c",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/orokin"
+  },
+  {
+   "path": "wiki/Module_Enemies_scaldra.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "2e51f40dc11de684",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/scaldra"
+  },
+  {
+   "path": "wiki/Module_Enemies_sentient.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "55164247d8b9d4d0",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/sentient"
+  },
+  {
+   "path": "wiki/Module_Enemies_stalker.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "4ac89db8e1a484ed",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/stalker"
+  },
+  {
+   "path": "wiki/Module_Enemies_techrot.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "33bf7d4a96811de5",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/techrot"
+  },
+  {
+   "path": "wiki/Module_Enemies_themurmur.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "985450a9e3e2ece1",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/themurmur"
+  },
+  {
+   "path": "wiki/Module_Enemies_unaffiliated.lua",
+   "retrieved": "2026-11-09",
+   "sha256_16": "e09e0a9958df3c78",
+   "url": "https://wiki.warframe.com/w/Module:Enemies/data/unaffiliated"
+  },
+  {
+   "path": "wiki/Module_Weapons_data_melee.lua",
+   "retrieved": "2026-11-08",
+   "sha256_16": "633f674dc86fb9d5",
+   "url": "https://wiki.warframe.com/w/Module:Weapons/data/melee"
+  },
+  {
+   "path": "wiki/Module_Weapons_data_primary.lua",
+   "retrieved": "2026-11-08",
+   "sha256_16": "f00f60aa4dfca6ae",
+   "url": "https://wiki.warframe.com/w/Module:Weapons/data/primary"
+  },
+  {
+   "path": "wiki/Module_Weapons_data_secondary.lua",
+   "retrieved": "2026-11-08",
+   "sha256_16": "ae871e3a6f327955",
+   "url": "https://wiki.warframe.com/w/Module:Weapons/data/secondary"
+  },
+  {
+   "path": "wiki/Multishot.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "5ac03c170f1ddc57",
+   "url": "https://wiki.warframe.com/w/Multishot"
+  },
+  {
+   "path": "wiki/Nunchasa.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "cdf69e03f3716f4a",
+   "url": "https://wiki.warframe.com/w/Nunchasa"
+  },
+  {
+   "path": "wiki/Onos.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "e246d55086b2d7b0",
+   "url": "https://wiki.warframe.com/w/Onos"
+  },
+  {
+   "path": "wiki/Overview_Table.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "f460701c6d9acf4a",
+   "url": "https://wiki.warframe.com/w/Damage/Overview_Table"
+  },
+  {
+   "path": "wiki/Phenmor.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "6ba0c73c36ed5aa0",
+   "url": "https://wiki.warframe.com/w/Phenmor"
+  },
+  {
+   "path": "wiki/Pistol_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "155096c127cf9597",
+   "url": "https://wiki.warframe.com/w/Pistol_Mods"
+  },
+  {
+   "path": "wiki/Polarity.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "a41ce9c7b152e3a5",
+   "url": "https://wiki.warframe.com/w/Polarity"
+  },
+  {
+   "path": "wiki/Praedos.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "0a9cf926e135f25e",
+   "url": "https://wiki.warframe.com/w/Praedos"
+  },
+  {
+   "path": "wiki/Primary_Merciless.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "1c59d7a1dff02363",
+   "url": "https://wiki.warframe.com/w/Primary_Merciless"
+  },
+  {
+   "path": "wiki/Primary_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "617977ba87ae126e",
+   "url": "https://wiki.warframe.com/w/Primary_Mods"
+  },
+  {
+   "path": "wiki/Puncture_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "f397cff87e9b950a",
+   "url": "https://wiki.warframe.com/w/Puncture_Damage"
+  },
+  {
+   "path": "wiki/Radiation_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "0915247582329d8e",
+   "url": "https://wiki.warframe.com/w/Radiation_Damage"
+  },
+  {
+   "path": "wiki/Rifle.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "1851fac062d5f811",
+   "url": "https://wiki.warframe.com/w/Rifle"
+  },
+  {
+   "path": "wiki/Rifle_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "fe6e8bba32aa3f2b",
+   "url": "https://wiki.warframe.com/w/Rifle_Mods"
+  },
+  {
+   "path": "wiki/Riven_Mods.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "98f550f14bb1c073",
+   "url": "https://wiki.warframe.com/w/Riven_Mods"
+  },
+  {
+   "path": "wiki/Ruvox.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "599c88517a226870",
+   "url": "https://wiki.warframe.com/w/Ruvox"
+  },
+  {
+   "path": "wiki/Scaldra.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "1c652d5e34076ad3",
+   "url": "https://wiki.warframe.com/w/Scaldra"
+  },
+  {
+   "path": "wiki/Scaldra_Dedicant.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "f8b1914c9efcb0d1",
+   "url": "https://wiki.warframe.com/w/Scaldra_Dedicant"
+  },
+  {
+   "path": "wiki/Scaldra_Jaeger.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "468cd417e4f8d46e",
+   "url": "https://wiki.warframe.com/w/Scaldra_Jaeger"
+  },
+  {
+   "path": "wiki/Secondary_Merciless.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "c8445a2dccf86964",
+   "url": "https://wiki.warframe.com/w/Secondary_Merciless"
+  },
+  {
+   "path": "wiki/Sentient.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "643a744fae9b61d3",
+   "url": "https://wiki.warframe.com/w/Sentient"
+  },
+  {
+   "path": "wiki/Shotgun_Mods.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "daa21a02fa00b505",
+   "url": "https://wiki.warframe.com/w/Shotgun_Mods"
+  },
+  {
+   "path": "wiki/Slash_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "2df104ec04320613",
+   "url": "https://wiki.warframe.com/w/Slash_Damage"
+  },
+  {
+   "path": "wiki/Sniper_Rifle.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "93d486031c974f46",
+   "url": "https://wiki.warframe.com/w/Sniper_Rifle"
+  },
+  {
+   "path": "wiki/Speargun.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "6af8d0f24272c26b",
+   "url": "https://wiki.warframe.com/w/Speargun"
+  },
+  {
+   "path": "wiki/Split_Flights.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "e44af9336ec9a19e",
+   "url": "https://wiki.warframe.com/w/Split_Flights"
+  },
+  {
+   "path": "wiki/Status_Effect.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "e08266875eb28602",
+   "url": "https://wiki.warframe.com/w/Status_Effect"
+  },
+  {
+   "path": "wiki/Steflos_Prime.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "5804a44e2e7238ff",
+   "url": "https://wiki.warframe.com/w/Steflos_Prime"
+  },
+  {
+   "path": "wiki/Tainted_Mag.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "64a81cb62f841fe7",
+   "url": "https://wiki.warframe.com/w/Tainted_Mag"
+  },
+  {
+   "path": "wiki/Tau_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "fb86734407010d2b",
+   "url": "https://wiki.warframe.com/w/Tau_Damage"
+  },
+  {
+   "path": "wiki/Techrot.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "7bb566a57e104fb5",
+   "url": "https://wiki.warframe.com/w/Techrot"
+  },
+  {
+   "path": "wiki/Techrot_Obsolyte.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "ecd74f7f90151635",
+   "url": "https://wiki.warframe.com/w/Techrot_Obsolyte"
+  },
+  {
+   "path": "wiki/Techrot_Volatile_Galliflex.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "dea40a21e5692650",
+   "url": "https://wiki.warframe.com/w/Techrot_Volatile_Galliflex"
+  },
+  {
+   "path": "wiki/Tenet_Weapons.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "61b176208299a5d2",
+   "url": "https://wiki.warframe.com/w/Tenet_Weapons"
+  },
+  {
+   "path": "wiki/Thalys.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "9adee083de029f29",
+   "url": "https://wiki.warframe.com/w/Thalys"
+  },
+  {
+   "path": "wiki/The_Hollow_Vein.wikitext",
+   "retrieved": "2026-11-08",
+   "sha256_16": "b36565e6ccacc57b",
+   "url": "https://wiki.warframe.com/w/The_Hollow_Vein"
+  },
+  {
+   "path": "wiki/The_Murmur.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "723db2b174a4c43b",
+   "url": "https://wiki.warframe.com/w/The_Murmur"
+  },
+  {
+   "path": "wiki/The_Steel_Path.wikitext",
+   "retrieved": "2026-11-07",
+   "sha256_16": "333716474a3b477d",
+   "url": "https://wiki.warframe.com/w/The_Steel_Path"
+  },
+  {
+   "path": "wiki/Toxin_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "7f5a1c92cb96ac54",
+   "url": "https://wiki.warframe.com/w/Toxin_Damage"
+  },
+  {
+   "path": "wiki/Viral_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "8b56fd963899f716",
+   "url": "https://wiki.warframe.com/w/Viral_Damage"
+  },
+  {
+   "path": "wiki/Void_Damage.wikitext",
+   "retrieved": "2026-11-09",
+   "sha256_16": "9acbd47e9bb10ffa",
+   "url": "https://wiki.warframe.com/w/Void_Damage"
+  },
+  {
+   "path": "wiki/Weapons.wikitext",
+   "retrieved": "2026-11-10",
+   "sha256_16": "c00ee339305fdfba",
+   "url": "https://wiki.warframe.com/w/Weapons"
+  }
+ ]
+}

@@ -258,6 +258,8 @@ export interface components {
             dataset_hash: string;
             /** Elements */
             elements: components["schemas"]["ElementChoice"][];
+            /** Not Modelled */
+            not_modelled: components["schemas"]["NotModelled"][];
             /** Release */
             release: string;
             /** Variants */
@@ -522,6 +524,22 @@ export interface components {
             /** Perks */
             perks: components["schemas"]["PerkTier"][];
             weapon: components["schemas"]["WeaponRef"];
+        };
+        /**
+         * NotModelled
+         * @description An entry the gun can use that the search left out: it may make a build stronger (U5).
+         */
+        NotModelled: {
+            /**
+             * Kind
+             * @enum {string}
+             */
+            kind: "perk" | "mod" | "arcane";
+            /** Name */
+            name: string;
+            support: components["schemas"]["Support"];
+            /** Text */
+            text: string[];
         };
         /** PerkItem */
         PerkItem: {

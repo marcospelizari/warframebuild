@@ -2,10 +2,12 @@
 
 from collections.abc import Iterable
 from dataclasses import dataclass
+from typing import Literal
 
 from app.domain import compatibility
 from app.domain.effects import Support
-from app.gamedata.models import Arcane, Mod, ModSet, Weapon
+from app.gamedata.models import Arcane, Effects, Mod, ModSet, Weapon
+from app.gamedata.store import GameData
 
 
 @dataclass(frozen=True)
@@ -23,6 +25,30 @@ def fits(weapon: Weapon, m: Mod) -> bool:
         m.compatibility_tags,
         m.incompatibility_tags,
     )
+
+
+@dataclass(frozen=True)
+class Unmodelled:
+    kind: Literal["perk", "mod", "arcane"]
+    name: str
+    effects: Effects
+
+
+def unmodelled(data: GameData, weapon: Weapon) -> list[Unmodelled]:
+    """Entries the gun can use but the search leaves out: partial or unsupported (R6, G90 U5).
+    Incarnon perks first, then mods, then arcanes, each by name."""
+    incarnon = data.incarnon_by_id.get(weapon.unique_name)
+    perks = [Unmodelled("perk", p.name, p.effects) for p in incarnon.perks] if incarnon else []
+    mods = [Unmodelled("mod", m.name, m.effects) for m in data.mods.mods if fits(weapon, m)]
+    arcanes = [
+        Unmodelled("arcane", a.name, a.effects) for a in data.arcanes if arcane_fits(weapon, a)
+    ]
+    return [
+        u
+        for group in (perks, mods, arcanes)
+        for u in sorted(group, key=lambda u: u.name)
+        if u.effects.support != Support.FULL
+    ]
 
 
 def arcane_fits(weapon: Weapon, a: Arcane) -> bool:

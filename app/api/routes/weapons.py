@@ -11,6 +11,8 @@ from app.gamedata.models import Category
 from app.gamedata.store import GameData
 
 router = APIRouter()
+# A gun waiting for source data (U7/U8): its detailed reason is for `wfb update` / `wfb check`.
+PENDING = "New in the game: builds come with a later data update"
 
 
 @router.get("/api/weapons")
@@ -40,7 +42,7 @@ def weapons(
             if (category is None or w.category == category) and needle in w.name.casefold()
         ],
         excluded=[
-            ExcludedWeapon(name=e.name, reason=e.reason)
+            ExcludedWeapon(name=e.name, reason=PENDING if e.pending else e.reason)
             for e in sorted(data.meta.excluded_weapons, key=lambda e: e.name)
             if needle in e.name.casefold()
         ],

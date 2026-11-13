@@ -1,0 +1,1584 @@
+[
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "While sliding or aim gliding: Gain 65% ammo efficiency with Dual Pistols."
+   ]
+  },
+  "level_stats": [
+   [
+    "While sliding or aim gliding: Gain 15% ammo efficiency with Dual Pistols."
+   ],
+   [
+    "While sliding or aim gliding: Gain 25% ammo efficiency with Dual Pistols."
+   ],
+   [
+    "While sliding or aim gliding: Gain 35% ammo efficiency with Dual Pistols."
+   ],
+   [
+    "While sliding or aim gliding: Gain 45% ammo efficiency with Dual Pistols."
+   ],
+   [
+    "While sliding or aim gliding: Gain 55% ammo efficiency with Dual Pistols."
+   ],
+   [
+    "While sliding or aim gliding: Gain 65% ammo efficiency with Dual Pistols."
+   ]
+  ],
+  "name": "Akimbo Slip Shot",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCT.png!00_NJG8lKgnRfWF73hJho4WJQ",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/AmmoEfficiencyOnSliding",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Next shot gains a Damage Multiplier for every 200 current Energy, up to x8."
+   ]
+  },
+  "level_stats": [
+   [
+    "On Ability Cast: Next shot gains a Damage Multiplier for every 200 current Energy, up to x3."
+   ],
+   [
+    "On Ability Cast: Next shot gains a Damage Multiplier for every 200 current Energy, up to x4."
+   ],
+   [
+    "On Ability Cast: Next shot gains a Damage Multiplier for every 200 current Energy, up to x5."
+   ],
+   [
+    "On Ability Cast: Next shot gains a Damage Multiplier for every 200 current Energy, up to x6."
+   ],
+   [
+    "On Ability Cast: Next shot gains a Damage Multiplier for every 200 current Energy, up to x7."
+   ],
+   [
+    "On Ability Cast: Next shot gains a Damage Multiplier for every 200 current Energy, up to x8."
+   ]
+  ],
+  "name": "Secondary Surge",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDE.png!00_O+fSEem9EzsRZpdMe9f-Ig",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/BonusDamageNextShotForCurEnergy",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Gain +1% damage for each unit of armor past 1,000, up to a max of +500%."
+   ]
+  },
+  "level_stats": [
+   [
+    "Gain +1% damage for each unit of armor past 1,000, up to a max of +250%."
+   ],
+   [
+    "Gain +1% damage for each unit of armor past 1,000, up to a max of +300%."
+   ],
+   [
+    "Gain +1% damage for each unit of armor past 1,000, up to a max of +350%."
+   ],
+   [
+    "Gain +1% damage for each unit of armor past 1,000, up to a max of +400%."
+   ],
+   [
+    "Gain +1% damage for each unit of armor past 1,000, up to a max of +450%."
+   ],
+   [
+    "Gain +1% damage for each unit of armor past 1,000, up to a max of +500%."
+   ]
+  ],
+  "name": "Primary Bulwark",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDU.png!00_+AFobvwMninc4nCKLdRiMA",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/DamageForBonusArmour",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Gain +300% damage on your next shot."
+   ]
+  },
+  "level_stats": [
+   [
+    "On Weak Point Hit: Gain +50% damage on your next shot."
+   ],
+   [
+    "On Weak Point Hit: Gain +100% damage on your next shot."
+   ],
+   [
+    "On Weak Point Hit: Gain +150% damage on your next shot."
+   ],
+   [
+    "On Weak Point Hit: Gain +200% damage on your next shot."
+   ],
+   [
+    "On Weak Point Hit: Gain +250% damage on your next shot."
+   ],
+   [
+    "On Weak Point Hit: Gain +300% damage on your next shot."
+   ]
+  ],
+  "name": "Longbow Sharpshot",
+  "rarity": "LEGENDARY",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCL.png!00_2i-QJpxbyBwSWPkjDInaVQ",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/LongbowDamageOnHeadshot",
+  "weapon_type": "Bow"
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On swapping to Secondary Weapon, consume all Combo Multipliers to increase Secondary Weapon Critical Chance and Critical Damage by 20% per Combo consumed for 30s."
+   ]
+  },
+  "level_stats": [
+   [
+    "On swapping to Secondary Weapon, consume all Combo Multipliers to increase Secondary Weapon Critical Chance and Critical Damage by 5% per Combo consumed for 30s."
+   ],
+   [
+    "On swapping to Secondary Weapon, consume all Combo Multipliers to increase Secondary Weapon Critical Chance and Critical Damage by 7% per Combo consumed for 30s."
+   ],
+   [
+    "On swapping to Secondary Weapon, consume all Combo Multipliers to increase Secondary Weapon Critical Chance and Critical Damage by 9% per Combo consumed for 30s."
+   ],
+   [
+    "On swapping to Secondary Weapon, consume all Combo Multipliers to increase Secondary Weapon Critical Chance and Critical Damage by 12% per Combo consumed for 30s."
+   ],
+   [
+    "On swapping to Secondary Weapon, consume all Combo Multipliers to increase Secondary Weapon Critical Chance and Critical Damage by 16% per Combo consumed for 30s."
+   ],
+   [
+    "On swapping to Secondary Weapon, consume all Combo Multipliers to increase Secondary Weapon Critical Chance and Critical Damage by 20% per Combo consumed for 30s."
+   ]
+  ],
+  "name": "Secondary Outburst",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCU.png!00_QUqHYyAsHABPWkLS-b0YMw",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/MultishotForCombo",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "While at or above 90% Energy: Gain 35% of Max Energy as Multishot, capped at 350%."
+   ]
+  },
+  "level_stats": [
+   [
+    "While at or above 90% Energy: Gain 35% of Max Energy as Multishot, capped at 100%."
+   ],
+   [
+    "While at or above 90% Energy: Gain 35% of Max Energy as Multishot, capped at 150%."
+   ],
+   [
+    "While at or above 90% Energy: Gain 35% of Max Energy as Multishot, capped at 200%."
+   ],
+   [
+    "While at or above 90% Energy: Gain 35% of Max Energy as Multishot, capped at 250%."
+   ],
+   [
+    "While at or above 90% Energy: Gain 35% of Max Energy as Multishot, capped at 300%."
+   ],
+   [
+    "While at or above 90% Energy: Gain 35% of Max Energy as Multishot, capped at 350%."
+   ]
+  ],
+  "name": "Primary Overcharge",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionEA.png!00_Pg-p0AgfQ3SAoDGrY2QIFw",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/MultishotForMaxEnergy",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Gain 1 Overguard for every 100 Damage dealt to an enemy's Overguard.",
+    "Deals x8 Extra Damage to Overguard."
+   ]
+  },
+  "level_stats": [
+   [
+    "Gain 1 Overguard for every 100 Damage dealt to an enemy's Overguard.\nDeals x3 Extra Damage to Overguard.",
+    "Deals x3 Extra Damage to Overguard."
+   ],
+   [
+    "Gain 1 Overguard for every 100 Damage dealt to an enemy's Overguard.\nDeals x4 Extra Damage to Overguard.",
+    "Deals x4 Extra Damage to Overguard."
+   ],
+   [
+    "Gain 1 Overguard for every 100 Damage dealt to an enemy's Overguard.\nDeals x5 Extra Damage to Overguard.",
+    "Deals x5 Extra Damage to Overguard."
+   ],
+   [
+    "Gain 1 Overguard for every 100 Damage dealt to an enemy's Overguard.\nDeals x6 Extra Damage to Overguard.",
+    "Deals x6 Extra Damage to Overguard."
+   ],
+   [
+    "Gain 1 Overguard for every 100 Damage dealt to an enemy's Overguard.\nDeals x7 Extra Damage to Overguard.",
+    "Deals x7 Extra Damage to Overguard."
+   ],
+   [
+    "Gain 1 Overguard for every 100 Damage dealt to an enemy's Overguard.\nDeals x8 Extra Damage to Overguard.",
+    "Deals x8 Extra Damage to Overguard."
+   ]
+  ],
+  "name": "Secondary Fortifier",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDG.png!00_DfQSe4cpOE-AfDgNEDOrbg",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/OverguardSteal",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "critical_damage",
+     "trigger": "on_status",
+     "trigger_damage_type": "cold",
+     "value": 0.03,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "multishot",
+     "trigger": "on_status",
+     "trigger_damage_type": "cold",
+     "value": 0.0225,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Cold Status Effect:\n+0.5% Critical Damage and +0.38% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Cold Status Effect:\n+1% Critical Damage and +0.75% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Cold Status Effect:\n+1.5% Critical Damage and +1.12% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Cold Status Effect:\n+2% Critical Damage and +1.5% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Cold Status Effect:\n+2.5% Critical Damage and +1.88% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Cold Status Effect:\n+3% Critical Damage and +2.25% Multishot for 12s. Stacks up to 40x."
+   ]
+  ],
+  "name": "Primary Frostbite",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCC.png!00_pfyV5cWWOKznfPlAnDLVFQ",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryCritDmgAndMultishotOnColdProc",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 4.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 12,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "damage",
+     "trigger": "on_kill",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "reload_speed",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Kill:\n+5% Damage for 4s. Stacks up to 12x."
+   ],
+   [
+    "On Kill:\n+10% Damage for 4s. Stacks up to 12x."
+   ],
+   [
+    "On Kill:\n+15% Damage for 4s. Stacks up to 12x."
+   ],
+   [
+    "On Kill:\n+20% Damage for 4s. Stacks up to 12x."
+   ],
+   [
+    "On Kill:\n+25% Damage for 4s. Stacks up to 12x."
+   ],
+   [
+    "On Kill:\n+30% Damage for 4s. Stacks up to 12x.\n+30% Reload Speed",
+    "+30% Reload Speed"
+   ]
+  ],
+  "name": "Primary Merciless",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathWarcrimesB.png!00_GF5MHuW9EvuC9o6rMdNvfw",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryDamageOnKill",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 20.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 6,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "damage",
+     "trigger": "on_melee_kill",
+     "trigger_damage_type": null,
+     "value": 0.6,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Melee Kill:\n+10% Damage for 20s. Stacks up to 6x."
+   ],
+   [
+    "On Melee Kill:\n+20% Damage for 20s. Stacks up to 6x."
+   ],
+   [
+    "On Melee Kill:\n+30% Damage for 20s. Stacks up to 6x."
+   ],
+   [
+    "On Melee Kill:\n+40% Damage for 20s. Stacks up to 6x."
+   ],
+   [
+    "On Melee Kill:\n+50% Damage for 20s. Stacks up to 6x."
+   ],
+   [
+    "On Melee Kill:\n+60% Damage for 20s. Stacks up to 6x.\n+7.5s Combo Duration",
+    "+7.5s Combo Duration"
+   ]
+  ],
+  "name": "Primary Dexterity",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathMeleeToolsB.png!00_ir-UC1k7eJ6HdPoC+fo7EA",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryDamageOnMeleeKill",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 24.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 3,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "damage",
+     "trigger": "on_weak_point_kill",
+     "trigger_damage_type": null,
+     "value": 1.2,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "headshot_multiplier",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Weak Point Kill:\n+20% Damage for 24s. Stacks up to 3x."
+   ],
+   [
+    "On Weak Point Kill:\n+40% Damage for 24s. Stacks up to 3x."
+   ],
+   [
+    "On Weak Point Kill:\n+60% Damage for 24s. Stacks up to 3x."
+   ],
+   [
+    "On Weak Point Kill:\n+80% Damage for 24s. Stacks up to 3x."
+   ],
+   [
+    "On Weak Point Kill:\n+100% Damage for 24s. Stacks up to 3x."
+   ],
+   [
+    "On Weak Point Kill:\n+120% Damage for 24s. Stacks up to 3x.\n+30% to Headshot Multiplier\n-50% Weapon Recoil",
+    "+30% to Headshot Multiplier",
+    "-50% Weapon Recoil"
+   ]
+  ],
+  "name": "Primary Deadhead",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathPrecisionHeadshotB.png!00_gRTh3hanyLSOoZPxgOwlDQ",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryDamageOnNoMelee",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Deal increased damage per round loaded based on max magazine size.",
+    "Lasts for 10s."
+   ]
+  },
+  "level_stats": [
+   [
+    "On Reload: Deal increased damage per round loaded based on max magazine size. Lasts for 3s."
+   ],
+   [
+    "On Reload: Deal increased damage per round loaded based on max magazine size. Lasts for 4s."
+   ],
+   [
+    "On Reload: Deal increased damage per round loaded based on max magazine size. Lasts for 5s."
+   ],
+   [
+    "On Reload: Deal increased damage per round loaded based on max magazine size. Lasts for 6s."
+   ],
+   [
+    "On Reload: Deal increased damage per round loaded based on max magazine size. Lasts for 8s."
+   ],
+   [
+    "On Reload: Deal increased damage per round loaded based on max magazine size. Lasts for 10s."
+   ]
+  ],
+  "name": "Primary Plated Round",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCH.png!00_iIUidwuSlzEln12SNh7HCQ",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryDamagePerAmmoOnReload",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Weapon Impact Status Effect:\n+0.2 Energy Regen/s for 10s. Stacks up to 3x."
+   ],
+   [
+    "On Weapon Impact Status Effect:\n+0.4 Energy Regen/s for 10s. Stacks up to 3x."
+   ],
+   [
+    "On Weapon Impact Status Effect:\n+0.6 Energy Regen/s for 10s. Stacks up to 3x."
+   ],
+   [
+    "On Weapon Impact Status Effect:\n+0.8 Energy Regen/s for 10s. Stacks up to 3x."
+   ],
+   [
+    "On Weapon Impact Status Effect:\n+1 Energy Regen/s for 10s. Stacks up to 3x."
+   ],
+   [
+    "On Weapon Impact Status Effect:\n+1.2 Energy Regen/s for 10s. Stacks up to 3x."
+   ]
+  ],
+  "name": "Primary Exhilarate",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCN.png!00_VV9cz2XAiJzoj4MooqflUg",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryEnergyRegenOnImpactProc",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "critical_damage",
+     "trigger": "on_status",
+     "trigger_damage_type": "toxin",
+     "value": 0.036,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "multishot",
+     "trigger": "on_status",
+     "trigger_damage_type": "toxin",
+     "value": 0.018,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Toxin Status Effect:\n+0.6% Critical Damage and +0.3% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Toxin Status Effect:\n+1.2% Critical Damage and +0.6% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Toxin Status Effect:\n+1.8% Critical Damage and +0.9% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Toxin Status Effect:\n+2.4% Critical Damage and +1.2% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Toxin Status Effect:\n+3% Critical Damage and +1.5% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Toxin Status Effect:\n+3.6% Critical Damage and +1.8% Multishot for 12s. Stacks up to 40x."
+   ]
+  ],
+  "name": "Primary Blight",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCS.png!00_x2neUkt4aj0GJ0AUy50wxw",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryHeadshotCritMultOnHeadshot",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Enemy weapons jam within 15m of target.",
+    "Cooldown 10s."
+   ]
+  },
+  "level_stats": [
+   [
+    "On Weapon Magnetic Status Effect: Enemy weapons jam within 15m of target. Cooldown 60s."
+   ],
+   [
+    "On Weapon Magnetic Status Effect: Enemy weapons jam within 15m of target. Cooldown 50s."
+   ],
+   [
+    "On Weapon Magnetic Status Effect: Enemy weapons jam within 15m of target. Cooldown 40s."
+   ],
+   [
+    "On Weapon Magnetic Status Effect: Enemy weapons jam within 15m of target. Cooldown 30s."
+   ],
+   [
+    "On Weapon Magnetic Status Effect: Enemy weapons jam within 15m of target. Cooldown 20s."
+   ],
+   [
+    "On Weapon Magnetic Status Effect: Enemy weapons jam within 15m of target. Cooldown 10s."
+   ]
+  ],
+  "name": "Primary Obstruct",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCM.png!00_NC+Z88RSh7AGCCiP4Q4aCA",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/PrimaryJamEnemyWeaponsOnMagneticProc",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On hitting enemies afflicted by 10 stacks of Radiation: Deal 180% of the hit damage to enemies within 7m."
+   ]
+  },
+  "level_stats": [
+   [
+    "On hitting enemies afflicted by 10 stacks of Radiation: Deal 80% of the hit damage to enemies within 4.5m."
+   ],
+   [
+    "On hitting enemies afflicted by 10 stacks of Radiation: Deal 100% of the hit damage to enemies within 5m."
+   ],
+   [
+    "On hitting enemies afflicted by 10 stacks of Radiation: Deal 120% of the hit damage to enemies within 5.5m."
+   ],
+   [
+    "On hitting enemies afflicted by 10 stacks of Radiation: Deal 140% of the hit damage to enemies within 6m."
+   ],
+   [
+    "On hitting enemies afflicted by 10 stacks of Radiation: Deal 160% of the hit damage to enemies within 6.5m."
+   ],
+   [
+    "On hitting enemies afflicted by 10 stacks of Radiation: Deal 180% of the hit damage to enemies within 7m."
+   ]
+  ],
+  "name": "Secondary Irradiate",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDV.png!00_yVdXXkzbsqtsIjPgeJO2zA",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/RadialDamageOnMaxRadiationStackHit",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On Puncture: Apply 3 Cold stacks on targets within 15m."
+   ]
+  },
+  "level_stats": [
+   [
+    "On Puncture: Apply 1 Cold stacks on targets within 10m."
+   ],
+   [
+    "On Puncture: Apply 1 Cold stacks on targets within 11m."
+   ],
+   [
+    "On Puncture: Apply 2 Cold stacks on targets within 12m."
+   ],
+   [
+    "On Puncture: Apply 2 Cold stacks on targets within 13m."
+   ],
+   [
+    "On Puncture: Apply 3 Cold stacks on targets within 14m."
+   ],
+   [
+    "On Puncture: Apply 3 Cold stacks on targets within 15m."
+   ]
+  ],
+  "name": "Secondary Cryogenic",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/SecondaryCritStrikeColdPunct.png!00_ce6H9-FzZpXgm8tRNNaq1Q",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryColdOnPuncture",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "While Buffing Ally Warframes: +20% Critical Chance per buff"
+   ]
+  },
+  "level_stats": [
+   [
+    "While Buffing Ally Warframes: +3% Critical Chance per buff"
+   ],
+   [
+    "While Buffing Ally Warframes: +6% Critical Chance per buff"
+   ],
+   [
+    "While Buffing Ally Warframes: +10% Critical Chance per buff"
+   ],
+   [
+    "While Buffing Ally Warframes: +13% Critical Chance per buff"
+   ],
+   [
+    "While Buffing Ally Warframes: +17% Critical Chance per buff"
+   ],
+   [
+    "While Buffing Ally Warframes: +20% Critical Chance per buff"
+   ]
+  ],
+  "name": "Secondary Kinship",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCI.png!00_sNS0ir2BBnw8GRS6mHo0hw",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryCritChancePerBuff",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Increase Critical Chance by 10%.",
+    "Resets after 6 Big Critical Hit."
+   ]
+  },
+  "level_stats": [
+   [
+    "On Hit: Increase Critical Chance by 10%. Resets after 1 Big Critical Hit."
+   ],
+   [
+    "On Hit: Increase Critical Chance by 10%. Resets after 2 Big Critical Hit."
+   ],
+   [
+    "On Hit: Increase Critical Chance by 10%. Resets after 3 Big Critical Hit."
+   ],
+   [
+    "On Hit: Increase Critical Chance by 10%. Resets after 4 Big Critical Hit."
+   ],
+   [
+    "On Hit: Increase Critical Chance by 10%. Resets after 5 Big Critical Hit."
+   ],
+   [
+    "On Hit: Increase Critical Chance by 10%. Resets after 6 Big Critical Hit."
+   ]
+  ],
+  "name": "Secondary Enervate",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDL.png!00_B2Oek7joCNZv97DCqhF09w",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryCritOnHit",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 10.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "damage",
+     "trigger": "on_status",
+     "trigger_damage_type": "heat",
+     "value": 0.12,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Heat Status Effect:\n+2% Damage for 10s. Stacks up to 80%."
+   ],
+   [
+    "On Heat Status Effect:\n+4% Damage for 10s. Stacks up to 160%."
+   ],
+   [
+    "On Heat Status Effect:\n+6% Damage for 10s. Stacks up to 240%."
+   ],
+   [
+    "On Heat Status Effect:\n+8% Damage for 10s. Stacks up to 320%."
+   ],
+   [
+    "On Heat Status Effect:\n+10% Damage for 10s. Stacks up to 400%."
+   ],
+   [
+    "On Heat Status Effect:\n+12% Damage for 10s. Stacks up to 480%."
+   ]
+  ],
+  "name": "Cascadia Flare",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionBY.png!00_TuV0tinjdoP80hUN6DquzA",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryDamageOnHeatProc",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 4.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 12,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "damage",
+     "trigger": "on_kill",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "reload_speed",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Kill:\n+5% Damage for 4s. Stacks up to 12x."
+   ],
+   [
+    "On Kill:\n+10% Damage for 4s. Stacks up to 12x."
+   ],
+   [
+    "On Kill:\n+15% Damage for 4s. Stacks up to 12x."
+   ],
+   [
+    "On Kill:\n+20% Damage for 4s. Stacks up to 12x."
+   ],
+   [
+    "On Kill:\n+25% Damage for 4s. Stacks up to 12x."
+   ],
+   [
+    "On Kill:\n+30% Damage for 4s. Stacks up to 12x.\n+30% Reload Speed",
+    "+30% Reload Speed"
+   ]
+  ],
+  "name": "Secondary Merciless",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathWarcrimesA.png!00_jUgf2NWeaFIelCnTLp64fQ",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryDamageOnKill",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 20.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 6,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "damage",
+     "trigger": "on_melee_kill",
+     "trigger_damage_type": null,
+     "value": 0.6,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Melee Kill:\n+10% Damage for 20s. Stacks up to 6x."
+   ],
+   [
+    "On Melee Kill:\n+20% Damage for 20s. Stacks up to 6x."
+   ],
+   [
+    "On Melee Kill:\n+30% Damage for 20s. Stacks up to 6x."
+   ],
+   [
+    "On Melee Kill:\n+40% Damage for 20s. Stacks up to 6x."
+   ],
+   [
+    "On Melee Kill:\n+50% Damage for 20s. Stacks up to 6x."
+   ],
+   [
+    "On Melee Kill:\n+60% Damage for 20s. Stacks up to 6x.\n+7.5s Combo Duration",
+    "+7.5s Combo Duration"
+   ]
+  ],
+  "name": "Secondary Dexterity",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathMeleeToolsA.png!00_DzUia8yKj8UW+wi6iIvrUA",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryDamageOnMeleeKill",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 24.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 3,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "damage",
+     "trigger": "on_weak_point_kill",
+     "trigger_damage_type": null,
+     "value": 1.2,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": null,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "headshot_multiplier",
+     "trigger": "always",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Weak Point Kill:\n+20% Damage for 24s. Stacks up to 3x."
+   ],
+   [
+    "On Weak Point Kill:\n+40% Damage for 24s. Stacks up to 3x."
+   ],
+   [
+    "On Weak Point Kill:\n+60% Damage for 24s. Stacks up to 3x."
+   ],
+   [
+    "On Weak Point Kill:\n+80% Damage for 24s. Stacks up to 3x."
+   ],
+   [
+    "On Weak Point Kill:\n+100% Damage for 24s. Stacks up to 3x."
+   ],
+   [
+    "On Weak Point Kill:\n+120% Damage for 24s. Stacks up to 3x.\n+30% to Headshot Multiplier\n-50% Weapon Recoil",
+    "+30% to Headshot Multiplier",
+    "-50% Weapon Recoil"
+   ]
+  ],
+  "name": "Secondary Deadhead",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionSteelPathPrecisionHeadshotA.png!00_lQfjfrRQ3HzMQrZrwwNkBw",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryDamageOnNoMelee",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Enemies take +45% damage per Cold Status"
+   ]
+  },
+  "level_stats": [
+   [
+    "Enemies take +7.5% damage per Cold Status"
+   ],
+   [
+    "Enemies take +15% damage per Cold Status"
+   ],
+   [
+    "Enemies take +22.5% damage per Cold Status"
+   ],
+   [
+    "Enemies take +30% damage per Cold Status"
+   ],
+   [
+    "Enemies take +37.5% damage per Cold Status"
+   ],
+   [
+    "Enemies take +45% damage per Cold Status"
+   ]
+  ],
+  "name": "Secondary Shiver",
+  "rarity": "LEGENDARY",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCP.png!00_F2mZRCVd-NCc9vYebe4bkQ",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryExtraDamagePerFreezeStack",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "reload_speed",
+     "trigger": "on_status",
+     "trigger_damage_type": "electricity",
+     "value": 0.015,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 12.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 40,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "multishot",
+     "trigger": "on_status",
+     "trigger_damage_type": "electricity",
+     "value": 0.03,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Electricity Status Effect:\n+0.25% Reload Speed and +0.5% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Electricity Status Effect:\n+0.5% Reload Speed and +1% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Electricity Status Effect:\n+0.75% Reload Speed and +1.5% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Electricity Status Effect:\n+1% Reload Speed and +2% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Electricity Status Effect:\n+1.25% Reload Speed and +2.5% Multishot for 12s. Stacks up to 40x."
+   ],
+   [
+    "On Electricity Status Effect:\n+1.5% Reload Speed and +3% Multishot for 12s. Stacks up to 40x."
+   ]
+  ],
+  "name": "Conjunction Voltage",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCD.png!00_7d05yzmZqjDBgfE32hX+YA",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SecondaryReloadSpeedAndMultishotOnElectricProc",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On shotgun kill within 5m of target: +180% Multishot and +75% Reload Speed for 15s."
+   ]
+  },
+  "level_stats": [
+   [
+    "On shotgun kill within 5m of target:\n+30% Multishot and +12.5% Reload Speed for 15s."
+   ],
+   [
+    "On shotgun kill within 5m of target:\n+60% Multishot and +25% Reload Speed for 15s."
+   ],
+   [
+    "On shotgun kill within 5m of target:\n+90% Multishot and +37.5% Reload Speed for 15s."
+   ],
+   [
+    "On shotgun kill within 5m of target:\n+120% Multishot and +50% Reload Speed for 15s."
+   ],
+   [
+    "On shotgun kill within 5m of target:\n+150% Multishot and +62.5% Reload Speed for 15s."
+   ],
+   [
+    "On shotgun kill within 5m of target:\n+180% Multishot and +75% Reload Speed for 15s."
+   ]
+  ],
+  "name": "Shotgun Vendetta",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCO.png!00_ld3sZ9ZUPUr5u5DJ+jJzdg",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/ShotgunMultishotAndReloadSpeedOnCloseKill",
+  "weapon_type": "Shotgun"
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "If an enemy has 10 stacks of a combined Status Effect, inflicting the same Status Effect again has a 100% chance to inflict one of the base Status Effects it is composed of."
+   ]
+  },
+  "level_stats": [
+   [
+    "If an enemy has 10 stacks of a combined Status Effect, inflicting the same Status Effect again has a 50% chance to inflict one of the base Status Effects it is composed of."
+   ],
+   [
+    "If an enemy has 10 stacks of a combined Status Effect, inflicting the same Status Effect again has a 60% chance to inflict one of the base Status Effects it is composed of."
+   ],
+   [
+    "If an enemy has 10 stacks of a combined Status Effect, inflicting the same Status Effect again has a 70% chance to inflict one of the base Status Effects it is composed of."
+   ],
+   [
+    "If an enemy has 10 stacks of a combined Status Effect, inflicting the same Status Effect again has a 80% chance to inflict one of the base Status Effects it is composed of."
+   ],
+   [
+    "If an enemy has 10 stacks of a combined Status Effect, inflicting the same Status Effect again has a 90% chance to inflict one of the base Status Effects it is composed of."
+   ],
+   [
+    "If an enemy has 10 stacks of a combined Status Effect, inflicting the same Status Effect again has a 100% chance to inflict one of the base Status Effects it is composed of."
+   ]
+  ],
+  "name": "Primary Debilitate",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDW.png!00_tdnStNuIpYGZQy44BP-LPg",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/SplitStatusProcsOnStackedStatusHit",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 10.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 10,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "status_chance",
+     "trigger": "on_weak_point_hit",
+     "trigger_damage_type": null,
+     "value": 0.3,
+     "while_aiming": false
+    },
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 10.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 10,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "ammo_efficiency",
+     "trigger": "on_weak_point_hit",
+     "trigger_damage_type": null,
+     "value": 0.06,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Weak Point Hit: Gain +5% Status Chance and +1% Ammo Efficiency for 10s. Stacks up to 10x."
+   ],
+   [
+    "On Weak Point Hit: Gain +10% Status Chance and +2% Ammo Efficiency for 10s. Stacks up to 10x."
+   ],
+   [
+    "On Weak Point Hit: Gain +15% Status Chance and +3% Ammo Efficiency for 10s. Stacks up to 10x."
+   ],
+   [
+    "On Weak Point Hit: Gain +20% Status Chance and +4% Ammo Efficiency for 10s. Stacks up to 10x."
+   ],
+   [
+    "On Weak Point Hit: Gain +25% Status Chance and +5% Ammo Efficiency for 10s. Stacks up to 10x."
+   ],
+   [
+    "On Weak Point Hit: Gain +30% Status Chance and +6% Ammo Efficiency for 10s. Stacks up to 10x."
+   ]
+  ],
+  "name": "Primary Crux",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionDK.png!00_pxFHR1YEKqu9gQEUsKH88A",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Offensive/StatusAndAmmoEfficiencyOnWeakpointHit",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On aim: x0.2 explosion radius, +100% damage and +5.5% ammo efficiency for every 1m radius lost."
+   ]
+  },
+  "level_stats": [
+   [
+    "On aim: x0.2 explosion radius, +50% damage and +3.0% ammo efficiency for every 1m radius lost."
+   ],
+   [
+    "On aim: x0.2 explosion radius, +60% damage and +3.5% ammo efficiency for every 1m radius lost."
+   ],
+   [
+    "On aim: x0.2 explosion radius, +70% damage and +4.0% ammo efficiency for every 1m radius lost."
+   ],
+   [
+    "On aim: x0.2 explosion radius, +80% damage and +4.5% ammo efficiency for every 1m radius lost."
+   ],
+   [
+    "On aim: x0.2 explosion radius, +90% damage and +5.0% ammo efficiency for every 1m radius lost."
+   ],
+   [
+    "On aim: x0.2 explosion radius, +100% damage and +5.5% ammo efficiency for every 1m radius lost."
+   ]
+  ],
+  "name": "Primary Compression",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/PrimaryRadialAttack.png!00_me7URJNJ2cgpumyAXHWkGQ",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Utility/ConvergeRadialAttackOnAim",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "+24% chance to trigger a second random Status Effect."
+   ]
+  },
+  "level_stats": [
+   [
+    "On Status Effect: +4% chance to trigger a second random Status Effect."
+   ],
+   [
+    "On Status Effect: +8% chance to trigger a second random Status Effect."
+   ],
+   [
+    "On Status Effect: +12% chance to trigger a second random Status Effect."
+   ],
+   [
+    "On Status Effect: +16% chance to trigger a second random Status Effect."
+   ],
+   [
+    "On Status Effect: +20% chance to trigger a second random Status Effect."
+   ],
+   [
+    "On Status Effect: +24% chance to trigger a second random Status Effect."
+   ]
+  ],
+  "name": "Secondary Encumber",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionCG.png!00_3vECDRIeMpsRITfAXi9JSA",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Utility/ExtraProcOnProc",
+  "weapon_type": null
+ },
+ {
+  "category": "primary",
+  "effects": {
+   "effects": [
+    {
+     "chance": 1.0,
+     "class_values": {},
+     "damage_type": null,
+     "duration_s": 5.0,
+     "faction": null,
+     "fire_rate_boost": null,
+     "max_stacks": 1,
+     "operation": "stacking_multiply",
+     "per_status_type": false,
+     "stat": "reload_speed",
+     "trigger": "on_ability_cast",
+     "trigger_damage_type": null,
+     "value": 2.4,
+     "while_aiming": false
+    }
+   ],
+   "note": null,
+   "requires_trigger": null,
+   "support": "full",
+   "unparsed": []
+  },
+  "level_stats": [
+   [
+    "On Ability Cast:\n+40% Reload Speed for 5s"
+   ],
+   [
+    "On Ability Cast:\n+80% Reload Speed for 5s"
+   ],
+   [
+    "On Ability Cast:\n+120% Reload Speed for 5s"
+   ],
+   [
+    "On Ability Cast:\n+160% Reload Speed for 5s"
+   ],
+   [
+    "On Ability Cast:\n+200% Reload Speed for 5s"
+   ],
+   [
+    "On Ability Cast:\n+240% Reload Speed for 5s"
+   ]
+  ],
+  "name": "Fractalized Reset",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionBO.png!00_bFhqwz+tEfo3ZN2HtzFauA",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Zariman/PrimaryOnAbilityReloadSpeed",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "While Overshields Active: +300% Critical Chance"
+   ]
+  },
+  "level_stats": [
+   [
+    "While Overshields Active: +50% Critical Chance"
+   ],
+   [
+    "While Overshields Active: +100% Critical Chance"
+   ],
+   [
+    "While Overshields Active: +150% Critical Chance"
+   ],
+   [
+    "While Overshields Active: +200% Critical Chance"
+   ],
+   [
+    "While Overshields Active: +250% Critical Chance"
+   ],
+   [
+    "While Overshields Active: +300% Critical Chance"
+   ]
+  ],
+  "name": "Cascadia Overcharge",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionBL.png!00_umSgsdDrchvN6LZ8U0kC+w",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Zariman/SecondaryOnOvershieldCritChance",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "On Roll: +300% Critical Chance on Weak Point Hits for 4s"
+   ]
+  },
+  "level_stats": [
+   [
+    "On Roll:\n+50% Critical Chance on Weak Point Hits for 4s"
+   ],
+   [
+    "On Roll:\n+100% Critical Chance on Weak Point Hits for 4s"
+   ],
+   [
+    "On Roll:\n+150% Critical Chance on Weak Point Hits for 4s"
+   ],
+   [
+    "On Roll:\n+200% Critical Chance on Weak Point Hits for 4s"
+   ],
+   [
+    "On Roll:\n+250% Critical Chance on Weak Point Hits for 4s"
+   ],
+   [
+    "On Roll:\n+300% Critical Chance on Weak Point Hits for 4s"
+   ]
+  ],
+  "name": "Cascadia Accuracy",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionBU.png!00_m84SHzgBsK52QlBA4---DA",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Zariman/SecondaryOnRollCritChanceOnHeadshot",
+  "weapon_type": null
+ },
+ {
+  "category": "secondary",
+  "effects": {
+   "effects": [],
+   "note": null,
+   "requires_trigger": null,
+   "support": "unsupported",
+   "unparsed": [
+    "Deals +750 Damage matching the Damage Type of the Status Effect"
+   ]
+  },
+  "level_stats": [
+   [
+    "On Status Effect:\nDeals +250 Damage matching the Damage Type of the Status Effect"
+   ],
+   [
+    "On Status Effect:\nDeals +350 Damage matching the Damage Type of the Status Effect"
+   ],
+   [
+    "On Status Effect:\nDeals +450 Damage matching the Damage Type of the Status Effect"
+   ],
+   [
+    "On Status Effect:\nDeals +550 Damage matching the Damage Type of the Status Effect"
+   ],
+   [
+    "On Status Effect:\nDeals +650 Damage matching the Damage Type of the Status Effect"
+   ],
+   [
+    "On Status Effect:\nDeals +750 Damage matching the Damage Type of the Status Effect"
+   ]
+  ],
+  "name": "Cascadia Empowered",
+  "rarity": "RARE",
+  "texture_location": "/Lotus/Interface/Icons/CosmeticEnhancers/Arcanes/Projections/ArcaneProjectionBT.png!00_OVXnr7TDKKnHVo0PMXYGCA",
+  "unique_name": "/Lotus/Upgrades/CosmeticEnhancers/Zariman/SecondaryOnStatusProcBonusDamage",
+  "weapon_type": null
+ }
+]

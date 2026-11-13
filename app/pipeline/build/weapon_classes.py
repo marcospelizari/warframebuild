@@ -3,15 +3,18 @@
 from typing import Any
 
 from app.gamedata.models import Weapon
+from app.pipeline.build.gaps import Gaps
 from app.pipeline.build.inputs import require_verified
-from app.pipeline.errors import RefreshError
+from app.pipeline.errors import DataGap, RefreshError
 
 FILE = "weapon_classes.json"
 
 
-def apply(data: dict[str, Any], guns: list[Weapon], parents: dict[str, str]) -> list[Weapon]:
+def apply(
+    data: dict[str, Any], guns: list[Weapon], parents: dict[str, str], gaps: Gaps
+) -> list[Weapon]:
     """Each gun's `mod_classes`: itself, its parent chain, the classes of the chain's root,
-    of its category and of every weapon. A root without a row fails the refresh."""
+    of its category and of every weapon. A root without a row is a gap (new gun: excluded)."""
     entries = [("all", data.get("all"))]
     entries += [(f"category.{c}", r) for c, r in data.get("category", {}).items()]
     entries += [(f"roots.{u}", r) for u, r in data.get("roots", {}).items()]
@@ -27,7 +30,11 @@ def apply(data: dict[str, Any], guns: list[Weapon], parents: dict[str, str]) -> 
         root = data["roots"].get(chain[-1])
         category = data["category"].get(gun.category.value)
         if root is None or category is None:
-            raise RefreshError(f"{gun.name}: class root {chain[-1]} has no row in reference/{FILE}")
+            gap = DataGap(
+                f"class root {chain[-1]} has no row in reference/{FILE} (mod classes unknown)"
+            )
+            gaps.exclude(gun.unique_name, gun.name, gap)
+            continue
         classes = {*chain, *root["classes"], *category["classes"], *data["all"]["classes"]}
         out.append(gun.model_copy(update={"mod_classes": sorted(classes)}))
     return out

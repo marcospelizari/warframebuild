@@ -113,20 +113,32 @@ def _publish(
             paths.releases, key, paths.gamedata, paths.reference, builds, set(keys), inputs=keys
         )
 
-    if not todo:
-        return publish(iter(()))
+    return search(paths.gamedata, key.dataset, todo, workers, budget, publish)
+
+
+def search[T](
+    gamedata: Path,
+    dataset: str,
+    slugs: list[str],
+    workers: int,
+    budget: int,
+    consume: Callable[[Iterator[WeaponBuilds]], T],
+) -> T:
+    """Search `slugs` in worker processes; `consume` gets the builds as guns finish."""
+    if not slugs:
+        return consume(iter(()))
     seed = os.environ.get("PYTHONHASHSEED")
     os.environ["PYTHONHASHSEED"] = "0"  # inherited by the spawned workers only (G16)
     try:
         with ProcessPoolExecutor(
-            min(workers, len(todo)),
+            min(workers, len(slugs)),
             mp_context=multiprocessing.get_context("spawn"),
             initializer=_load,
-            initargs=(paths.gamedata, key.dataset),
+            initargs=(gamedata, dataset),
         ) as pool:
             try:
-                jobs = [pool.submit(_one, slug, budget) for slug in todo]
-                return publish(job.result() for job in as_completed(jobs))
+                jobs = [pool.submit(_one, slug, budget) for slug in slugs]
+                return consume(job.result() for job in as_completed(jobs))
             except BaseException:
                 _stop(pool)
                 raise

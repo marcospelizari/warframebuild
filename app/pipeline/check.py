@@ -19,6 +19,7 @@ from app.pipeline.changes import EntryDiff
 from app.pipeline.sources import Fetched, export_plus, saved_date, sha256_16, wfcd
 from app.pipeline.sources import de_export as de
 from app.pipeline.sources.http import PoliteClient
+from app.pipeline.sources.wiki_incarnon import NATIVE_FEED
 from app.pipeline.sources.wiki_local import pages
 
 MAX_LISTED = 25
@@ -179,7 +180,8 @@ def incarnon_gap_lines(dataset: Dataset) -> list[str]:
     if not names:
         return []
     return [
-        "Incarnon attack but no saved perks (save the weapon's page or check the name):",
+        "Incarnon attack but no saved perks (save the weapon's page; a native Incarnon gun's "
+        f'page also gets a reference/wiki_pages.json row with feeds "{NATIVE_FEED}"):',
         f"  weapons ({len(names)}): {_names(names)}",
     ]
 

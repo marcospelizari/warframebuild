@@ -20,3 +20,4 @@
 .mx{display:inline-flex;align-items:center;gap:2px;color:var(--color-label)}
 .mx .di{width:13px;height:13px}
 .perk{list-style:none;margin:0;padding:0}
+.evo{color:var(--color-label);font-size:12px;letter-spacing:.06em;min-width:56px}

@@ -171,7 +171,7 @@ def test_de_arcane_missing_in_wfcd_fails(paths: Paths) -> None:
     path = paths.raw / "wfcd/Arcanes.json"
     data = json.loads(path.read_text())
     path.write_text(json.dumps([a for a in data if a["name"] != "Primary Merciless"]))
-    with pytest.raises(RefreshError, match="PrimaryDamageOnKill"):
+    with pytest.raises(RefreshError, match="Primary Merciless: in the game files, not in WFCD"):
         build(paths.raw, paths.reference)
 
 

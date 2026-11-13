@@ -1,0 +1,49 @@
+{
+  "about": "Golden builds (PLAN E11, G90 U6): numbers Marcos read in the in-game arsenal, checked against the committed gamedata/ by tests/golden/test_arsenal.py. Values are written as the arsenal shows them; the allowed difference is half of the last digit shown. A failure after a refresh means: re-check this build in game; if the game agrees, a mechanic or value moved and the calculator must follow.",
+  "builds": [
+    {
+      "id": "soma-prime-unmodded",
+      "gun": "Soma Prime",
+      "form": "normal",
+      "mods": [],
+      "perks": ["Fortifying Bloodshed", "Kinetic Battle", "Fresh Havoc"],
+      "read": "2026-11-09",
+      "shows": {"impact": "2.2"}
+    },
+    {
+      "id": "soma-prime-modded",
+      "gun": "Soma Prime",
+      "form": "normal",
+      "mods": ["Serration", "Split Chamber", "Point Strike", "Vital Sense", "Hellfire"],
+      "perks": ["Fortifying Bloodshed", "Kinetic Battle", "Fresh Havoc"],
+      "read": "2026-11-09",
+      "shows": {
+        "multishot": "1.9",
+        "critical_chance": "75%",
+        "critical_multiplier": "6.6x",
+        "heat": "52.5"
+      }
+    },
+    {
+      "id": "lex-prime-modded",
+      "gun": "Lex Prime",
+      "form": "normal",
+      "mods": [
+        "Hornet Strike",
+        "Barrel Diffusion",
+        "Pistol Gambit",
+        "Target Cracker",
+        "Convulsion",
+        "Pathogen Rounds"
+      ],
+      "perks": ["Hoplite Virtue", "Extended Volley", "Critical Parallel"],
+      "read": "2026-11-09",
+      "shows": {
+        "multishot": "2.2",
+        "critical_chance": "96.8%",
+        "critical_multiplier": "3.8x",
+        "corrosive": "1152"
+      }
+    }
+  ]
+}
