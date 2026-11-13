@@ -20,6 +20,7 @@ EXPORTS = (
     "ExportManifest.json",
 )
 MAX_INDEX_BYTES = 64 * 1024
+MAX_INDEX_DECODED = 1024 * 1024  # about 800 bytes today
 MAX_EXPORT_BYTES = 64 * 1024 * 1024
 
 # `damagePerShot` is positional (20 slots). Slots 0-14 confirmed against WFCD attack
@@ -111,6 +112,8 @@ def decode_index(raw: bytes) -> dict[str, str]:
             out += decoder.decompress(raw[i : i + 1])
         except lzma.LZMAError:
             break
+        if len(out) > MAX_INDEX_DECODED:
+            raise IndexError_(f"index decodes to more than {MAX_INDEX_DECODED} bytes")
     if declared == _UNKNOWN_SIZE:
         if not decoder.eof:
             raise IndexError_("index has no size and no end marker")

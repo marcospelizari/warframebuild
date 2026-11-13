@@ -106,6 +106,7 @@
    "vazarin",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -174,6 +175,7 @@
   "name": "Acrid",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
@@ -292,6 +294,7 @@
   "name": "Torid",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -361,6 +364,7 @@
   "name": "Ignis",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -431,6 +435,7 @@
   "name": "Ignis Wraith",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -527,6 +532,7 @@
   "name": "Ogris",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -599,6 +605,7 @@
   "name": "Supra",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -666,6 +673,7 @@
   "name": "Spectra",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -736,6 +744,7 @@
   "name": "Flux Rifle",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.75,
   "riven_disposition": 1.2,
@@ -834,6 +843,7 @@
   "name": "Dera Vandal",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -931,6 +941,7 @@
   "name": "Dera",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -1033,6 +1044,7 @@
   "name": "Lanka",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -1144,6 +1156,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -1309,6 +1322,7 @@
    "madurai",
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -1391,6 +1405,7 @@
   "name": "Tenet Flux Rifle",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -1471,6 +1486,7 @@
   "name": "Tenet Glaxion",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -1630,6 +1646,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -1763,6 +1780,7 @@
   "name": "Tenet Tetra",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
@@ -1845,6 +1863,7 @@
    "naramon",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
@@ -1954,6 +1973,7 @@
   "name": "Tenet Detron",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -2091,6 +2111,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
@@ -2230,6 +2251,7 @@
    "naramon",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -2371,6 +2393,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -2439,6 +2462,7 @@
   "name": "Amprex",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
@@ -2509,6 +2533,7 @@
   "name": "Tetra",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -2580,6 +2605,7 @@
   "name": "Prisma Tetra",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -2695,6 +2721,7 @@
   "name": "Ambassador",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
@@ -2848,6 +2875,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -3002,6 +3030,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -3110,6 +3139,7 @@
   "name": "Tenet Envoy",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 4.0,
   "riven_disposition": 1.2,
@@ -3177,6 +3207,7 @@
   "name": "Glaxion",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
@@ -3245,6 +3276,7 @@
   "name": "Glaxion Vandal",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -3371,6 +3403,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -3481,6 +3514,7 @@
   "name": "Komorex",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -3671,6 +3705,7 @@
   "name": "Battacor",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -3751,6 +3786,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
@@ -3895,6 +3931,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -4040,6 +4077,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -4115,6 +4153,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.8,
   "riven_disposition": 1.2,
@@ -4211,6 +4250,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -4309,6 +4349,7 @@
   "name": "Carmine Penta",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -4406,6 +4447,7 @@
   "name": "Penta",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -4482,6 +4524,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -4631,6 +4674,7 @@
    "madurai",
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -4703,6 +4747,7 @@
   "name": "Detron",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.05,
   "riven_disposition": 1.2,
@@ -4793,6 +4838,7 @@
   "name": "Cestra",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -4862,6 +4908,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.5,
   "riven_disposition": 1.2,
@@ -4930,6 +4977,7 @@
   "name": "Spectra Vandal",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
@@ -5029,6 +5077,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -5134,6 +5183,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.8,
   "riven_disposition": 1.2,
@@ -5207,6 +5257,7 @@
    "naramon",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -5349,6 +5400,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
@@ -5466,6 +5518,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -5584,6 +5637,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -5698,6 +5752,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -5814,6 +5869,7 @@
   "name": "Cyanex",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
@@ -5882,6 +5938,7 @@
   "name": "Ocucor",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
@@ -5951,6 +6008,7 @@
   "name": "Plinx",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
@@ -6021,6 +6079,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
@@ -6189,6 +6248,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -6260,6 +6320,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.1,
   "riven_disposition": 1.2,
@@ -6329,6 +6390,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.69999999,
   "riven_disposition": 1.2,
@@ -6396,6 +6458,7 @@
   "name": "Kraken",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.45,
   "riven_disposition": 1.2,
@@ -6466,6 +6529,7 @@
   "name": "Seer",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.8,
   "riven_disposition": 1.2,
@@ -6573,6 +6637,7 @@
   "name": "Kuva Drakgoon",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -6688,6 +6753,7 @@
   "name": "Kuva Hek",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.9,
   "riven_disposition": 1.2,
@@ -6821,6 +6887,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3,
   "riven_disposition": 1.2,
@@ -6907,6 +6974,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -7022,6 +7090,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -7140,6 +7209,7 @@
   "name": "Kuva Ogris",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0999999,
   "riven_disposition": 1.2,
@@ -7251,6 +7321,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -7336,6 +7407,7 @@
   "name": "Kuva Sobek",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0999999,
   "riven_disposition": 1.2,
@@ -7451,6 +7523,7 @@
   "name": "Kuva Tonkor",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
@@ -7642,6 +7715,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 4.8000002,
   "riven_disposition": 1.2,
@@ -7732,6 +7806,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.1,
   "riven_disposition": 1.2,
@@ -7836,6 +7911,7 @@
   "name": "Kuva Kraken",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
@@ -7914,6 +7990,7 @@
   "name": "Kuva Nukor",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -8024,6 +8101,7 @@
   "name": "Kuva Seer",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3,
   "riven_disposition": 1.2,
@@ -8105,6 +8183,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
@@ -8201,6 +8280,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -8272,6 +8352,7 @@
   "name": "Grakata",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -8341,6 +8422,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -8435,6 +8517,7 @@
   "name": "Drakgoon",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3,
   "riven_disposition": 1.2,
@@ -8509,6 +8592,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -8584,6 +8668,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -8657,6 +8742,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -8731,6 +8817,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -8880,6 +8967,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -8966,6 +9054,7 @@
   "name": "Vulkar",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -9076,6 +9165,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -9271,6 +9361,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.25,
   "riven_disposition": 1.2,
@@ -9425,6 +9516,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.9,
   "riven_disposition": 1.2,
@@ -9499,6 +9591,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.9,
   "riven_disposition": 1.2,
@@ -9601,6 +9694,7 @@
   "name": "Buzlok",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -9700,6 +9794,7 @@
   "name": "Tonkor",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -9799,6 +9894,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -9919,6 +10015,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.3,
   "riven_disposition": 1.2,
@@ -9989,6 +10086,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -10091,6 +10189,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -10188,6 +10287,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -10312,6 +10412,7 @@
   "name": "Prisma Gorgon",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -10436,6 +10537,7 @@
   "name": "Gorgon Wraith",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -10508,6 +10610,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.89999998,
   "riven_disposition": 1.2,
@@ -10684,6 +10787,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -10762,6 +10866,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.05,
   "riven_disposition": 1.2,
@@ -10833,6 +10938,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6670001,
   "riven_disposition": 1.2,
@@ -10898,6 +11004,7 @@
   "name": "Nukor",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -10995,6 +11102,7 @@
   "name": "Quatz",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
@@ -11098,6 +11206,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
@@ -11202,6 +11311,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -11272,6 +11382,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
@@ -11349,6 +11460,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
@@ -11494,6 +11606,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -11561,6 +11674,7 @@
   "name": "Stubba",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
@@ -11676,6 +11790,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -11746,6 +11861,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.80000001,
   "riven_disposition": 1.2,
@@ -11816,6 +11932,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -11918,6 +12035,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
@@ -12045,6 +12163,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -12156,6 +12275,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -12298,6 +12418,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 5.5,
   "riven_disposition": 1.2,
@@ -12382,6 +12503,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -12509,6 +12631,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -12614,6 +12737,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
@@ -12693,6 +12817,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3299999,
   "riven_disposition": 1.2,
@@ -12874,6 +12999,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -12982,6 +13108,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -13090,6 +13217,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
@@ -13217,6 +13345,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 4.5,
   "riven_disposition": 1.2,
@@ -13343,6 +13472,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -13457,6 +13587,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
@@ -13550,6 +13681,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -13617,6 +13749,7 @@
   "name": "Synapse",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
@@ -13731,6 +13864,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -13799,6 +13933,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -13967,6 +14102,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -14063,6 +14199,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -14241,6 +14378,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.2,
   "riven_disposition": 1.2,
@@ -14350,6 +14488,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3499999,
   "riven_disposition": 1.2,
@@ -14443,6 +14582,7 @@
   "name": "Tysis",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
@@ -14511,6 +14651,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
@@ -14581,6 +14722,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -14685,6 +14827,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -14801,6 +14944,7 @@
    "madurai",
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6670001,
   "riven_disposition": 1.2,
@@ -14876,6 +15020,7 @@
   "name": "Purgator 1",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
@@ -14946,6 +15091,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3499999,
   "riven_disposition": 1.2,
@@ -15057,6 +15203,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -15155,6 +15302,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.75,
   "riven_disposition": 1.2,
@@ -15291,6 +15439,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.55000001,
   "riven_disposition": 1.2,
@@ -15422,6 +15571,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.75,
   "riven_disposition": 1.2,
@@ -15510,6 +15660,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -15630,6 +15781,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.69999999,
   "riven_disposition": 1.2,
@@ -15729,6 +15881,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.64999998,
   "riven_disposition": 1.2,
@@ -15827,6 +15980,7 @@
    "vazarin",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -15899,6 +16053,7 @@
    "vazarin",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -16050,6 +16205,7 @@
    "vazarin",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -16169,6 +16325,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -16290,6 +16447,7 @@
    "vazarin",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -16369,6 +16527,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
@@ -16474,6 +16633,7 @@
    "madurai",
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -16576,6 +16736,7 @@
    "vazarin",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -16647,6 +16808,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.5,
   "riven_disposition": 1.2,
@@ -16755,6 +16917,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -16889,6 +17052,7 @@
    "vazarin",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -16967,6 +17131,7 @@
    "vazarin",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.25,
   "riven_disposition": 1.2,
@@ -17040,6 +17205,7 @@
    "madurai",
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6670001,
   "riven_disposition": 1.2,
@@ -17109,6 +17275,7 @@
   "name": "Aklex",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -17179,6 +17346,7 @@
   "name": "Aklex Prime",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -17248,6 +17416,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -17318,6 +17487,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
@@ -17387,6 +17557,7 @@
   "name": "Aklato",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -17464,6 +17635,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -17533,6 +17705,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -17602,6 +17775,7 @@
   "name": "Akmagnus",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.2,
   "riven_disposition": 1.2,
@@ -17675,6 +17849,7 @@
    "madurai",
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.8,
   "riven_disposition": 1.2,
@@ -17744,6 +17919,7 @@
   "name": "Akvasto",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
@@ -17822,6 +17998,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.25,
   "riven_disposition": 1.2,
@@ -17894,6 +18071,7 @@
    "madurai",
    "any"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -17999,6 +18177,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -18083,6 +18262,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -18207,6 +18387,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -18312,6 +18493,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -18447,6 +18629,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.64999998,
   "riven_disposition": 1.2,
@@ -18579,6 +18762,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.6,
   "riven_disposition": 1.2,
@@ -18686,6 +18870,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.64999998,
   "riven_disposition": 1.2,
@@ -18798,6 +18983,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -18936,6 +19122,7 @@
    "naramon",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -19073,6 +19260,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.69999999,
   "riven_disposition": 1.2,
@@ -19210,6 +19398,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.69999999,
   "riven_disposition": 1.2,
@@ -19340,6 +19529,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -19487,6 +19677,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.0099999998,
   "riven_disposition": 1.2,
@@ -19600,6 +19791,7 @@
   "name": "Dex Sybaris",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.5,
   "riven_disposition": 1.2,
@@ -19674,6 +19866,7 @@
   "name": "Tigris",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -19747,6 +19940,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.26,
   "riven_disposition": 1.2,
@@ -19831,6 +20025,7 @@
   "name": "Rubico",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -19957,6 +20152,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3,
   "riven_disposition": 1.2,
@@ -20050,6 +20246,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -20196,6 +20393,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -20293,6 +20491,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
@@ -20394,6 +20593,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -20471,6 +20671,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
@@ -20574,6 +20775,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
@@ -20709,6 +20911,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -20856,6 +21059,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -20962,6 +21166,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -21041,6 +21246,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.1,
   "riven_disposition": 1.2,
@@ -21139,6 +21345,7 @@
    "vazarin",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -21261,6 +21468,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -21384,6 +21592,7 @@
    "madurai",
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -21514,6 +21723,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -21616,6 +21826,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
@@ -21692,6 +21903,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
@@ -21796,6 +22008,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3,
   "riven_disposition": 1.2,
@@ -21923,6 +22136,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -22003,6 +22217,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -22199,6 +22414,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.5,
   "riven_disposition": 1.2,
@@ -22351,6 +22567,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
@@ -22454,6 +22671,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -22532,6 +22750,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -22631,6 +22850,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -22764,6 +22984,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 4.5999999,
   "riven_disposition": 1.2,
@@ -22881,6 +23102,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -22979,6 +23201,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -23103,6 +23326,7 @@
    "naramon",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -23181,6 +23405,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -23329,6 +23554,7 @@
    "vazarin",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 4.0,
   "riven_disposition": 1.2,
@@ -23507,6 +23733,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": true,
   "reload_time": 0.85000002,
   "riven_disposition": 1.2,
@@ -23636,6 +23863,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -23711,6 +23939,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -23882,6 +24111,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.5,
   "riven_disposition": 1.2,
@@ -23970,6 +24200,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -24094,6 +24325,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -24191,6 +24423,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -24312,6 +24545,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
@@ -24406,6 +24640,7 @@
   "name": "Tenora",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -24478,6 +24713,7 @@
    "vazarin",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 5.0,
   "riven_disposition": 1.2,
@@ -24582,6 +24818,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -24712,6 +24949,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3000002,
   "riven_disposition": 1.2,
@@ -24845,6 +25083,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -24965,6 +25204,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.2,
   "riven_disposition": 1.2,
@@ -25038,6 +25278,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -25187,6 +25428,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5,
   "riven_disposition": 1.2,
@@ -25273,6 +25515,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -25401,6 +25644,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 4.0,
   "riven_disposition": 1.2,
@@ -25476,6 +25720,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -25605,6 +25850,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -25682,6 +25928,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -25781,6 +26028,7 @@
   "name": "Fulmin",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -25893,6 +26141,7 @@
   "name": "Sybaris",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -25969,6 +26218,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -26044,6 +26294,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.8299999,
   "riven_disposition": 1.2,
@@ -26183,6 +26434,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -26293,6 +26545,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -26397,6 +26650,7 @@
   "name": "Bronco Prime",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -26505,6 +26759,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -26575,6 +26830,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
@@ -26678,6 +26934,7 @@
   "name": "Bronco",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.05,
   "riven_disposition": 1.2,
@@ -26787,6 +27044,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3499999,
   "riven_disposition": 1.2,
@@ -26884,6 +27142,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -26980,6 +27239,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -27073,6 +27333,7 @@
   "name": "Lato",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -27185,6 +27446,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -27277,6 +27539,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.24,
   "riven_disposition": 1.2,
@@ -27381,6 +27644,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -27513,6 +27777,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -27644,6 +27909,7 @@
   "name": "Zylok",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
@@ -27714,6 +27980,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -27784,6 +28051,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
@@ -27853,6 +28121,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -27924,6 +28193,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -27996,6 +28266,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
@@ -28093,6 +28364,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -28169,6 +28441,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.3,
   "riven_disposition": 1.2,
@@ -28240,6 +28513,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -28312,6 +28586,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -28383,6 +28658,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.1,
   "riven_disposition": 1.2,
@@ -28477,6 +28753,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -28612,6 +28889,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
@@ -28744,6 +29022,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -28895,6 +29174,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
@@ -28968,6 +29248,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -29064,6 +29345,7 @@
    "vazarin",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -29180,6 +29462,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.3499999,
   "riven_disposition": 1.2,
@@ -29252,6 +29535,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
@@ -29346,6 +29630,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -29423,6 +29708,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
@@ -29532,6 +29818,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -29605,6 +29892,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -29719,6 +30007,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -29791,6 +30080,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
@@ -29893,6 +30183,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -30028,6 +30319,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
@@ -30177,6 +30469,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.7,
   "riven_disposition": 1.2,
@@ -30272,6 +30565,7 @@
    "naramon",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.4000001,
   "riven_disposition": 1.2,
@@ -30345,6 +30639,7 @@
   "name": "Pyrana",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -30414,6 +30709,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -30506,6 +30802,7 @@
    "naramon",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.4,
   "riven_disposition": 1.2,
@@ -30575,6 +30872,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.1,
   "riven_disposition": 1.2,
@@ -30644,6 +30942,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.25,
   "riven_disposition": 1.2,
@@ -30735,6 +31034,7 @@
   "name": "Pandero",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -30836,6 +31136,7 @@
    "naramon",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.80000001,
   "riven_disposition": 1.2,
@@ -30927,6 +31228,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -30997,6 +31299,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
@@ -31066,6 +31369,7 @@
   "name": "Knell",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -31196,6 +31500,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -31290,6 +31595,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.8,
   "riven_disposition": 1.2,
@@ -31388,6 +31694,7 @@
   "polarities": [
    "vazarin"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.5999999,
   "riven_disposition": 1.2,
@@ -31510,6 +31817,7 @@
   "name": "Braton Prime",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.1500001,
   "riven_disposition": 1.2,
@@ -31631,6 +31939,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -31754,6 +32063,7 @@
   "name": "Gorgon",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 4.1999998,
   "riven_disposition": 1.2,
@@ -31896,6 +32206,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -32017,6 +32328,7 @@
   "name": "Braton",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -32155,6 +32467,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.4000001,
   "riven_disposition": 1.2,
@@ -32241,6 +32554,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.5,
   "riven_disposition": 1.2,
@@ -32386,6 +32700,7 @@
   "name": "MK1-Braton",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -32488,6 +32803,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.0,
   "riven_disposition": 1.2,
@@ -32663,6 +32979,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": true,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -32810,6 +33127,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.75,
   "riven_disposition": 1.2,
@@ -32897,6 +33215,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -32992,6 +33311,7 @@
   "name": "Sobek",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
@@ -33086,6 +33406,7 @@
   "name": "Boar",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.7,
   "riven_disposition": 1.2,
@@ -33181,6 +33502,7 @@
   "name": "Boar Prime",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.75,
   "riven_disposition": 1.2,
@@ -33256,6 +33578,7 @@
   "name": "Hek",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -33386,6 +33709,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.75,
   "riven_disposition": 1.2,
@@ -33519,6 +33843,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 5.0,
   "riven_disposition": 1.2,
@@ -33612,6 +33937,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.80000001,
   "riven_disposition": 1.2,
@@ -33709,6 +34035,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.75,
   "riven_disposition": 1.2,
@@ -33782,6 +34109,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -33856,6 +34184,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.75,
   "riven_disposition": 1.2,
@@ -33930,6 +34259,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.5,
   "riven_disposition": 1.2,
@@ -34053,6 +34383,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.75,
   "riven_disposition": 1.2,
@@ -34156,6 +34487,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -34229,6 +34561,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 0.75,
   "riven_disposition": 1.2,
@@ -34300,6 +34633,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.2,
   "riven_disposition": 1.2,
@@ -34391,6 +34725,7 @@
   "polarities": [
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.6,
   "riven_disposition": 1.2,
@@ -34495,6 +34830,7 @@
    "madurai",
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.0,
   "riven_disposition": 1.2,
@@ -34611,6 +34947,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 3.7,
   "riven_disposition": 1.2,
@@ -34722,6 +35059,7 @@
    "madurai",
    "naramon"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.8,
   "riven_disposition": 1.2,
@@ -34855,6 +35193,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -35010,6 +35349,7 @@
   "polarities": [
    "madurai"
   ],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -35158,6 +35498,7 @@
   "name": "Sepulcrum",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 4.0,
   "riven_disposition": 1.2,
@@ -35302,6 +35643,7 @@
   "name": "Trumna",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 5.0,
   "riven_disposition": 1.2,
@@ -35374,6 +35716,7 @@
   "name": "Prisma Grakata",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 2.0,
   "riven_disposition": 1.2,
@@ -35446,6 +35789,7 @@
   "name": "Mara Detron",
   "no_reload": false,
   "polarities": [],
+  "primer_shot": [],
   "reload_replaces_shot": false,
   "reload_time": 1.05,
   "riven_disposition": 1.2,

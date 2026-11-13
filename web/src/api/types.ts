@@ -96,7 +96,11 @@ export interface paths {
             path?: never;
             cookie?: never;
         };
-        /** Weapons */
+        /**
+         * Weapons
+         * @description Answers without `q` (what the app asks for) are kept per release; building an answer
+         *     counts against the per-address rate limit.
+         */
         get: operations["weapons_api_weapons_get"];
         put?: never;
         post?: never;
@@ -894,6 +898,15 @@ export interface operations {
                     "application/json": components["schemas"]["HTTPValidationError"];
                 };
             };
+            /** @description Too Many Requests */
+            429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
         };
     };
     updates_api_updates_get: {
@@ -944,6 +957,15 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+            /** @description Too Many Requests */
+            429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
                 };
             };
         };

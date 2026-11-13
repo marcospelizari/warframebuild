@@ -1,9 +1,11 @@
-"""Error responses: always `{code, message, field}` (G18)."""
+"""Error responses: always `{code, message, field}` (G18); a crash answers a generic 500
+with no detail (S7); Starlette re-raises it, so the server logs the stack trace."""
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
+from app.api.headers import SECURITY
 from app.api.schemas.base import ApiError
 
 MAX_BODY = 4096  # bytes; /calc requests are a few hundred
@@ -39,6 +41,13 @@ def install(app: FastAPI) -> None:
         named = [str(p) for p in first["loc"][1:] if first["type"] != "json_invalid"]
         field = ".".join(named) or None
         return response(422, "invalid_request", str(first["msg"]), field)
+
+    @app.exception_handler(Exception)
+    async def crash(_: Request, __: Exception) -> JSONResponse:
+        # Answered outside every other middleware, so it carries the headers itself.
+        failed = response(500, "internal_error", "Something went wrong on our side.")
+        failed.headers.update(SECURITY)
+        return failed
 
     @app.middleware("http")
     async def body_limit(request: Request, call_next):  # type: ignore[no-untyped-def]

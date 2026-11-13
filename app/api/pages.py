@@ -140,7 +140,7 @@ def _primer_meta(data: GameData, gun: Weapon, variant: Variant | None, image: st
     )
 
 
-def _site(request: Request) -> str:
+def site(request: Request) -> str:
     # Behind a proxy the request's own scheme/host can be wrong or forged: prefer the
     # configured address; the request's is for local runs.
     return request.app.state.public_origin or str(request.base_url).rstrip("/")
@@ -153,13 +153,13 @@ def _page(request: Request, slug: str, faction: str | None) -> HTMLResponse:
     data: GameData = now.data
     gun = data.weapon_by_slug.get(slug)
     meta = weapon_meta(data, now.release, gun, faction) if gun else None
-    site = _site(request)
+    address = site(request)
     if meta is None:
         missing = Meta(f"Page not found | {SITE}", "No such gun or faction.", "/", noindex=True)
-        return HTMLResponse(render(page, missing, site), status_code=404)
+        return HTMLResponse(render(page, missing, address), status_code=404)
     noindex = "b" in request.query_params  # an edited build: index the plain page only
     meta = Meta(meta.title, meta.description, meta.path, meta.image, noindex)
-    return HTMLResponse(render(page, meta, site))
+    return HTMLResponse(render(page, meta, address))
 
 
 UPDATES = Meta(
@@ -172,7 +172,7 @@ UPDATES = Meta(
 @router.get("/updates", include_in_schema=False)
 def updates_page(request: Request) -> HTMLResponse:
     index: Path = request.app.state.web_dist / "index.html"
-    return HTMLResponse(render(index.read_text(encoding="utf-8"), UPDATES, _site(request)))
+    return HTMLResponse(render(index.read_text(encoding="utf-8"), UPDATES, site(request)))
 
 
 @router.get("/w/{slug}", include_in_schema=False)

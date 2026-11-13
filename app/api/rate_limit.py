@@ -4,6 +4,7 @@ The client address is what uvicorn reports; behind a proxy it is the forwarded o
 with `--proxy-headers --forwarded-allow-ips=<trusted proxy>` (E6/E7).
 """
 
+import ipaddress
 import math
 import time
 from collections.abc import Callable
@@ -17,6 +18,17 @@ BURST = 20  # requests at once
 MAX_CLIENTS = 10_000  # remembered addresses; full buckets are forgotten first
 
 
+def client_key(host: str) -> str:
+    """IPv4: the address. IPv6: its /64, which one connection usually owns whole."""
+    try:
+        address = ipaddress.ip_address(host)
+    except ValueError:
+        return host
+    if address.version == 6:
+        return str(ipaddress.ip_network(f"{address}/64", strict=False))
+    return str(address)
+
+
 class RateLimit:
     def __init__(
         self,
@@ -28,7 +40,7 @@ class RateLimit:
         self._buckets: dict[str, tuple[float, float]] = {}  # address -> tokens, at
 
     def check(self, request: Request) -> None:
-        address = request.client.host if request.client else "unknown"
+        address = client_key(request.client.host if request.client else "unknown")
         now = self._clock()
         tokens = self._tokens(address, now)
         if tokens < 1:

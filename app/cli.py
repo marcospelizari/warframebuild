@@ -1,6 +1,7 @@
 """`wfb` command line."""
 
 import argparse
+import ipaddress
 import json
 import sys
 from collections.abc import Callable
@@ -14,6 +15,13 @@ from app.pipeline import build_all, check, fixtures, frozen_data, refresh, sampl
 from app.pipeline.sources.http import PoliteClient
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def _loopback(host: str) -> bool:
+    try:
+        return host == "localhost" or ipaddress.ip_address(host).is_loopback
+    except ValueError:
+        return False
 
 
 def _positive(text: str) -> int:
@@ -33,6 +41,11 @@ def main(argv: list[str] | None = None) -> int:
         "--public-origin",
         help="site address for canonical and link-preview URLs, e.g. https://example.org "
         "(default: the address each request came to)",
+    )
+    serve.add_argument(
+        "--forwarded-allow-ips",
+        help="proxy addresses whose X-Forwarded-For is trusted for the client address "
+        "(rate limit); default $FORWARDED_ALLOW_IPS, else 127.0.0.1 and ::1",
     )
     sub.add_parser("openapi", help="print the OpenAPI schema (input for web/src/api/types.ts)")
     ref = sub.add_parser("refresh", help="download sources, rebuild and validate gamedata/")
@@ -66,8 +79,19 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if args.command == "serve":
+        if args.public_origin is None and not _loopback(args.host):
+            # Page URLs would otherwise come from each request's Host header (S6).
+            parser.error(f"--host {args.host} needs --public-origin https://<site address>")
         app = create_app(public_origin=args.public_origin)
-        uvicorn.run(app, host=args.host, port=args.port)
+        # No access log: visitor addresses are not stored (S9); errors still go to stderr.
+        uvicorn.run(
+            app,
+            host=args.host,
+            port=args.port,
+            forwarded_allow_ips=args.forwarded_allow_ips,
+            access_log=False,
+            server_header=False,
+        )
     elif args.command == "openapi":
         json.dump(create_app().openapi(), sys.stdout, indent=2, sort_keys=True)
         sys.stdout.write("\n")
