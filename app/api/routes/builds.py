@@ -3,17 +3,23 @@ scored by the /calc code (PLAN Q28b, option A); never a search. ETag = release i
 code version. A gun not in the in-memory cache is filled in on the runner (E6/E7); only
 those fills count against the per-address rate limit."""
 
+import asyncio
+
 from fastapi import APIRouter, Request, Response
 
 from app.api import jobs
 from app.api.errors import ApiFailure
 from app.api.schemas.base import ApiError
 from app.api.schemas.stored import BuildsResponse
-from app.api.serving import remember, served
+from app.api.serving import Served, remember, served
 from app.gamedata.release import Release
 from app.gamedata.store import GameData
 
 CACHED_GUNS = 64  # filled-in responses kept in memory
+# A fill is slow on the heaviest guns (~4 s on a fast desktop): a request waits the
+# runner's usual time, the fill itself runs up to FILL_TIMEOUT_S and its answer is kept,
+# so a retry finds it ready or joins it.
+FILL_TIMEOUT_S = 30.0
 
 ERRORS: dict[int | str, dict[str, object]] = {
     404: {"model": ApiError},
@@ -40,10 +46,25 @@ async def builds(slug: str, request: Request) -> Response:
     headers = {"ETag": etag, "Cache-Control": "no-cache"}
     if request.headers.get("if-none-match") == headers["ETag"]:
         return Response(status_code=304, headers=headers)
-    cache = now.builds_cache
-    body = cache.pop(slug, None)
-    if body is None:
-        request.app.state.rate_limit.check(request)
-        body = await jobs.run(now.runner, jobs.builds, release, slug)
-    remember(cache, slug, body, CACHED_GUNS)
+    body = now.builds_cache.pop(slug, None)
+    if body is not None:
+        remember(now.builds_cache, slug, body, CACHED_GUNS)
+    else:
+        fill = now.fills.get(slug)  # a retry joins the fill already running
+        if fill is None:
+            request.app.state.rate_limit.check(request)
+            run = jobs.run(now.runner, jobs.builds, release, slug, timeout=FILL_TIMEOUT_S)
+            fill = now.fills[slug] = asyncio.ensure_future(run)
+            fill.add_done_callback(lambda done: _filled(now, slug, done))
+        try:
+            body = await asyncio.wait_for(asyncio.shield(fill), now.runner.timeout)
+        except TimeoutError:
+            raise ApiFailure(503, "timeout", "the request took too long", retry_after=1) from None
     return Response(body, media_type="application/json", headers=headers)
+
+
+def _filled(now: Served, slug: str, fill: "asyncio.Task[bytes]") -> None:
+    """Keep the answer even when every request waiting for it has gone."""
+    now.fills.pop(slug, None)
+    if not fill.cancelled() and fill.exception() is None:
+        remember(now.builds_cache, slug, fill.result(), CACHED_GUNS)

@@ -6,6 +6,7 @@ import { postCalc } from "@/api/client";
 import {
   arcaneRows,
   type Choices,
+  codeData,
   decode,
   encode,
   fromBuild,
@@ -74,9 +75,12 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
   // The Primer tab is not editable (/calc scores kill times, not priming): ?b= is ignored.
   const choices = code && faction !== PRIMER ? decode(code) : null;
   const elements = data.variants.flatMap((v) => (v.element ? [v.element] : []));
-  const index = choices
-    ? Math.max(0, data.variants.findIndex((v) => v.element === choices.element))
-    : picked;
+  const found = choices ? data.variants.findIndex((v) => v.element === choices.element) : -1;
+  const index = choices ? Math.max(0, found) : picked;
+  // G40: a link from older game data opens re-scored with today's; say so, and say why an
+  // element or a mod may be missing.
+  const missing = found < 0 && data.variants.some((v) => v.element); // per-element variants
+  const older = !!choices && (codeData(code!) !== data.dataset_hash || missing);
   const variant = data.variants[index] ?? data.variants[0]!;
   const primer = faction === PRIMER ? (variant.primer ?? null) : null;
   const versus = faction === PRIMER ? null : faction; // a faction build's faction
@@ -88,7 +92,7 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
   const edit = (next: Choices | null) =>
     void navigate({
       to: ".",
-      search: { b: next ? encode(next) : undefined },
+      search: { b: next ? encode(next, data.dataset_hash) : undefined },
       replace: true,
       resetScroll: false,
     });
@@ -129,6 +133,13 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
       {code && !choices && faction !== PRIMER && (
         <p role="alert" className="mt-4 text-center text-soft">
           This build link could not be opened. Showing the calculated build.
+        </p>
+      )}
+      {older && (
+        <p role="status" className="mt-4 text-center text-soft">
+          This build link was made with older game data. It is scored with today's data; mods or
+          an element no longer available are left out, and the comparison is with today's
+          calculated build.
         </p>
       )}
       <BuildTabs

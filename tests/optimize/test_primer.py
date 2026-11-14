@@ -126,3 +126,17 @@ def test_good_primers_need_a_top_score_many_statuses_and_no_top_damage() -> None
     }
     assert good_primers(guns) == ["epitaph", "nukor"]  # 10% of 20 guns
     assert good_primers({}) == []
+
+
+def test_sparse_heat_procs_let_the_armor_return_between_burns(gamedata: GameData) -> None:
+    """R17: Heat procs further apart than the burn lasts: each burn strips, then the armor
+    returns until the next one (Heat_Damage:81), instead of holding to the last shot."""
+    lo = _soma(gamedata, "Hellfire")
+    shots = tuple(0.4 * i for i in range(1, 61))  # one expected Heat proc every ~8 s
+    tl = Timeline(lo, resolve(lo, False), None, None, gamedata.status_rules, shots=shots)
+    life = gamedata.status_rules.types[DamageType.HEAT].duration_s * tl.duration
+    first, second = tl.heat_starts[:2]
+    assert second - first > life
+    burning, returning = tl.debuffs_at(first + life), tl.debuffs_at(second - 0.01)
+    assert burning.armor_kept < returning.armor_kept
+    assert tl.debuffs_at(second + 2.1).armor_kept < returning.armor_kept  # the new burn's

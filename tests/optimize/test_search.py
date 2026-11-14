@@ -28,9 +28,11 @@ def _run(data: GameData, names: tuple[str, ...], budget: int) -> Result:
     lex = next(w for w in data.weapons if w.name == "Lex Prime")
     head = Head(data.reference_head.multiplier, critical=data.reference_head.critical)
 
-    def score(mods: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]) -> float:
+    def score(
+        mods: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]
+    ) -> tuple[float, float]:
         lo = loadout(lex, mods, form="normal", sets=data.set_by_id, exilus=exilus)
-        return max_score(lo, head, data.status_rules)
+        return max_score(lo, head, data.status_rules), 0.0
 
     return search([by_name[n] for n in names], score, budget)
 
@@ -75,7 +77,7 @@ def test_ninth_mod_goes_to_the_exilus_slot() -> None:
         return Mod.model_construct(unique_name=f"m{i}", family=None, exilus=exilus, effects=NONE)
 
     pool = [mod(i, exilus=i == 0) for i in range(10)]
-    result = search(pool, lambda mods, ex, picks: len(mods) + (ex is not None), 5_000)
+    result = search(pool, lambda mods, ex, picks: (len(mods) + (ex is not None), 0.0), 5_000)
     assert result.status == "optimal"
     assert result.score == 9
     assert result.exilus is not None and result.exilus.unique_name == "m0"
@@ -85,7 +87,9 @@ def test_without_exilus_capable_mods_eight_slots(gamedata: GameData) -> None:
     def mod(i: int) -> Mod:
         return Mod.model_construct(unique_name=f"m{i}", family=None, exilus=False, effects=NONE)
 
-    result = search([mod(i) for i in range(10)], lambda mods, ex, picks: float(len(mods)), 5_000)
+    result = search(
+        [mod(i) for i in range(10)], lambda mods, ex, picks: (float(len(mods)), 0.0), 5_000
+    )
     assert result.score == pytest.approx(8)
     assert result.exilus is None
 
@@ -99,8 +103,8 @@ def test_choice_slots_are_searched() -> None:
 
     a, b, c = Pick("a", 1), Pick("b", 3), Pick("c", 2)
 
-    def score(mods: list[Mod], ex: Mod | None, picks: tuple[Option, ...]) -> float:
-        return sum(p.value for p in picks if isinstance(p, Pick))
+    def score(mods: list[Mod], ex: Mod | None, picks: tuple[Option, ...]) -> tuple[float, float]:
+        return sum(p.value for p in picks if isinstance(p, Pick)), 0.0
 
     result = search([], score, 5_000, [[None, a, b], [None, c]])
     assert result.status == "optimal"
@@ -117,12 +121,28 @@ def test_starts_reach_a_pair_that_one_mod_moves_cannot() -> None:
         for n in ("toxin", "cold", "status")
     ]
 
-    def score(regular: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]) -> float:
+    def score(
+        regular: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]
+    ) -> tuple[float, float]:
         names = {m.name for m in regular}
         pair = {"toxin", "cold"} <= names
-        return (5.0 if pair else -1.0 * len(names & {"toxin", "cold"})) + ("status" in names)
+        return (5.0 if pair else -1.0 * len(names & {"toxin", "cold"})) + ("status" in names), 0.0
 
     plain = search(mods, score, budget=20)  # under the exhaustive size (24): a local climb
     assert plain.status == "best_found" and {m.name for m in plain.mods} == {"status"}
     seeded = search(mods, score, budget=20, starts=[mods[:2]])
     assert {m.name for m in seeded.mods} == {"toxin", "cold", "status"}
+
+
+def test_equal_scores_go_to_the_higher_tie_break() -> None:
+    """G32: equal kill times go to more damage at the killing event, not the mod name."""
+    mods = [
+        Mod.model_construct(unique_name=n, name=n, family=None, exilus=False, effects=NONE)
+        for n in ("a", "b")
+    ]
+
+    def score(mods: list[Mod], ex: Mod | None, picks: tuple[Option, ...]) -> tuple[float, float]:
+        names = {m.name for m in mods}
+        return (1.0, 0.5 if names == {"b"} else 0.0) if len(names) == 1 else (0.0, 0.0)
+
+    assert [m.name for m in search(mods, score, 5_000).mods] == ["b"]

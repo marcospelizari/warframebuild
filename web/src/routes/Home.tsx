@@ -3,10 +3,12 @@ import { getWeapons } from "@/api/client";
 import { GunBrowser } from "@/components/GunBrowser";
 import { GunSearch } from "@/components/GunSearch";
 import u from "@/components/ui.module.css";
+import { usePageTitle } from "@/lib/usePageTitle";
 import h from "./Home.module.css";
 
 export function Home() {
   const list = useQuery({ queryKey: ["weapons"], queryFn: getWeapons });
+  usePageTitle("warframeBuild: gun builds for Warframe");
   return (
     <>
       <section className={h.hero}>

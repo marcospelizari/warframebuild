@@ -1,4 +1,4 @@
-import type { Build } from "@/api/client";
+import type { Build, Source } from "@/api/client";
 import { trim } from "@/lib/format";
 import s from "./ScoreStrip.module.css";
 
@@ -55,14 +55,40 @@ export function ScoreStrip({ build, faction, baseline = null }: Props) {
         </dl>
         <div className="mt-4 flex flex-wrap items-start gap-x-12 gap-y-2">
           <ul className={s.notes}>
-            {build.headshot && <li>Headshots: {build.headshot.reason}</li>}
+            {build.headshot && (
+              <li>
+                Headshots: {build.headshot.reason}
+                <SourceLink source={build.headshot.source} />
+              </li>
+            )}
             {build.assumptions.map((a) => (
-              <li key={a.id}>{a.text}</li>
+              <li key={a.id}>
+                {a.text}
+                <SourceLink source={a.source} />
+              </li>
             ))}
             <li>{build.form === "incarnon" ? "Incarnon form" : "Normal form"}</li>
           </ul>
         </div>
       </div>
     </details>
+  );
+}
+
+const SOURCE_LABEL: Record<Source["kind"], string> = {
+  wiki: "wiki",
+  reference: "source",
+  de: "DE data",
+  wfcd: "WFCD",
+};
+
+/** Where an assumption comes from (wiki pages credited where the build is shown, Q22). */
+function SourceLink({ source }: { source: Source | null | undefined }) {
+  if (!source) return null;
+  return (
+    <>
+      {" "}
+      (<a href={source.url}>{SOURCE_LABEL[source.kind]}</a>)
+    </>
   );
 }

@@ -10,7 +10,7 @@ def test_health_reports_package_version(tmp_path: Path) -> None:
     client = TestClient(create_app(web_dist=tmp_path / "missing", releases=tmp_path))
     response = client.get("/api/health")
     assert response.status_code == 200
-    assert response.json() == {"status": "ok", "version": version("warframebuild")}
+    assert response.json() == {"status": "ok", "version": version("warframebuild"), "release": None}
 
 
 def test_serves_built_frontend(tmp_path: Path) -> None:

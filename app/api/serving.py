@@ -31,6 +31,7 @@ class Served:
     runner: Runner
     builds_cache: dict[str, bytes] = field(default_factory=dict)  # this release's responses
     lists_cache: dict[str, bytes] = field(default_factory=dict)  # /api/mods, /api/weapons
+    fills: dict[str, "asyncio.Task[bytes]"] = field(default_factory=dict)  # slug -> running fill
 
 
 def remember(cache: dict[str, bytes], key: str, body: bytes, limit: int) -> None:

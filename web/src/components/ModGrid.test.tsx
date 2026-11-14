@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { expect, test } from "vitest";
 import { items, stored } from "@/test/fixtures";
 import { ModGrid } from "./ModGrid";
@@ -38,4 +38,14 @@ test("a build with no forma layout still shows the mods with their own drain", (
   expect(screen.getByRole("button", { name: /^Serration/ })).toHaveAccessibleName(
     /No slot polarity, drain 14\.$/,
   );
+});
+
+test("a click or tap opens the full mod card in view mode (touch has no hover)", () => {
+  render(<ModGrid build={stored.build} forma={stored.forma} items={items} weaponType="Rifle" />);
+  const card = screen.getByRole("button", { name: /^Serration/ });
+  expect(card).toHaveAttribute("aria-expanded", "false");
+  fireEvent.click(card);
+  expect(card).toHaveAttribute("aria-expanded", "true");
+  fireEvent.blur(card);
+  expect(card).toHaveAttribute("aria-expanded", "false");
 });

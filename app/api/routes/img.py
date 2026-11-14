@@ -15,7 +15,10 @@ from app.gamedata.store import GameData
 
 router = APIRouter()
 
+# Mod and arcane picture names carry DE's texture hash: a new picture is a new URL.
 CACHE_FOREVER = {"Cache-Control": "public, max-age=31536000, immutable"}
+# Gun icons and card art keep their URL when the picture changes: a day, then revalidate.
+CACHE_DAY = {"Cache-Control": "public, max-age=86400"}
 MEDIA = {".png": "image/png", ".jpg": "image/jpeg", ".webp": "image/webp"}
 KINDS: dict[str, PictureKind] = {"mods": "mods", "arcanes": "arcanes"}
 # Folders of cache/raw/wiki/img/ the UI uses (README there); no SVG (it can carry script).
@@ -27,10 +30,10 @@ def _missing() -> ApiFailure:
     return ApiFailure(404, "unknown_image", "no such image")
 
 
-def _file(path: Path) -> FileResponse:
+def _file(path: Path, cache: dict[str, str] = CACHE_DAY) -> FileResponse:
     if not path.is_file():
         raise _missing()
-    return FileResponse(path, media_type=MEDIA[path.suffix], headers=CACHE_FOREVER)
+    return FileResponse(path, media_type=MEDIA[path.suffix], headers=cache)
 
 
 @router.get("/img/weapons/{name}", include_in_schema=False)
@@ -48,7 +51,7 @@ def picture(kind: str, name: str, request: Request) -> FileResponse:
     known = KINDS.get(kind)
     if known is None or name not in data.picture_names[known]:
         raise _missing()
-    return _file(picture_path(request.app.state.img_dir, known, name))
+    return _file(picture_path(request.app.state.img_dir, known, name), CACHE_FOREVER)
 
 
 @router.get("/img/art/{folder}/{name}", include_in_schema=False)

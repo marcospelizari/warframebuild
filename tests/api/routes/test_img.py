@@ -41,11 +41,12 @@ def client(tmp_path: Path, gamedata: GameData) -> TestClient:
     return TestClient(app)
 
 
-def test_cached_icon_is_served_immutable(client: TestClient) -> None:
+def test_cached_icon_is_kept_a_day(client: TestClient) -> None:
+    """R17: a gun icon keeps its URL when DE changes the picture."""
     response = client.get("/img/weapons/soma-prime.png")
     assert response.status_code == 200
     assert response.content == PNG
-    assert "immutable" in response.headers["cache-control"]
+    assert response.headers["cache-control"] == "public, max-age=86400"
 
 
 @pytest.mark.parametrize(

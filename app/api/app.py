@@ -8,12 +8,14 @@ from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from importlib.metadata import version
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from fastapi import FastAPI
 from fastapi.responses import PlainTextResponse, Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from starlette.exceptions import HTTPException
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 from starlette.types import Scope
 
 from app.api import errors, headers, pages, serving
@@ -42,6 +44,7 @@ NOT_PAGES = frozenset({"api", "img", "assets"})
 class Health(BaseModel):
     status: str
     version: str
+    release: str | None  # the release served; None: no builds (503 on /builds)
 
 
 class SpaFiles(StaticFiles):
@@ -107,6 +110,10 @@ def create_app(
         serving.Served(data, release, app.state.pool.runner(data, GAMEDATA)) if data else None
     )
     errors.install(app)
+    if app.state.public_origin:  # redirects (trailing slash) are built from the Host header
+        host = urlsplit(app.state.public_origin).hostname
+        local = ["127.0.0.1", "localhost", "::1"]  # the container's HEALTHCHECK
+        app.add_middleware(TrustedHostMiddleware, allowed_hosts=[host, *local])
     headers.install(app, https=(app.state.public_origin or "").startswith("https://"))
     app.include_router(calc.router)
     app.include_router(builds.router)
@@ -119,7 +126,10 @@ def create_app(
 
     @app.get("/api/health")
     def health() -> Health:
-        return Health(status="ok", version=version("warframebuild"))
+        current = app.state.served.release if app.state.served else None
+        return Health(
+            status="ok", version=version("warframebuild"), release=current.id if current else None
+        )
 
     if web_dist.is_dir():
         app.include_router(pages.router)  # before the mount: weapon URLs get their meta tags

@@ -1,5 +1,5 @@
 {
-  "about": "Golden builds (PLAN E11, G90 U6): numbers Marcos read in the in-game arsenal, checked against the committed gamedata/ by tests/golden/test_arsenal.py. Values are written as the arsenal shows them; the allowed difference is half of the last digit shown. A failure after a refresh means: re-check this build in game; if the game agrees, a mechanic or value moved and the calculator must follow.",
+  "about": "Golden builds (PLAN E11, G90 U6): numbers read in the in-game arsenal, checked against the committed gamedata/ by tests/golden/test_arsenal.py. Values are written as the arsenal shows them; the allowed difference is half of the last digit shown. A failure after a refresh means: re-check this build in game; if the game agrees, a mechanic or value moved and the calculator must follow.",
   "builds": [
     {
       "id": "soma-prime-unmodded",

@@ -503,6 +503,8 @@ export interface components {
         };
         /** Health */
         Health: {
+            /** Release */
+            release: string | null;
             /** Status */
             status: string;
             /** Version */

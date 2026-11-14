@@ -1,14 +1,16 @@
 import json
 import shutil
+import time
 from dataclasses import replace
 from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
 
+from app.api import jobs
 from app.api.app import SERVED_CODE, create_app
 from app.api.rate_limit import RateLimit
-from app.gamedata.release import current
+from app.gamedata.release import Release, current
 from app.gamedata.store import GameData
 from app.optimize.search import rounded
 from tests.test_layers import ALLOWED
@@ -118,6 +120,23 @@ def test_unloadable_release_serves_gamedata_without_builds(tmp_path: Path, relea
         assert (response.status_code, response.json()["code"]) == (503, "no_release")
 
 
+def test_release_from_other_calculator_code_is_not_served(tmp_path: Path, releases: Path) -> None:
+    """E10: builds made by other model code are never served as current; health says so."""
+    stale = tmp_path / "releases"
+    shutil.copytree(releases, stale)
+    folder = current(stale)
+    assert folder is not None
+    manifest = json.loads((folder / "manifest.json").read_text())
+    manifest["calculator_version"] = "0" * 16
+    (folder / "manifest.json").write_text(json.dumps(manifest))
+    with TestClient(create_app(web_dist=tmp_path, releases=stale)) as client:
+        assert client.get("/api/health").json()["release"] is None
+        response = client.get("/api/weapons/soma-prime/builds")
+        assert (response.status_code, response.json()["code"]) == (503, "no_release")
+    with TestClient(create_app(web_dist=tmp_path, releases=releases)) as client:
+        assert client.get("/api/health").json()["release"] == current(releases).name  # type: ignore[union-attr]
+
+
 def test_pruned_release_answers_503(tmp_path: Path, gamedata: GameData, releases: Path) -> None:
     moved = tmp_path / "releases"
     shutil.copytree(releases, moved)
@@ -168,3 +187,27 @@ def test_builds_carry_shard_and_aura_advice(client: TestClient) -> None:
     assert "Corrosive Projection" in names and "Rifle Amp" in names
     assert [a["score"] for a in auras] == sorted((a["score"] for a in auras), reverse=True)
     assert variant["primer"]["build"]["auras"] == []
+
+
+def test_a_slow_fill_is_kept_for_the_retry(
+    tmp_path: Path, gamedata: GameData, releases: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """R8: the request gives up at the runner's timeout; the fill goes on and the retry
+    gets its answer instead of starting the work again."""
+    calls: list[str] = []
+    real = jobs.builds
+
+    def slow(release: Release, slug: str) -> jobs.Outcome:
+        calls.append(slug)
+        time.sleep(0.5)
+        return real(release, slug)
+
+    monkeypatch.setattr(jobs, "builds", slow)
+    app = create_app(web_dist=tmp_path, data=gamedata, releases=releases)
+    with TestClient(app) as client:
+        app.state.served.runner.timeout = 0.1
+        first = client.get("/api/weapons/soma-prime/builds")
+        assert (first.status_code, first.json()["code"]) == (503, "timeout")
+        time.sleep(1.0)
+        assert client.get("/api/weapons/soma-prime/builds").status_code == 200
+    assert calls == ["soma-prime"]

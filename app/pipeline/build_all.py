@@ -14,6 +14,7 @@ from collections.abc import Callable, Iterator
 from dataclasses import dataclass
 from pathlib import Path
 
+from app.gamedata import release as gamedata_release
 from app.gamedata.builds import WeaponBuilds
 from app.gamedata.release import current
 from app.gamedata.store import GameData, load
@@ -45,8 +46,8 @@ def run(
         data = load(paths.gamedata)
         key = release.Key(
             data.meta.dataset_hash,
-            release.tree_hash(paths.reference, "*.json"),
-            release.calculator_version(paths.app),
+            gamedata_release.tree_hash(paths.reference, "*.json"),
+            gamedata_release.calculator_version(paths.app),
             budget,
         )
         slugs = sorted(w.slug for w in data.weapons)

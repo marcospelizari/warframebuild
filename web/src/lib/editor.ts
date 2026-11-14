@@ -68,8 +68,10 @@ export function place(c: Choices, target: Target, id: string | null): Choices {
 }
 
 // ?b= share code (F1): version, then the choices as base64url JSON with the common
-// uniqueName prefixes dropped. The server checks everything again in /calc.
-const VERSION = "1";
+// uniqueName prefixes dropped, then (version 2) the game data it was made with (G40).
+// The server checks everything again in /calc.
+const VERSION = "2";
+const VERSIONS = ["1", "2"]; // 1: links made before the game data was recorded
 const MAX_CODE = 2000;
 const MOD_PREFIX = "/Lotus/Upgrades/Mods/";
 const ARCANE_PREFIX = "/Lotus/Upgrades/CosmeticEnhancers/";
@@ -89,13 +91,15 @@ function fromBase64Url(code: string): string {
   return new TextDecoder().decode(Uint8Array.from(binary, (ch) => ch.charCodeAt(0)));
 }
 
-export function encode(c: Choices): string {
+/** `data`: the dataset hash of the builds the link was made from. */
+export function encode(c: Choices, data: string): string {
   const body = [
     c.mods.map((m) => strip(m, MOD_PREFIX)),
     c.exilus && strip(c.exilus, MOD_PREFIX),
     c.arcane && strip(c.arcane, ARCANE_PREFIX),
     c.perks,
     c.element,
+    data,
   ];
   return `${VERSION}.${toBase64Url(JSON.stringify(body))}`;
 }
@@ -104,17 +108,30 @@ const isText = (x: unknown): x is string => typeof x === "string" && x.length <=
 const isTextList = (x: unknown, max: number): x is string[] =>
   Array.isArray(x) && x.length <= max && x.every(isText);
 
-/** null: not a code this version wrote (the page then shows the calculated build). */
-export function decode(code: string): Choices | null {
-  if (code.length > MAX_CODE || !code.startsWith(`${VERSION}.`)) return null;
-  let body: unknown;
+function body(code: string): unknown[] | null {
+  const version = code.split(".", 1)[0]!;
+  if (code.length > MAX_CODE || !VERSIONS.includes(version)) return null;
+  let parsed: unknown;
   try {
-    body = JSON.parse(fromBase64Url(code.slice(VERSION.length + 1)));
+    parsed = JSON.parse(fromBase64Url(code.slice(version.length + 1)));
   } catch {
     return null;
   }
-  if (!Array.isArray(body) || body.length !== 5) return null;
-  const [mods, exilus, arcane, perks, element] = body as unknown[];
+  const size = version === "1" ? 5 : 6;
+  return Array.isArray(parsed) && parsed.length === size ? (parsed as unknown[]) : null;
+}
+
+/** The dataset hash a code was made with; null when unknown (version 1) or not a code. */
+export function codeData(code: string): string | null {
+  const data = body(code)?.[5];
+  return isText(data) ? data : null;
+}
+
+/** null: not a code this version wrote (the page then shows the calculated build). */
+export function decode(code: string): Choices | null {
+  const parts = body(code);
+  if (!parts) return null;
+  const [mods, exilus, arcane, perks, element] = parts;
   if (!isTextList(mods, MAX_MODS) || !isTextList(perks, 4)) return null;
   if ((exilus !== null && !isText(exilus)) || (arcane !== null && !isText(arcane))) return null;
   if (element !== null && !isText(element)) return null;

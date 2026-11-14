@@ -39,7 +39,9 @@ def test_every_answer_carries_the_security_headers(client: TestClient) -> None:
 
 
 def test_hsts_only_behind_an_https_origin(tmp_path: Path, gamedata: GameData) -> None:
-    client = TestClient(_app(tmp_path, gamedata, "https://example.org"))
+    client = TestClient(
+        _app(tmp_path, gamedata, "https://example.org"), base_url="https://example.org"
+    )
     assert client.get("/").headers["strict-transport-security"] == "max-age=31536000"
 
 
@@ -77,7 +79,9 @@ def test_large_answers_are_compressed(client: TestClient) -> None:
 def test_robots_and_sitemap_name_every_gun_and_tier_page(
     tmp_path: Path, gamedata: GameData
 ) -> None:
-    client = TestClient(_app(tmp_path, gamedata, "https://example.org"))
+    client = TestClient(
+        _app(tmp_path, gamedata, "https://example.org"), base_url="https://example.org"
+    )
     robots = client.get("/robots.txt")
     assert robots.text.endswith("Sitemap: https://example.org/sitemap.xml\n")
     sitemap = client.get("/sitemap.xml")
@@ -85,7 +89,8 @@ def test_robots_and_sitemap_name_every_gun_and_tier_page(
     assert "<loc>https://example.org/</loc>" in sitemap.text
     assert "<loc>https://example.org/w/soma-prime</loc>" in sitemap.text
     assert "<loc>https://example.org/tier-list/primary</loc>" in sitemap.text
-    assert sitemap.text.count("<url>") == 3 + len(gamedata.weapons)  # home, 2 tier lists
+    assert "<loc>https://example.org/about</loc>" in sitemap.text
+    assert sitemap.text.count("<url>") == 4 + len(gamedata.weapons)  # home, about, 2 tier lists
 
 
 def test_list_answers_are_kept_and_building_them_is_rate_limited(
@@ -115,6 +120,15 @@ def test_sitemap_lists_good_primers_primer_pages(
     dist.mkdir()
     (dist / "index.html").write_text("<p>app</p>", encoding="utf-8")
     app = create_app(web_dist=dist, data=gamedata, releases=copy, public_origin="https://x.org")
-    text = TestClient(app).get("/sitemap.xml").text
+    text = TestClient(app, base_url="https://x.org").get("/sitemap.xml").text
     assert "<loc>https://x.org/w/soma-prime/primer</loc>" in text
     assert "<loc>https://x.org/w/kuva-hind/primer</loc>" not in text
+
+
+def test_a_public_server_answers_only_its_own_host(tmp_path: Path) -> None:
+    """R16: a forged Host header must not shape redirects; the HEALTHCHECK uses 127.0.0.1."""
+    app = create_app(web_dist=tmp_path, releases=tmp_path, public_origin="https://example.org")
+    client = TestClient(app, base_url="https://evil.test")
+    assert client.get("/api/health").status_code == 400
+    assert TestClient(app, base_url="https://example.org").get("/api/health").status_code == 200
+    assert TestClient(app, base_url="http://127.0.0.1:8000").get("/api/health").status_code == 200

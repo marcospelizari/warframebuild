@@ -25,7 +25,7 @@ from app.domain.combat import CAP_S
 from app.domain.elements import PARTS
 from app.domain.headshot import Head
 from app.gamedata.builds import Forma
-from app.gamedata.enemies import ReferenceHead
+from app.gamedata.enemies import Enemy, ReferenceHead
 from app.gamedata.models import Arcane, Mod, Weapon
 from app.gamedata.store import GameData
 from app.optimize import combat
@@ -83,6 +83,7 @@ def build_response(data: GameData, body: CalcRequest) -> Build:
         data.reference_head,
         fights,
         scored.conditions,
+        data.enemies,
     )
 
 
@@ -135,6 +136,7 @@ def _build(
     head: ReferenceHead,
     fights: Combat,
     conditions: Resolved,
+    enemies: list[Enemy],
 ) -> Build:
     hit = e.hit
     slots = [_slot(i, m) for i, m in enumerate([*mods, *[None] * (MAX_SLOTS - len(mods))])]
@@ -183,5 +185,5 @@ def _build(
         if e.headshot
         else None,
         combat=fights,
-        assumptions=assumptions(weapon, e, fights, conditions),
+        assumptions=assumptions(weapon, e, fights, conditions, enemies),
     )

@@ -47,3 +47,13 @@ def test_item_pictures_use_the_gamedata_names(tmp_path: Path, gamedata: GameData
     names = {p.path.name for p in pictures}
     assert names == set(gamedata.picture_names["mods"])
     assert all(p.path.parent == tmp_path / "mods" for p in pictures)
+
+
+def test_a_texture_path_that_could_leave_the_export_is_never_fetched(tmp_path: Path) -> None:
+    """R17: the DE field becomes part of the URL."""
+    bad = ["/../secret.png", "@evil.test/x.png", "/a?b=c.png"]
+    pictures = [images.Picture(t, t, tmp_path / f"mods/{i}.png") for i, t in enumerate(bad)]
+    fake = FakeClient({})
+    failures = images.fetch_missing(cast(PoliteClient, fake), pictures)
+    assert fake.asked == [] and len(failures) == 3
+    assert images.TEXTURE.fullmatch("/Lotus/Icons/Acrid.png!00_JQueKUj0d0+7BmGrA")

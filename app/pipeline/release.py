@@ -46,24 +46,6 @@ class Key:
         return hashlib.sha256(text.encode()).hexdigest()[:16]
 
 
-def tree_hash(folder: Path, pattern: str) -> str:
-    """Hash of every file matching `pattern` under `folder`: relative path + bytes, sorted."""
-    digest = hashlib.sha256()
-    for path in sorted(folder.rglob(pattern)):
-        digest.update(path.relative_to(folder).as_posix().encode() + b"\0")
-        digest.update(path.read_bytes() + b"\0")
-    return digest.hexdigest()[:16]
-
-
-def calculator_version(app_dir: Path) -> str:
-    """E10: changes with any source change in `domain`, `optimize`, or `gamedata` (the build
-    file format)."""
-    digest = hashlib.sha256()
-    for layer in ("domain", "gamedata", "optimize"):
-        digest.update(tree_hash(app_dir / layer, "*.py").encode())
-    return digest.hexdigest()[:16]
-
-
 @contextmanager
 def lock(releases: Path) -> Iterator[None]:
     """Held for a whole build-all run, before any work starts."""
@@ -134,9 +116,11 @@ def publish(
         (temp / INPUTS).write_bytes(dump(dict(sorted(inputs.items()))))
     updates.write(temp, current(releases), key.id, today or datetime.date.today().isoformat())
     old = releases / f".{key.id}.tmp.old"  # same key again: the live copy goes last
+    _sync(temp)  # on disk before `current` can name it: a power cut leaves no empty files
     if final.exists():
         final.rename(old)
     temp.rename(final)
+    _sync_dir(releases)
     _point(releases, key.id)
     shutil.rmtree(old, ignore_errors=True)
     _prune(releases, key.id)
@@ -156,7 +140,28 @@ def _validate(builds: Path, expected: set[str]) -> None:
 def _point(releases: Path, release_id: str) -> None:
     temp = releases / f".{POINTER}.tmp"
     temp.write_text(release_id + "\n")
+    _sync_file(temp)
     os.replace(temp, releases / POINTER)
+    _sync_dir(releases)
+
+
+def _sync(folder: Path) -> None:
+    for path in sorted(folder.rglob("*")):
+        (_sync_dir if path.is_dir() else _sync_file)(path)
+    _sync_dir(folder)
+
+
+def _sync_file(path: Path) -> None:
+    with path.open("rb") as f:
+        os.fsync(f.fileno())
+
+
+def _sync_dir(path: Path) -> None:
+    fd = os.open(path, os.O_RDONLY)
+    try:
+        os.fsync(fd)
+    finally:
+        os.close(fd)
 
 
 def _prune(releases: Path, keep_id: str) -> None:

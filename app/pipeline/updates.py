@@ -52,7 +52,8 @@ def _entry(new: Path, previous: Path, release_id: str, today: str) -> Update | N
         unavailable.append(f"game text: {before.unavailable or 'new release has no snapshot'}")
         entries: list[EntryChange] = []
     else:
-        entries = compare(before.snapshot, after)
+        same_format = before.schema_version == meta.get("schema_version")
+        entries = compare(before.snapshot, after, same_format)
     names = _names(before.snapshot, after)
     stats = {c.key for c in entries if c.kind == Kind.WEAPON}
     guns, builds_note = _guns(new, previous, names, stats)

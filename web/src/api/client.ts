@@ -29,6 +29,7 @@ export type BuildChange = Schemas["BuildChange"];
 export type TierList = Schemas["TierList"];
 export type Tier = Schemas["Tier"];
 export type TierGun = Schemas["TierGun"];
+export type Source = Schemas["Source"];
 
 /** A failed API call: HTTP status plus the API's error code when it sent one. */
 export class ApiFailure extends Error {
@@ -39,6 +40,17 @@ export class ApiFailure extends Error {
   ) {
     super(message);
   }
+}
+
+/** Server-side waits worth trying again; every other failure (bad gun, rate limit, release
+ * missing or changed, internal error) is shown at once. */
+const TRANSIENT = new Set(["busy", "restarted", "timeout"]);
+
+/** For the query client: network errors and transient codes, at most twice. */
+export function shouldRetry(failures: number, error: unknown): boolean {
+  if (failures >= 2) return false;
+  if (!(error instanceof ApiFailure)) return true;
+  return error.code !== null && TRANSIENT.has(error.code);
 }
 
 async function failure(response: Response, what: string): Promise<ApiFailure> {

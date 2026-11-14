@@ -10,9 +10,12 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./index.css";
+import { shouldRetry } from "./api/client";
 import { router } from "./router";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: { queries: { retry: shouldRetry } },
+});
 const root = document.getElementById("root");
 if (!root) throw new Error("#root missing");
 

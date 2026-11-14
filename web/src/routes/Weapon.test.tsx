@@ -166,9 +166,10 @@ test("editing: pick a slot, change it, see the difference to the calculated buil
 });
 
 test("a shared ?b= link opens the edited build", async () => {
-  const code = encode({ ...fromBuild(build), mods: ["/GalvanizedChamber"] });
+  const code = encode({ ...fromBuild(build), mods: ["/GalvanizedChamber"] }, "h");
   renderAt(`/w/soma-prime?b=${code}`);
   expect(await screen.findByRole("heading", { name: "Your build" })).toBeInTheDocument();
+  expect(screen.queryByText(/older game data/)).not.toBeInTheDocument();
   expect(await screen.findByText(/slower than the calculated build/, {}, { timeout: 2000 })).toBeInTheDocument();
 });
 
@@ -238,4 +239,10 @@ test("an old /calc error does not show while the next edit waits", async () => {
   });
   expect(screen.getByText("Calculating…")).toBeInTheDocument();
   expect(screen.queryByText(/Could not calculate this edit/)).toBeNull();
+});
+
+test("a link from older game data says it is re-scored with today's", async () => {
+  const code = encode({ ...fromBuild(build), mods: ["/GalvanizedChamber"] }, "old");
+  renderAt(`/w/soma-prime?b=${code}`);
+  expect(await screen.findByText(/made with older game data/)).toBeInTheDocument();
 });

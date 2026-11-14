@@ -59,20 +59,24 @@ def tiers(release: Release, category: Category) -> Outcome:
 
 
 async def run(
-    runner: Runner, job: Any, *args: Any, current: Callable[[], Runner] | None = None
+    runner: Runner,
+    job: Any,
+    *args: Any,
+    current: Callable[[], Runner] | None = None,
+    timeout: float | None = None,
 ) -> bytes:
     """Run `job` on the served release's runner; Busy/TimedOut/job errors become API errors.
     `current`: the runner served now; a job whose runner was closed for a newer release runs
     there once instead of failing (jobs that do not depend on the release only)."""
     try:
-        body, error = await runner.run(job, *args)
+        body, error = await runner.run(job, *args, timeout=timeout)
     except Closed:
         newer = current() if current else runner
         if newer is runner:
             raise ApiFailure(
                 503, "restarted", "workers restarted, try again", retry_after=1
             ) from None
-        return await run(newer, job, *args)
+        return await run(newer, job, *args, timeout=timeout)
     except Busy:
         raise ApiFailure(503, "busy", "too many requests in progress", retry_after=1) from None
     except TimedOut:

@@ -24,7 +24,7 @@ def sitemap(request: Request) -> Response:
     data = now.data
     origin, date = site(request), data.meta.fetched
     good = now.release.good_primers if now.release else frozenset()
-    paths = ["/", *(f"/tier-list/{c.value}" for c in Category)]
+    paths = ["/", "/about", *(f"/tier-list/{c.value}" for c in Category)]
     for w in sorted(data.weapons, key=lambda w: w.slug):
         paths.append(f"/w/{w.slug}")
         if w.slug in good:  # a good primer's Primer tab (G49)

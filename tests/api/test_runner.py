@@ -3,9 +3,11 @@
 import asyncio
 import os
 import time
+from multiprocessing import get_context
 
 import pytest
 
+from app.api import runner as runner_module
 from app.api.runner import Busy, Restarted, Runner, TimedOut
 
 
@@ -130,3 +132,17 @@ def test_crashed_worker_does_not_break_the_runner_for_good() -> None:
         runner.shutdown()
 
     asyncio.run(main())
+
+
+def _orphan(parent: int) -> None:
+    runner_module._worker_start(parent, None, ())
+    time.sleep(30)  # a worker waiting for jobs
+
+
+def test_worker_exits_once_its_server_is_gone() -> None:
+    """R9: a killed server never shuts its pool down; its workers must not live on."""
+    gone = 2**22 + 7  # not this test's pid: the worker sees its server as gone
+    process = get_context("spawn").Process(target=_orphan, args=(gone,))
+    process.start()
+    process.join(timeout=10)
+    assert process.exitcode == 0

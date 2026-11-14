@@ -1,7 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { Link, Outlet } from "@tanstack/react-router";
+import { Link, Outlet, useRouterState } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
 import { getData } from "@/api/client";
 import { dateLabel } from "@/lib/format";
+import { SOURCE_URL } from "@/routes/About";
 
 /** U4: which game data the builds come from, so an old date is visible on every page. */
 function DataLine() {
@@ -17,7 +19,24 @@ function DataLine() {
   );
 }
 
+/** A new page moves keyboard and screen-reader focus to its content; a build tab or an
+    edit on the same gun (/w/<gun>/...) stays where it is. */
+function usePageFocus() {
+  const page = useRouterState({ select: (s) => s.location.pathname.split("/").slice(0, 3).join("/") });
+  const main = useRef<HTMLDivElement>(null);
+  const first = useRef(true);
+  useEffect(() => {
+    if (first.current) {
+      first.current = false;
+      return;
+    }
+    main.current?.focus({ preventScroll: true }); // a #hash link keeps its own scroll
+  }, [page]);
+  return main;
+}
+
 export function SiteLayout() {
+  const main = usePageFocus();
   return (
     <div className="flex min-h-screen flex-col">
       <header className="border-b border-line">
@@ -40,13 +59,27 @@ export function SiteLayout() {
           </nav>
         </div>
       </header>
-      <div className="flex-1">
+      <div ref={main} tabIndex={-1} className="flex-1 outline-none">
         <Outlet />
       </div>
       <footer className="mx-auto w-full max-w-[1376px] border-t border-line px-4 py-5 text-[13px] text-muted sm:px-8">
         <DataLine />
         Independent fan tool, not affiliated with Digital Extremes. Numbers are calculator estimates;
         check them in the arsenal.
+        <nav aria-label="Site" className="mt-1.5 flex flex-wrap gap-x-4 gap-y-1">
+          <Link to="/about" className="text-muted">
+            About, terms and privacy
+          </Link>
+          <Link to="/about" hash="credits" className="text-muted">
+            Credits
+          </Link>
+          <a href={SOURCE_URL} className="text-muted">
+            Source code (AGPL-3.0)
+          </a>
+          <Link to="/about" hash="licences" className="text-muted">
+            Build data: CC BY-NC-SA 3.0
+          </Link>
+        </nav>
       </footer>
     </div>
   );

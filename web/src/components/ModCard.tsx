@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+import { type CSSProperties, useState } from "react";
 import type { FormaSlot, ModItem } from "@/api/client";
 import { AMALGAM_PARTS, COMMON_PARTS, GALVANIZED_PARTS, RARITY_PARTS, SLOT_ART } from "./art";
 import s from "./ModCard.module.css";
@@ -61,6 +61,8 @@ function SlotMark({ slot, match }: { slot: FormaSlot | null; match: boolean }) {
 }
 
 export function ModCard({ mod, slot, label, exilus = false, why = null, onPick }: Props) {
+  // View mode: a click or tap opens the full card (touch has no hover); the editor picks.
+  const [open, setOpen] = useState(false);
   if (!mod) {
     const vars = { "--ph": SLOT_ART.placeholder, "--exi": SLOT_ART.exilus } as CSSProperties;
     return (
@@ -99,7 +101,9 @@ export function ModCard({ mod, slot, label, exilus = false, why = null, onPick }
       <button
         className={s.mod}
         type="button"
-        onClick={onPick}
+        onClick={onPick ?? (() => setOpen(!open))}
+        onBlur={() => setOpen(false)}
+        aria-expanded={onPick ? undefined : open}
         aria-label={`${mod.name}: ${stats}. ${fit.where}.${why ? ` ${why}.` : ""}${onPick ? " Change mod." : ""}`}
       >
         <span className={s.content} style={{ "--bg": parts.bg } as CSSProperties}>

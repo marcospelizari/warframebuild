@@ -183,3 +183,19 @@ def test_switched_off_override_is_listed_first(paths: Paths) -> None:
     ).read_text()
     assert f"## Override switched off: {key}" in md
     assert "- 50% chance to deal +1500% damage on non-critical hits" in md
+
+
+def test_a_format_change_is_not_a_game_change() -> None:
+    """R5: a renamed field after a schema change is not reported; a changed value is."""
+
+    def gun(lines: list[str]) -> Snapshot:
+        shown = Shown(kind=Kind.WEAPON, name="Gun", lines=lines, support=None, unparsed=[])
+        return Snapshot(entries={"/Gun": shown})
+
+    before = gun(["fire_rate: 10", "reload: 2.0"])
+    renamed = gun(["fire_rate: 10", "reload_time: 2.0"])
+    assert changes.compare(before, renamed, same_format=False) == []
+    assert changes.compare(before, renamed)  # same schema: a real change
+    faster = gun(["fire_rate: 12", "reload_time: 2.0"])
+    (change,) = changes.compare(before, faster, same_format=False)
+    assert change.after == ["fire_rate: 12"]

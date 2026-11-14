@@ -3,6 +3,7 @@
 import argparse
 import ipaddress
 import json
+import logging
 import sys
 from collections.abc import Callable
 from pathlib import Path
@@ -95,6 +96,8 @@ def main(argv: list[str] | None = None) -> int:
         if args.public_origin is None and not _loopback(args.host):
             # Page URLs would otherwise come from each request's Host header (S6).
             parser.error(f"--host {args.host} needs --public-origin https://<site address>")
+        # The app's own lines (release swaps, unreadable releases); uvicorn keeps its own.
+        logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(name)s: %(message)s")
         releases = sample.paths(ROOT).releases if args.sample else RELEASES
         app = create_app(releases=releases, public_origin=args.public_origin)
         # No access log: visitor addresses are not stored (S9); errors still go to stderr.

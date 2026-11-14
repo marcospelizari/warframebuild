@@ -3,6 +3,7 @@ from pathlib import Path
 
 import pytest
 
+from app.gamedata import release as gamedata_release
 from app.gamedata.builds import WeaponBuilds
 from app.gamedata.release import current
 from app.gamedata.store import load
@@ -86,14 +87,14 @@ def test_calculator_version_follows_domain_and_optimize_sources(tmp_path: Path) 
     for layer in ("domain", "gamedata", "optimize", "api"):
         (tmp_path / layer).mkdir()
         (tmp_path / layer / "x.py").write_text("a = 1\n")
-    before = release.calculator_version(tmp_path)
+    before = gamedata_release.calculator_version(tmp_path)
     (tmp_path / "api/x.py").write_text("a = 2\n")
-    assert release.calculator_version(tmp_path) == before
+    assert gamedata_release.calculator_version(tmp_path) == before
     (tmp_path / "optimize/x.py").write_text("a = 2\n")
-    assert release.calculator_version(tmp_path) != before
-    after_optimize = release.calculator_version(tmp_path)
+    assert gamedata_release.calculator_version(tmp_path) != before
+    after_optimize = gamedata_release.calculator_version(tmp_path)
     (tmp_path / "gamedata/x.py").write_text("a = 2\n")
-    assert release.calculator_version(tmp_path) != after_optimize
+    assert gamedata_release.calculator_version(tmp_path) != after_optimize
 
 
 def test_same_key_again_replaces_the_release_in_place(tmp_path: Path) -> None:

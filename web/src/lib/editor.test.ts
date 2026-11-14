@@ -1,7 +1,7 @@
 import { expect, test } from "vitest";
 import type { ModItem } from "@/api/client";
 import { chamber, items, serration } from "@/test/fixtures";
-import { type Choices, decode, encode, modRows, place } from "./editor";
+import { type Choices, codeData, decode, encode, modRows, place } from "./editor";
 
 const choices: Choices = {
   mods: ["/Lotus/Upgrades/Mods/Rifle/WeaponDamageAmountMod", "/Other/Mod"],
@@ -12,14 +12,23 @@ const choices: Choices = {
 };
 
 test("share code round-trips and stays short", () => {
-  const code = encode(choices);
-  expect(code.startsWith("1.")).toBe(true);
+  const code = encode(choices, "5c29b60abbc2ab27");
+  expect(code.startsWith("2.")).toBe(true);
   expect(code).not.toMatch(/[+/=]/);
   expect(decode(code)).toEqual(choices);
+  expect(codeData(code)).toBe("5c29b60abbc2ab27");
+});
+
+test("version 1 links still open, with their game data unknown", () => {
+  const old = `1.${btoa(JSON.stringify([["/Other/Mod"], null, null, [], null]))}`;
+  expect(decode(old)?.mods).toEqual(["/Other/Mod"]);
+  expect(codeData(old)).toBeNull();
 });
 
 test("anything this version did not write is refused", () => {
   expect(decode("2.abc")).toBeNull();
+  expect(decode("3.abc")).toBeNull();
+  expect(decode(`2.${btoa(JSON.stringify([[], null, null, [], null]))}`)).toBeNull();
   expect(decode("1.!!!")).toBeNull();
   expect(decode(`1.${btoa(JSON.stringify({ mods: [] }))}`)).toBeNull();
   expect(decode(`1.${btoa(JSON.stringify([Array(9).fill("x"), null, null, [], null]))}`)).toBeNull();

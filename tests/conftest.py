@@ -1,11 +1,14 @@
 import json
 import shutil
+from collections.abc import Callable
 from pathlib import Path
 
 import pytest
 
 from app.domain.status_rules import StatusRules
+from app.gamedata.builds import WeaponBuilds
 from app.gamedata.store import GameData, load
+from app.optimize.builds import weapon_builds
 from app.pipeline.refresh import Paths
 from app.pipeline.sources import wiki_incarnon, wiki_local
 
@@ -263,6 +266,24 @@ def _keep_fixture_guns(raw: Path, table: Path) -> None:
         if key in data:
             data[key] = {u: row for u, row in data[key].items() if u in guns}
     table.write_text(json.dumps(data))
+
+
+Built = Callable[[str, int], WeaponBuilds]
+
+
+@pytest.fixture(scope="session")
+def built(gamedata: GameData) -> Built:
+    """A gun's builds (committed gamedata/) searched once per session: the search is
+    deterministic (G16) and the progenitor guns' are the slowest part of the suite."""
+    cache: dict[tuple[str, int], WeaponBuilds] = {}
+
+    def get(name: str, budget: int) -> WeaponBuilds:
+        if (name, budget) not in cache:
+            weapon = next(w for w in gamedata.weapons if w.name == name)
+            cache[name, budget] = weapon_builds(gamedata, weapon, budget)
+        return cache[name, budget]
+
+    return get
 
 
 @pytest.fixture(scope="session")

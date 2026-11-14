@@ -46,6 +46,7 @@ class Outcome:
     ttk: float | None  # None: alive at the cap
     removed: float  # share of shield + health removed by the kill or the cap
     cost: float
+    overkill: float = 0.0  # damage the killing event dealt past the health left, / pool
 
 
 def armor_reduction(armor: float) -> float:
@@ -100,7 +101,8 @@ def fight(events: Sequence[Event], target: Target) -> Outcome:
                 rest = 0.0
         health -= through + rest
         if health <= 0:
-            return Outcome(e.time, 1.0, max(e.time, 1e-9))
+            pool = target.health + target.shield
+            return Outcome(e.time, 1.0, max(e.time, 1e-9), -health / pool if pool else 0.0)
     pool = target.health + target.shield
     removed = (target.shield - shield + target.health - health) / pool if pool else 1.0
     return Outcome(None, removed, CAP_S / max(removed, MIN_REMOVED))

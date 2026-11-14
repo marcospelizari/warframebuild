@@ -86,15 +86,21 @@ def test_public_origin_wins_over_the_request_host(
         releases=releases,
         public_origin="https://builds.example/",
     )
-    page = TestClient(app).get("/w/soma-prime", headers={"host": "evil.example"}).text
+    forged = TestClient(app).get("/w/soma-prime", headers={"host": "evil.example"})
+    assert forged.status_code == 400  # R16: only the public host is answered
+    page = TestClient(app, base_url="https://builds.example").get("/w/soma-prime").text
     assert '<link rel="canonical" href="https://builds.example/w/soma-prime" />' in page
-    assert "evil.example" not in page
 
 
 @pytest.mark.parametrize("bad", ["builds.example", "https://x.example/path", "javascript:x"])
 def test_public_origin_must_be_scheme_and_host(tmp_path: Path, bad: str) -> None:
     with pytest.raises(ValueError, match="public origin"):
         create_app(web_dist=tmp_path, public_origin=bad)
+
+
+def test_about_page_carries_its_own_title(client: TestClient) -> None:
+    page = client.get("/about").text
+    assert "<title>About | warframeBuild</title>" in page
 
 
 def test_updates_page_carries_its_own_title(client: TestClient) -> None:
