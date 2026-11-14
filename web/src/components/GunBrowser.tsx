@@ -1,9 +1,8 @@
-import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import type { Category, WeaponItem } from "@/api/client";
-import { browse, NO_FILTERS, tagOf, typesIn } from "@/lib/gun-filter";
+import { browse, NO_FILTERS, typesIn } from "@/lib/gun-filter";
 import b from "./GunBrowser.module.css";
-import { GunPicture } from "./GunPicture";
+import { GunTile } from "./GunTile";
 import u from "./ui.module.css";
 
 const LIMIT = 30;
@@ -99,17 +98,7 @@ export function GunBrowser({ weapons }: { weapons: WeaponItem[] | undefined }) {
       <ul className={b.grid}>
         {shown.map((w) => (
           <li key={w.slug}>
-            <Link className={b.tile} to="/w/$slug" params={{ slug: w.slug }}>
-              <span className={b.plinth}>
-                <GunPicture src={w.image} />
-              </span>
-              <span className="text-base font-semibold">{w.name}</span>
-              <span className="text-[13px] text-muted">
-                {w.weapon_type}, MR {w.mastery}
-              </span>
-              {tagOf(w) && <span className={u.tag}>{tagOf(w)}</span>}
-              {w.good_primer && <span className={u.tag}>Good primer</span>}
-            </Link>
+            <GunTile gun={w} />
           </li>
         ))}
       </ul>

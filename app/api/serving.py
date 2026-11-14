@@ -18,7 +18,7 @@ from app.api.runner import Runner
 from app.gamedata.release import Release, current, open_current
 from app.gamedata.store import GameData, load
 
-LISTS_KEPT = 70  # answers in Served.lists_cache: 64 guns' mod lists + the weapon lists
+LISTS_KEPT = 72  # answers in Served.lists_cache: 64 guns' mod lists, weapon and tier lists
 INTERVAL_S = 5.0  # how often the `current` pointer is read (one small file)
 
 log = logging.getLogger(__name__)

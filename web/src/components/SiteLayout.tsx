@@ -33,6 +33,9 @@ export function SiteLayout() {
             <Link to="/" hash="browse">
               All guns
             </Link>
+            <Link to="/tier-list/$category" params={{ category: "primary" }}>
+              Tier list
+            </Link>
             <Link to="/updates">Updates</Link>
           </nav>
         </div>

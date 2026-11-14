@@ -1,6 +1,7 @@
 import { createRootRoute, createRoute, createRouter } from "@tanstack/react-router";
 import { SiteLayout } from "./components/SiteLayout";
 import { Home } from "./routes/Home";
+import { TierListPage } from "./routes/TierList";
 import { UpdatesPage } from "./routes/Updates";
 import { WeaponPage } from "./routes/Weapon";
 
@@ -10,6 +11,15 @@ const updatesRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/updates",
   component: UpdatesPage,
+});
+// G92: /tier-list/primary, /tier-list/secondary; another class shows a message.
+const tierRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/tier-list/$category",
+  component: function Tiers() {
+    const { category } = tierRoute.useParams();
+    return <TierListPage category={category} />;
+  },
 });
 // ?b= carries an edited build (F1); anything else in the query is dropped.
 const search = (raw: Record<string, unknown>): { b?: string } =>
@@ -38,7 +48,7 @@ const factionRoute = createRoute({
 });
 
 export const router = createRouter({
-  routeTree: rootRoute.addChildren([homeRoute, updatesRoute, weaponRoute, factionRoute]),
+  routeTree: rootRoute.addChildren([homeRoute, updatesRoute, tierRoute, weaponRoute, factionRoute]),
 });
 
 declare module "@tanstack/react-router" {

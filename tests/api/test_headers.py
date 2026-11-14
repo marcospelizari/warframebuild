@@ -74,7 +74,9 @@ def test_large_answers_are_compressed(client: TestClient) -> None:
     assert response.headers["content-encoding"] == "gzip"
 
 
-def test_robots_and_sitemap_name_every_gun_page(tmp_path: Path, gamedata: GameData) -> None:
+def test_robots_and_sitemap_name_every_gun_and_tier_page(
+    tmp_path: Path, gamedata: GameData
+) -> None:
     client = TestClient(_app(tmp_path, gamedata, "https://example.org"))
     robots = client.get("/robots.txt")
     assert robots.text.endswith("Sitemap: https://example.org/sitemap.xml\n")
@@ -82,7 +84,8 @@ def test_robots_and_sitemap_name_every_gun_page(tmp_path: Path, gamedata: GameDa
     assert sitemap.headers["content-type"].startswith("application/xml")
     assert "<loc>https://example.org/</loc>" in sitemap.text
     assert "<loc>https://example.org/w/soma-prime</loc>" in sitemap.text
-    assert sitemap.text.count("<url>") == 1 + len(gamedata.weapons)
+    assert "<loc>https://example.org/tier-list/primary</loc>" in sitemap.text
+    assert sitemap.text.count("<url>") == 3 + len(gamedata.weapons)  # home, 2 tier lists
 
 
 def test_list_answers_are_kept_and_building_them_is_rate_limited(

@@ -72,6 +72,23 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/tiers/{category}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /** Tiers */
+        get: operations["tiers_api_tiers__category__get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/updates": {
         parameters: {
             query?: never;
@@ -680,6 +697,40 @@ export interface components {
          * @enum {string}
          */
         Support: "full" | "partial" | "unsupported";
+        /** Tier */
+        Tier: {
+            /** Guns */
+            guns: components["schemas"]["TierGun"][];
+            /** Name */
+            name: string;
+            /** Up To */
+            up_to: number | null;
+        };
+        /** TierGun */
+        TierGun: {
+            /** Capped */
+            capped: boolean;
+            /** Kill Time */
+            kill_time: number;
+            /** Partial */
+            partial: boolean;
+            /** Slug */
+            slug: string;
+        };
+        /** TierList */
+        TierList: {
+            category: components["schemas"]["Category"];
+            /** Factions */
+            factions: number;
+            /** Fastest */
+            fastest: number;
+            /** Level */
+            level: number;
+            /** Release */
+            release: string;
+            /** Tiers */
+            tiers: components["schemas"]["Tier"][];
+        };
         /** Update */
         Update: {
             /** Date */
@@ -936,6 +987,55 @@ export interface operations {
             };
             /** @description Too Many Requests */
             429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
+        };
+    };
+    tiers_api_tiers__category__get: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                category: components["schemas"]["Category"];
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["TierList"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+            /** @description Too Many Requests */
+            429: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ApiError"];
+                };
+            };
+            /** @description Service Unavailable */
+            503: {
                 headers: {
                     [name: string]: unknown;
                 };

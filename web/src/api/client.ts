@@ -26,6 +26,9 @@ export type Update = Schemas["Update"];
 export type EntryChange = Schemas["EntryChange"];
 export type GunChange = Schemas["GunChange"];
 export type BuildChange = Schemas["BuildChange"];
+export type TierList = Schemas["TierList"];
+export type Tier = Schemas["Tier"];
+export type TierGun = Schemas["TierGun"];
 
 /** A failed API call: HTTP status plus the API's error code when it sent one. */
 export class ApiFailure extends Error {
@@ -64,6 +67,10 @@ export function getData(): Promise<DataInfo> {
 
 export function getUpdates(): Promise<UpdatesResponse> {
   return getJson("/api/updates");
+}
+
+export function getTiers(category: Category): Promise<TierList> {
+  return getJson(`/api/tiers/${category}`);
 }
 
 export function getBuilds(slug: string): Promise<BuildsResponse> {
