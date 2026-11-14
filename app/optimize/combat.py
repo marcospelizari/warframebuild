@@ -6,6 +6,7 @@ enemy's own head spot (the body if it has none) with its head bonuses at max hit
 /calc ranks head DPS (G70); headshot-triggered bonuses only where there is a headshot spot.
 """
 
+import math
 from dataclasses import dataclass
 
 from app.domain.combat import TYPES, Event, Outcome, Target, fight, geometric_mean
@@ -30,6 +31,11 @@ class Combat:
     factions: dict[str, float]  # geometric mean cost per faction
     score: float  # geometric mean over the factions
     conditions: Resolved  # how conditional effects counted (on heads for aimed forms)
+
+    @property
+    def overkill(self) -> float:
+        """Mean overkill share at the kills: breaks ties at equal kill times (G32)."""
+        return math.fsum(r.outcome.overkill for r in self.enemies) / max(1, len(self.enemies))
 
 
 def timeline(lo: Loadout, enemy: Enemy, rules: StatusRules) -> list[Event]:

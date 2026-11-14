@@ -101,15 +101,13 @@ def shot_times(f: Firing, rate_factor: float, until: float) -> list[float]:
     first = charge_time(f, rate_factor) or interval
     per_mag = 0 if f.bow and f.charge_time else shots_per_magazine(f) or 0
     out: list[float] = []
-    t = 0.0
+    base, k = first - interval, 0  # one interval before this magazine's first shot
     while True:
-        refill = per_mag and out and len(out) % per_mag == 0
-        if not out:
-            t += first
-        elif refill:
-            t += f.reload_time if f.reload_replaces_shot else f.reload_time + interval
-        else:
-            t += interval
+        if per_mag and k == per_mag:  # empty: the reload, then the next magazine
+            base = out[-1] + f.reload_time - (interval if f.reload_replaces_shot else 0.0)
+            k = 0
+        t = base + (k + 1) / effective_rate  # no drift: 70 shots at 7/s end at 10.0 exactly
         if t > until:
             return out
         out.append(t)
+        k += 1

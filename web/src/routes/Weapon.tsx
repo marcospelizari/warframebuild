@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
+import { SITE } from "@/lib/usePageTitle";
 import { Link } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { ApiFailure, getBuilds, getMods, getWeapons } from "@/api/client";
 import { BuildView } from "@/components/BuildView";
 import { factionSlug, PRIMER } from "@/lib/faction";
 
-const SITE = "warframeBuild";
 const BUSY = new Set(["no_release", "release_mismatch", "release_gone"]);
 
 /** Page states (F5): what a player can do when there is no build to show. */

@@ -7,6 +7,9 @@ a job still running at `HARD_FACTOR` x `timeout` restarts the pool, which ends i
 """
 
 import asyncio
+import os
+import threading
+import time
 from collections.abc import Callable
 from concurrent.futures import (
     BrokenExecutor,
@@ -19,6 +22,7 @@ from multiprocessing import get_context
 from typing import Any
 
 HARD_FACTOR = 2
+ORPHAN_CHECK_S = 1.0  # how often a worker process checks that its server still runs
 
 
 class Busy(Exception):
@@ -60,7 +64,9 @@ class Runner:
     def running(self) -> int:
         return self.size - self._free
 
-    async def run(self, fn: Callable[..., Any], *args: Any) -> Any:
+    async def run(self, fn: Callable[..., Any], *args: Any, timeout: float | None = None) -> Any:
+        """`timeout`: this job's own request timeout instead of the runner's."""
+        wait = timeout or self.timeout
         loop = asyncio.get_running_loop()
         if self._wake is None:
             self._wake = asyncio.Event()
@@ -83,9 +89,9 @@ class Runner:
             raise
         job.add_done_callback(lambda _: self._release_from(loop))
         try:
-            return await asyncio.wait_for(asyncio.shield(asyncio.wrap_future(job)), self.timeout)
+            return await asyncio.wait_for(asyncio.shield(asyncio.wrap_future(job)), wait)
         except TimeoutError:
-            loop.call_later(self.timeout * (HARD_FACTOR - 1), self._check_stuck, job)
+            loop.call_later(wait * (HARD_FACTOR - 1), self._check_stuck, job)
             raise TimedOut from None
         except BrokenExecutor:
             raise Restarted from None
@@ -122,7 +128,7 @@ class Runner:
             initializer, initargs = self._init
             if self._processes:
                 self._pool = ProcessPoolExecutor(
-                    self.size, get_context("spawn"), initializer, initargs
+                    self.size, get_context("spawn"), _worker_start, (os.getpid(), *self._init)
                 )
             else:
                 self._pool = ThreadPoolExecutor(self.size, "runner", initializer, initargs)
@@ -139,3 +145,19 @@ class Runner:
         for process in list(pool._processes.values()):
             process.kill()
         pool.shutdown(wait=False, cancel_futures=True)
+
+
+def _worker_start(
+    parent: int, initializer: Callable[..., None] | None, initargs: tuple[Any, ...]
+) -> None:
+    """Process worker initializer: exit once the server process is gone, however it ended
+    (a killed server never shuts its pool down), then run the pool's own initializer."""
+    threading.Thread(target=_exit_when_orphaned, args=(parent,), daemon=True).start()
+    if initializer is not None:
+        initializer(*initargs)
+
+
+def _exit_when_orphaned(parent: int) -> None:
+    while os.getppid() == parent:
+        time.sleep(ORPHAN_CHECK_S)
+    os._exit(0)

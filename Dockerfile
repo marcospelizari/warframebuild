@@ -3,7 +3,7 @@
 # art, a release from `wfb build-all`); none of it is in git (T2), so the image is built
 # where the release is and pushed only to a private registry:
 #   podman build --format docker --build-arg RELEASE="$(cat cache/releases/current)" -t warframebuild .
-# Run read-only, as in README "Run the container" (--format docker keeps the HEALTHCHECK).
+# Run read-only, as in DEVELOPMENT.md "Run the container" (--format docker keeps the HEALTHCHECK).
 # Base images are pinned by digest (same as .gitlab-ci.yml; Renovate keeps them current).
 
 FROM node:24.21.0-bookworm-slim@sha256:d6aa754f16b3197301076f047b5def2f02ea1dbbc2ca920407d46d7ec7f87b20 AS web

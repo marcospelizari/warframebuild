@@ -18,6 +18,7 @@ from app.domain.status import (
     dot_ticks,
     expected_procs,
     heat_ticks,
+    no_proc_chance,
     proc_shares,
 )
 from app.domain.status_rules import StatusRules
@@ -163,3 +164,11 @@ def _dot(rules: StatusRules, t: D) -> Dot:
     dot = rules.dot(t)
     assert dot is not None
     return dot
+
+
+def test_no_proc_chance_is_every_projectile_missing() -> None:
+    """Three projectiles, 1.2 expected procs in all: each misses with 0.6."""
+    assert no_proc_chance(1.2, 3) == pytest.approx(0.6**3)
+    assert no_proc_chance(0.4, 1) == pytest.approx(0.6)
+    assert no_proc_chance(2.0, 1) == 0.0  # a guaranteed proc
+    assert no_proc_chance(0.0, 3) == 1.0

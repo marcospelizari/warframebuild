@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import type { BuildChange, EntryChange, GunChange, Update } from "@/api/client";
 import { getUpdates } from "@/api/client";
+import { SITE, usePageTitle } from "@/lib/usePageTitle";
 import u from "@/components/ui.module.css";
 import { dateLabel, trim } from "@/lib/format";
 
@@ -21,6 +22,7 @@ const SUPPORT = {
 /** Every game update and calculator change, newest first (U10). */
 export function UpdatesPage() {
   const query = useQuery({ queryKey: ["updates"], queryFn: getUpdates });
+  usePageTitle(`Game updates | ${SITE}`);
   return (
     <main className="mx-auto max-w-[1000px] px-4 pt-11 pb-16 sm:px-8">
       <div className="flex items-center justify-center gap-6">

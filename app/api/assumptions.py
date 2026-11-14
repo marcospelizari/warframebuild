@@ -1,6 +1,10 @@
 """The `assumptions[]` of a /calc build: what the numbers take for granted, with sources."""
 
+from collections.abc import Sequence
+
 from app.api.schemas.build import Assumption, Combat, Source
+from app.domain.class_mechanics import BEAM_DECAY_DELAY_S, BEAM_DECAY_S, BEAM_RAMP_S
+from app.gamedata.enemies import Enemy
 from app.gamedata.models import Weapon
 from app.optimize.conditions import Resolved
 from app.optimize.evaluate import Evaluation
@@ -14,8 +18,15 @@ MAIN_ATTACK = {
 
 
 def assumptions(
-    weapon: Weapon, e: Evaluation, fights: Combat, conditions: Resolved
+    weapon: Weapon,
+    e: Evaluation,
+    fights: Combat,
+    conditions: Resolved,
+    enemies: Sequence[Enemy],
 ) -> list[Assumption]:
+    """`enemies`: the representative enemies, whose `bane` says which faction mods hit them."""
+    hit = ", ".join(sorted({x.faction for x in enemies if x.bane is not None}))
+    unhit = ", ".join(sorted({x.faction for x in enemies if x.bane is None}))
     out = [
         Assumption(id="max_rank", text="Mods at max rank"),
         Assumption(
@@ -52,16 +63,13 @@ def assumptions(
                 "Combat simplifications: all parts of a shot land with it; Electricity and Gas "
                 "procs tick with their own +1; Heat keeps burning while procs come faster than "
                 "its duration; the sniper combo never decays (no misses, reload gaps ignored); "
-                "beams ramp from their start value to full over 0.6 s and decay 0.8 s after a "
-                "stop over 2 s (linear)"
+                f"beams ramp from their start value to full over {BEAM_RAMP_S:g} s and decay "
+                f"{BEAM_DECAY_DELAY_S:g} s after a stop over {BEAM_DECAY_S:g} s (linear)"
             ),
         ),
         Assumption(
             id="bane",
-            text=(
-                "Faction damage mods hit Corpus, Grineer, Infested, Orokin and The Murmur; "
-                "none for Sentient, Scaldra and Techrot (not listed)"
-            ),
+            text=f"Faction damage mods hit {hit} enemies; none for {unhit} (not listed)",
             source=Source(kind="wiki", url=WIKI + "Faction_Damage_Mods"),
         ),
         Assumption(

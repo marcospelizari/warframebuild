@@ -31,7 +31,8 @@ class Named(Protocol):
 
 Option = Named | None  # None: nothing chosen in that slot
 # Regular mods in slot order, the exilus mod, one option per choice slot.
-Score = Callable[[list[Mod], Mod | None, tuple[Option, ...]], float]
+# Returns (score, tie-break): both higher is better.
+Score = Callable[[list[Mod], Mod | None, tuple[Option, ...]], tuple[float, float]]
 State = tuple[frozenset[int], tuple[int, ...]]  # pool indices, option index per slot
 
 
@@ -95,7 +96,7 @@ def _legal_upper(pool: Sequence[Mod]) -> int:
     )
 
 
-Key = tuple[float, tuple[str, ...], State]
+Key = tuple[tuple[float, float], tuple[str, ...], State]
 
 
 class _Search:
@@ -107,7 +108,7 @@ class _Search:
         self.pool = sorted(pool, key=lambda m: m.unique_name)
         self.score, self.budget, self.choices = score, budget, choices
         self.evaluations = 0
-        self.cache: dict[State, tuple[float, list[Mod], Mod | None]] = {}
+        self.cache: dict[State, tuple[tuple[float, float], list[Mod], Mod | None]] = {}
         self.best: Key | None = None
 
     def all_states(self) -> Iterator[State]:
@@ -124,17 +125,15 @@ class _Search:
             return False
         return not families.clashes((m.unique_name, m.family) for m in mods)
 
-    def consider(self, state: State) -> float:
-        value = self.value(state)
+    def consider(self, state: State) -> None:
         key = self.key(state)
         if self.best is None or _better(key, self.best):
             self.best = key
-        return value
 
     def key(self, state: State) -> Key:
-        return (rounded(self.value(state)), self._names(state), state)
+        return (_rank(self.value(state)), self._names(state), state)
 
-    def value(self, state: State) -> float:
+    def value(self, state: State) -> tuple[float, float]:
         if state in self.cache:
             return self.cache[state][0]
         chosen, picks = state
@@ -144,13 +143,13 @@ class _Search:
             exilus = max((m for m in mods if m.exilus), key=lambda m: m.unique_name)
             mods = [m for m in mods if m is not exilus]
         options = tuple(c[i] for c, i in zip(self.choices, picks, strict=True))
-        best: tuple[float, list[Mod]] | None = None
+        best: tuple[tuple[float, float], list[Mod]] | None = None
         for order in orders(mods):
             if self.evaluations >= self.budget:
                 raise _Budget
             self.evaluations += 1
             v = self.score(order, exilus, options)
-            if best is None or rounded(v) > rounded(best[0]):
+            if best is None or _rank(v) > _rank(best[0]):
                 best = (v, order)
         assert best is not None
         self.cache[state] = (best[0], best[1], exilus)
@@ -193,7 +192,7 @@ class _Search:
         state = self.best[2]
         value, order, exilus = self.cache[state]
         picks = tuple(c[i] for c, i in zip(self.choices, state[1], strict=True))
-        return Result(order, exilus, picks, value, status, self.evaluations)
+        return Result(order, exilus, picks, value[0], status, self.evaluations)
 
     def _names(self, state: State) -> tuple[str, ...]:
         chosen, picks = state
@@ -205,6 +204,11 @@ class _Search:
         return (*mods, "|", *options)
 
 
+def _rank(value: tuple[float, float]) -> tuple[float, float]:
+    return rounded(value[0]), rounded(value[1])
+
+
 def _better(a: Key, b: Key) -> bool:
-    """Higher rounded score; ties by the sorted uniqueNames, then the choices (G16)."""
+    """Higher rounded score, then higher tie-break (G32); then the sorted uniqueNames, then
+    the choices (G16)."""
     return a[0] > b[0] or (a[0] == b[0] and a[1] < b[1])

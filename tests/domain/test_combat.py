@@ -55,6 +55,7 @@ def test_kill_time_is_the_killing_event() -> None:
     events = [_event(0.5, _vec(impact=60)), _event(1.0, _vec(impact=60))]
     out = fight(events, _target(100))
     assert out.ttk == 1.0 and out.cost == 1.0 and out.removed == 1.0
+    assert out.overkill == pytest.approx(0.2)  # 120 dealt, 100 health: 20 past, / 100 pool
 
 
 def test_alive_at_the_cap_costs_cap_over_removed_share() -> None:

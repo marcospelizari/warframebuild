@@ -148,3 +148,10 @@ def test_reload_cycle_and_shots_per_magazine() -> None:
     bow = _firing(bow=True, charge_time=0.5, magazine=1.0)
     assert shots_per_magazine(bow) == 1
     assert reload_cycle(bow, 0.8) == pytest.approx(1.25)
+
+
+@pytest.mark.parametrize("rate", [7.0, 12.0, 20.0])
+def test_a_shot_due_at_the_cap_is_kept(rate: float) -> None:
+    """Shot n lands at n/rate, so the last one at 10 s is not lost to summing drift."""
+    f = _firing(fire_rate=rate, no_reload=True)
+    assert len(shot_times(f, 1.0, 10.0)) == int(rate * 10)

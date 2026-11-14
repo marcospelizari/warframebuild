@@ -1,6 +1,7 @@
 """Gun icons and mod / arcane pictures from DE ExportManifest into cache/img/ (never
 committed)."""
 
+import re
 from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
@@ -12,6 +13,9 @@ from app.pipeline.sources.de_export import BASE_URL
 from app.pipeline.sources.http import DownloadError, PoliteClient
 
 MAX_IMAGE_BYTES = 4 * 1024 * 1024
+# A DE texture path (`/Lotus/Interface/...png!00_<hash>`): it becomes part of the download
+# URL, so nothing that could leave the Public Export folder or change the host.
+TEXTURE = re.compile(r"/(?!.*\.\.)[A-Za-z0-9/_.!+-]+")
 MAGIC = {".png": b"\x89PNG\r\n\x1a\n", ".jpg": b"\xff\xd8\xff"}
 
 
@@ -45,6 +49,9 @@ def fetch_missing(client: PoliteClient, pictures: list[Picture]) -> list[str]:
     failures = []
     for picture in pictures:
         if picture.path.exists():
+            continue
+        if not TEXTURE.fullmatch(picture.texture):
+            failures.append(f"{picture.label}: unexpected texture path {picture.texture!r}")
             continue
         try:
             data = client.get(f"{BASE_URL}{picture.texture}", max_bytes=MAX_IMAGE_BYTES)

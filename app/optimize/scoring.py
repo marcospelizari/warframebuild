@@ -32,6 +32,12 @@ def max_score(lo: Loadout, head: Head, rules: StatusRules) -> float:
 
 
 Objective = Callable[[Loadout], float]
+Ranked = Callable[[Loadout], tuple[float, float]]  # objective, then its tie-break
+
+
+def untied(objective: Objective) -> Ranked:
+    """An objective with no tie-break of its own: ties go to the mod names (G16)."""
+    return lambda lo: (objective(lo), 0.0)
 
 
 def max_objective(data: GameData, enemies: Sequence[Enemy] = ()) -> Objective:
@@ -43,16 +49,33 @@ def max_objective(data: GameData, enemies: Sequence[Enemy] = ()) -> Objective:
 
 def combat_objective(data: GameData, faction: str | None = None) -> Objective:
     """1 / combat cost (higher is better) over every representative enemy, or `faction`'s."""
+    ranked = combat_ranked(data, faction)
+    return lambda lo: ranked(lo)[0]
+
+
+def combat_ranked(data: GameData, faction: str | None = None) -> Ranked:
     enemies = [e for e in data.enemies if faction is None or e.faction == faction]
     if not enemies:
         raise ValueError(f"no representative enemies for {faction!r}")
-    return enemies_objective(data, enemies)
+    return enemies_ranked(data, enemies)
 
 
 def enemies_objective(data: GameData, enemies: Sequence[Enemy]) -> Objective:
     """1 / combat cost over exactly `enemies`."""
+    ranked = enemies_ranked(data, enemies)
+    return lambda lo: ranked(lo)[0]
+
+
+def enemies_ranked(data: GameData, enemies: Sequence[Enemy]) -> Ranked:
+    """1 / combat cost; equal costs (kill times move in whole shots) go to the build that
+    deals more damage at the killing events (G32)."""
     fought = list(enemies)
-    return lambda lo: 1 / combat(lo, fought, data.factions, data.status_rules).score
+
+    def ranked(lo: Loadout) -> tuple[float, float]:
+        c = combat(lo, fought, data.factions, data.status_rules)
+        return 1 / c.score, c.overkill
+
+    return ranked
 
 
 def primer_objective(data: GameData, enemies: Sequence[Enemy] | None = None) -> Objective:
@@ -70,7 +93,8 @@ def best_primer(
     """The primer pool (radius mods too), no faction mods: the follow-up does the damage."""
     found = pool(weapon, data.mods.mods, data.mods.sets, primer=True).mods
     mods = [m for m in found if not _bane(m)]
-    return _search(data, weapon, mods, primer_objective(data), bonus, budget, element_starts(mods))
+    objective = untied(primer_objective(data))
+    return _search(data, weapon, mods, objective, bonus, budget, element_starts(mods))
 
 
 PRIMARY = (DamageType.HEAT, DamageType.COLD, DamageType.TOXIN, DamageType.ELECTRICITY)
@@ -108,7 +132,7 @@ def best_max(
     mods = [
         m for m in pool(weapon, data.mods.mods, data.mods.sets).mods if not _bane(m)
     ]  # no faction: no use
-    return _search(data, weapon, mods, max_objective(data), bonus, budget)
+    return _search(data, weapon, mods, untied(max_objective(data)), bonus, budget)
 
 
 def best_combat(
@@ -119,7 +143,7 @@ def best_combat(
     budget: int = MAX_EVALUATIONS,
 ) -> Result:
     """`faction`: that faction's build; None: Recommended (every faction, no faction mods)."""
-    objective = combat_objective(data, faction)
+    objective = combat_ranked(data, faction)
     return _search(data, weapon, combat_mods(data, weapon, faction), objective, bonus, budget)
 
 
@@ -177,14 +201,16 @@ def _search(
     data: GameData,
     weapon: Weapon,
     mods: Sequence[Mod],
-    objective: Objective,
+    objective: Ranked,
     bonus: DamageType | None,
     budget: int,
     starts: Sequence[Sequence[Mod]] = (),
 ) -> Result:
-    def score(regular: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]) -> float:
+    def score(
+        regular: list[Mod], exilus: Mod | None, picks: tuple[Option, ...]
+    ) -> tuple[float, float]:
         if not forma.fits(weapon, regular, exilus):
-            return 0.0  # over capacity with any forma (Q6): never chosen
+            return 0.0, 0.0  # over capacity with any forma (Q6): never chosen
         return objective(build_loadout(data, weapon, regular, exilus, picks, bonus))
 
     return search(mods, score, budget, choices(data, weapon), starts)

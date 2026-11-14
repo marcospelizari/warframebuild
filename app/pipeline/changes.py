@@ -3,6 +3,7 @@ previous dataset's snapshot, the terminal summary and the full Markdown report."
 
 import difflib
 import json
+import re
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -34,6 +35,8 @@ _CHANGE_ORDER = [Change.CHANGED, Change.NEW, Change.REMOVED]
 _SKIP = {"unique_name", "slug", "name", "texture_location", "effects", "level_stats"}
 _SKIP_MOD = _SKIP | {"description"}
 _SKIP_PERK = _SKIP | {"text"}
+# A field line (`attacks[Normal].damage.impact: 18.0`), not a line of game text.
+_FIELD = re.compile(r"^[a-z_][a-z0-9_]*(\[[^\]]*\])?(\.[a-z0-9_]+(\[[^\]]*\])?)*: ")
 
 
 # ---------- snapshot ----------
@@ -106,6 +109,7 @@ class Previous:
     snapshot: Snapshot | None
     changes: Changes | None
     unavailable: str | None  # why its snapshot cannot be used
+    schema_version: int | None = None  # its gamedata format
 
 
 def read_previous(gamedata_dir: Path) -> Previous:
@@ -116,6 +120,7 @@ def read_previous(gamedata_dir: Path) -> Previous:
     try:
         raw = json.loads(meta_path.read_bytes())
         digest = str(raw["dataset_hash"])
+        schema = raw.get("schema_version")
         sources = frozenset((str(s["path"]), str(s["sha256_16"])) for s in raw["sources"])
     except (OSError, ValueError, KeyError, TypeError) as error:
         return Previous(True, None, frozenset(), None, None, f"meta.json unreadable ({error})")
@@ -128,7 +133,7 @@ def read_previous(gamedata_dir: Path) -> Previous:
     except (OSError, ValueError):
         carried = None  # only lost when the data is unchanged; recomputed otherwise
     missing = None if shown else f"no {SNAPSHOT} (dataset made before the patch report)"
-    return Previous(True, digest, sources, shown, carried, missing)
+    return Previous(True, digest, sources, shown, carried, missing, schema)
 
 
 def changes(previous: Previous, shown: Snapshot, meta: Meta) -> Changes:
@@ -136,7 +141,8 @@ def changes(previous: Previous, shown: Snapshot, meta: Meta) -> Changes:
     sources_changed = not previous.exists or sources != previous.sources
     if previous.dataset_hash == meta.dataset_hash and previous.changes is not None:
         return previous.changes  # same data: keep the record of how it arrived
-    entries = [] if previous.snapshot is None else compare(previous.snapshot, shown)
+    same_format = previous.schema_version == meta.schema_version
+    entries = [] if previous.snapshot is None else compare(previous.snapshot, shown, same_format)
     return Changes(
         from_hash=previous.dataset_hash,
         to_hash=meta.dataset_hash,
@@ -146,10 +152,14 @@ def changes(previous: Previous, shown: Snapshot, meta: Meta) -> Changes:
     )
 
 
-def compare(before: Snapshot, after: Snapshot) -> list[EntryChange]:
+def compare(before: Snapshot, after: Snapshot, same_format: bool = True) -> list[EntryChange]:
+    """`same_format` False (the gamedata schema changed): fields found on one side only are
+    renamed, added or dropped by the format, not by the game, so they are not changes."""
     out = []
     for key in before.entries.keys() | after.entries.keys():
         b, a = before.entries.get(key), after.entries.get(key)
+        if not same_format and a is not None and b is not None:
+            b, a = _common_fields(b, a)
         if a == b:
             continue
         change = Change.NEW if b is None else Change.REMOVED if a is None else Change.CHANGED
@@ -169,6 +179,19 @@ def compare(before: Snapshot, after: Snapshot) -> list[EntryChange]:
             )
         )
     return sorted(out, key=_order)
+
+
+def _common_fields(b: Shown, a: Shown) -> tuple[Shown, Shown]:
+    def path(line: str) -> str | None:  # None: a line of game text, always compared
+        match = _FIELD.match(line)
+        return match.group(0) if match else None
+
+    common = {path(x) for x in b.lines} & {path(x) for x in a.lines}
+    kept = [
+        s.model_copy(update={"lines": [x for x in s.lines if path(x) in common | {None}]})
+        for s in (b, a)
+    ]
+    return kept[0], kept[1]
 
 
 def _order(c: EntryChange) -> tuple[bool, int, int, str, str]:

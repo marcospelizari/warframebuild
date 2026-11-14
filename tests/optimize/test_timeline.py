@@ -35,7 +35,9 @@ def test_galvanized_bonus_follows_the_status_types_on_the_target(gamedata: GameD
     hit, attack = res.shot.hits[0], lo.parts[0][1]
     assert math.fsum(events[0].armored) == pytest.approx(hit.average_shot())
     procs = own_procs(hit, attack)
+    # one projectile: a type is live after shot 1 with the chance that shot procced it
     types = math.fsum(min(1.0, p) for p in procs.values())
+    assert hit.multishot == 1
     second = with_direct_bonus(hit, DirectBonus.ADDING, 0.8 * types)
     assert second.damage_multiplier == pytest.approx(2.65 + 0.8 * types)
     puncture = gamedata.status_rules.stacking(DamageType.PUNCTURE).value(
@@ -43,6 +45,10 @@ def test_galvanized_bonus_follows_the_status_types_on_the_target(gamedata: GameD
     )
     shot_2 = next(e for e in events if e.time > events[0].time and math.fsum(e.armored) > 0)
     assert math.fsum(shot_2.armored) == pytest.approx(second.average_shot(chance_add=puncture))
+    third = Timeline(lo, res, None, None, gamedata.status_rules)
+    t3 = third.times[2]  # two shots live: chance of at least one proc, not min(1, 2p)
+    live = math.fsum(1 - (1 - p) ** 2 for p in procs.values())
+    assert third.status_types_at(t3) == pytest.approx(live)
 
 
 def test_hunter_munitions_bleeds_carry_the_crit(gamedata: GameData) -> None:

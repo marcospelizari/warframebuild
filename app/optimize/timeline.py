@@ -25,6 +25,7 @@ from app.domain.status import (
     dot_tick,
     dot_ticks,
     heat_ticks,
+    no_proc_chance,
 )
 from app.domain.status_rules import StatusRules
 from app.optimize.conditions import Resolved
@@ -73,7 +74,9 @@ class Timeline:
             for hit, (_, attack) in zip(self.shot.hits, self.lo.parts, strict=True)
         ]
         self.procs = self._procs_per_shot()
+        self.missed = self._missed_per_shot()
         self.duration = 1 + self.shot.hits[0].status_duration if self.shot.hits else 1.0
+        self.heat_starts = self._heat_starts()
         stacking = self.rules.stacking
         self.debuff_rules = tuple(
             stacking(t) for t in (DamageType.CORROSIVE, DamageType.VIRAL, DamageType.MAGNETIC)
@@ -100,7 +103,7 @@ class Timeline:
                 last = t
             punct = self._stacks(procs, DamageType.PUNCTURE, t, duration)
             chill = self._stacks(procs, DamageType.COLD, t, duration)
-            types = self._status_types(procs, t, duration) if self.res.direct else 0.0
+            types = self.status_types_at(t) if self.res.direct else 0.0
             for base, (_, attack), own in zip(hits, parts, self.own, strict=True):
                 args = head_args(attack, self.lo.mark) if self.lo.mark else None
                 direct = attack is None or attack.shot_type != AOE
@@ -156,6 +159,14 @@ class Timeline:
                 out[dt] = out.get(dt, 0.0) + p
         return out
 
+    def _missed_per_shot(self) -> dict[DamageType, float]:
+        """Chance a shot applies no proc of each type: every projectile of every part misses."""
+        out: dict[DamageType, float] = {}
+        for hit, own in zip(self.shot.hits, self.own, strict=True):
+            for dt, p in own.total.items():
+                out[dt] = out.get(dt, 1.0) * no_proc_chance(p, hit.multishot)
+        return out
+
     def _combo(self, hits: float) -> float:
         minimum = self.lo.weapon.sniper_combo_min
         if not minimum or self.lo.mark is None:
@@ -176,20 +187,21 @@ class Timeline:
     ) -> float:
         """Expected procs on the target at `t` from earlier shots inside `window` seconds."""
         p = procs.get(dt, 0.0)
-        if not p:
-            return 0.0
-        before = t - TIME_EPS  # a shot's own procs never count at its own time
-        shots = bisect_left(self.times, before) - bisect_right(self.times, before - window)
-        return p * shots
+        return p * self._shots_before(t, window) if p else 0.0
+
+    def _shots_before(self, t: float, window: float) -> int:
+        """Shots inside `window` seconds before `t`; a shot's own procs never count at its
+        own time."""
+        before = t - TIME_EPS
+        return bisect_left(self.times, before) - bisect_right(self.times, before - window)
 
     def status_types_at(self, t: float) -> float:
-        return self._status_types(self.procs, t, self.duration)
-
-    def _status_types(self, procs: dict[DamageType, float], t: float, duration: float) -> float:
-        """Expected status types on the target for Galvanized-style bonuses: the bonus
-        applies on the hits after the one that procs (Galvanized_Aptitude:42)."""
+        """Expected status types on the target for Galvanized-style bonuses: each type counts
+        with the chance at least one proc of it is live; the bonus applies on the hits after
+        the one that procs (Galvanized_Aptitude:42)."""
         return math.fsum(
-            min(1.0, self._live(procs, dt, t, self.window[dt] * duration)) for dt in procs
+            1 - miss ** self._shots_before(t, self.window[dt] * self.duration)
+            for dt, miss in self.missed.items()
         )
 
     def _add(self, t: float, dt: DamageType, v: float, *, slash: bool = False) -> None:
@@ -246,17 +258,33 @@ class Timeline:
             1 + magnetic.value(m),
         )
 
+    def _heat_starts(self) -> list[float]:
+        """When a burn starts: the shot where expected Heat procs reach one; when they come
+        further apart than the burn lasts, also each later shot that reaches the next one."""
+        p = self.procs.get(HEAT, 0.0)
+        if not p or not self.times:
+            return []
+        life = self.window[HEAT] * self.duration
+        gap = (self.times[1] - self.times[0]) / p if len(self.times) > 1 else life
+        landed = [i for i in range(len(self.times)) if _whole((i + 1) * p) > _whole(i * p)]
+        return [self.times[i] for i in (landed if gap > life else landed[:1])]
+
     def _heat_strip(self, t: float) -> float:
-        """Heat's armor strip at `t`: ramps up from the shot where expected Heat procs reach
-        one, holds while the shots keep it burning, returns after the last (Heat_Damage:81)."""
-        p_heat, duration = self.procs.get(HEAT, 0.0), self.duration
-        if not p_heat or not self.times:
-            return 0.0
-        first = math.ceil(1 / p_heat - 1e-9) - 1
-        if first >= len(self.times) or t <= self.times[first]:
-            return 0.0
-        burning, strips = self.times[first], self.rules.heat_strip
-        end = self.times[-1] + self.window[HEAT] * duration
+        """Heat's armor strip at `t`: ramps up from the burn's start, holds while it burns,
+        returns once it ends (Heat_Damage:81); a sparse proc starts a new burn, which never
+        gives back armor the last one still strips."""
+        n = bisect_left(self.heat_starts, t)  # burns started strictly before `t`
+        return max((self._burn_strip(i, t) for i in range(max(0, n - 2), n)), default=0.0)
+
+    def _burn_strip(self, i: int, t: float) -> float:
+        burning, strips, duration = self.heat_starts[i], self.rules.heat_strip, self.duration
+        life = self.window[HEAT] * duration
+        end = (self.times[-1] if len(self.heat_starts) == 1 else burning) + life
         if t <= end:
             return strips.strip(t - burning, duration - 1)
         return strips.after_burn(strips.strip(end - burning, duration - 1), t - end)
+
+
+def _whole(expected: float) -> int:
+    """Whole expected procs so far (float sums land just under an integer)."""
+    return math.floor(expected + 1e-9)

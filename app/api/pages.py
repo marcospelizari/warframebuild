@@ -169,6 +169,13 @@ UPDATES = Meta(
 )
 
 
+ABOUT = Meta(
+    f"About | {SITE}",
+    "Terms, privacy, source code, licences and credits of warframeBuild.",
+    "/about",
+)
+
+
 def tier_meta(category: Category) -> Meta:
     plural = "primaries" if category == Category.PRIMARY else "secondaries"
     return Meta(
@@ -182,6 +189,11 @@ def tier_meta(category: Category) -> Meta:
 @router.get("/updates", include_in_schema=False)
 def updates_page(request: Request) -> HTMLResponse:
     return _static(request, UPDATES)
+
+
+@router.get("/about", include_in_schema=False)
+def about_page(request: Request) -> HTMLResponse:
+    return _static(request, ABOUT)
 
 
 @router.get("/tier-list/{category}", include_in_schema=False)

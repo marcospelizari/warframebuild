@@ -60,6 +60,14 @@ def chance_of_at_least_one(status_chance: float, share: float) -> float:
     return 1 - (1 - share) ** draws * (1 - extra * share)
 
 
+def no_proc_chance(expected: float, projectiles: float) -> float:
+    """Chance none of `projectiles` independent projectiles applies a proc of a type, given
+    `expected` procs of it over all of them (fractional multishot as a fractional power)."""
+    if projectiles <= 0 or expected <= 0:
+        return 1.0
+    return float((1 - min(1.0, expected / projectiles)) ** projectiles)
+
+
 def combined_chance(chances: Sequence[float]) -> float:
     """Independent sources of the same forced proc that apply it at most once per damage
     instance (Hunter Munitions + Internal Bleeding: `1 - (1 - a)(1 - b)`, saved

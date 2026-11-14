@@ -11,8 +11,17 @@ Warframe
 Warframe and all related names, logos and game content are trademarks and
 copyrighted material of Digital Extremes Ltd. This is a free, non-commercial
 fan project. It is not affiliated with, endorsed by, or sponsored by Digital
-Extremes Ltd. No game images or other game assets are included in this
-repository; images are downloaded at runtime into a local, uncommitted cache.
+Extremes Ltd. No game images or other game assets are committed to this
+repository. The container image built from it (see DEVELOPMENT.md) does include
+game images, served to the site's visitors:
+
+  cache/img/              item pictures from the official Public Export
+  cache/raw/wiki/img/     mod card frames, rank pips, polarity, arcane and
+                          damage-type symbols, saved from the WARFRAME Wiki
+
+These images are Digital Extremes game assets, unmodified, used for this free,
+non-commercial fan project under the Warframe Content Policy. They are not
+covered by this project's licenses or by the wiki's CC BY-NC-SA text license.
 The Warframe and Digital Extremes logos are not used.
 
 Weapon, mod, arcane and sentinel data in gamedata/ is derived from the

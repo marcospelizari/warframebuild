@@ -1,5 +1,6 @@
 import { createRootRoute, createRoute, createRouter } from "@tanstack/react-router";
 import { SiteLayout } from "./components/SiteLayout";
+import { AboutPage } from "./routes/About";
 import { Home } from "./routes/Home";
 import { TierListPage } from "./routes/TierList";
 import { UpdatesPage } from "./routes/Updates";
@@ -7,6 +8,11 @@ import { WeaponPage } from "./routes/Weapon";
 
 const rootRoute = createRootRoute({ component: SiteLayout });
 const homeRoute = createRoute({ getParentRoute: () => rootRoute, path: "/", component: Home });
+const aboutRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/about",
+  component: AboutPage,
+});
 const updatesRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/updates",
@@ -48,7 +54,7 @@ const factionRoute = createRoute({
 });
 
 export const router = createRouter({
-  routeTree: rootRoute.addChildren([homeRoute, updatesRoute, tierRoute, weaponRoute, factionRoute]),
+  routeTree: rootRoute.addChildren([homeRoute, aboutRoute, updatesRoute, tierRoute, weaponRoute, factionRoute]),
 });
 
 declare module "@tanstack/react-router" {
