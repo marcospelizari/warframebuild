@@ -25,7 +25,8 @@ from app.domain.combat import CAP_S
 from app.domain.elements import PARTS
 from app.domain.headshot import Head
 from app.gamedata.builds import Forma
-from app.gamedata.models import Arcane, Mod, ReferenceHead, Weapon
+from app.gamedata.enemies import ReferenceHead
+from app.gamedata.models import Arcane, Mod, Weapon
 from app.gamedata.store import GameData
 from app.optimize import combat
 from app.optimize.conditions import Resolved

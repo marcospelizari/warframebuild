@@ -12,7 +12,7 @@ CC BY-NC-SA 3.0 (NOTICE).
 
 import math
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Any
 
@@ -61,6 +61,7 @@ class AttackData:
     multishot: float | None = None  # projectiles per shot; None = not listed
     extra_headshot: float | None = None  # -2 = 1x heads; > 0 = extra headshot factor
     held: bool | None = None  # own Trigger is Held (a beam); None = no own Trigger
+    parent: str | None = None  # AttackParentIndex: the attack this one is part of (a blast)
 
 
 @dataclass(frozen=True)
@@ -109,13 +110,18 @@ def _weapon(where: str, entry: Any) -> tuple[str, WeaponData] | None:
     if not isinstance(unique_name, str) or not unique_name:
         raise RefreshError(f"{where}: no InternalName")
     attacks: dict[str, AttackData] = {}
-    for attack in entry.get("Attacks") or []:
+    listed = entry.get("Attacks") or []
+    names = {a.get("AttackIndex"): a.get("AttackName") for a in listed if isinstance(a, dict)}
+    for attack in listed:
         if not isinstance(attack, dict) or not isinstance(attack.get("AttackName"), str):
             raise RefreshError(f"{where}: attack without AttackName")
         name = attack["AttackName"]
         if name in attacks:
             raise RefreshError(f"{where}: attack {name!r} listed twice")
-        attacks[name] = _attack(f"{where} / {name}", attack)
+        parent = attack.get("AttackParentIndex")
+        if parent is not None and not isinstance(names.get(parent), str):
+            raise RefreshError(f"{where} / {name}: AttackParentIndex {parent!r} names no attack")
+        attacks[name] = replace(_attack(f"{where} / {name}", attack), parent=names.get(parent))
     combo = entry.get("SniperComboMin")
     if combo is not None and (not isinstance(combo, int) or combo < 1):
         raise RefreshError(f"{where}: SniperComboMin must be a positive integer")

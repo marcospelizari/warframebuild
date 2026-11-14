@@ -3,7 +3,7 @@ dataset had still fail the refresh, so a broken source never empties the site (G
 
 from dataclasses import dataclass
 
-from app.gamedata.models import Exclusion
+from app.gamedata.meta import Exclusion
 from app.gamedata.store import GameData
 from app.pipeline.errors import DataGap, RefreshError
 

@@ -2,9 +2,9 @@
 
 A gun's key hashes everything its search reads: the gun, every mod and arcane that fits it
 (with the sets of those mods), its Incarnon perks, the enemies, faction modifiers, the
-reference head and the status rules, plus the calculator version and the budget. A gun
-whose key matches the current release's copies its builds from there; any other gun is
-searched again.
+reference head, the status rules, the Archon Shards and the auras, plus the calculator version and
+the budget. A gun whose key matches the current release's copies its builds from there;
+any other gun is searched again.
 """
 
 import hashlib
@@ -19,7 +19,7 @@ from app.optimize.candidates import arcane_fits, fits
 INPUTS = "inputs.json"
 # GameData fields: read whole by every gun's search (hashed whole), filtered per gun below,
 # or never read by the search. A test fails when a new field is in none of them.
-SHARED = ("enemies", "factions", "reference_head", "status_rules")
+SHARED = ("enemies", "factions", "reference_head", "status_rules", "archon_shards", "auras")
 PER_GUN = frozenset({"weapons", "mods", "arcanes", "incarnon"})
 HASHED = PER_GUN | set(SHARED)
 NOT_READ = frozenset({"meta", "joins"})  # provenance and name joins

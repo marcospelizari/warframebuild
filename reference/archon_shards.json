@@ -1,0 +1,66 @@
+{
+  "about": "Archon Shard gun buffs (PLAN G91) from the saved Archon_Shard page: `effect` at the normal value, `tauforged` its Tauforged value (the page's numbers in parentheses, Archon_Shard:244). `weapons`: the slots it applies to. `per_shard`: extra value per equipped shard of those colours. `at_cap`: a buff that builds up in a fight, counted at its cap, with what it needs. `needs_status`: counted only when the build itself applies that status (Topaz: Heat; PLAN G91). Colours with no gun buff are listed with [] (Azure still counts for Violet).",
+  "shards": {
+    "crimson": {
+      "buffs": [
+        {
+          "weapons": ["primary"],
+          "effect": {"stat": "status_chance", "value": 0.25},
+          "tauforged": 0.375,
+          "source": ["Archon_Shard:259, :261"]
+        },
+        {
+          "weapons": ["secondary"],
+          "effect": {"stat": "critical_chance", "value": 0.25},
+          "tauforged": 0.375,
+          "source": ["Archon_Shard:264, :266"]
+        }
+      ],
+      "verified": "2026-11-13"
+    },
+    "amber": {"buffs": [], "verified": "2026-11-13"},
+    "azure": {"buffs": [], "verified": "2026-11-13"},
+    "emerald": {
+      "buffs": [
+        {
+          "weapons": ["primary", "secondary"],
+          "effect": {"stat": "status_damage", "value": 0.30, "damage_type": "toxin"},
+          "tauforged": 0.45,
+          "source": ["Archon_Shard:334, :337"]
+        },
+        {
+          "weapons": ["primary", "secondary"],
+          "effect": {"stat": "status_stack_cap", "value": 2, "operation": "add", "damage_type": "corrosive"},
+          "tauforged": 3,
+          "source": ["Archon_Shard:349, :352"]
+        }
+      ],
+      "verified": "2026-11-13"
+    },
+    "topaz": {
+      "buffs": [
+        {
+          "weapons": ["secondary"],
+          "effect": {"stat": "critical_chance", "value": 0.50},
+          "tauforged": 0.75,
+          "at_cap": "Topaz: +1% critical chance per kill on an enemy with Heat, counted at its cap",
+          "needs_status": "heat",
+          "source": ["Archon_Shard:366, :368, :370"]
+        }
+      ],
+      "verified": "2026-11-13"
+    },
+    "violet": {
+      "buffs": [
+        {
+          "weapons": ["primary"],
+          "effect": {"stat": "element", "value": 0.30, "damage_type": "electricity"},
+          "tauforged": 0.45,
+          "per_shard": {"colors": ["crimson", "azure", "violet"], "value": 0.10, "tauforged": 0.15},
+          "source": ["Archon_Shard:388, :390"]
+        }
+      ],
+      "verified": "2026-11-13"
+    }
+  }
+}

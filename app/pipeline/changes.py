@@ -22,7 +22,8 @@ from app.gamedata.changes import (
     read_changes,
     read_snapshot,
 )
-from app.gamedata.models import Effects, Meta, Model
+from app.gamedata.meta import Meta
+from app.gamedata.models import Effects, Model
 from app.pipeline.build import Dataset
 from app.pipeline.build.effects import SwitchedOff
 

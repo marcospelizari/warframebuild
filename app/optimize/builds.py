@@ -7,12 +7,15 @@ faction builds are element 1's with the element swapped (`what_if`, not optimize
 
 from collections.abc import Generator, Sequence
 from dataclasses import dataclass
+from functools import partial
 from typing import Literal
 
 from app.domain.effects import DamageType
 from app.gamedata.builds import Build, ElementRow, PrimerNumbers, Variant, WeaponBuilds
-from app.gamedata.models import Arcane, Enemy, Mod, Perk, Weapon
+from app.gamedata.enemies import Enemy
+from app.gamedata.models import Arcane, Mod, Perk, Weapon
 from app.gamedata.store import GameData
+from app.optimize import auras, shards
 from app.optimize.combat import combat
 from app.optimize.forma import forma_layout, stored_forma
 from app.optimize.primer import numbers, primed
@@ -162,7 +165,8 @@ def run(data: GameData, weapon: Weapon, task: Task, budget: int) -> Found:
         return Found(found, _build(data, weapon, found, task.bonus, None, scope))
     if task.kind == "primer":
         found = best_primer(data, weapon, task.bonus, budget)
-        build = _build(data, weapon, found, task.bonus, None, scope, None, primer_objective(data))
+        primer = partial(primer_objective, data)
+        build = _build(data, weapon, found, task.bonus, None, scope, None, primer, aura=False)
         lo = build_loadout(data, weapon, found.mods, found.exilus, found.picks, task.bonus)
         return Found(found, build, primer=numbers(primed(lo, data.enemies, data.status_rules)))
     found = best_combat(data, weapon, task.faction, task.bonus, budget)
@@ -233,17 +237,22 @@ def _build(
     enemies: Sequence[Enemy] | None,
     scope: list[str],
     status: Status | None = None,
-    objective: Objective | None = None,
+    against: auras.Against | None = None,
+    aura: bool = True,
 ) -> Build:
-    """`enemies`: the combat build's scored enemies; None for Max and Primer. `objective`:
-    what `without` re-scores (default Max's, or the combat build's enemies)."""
+    """`enemies`: the combat build's scored enemies; None for Max and Primer. `against`: the
+    build's objective over given enemies, what `without`, shards and auras re-score
+    (default Max's, which ignores them, or the combat build's). `aura` False: none advised
+    (Primer: an aura weakens enemies for every weapon, not through this gun's burst)."""
     costs: dict[str, float] = {}
-    objective = objective or max_objective(data)
+    lo = build_loadout(data, weapon, r.mods, r.exilus, r.picks, bonus)
+    scored = list(data.enemies if enemies is None else enemies)
+    against = against or partial(max_objective, data)
     if enemies is not None:
-        lo = build_loadout(data, weapon, r.mods, r.exilus, r.picks, bonus)
-        fought = combat(lo, list(enemies), data.factions, data.status_rules).enemies
+        fought = combat(lo, scored, data.factions, data.status_rules).enemies
         costs = {x.enemy.unique_name: rounded(x.outcome.cost) for x in fought}
-        objective = enemies_objective(data, enemies)
+        against = partial(enemies_objective, data)
+    objective = against(scored)
     arcane = r.picks[0] if r.picks else None
     return Build(
         mods=[m.unique_name for m in r.mods],
@@ -257,6 +266,8 @@ def _build(
         forma=stored_forma(forma_layout(weapon, r.mods, r.exilus)),
         costs=costs,
         without=_without(data, weapon, r, bonus, objective),
+        shards=shards.advice(lo, data.archon_shards, data.status_rules, objective),
+        auras=auras.advice(lo, data.auras, scored, against) if aura else [],
     )
 
 

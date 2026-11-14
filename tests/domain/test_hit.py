@@ -118,3 +118,12 @@ def test_flat_crit_chance_after_mods() -> None:
     zoom = b(Stat.CRITICAL_CHANCE, 0.5, operation=Operation.ADD)
     hit = modded_hit(base, [b(Stat.CRITICAL_CHANCE, 1.5), zoom])
     assert hit.critical_chance == pytest.approx(1.125)
+
+
+def test_typed_status_damage_joins_one_status_only() -> None:
+    """Saved Archon_Shard:334, :337: Emerald's Toxin status bonus adds to Elementalist."""
+    hit = modded_hit(
+        BASE, [b(Stat.STATUS_DAMAGE, 0.9), b(Stat.STATUS_DAMAGE, 0.3, damage_type=D.TOXIN)]
+    )
+    assert hit.status_damage == pytest.approx(0.9)
+    assert hit.type_status_damage == {D.TOXIN: pytest.approx(0.3)}

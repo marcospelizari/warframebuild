@@ -40,14 +40,14 @@ GUNS = (
 TRIMMED = ("weapons.json", "joins.json", "incarnon.json")  # filtered to GUNS
 
 
-def write(gamedata_dir: Path, out_dir: Path) -> None:
-    """Copy the data files with only GUNS left in TRIMMED, recompute the dataset hash and
+def write(gamedata_dir: Path, out_dir: Path, guns: tuple[str, ...] = GUNS) -> None:
+    """Copy the data files with only `guns` left in TRIMMED, recompute the dataset hash and
     load the result; the old copy is replaced only on success."""
     staging = out_dir.with_name(f".{out_dir.name}.staging")
     shutil.rmtree(staging, ignore_errors=True)
     staging.mkdir(parents=True)
     try:
-        ids = _gun_ids(gamedata_dir)
+        ids = _gun_ids(gamedata_dir, guns)
         payloads = {name: _payload(gamedata_dir / name, name, ids) for name in store.DATA_FILES}
         for name, data in payloads.items():
             (staging / name).write_bytes(data)
@@ -62,13 +62,13 @@ def write(gamedata_dir: Path, out_dir: Path) -> None:
     staging.rename(out_dir)
 
 
-def _gun_ids(gamedata_dir: Path) -> set[str]:
+def _gun_ids(gamedata_dir: Path, guns: tuple[str, ...]) -> set[str]:
     rows = json.loads((gamedata_dir / "weapons.json").read_text(encoding="utf-8"))
-    ids = {r["unique_name"] for r in rows if r["name"] in GUNS}
+    ids = {r["unique_name"] for r in rows if r["name"] in guns}
     found = {r["name"] for r in rows if r["unique_name"] in ids}
-    if found != set(GUNS) or len(ids) != len(GUNS):
+    if found != set(guns) or len(ids) != len(guns):
         raise ValueError(
-            f"frozen gamedata: guns missing or named twice: {sorted(set(GUNS) ^ found)}"
+            f"frozen gamedata: guns missing or named twice: {sorted(set(guns) ^ found)}"
         )
     return ids
 

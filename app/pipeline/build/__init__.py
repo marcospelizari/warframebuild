@@ -3,21 +3,16 @@
 from dataclasses import dataclass
 from pathlib import Path
 
+from app.domain.archon_shards import ArchonShards
+from app.domain.auras import Auras
 from app.domain.status_rules import StatusRules
-from app.gamedata.models import (
-    Arcane,
-    Enemy,
-    Exclusion,
-    FactionModifiers,
-    Incarnon,
-    Join,
-    Mod,
-    ModSet,
-    ReferenceHead,
-    Weapon,
-)
+from app.gamedata.enemies import Enemy, FactionModifiers, ReferenceHead
+from app.gamedata.meta import Exclusion, Join
+from app.gamedata.models import Arcane, Incarnon, Mod, ModSet, Weapon
 from app.pipeline.build import (
     arcanes,
+    archon_shards,
+    auras,
     blasts,
     enemies,
     headshot,
@@ -63,9 +58,12 @@ class Dataset:
     enemies: list[Enemy]
     factions: list[FactionModifiers]
     status_rules: StatusRules
+    archon_shards: ArchonShards
+    auras: Auras
     overrides_off: list[SwitchedOff]  # entry text changed since written (U2)
     excluded_arcanes: list[Exclusion]  # new arcanes with incomplete data (U8)
-    blast_missing: list[str]  # guns with a normal-form AoE attack and no blasts.json row
+    blast_missing: list[str]  # guns with an AoE attack no wiki module links (G49)
+    auras_changed: list[str]  # aura rows left out: DE's aura changed or is gone (G91)
 
 
 def build(raw_dir: Path, reference_dir: Path, established: Established | None = None) -> Dataset:
@@ -104,8 +102,9 @@ def build(raw_dir: Path, reference_dir: Path, established: Established | None = 
         tag_rows,
         {w.unique_name for w in gun_list} | {e.unique_name for e in excluded} | gun_gaps.ids,
     )
+    upgrades = load_json(de / "ExportUpgrades_en.json")
     mod_list, sets, denied = mods.build(
-        load_json(de / "ExportUpgrades_en.json"),
+        upgrades,
         reference(reference_dir / "mod_filter.json"),
         overrides,
         reference(reference_dir / "mod_families.json"),
@@ -149,6 +148,13 @@ def build(raw_dir: Path, reference_dir: Path, established: Established | None = 
         titles,
     )
     rules = status_rules.build(reference(reference_dir / status_rules.FILE), titles)
+    shards = archon_shards.build(reference(reference_dir / archon_shards.FILE), titles)
+    aura_list, auras_changed = auras.build(
+        reference(reference_dir / auras.FILE),
+        records(upgrades, "ExportUpgrades"),
+        {w.weapon_type for w in gun_list},
+        titles,
+    )
     overrides.check_all_used(gun_gaps.ids | arcane_gaps.ids)
     _check_arcane_classes(arcane_list, gun_list)
     if not gun_list or not mod_list or not arcane_list:
@@ -170,9 +176,12 @@ def build(raw_dir: Path, reference_dir: Path, established: Established | None = 
         enemy_list,
         factions,
         rules,
+        shards,
+        aura_list,
         overrides.switched_off,
         arcane_gaps.excluded,
         blast_missing,
+        auras_changed,
     )
 
 

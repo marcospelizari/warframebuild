@@ -1187,6 +1187,92 @@
    "uniqueName": "/Lotus/Upgrades/Mods/Pistol/DualStat/CorruptedCritChanceFireRatePistol"
   },
   {
+   "baseDrain": -2,
+   "codexSecret": false,
+   "compatName": "AURA",
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "Squad receives +4.5% Rifle Damage"
+     ]
+    },
+    {
+     "stats": [
+      "Squad receives +9% Rifle Damage"
+     ]
+    },
+    {
+     "stats": [
+      "Squad receives +13.5% Rifle Damage"
+     ]
+    },
+    {
+     "stats": [
+      "Squad receives +18% Rifle Damage"
+     ]
+    },
+    {
+     "stats": [
+      "Squad receives +22.5% Rifle Damage"
+     ]
+    },
+    {
+     "stats": [
+      "Squad receives +27% Rifle Damage"
+     ]
+    }
+   ],
+   "name": "Rifle Amp",
+   "polarity": "AP_ATTACK",
+   "rarity": "UNCOMMON",
+   "type": "AURA",
+   "uniqueName": "/Lotus/Upgrades/Mods/Aura/PlayerRifleDamageAuraMod"
+  },
+  {
+   "baseDrain": -2,
+   "codexSecret": false,
+   "compatName": "AURA",
+   "fusionLimit": 5,
+   "levelStats": [
+    {
+     "stats": [
+      "Enemies lose -3% Armor"
+     ]
+    },
+    {
+     "stats": [
+      "Enemies lose -6% Armor"
+     ]
+    },
+    {
+     "stats": [
+      "Enemies lose -9% Armor"
+     ]
+    },
+    {
+     "stats": [
+      "Enemies lose -12% Armor"
+     ]
+    },
+    {
+     "stats": [
+      "Enemies lose -15% Armor"
+     ]
+    },
+    {
+     "stats": [
+      "Enemies lose -18% Armor"
+     ]
+    }
+   ],
+   "name": "Corrosive Projection",
+   "polarity": "AP_TACTIC",
+   "rarity": "UNCOMMON",
+   "type": "AURA",
+   "uniqueName": "/Lotus/Upgrades/Mods/Aura/EnemyArmorReductionAuraMod"
+  },
+  {
    "baseDrain": 2,
    "codexSecret": false,
    "compatName": "Pistol",

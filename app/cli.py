@@ -9,9 +9,18 @@ from pathlib import Path
 
 import uvicorn
 
-from app.api.app import create_app
+from app.api.app import RELEASES, create_app
 from app.optimize.search import MAX_EVALUATIONS
-from app.pipeline import build_all, check, fixtures, frozen_data, refresh, sample, update
+from app.pipeline import (
+    build_all,
+    check,
+    fixtures,
+    frozen_data,
+    reference_rows,
+    refresh,
+    sample,
+    update,
+)
 from app.pipeline.sources.http import PoliteClient
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,6 +46,9 @@ def main(argv: list[str] | None = None) -> int:
     serve = sub.add_parser("serve", help="run the app on http://127.0.0.1:8000")
     serve.add_argument("--host", default="127.0.0.1")
     serve.add_argument("--port", type=int, default=8000)
+    serve.add_argument(
+        "--sample", action="store_true", help="serve the `wfb sample` release (a few guns)"
+    )
     serve.add_argument(
         "--public-origin",
         help="site address for canonical and link-preview URLs, e.g. https://example.org "
@@ -65,7 +77,8 @@ def main(argv: list[str] | None = None) -> int:
         "--budget", type=_positive, default=MAX_EVALUATIONS, help="evaluations per build (E3)"
     )
     smp = sub.add_parser(
-        "sample", help="search the test guns like build-all, publish nothing (minutes, not hours)"
+        "sample",
+        help="build-all of 10 guns into cache/sample/ for `serve --sample` (minutes, not hours)",
     )
     smp.add_argument("--workers", type=_positive, help="worker processes (default: all CPUs)")
     upd = sub.add_parser(
@@ -82,7 +95,8 @@ def main(argv: list[str] | None = None) -> int:
         if args.public_origin is None and not _loopback(args.host):
             # Page URLs would otherwise come from each request's Host header (S6).
             parser.error(f"--host {args.host} needs --public-origin https://<site address>")
-        app = create_app(public_origin=args.public_origin)
+        releases = sample.paths(ROOT).releases if args.sample else RELEASES
+        app = create_app(releases=releases, public_origin=args.public_origin)
         # No access log: visitor addresses are not stored (S9); errors still go to stderr.
         uvicorn.run(
             app,
@@ -108,9 +122,10 @@ def main(argv: list[str] | None = None) -> int:
         return _guarded(
             lambda: sample.run(
                 ROOT / "gamedata",
+                sample.paths(ROOT),
                 args.workers,
                 progress=lambda line: print(line, file=sys.stderr, flush=True),
-            )[-1:],
+            ),
             "sample failed",
         )
     elif args.command == "build-all":
@@ -163,8 +178,10 @@ def run_check(*, offline: bool) -> list[str]:
     meta = current.meta
     changes = None if offline else check.source_changes(PoliteClient(), meta.sources)
     lines = check.source_lines(changes)
-    rows = check.reference_rows(paths.reference)
-    lines += check.stale_lines(check.stale_rows(rows, meta.changed_on), meta.changed_on)
+    rows = reference_rows.reference_rows(paths.reference)
+    lines += reference_rows.stale_lines(
+        reference_rows.stale_rows(rows, meta.changed_on), meta.changed_on
+    )
     lines += check.wiki_lines(paths.raw, paths.reference)
     lines += check.export_plus_lines(paths.raw)
     lines += [f"no builds for {e.name}: {e.reason}" for e in meta.excluded_weapons]  # U7

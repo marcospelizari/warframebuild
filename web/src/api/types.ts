@@ -204,6 +204,15 @@ export interface components {
             /** Value */
             value?: number | null;
         };
+        /** AuraChoice */
+        AuraChoice: {
+            /** Name */
+            name: string;
+            /** Score */
+            score: number;
+            /** Unique Name */
+            unique_name: string;
+        };
         /** BonusElement */
         BonusElement: {
             damage_type: components["schemas"]["DamageType"];
@@ -593,6 +602,30 @@ export interface components {
             /** Status Types */
             status_types: number;
         };
+        /**
+         * Shard
+         * @enum {string}
+         */
+        Shard: "crimson" | "amber" | "azure" | "emerald" | "topaz" | "violet";
+        /**
+         * ShardAdvice
+         * @description Shards beside a build, slot by slot (G91, optimize.shards): each next slot takes the
+         *     shard that gains most on top of the earlier ones; stops when no shard gains.
+         */
+        ShardAdvice: {
+            /** Conditions */
+            conditions: string[];
+            /** Normal */
+            normal: components["schemas"]["ShardStep"][];
+            /** Tauforged */
+            tauforged: components["schemas"]["ShardStep"][];
+        };
+        /** ShardStep */
+        ShardStep: {
+            /** Score */
+            score: number;
+            shard: components["schemas"]["Shard"];
+        };
         /** Slot */
         Slot: {
             /** Index */
@@ -621,6 +654,8 @@ export interface components {
          * @description A precomputed build: its search outcome and the build scored as /calc scores it.
          */
         StoredBuild: {
+            /** Auras */
+            auras?: components["schemas"]["AuraChoice"][] | null;
             build: components["schemas"]["Build"];
             /** Evaluations */
             evaluations: number;
@@ -629,6 +664,7 @@ export interface components {
             score: number;
             /** Search Scope */
             search_scope: string[];
+            shards?: components["schemas"]["ShardAdvice"] | null;
             /**
              * Status
              * @enum {string}

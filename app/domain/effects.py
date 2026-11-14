@@ -43,7 +43,7 @@ class Stat(StrEnum):
     CRITICAL_DAMAGE = "critical_damage"
     STATUS_CHANCE = "status_chance"
     STATUS_DURATION = "status_duration"
-    STATUS_DAMAGE = "status_damage"  # Elementalist
+    STATUS_DAMAGE = "status_damage"  # Elementalist; with `damage_type`: that status only
     DIRECT_DAMAGE = "direct_damage"  # Galvanized: per status type on the target
     WEAK_POINT_DAMAGE = "weak_point_damage"
     WEAK_POINT_CRITICAL_CHANCE = "weak_point_critical_chance"
@@ -149,7 +149,8 @@ class Effect(BaseModel):
             Stat.FORCED_PROC,
             Stat.STATUS_STACK_CAP,
         )
-        if needs_type != (self.damage_type is not None):
+        typed = self.damage_type is not None
+        if needs_type != typed and not (self.stat == Stat.STATUS_DAMAGE and typed):
             raise ValueError(f"{self.stat}: damage_type {'required' if needs_type else 'unused'}")
         if self.stat == Stat.PHYSICAL and self.damage_type not in PHYSICAL_TYPES:
             raise ValueError("physical: damage_type must be impact, puncture or slash")

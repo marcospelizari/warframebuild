@@ -19,6 +19,7 @@ import {
 import { PRIMER } from "@/lib/faction";
 import { trim } from "@/lib/format";
 import { useDebounced } from "@/lib/useDebounced";
+import { BesideBuild } from "./BesideBuild";
 import { BuildFrame } from "./BuildFrame";
 import { BuildTabs } from "./BuildTabs";
 import { EditBar } from "./EditBar";
@@ -198,6 +199,7 @@ export function BuildView({ slug, data, items, item, faction, code }: Props) {
           tiers={items.perks}
         />
       </div>
+      {!editing && <BesideBuild stored={base} metric={primer ? "priming" : "kill speed"} />}
       {choices && target && target.kind === "arcane" && (
         <Picker
           title="Choose an arcane"

@@ -1,0 +1,61 @@
+{
+  "about": "Aura mods that change a gun or its target (PLAN G91), keyed by DE uniqueName, from their saved wiki pages. `de_text`: DE's max-rank stat text the row was written for; when DE's text changes, refresh drops the row and lists it for re-check. `weapon_types`: WFCD types it applies to (null = every gun). Either `effect` (on the gun, after its mods) or `armor_kept` / `shield_kept` (share of the enemy's armor or shields left).",
+  "auras": {
+    "/Lotus/Upgrades/Mods/Aura/PlayerRifleDamageAuraMod": {
+      "name": "Rifle Amp",
+      "de_text": "Squad receives +27% Rifle Damage",
+      "weapon_types": ["Rifle", "Bow", "Sniper", "Launcher"],
+      "effect": {"stat": "damage", "value": 0.27},
+      "source": ["Rifle_Amp:22", "Rifle_Amp:29-31"],
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Upgrades/Mods/Aura/PlayerPistolDamageAuraMod": {
+      "name": "Pistol Amp",
+      "de_text": "Squad receives +27% Pistol Damage",
+      "weapon_types": ["Pistol", "Dual Pistols", "Throwing"],
+      "effect": {"stat": "damage", "value": 0.27},
+      "source": ["Pistol_Amp:3", "Pistol_Amp:22", "Pistol_Amp:33-34"],
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Upgrades/Mods/Aura/PlayerShellDamageAuraMod": {
+      "name": "Shotgun Amp",
+      "de_text": "Squad receives +18% Shotgun Damage",
+      "weapon_types": ["Shotgun"],
+      "effect": {"stat": "damage", "value": 0.18},
+      "source": ["Shotgun_Amp:22", "Shotgun_Amp:33"],
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Upgrades/Mods/Aura/PlayerSniperDamageAuraMod": {
+      "name": "Dead Eye",
+      "de_text": "Squad receives +52.5% Sniper Rifle Damage",
+      "weapon_types": ["Sniper"],
+      "effect": {"stat": "damage", "value": 0.525},
+      "source": ["Dead_Eye:21", "Dead_Eye:29", "Dead_Eye:32"],
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Upgrades/Mods/Aura/PlayerWeakpointCriticalChanceAuraMod": {
+      "name": "Worthy Comradery",
+      "de_text": "Squad receives +75% Weak Point Critical Chance",
+      "weapon_types": null,
+      "effect": {"stat": "weak_point_critical_chance", "value": 0.75},
+      "source": ["Worthy_Comradery:23", "Worthy_Comradery:31-32"],
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Upgrades/Mods/Aura/EnemyArmorReductionAuraMod": {
+      "name": "Corrosive Projection",
+      "de_text": "Enemies lose -18% Armor",
+      "weapon_types": null,
+      "armor_kept": 0.82,
+      "source": ["Corrosive_Projection:22", "Corrosive_Projection:38-46"],
+      "verified": "2026-11-13"
+    },
+    "/Lotus/Upgrades/Mods/Aura/EnemyShieldReductionAuraMod": {
+      "name": "Shield Disruption",
+      "de_text": "Enemies lose -18% Shield Capacity",
+      "weapon_types": null,
+      "shield_kept": 0.82,
+      "source": ["Shield_Disruption:21"],
+      "verified": "2026-11-13"
+    }
+  }
+}

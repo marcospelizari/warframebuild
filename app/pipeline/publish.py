@@ -18,7 +18,8 @@ from pydantic import BaseModel
 
 from app.domain.effects import Support
 from app.gamedata.changes import read_changes, read_snapshot
-from app.gamedata.models import Category, Meta, Model, ModsFile, SourceRecord
+from app.gamedata.meta import Meta, SourceRecord
+from app.gamedata.models import Category, Model, ModsFile
 from app.gamedata.store import dataset_hash, load
 from app.pipeline.build import Dataset
 
@@ -97,6 +98,8 @@ def write(
         "enemies.json": dump(dataset.enemies),
         "factions.json": dump(dataset.factions),
         "status_rules.json": dump(dataset.status_rules),
+        "archon_shards.json": dump(dataset.archon_shards),
+        "auras.json": dump(dataset.auras),
     }
     digest = dataset_hash(payloads)
     fetched = max((s.retrieved for s in sources if not s.path.startswith("wiki/")), default="")

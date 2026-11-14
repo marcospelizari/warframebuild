@@ -6,7 +6,7 @@ from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field
 
 from app.domain.direct_bonus import DirectBonus
-from app.domain.effects import DamageType, Effect, Faction, Support
+from app.domain.effects import DamageType, Effect, Support
 from app.domain.polarity import Polarity
 from app.domain.status import ForcedProc
 
@@ -57,6 +57,7 @@ class Attack(Model):
     # Wiki module ExtraHeadshotDmg: -2 = heads hit at 1x, no weak-point bonuses; > 0 = extra
     # headshot factor (Cernos Prime 0.5 -> x1.5; saved Enemy_Body_Parts, Notes).
     extra_headshot: float | None = None
+    parent: str | None = None  # wiki AttackParentIndex: the attack this blast belongs to
     # Beam damage at the start of the ramp-up (saved Continuous_Weapon) when this attack is a
     # beam: its own Held trigger, or the gun's when the attack has none; None = not a beam.
     beam_ramp_start: Fraction | None = None
@@ -92,46 +93,6 @@ class Headshot(Model):
     flat: bool = False  # heads at 1x, no weak-point bonuses (reference/headshot.json)
     # The weapon's ExtraHeadshotDmg multiplies on top instead of joining the headshot bonuses.
     separate_extra: bool = False
-
-
-class ReferenceHead(Model):
-    """The head /calc scores headshot forms on until enemies exist (step 8)."""
-
-    name: str
-    multiplier: Positive
-    critical: bool  # critical-headshot flag
-    source: str  # canonical wiki page title
-
-
-class EnemyHead(Model):
-    """The headshot spot headshot forms aim at (saved Enemy_Body_Parts)."""
-
-    part: str
-    multiplier: Positive
-    critical: bool  # critical-headshot flag
-
-
-class Enemy(Model):
-    """A representative enemy at the scored level (reference/enemies.json, R1)."""
-
-    unique_name: str
-    name: str
-    faction: str  # key of FactionModifiers.faction
-    level: Annotated[int, Field(ge=1)]
-    health: Positive
-    shield: NonNegative
-    armor: NonNegative
-    head: EnemyHead | None  # None: no headshot spot, the body is hit
-    bane: Faction | None  # faction damage mods that apply (Bane of X); None = none
-    toxin_bypasses_shield: bool = True
-    source: str  # canonical wiki page title of the enemy module
-
-
-class FactionModifiers(Model):
-    """Damage type modifiers of one faction (saved <Type>_Damage pages); unlisted types 1."""
-
-    faction: str
-    modifiers: dict[DamageType, Positive]
 
 
 class Weapon(Model):
@@ -172,9 +133,9 @@ class Weapon(Model):
     beam_ramp_start: Fraction | None
     bonus_element: BonusElement | None  # saved <Family>_Weapons pages
     headshot: list[Headshot] = []  # forms aimed at heads (reference/headshot.json)
-    # The primary fire's AoE attack (name in `attacks`), for the primer's radius and the
-    # enemies around the target (reference/blasts.json, G49); None: no such blast or no row.
-    blast: str | None = None
+    # The primary fire's AoE attacks (names in `attacks`), for the primer's radius and the
+    # enemies around the target (pipeline.build.blasts, G49); [] = none known.
+    blasts: list[str] = []
     # The primary-fire attacks the primer fires when DE's summary is another mode (Epitaph:
     # the uncharged shot, not the charged one); [] = the scored shot (reference/blasts.json).
     primer_shot: list[str] = []
@@ -241,40 +202,6 @@ class Incarnon(Model):
     no_multishot: list[str] = []  # parts that ignore Multishot bonuses
     note: str | None = None  # modelling limit shown in /calc assumptions
     perks: list[Perk]
-
-
-class Exclusion(Model):
-    unique_name: str
-    name: str
-    reason: str  # for us: refresh report, wfb check
-    pending: bool = False  # new, waiting for source data (G90 U7/U8), not left out by hand
-
-
-class SourceRecord(Model):
-    path: str
-    url: str
-    retrieved: str
-    sha256_16: str
-
-
-class Meta(Model):
-    schema_version: Literal[25] = 25
-    dataset_hash: str
-    # Newest content update named in the data (WFCD `introduced`); a label only:
-    # DE publishes no update name, and hotfixes without new items do not change it.
-    game_update: str | None
-    fetched: IsoDate  # newest download date of the DE/WFCD sources
-    changed_on: IsoDate  # first refresh that produced this dataset_hash; staleness reference
-    sources: list[SourceRecord]
-    counts: dict[str, int]
-    excluded_weapons: list[Exclusion]
-    denied_mods: dict[str, int] = Field(description="denied gun mods per mod_filter rule")
-
-
-class Join(Model):
-    unique_name: str
-    de_name: str
-    wfcd_name: str
 
 
 class ModsFile(Model):

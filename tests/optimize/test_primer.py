@@ -23,10 +23,11 @@ from app.optimize.timeline import Timeline
 
 
 def _gun(data: GameData, name: str, *mods: str, blast: str | None = None) -> Loadout:
+    """`blast`: the gun's primary-fire blast; "" = none."""
     by_name: dict[str, Mod] = {m.name: m for m in data.mods.mods}
     weapon = next(w for w in data.weapons if w.name == name)
-    if blast:
-        weapon = weapon.model_copy(update={"blast": blast})  # a reference/blasts.json row
+    if blast is not None:
+        weapon = weapon.model_copy(update={"blasts": [blast] if blast else []})
     return loadout(weapon, [by_name[n] for n in mods])
 
 
@@ -80,7 +81,7 @@ def test_a_blast_primes_the_enemies_around_by_its_radius(gamedata: GameData) -> 
     assert p.area_boost > 1.0
     assert p.score == pytest.approx((p.boost - 1) + (p.enemies - 1) * (p.area_boost - 1))
     no_row = primed(
-        _gun(gamedata, "Torid", "Infected Clip", "Stormbringer"), gamedata.enemies, rules
+        _gun(gamedata, "Torid", "Infected Clip", "Stormbringer", blast=""), gamedata.enemies, rules
     )
     assert (no_row.enemies, no_row.area_boost, no_row.radius) == (1.0, 1.0, None)
     assert no_row.boost == pytest.approx(p.boost)  # the target is primed the same
@@ -107,15 +108,21 @@ def test_radius_mods_join_only_the_primer_pool(gamedata: GameData) -> None:
 def test_the_primer_fires_its_own_shot_when_the_row_names_one(gamedata: GameData) -> None:
     """Epitaph: DE's numbers are the charged shot; the primer fires the uncharged one."""
     lo = _gun(gamedata, "Torid", "Infected Clip", "Stormbringer", blast="Poison Cloud")
-    weapon = lo.weapon.model_copy(update={"primer_shot": ["Poison Cloud"]})
+    weapon = lo.weapon.model_copy(update={"primer_shot": ["Poison Cloud"], "blasts": []})
     fired = primer_shot(loadout(weapon, []))
     assert [a.name for _, a in fired.parts if a] == ["Poison Cloud"]
     assert primer_shot(lo) is lo  # no shot named: the scored shot
 
 
-def test_good_primers_need_a_top_score_and_many_status_types() -> None:
-    """Marcos 2026-11-13: many elements and statuses make a primer, not an AoE alone."""
-    guns = {f"g{i}": (float(i), 5.0) for i in range(20)}  # top 10% = g19, g18
-    guns["aoe"] = (100.0, 2.0)  # best score, few statuses
-    assert good_primers(guns) == ["g18", "g19"]
+def test_good_primers_need_a_top_score_many_statuses_and_no_top_damage() -> None:
+    """Project decision 2026-11-13: many elements and statuses make a primer, not an AoE
+    alone; a top damage gun (Incarnon Torid) is not built as a primer."""
+    guns = {f"f{i}": (float(i), 5.0, float(i)) for i in range(16)}  # middling guns
+    guns |= {
+        "epitaph": (50.0, 6.0, 1.0),
+        "nukor": (40.0, 5.0, 2.0),
+        "aoe": (100.0, 4.0, 3.0),  # best Primer score, one status type short
+        "torid": (99.0, 6.0, 100.0),  # primes well, but the top damage gun
+    }
+    assert good_primers(guns) == ["epitaph", "nukor"]  # 10% of 20 guns
     assert good_primers({}) == []

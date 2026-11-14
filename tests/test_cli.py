@@ -35,3 +35,12 @@ def test_serve_off_loopback_needs_the_public_origin(monkeypatch: pytest.MonkeyPa
     cli.main(["serve", "--host", "::1"])
     cli.main(["serve", "--host", "0.0.0.0", "--public-origin", "https://example.org"])
     assert started == ["::1", "0.0.0.0"]
+
+
+def test_serve_sample_serves_the_sample_release(monkeypatch: pytest.MonkeyPatch) -> None:
+    served: list[object] = []
+    monkeypatch.setattr(cli, "create_app", lambda **kw: served.append(kw["releases"]))
+    monkeypatch.setattr(uvicorn, "run", lambda app, **kw: None)
+    cli.main(["serve"])
+    cli.main(["serve", "--sample"])
+    assert served == [ROOT / "cache/releases", ROOT / "cache/sample/releases"]

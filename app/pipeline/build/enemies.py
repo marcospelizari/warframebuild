@@ -8,7 +8,7 @@ from pydantic import ValidationError
 
 from app.domain.effects import DamageType, Faction
 from app.domain.enemy_scaling import Curve, Scaling
-from app.gamedata.models import Enemy, EnemyHead, FactionModifiers
+from app.gamedata.enemies import Enemy, EnemyHead, FactionModifiers
 from app.pipeline.build.inputs import require_verified
 from app.pipeline.errors import RefreshError
 from app.pipeline.sources.wiki_enemies import EnemyData

@@ -8,7 +8,8 @@ from typing import Any
 
 from pydantic import ValidationError
 
-from app.gamedata.models import Headshot, ReferenceHead, Weapon
+from app.gamedata.enemies import ReferenceHead
+from app.gamedata.models import Headshot, Weapon
 from app.pipeline.build.inputs import require_verified
 from app.pipeline.errors import RefreshError
 

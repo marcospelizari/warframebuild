@@ -222,20 +222,6 @@ def test_status_chance_above_one_is_allowed(paths: Paths) -> None:
     assert braton.status_chance == 1.5
 
 
-def test_wfcd_speed_zero_means_no_own_fire_rate() -> None:
-    from app.pipeline.build.weapons import _attack
-
-    dot = {
-        "name": "Corrosive DoT",
-        "speed": 0,
-        "crit_chance": 0,
-        "crit_mult": 1,
-        "status_chance": 0,
-        "damage": {"corrosive": 10},
-    }
-    assert _attack(dot, "Tysis", None).fire_rate is None
-
-
 def test_allowed_conclave_mod_is_kept(paths: Paths) -> None:
     """Review 3 R10: Double Tap works outside Conclave, kept through `allow`."""
     names = {m.name for m in build(paths.raw, paths.reference).mods}

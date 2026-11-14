@@ -105,12 +105,13 @@ def publish(
     (temp / "builds").mkdir()
     statuses: Counter[str] = Counter()
     unplaced = 0
-    primers: dict[str, tuple[float, float]] = {}
+    primers: dict[str, tuple[float, float, float]] = {}
     for b in builds:
         (temp / "builds" / f"{b.slug}.json").write_bytes(dump(b))
         first = b.variants[0] if b.variants else None
         if first and first.primer and first.primer_numbers:
-            primers[b.slug] = (first.primer.score, first.primer_numbers.status_types)
+            n, rec = first.primer_numbers, first.recommended.score
+            primers[b.slug] = (first.primer.score, n.status_types, rec)
         for v in b.variants:
             primer = [v.primer] if v.primer else []
             for build in (v.max, v.recommended, *v.factions.values(), *primer):

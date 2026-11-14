@@ -130,7 +130,8 @@ class Timeline:
                         continue
                     s = seed * ratio
                     bonus = hit.element_bonus.get(dt, 0.0)
-                    tick = dot_tick(dot, s, dt, bonus, bane, hit.status_damage)
+                    status = hit.status_damage + hit.type_status_damage.get(dt, 0.0)
+                    tick = dot_tick(dot, s, dt, bonus, bane, status)
                     if dt in POOLED:
                         heat.append((t, p * s, p, tick / (s + 1)))
                         continue

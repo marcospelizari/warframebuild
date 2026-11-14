@@ -161,6 +161,13 @@
         "status durations, stacks, DoT, Heat strip, Blast (status_rules.json, U13)"
       ]
     },
+    "Corrosive_Projection": {
+      "title": "Corrosive_Projection",
+      "impact": "low",
+      "feeds": [
+        "aura_buffs.json"
+      ]
+    },
     "Corrupted": {
       "title": "Corrupted",
       "impact": "medium",
@@ -216,6 +223,13 @@
       "impact": "high",
       "feeds": [
         "DoT tick count, element bonus per literal type, DoT scaling (step 4)"
+      ]
+    },
+    "Dead_Eye": {
+      "title": "Dead_Eye",
+      "impact": "low",
+      "feeds": [
+        "aura_buffs.json"
       ]
     },
     "Electricity_Damage": {
@@ -597,6 +611,13 @@
         "Lingering Judgement override (step 7b)"
       ]
     },
+    "Pistol_Amp": {
+      "title": "Pistol_Amp",
+      "impact": "low",
+      "feeds": [
+        "aura_buffs.json"
+      ]
+    },
     "Pistol_Mods": {
       "title": "Pistol_Mods",
       "impact": "high",
@@ -645,6 +666,13 @@
       "impact": "high",
       "feeds": [
         "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
+    "Rifle_Amp": {
+      "title": "Rifle_Amp",
+      "impact": "low",
+      "feeds": [
+        "aura_buffs.json"
       ]
     },
     "Rifle_Mods": {
@@ -701,6 +729,20 @@
       "impact": "medium",
       "feeds": [
         "faction enemy list (enemies.json)"
+      ]
+    },
+    "Shield_Disruption": {
+      "title": "Shield_Disruption",
+      "impact": "low",
+      "feeds": [
+        "aura_buffs.json"
+      ]
+    },
+    "Shotgun_Amp": {
+      "title": "Shotgun_Amp",
+      "impact": "low",
+      "feeds": [
+        "aura_buffs.json"
       ]
     },
     "Shotgun_Mods": {
@@ -838,6 +880,13 @@
       "impact": "high",
       "feeds": [
         "faction damage type modifiers, DAMAGE EFFICACY lines (factions.json, step 8a)"
+      ]
+    },
+    "Worthy_Comradery": {
+      "title": "Worthy_Comradery",
+      "impact": "low",
+      "feeds": [
+        "aura_buffs.json"
       ]
     }
   }

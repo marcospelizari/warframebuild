@@ -187,9 +187,11 @@ def paths(tmp_path: Path) -> Paths:
     _keep_fixture_guns(raw, reference / "galvanized_behaviour.json")
     _keep_fixture_guns(raw, reference / "headshot.json")
     _keep_fixture_guns(raw, reference / "weapon_tags.json")
+    _keep_fixture_guns(raw, reference / "blasts.json")
     _keep_rows(reference / "main_attack.json", {"Lex Prime", "Laetum"})
     _keep_overrides(raw, reference / "overrides.json", {"ZarimanHeavyPistol", "PrimeLex"})
     _keep_enemies(reference / "enemies.json")
+    _keep_auras(raw, reference / "aura_buffs.json")
     for page in wiki_local.pages(reference):
         if page.format == "lua":
             stub = MODULE_STUBS.get(page.stem, "return {}")
@@ -235,6 +237,16 @@ def _keep_enemies(table: Path) -> None:
     committed gamedata/ by tests/pipeline/test_enemies.py."""
     data = json.loads(table.read_text())
     data["enemies"] = {u: r for u, r in data["enemies"].items() if r["name"] in FIXTURE_ENEMIES}
+    table.write_text(json.dumps(data))
+
+
+def _keep_auras(raw: Path, table: Path) -> None:
+    """Rows only for the auras in the fixture game files; the rest are checked against the
+    committed gamedata/ by tests/pipeline/test_auras.py."""
+    upgrades = json.loads((raw / "de/ExportUpgrades_en.json").read_text())["ExportUpgrades"]
+    ids = {u["uniqueName"] for u in upgrades}
+    data = json.loads(table.read_text())
+    data["auras"] = {u: r for u, r in data["auras"].items() if u in ids}
     table.write_text(json.dumps(data))
 
 

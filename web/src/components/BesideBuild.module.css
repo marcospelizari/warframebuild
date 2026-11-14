@@ -1,0 +1,16 @@
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px;margin-top:18px}
+.card{border:1px solid var(--color-line-strong);background:var(--color-panel);padding:18px 20px 16px}
+.note{margin:6px 0 0;font-size:13px;color:var(--color-muted)}
+.rows{list-style:none;margin:12px 0 0;padding:0}
+.row{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px dotted #5a4c33;font-size:15px}
+.row:last-child{border-bottom:0}
+.gem{width:11px;height:11px;transform:rotate(45deg);flex:none;box-shadow:0 0 6px currentColor}
+.crimson{background:#d2424a;color:#d2424a}
+.amber{background:#e6c34a;color:#e6c34a}
+.azure{background:#4aa3e0;color:#4aa3e0}
+.emerald{background:#3fbf7f;color:#3fbf7f}
+.topaz{background:#e88a3a;color:#e88a3a}
+.violet{background:#a066e0;color:#a066e0}
+.total{margin:10px 0 0;font-size:15px;color:var(--color-soft)}
+.empty{margin:12px 0 0;font-size:15px;color:var(--color-soft)}
+.conditions{margin:10px 0 0;padding-left:18px;font-size:13px;color:var(--color-muted)}

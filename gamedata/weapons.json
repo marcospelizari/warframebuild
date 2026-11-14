@@ -17,6 +17,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Orb Launch",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -39,6 +40,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Orb Merging Damage",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
@@ -67,13 +69,16 @@
     ],
     "multishot": 1.0,
     "name": "Orb Explosion",
+    "parent": "Orb Launch",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Orb Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -141,13 +146,14 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 65.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -208,6 +214,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Impact",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.23
@@ -234,6 +241,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Poison Cloud",
+    "parent": "Grenade Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.25
@@ -256,13 +264,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.39
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Poison Cloud"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -327,13 +338,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.27
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -397,13 +409,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.29
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -468,6 +481,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Rocket Impact",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.35
@@ -494,13 +508,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Rocket Explosion",
+    "parent": "Rocket Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.35
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Rocket Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -567,13 +584,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -639,13 +657,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -707,13 +726,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.24
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -779,6 +799,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -804,13 +825,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -878,6 +900,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
@@ -903,13 +926,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.18
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -978,6 +1002,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Partially Charged Shot",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.25
@@ -1000,13 +1025,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 250.0,
     "shot_type": "Projectile",
     "status_chance": 0.25
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -1106,13 +1132,14 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.34
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -1191,6 +1218,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
@@ -1219,6 +1247,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
@@ -1245,6 +1274,7 @@
     ],
     "multishot": 1.0,
     "name": "Spear Throw",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.4
@@ -1267,13 +1297,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Attraction Field",
+    "parent": "Spear Throw",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -1356,13 +1387,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -1438,13 +1470,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.4
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -1519,6 +1552,7 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Beam",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
@@ -1541,6 +1575,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cube (direct hit)",
+    "parent": null,
     "shot_speed": 25.0,
     "shot_type": "Projectile",
     "status_chance": 1.0
@@ -1567,6 +1602,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cube Explosion",
+    "parent": "Cube (direct hit)",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
@@ -1593,13 +1629,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cube (shot by player)",
+    "parent": null,
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -1681,6 +1718,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -1703,6 +1741,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Impact",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -1729,13 +1768,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade AoE",
+    "parent": "Grenade Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -1813,13 +1853,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.4
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -1900,6 +1941,7 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 150.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
@@ -1926,13 +1968,14 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Burst Shot",
+    "parent": null,
     "shot_speed": 150.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -2007,6 +2050,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Semi-Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
@@ -2031,6 +2075,7 @@
     ],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -2059,13 +2104,14 @@
     ],
     "multishot": 1.0,
     "name": "Alt-Fire AoE",
+    "parent": "Alt-Fire",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -2146,6 +2192,7 @@
     ],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.05
@@ -2174,6 +2221,7 @@
     ],
     "multishot": 1.0,
     "name": "Initial Blast",
+    "parent": "Charged Shot",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.05
@@ -2200,13 +2248,17 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Bubble Collapse",
+    "parent": "Charged Shot",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.05
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Initial Blast",
+   "Bubble Collapse"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2286,6 +2338,7 @@
     ],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.16
@@ -2314,6 +2367,7 @@
     ],
     "multishot": 1.0,
     "name": "Initial Blast",
+    "parent": "Charged Shot",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.16
@@ -2340,13 +2394,17 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Bubble Collapse",
+    "parent": "Charged Shot",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Initial Blast",
+   "Bubble Collapse"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2426,13 +2484,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2496,13 +2555,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2567,13 +2627,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.24
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2638,6 +2699,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
@@ -2660,6 +2722,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charge",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.32
@@ -2686,13 +2749,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.32
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2758,6 +2822,7 @@
     ],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
@@ -2784,6 +2849,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.2
@@ -2808,6 +2874,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Quick Shot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
@@ -2834,13 +2901,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Quick Shot AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Charged Shot AoE"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -2912,6 +2982,7 @@
     ],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -2938,6 +3009,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
@@ -2962,6 +3034,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Quick Shot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -2988,13 +3061,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Quick Shot AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Charged Shot AoE"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3063,6 +3139,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Impact",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.24
@@ -3089,13 +3166,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Rocket Explosion",
+    "parent": "Grenade Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.24
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Rocket Explosion"
+  ],
   "bonus_element": {
    "elements": [
     "impact",
@@ -3172,13 +3252,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.34
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3240,13 +3321,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.38
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3311,6 +3393,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
@@ -3337,6 +3420,7 @@
     ],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": 300.0,
     "shot_type": "Projectile",
     "status_chance": 0.32
@@ -3363,13 +3447,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire AoE",
+    "parent": "Alt-Fire",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3442,6 +3527,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 250.0,
     "shot_type": "Projectile",
     "status_chance": 0.35
@@ -3468,13 +3554,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "3.5x Zoom Radial Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.34
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3621,6 +3708,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.18
@@ -3643,6 +3731,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Secondary Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.08
@@ -3669,13 +3758,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Secondary Fire AoE",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3745,13 +3835,14 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.36
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3819,6 +3910,7 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Beam",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.24
@@ -3841,6 +3933,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cube (direct hit)",
+    "parent": null,
     "shot_speed": 25.0,
     "shot_type": "Projectile",
     "status_chance": 0.26
@@ -3867,6 +3960,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cube Explosion",
+    "parent": "Cube (direct hit)",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
@@ -3893,13 +3987,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cube (shot by player)",
+    "parent": null,
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -3964,6 +4059,7 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Beam",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.45
@@ -3986,6 +4082,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cube (direct hit)",
+    "parent": null,
     "shot_speed": 25.0,
     "shot_type": "Projectile",
     "status_chance": 0.26
@@ -4012,6 +4109,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cube Explosion",
+    "parent": "Cube (direct hit)",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
@@ -4038,13 +4136,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cube (shot by player)",
+    "parent": null,
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4116,13 +4215,14 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4188,6 +4288,7 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.45
@@ -4212,13 +4313,14 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.45
    }
   ],
   "beam_ramp_start": 0.6,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4283,6 +4385,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Impact",
+    "parent": null,
     "shot_speed": 20.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
@@ -4309,13 +4412,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Detonation",
+    "parent": "Grenade Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Grenade Detonation"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4382,6 +4488,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Impact",
+    "parent": null,
     "shot_speed": 20.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
@@ -4408,13 +4515,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Detonation",
+    "parent": "Grenade Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Grenade Detonation"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4482,13 +4592,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4559,6 +4670,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -4585,6 +4697,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.1
@@ -4611,6 +4724,7 @@
     ],
     "multishot": 1.0,
     "name": "Spear Throw",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.33
@@ -4633,13 +4747,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Attraction Field",
+    "parent": "Spear Throw",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -4711,13 +4826,14 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 150.0,
     "shot_type": "Projectile",
     "status_chance": 0.1286
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -4781,6 +4897,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -4804,13 +4921,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.18
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -4872,13 +4990,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -4942,13 +5061,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5016,6 +5136,7 @@
     ],
     "multishot": 1.0,
     "name": "Projectile Impact",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.0
@@ -5041,13 +5162,14 @@
     ],
     "multishot": 1.0,
     "name": "Explosion",
+    "parent": "Projectile Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.25
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5112,6 +5234,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 50.0,
     "shot_type": "Projectile",
     "status_chance": 0.14
@@ -5136,13 +5259,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Lock-on Mode",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.14
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -5218,13 +5342,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5290,6 +5415,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Uncharged Projectile",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.28
@@ -5316,6 +5442,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Uncharged Explosion",
+    "parent": "Uncharged Projectile",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.28
@@ -5338,6 +5465,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Charged Projectile",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.28
@@ -5364,13 +5492,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Charged Explosion",
+    "parent": "Fully Charged Projectile",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Uncharged Explosion"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5433,6 +5564,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Single Rocket Impact",
+    "parent": null,
     "shot_speed": 150.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
@@ -5459,6 +5591,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Single Rocket Explosion",
+    "parent": "Single Rocket Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.22
@@ -5481,13 +5614,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.18
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Single Rocket Explosion"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5551,6 +5687,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Single Rocket Impact",
+    "parent": null,
     "shot_speed": 150.0,
     "shot_type": "Projectile",
     "status_chance": 0.26
@@ -5577,6 +5714,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Single Rocket Explosion",
+    "parent": "Single Rocket Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
@@ -5599,13 +5737,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Single Rocket Explosion"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5674,6 +5815,7 @@
     ],
     "multishot": 1.0,
     "name": "Slug Impact",
+    "parent": null,
     "shot_speed": 260.0,
     "shot_type": "Projectile",
     "status_chance": 0.4
@@ -5700,13 +5842,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Explosion",
+    "parent": "Slug Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.4
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Explosion"
+  ],
   "bonus_element": {
    "elements": [
     "impact",
@@ -5785,6 +5930,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Projectile Impact",
+    "parent": null,
     "shot_speed": 24.0,
     "shot_type": "Projectile",
     "status_chance": 0.32
@@ -5811,6 +5957,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Projectile Explosion",
+    "parent": "Projectile Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.32
@@ -5835,13 +5982,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst Mode",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.32
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Projectile Explosion"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5903,13 +6053,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.24
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -5972,13 +6123,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.04
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -6042,13 +6194,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -6112,6 +6265,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 50.0,
     "shot_type": "Projectile",
     "status_chance": 0.21
@@ -6138,6 +6292,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": "Charged Shot",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.21
@@ -6160,6 +6315,7 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Cluster Bomb Contact",
+    "parent": null,
     "shot_speed": 30.0,
     "shot_type": "Projectile",
     "status_chance": 0.21
@@ -6186,13 +6342,16 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Cluster Bomb Explosion",
+    "parent": "Cluster Bomb Contact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.21
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Radial Attack"
+  ],
   "bonus_element": {
    "elements": [
     "impact",
@@ -6283,13 +6442,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.15
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -6355,13 +6515,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.11
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -6425,13 +6586,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.13
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -6493,13 +6655,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.13
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -6564,6 +6727,7 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Uncharged Shot",
+    "parent": null,
     "shot_speed": 130.0,
     "shot_type": "Projectile",
     "status_chance": 0.09
@@ -6588,13 +6752,14 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 190.0,
     "shot_type": "Projectile",
     "status_chance": 0.09
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -6676,6 +6841,7 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.133
@@ -6704,13 +6870,14 @@
     "forced_procs": [],
     "multishot": 28.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.0332
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -6788,6 +6955,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.33
@@ -6812,6 +6980,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Semi-Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.21
@@ -6836,13 +7005,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.33
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -6922,13 +7092,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.31
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -7013,6 +7184,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Single Pellet",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.9
@@ -7041,13 +7213,14 @@
     "forced_procs": [],
     "multishot": 12.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.075
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -7126,6 +7299,7 @@
     ],
     "multishot": 1.0,
     "name": "Rocket Impact",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.47
@@ -7154,13 +7328,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Rocket Explosion",
+    "parent": "Rocket Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.47
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Rocket Explosion"
+  ],
   "bonus_element": {
    "elements": [
     "impact",
@@ -7244,6 +7421,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Full-Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.33
@@ -7268,13 +7446,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst-Fire While Aiming",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.27
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -7360,13 +7539,14 @@
     "forced_procs": [],
     "multishot": 5.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.21
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -7442,6 +7622,7 @@
     ],
     "multishot": 1.0,
     "name": "Grenade Impact",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.17
@@ -7470,13 +7651,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Explosion",
+    "parent": "Grenade Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.17
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Grenade Explosion"
+  ],
   "bonus_element": {
    "elements": [
     "impact",
@@ -7556,6 +7740,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cannon Mode Projectile",
+    "parent": null,
     "shot_speed": 75.0,
     "shot_type": "Projectile",
     "status_chance": 0.31
@@ -7582,6 +7767,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cannon Mode Explosion",
+    "parent": "Cannon Mode Projectile",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.31
@@ -7604,6 +7790,7 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Cannon Mode Cluster Bomb Contact",
+    "parent": null,
     "shot_speed": 8.0,
     "shot_type": "Projectile",
     "status_chance": 0.31
@@ -7630,6 +7817,7 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Cannon Mode Cluster Bomb Explosion",
+    "parent": "Cannon Mode Cluster Bomb Contact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.31
@@ -7658,13 +7846,16 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Barrage Mode",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.09699999999999999
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Cannon Mode Explosion"
+  ],
   "bonus_element": {
    "elements": [
     "impact",
@@ -7754,13 +7945,14 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.111
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -7841,6 +8033,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.29
@@ -7865,13 +8058,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.29
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -7944,13 +8138,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -8025,6 +8220,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Projectile Impact",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.33
@@ -8051,13 +8247,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Explosion",
+    "parent": "Projectile Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.33
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Explosion"
+  ],
   "bonus_element": {
    "elements": [
     "impact",
@@ -8136,13 +8335,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.31
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -8218,6 +8418,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.15
@@ -8242,13 +8443,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Semi-Auto Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8315,13 +8517,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8387,13 +8590,14 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.165
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -8457,6 +8661,7 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Uncharged Shot",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.063
@@ -8481,13 +8686,14 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 160.0,
     "shot_type": "Projectile",
     "status_chance": 0.069
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8552,13 +8758,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.35
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8627,13 +8834,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.37
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8703,13 +8911,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.15
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8777,13 +8986,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.25
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -8852,6 +9062,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Uncharged Shot",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -8876,6 +9087,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -8900,6 +9112,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 48.0,
     "shot_type": "Projectile",
     "status_chance": 0.56
@@ -8926,13 +9139,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Radial Attack",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.56
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9008,13 +9222,14 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.25
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9117,13 +9332,14 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.25
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9221,6 +9437,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cannon Mode Projectile",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.29
@@ -9247,6 +9464,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cannon Mode Explosion",
+    "parent": "Cannon Mode Projectile",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.29
@@ -9269,6 +9487,7 @@
     "forced_procs": [],
     "multishot": 6.0,
     "name": "Cannon Mode Cluster Bomb Contact",
+    "parent": null,
     "shot_speed": 8.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -9295,6 +9514,7 @@
     "forced_procs": [],
     "multishot": 6.0,
     "name": "Cannon Mode Cluster Bomb Explosion",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.1
@@ -9319,13 +9539,17 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Barrage Mode",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.087
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Cannon Mode Explosion",
+   "Cannon Mode Cluster Bomb Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9394,6 +9618,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Projectile Impact",
+    "parent": null,
     "shot_speed": 150.0,
     "shot_type": "Projectile",
     "status_chance": 0.25
@@ -9420,6 +9645,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Projectile Explosion",
+    "parent": "Projectile Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.25
@@ -9447,6 +9673,7 @@
     ],
     "multishot": 1.0,
     "name": "Spear Throw Impact",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.25
@@ -9476,13 +9703,16 @@
     ],
     "multishot": 1.0,
     "name": "Spear Throw Explosion",
+    "parent": "Spear Throw Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.25
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Projectile Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9551,13 +9781,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst-Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.27
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9626,6 +9857,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.21
@@ -9648,13 +9880,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Beacon",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.0
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9729,6 +9962,7 @@
     ],
     "multishot": 1.0,
     "name": "Grenade Impact",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
@@ -9755,13 +9989,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Explosion",
+    "parent": "Grenade Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Grenade Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9829,6 +10066,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.17
@@ -9855,13 +10093,14 @@
     ],
     "multishot": 1.0,
     "name": "Harpoon",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.13
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -9929,6 +10168,7 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.27
@@ -9959,13 +10199,16 @@
     ],
     "multishot": 1.0,
     "name": "Explosion",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.27
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Explosion"
+  ],
   "bonus_element": {
    "elements": [
     "impact",
@@ -10048,13 +10291,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.27
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -10125,6 +10369,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Single Pellet",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.75
@@ -10153,13 +10398,14 @@
     "forced_procs": [],
     "multishot": 12.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.0625
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [],
@@ -10224,6 +10470,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Semi-Auto Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.19
@@ -10248,13 +10495,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Full Auto Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.27
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -10322,6 +10570,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.15
@@ -10346,6 +10595,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.21
@@ -10374,13 +10624,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.21
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -10447,6 +10698,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.21
@@ -10471,6 +10723,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.27
@@ -10499,13 +10752,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.27
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -10572,13 +10826,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.23
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -10647,6 +10902,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Blob Embed",
+    "parent": null,
     "shot_speed": 35.0,
     "shot_type": "AoE",
     "status_chance": 0.1
@@ -10673,6 +10929,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Blob Explosion",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.1
@@ -10699,6 +10956,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Blob Embed",
+    "parent": null,
     "shot_speed": 35.0,
     "shot_type": "AoE",
     "status_chance": 0.2
@@ -10725,6 +10983,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Blob Explosion",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.2
@@ -10751,13 +11010,17 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Bounce Explosion",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Blob Embed",
+   "Blob Explosion"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -10826,13 +11089,14 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.051
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -10901,13 +11165,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -10971,13 +11236,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.29
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11040,6 +11306,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.27
@@ -11065,13 +11332,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.19
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11141,6 +11409,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Single Pellet",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.69
@@ -11169,13 +11438,14 @@
     "forced_procs": [],
     "multishot": 5.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.138
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11245,6 +11515,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Single Pellet",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.69
@@ -11273,13 +11544,14 @@
     "forced_procs": [],
     "multishot": 5.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.138
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11346,13 +11618,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.01
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -11421,13 +11694,14 @@
     "forced_procs": [],
     "multishot": 15.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.066
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11495,6 +11769,7 @@
     ],
     "multishot": 1.0,
     "name": "Rocket Impact",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.19
@@ -11521,6 +11796,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Rocket Explosion",
+    "parent": "Rocket Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.19
@@ -11543,6 +11819,7 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Cluster Bombs",
+    "parent": null,
     "shot_speed": 8.0,
     "shot_type": "Projectile",
     "status_chance": 0.19
@@ -11569,13 +11846,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Cluster Bomb Explosion",
+    "parent": "Cluster Bombs",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.19
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Rocket Explosion"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11641,13 +11921,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.13
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -11707,6 +11988,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.21
@@ -11729,6 +12011,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 50.0,
     "shot_type": "Projectile",
     "status_chance": 0.41
@@ -11755,13 +12038,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Radial Attack",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.41
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -11825,13 +12109,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.09
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -11896,13 +12181,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.09
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -11967,6 +12253,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Direct Hit",
+    "parent": null,
     "shot_speed": 30.0,
     "shot_type": "Projectile",
     "status_chance": 0.19
@@ -11993,13 +12280,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Detonation",
+    "parent": "Direct Hit",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.19
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Detonation"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -12070,6 +12360,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Uncharged Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.49
@@ -12094,6 +12385,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.49
@@ -12122,13 +12414,14 @@
     ],
     "multishot": null,
     "name": "Toxin Cloud",
+    "parent": "Charged Shot",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.49
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -12201,6 +12494,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 62.0,
     "shot_type": "Projectile",
     "status_chance": 0.4
@@ -12226,13 +12520,14 @@
     ],
     "multishot": 6.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.4
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -12315,6 +12610,7 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": 57.0,
     "shot_type": "Projectile",
     "status_chance": 0.1014
@@ -12337,6 +12633,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst",
+    "parent": null,
     "shot_speed": 25.0,
     "shot_type": "Projectile",
     "status_chance": 0.61
@@ -12363,13 +12660,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": "Burst",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.57
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -12451,13 +12749,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 150.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -12542,6 +12841,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 270.0,
     "shot_type": "Projectile",
     "status_chance": 0.55
@@ -12569,13 +12869,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "AoE",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.55
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "AoE"
+  ],
   "bonus_element": {
    "elements": [
     "impact",
@@ -12687,13 +12990,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.15
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -12771,13 +13075,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -12854,6 +13159,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Primary",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.5
@@ -12876,6 +13182,7 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Partial Reload Impact",
+    "parent": null,
     "shot_speed": 0.0,
     "shot_type": "Projectile",
     "status_chance": 0.43
@@ -12902,6 +13209,7 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Partial Reload Explosion",
+    "parent": "Partial Reload Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.43
@@ -12924,6 +13232,7 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Reload From Empty Impact",
+    "parent": null,
     "shot_speed": 0.0,
     "shot_type": "Projectile",
     "status_chance": 0.59
@@ -12950,13 +13259,14 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Reload From Empty Explosion",
+    "parent": "Reload From Empty Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.59
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -13032,6 +13342,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Spore Impact",
+    "parent": null,
     "shot_speed": 30.0,
     "shot_type": "Projectile",
     "status_chance": 0.45
@@ -13058,13 +13369,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Poison Cloud",
+    "parent": "Spore Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.45
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Poison Cloud"
+  ],
   "bonus_element": {
    "elements": [
     "impact",
@@ -13143,6 +13457,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 75.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -13165,13 +13480,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Corrosive DoT",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "DoT",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": {
    "elements": [
     "impact",
@@ -13257,6 +13573,7 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": 57.0,
     "shot_type": "Projectile",
     "status_chance": 0.0929
@@ -13279,6 +13596,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst",
+    "parent": null,
     "shot_speed": 25.0,
     "shot_type": "Projectile",
     "status_chance": 0.57
@@ -13305,13 +13623,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": "Burst",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.57
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13380,6 +13699,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.15
@@ -13406,6 +13726,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Infested Orb",
+    "parent": null,
     "shot_speed": 5.0,
     "shot_type": "Projectile",
     "status_chance": 1.0
@@ -13432,13 +13753,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Orb Explosion",
+    "parent": "Infested Orb",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.39
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13511,6 +13833,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 270.0,
     "shot_type": "Projectile",
     "status_chance": 0.53
@@ -13538,13 +13861,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "AoE",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.53
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "AoE"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13643,13 +13969,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 150.0,
     "shot_type": "Projectile",
     "status_chance": 0.25
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13714,13 +14041,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.13
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13782,6 +14110,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -13804,6 +14133,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Infested Harpoon",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -13826,13 +14156,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Infested Harpoon Contact",
+    "parent": null,
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13897,13 +14228,14 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.155
    }
   ],
   "beam_ramp_start": 0.7,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -13970,6 +14302,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Primary",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.43
@@ -13992,6 +14325,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Partial Reload Impact",
+    "parent": null,
     "shot_speed": 0.0,
     "shot_type": "Projectile",
     "status_chance": 0.43
@@ -14018,6 +14352,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Partial Reload Explosion",
+    "parent": "Partial Reload Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.43
@@ -14040,6 +14375,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Reload From Empty Impact",
+    "parent": null,
     "shot_speed": 0.0,
     "shot_type": "Projectile",
     "status_chance": 0.59
@@ -14066,13 +14402,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Reload From Empty Explosion",
+    "parent": "Reload From Empty Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.59
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -14135,6 +14472,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Spore Impact",
+    "parent": null,
     "shot_speed": 30.0,
     "shot_type": "Projectile",
     "status_chance": 0.35
@@ -14161,13 +14499,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Poison Cloud",
+    "parent": "Spore Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.35
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Poison Cloud"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -14235,6 +14576,7 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 79.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -14261,6 +14603,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
@@ -14289,6 +14632,7 @@
     ],
     "multishot": 1.0,
     "name": "Headshot Explosion",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
@@ -14314,6 +14658,7 @@
     ],
     "multishot": 6.0,
     "name": "Homing Spore Contact",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -14340,13 +14685,16 @@
     "forced_procs": [],
     "multishot": 6.0,
     "name": "Homing Spore Explosion",
+    "parent": "Homing Spore Contact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Radial Attack"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -14413,6 +14761,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.37
@@ -14437,13 +14786,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.43
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -14523,6 +14873,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 75.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -14545,13 +14896,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Corrosive DoT",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "DoT",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -14615,13 +14967,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.41
    }
   ],
   "beam_ramp_start": 0.3,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -14684,13 +15037,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.18
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -14757,6 +15111,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.25
@@ -14787,13 +15142,14 @@
     ],
     "multishot": 11.0,
     "name": "Buckshot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.057300000000000004
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -14861,6 +15217,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.17
@@ -14883,6 +15240,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": 22.0,
     "shot_type": "Projectile",
     "status_chance": 0.33
@@ -14909,13 +15267,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire AoE",
+    "parent": "Alt-Fire",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.33
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -14980,13 +15339,14 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.19
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15054,13 +15414,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -15126,6 +15487,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.01
@@ -15152,13 +15514,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.08
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -15238,6 +15601,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.025
@@ -15262,13 +15626,14 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.05
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -15337,6 +15702,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Uncharged Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.15
@@ -15361,6 +15727,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.15
@@ -15384,13 +15751,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Charged Shot",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15478,6 +15846,7 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.06
@@ -15502,6 +15871,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.4
@@ -15532,13 +15902,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.4
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15602,6 +15973,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.19
@@ -15622,13 +15994,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15693,6 +16066,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.29
@@ -15719,6 +16093,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": "Auto",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.29
@@ -15741,13 +16116,16 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Held",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Radial Attack"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15814,6 +16192,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.23
@@ -15840,13 +16219,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.29
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Radial Attack"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -15915,6 +16297,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.16
@@ -15939,13 +16322,14 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.1067
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -16014,13 +16398,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 75.0,
     "shot_type": "Projectile",
     "status_chance": 0.29
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16084,6 +16469,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Orb Launch",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Projectile",
     "status_chance": 0.0
@@ -16110,6 +16496,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Orb Merging Damage",
+    "parent": "Orb Launch",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.35
@@ -16138,6 +16525,7 @@
     ],
     "multishot": 1.0,
     "name": "Orb Explosion",
+    "parent": "Orb Launch",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.35
@@ -16164,13 +16552,17 @@
     "forced_procs": [],
     "multishot": null,
     "name": "Fully Stacked Orb Singularity",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "DoT",
     "status_chance": 0.0
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Orb Merging Damage",
+   "Orb Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -16238,6 +16630,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
@@ -16262,6 +16655,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 0.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
@@ -16290,13 +16684,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form Radial Attack",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16358,6 +16753,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.28
@@ -16382,6 +16778,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 0.0,
     "shot_type": "Projectile",
     "status_chance": 0.28
@@ -16410,13 +16807,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form Radial Attack",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16486,13 +16884,14 @@
     "forced_procs": [],
     "multishot": 6.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.14
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -16564,6 +16963,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Mid-Flight Detonation",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.34
@@ -16592,13 +16992,16 @@
     ],
     "multishot": 1.0,
     "name": "Embedded Detonation",
+    "parent": "Mid-Flight Detonation",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Embedded Detonation"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16666,6 +17069,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Impact",
+    "parent": null,
     "shot_speed": 25.0,
     "shot_type": "Projectile",
     "status_chance": 0.26
@@ -16692,13 +17096,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Detonation",
+    "parent": "Grenade Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Grenade Detonation"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -16770,13 +17177,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -16843,6 +17251,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Uncharged Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.15
@@ -16867,13 +17276,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.15
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -16952,6 +17362,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst Shot",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.05
@@ -16976,6 +17387,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
@@ -16998,13 +17410,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.25
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17091,13 +17504,14 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.107
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -17166,13 +17580,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.35
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17240,13 +17655,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17310,13 +17726,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.25
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17381,13 +17798,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -17450,13 +17868,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 75.0,
     "shot_type": "Projectile",
     "status_chance": 0.022000000000000002
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17522,13 +17941,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.06
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17596,13 +18016,14 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.031400000000000004
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17670,13 +18091,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.11
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -17740,13 +18162,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17810,13 +18233,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17884,13 +18308,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -17958,13 +18383,14 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1286
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -18032,13 +18458,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18106,6 +18533,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Uncharged Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.18
@@ -18130,13 +18558,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.18
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18214,13 +18643,14 @@
     ],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 140.0,
     "shot_type": "Projectile",
     "status_chance": 0.46
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18296,6 +18726,7 @@
     "forced_procs": [],
     "multishot": null,
     "name": "Quick Shot",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -18319,6 +18750,7 @@
     "forced_procs": [],
     "multishot": null,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.32
@@ -18341,13 +18773,14 @@
     "forced_procs": [],
     "multishot": null,
     "name": "Perfect Shot",
+    "parent": null,
     "shot_speed": 50.0,
     "shot_type": "Projectile",
     "status_chance": 0.34
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18421,6 +18854,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.32
@@ -18445,13 +18879,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.36
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18528,6 +18963,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Uncharged Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
@@ -18552,6 +18988,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
@@ -18575,13 +19012,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Charged Shot",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18665,6 +19103,7 @@
     ],
     "multishot": 1.0,
     "name": "Quick Shot",
+    "parent": null,
     "shot_speed": 140.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -18688,6 +19127,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -18711,13 +19151,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Perfect Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18797,6 +19238,7 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Uncharged Horizontal/Vertical Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -18821,13 +19263,14 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Charged Horizontal/Vertical Shot",
+    "parent": null,
     "shot_speed": 95.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -18907,6 +19350,7 @@
     ],
     "multishot": 1.0,
     "name": "Quick Shot",
+    "parent": null,
     "shot_speed": 140.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -18933,13 +19377,14 @@
     ],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 180.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19018,6 +19463,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 45.0,
     "shot_type": "Projectile",
     "status_chance": 0.43
@@ -19047,6 +19493,7 @@
     ],
     "multishot": 1.0,
     "name": "Appendages",
+    "parent": "Charged Shot",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.43
@@ -19073,13 +19520,17 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot Explosion",
+    "parent": "Charged Shot",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.43
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Appendages",
+   "Charged Shot Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19157,6 +19608,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Uncharged Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -19181,6 +19633,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 95.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -19204,13 +19657,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Charged Shot",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19295,6 +19749,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Uncharged Shot",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -19319,6 +19774,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -19343,13 +19799,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Charged Shot",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19432,6 +19889,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Quick Shot",
+    "parent": null,
     "shot_speed": 95.0,
     "shot_type": "Projectile",
     "status_chance": 0.38
@@ -19455,6 +19913,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 110.0,
     "shot_type": "Projectile",
     "status_chance": 0.38
@@ -19482,13 +19941,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Radial Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.38
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Charged Radial Attack"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19562,6 +20024,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.26
@@ -19588,6 +20051,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Radial Attack",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
@@ -19612,6 +20076,7 @@
     ],
     "multishot": 1.0,
     "name": "Active Attack",
+    "parent": null,
     "shot_speed": 6.0,
     "shot_type": "Projectile",
     "status_chance": 0.26
@@ -19640,13 +20105,16 @@
     ],
     "multishot": 1.0,
     "name": "Active Radial Attack",
+    "parent": "Active Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Normal Radial Attack"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -19712,6 +20180,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -19738,13 +20207,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19830,13 +20300,14 @@
     "forced_procs": [],
     "multishot": 5.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.168
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19901,13 +20372,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -19979,13 +20451,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20085,6 +20558,7 @@
     ],
     "multishot": 1.0,
     "name": "Semi-Auto",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.39
@@ -20111,13 +20585,14 @@
     ],
     "multishot": 1.0,
     "name": "Burst Shot",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.39
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20186,6 +20661,7 @@
     "forced_procs": [],
     "multishot": null,
     "name": "Auto",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.18
@@ -20208,13 +20684,14 @@
     "forced_procs": [],
     "multishot": null,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.18
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20279,6 +20756,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -20303,6 +20781,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire Contact",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.44
@@ -20329,6 +20808,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire Damage over Time",
+    "parent": "Alt-Fire Contact",
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.44
@@ -20355,13 +20835,14 @@
     "forced_procs": [],
     "multishot": null,
     "name": "Alt-Fire Explosion",
+    "parent": "Alt-Fire Contact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.44
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20428,6 +20909,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.34
@@ -20452,13 +20934,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Semi-Auto Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.08
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20526,6 +21009,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.24
@@ -20552,13 +21036,14 @@
     ],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.35
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20632,13 +21117,14 @@
     "forced_procs": [],
     "multishot": 8.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20706,6 +21192,7 @@
     ],
     "multishot": 1.0,
     "name": "Rocket Impact",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.18
@@ -20733,13 +21220,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Rocket Explosion",
+    "parent": "Rocket Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.18
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Rocket Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20812,6 +21302,7 @@
     ],
     "multishot": 1.0,
     "name": "Semi",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -20841,6 +21332,7 @@
     ],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": "Semi",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.1
@@ -20867,13 +21359,16 @@
     ],
     "multishot": 1.0,
     "name": "Spear Throw",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Radial Attack"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -20944,6 +21439,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.4
@@ -20968,6 +21464,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire Contact",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -20994,6 +21491,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire Damage over Time",
+    "parent": "Alt-Fire Contact",
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.5
@@ -21020,13 +21518,14 @@
     "forced_procs": [],
     "multishot": null,
     "name": "Alt-Fire Explosion",
+    "parent": "Alt-Fire Contact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21098,6 +21597,7 @@
     ],
     "multishot": 1.0,
     "name": "Slug Impact",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.37
@@ -21125,13 +21625,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Glass Explosion",
+    "parent": "Slug Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.37
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Glass Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21205,13 +21708,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.14
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21280,6 +21784,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.34
@@ -21304,13 +21809,14 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21380,6 +21886,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -21402,6 +21909,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -21428,13 +21936,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Radial Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21505,6 +22014,7 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.02
@@ -21527,6 +22037,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire Glaive",
+    "parent": null,
     "shot_speed": 75.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -21553,13 +22064,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Glaive Radial Attack",
+    "parent": "Alt-Fire Glaive",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21631,6 +22143,7 @@
     "forced_procs": [],
     "multishot": 6.0,
     "name": "Buckshot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.09
@@ -21655,6 +22168,7 @@
     ],
     "multishot": 1.0,
     "name": "Air Burst Projectile",
+    "parent": null,
     "shot_speed": 50.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -21681,13 +22195,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Air Burst Explosion",
+    "parent": "Air Burst Projectile",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21757,6 +22272,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Full Auto Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -21786,13 +22302,14 @@
     ],
     "multishot": 1.0,
     "name": "Semi-Auto Mode",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -21859,13 +22376,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.18
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [],
@@ -21940,6 +22458,7 @@
     ],
     "multishot": 1.0,
     "name": "Semi-Auto",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.39
@@ -21966,13 +22485,14 @@
     ],
     "multishot": 1.0,
     "name": "Burst Shot",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.39
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22043,6 +22563,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -22069,6 +22590,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
@@ -22093,13 +22615,16 @@
     ],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.38
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Radial Attack"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22175,13 +22700,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22274,6 +22800,7 @@
     "forced_procs": [],
     "multishot": 6.0,
     "name": "Beam",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.222
@@ -22298,6 +22825,7 @@
     ],
     "multishot": 1.0,
     "name": "Plasma Bomb Impact",
+    "parent": null,
     "shot_speed": 25.0,
     "shot_type": "Projectile",
     "status_chance": 0.37
@@ -22326,6 +22854,7 @@
     ],
     "multishot": 1.0,
     "name": "Plasma Bomb Explosion",
+    "parent": "Plasma Bomb Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.37
@@ -22350,6 +22879,7 @@
     ],
     "multishot": 5.0,
     "name": "Cluster Bombs Impact",
+    "parent": null,
     "shot_speed": 6.0,
     "shot_type": "Projectile",
     "status_chance": 0.37
@@ -22374,13 +22904,14 @@
     ],
     "multishot": 1.0,
     "name": "Cluster Bombs Explosion",
+    "parent": "Cluster Bombs Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.37
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22447,6 +22978,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Projectile Impact",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -22473,6 +23005,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Explosion",
+    "parent": "Projectile Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
@@ -22497,6 +23030,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Spear Throw",
+    "parent": null,
     "shot_speed": 150.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -22525,13 +23059,16 @@
     ],
     "multishot": 1.0,
     "name": "Spear Explosion",
+    "parent": "Spear Throw",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22602,6 +23139,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -22630,13 +23168,14 @@
     "forced_procs": [],
     "multishot": 8.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.03
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22709,13 +23248,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 20.0,
     "shot_type": "Projectile",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22785,6 +23325,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Full Auto Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
@@ -22809,13 +23350,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Semi-Auto Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -22889,6 +23431,7 @@
     "forced_procs": [],
     "multishot": 12.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.0667
@@ -22913,6 +23456,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.46
@@ -22943,13 +23487,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.46
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23019,6 +23564,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.25
@@ -23045,13 +23591,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23137,6 +23684,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.24
@@ -23161,13 +23709,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23236,6 +23785,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
@@ -23260,6 +23810,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Semi-Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.18
@@ -23284,13 +23835,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.32
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23365,13 +23917,14 @@
     "forced_procs": [],
     "multishot": 8.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1125
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23439,6 +23992,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.34
@@ -23465,6 +24019,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.34
@@ -23487,6 +24042,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Impact",
+    "parent": null,
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.5
@@ -23513,13 +24069,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Bounce AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Auto AoE"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23595,6 +24154,7 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -23619,6 +24179,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 300.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -23647,6 +24208,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form Headshot AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
@@ -23675,13 +24237,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form Embed AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23791,6 +24354,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Arrow Impact",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -23819,13 +24383,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Arrow Explosion",
+    "parent": "Arrow Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Arrow Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23898,13 +24465,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.35
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -23973,6 +24541,7 @@
     "forced_procs": [],
     "multishot": 6.0,
     "name": "Beam",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.222
@@ -23997,6 +24566,7 @@
     ],
     "multishot": 1.0,
     "name": "Plasma Bomb Impact",
+    "parent": null,
     "shot_speed": 25.0,
     "shot_type": "Projectile",
     "status_chance": 0.37
@@ -24025,6 +24595,7 @@
     ],
     "multishot": 1.0,
     "name": "Plasma Bomb Explosion",
+    "parent": "Plasma Bomb Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.37
@@ -24049,6 +24620,7 @@
     ],
     "multishot": 5.0,
     "name": "Cluster Bombs Impact",
+    "parent": null,
     "shot_speed": 6.0,
     "shot_type": "Projectile",
     "status_chance": 0.37
@@ -24073,13 +24645,14 @@
     ],
     "multishot": 1.0,
     "name": "Cluster Bombs Explosion",
+    "parent": "Cluster Bombs Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.37
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24150,13 +24723,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24258,6 +24832,7 @@
     ],
     "multishot": 1.0,
     "name": "Rocket Impact",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.06
@@ -24285,13 +24860,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Rocket Explosion",
+    "parent": "Rocket Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.06
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Rocket Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24360,6 +24938,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Full Auto Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
@@ -24384,13 +24963,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Semi-Auto Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24460,6 +25040,7 @@
     "forced_procs": [],
     "multishot": 6.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.003
@@ -24482,6 +25063,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire Glaive",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -24508,13 +25090,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Glaive Radial Attack",
+    "parent": "Alt-Fire Glaive",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24580,6 +25163,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.16
@@ -24604,13 +25188,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.11
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24674,13 +25259,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24752,6 +25338,7 @@
     ],
     "multishot": 1.0,
     "name": "Slug Impact",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.33
@@ -24779,13 +25366,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Glass Explosion",
+    "parent": "Slug Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.33
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Glass Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24857,6 +25447,7 @@
     "forced_procs": [],
     "multishot": 6.0,
     "name": "Buckshot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.06
@@ -24881,6 +25472,7 @@
     ],
     "multishot": 1.0,
     "name": "Air Burst Projectile",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.28
@@ -24909,13 +25501,14 @@
     ],
     "multishot": 1.0,
     "name": "Air Burst Explosion",
+    "parent": "Air Burst Projectile",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -24986,6 +25579,7 @@
     ],
     "multishot": 1.0,
     "name": "Semi",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.24
@@ -25014,6 +25608,7 @@
     ],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": "Semi",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.1
@@ -25040,13 +25635,16 @@
     ],
     "multishot": 1.0,
     "name": "Spear Throw",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Radial Attack"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25117,6 +25715,7 @@
     "forced_procs": null,
     "multishot": null,
     "name": "Primary",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.32
@@ -25140,6 +25739,7 @@
     "forced_procs": null,
     "multishot": null,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.32
@@ -25167,13 +25767,14 @@
     "forced_procs": null,
     "multishot": null,
     "name": "Alt-Fire Radial Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.32
    }
   ],
   "beam_ramp_start": 0.2,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25239,13 +25840,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.36
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25311,6 +25913,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Projectile Impact",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -25337,6 +25940,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Explosion",
+    "parent": "Projectile Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
@@ -25361,6 +25965,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Spear Throw Impact",
+    "parent": null,
     "shot_speed": 150.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -25389,13 +25994,16 @@
     ],
     "multishot": 1.0,
     "name": "Spear Throw Explosion",
+    "parent": "Spear Throw Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Explosion"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25467,13 +26075,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25574,6 +26183,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.38
@@ -25603,13 +26213,14 @@
     ],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25679,13 +26290,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25756,6 +26368,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.33
@@ -25782,6 +26395,7 @@
     ],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.33
@@ -25808,13 +26422,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire Explosion",
+    "parent": "Alt-Fire",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.33
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25889,13 +26504,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -25962,6 +26578,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Full Auto Mode",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -25991,13 +26608,14 @@
     ],
     "multishot": 1.0,
     "name": "Semi-Auto Mode",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -26063,6 +26681,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -26089,13 +26708,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -26179,13 +26799,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 20.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -26253,13 +26874,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 90.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -26329,6 +26951,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.14
@@ -26351,6 +26974,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.28
@@ -26378,13 +27002,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -26469,6 +27094,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
@@ -26495,13 +27121,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.24
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -26584,6 +27211,7 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1286
@@ -26612,13 +27240,14 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2571
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -26685,6 +27314,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.06
@@ -26709,13 +27339,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -26793,13 +27424,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 75.0,
     "shot_type": "Projectile",
     "status_chance": 0.022000000000000002
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -26869,6 +27501,7 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.0943
@@ -26897,13 +27530,14 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1886
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -26969,6 +27603,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -26992,13 +27627,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27079,6 +27715,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
@@ -27103,13 +27740,14 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.15
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27177,6 +27815,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -27201,13 +27840,14 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27274,6 +27914,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.06
@@ -27298,13 +27939,14 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.06
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27368,6 +28010,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.08
@@ -27396,13 +28039,14 @@
     "forced_procs": [],
     "multishot": 6.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.026699999999999998
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -27479,6 +28123,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.26
@@ -27505,13 +28150,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Radial Attack"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -27574,6 +28222,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Slug",
+    "parent": null,
     "shot_speed": 500.0,
     "shot_type": "Projectile",
     "status_chance": 0.02
@@ -27602,13 +28251,14 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Buckshot",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.09
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27679,6 +28329,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Burst Shot",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.025
@@ -27703,6 +28354,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
@@ -27725,13 +28377,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -27812,6 +28465,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
@@ -27835,6 +28489,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hitscan",
     "status_chance": 0.4
@@ -27861,13 +28516,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Radial Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.4
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -27944,13 +28600,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -28014,13 +28671,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 110.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28086,13 +28744,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.14
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -28156,13 +28815,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28228,13 +28888,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -28299,6 +28960,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Rocket Impact",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.34
@@ -28325,13 +28987,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Rocket Detonation",
+    "parent": "Rocket Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.34
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Rocket Detonation"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28399,13 +29064,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.14
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28476,13 +29142,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.32
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -28548,13 +29215,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.18
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -28621,13 +29289,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -28692,6 +29361,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -28714,13 +29384,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.35
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28788,6 +29459,7 @@
     "forced_procs": [],
     "multishot": 4.0,
     "name": "Normal Shot",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.15
@@ -28812,6 +29484,7 @@
     "forced_procs": [],
     "multishot": 4.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 140.0,
     "shot_type": "Projectile",
     "status_chance": 0.15
@@ -28834,13 +29507,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -28927,6 +29601,7 @@
     ],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 300.0,
     "shot_type": "Projectile",
     "status_chance": 0.14
@@ -28953,6 +29628,7 @@
     ],
     "multishot": 1.0,
     "name": "Uncharged Direct Hit",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -28981,13 +29657,16 @@
     ],
     "multishot": 1.0,
     "name": "Uncharged AoE",
+    "parent": "Uncharged Direct Hit",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Uncharged AoE"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -29022,7 +29701,10 @@
    "madurai",
    "madurai"
   ],
-  "primer_shot": [],
+  "primer_shot": [
+   "Uncharged Direct Hit",
+   "Uncharged AoE"
+  ],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -29059,6 +29741,7 @@
     ],
     "multishot": 1.0,
     "name": "Poison Quill",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -29085,6 +29768,7 @@
     ],
     "multishot": 1.0,
     "name": "Fire Quill",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -29111,6 +29795,7 @@
     ],
     "multishot": 1.0,
     "name": "Electric Quill",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -29137,13 +29822,14 @@
     ],
     "multishot": 1.0,
     "name": "Ice Quill",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -29209,13 +29895,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -29281,6 +29968,7 @@
     "forced_procs": [],
     "multishot": 4.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.36
@@ -29307,13 +29995,16 @@
     "forced_procs": [],
     "multishot": 4.0,
     "name": "Explosion",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.36
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Explosion"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -29380,6 +30071,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.25
@@ -29409,13 +30101,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 110.0,
     "shot_type": "Projectile",
     "status_chance": 0.44
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -29497,13 +30190,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -29570,6 +30264,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.24
@@ -29594,13 +30289,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.24
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -29669,13 +30365,14 @@
     "forced_procs": [],
     "multishot": 10.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.036000000000000004
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -29743,6 +30440,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
@@ -29767,13 +30465,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -29853,13 +30552,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -29927,6 +30627,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.22
@@ -29955,13 +30656,14 @@
     "forced_procs": [],
     "multishot": 6.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.0667
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30042,13 +30744,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.32
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30116,6 +30819,7 @@
     ],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 140.0,
     "shot_type": "Projectile",
     "status_chance": 0.42
@@ -30142,13 +30846,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Gas Cloud",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.42
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Gas Cloud"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -30218,6 +30925,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.36
@@ -30241,6 +30949,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hitscan",
     "status_chance": 0.4
@@ -30267,13 +30976,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Radial Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.4
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30356,6 +31066,7 @@
     ],
     "multishot": 1.0,
     "name": "Poison Quill",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
@@ -30382,6 +31093,7 @@
     ],
     "multishot": 1.0,
     "name": "Fire Quill",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
@@ -30408,6 +31120,7 @@
     ],
     "multishot": 1.0,
     "name": "Electric Quill",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
@@ -30434,13 +31147,14 @@
     ],
     "multishot": 1.0,
     "name": "Ice Quill",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30502,6 +31216,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Rocket Impact",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.28
@@ -30528,13 +31243,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Rocket Detonation",
+    "parent": "Rocket Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Rocket Detonation"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -30604,13 +31322,14 @@
     "forced_procs": [],
     "multishot": 12.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.025
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -30674,13 +31393,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.08
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30744,6 +31464,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.16
@@ -30766,13 +31487,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Turret Expiry",
+    "parent": null,
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30837,13 +31559,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.18
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30907,13 +31630,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -30977,6 +31701,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -31001,13 +31726,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -31070,6 +31796,7 @@
     ],
     "multishot": 1.0,
     "name": "Dart Impact",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -31096,13 +31823,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Gas Cloud",
+    "parent": "Dart Impact",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Gas Cloud"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -31170,6 +31900,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.08
@@ -31192,13 +31923,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Alt-Fire",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.24
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -31263,13 +31995,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [],
@@ -31334,13 +32067,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.05
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -31406,6 +32140,7 @@
     ],
     "multishot": 1.0,
     "name": "Charged Shot",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.04
@@ -31432,6 +32167,7 @@
     ],
     "multishot": 1.0,
     "name": "Uncharged Direct Hit",
+    "parent": null,
     "shot_speed": 50.0,
     "shot_type": "Projectile",
     "status_chance": 0.5
@@ -31460,13 +32196,16 @@
     ],
     "multishot": 1.0,
     "name": "Uncharged AoE",
+    "parent": "Uncharged Direct Hit",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Uncharged AoE"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -31500,7 +32239,10 @@
    "madurai",
    "madurai"
   ],
-  "primer_shot": [],
+  "primer_shot": [
+   "Uncharged Direct Hit",
+   "Uncharged AoE"
+  ],
   "reload_replaces_shot": false,
   "reload_time": 0.60000002,
   "riven_disposition": 1.2,
@@ -31533,6 +32275,7 @@
     "forced_procs": [],
     "multishot": 4.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -31559,13 +32302,16 @@
     "forced_procs": [],
     "multishot": 4.0,
     "name": "Explosion",
+    "parent": "Normal Attack",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Explosion"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -31630,6 +32376,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.14
@@ -31654,13 +32401,14 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 85.0,
     "shot_type": "Projectile",
     "status_chance": 0.0933
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -31729,6 +32477,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
@@ -31753,6 +32502,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -31779,13 +32529,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -31852,6 +32603,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.18
@@ -31874,6 +32626,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -31900,13 +32653,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Radial Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -31974,6 +32728,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.09
@@ -31998,6 +32753,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.19
@@ -32026,13 +32782,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.19
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32098,6 +32855,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
@@ -32122,6 +32880,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -32149,13 +32908,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32241,6 +33001,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.06
@@ -32265,6 +33026,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
@@ -32291,13 +33053,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.12
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32363,6 +33126,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
@@ -32385,6 +33149,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.24
@@ -32412,13 +33177,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.24
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32506,13 +33272,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32612,6 +33379,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.05
@@ -32636,6 +33404,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1
@@ -32662,13 +33431,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32735,6 +33505,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Fully Spooled",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.07
@@ -32763,13 +33534,14 @@
     "forced_procs": [],
     "multishot": 8.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.025
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -32842,6 +33614,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -32866,6 +33639,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 300.0,
     "shot_type": "Projectile",
     "status_chance": 0.3
@@ -32894,6 +33668,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form Headshot AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
@@ -32922,13 +33697,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form Embed AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -33037,6 +33813,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.16
@@ -33061,6 +33838,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.22
@@ -33087,13 +33865,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -33166,13 +33945,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -33277,13 +34057,14 @@
     "forced_procs": [],
     "multishot": 5.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.162
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [],
@@ -33350,6 +34131,7 @@
     "forced_procs": [],
     "multishot": 8.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.075
@@ -33372,13 +34154,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [],
@@ -33445,6 +34228,7 @@
     "forced_procs": [],
     "multishot": 8.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.1125
@@ -33467,13 +34251,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.24
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [],
@@ -33541,13 +34326,14 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.107
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -33617,6 +34403,7 @@
     "forced_procs": [],
     "multishot": 12.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.05
@@ -33641,6 +34428,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.4
@@ -33671,13 +34459,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.4
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -33750,6 +34539,7 @@
     ],
     "multishot": 10.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.12
@@ -33774,6 +34564,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.44
@@ -33804,13 +34595,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form AoE",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.44
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -33877,6 +34669,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Full Auto Mode",
+    "parent": null,
     "shot_speed": 50.0,
     "shot_type": "Projectile",
     "status_chance": 0.29
@@ -33900,13 +34693,14 @@
     "forced_procs": [],
     "multishot": 3.0,
     "name": "Semi-Auto Mode",
+    "parent": null,
     "shot_speed": 50.0,
     "shot_type": "Projectile",
     "status_chance": 0.12300000000000001
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -33972,6 +34766,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.08
@@ -33996,13 +34791,14 @@
     "forced_procs": [],
     "multishot": 2.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.16
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34070,13 +34866,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.08
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34144,13 +34941,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.14
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34219,13 +35017,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.28
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34294,6 +35093,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.16
@@ -34318,6 +35118,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 50.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -34344,13 +35145,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Radial Attack",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34420,6 +35222,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Mid-Flight Detonation",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
@@ -34448,13 +35251,16 @@
     ],
     "multishot": 1.0,
     "name": "Embedded Detonation",
+    "parent": "Mid-Flight Detonation",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Embedded Detonation"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34522,13 +35328,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34595,13 +35402,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 70.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34667,6 +35475,7 @@
     "forced_procs": [],
     "multishot": 4.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.18
@@ -34689,13 +35498,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Semi",
+    "parent": "Auto",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.32
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34762,6 +35572,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Mid-Flight Detonation",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "AoE",
     "status_chance": 0.26
@@ -34791,13 +35602,16 @@
     ],
     "multishot": 1.0,
     "name": "Embedded Detonation",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "AoE",
     "status_chance": 0.1
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Mid-Flight Detonation"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -34869,6 +35683,7 @@
     "forced_procs": [],
     "multishot": 4.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.055
@@ -34894,13 +35709,14 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -34981,6 +35797,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 120.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
@@ -35004,13 +35821,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 80.0,
     "shot_type": "Projectile",
     "status_chance": 0.2
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -35093,6 +35911,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
@@ -35115,6 +35934,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
@@ -35141,13 +35961,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto Radial Attack",
+    "parent": "Incarnon Form",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.22
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -35226,6 +36047,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 100.0,
     "shot_type": "Projectile",
     "status_chance": 0.22
@@ -35248,6 +36070,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Held Damage",
+    "parent": null,
     "shot_speed": 40.0,
     "shot_type": "Projectile",
     "status_chance": 0.18
@@ -35272,6 +36095,7 @@
     ],
     "multishot": 1.0,
     "name": "Incarnon Form Charge Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.26
@@ -35298,13 +36122,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Incarnon Form Charge Radial Attack",
+    "parent": "Incarnon Form Held Damage",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -35384,6 +36209,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Primary-Fire",
+    "parent": null,
     "shot_speed": 200.0,
     "shot_type": "Projectile",
     "status_chance": 0.14
@@ -35410,6 +36236,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Radial Attack",
+    "parent": "Primary-Fire",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.14
@@ -35436,6 +36263,7 @@
     ],
     "multishot": 1.0,
     "name": "Lock-On Mode",
+    "parent": null,
     "shot_speed": 60.0,
     "shot_type": "Projectile",
     "status_chance": 0.26
@@ -35462,13 +36290,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Lock-On Radial Attack",
+    "parent": "Lock-On Mode",
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.26
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Radial Attack"
+  ],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
@@ -35532,6 +36363,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.3
@@ -35558,6 +36390,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Auto AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.3
@@ -35580,6 +36413,7 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Impact",
+    "parent": null,
     "shot_speed": null,
     "shot_type": null,
     "status_chance": 0.5
@@ -35606,13 +36440,16 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Grenade Bounce AoE",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "AoE",
     "status_chance": 0.5
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [
+   "Auto AoE"
+  ],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -35678,13 +36515,14 @@
     "forced_procs": [],
     "multishot": 1.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": null,
     "shot_type": "Hit-Scan",
     "status_chance": 0.21
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "primary",
   "compatibility_tags": [
@@ -35753,13 +36591,14 @@
     "forced_procs": [],
     "multishot": 7.0,
     "name": "Normal Attack",
+    "parent": null,
     "shot_speed": 150.0,
     "shot_type": "Projectile",
     "status_chance": 0.1371
    }
   ],
   "beam_ramp_start": null,
-  "blast": null,
+  "blasts": [],
   "bonus_element": null,
   "category": "secondary",
   "compatibility_tags": [
