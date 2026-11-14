@@ -1,0 +1,6 @@
+/* Picture tiles, from canvas F-Home v50. */
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:4px;height:100%;box-sizing:border-box;padding:10px 12px 14px;border:1px solid #2a241a;background:#14110d;color:var(--color-cream);text-decoration:none}
+.tile:hover{border-color:var(--color-gold);color:var(--color-cream)}
+.tile:hover .plinth{background:radial-gradient(ellipse at 50% 100%,rgba(207,164,72,.22),transparent 70%)}
+.tile:focus-visible{outline-offset:2px}
+.plinth{display:flex;align-items:center;justify-content:center;width:100%;height:116px;margin-bottom:6px;border-bottom:1px solid #2a241a}

@@ -101,3 +101,17 @@ def test_updates_page_carries_its_own_title(client: TestClient) -> None:
     page = client.get("/updates").text
     assert "<title>Game updates | warframeBuild</title>" in page
     assert '<link rel="canonical" href="http://testserver/updates" />' in page
+
+
+def test_tier_list_pages_carry_their_own_title(client: TestClient) -> None:
+    page = client.get("/tier-list/secondary").text
+    assert "<title>Secondary tier list | warframeBuild</title>" in page
+    assert '<link rel="canonical" href="http://testserver/tier-list/secondary" />' in page
+
+
+def test_unknown_tier_list_is_the_app_page_with_a_404(client: TestClient) -> None:
+    """An old or shared link (e.g. a future melee list) gets HTML, not a JSON error."""
+    response = client.get("/tier-list/melee")
+    assert response.status_code == 404
+    assert response.headers["content-type"].startswith("text/html")
+    assert "<title>Page not found | warframeBuild</title>" in response.text

@@ -18,7 +18,7 @@ from starlette.types import Scope
 
 from app.api import errors, headers, pages, serving
 from app.api.rate_limit import RateLimit
-from app.api.routes import builds, calc, img, mods, sitemap, updates, weapons
+from app.api.routes import builds, calc, img, mods, sitemap, tiers, updates, weapons
 from app.gamedata.release import Release, open_current
 from app.gamedata.store import GameData, load
 
@@ -111,6 +111,7 @@ def create_app(
     app.include_router(calc.router)
     app.include_router(builds.router)
     app.include_router(weapons.router)
+    app.include_router(tiers.router)
     app.include_router(mods.router)
     app.include_router(img.router)
     app.include_router(updates.router)

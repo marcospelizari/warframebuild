@@ -1,5 +1,5 @@
-"""GET /robots.txt and /sitemap.xml (PLAN G88): the home page, every gun's page and good
-primers' Primer pages (G49), dated by the served game data."""
+"""GET /robots.txt and /sitemap.xml (PLAN G88): the home page, the tier lists (G92), every
+gun's page and good primers' Primer pages (G49), dated by the served game data."""
 
 from html import escape
 
@@ -8,6 +8,7 @@ from fastapi.responses import PlainTextResponse, Response
 
 from app.api.pages import PRIMER, site
 from app.api.serving import served
+from app.gamedata.models import Category
 
 router = APIRouter()
 
@@ -23,7 +24,7 @@ def sitemap(request: Request) -> Response:
     data = now.data
     origin, date = site(request), data.meta.fetched
     good = now.release.good_primers if now.release else frozenset()
-    paths = ["/"]
+    paths = ["/", *(f"/tier-list/{c.value}" for c in Category)]
     for w in sorted(data.weapons, key=lambda w: w.slug):
         paths.append(f"/w/{w.slug}")
         if w.slug in good:  # a good primer's Primer tab (G49)

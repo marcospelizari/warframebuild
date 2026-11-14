@@ -13,6 +13,8 @@ from app.api.builds_response import expand
 from app.api.errors import ApiFailure
 from app.api.runner import Busy, Closed, Restarted, Runner, TimedOut
 from app.api.schemas.build import CalcRequest
+from app.api.tiers_response import tier_list
+from app.gamedata.models import Category
 from app.gamedata.release import Release
 from app.gamedata.store import GameData, load
 
@@ -45,6 +47,13 @@ def calc(body: str) -> Outcome:
 def builds(release: Release, slug: str) -> Outcome:
     try:
         return expand(_worker_data(), release, slug), None
+    except FileNotFoundError:  # a later build-all pruned this server's release
+        return None, (503, "release_gone", "builds were replaced, try again", None)
+
+
+def tiers(release: Release, category: Category) -> Outcome:
+    try:
+        return tier_list(_worker_data(), release, category), None
     except FileNotFoundError:  # a later build-all pruned this server's release
         return None, (503, "release_gone", "builds were replaced, try again", None)
 

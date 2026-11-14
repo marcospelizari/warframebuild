@@ -12,7 +12,7 @@ from fastapi.responses import HTMLResponse
 
 from app.api.serving import served
 from app.gamedata.builds import Build, Variant, WeaponBuilds
-from app.gamedata.models import Weapon
+from app.gamedata.models import Category, Weapon
 from app.gamedata.release import Release
 from app.gamedata.store import GameData
 
@@ -169,10 +169,35 @@ UPDATES = Meta(
 )
 
 
+def tier_meta(category: Category) -> Meta:
+    plural = "primaries" if category == Category.PRIMARY else "secondaries"
+    return Meta(
+        f"{category.value.capitalize()} tier list | {SITE}",
+        f"Warframe {plural} ranked S to F by the kill time of their calculated builds "
+        "against Steel Path enemies.",
+        f"/tier-list/{category.value}",
+    )
+
+
 @router.get("/updates", include_in_schema=False)
 def updates_page(request: Request) -> HTMLResponse:
+    return _static(request, UPDATES)
+
+
+@router.get("/tier-list/{category}", include_in_schema=False)
+def tier_page(request: Request, category: str) -> HTMLResponse:
+    """An unknown class (an old or shared link) gets the app's page with a real 404."""
+    if category not in set(Category):
+        missing = Meta(f"Page not found | {SITE}", "No such tier list.", "/", noindex=True)
+        return _static(request, missing, 404)
+    return _static(request, tier_meta(Category(category)))
+
+
+def _static(request: Request, meta: Meta, status: int = 200) -> HTMLResponse:
+    """A page whose meta tags do not depend on the release."""
     index: Path = request.app.state.web_dist / "index.html"
-    return HTMLResponse(render(index.read_text(encoding="utf-8"), UPDATES, site(request)))
+    page = render(index.read_text(encoding="utf-8"), meta, site(request))
+    return HTMLResponse(page, status_code=status)
 
 
 @router.get("/w/{slug}", include_in_schema=False)
