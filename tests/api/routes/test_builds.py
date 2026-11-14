@@ -154,3 +154,17 @@ def test_every_variant_carries_its_primer_build(client: TestClient, releases: Pa
     assert body["good_primer"] == ("soma-prime" in good)
     items = {w["slug"]: w for w in client.get("/api/weapons").json()["weapons"]}
     assert all(items[s]["good_primer"] == (s in good) for s in ("soma-prime", "kuva-hind"))
+
+
+def test_builds_carry_shard_and_aura_advice(client: TestClient) -> None:
+    """G91: shard steps and fitting auras with their names; the Primer build gets no aura."""
+    variant = client.get("/api/weapons/soma-prime/builds").json()["variants"][0]
+    recommended = variant["recommended"]
+    steps = recommended["shards"]["normal"]
+    assert steps and all(s["score"] > recommended["score"] for s in steps)
+    assert recommended["shards"]["tauforged"]
+    auras = recommended["auras"]
+    names = [a["name"] for a in auras]
+    assert "Corrosive Projection" in names and "Rifle Amp" in names
+    assert [a["score"] for a in auras] == sorted((a["score"] for a in auras), reverse=True)
+    assert variant["primer"]["build"]["auras"] == []

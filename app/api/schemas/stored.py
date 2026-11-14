@@ -5,7 +5,13 @@ from typing import Literal
 from app.api.schemas.base import ApiModel
 from app.api.schemas.build import Build, WeaponRef
 from app.domain.effects import DamageType, Support
-from app.gamedata.builds import Forma
+from app.gamedata.builds import Forma, ShardAdvice
+
+
+class AuraChoice(ApiModel):
+    unique_name: str
+    name: str
+    score: float  # the build's score with this aura (same metric as `StoredBuild.score`)
 
 
 class StoredBuild(ApiModel):
@@ -17,6 +23,9 @@ class StoredBuild(ApiModel):
     score: float  # Max: dps.max_score; others: 1 / the objective's combat cost
     forma: Forma | None  # None: no layout fits (flagged, Q6)
     without: dict[str, float]  # F8: score with that mod, exilus or arcane removed
+    # G91 suggestions beside the build, never in it; None in releases made before G91.
+    shards: ShardAdvice | None = None
+    auras: list[AuraChoice] | None = None  # every aura that fits, best first; [] on Primer
     build: Build
 
 

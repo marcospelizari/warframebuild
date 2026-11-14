@@ -4,6 +4,7 @@
 from app.api.build_response import build_response, weapon_ref
 from app.api.schemas.build import CalcRequest
 from app.api.schemas.stored import (
+    AuraChoice,
     BuildsResponse,
     ElementChoice,
     NotModelled,
@@ -24,6 +25,7 @@ def expand(data: GameData, release: Release, slug: str) -> bytes:
     """The stored builds of `slug` with every build scored by `build_response`."""
     stored = release.builds(slug)
     weapon = data.weapon_by_slug[slug]
+    aura_names = {a.unique_name: a.name for a in data.auras.auras}
 
     def scored(b: Stored, element: DamageType | None) -> StoredBuild:
         choices = CalcRequest(
@@ -41,6 +43,13 @@ def expand(data: GameData, release: Release, slug: str) -> bytes:
             score=b.score,
             forma=b.forma,
             without=b.without,
+            shards=b.shards,
+            auras=None
+            if b.auras is None
+            else [
+                AuraChoice(unique_name=a.aura, name=aura_names[a.aura], score=a.score)
+                for a in b.auras
+            ],
             build=build_response(data, choices),
         )
 
